@@ -1,0 +1,61 @@
+06-13 23:31:34.888: V/RSA~ onComplete(26477): Cory Higginbottom is initialized.
+06-13 23:31:34.898: V/Person(26477): Setting Numerology.
+06-13 23:33:09.801: D/szipinf(26477): Initializing inflate state
+06-13 23:33:29.210: V/Entity(26477): 5 added to Life Path Number
+06-13 23:33:29.340: V/Entity(26477): Life Path Number added to Cory Higginbottom
+06-13 23:33:31.422: V/Entity(26477): 5 added to Birth Day Number
+06-13 23:33:31.532: V/Entity(26477): Birth Day Number added to Cory Higginbottom
+06-13 23:35:06.164: V/Entity(26477): 9 added to Expression Number
+06-13 23:35:06.164: V/Entity(26477): Expression Number added to Cory Higginbottom
+06-13 23:38:11.415: V/Entity(26477): 22 added to Soul Urge Number
+06-13 23:38:11.415: V/Entity(26477): Soul Urge Number added to Cory Higginbottom
+06-13 23:39:55.276: V/Entity(26477): 5 added to Personality Number
+06-13 23:39:55.396: V/Entity(26477): Personality Number added to Cory Higginbottom
+06-13 23:39:55.516: V/Entity(26477): 3 added to Balance Number
+06-13 23:39:55.617: V/Entity(26477): Balance Number added to Cory Higginbottom
+06-13 23:39:55.737: V/Entity(26477): 5 added to Maturity Number
+06-13 23:39:55.867: V/Entity(26477): Maturity Number added to Cory Higginbottom
+06-13 23:39:56.017: V/Entity(26477): 6 added to Karmic Lesson
+06-13 23:39:56.097: V/Entity(26477): 8 added to Karmic Lesson
+06-13 23:39:56.097: V/Entity(26477): Karmic Lesson added to Cory Higginbottom
+06-13 23:39:56.237: V/Entity(26477): 7 added to Subconscious Self Number
+06-13 23:39:56.237: V/Entity(26477): Subconscious Self Number added to Cory Higginbottom
+06-13 23:39:56.357: V/Entity(26477): 1 added to Hidden Passions Number
+06-13 23:39:56.357: V/Entity(26477): Hidden Passions Number added to Cory Higginbottom
+06-13 23:39:56.507: V/Entity(26477): 9 added to Rational Thought Number
+06-13 23:39:56.507: V/Entity(26477): Rational Thought Number added to Cory Higginbottom
+06-13 23:39:56.708: V/Entity(26477): 2 added to Challenge One
+06-13 23:39:56.708: V/Entity(26477): Challenge One added to Challenges
+06-13 23:39:56.838: V/Entity(26477): 1 added to Challenge Two
+06-13 23:39:56.838: V/Entity(26477): Challenge Two added to Challenges
+06-13 23:39:56.968: V/Entity(26477): 1 added to Challenge Three
+06-13 23:39:56.968: V/Entity(26477): Challenge Three added to Challenges
+06-13 23:39:57.098: V/Entity(26477): 3 added to Challenge Four
+06-13 23:39:57.098: V/Entity(26477): Challenge Four added to Challenges
+06-13 23:39:57.098: V/Entity(26477): Challenges added to Cory Higginbottom
+06-13 23:39:57.348: V/Entity(26477): 8 added to 1st Pinnacle
+06-13 23:39:57.348: V/Entity(26477): 1st Pinnacle added to Pinnacles
+06-13 23:39:57.518: V/Entity(26477): 11 added to 2nd Pinnacle
+06-13 23:39:57.518: V/Entity(26477): 2nd Pinnacle added to Pinnacles
+06-13 23:39:57.659: V/Entity(26477): 1 added to 3rd Pinnacle
+06-13 23:39:57.659: V/Entity(26477): 3rd Pinnacle added to Pinnacles
+06-13 23:39:57.819: V/Entity(26477): 9 added to 4th Pinnacle
+06-13 23:39:57.819: V/Entity(26477): 4th Pinnacle added to Pinnacles
+06-13 23:39:57.819: V/Entity(26477): Pinnacles added to Cory Higginbottom
+06-13 23:39:58.019: V/Entity(26477): 3 added to Cycle One
+06-13 23:39:58.019: V/Entity(26477): Cycle One added to Period Cycles
+06-13 23:39:58.149: V/Entity(26477): 5 added to Cycle Two
+06-13 23:39:58.149: V/Entity(26477): Cycle Two added to Period Cycles
+06-13 23:39:58.319: V/Entity(26477): 6 added to Cycle Three
+06-13 23:39:58.319: V/Entity(26477): Cycle Three added to Period Cycles
+06-13 23:39:58.319: V/Entity(26477): Period Cycles added to Cory Higginbottom
+06-13 23:39:58.469: V/Entity(26477): 4 added to Personal Year
+06-13 23:39:58.579: V/Entity(26477): Personal Year added to Cory Higginbottom
+06-13 23:39:58.740: V/Entity(26477): 4 added to Personal Year
+06-13 23:39:58.990: V/Entity(26477): 7 added to Personal Month
+06-13 23:39:59.000: V/Entity(26477): Personal Month added to Cory Higginbottom
+06-13 23:39:59.150: V/Entity(26477): 4 added to Personal Year
+06-13 23:39:59.410: V/Entity(26477): 7 added to Personal Month
+06-13 23:39:59.550: V/Entity(26477): 3 added to Personal Day
+06-13 23:39:59.550: V/Entity(26477): Personal Day added to Cory Higginbottom
+06-13 23:39:59.550: V/Person(26477): Numerology Set.
