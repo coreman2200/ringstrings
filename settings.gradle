@@ -1,0 +1,1 @@
+include ':ringstrings-app', ':ringstrings-tests', ':core'

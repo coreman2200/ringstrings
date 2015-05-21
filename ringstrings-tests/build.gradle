@@ -1,0 +1,30 @@
+evaluationDependsOn(":ringstrings-app")
+
+apply plugin: 'java'
+
+dependencies {
+
+    def androidModule = project(':ringstrings-app')
+    testCompile project(path: ':ringstrings-app', configuration: 'debugCompile')
+
+    def debugVariant = androidModule.android.applicationVariants.find({it.name == 'debug'})
+    testCompile debugVariant.javaCompile.classpath
+    testCompile debugVariant.javaCompile.outputs.files
+    testCompile files(androidModule.plugins.findPlugin("com.android.application").getBootClasspath())
+
+    compile 'junit:junit:4.11'
+    compile 'org.robolectric:robolectric:3.0-rc2'
+	
+	/*
+	Note that Robolectric 2.4 and AppCompat v21 are not folly compatible with each other. This can cause random build failures
+	especially if the 'clean' command was used. See the known issues in the README.
+	*/
+}
+
+tasks.withType(Test) {
+    scanForTestClasses = false
+    include "**/*Should.class"
+    include "**/*Test.class"
+    include "**/*Tests.class"
+    exclude "**/*IT.class"
+}

@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RingStrings.iml" filepath="$PROJECT_DIR$/RingStrings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ringstrings-app/ringstrings-app.iml" filepath="$PROJECT_DIR$/ringstrings-app/ringstrings-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ringstrings-tests/ringstrings-tests.iml" filepath="$PROJECT_DIR$/ringstrings-tests/ringstrings-tests.iml" />
     </modules>
   </component>
 </project>

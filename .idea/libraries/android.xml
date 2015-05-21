@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="android">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/android-sdk-macosx/platforms/android-21/android.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
