@@ -85,6 +85,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="appcompat-v7-22.1.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="robotium-solo-5.3.1" level="project" />
+    <orderEntry type="library" exported="" name="swisseph-2.01.00-00" level="project" />
     <orderEntry type="library" exported="" name="assertj-android-1.0.0" level="project" />
     <orderEntry type="library" exported="" name="assertj-core-1.6.1" level="project" />
     <orderEntry type="library" exported="" name="support-v4-22.1.1" level="project" />

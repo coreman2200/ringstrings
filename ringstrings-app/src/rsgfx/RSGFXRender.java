@@ -9,9 +9,8 @@ import java.util.concurrent.ArrayBlockingQueue;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-import com.twentwo.ringstrings.HigherEntity;
-import com.twentwo.ringstrings.InputObject;
-import com.twentwo.ringstrings.RSMath;
+import com.coreman2200.ringstrings.HigherEntity;
+import com.coreman2200.ringstrings.InputObject;
 
 import android.content.Context;
 import android.opengl.Matrix;
@@ -19,7 +18,6 @@ import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.os.SystemClock;
 import android.util.Log;
-import android.widget.Toast;
 
 public class RSGFXRender implements GLSurfaceView.Renderer {
 	

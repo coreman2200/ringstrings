@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.twentwo.ringstrings.test">
+    package="com.coreman2200.ringstrings.test">
 
     <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="21" />
 
@@ -9,8 +9,8 @@
     </application>
 
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="com.twentwo.ringstrings"
+                     android:targetPackage="com.coreman2200.ringstrings"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for com.twentwo.ringstrings"/>
+                     android:label="Tests for com.coreman2200.ringstrings"/>
 </manifest>

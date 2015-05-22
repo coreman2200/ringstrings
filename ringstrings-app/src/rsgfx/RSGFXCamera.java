@@ -1,10 +1,7 @@
 package rsgfx;
 
 import android.opengl.Matrix;
-import android.util.FloatMath;
 import android.util.Log;
-
-import com.twentwo.ringstrings.Entity;
 
 public class RSGFXCamera extends RSGFXEntity {
 	// Position the eye behind the origin.

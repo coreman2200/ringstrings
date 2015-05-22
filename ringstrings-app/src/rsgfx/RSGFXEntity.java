@@ -6,16 +6,14 @@ import java.nio.FloatBuffer;
 
 import javax.microedition.khronos.opengles.GL10;
 
-import com.twentwo.ringstrings.Entity;
-import com.twentwo.ringstrings.HigherEntity;
-import com.twentwo.ringstrings.InputObject;
-import com.twentwo.ringstrings.RingString;
+import com.coreman2200.ringstrings.Entity;
+import com.coreman2200.ringstrings.HigherEntity;
+import com.coreman2200.ringstrings.InputObject;
+import com.coreman2200.ringstrings.RingString;
 
 //import android.content.Context;
-import android.opengl.GLES20;
 import android.opengl.GLU;
 import android.opengl.Matrix;
-import android.util.Log;
 
 public class RSGFXEntity {
 	protected static final int FLOAT_SIZE_BYTES = 4;

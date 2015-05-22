@@ -56,6 +56,7 @@
     <orderEntry type="library" exported="" scope="TEST" name="classes" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="support-annotations-22.1.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="internal_impl-22.1.1" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="swisseph-2.01.00-00" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="_Users_new_git_ringstrings_ringstrings_app_build_intermediates_classes_debug" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="_Users_new_git_ringstrings_ringstrings_app_build_intermediates_dependency_cache_debug" level="project" />
   </component>

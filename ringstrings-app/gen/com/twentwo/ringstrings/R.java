@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.twentwo.ringstrings;
+package com.coreman2200.ringstrings;
 
 public final class R {
     public static final class attr {

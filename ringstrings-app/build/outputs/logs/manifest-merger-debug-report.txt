@@ -60,7 +60,7 @@ ADDED from AndroidManifest.xml:18:3
 		ADDED from AndroidManifest.xml:18:17
 	android:name
 		ADDED from AndroidManifest.xml:18:41
-activity#com.twentwo.ringstrings.RingStringsActivity
+activity#com.coreman2200.ringstrings.RingStringsActivity
 ADDED from AndroidManifest.xml:19:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:22:4

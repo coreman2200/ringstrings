@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 //import android.R;
 import android.content.Context;
-import com.twentwo.ringstrings.R;
+import com.coreman2200.ringstrings.R;
 
 public class RSGFXShaderManager {
 	private static Context mContext;

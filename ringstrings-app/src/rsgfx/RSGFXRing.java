@@ -3,19 +3,15 @@ package rsgfx;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
-import java.nio.ShortBuffer;
-
-import javax.microedition.khronos.opengles.GL10;
 
 import android.opengl.GLES20;
 import android.util.FloatMath;
-import android.util.Log;
 
-import com.twentwo.ringstrings.Entity;
-import com.twentwo.ringstrings.HigherEntity;
-import com.twentwo.ringstrings.InputObject;
-import com.twentwo.ringstrings.RSMath;
-import com.twentwo.ringstrings.RingString;
+import com.coreman2200.ringstrings.Entity;
+import com.coreman2200.ringstrings.HigherEntity;
+import com.coreman2200.ringstrings.InputObject;
+import com.coreman2200.ringstrings.RSMath;
+import com.coreman2200.ringstrings.RingString;
 
 public class RSGFXRing extends RSGFXEntity {
 	private static final String STR_PROGNAME = "glowShader";

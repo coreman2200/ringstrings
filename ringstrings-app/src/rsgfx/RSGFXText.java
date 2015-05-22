@@ -3,16 +3,12 @@ package rsgfx;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
-import java.nio.IntBuffer;
 import java.nio.ShortBuffer;
 
-import javax.microedition.khronos.opengles.GL10;
-
-import com.twentwo.ringstrings.Entity;
+import com.coreman2200.ringstrings.Entity;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.opengl.GLES20;
 import android.opengl.GLUtils;

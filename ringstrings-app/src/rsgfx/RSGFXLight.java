@@ -5,8 +5,8 @@ import javax.microedition.khronos.opengles.GL10;
 import android.opengl.GLES20;
 import android.util.Log;
 
-import com.twentwo.ringstrings.Entity;
-import com.twentwo.ringstrings.InputObject;
+import com.coreman2200.ringstrings.Entity;
+import com.coreman2200.ringstrings.InputObject;
 
 public class RSGFXLight extends RSGFXEntity {
 	private static final String STR_PROGNAME = "lightShader";
