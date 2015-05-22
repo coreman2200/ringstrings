@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/new/git/RingStrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -184,11 +184,11 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/Users/new/git/RingStrings/ringstrings-app/res/values/strings.xml -->
+    <!-- From: file:/Users/new/git/ringstrings/ringstrings-app/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">MyResonance</string>
     <string name="hello">Welcome, to MyResonance.</string>
-    <!-- From: file:/Users/new/git/RingStrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
@@ -1199,7 +1199,7 @@
         <item name="android:autoCompleteTextViewStyle">@style/Widget.AppCompat.Light.AutoCompleteTextView</item>
         <item name="android:dropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
     </style>
-    <!-- From: file:/Users/new/git/RingStrings/ringstrings-app/res/values/styles.xml -->
+    <!-- From: file:/Users/new/git/ringstrings/ringstrings-app/res/values/styles.xml -->
     <eat-comment/>
     <style name="RezDataTheme" parent="@android:style/Theme.Light">
         <item name="android:textAppearance">@style/RezTextView</item>
@@ -1224,7 +1224,7 @@
         <item name="android:shadowDy">1.0</item>
         <item name="android:shadowRadius">2.0</item>
     </style>
-    <!-- From: file:/Users/new/git/RingStrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="RtlOverlay.Widget.AppCompat.ActionBar.TitleItem" parent="android:Widget">
         <item name="android:layout_gravity">center_vertical|left</item>
@@ -1446,7 +1446,7 @@
     <style name="Widget.AppCompat.TextView.SpinnerItem" parent="Base.Widget.AppCompat.TextView.SpinnerItem"/>
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar"/>
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="RtlOverlay.Widget.AppCompat.Toolbar.Button.Navigation"/>
-    <!-- From: file:/Users/new/git/RingStrings/ringstrings-app/res/values/public.xml -->
+    <!-- From: file:/Users/new/git/ringstrings/ringstrings-app/res/values/public.xml -->
     <eat-comment/>
     <public id="0x7f070001" name="app_name" type="string"/>
     <public id="0x7f040000" name="gent" type="xml"/>

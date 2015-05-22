@@ -3,4 +3,4 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hello" />
 </LinearLayout>
-<!-- From: file:/Users/new/git/RingStrings/ringstrings-app/res/layout/main.xml -->
+<!-- From: file:/Users/new/git/ringstrings/ringstrings-app/res/layout/main.xml -->
