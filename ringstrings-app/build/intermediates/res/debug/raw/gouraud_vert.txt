@@ -1,0 +1,70 @@
+// Vertex shader Gouraud Shading - Per-vertex lighting
+
+uniform mat4 uMVPMatrix;
+uniform mat4 normalMatrix;
+
+// eye pos
+uniform vec3 eyePos;
+
+// position and normal of the vertices
+attribute vec4 aPosition;
+attribute vec3 aNormal; 
+
+// texture variables
+uniform float hasTexture;
+varying float tex;
+attribute vec2 textureCoord;
+varying vec2 tCoord;
+
+// lighting
+uniform vec4 lightPos;
+uniform vec4 lightColor;
+
+// material
+uniform vec4 matAmbient;
+uniform vec4 matDiffuse;
+uniform vec4 matSpecular;
+uniform float matShininess;
+
+// color to pass on
+varying vec4 color;
+
+void main() {
+	// eyePos
+	vec3 eP = eyePos;
+
+	// pass on texture variables
+	tex = hasTexture;
+	tCoord = textureCoord;
+	
+	vec4 nm = normalMatrix * vec4(aNormal, 1.0);
+	
+	// normal
+	vec3 EyespaceNormal = vec3(uMVPMatrix * vec4(aNormal, 1.0));
+	
+	// the vertex position
+	vec4 posit = uMVPMatrix * aPosition; 
+	
+	// light dir
+	vec3 lightDir = lightPos.xyz - posit.xyz;
+	vec3 eyeVec = -posit.xyz;
+	
+	vec3 N = normalize(EyespaceNormal);
+    vec3 E = normalize(eyeVec); 
+    
+    vec3 L = normalize(lightDir);
+    
+    // Reflect the vector. Use this or reflect(incidentV, N);
+    vec3 reflectV = reflect(-L, N);
+    
+    // Get lighting terms
+    vec4 ambientTerm;
+    ambientTerm = matAmbient * lightColor;
+    	
+    vec4 diffuseTerm = matDiffuse * max(dot(N, L), 0.0);
+    vec4 specularTerm = matSpecular * pow(max(dot(reflectV, E), 0.0), matShininess);
+    
+    color =  ambientTerm + diffuseTerm + specularTerm;
+	
+	gl_Position = uMVPMatrix * aPosition; 
+}

@@ -4,7 +4,7 @@
       <root url="jar://$PROJECT_DIR$/ringstrings-app/build/intermediates/exploded-aar/com.squareup.assertj/assertj-android/1.0.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/ringstrings-app/build/intermediates/exploded-aar/com.squareup.assertj/assertj-android/1.0.0/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ringstrings-app/build/intermediates/exploded-aar/com.squareup.assertj/assertj-android/1.0.0/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/ringstrings-app/build/intermediates/exploded-aar/com.squareup.assertj/assertj-android/1.0.0/res" />
     </CLASSES>
     <JAVADOC />

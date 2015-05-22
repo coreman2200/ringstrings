@@ -1,0 +1,20 @@
+// Pixel shader Gouraud Shading - Per-vertex lighting
+
+precision mediump float;
+
+// texture variables
+uniform sampler2D texture1; // color texture
+
+varying float tex;
+varying vec2 tCoord;
+
+// the color
+varying vec4 color;
+
+void main() {
+	if (tex >= 1.0) {
+		gl_FragColor = texture2D(texture1, tCoord);
+	}
+	else
+		gl_FragColor = color;
+}
