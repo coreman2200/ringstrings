@@ -7,55 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0547e104-39ac-4a03-bb8a-8abcfe867383" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/gen/com/twentwo/ringstrings/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/gen/com/twentwo/ringstrings/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/lib/swisseph-2.01.00-00.jar" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/Astrology.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/astrology/Astrology.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/Entity.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/entities/Entity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/GlobalLL.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/deprbizlogic/GlobalLL.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/HigherEntity.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/entities/HigherEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/InputObject.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/depruielems/InputObject.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/LoaderAsync.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/file/io/LoaderAsync.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/Numerology.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/numerology/Numerology.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/Person.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/entities/Person.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/RSAstrology.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/astrology/RSAstrology.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/RSDialog.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/depruielems/RSDialog.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/RSGoogleLoc.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/google/maps/RSGoogleLoc.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/RSIO.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/file/io/RSIO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/RSInput.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/depruielems/RSInput.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/RSMapActivity.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/google/maps/RSMapActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/RSMath.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/deprbizlogic/RSMath.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/RSNumerology.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/numerology/RSNumerology.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/RingString.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/deprbizlogic/RingString.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/SaveData.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/file/io/SaveData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/SaveDataAST.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/file/io/SaveDataAST.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/SaveDataNUM.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/file/io/SaveDataNUM.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/SaveDataPSN.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/file/io/SaveDataPSN.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/Tags.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/entities/Tags.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/XMLPullGlobals.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/file/io/XMLPullGlobals.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/calcRunnable.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/deprbizlogic/calcRunnable.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/currentRunnable.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/deprbizlogic/currentRunnable.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/orientateRunnable.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/file/io/orientateRunnable.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/reviveRunnable.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/file/io/reviveRunnable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/RingStringsActivityTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/android/RobolectricGradleTestRunner.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/libs/core.jar" afterPath="$PROJECT_DIR$/core/build/libs/core.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/resources/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/resources/resources-debug-androidTest.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/resources/resources-debug.ap_" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/resources/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXEntity.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXLight.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXLight.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXRender.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXRender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXRing.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXRing.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXText.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXText.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/RingStringsActivity.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/RingStringsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build.gradle" afterPath="$PROJECT_DIR$/ringstrings-app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proguard.cfg" afterPath="$PROJECT_DIR$/proguard.cfg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-tests/ringstrings-tests.iml" afterPath="$PROJECT_DIR$/ringstrings-tests/ringstrings-tests.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/swisseph_2_01_00_00.xml" afterPath="$PROJECT_DIR$/.idea/libraries/swisseph_2_01_00_00.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ringstrings.iws" />
@@ -77,17 +38,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RingStringsActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RingStringsActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/RingStringsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.69148934">
-              <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RingStringsActivityTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/RingStringsActivityTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.45212767">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -1991,7 +1969,6 @@
       <list>
         <option value="$PROJECT_DIR$/ringstrings-app/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/twentwo/android/RobolectricGradleTestRunner.java" />
-        <option value="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/android/RobolectricGradleTestRunner.java" />
         <option value="$PROJECT_DIR$/ringstrings-app/build/generated/source/buildConfig/debug/com/twentwo/ringstrings/BuildConfig.java" />
         <option value="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/GlobalLL.java" />
         <option value="$PROJECT_DIR$/proguard.cfg" />
@@ -2003,6 +1980,9 @@
         <option value="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/depruielems/RSInput.java" />
         <option value="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/HigherEntity.java" />
         <option value="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/entities/HigherEntity.java" />
+        <option value="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/android/RobolectricGradleTestRunner.java" />
+        <option value="$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/RingStringsActivityTest3.java" />
+        <option value="$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/RingStringsActivityTest.java" />
       </list>
     </option>
   </component>
@@ -2056,6 +2036,10 @@
               <option name="myItemId" value="ringstrings" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings-tests" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidModuleNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2099,6 +2083,34 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings-app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="numerology" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -2122,10 +2134,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/ringstrings-app/lib/swisseph-2.01.00-00.jar" />
     <property name="android.project.structure.last.selected" value="ringstrings-app" />
     <property name="android.project.structure.proportion" value="0.15" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.coreman2200.ringstrings" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/google/maps" />
@@ -2343,7 +2360,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1270" height="708" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -2363,7 +2380,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2372,6 +2389,14 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -2422,14 +2447,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2490,16 +2507,6 @@
         <state vertical-scroll-proportion="-15.974026">
           <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/android/RobolectricGradleTestRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.19680852">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2657,13 +2664,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/RingStringsActivity.java">
+    <entry file="file://$PROJECT_DIR$/local.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69148934">
-          <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/RingStringsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/RingStringsActivityTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45212767">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
