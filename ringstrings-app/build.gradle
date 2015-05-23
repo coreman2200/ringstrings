@@ -30,5 +30,5 @@ dependencies {
     compile 'com.squareup.assertj:assertj-android:1.0.0'
     compile 'com.android.support:appcompat-v7:22.1.1'
     androidTestCompile 'com.jayway.android.robotium:robotium-solo:5.3.1'
-    compile files('lib/swisseph-2.01.00-00.jar')
+    compile files('libs/swisseph-2.01.00-00.jar')
 }
