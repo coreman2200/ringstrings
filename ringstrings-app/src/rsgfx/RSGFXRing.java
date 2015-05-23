@@ -7,11 +7,11 @@ import java.nio.FloatBuffer;
 import android.opengl.GLES20;
 import android.util.FloatMath;
 
-import com.coreman2200.ringstrings.Entity;
-import com.coreman2200.ringstrings.HigherEntity;
-import com.coreman2200.ringstrings.InputObject;
-import com.coreman2200.ringstrings.RSMath;
-import com.coreman2200.ringstrings.RingString;
+import com.coreman2200.ringstrings.entities.Entity;
+import com.coreman2200.ringstrings.entities.HigherEntity;
+import com.coreman2200.ringstrings.depruielems.InputObject;
+import com.coreman2200.ringstrings.deprbizlogic.RSMath;
+import com.coreman2200.ringstrings.deprbizlogic.RingString;
 
 public class RSGFXRing extends RSGFXEntity {
 	private static final String STR_PROGNAME = "glowShader";

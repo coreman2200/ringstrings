@@ -1,9 +1,12 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.file.io;
 
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Environment;
 import android.util.Log;
+
+import com.coreman2200.ringstrings.entities.Person;
+import com.coreman2200.ringstrings.R;
 
 import java.io.BufferedWriter;
 import java.io.File;

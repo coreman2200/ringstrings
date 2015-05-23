@@ -1,4 +1,4 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.depruielems;
 
 import java.util.concurrent.ArrayBlockingQueue;
 

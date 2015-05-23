@@ -6,10 +6,10 @@ import java.nio.FloatBuffer;
 
 import javax.microedition.khronos.opengles.GL10;
 
-import com.coreman2200.ringstrings.Entity;
-import com.coreman2200.ringstrings.HigherEntity;
-import com.coreman2200.ringstrings.InputObject;
-import com.coreman2200.ringstrings.RingString;
+import com.coreman2200.ringstrings.entities.Entity;
+import com.coreman2200.ringstrings.entities.HigherEntity;
+import com.coreman2200.ringstrings.depruielems.InputObject;
+import com.coreman2200.ringstrings.deprbizlogic.RingString;
 
 //import android.content.Context;
 import android.opengl.GLU;

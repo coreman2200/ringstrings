@@ -1,10 +1,13 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.file.io;
 
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
 import android.location.Location;
 import android.util.Log;
+
+import com.coreman2200.ringstrings.entities.Entity;
+import com.coreman2200.ringstrings.entities.Person;
 
 public class SaveDataPSN extends SaveData {
 	private static final long serialVersionUID = Entity._PSNID;

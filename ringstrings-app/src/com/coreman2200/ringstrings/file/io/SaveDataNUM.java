@@ -1,4 +1,9 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.file.io;
+
+import com.coreman2200.ringstrings.entities.Entity;
+import com.coreman2200.ringstrings.deprbizlogic.GlobalLL;
+import com.coreman2200.ringstrings.entities.Tags;
+import com.coreman2200.ringstrings.numerology.Numerology;
 
 public class SaveDataNUM extends SaveData {
 	private static final long serialVersionUID = Entity._ASTID;

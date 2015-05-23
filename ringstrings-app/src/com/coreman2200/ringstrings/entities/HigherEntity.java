@@ -1,10 +1,16 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.entities;
 
 import java.util.ArrayList;
 
 import rsgfx.RSGFXEntity;
 
 import android.util.Log;
+
+import com.coreman2200.ringstrings.astrology.Astrology;
+import com.coreman2200.ringstrings.deprbizlogic.GlobalLL;
+import com.coreman2200.ringstrings.deprbizlogic.RSMath;
+import com.coreman2200.ringstrings.deprbizlogic.RingString;
+import com.coreman2200.ringstrings.file.io.orientateRunnable;
 
 public class HigherEntity extends Entity {
 	private static final long serialVersionUID = _PSNID -1;
@@ -14,9 +20,9 @@ public class HigherEntity extends Entity {
 	
 	public static final int FILT_NOFILTER     =		0xFF000F;
 	public static final int FILT_TRANSITELEMS = 	Astrology.AST_TRANSIT;
-	public static final int FILT_CURRENTELEMS = 	Entity._CRNTID;
-	public static final int FILT_ASTROELEMS   = 	Entity._ASTID;
-	public static final int FILT_NUMEROELEMS  = 	Entity._NUMID;
+	public static final int FILT_CURRENTELEMS = _CRNTID;
+	public static final int FILT_ASTROELEMS   = _ASTID;
+	public static final int FILT_NUMEROELEMS  = _NUMID;
 	
 	
 	transient public static HigherEntity ALLPEOPLE = new HigherEntity("Everyone", HE_All);
@@ -181,7 +187,7 @@ public class HigherEntity extends Entity {
 	public void setOrientation() {
 		if (!readyingfordisplay) {
 			readyingfordisplay = true;
-			dispStream.execute(new orientateRunnable(this)); 
+			dispStream.execute(new orientateRunnable(this));
 		}
 	}
 	

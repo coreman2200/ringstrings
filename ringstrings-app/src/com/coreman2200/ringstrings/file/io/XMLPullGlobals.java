@@ -1,8 +1,13 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.file.io;
 
 import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
 //import android.util.Log;
+import com.coreman2200.ringstrings.entities.Entity;
+import com.coreman2200.ringstrings.deprbizlogic.GlobalLL;
+import com.coreman2200.ringstrings.R;
+import com.coreman2200.ringstrings.entities.Tags;
+
 import java.io.IOException;
 
 import org.xmlpull.v1.XmlPullParser;

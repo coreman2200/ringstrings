@@ -1,6 +1,15 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.entities;
 
-import com.coreman2200.ringstrings.HigherEntity;
+import com.coreman2200.ringstrings.astrology.RSAstrology;
+import com.coreman2200.ringstrings.deprbizlogic.RSMath;
+import com.coreman2200.ringstrings.deprbizlogic.calcRunnable;
+import com.coreman2200.ringstrings.deprbizlogic.currentRunnable;
+import com.coreman2200.ringstrings.file.io.RSIO;
+import com.coreman2200.ringstrings.file.io.reviveRunnable;
+import com.coreman2200.ringstrings.google.maps.RSGoogleLoc;
+import com.coreman2200.ringstrings.numerology.Numerology;
+import com.coreman2200.ringstrings.numerology.RSNumerology;
+
 import android.location.Location;
 import android.util.Log;
 
@@ -9,7 +18,7 @@ import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
 public class Person extends HigherEntity {
-	private static final long serialVersionUID = Entity._PSNID;
+	private static final long serialVersionUID = _PSNID;
 
 	public static final int _NOFIRSTNAME = 0x01;
 	public static final int _NOMIDNAME = 0x02;
@@ -86,7 +95,7 @@ public class Person extends HigherEntity {
 	public void setMySelf(boolean self) {
 		this.myself = self;
 		if (myself)
-			Person.MySelf = this;
+			MySelf = this;
 	}
 	
 	public boolean isMissingValue(int val) {
@@ -115,7 +124,7 @@ public class Person extends HigherEntity {
 		setBirthGeo(myBLoc);
 		setToday();
 		//new reviveRunnable(this).run();
-		calcStream.execute(new reviveRunnable(this));	
+		calcStream.execute(new reviveRunnable(this));
 	}
 	
 	public double[] getSavedGeo() {
@@ -146,12 +155,12 @@ public class Person extends HigherEntity {
 	
 	public void PersonIsSet() {
 		// Do something to suggest to other threads that a person has been created.
-		HigherEntity.ALLPEOPLE.addChild(this);
+		ALLPEOPLE.addChild(this);
 		personset = true;
 		isDisplayReady = true;
 		if (myself) {
 			Log.d("Person", "The Person known as Self is Set.");
-			HigherEntity.setCurrentEntity(this);
+			setCurrentEntity(this);
 		}
 		
 		Log.d("Person", sName + " is Set..");
@@ -475,7 +484,7 @@ public class Person extends HigherEntity {
 	}
 	
 	public static Person getMySelf() {
-		return Person.MySelf;
+		return MySelf;
 	}
 	
 	public void numFillProfile()

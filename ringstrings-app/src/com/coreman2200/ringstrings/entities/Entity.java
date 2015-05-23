@@ -1,6 +1,12 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.entities;
 
 import android.util.Log;
+
+import com.coreman2200.ringstrings.astrology.Astrology;
+import com.coreman2200.ringstrings.deprbizlogic.GlobalLL;
+import com.coreman2200.ringstrings.deprbizlogic.RSMath;
+import com.coreman2200.ringstrings.file.io.RSIO;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;

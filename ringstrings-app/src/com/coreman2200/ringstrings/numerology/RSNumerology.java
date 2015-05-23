@@ -1,4 +1,6 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.numerology;
+
+import com.coreman2200.ringstrings.entities.Entity;
 
 public class RSNumerology
 {

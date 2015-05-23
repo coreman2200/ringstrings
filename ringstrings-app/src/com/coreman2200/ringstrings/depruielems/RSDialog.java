@@ -1,16 +1,18 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.depruielems;
 
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.coreman2200.ringstrings.entities.Entity;
+import com.coreman2200.ringstrings.entities.Tags;
+
 import java.util.LinkedList;
 import java.util.ListIterator;
 
@@ -118,6 +120,6 @@ public class RSDialog extends Dialog
 }
 
 /* Location:           C:\Users\higgie\Documents\htc\DEV\RingStrings\classes_dex2jar.jar
- * Qualified Name:     com.coreman2200.ringstrings.RSDialog
+ * Qualified Name:     com.coreman2200.ringstrings.depruielems.RSDialog
  * JD-Core Version:    0.6.0
  */

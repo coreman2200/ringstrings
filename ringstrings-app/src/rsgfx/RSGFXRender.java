@@ -9,8 +9,8 @@ import java.util.concurrent.ArrayBlockingQueue;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-import com.coreman2200.ringstrings.HigherEntity;
-import com.coreman2200.ringstrings.InputObject;
+import com.coreman2200.ringstrings.entities.HigherEntity;
+import com.coreman2200.ringstrings.depruielems.InputObject;
 
 import android.content.Context;
 import android.opengl.Matrix;

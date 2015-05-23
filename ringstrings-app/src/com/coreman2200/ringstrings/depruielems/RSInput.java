@@ -1,4 +1,4 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.depruielems;
 
 import android.content.Context;
 import android.os.Vibrator;
@@ -96,6 +96,6 @@ public class RSInput extends GestureDetector.SimpleOnGestureListener
 }
 
 /* Location:           C:\Users\higgie\Documents\htc\DEV\RingStrings\classes_dex2jar.jar
- * Qualified Name:     com.coreman2200.ringstrings.RSInput
+ * Qualified Name:     com.coreman2200.ringstrings.depruielems.RSInput
  * JD-Core Version:    0.6.0
  */

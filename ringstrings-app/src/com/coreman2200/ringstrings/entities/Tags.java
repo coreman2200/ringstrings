@@ -1,11 +1,11 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.entities;
 
-import com.coreman2200.ringstrings.Entity;
+import com.coreman2200.ringstrings.deprbizlogic.GlobalLL;
 
 public class Tags extends Entity
 {
 	
-	private static final long serialVersionUID = Entity._TAGID;
+	private static final long serialVersionUID = _TAGID;
 	public static final int _ALLTAGS = 239;
 	public static int tagCount;
 	

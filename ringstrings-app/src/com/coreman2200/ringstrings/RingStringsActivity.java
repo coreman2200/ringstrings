@@ -22,6 +22,11 @@ import android.view.MotionEvent;
 import android.widget.Toast;
 import android.os.AsyncTask;
 
+import com.coreman2200.ringstrings.depruielems.InputObject;
+import com.coreman2200.ringstrings.entities.Person;
+import com.coreman2200.ringstrings.file.io.RSIO;
+import com.coreman2200.ringstrings.google.maps.RSGoogleLoc;
+
 public class RingStringsActivity extends Activity
 {
 	private static final int INPUT_QUEUE_SIZE = 20;

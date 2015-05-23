@@ -1,4 +1,10 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.file.io;
+
+import com.coreman2200.ringstrings.entities.Entity;
+import com.coreman2200.ringstrings.deprbizlogic.GlobalLL;
+import com.coreman2200.ringstrings.entities.Tags;
+import com.coreman2200.ringstrings.astrology.Astrology;
+import com.coreman2200.ringstrings.astrology.RSAstrology;
 
 public class SaveDataAST extends SaveData {
 	private static final long serialVersionUID = Entity._ASTID;

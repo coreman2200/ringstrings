@@ -5,7 +5,7 @@ import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;
 
-import com.coreman2200.ringstrings.Entity;
+import com.coreman2200.ringstrings.entities.Entity;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;

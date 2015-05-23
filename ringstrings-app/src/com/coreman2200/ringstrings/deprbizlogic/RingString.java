@@ -1,9 +1,13 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.deprbizlogic;
 
 import rsgfx.RSGFXEntity;
 import rsgfx.RSGFXRing;
 
 import android.util.Log;
+
+import com.coreman2200.ringstrings.entities.Entity;
+import com.coreman2200.ringstrings.entities.HigherEntity;
+import com.coreman2200.ringstrings.entities.Tags;
 
 
 public class RingString extends HigherEntity {

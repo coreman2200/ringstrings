@@ -1,4 +1,4 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.astrology;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,7 +7,11 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import android.util.Log;
 
-import com.coreman2200.ringstrings.Entity;
+import com.coreman2200.ringstrings.entities.Entity;
+import com.coreman2200.ringstrings.deprbizlogic.GlobalLL;
+import com.coreman2200.ringstrings.deprbizlogic.RSMath;
+import com.coreman2200.ringstrings.entities.Tags;
+import com.coreman2200.ringstrings.file.io.XMLPullGlobals;
 
 public class Astrology extends Entity {
 	private static final long serialVersionUID = _ASTID;

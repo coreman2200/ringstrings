@@ -1,4 +1,7 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.deprbizlogic;
+
+import com.coreman2200.ringstrings.entities.Person;
+import com.coreman2200.ringstrings.google.maps.RSGoogleLoc;
 
 public class currentRunnable implements Runnable {
 	protected Person myP;

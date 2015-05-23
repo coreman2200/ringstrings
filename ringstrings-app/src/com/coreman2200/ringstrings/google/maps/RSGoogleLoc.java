@@ -1,4 +1,4 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.google.maps;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,6 +17,8 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
+
+import com.coreman2200.ringstrings.deprbizlogic.RSMath;
 
 
 public class RSGoogleLoc implements LocationListener

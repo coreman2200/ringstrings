@@ -1,6 +1,9 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.file.io;
 
 import android.util.Log;
+
+import com.coreman2200.ringstrings.entities.HigherEntity;
+import com.coreman2200.ringstrings.entities.Person;
 
 public class orientateRunnable implements Runnable {
 	protected HigherEntity myP;

@@ -1,7 +1,11 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.astrology;
 
 import android.location.Location;
 import android.util.Log;
+
+import com.coreman2200.ringstrings.entities.Entity;
+import com.coreman2200.ringstrings.entities.Person;
+import com.coreman2200.ringstrings.file.io.RSIO;
 
 import java.util.Calendar;
 

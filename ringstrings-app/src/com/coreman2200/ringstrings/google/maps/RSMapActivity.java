@@ -1,4 +1,4 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.google.maps;
 /*
 import android.content.Context;
 import android.graphics.drawable.Drawable;
