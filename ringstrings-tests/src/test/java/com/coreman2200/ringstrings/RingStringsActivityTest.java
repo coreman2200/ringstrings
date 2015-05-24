@@ -9,7 +9,7 @@ import org.robolectric.annotation.Config;
 
 import com.coreman2200.ringstrings.BuildConfig;
 
-import static org.assertj.android.api.Assertions.assertThat;
+//import static org.assertj.android.api.Assertions.assertThat;
 
 /**
  * RingStringsActivityTest
@@ -25,8 +25,8 @@ import static org.assertj.android.api.Assertions.assertThat;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-@RunWith(RobolectricGradleTestRunner.class)
-@Config(constants = BuildConfig.class)
+//@RunWith(RobolectricGradleTestRunner.class)
+//@Config(constants = BuildConfig.class)
 public class RingStringsActivityTest {
 
 }
