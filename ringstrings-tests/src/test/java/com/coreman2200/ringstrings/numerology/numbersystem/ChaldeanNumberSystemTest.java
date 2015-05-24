@@ -6,10 +6,11 @@ import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
+import org.robolectric.util.Logger;
 
 import com.coreman2200.ringstrings.BuildConfig;
 
-import static org.assertj.android.api.Assertions.assertThat;
+//import static org.assertj.android.api.Assertions.assertThat;
 
 /**
  * ChaldeanNumberSystemTest
@@ -36,7 +37,7 @@ public class ChaldeanNumberSystemTest {
     }
 
     @Test
-    public void testNumberSystemIsFilled() {
+    public void testNumberSystemIsFilledForAllLetters() {
         final String characters = "abcdefghijklmnopqrstuvwxyz";
         int counter = 0;
 
@@ -44,7 +45,8 @@ public class ChaldeanNumberSystemTest {
             assert(mNumberSystem.numValueForChar(c) !=  0);
             counter++;
         }
-        assert(counter == 27);
+
+        assert(mNumberSystem.symbolValueMap.size() == characters.length());
     }
 
 }
