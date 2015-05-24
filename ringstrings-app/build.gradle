@@ -2,18 +2,20 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion '21.1.2'
+    buildToolsVersion "22.0.1"
     defaultConfig {
         applicationId "com.coreman2200.ringstrings"
         minSdkVersion 21
         targetSdkVersion 21
         versionCode 1
         versionName "0.1"
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+        testApplicationId 'com.coreman2200.ringstrings'
     }
 
     sourceSets {
         main {
-            manifest.srcFile 'AndroidManifest.xml'
+            manifest.srcFile './AndroidManifest.xml'
             java.srcDirs = ['src']
             res.srcDirs = ['res']
         }
@@ -28,10 +30,5 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(':core')
-    compile 'com.squareup.assertj:assertj-android:1.0.0'
-    compile 'com.android.support:appcompat-v7:22.1.1'
-    androidTestCompile 'com.jayway.android.robotium:robotium-solo:5.3.1'
     compile files('libs/swisseph-2.01.00-00.jar')
 }

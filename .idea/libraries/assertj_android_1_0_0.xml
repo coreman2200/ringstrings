@@ -1,13 +1,11 @@
 <component name="libraryTable">
   <library name="assertj-android-1.0.0">
-    <ANNOTATIONS>
-      <root url="jar://$PROJECT_DIR$/ringstrings-app/build/intermediates/exploded-aar/com.squareup.assertj/assertj-android/1.0.0/annotations.zip!/" />
-    </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/ringstrings-app/build/intermediates/exploded-aar/com.squareup.assertj/assertj-android/1.0.0/res" />
-      <root url="jar://$PROJECT_DIR$/ringstrings-app/build/intermediates/exploded-aar/com.squareup.assertj/assertj-android/1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.assertj/assertj-android/1.0.0/bf3df14c9eb3ad873d36bee726129e0ea135a62b/assertj-android-1.0.0.aar" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.assertj/assertj-android/1.0.0/e453eafe2239f4790251419377b694447ca3bfe0/assertj-android-1.0.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="robolectric-annotations-3.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robolectric/robolectric-annotations/3.0-SNAPSHOT/3c64a3654c940fe87ebf03a09b0b37b079c793df/robolectric-annotations-3.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robolectric/robolectric-annotations/3.0-SNAPSHOT/662db68ad431e3ba9b08c82bd2aa25a590a91bf4/robolectric-annotations-3.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

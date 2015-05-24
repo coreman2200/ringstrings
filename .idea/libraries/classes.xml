@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="classes">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/ringstrings-app/build/intermediates/exploded-aar/com.squareup.assertj/assertj-android/1.0.0/jars/classes.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
