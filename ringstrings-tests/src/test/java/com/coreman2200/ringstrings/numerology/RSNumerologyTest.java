@@ -1,4 +1,4 @@
-package com.coreman2200.ringstrings;
+package com.coreman2200.ringstrings.numerology;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -12,8 +12,8 @@ import com.coreman2200.ringstrings.BuildConfig;
 import static org.assertj.android.api.Assertions.assertThat;
 
 /**
- * RingStringsActivityTest
- * description
+ * RSNumerologyTest
+ * Testing space for current RSNumerology class functions..
  *
  * Created by Cory Higginbottom on 5/23/15
  * http://github.com/coreman2200
@@ -27,6 +27,5 @@ import static org.assertj.android.api.Assertions.assertThat;
 
 @RunWith(RobolectricGradleTestRunner.class)
 @Config(constants = BuildConfig.class)
-public class RingStringsActivityTest {
-
+public class RSNumerologyTest {
 }
