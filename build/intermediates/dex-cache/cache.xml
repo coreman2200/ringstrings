@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/new/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/1.6.1/5db13d0ae30dca5157f0dea60f78640cf039cafe/assertj-core-1.6.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5db13d0ae30dca5157f0dea60f78640cf039cafe">
+        <dex dex="/Users/new/git/ringstrings/ringstrings-app/build/intermediates/pre-dexed/debug/assertj-core-1.6.1-0d5f2088296f0206f5d6de465e1e13d671c83b6a.jar" />
+    </item>
+    <item
+        jar="/Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.squareup.assertj/assertj-android/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5fe0720b788703b9ccc93cbcd46828fbbee42cea">
+        <dex dex="/Users/new/git/ringstrings/ringstrings-app/build/intermediates/pre-dexed/debug/classes-e08386c07784a4651d8435a0e325b6200ca1eeff.jar" />
+    </item>
+    <item
+        jar="/Users/new/git/ringstrings/core/build/libs/core.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="89487dfb3ef0d31df999787a3f584942b9e9a312">
+        <dex dex="/Users/new/git/ringstrings/ringstrings-app/build/intermediates/pre-dexed/debug/core-147a1e67599c15c4dcdced2eb43167a8ddc6d771.jar" />
+    </item>
+    <item
+        jar="/Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="/Users/new/git/ringstrings/ringstrings-app/build/intermediates/pre-dexed/debug/classes-f5c46559941e0aa14e7d4c4c5bbaa96e520666ce.jar" />
+    </item>
+    <item
+        jar="/Users/new/git/ringstrings/ringstrings-app/libs/swisseph-2.01.00-00.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9e5c03be4edb65193d43508cfbfd23f6017c3c3b">
+        <dex dex="/Users/new/git/ringstrings/ringstrings-app/build/intermediates/pre-dexed/debug/swisseph-2.01.00-00-7bba84fad109e8efbc5b0c4f10699593bebcada4.jar" />
+    </item>
+    <item
+        jar="/Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/libs/internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="/Users/new/git/ringstrings/ringstrings-app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-c26a9d6bb02974fbeba5f910a3396d3987fdd767.jar" />
+    </item>
+    <item
+        jar="/Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="/Users/new/git/ringstrings/ringstrings-app/build/intermediates/pre-dexed/debug/classes-1c296504988e8fe115c6a5beb6ba5af26fc78389.jar" />
+    </item>
+    <item
+        jar="/Users/new/.gradle/caches/modules-2/files-2.1/com.jayway.android.robotium/robotium-solo/5.3.1/e6e664ab1b59d2504c3529f128747c13487f96ca/robotium-solo-5.3.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e6e664ab1b59d2504c3529f128747c13487f96ca">
+        <dex dex="/Users/new/git/ringstrings/ringstrings-app/build/intermediates/pre-dexed/androidTest/debug/robotium-solo-5.3.1-3fe6e64710e6d3eca84130ab0fe4a3ee0f9fc0d7.jar" />
+    </item>
+    <item
+        jar="/Users/new/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
+        <dex dex="/Users/new/git/ringstrings/ringstrings-app/build/intermediates/pre-dexed/debug/support-annotations-22.1.1-c46b1e642e78bfa21a89d470d28be6fccb9599db.jar" />
+    </item>
+
+</items>

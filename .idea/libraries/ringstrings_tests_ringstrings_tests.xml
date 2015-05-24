@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ringstrings-tests.ringstrings-tests">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ringstrings-tests/build/libs/ringstrings-tests.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

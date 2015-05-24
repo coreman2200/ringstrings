@@ -3,7 +3,7 @@ evaluationDependsOn(":ringstrings-app")
 apply plugin: 'java'
 
 dependencies {
-
+    compile 'junit:junit:4.12'
     def androidModule = project(':ringstrings-app')
     testCompile project(path: ':ringstrings-app', configuration: 'debugCompile')
 
@@ -15,8 +15,8 @@ dependencies {
         exclude group: 'commons-logging', module: 'commons-logging'
         exclude group: 'org.apache.httpcomponents', module: 'httpclient'
     }
+    testCompile "org.assertj:assertj-core:1.7.0"
 
-    compile 'junit:junit:4.12'
 }
 
 tasks.withType(Test) {
