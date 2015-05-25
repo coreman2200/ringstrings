@@ -1,2 +1,9 @@
 bin/classes/com/twentwo/ringstrings/RSTests.class
 src/com/twentwo/ringstrings/RSTests.java
+.gradle/2.4/taskArtifacts/cache.properties.lock
+.gradle/2.4/taskArtifacts/fileHashes.bin
+.gradle/2.4/taskArtifacts/fileSnapshots.bin
+.gradle/2.4/taskArtifacts/outputFileStates.bin
+.gradle/2.4/taskArtifacts/taskArtifacts.bin
+.idea/workspace.xml
+ringstrings-app/build/intermediates/resources/resources-debug.ap_
