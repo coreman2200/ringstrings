@@ -29,11 +29,11 @@ import com.coreman2200.ringstrings.BuildConfig;
 @RunWith(RobolectricGradleTestRunner.class)
 @Config(constants = BuildConfig.class)
 public class NumberSystemTest {
-    AbstractNumberSystem mNumberSystem;
+    INumberSystem mNumberSystem;
 
     @Before
     public void setup() {
-        mNumberSystem = new PythagoreanNumberSystem();
+        mNumberSystem = AbstractNumberSystem.createNumberSystemWithType(NumberSystemType.PYTHAGOREAN);
     }
 
     @Test
@@ -46,7 +46,7 @@ public class NumberSystemTest {
             counter++;
         }
 
-        assert(mNumberSystem.symbolValueMap.size() == characters.length());
+        assert(mNumberSystem.size() == characters.length());
     }
 
 }

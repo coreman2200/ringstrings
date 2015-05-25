@@ -20,8 +20,7 @@ import java.util.HashMap;
 public class PythagoreanNumberSystem extends AbstractNumberSystem {
     public PythagoreanNumberSystem()
     {
-        symbolValueMap = new HashMap<Character, Integer>();
-        setNumberSystemValues();
+
     }
 
     @Override

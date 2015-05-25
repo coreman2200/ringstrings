@@ -18,11 +18,10 @@ import java.util.HashMap;
 
 
 public class ChaldeanNumberSystem extends AbstractNumberSystem {
-    
-    public ChaldeanNumberSystem() 
+
+    public ChaldeanNumberSystem()
     {
-        symbolValueMap = new HashMap<Character, Integer>();
-        setNumberSystemValues();
+        super();
     }
 
     @Override
