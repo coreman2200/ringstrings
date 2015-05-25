@@ -16,7 +16,18 @@ import com.coreman2200.ringstrings.symbol.AbstractSymbol;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-
 public class NumberSymbolImpl extends AbstractSymbol {
+    private int symbolValue = 0;
+
+    public NumberSymbolImpl(BaseNumberSymbols numberSymbol) {
+        symbolValue = numberSymbol.getValue();
+        produceNumberSymbol(BaseNumberSymbols.getBaseSymbolForNumber(symbolValue));
+    }
+
+    private NumberSymbolImpl produceNumberSymbol(BaseNumberSymbols numberSymbol) {
+        this.produceSymbol();
+        this.addSymbolDataForKey(numberSymbol, symbolValue);
+        return this;
+    }
 
 }
