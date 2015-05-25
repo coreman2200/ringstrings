@@ -28,12 +28,12 @@ import com.coreman2200.ringstrings.BuildConfig;
 
 @RunWith(RobolectricGradleTestRunner.class)
 @Config(constants = BuildConfig.class)
-public class ChaldeanNumberSystemTest {
-    ChaldeanNumberSystem mNumberSystem;
+public class NumberSystemTest {
+    AbstractNumberSystem mNumberSystem;
 
     @Before
     public void setup() {
-        mNumberSystem = new ChaldeanNumberSystem();
+        mNumberSystem = new PythagoreanNumberSystem();
     }
 
     @Test
