@@ -15,5 +15,5 @@ package com.coreman2200.ringstrings.symbol;
  */
 
 public interface ISymbol {
-
+    // TODO: Each Symbol must ...
 }

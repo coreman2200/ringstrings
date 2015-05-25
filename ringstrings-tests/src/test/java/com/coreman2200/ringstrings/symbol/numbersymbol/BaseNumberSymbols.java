@@ -1,6 +1,9 @@
 package com.coreman2200.ringstrings.symbol.numbersymbol;
 
 import com.coreman2200.ringstrings.symbol.ISymbol;
+
+import java.util.Collections;
+import java.util.Map;
 import java.util.HashMap;
 
 /**
@@ -33,28 +36,50 @@ public enum BaseNumberSymbols {
     THIRTY_THREE(33),
     FOURTY_FOUR(44);
 
-    static HashMap<Integer, BaseNumberSymbols> baseNumbers = new HashMap<>();
-    int baseValue;
-    NumberSymbolImpl numberSymbol;
+    static private final Map<Integer, IBaseNumberSymbol> baseNumbers = Collections.unmodifiableMap(mapBaseNumberSymbols());
+    private final int baseValue;
+    private final IBaseNumberSymbol numberSymbol;
+    private boolean isMasterNumber;
 
-    private BaseNumberSymbols(int value) {
-        baseValue = value;
-        mapBaseNumberSymbol();
+    BaseNumberSymbols(int value) {
+        this.baseValue = value;
+        this.numberSymbol = new BaseNumberSymbolImpl(this);
+        setIsMasterNumber();
     }
 
-    private void mapBaseNumberSymbol() {
-        numberSymbol = new NumberSymbolImpl(this);
-        baseNumbers.putIfAbsent(baseValue, this);
+    private void setIsMasterNumber() {
+        isMasterNumber = (baseValue > 9);
     }
 
-    static public BaseNumberSymbols getBaseSymbolForNumber(int value) throws NullPointerException {
+    public boolean getIsMasterNumber() {
+        return this.isMasterNumber;
+    }
+
+    public IBaseNumberSymbol getBaseNumberSymbol() {
+        return this.numberSymbol;
+    }
+
+    public int getBaseNumberValue() {
+        return this.baseValue;
+    }
+
+    private static Map<Integer, IBaseNumberSymbol> mapBaseNumberSymbols() {
+        Map<Integer, IBaseNumberSymbol> mMap = new HashMap<Integer, IBaseNumberSymbol>();
+
+        for (BaseNumberSymbols symbol : BaseNumberSymbols.values())
+            mMap.put(symbol.baseValue, symbol.numberSymbol);
+
+        return mMap;
+    }
+
+    static public boolean isValueBaseNumberSymbol(int value) {
+        return baseNumbers.containsKey(value);
+    }
+
+    static public BaseNumberSymbols getBaseNumberSymbolIDForValue(int value) throws NullPointerException {
         if (!baseNumbers.containsKey(value))
             throw new NullPointerException("No Base Symbol for value '" + value + "' found." );
-        return baseNumbers.get(value);
-    }
-
-    public int getValue() {
-        return this.baseValue;
+        return baseNumbers.get(value).getBaseNumberSymbolID();
     }
 
 }

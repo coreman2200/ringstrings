@@ -1,5 +1,7 @@
 package com.coreman2200.ringstrings.symbol;
 
+import org.robolectric.util.Logger;
+
 import java.util.HashMap;
 
 import javax.management.RuntimeErrorException;
@@ -22,16 +24,16 @@ import javax.management.RuntimeErrorException;
 abstract public class AbstractSymbol implements ISymbol {
     private HashMap<Enum<? extends Enum<?>>, Object>  symbolDataMap;
 
-    private final void initializeSymbolMap() {
-        symbolDataMap = new HashMap<Enum<? extends Enum<?>>, Object>();
+    protected AbstractSymbol() {
+        produceSymbol();
     }
 
-    protected final void addSymbolDataForKey(Enum<? extends Enum<?>> key, Object data) throws RuntimeException {
+    protected final void addSymbolDataForKey(Enum<? extends Enum<?>> key, Object data) { //throws RuntimeException {
         assert(key != null);
         assert(data != null);
 
         if (symbolDataMap.containsKey(key))
-            throw new RuntimeException("Symbol method does not permit altering existing values by this means.");
+            Logger.debug("Symbol method does not permit altering existing values by this means.");
 
         symbolDataMap.put(key, data);
     }
@@ -64,12 +66,16 @@ abstract public class AbstractSymbol implements ISymbol {
         return symbolDataMap.get(key);
     }
 
-    protected final AbstractSymbol produceSymbol() {
+    private final void produceSymbol() {
         initializeSymbolMap();
-        return this;
     }
 
+    private final void initializeSymbolMap() {
+        symbolDataMap = new HashMap<Enum<? extends Enum<?>>, Object>();
+    }
+
+
     // TODO: Stubbed.
-    protected void storeSymbol()  {};
-    protected void restoreSymbol() {};
+    protected final void storeSymbol()  {};
+    protected final void restoreSymbol() {};
 }
