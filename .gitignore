@@ -189,3 +189,9 @@ ringstrings-tests/build/test-results/binary/test/output.bin
 ringstrings-tests/build/test-results/binary/test/output.bin.idx
 ringstrings-tests/build/test-results/binary/test/results.bin
 ringstrings-tests/build/tmp/jar/MANIFEST.MF
+ringstrings-tests/build/classes/test/com/coreman2200/ringstrings/symbol/inputprocessor/AbstractInputProcessor.class
+ringstrings-tests/build/classes/test/com/coreman2200/ringstrings/symbol/inputprocessor/INumberSymbolInputProcessor.class
+ringstrings-tests/build/classes/test/com/coreman2200/ringstrings/symbol/inputprocessor/NumberSymbolInputProcessorImpl.class
+ringstrings-tests/build/classes/test/com/coreman2200/ringstrings/symbol/numbersymbol/DerivedNumberSymbolImpl$Derived.class
+ringstrings-tests/build/classes/test/com/coreman2200/ringstrings/symbol/numbersymbol/DerivedNumberSymbolImpl.class
+ringstrings-tests/build/classes/test/com/coreman2200/ringstrings/symbol/numbersymbol/IDerivedNumberSymbol.class
