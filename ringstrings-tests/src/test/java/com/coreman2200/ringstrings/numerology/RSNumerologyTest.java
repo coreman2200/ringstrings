@@ -12,6 +12,8 @@ import com.coreman2200.ringstrings.BuildConfig;
 import com.coreman2200.ringstrings.numerology.numbersystem.AbstractNumberSystem;
 import com.coreman2200.ringstrings.numerology.numbersystem.INumberSystem;
 import com.coreman2200.ringstrings.numerology.numbersystem.NumberSystemType;
+import com.coreman2200.ringstrings.symbol.inputprocessor.INumberSymbolInputProcessor;
+import com.coreman2200.ringstrings.symbol.inputprocessor.NumberSymbolInputProcessorImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.BaseNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.INumberSymbol;
 
@@ -36,51 +38,12 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.INumberSymbol;
 public class RSNumerologyTest {
     final String mTestName = "Cory";
     INumberSystem mNumberSystem;
-    NumberSystemType mNumberSystemType= NumberSystemType.PYTHAGOREAN;
+    NumberSystemType mNumberSystemType = NumberSystemType.PYTHAGOREAN;
+    INumberSymbolInputProcessor mTestProcessor;
 
     @Before
     public void setup() {
-        mNumberSystem = AbstractNumberSystem.createNumberSystemWithType(mNumberSystemType);
-    }
-
-    public int numSingularizeValue(int value) {
-        int singularized = 0;
-
-        if (BaseNumberSymbols.isValueBaseNumberSymbol(value)) {
-            return value;
-        } else {
-            singularized = addDigitsOfValue(value);
-            return numSingularizeValue(singularized);
-        }
-    }
-
-    private int addDigitsOfValue(int value) {
-        String valueAsString = String.valueOf(value);
-        int addedDigits = 0;
-
-        for (int j = 0; j < valueAsString.length(); j++) {
-            addedDigits += Integer.parseInt(String.valueOf(valueAsString.charAt(j)));
-        }
-
-        return addedDigits;
-    }
-
-    private INumberSymbol convertTextStringToNumberSymbol(String text) {
-        char[] charArrayOfTestName = text.toLowerCase().toCharArray();
-        int totalValue = 0;
-
-        for (char c : charArrayOfTestName)
-        {
-            int charVal = mNumberSystem.numValueForChar(c);
-            assert(charVal != 0);
-            totalValue += charVal;
-            Logger.info("Char '%c' returns %i, total value %i", c, charVal, totalValue);
-        }
-
-        
-        int singularized = numSingularizeValue(totalValue);
-
-        return BaseNumberSymbols.getBaseNumberSymbolIDForValue(singularized).getBaseNumberSymbol();
+        mTestProcessor = new NumberSymbolInputProcessorImpl(mNumberSystemType);
     }
 
     @Test
@@ -94,10 +57,10 @@ public class RSNumerologyTest {
         int val4 = 22;
         int exp4 = 2+2;
 
-        assert(addDigitsOfValue(val1) == exp1);
-        assert(addDigitsOfValue(val2) == exp2);
-        assert(addDigitsOfValue(val3) == exp3);
-        assert(addDigitsOfValue(val4) == exp4);
+        assert(mTestProcessor.addDigitsOfValue(val1) == exp1);
+        assert(mTestProcessor.addDigitsOfValue(val2) == exp2);
+        assert(mTestProcessor.addDigitsOfValue(val3) == exp3);
+        assert(mTestProcessor.addDigitsOfValue(val4) == exp4);
 
     }
 
@@ -105,7 +68,7 @@ public class RSNumerologyTest {
     @Test
     public void testChaldeanizeProducesAccurateValuesPerNumberSystem()
     {
-        INumberSymbol symbol = convertTextStringToNumberSymbol(mTestName);
+        INumberSymbol symbol = mTestProcessor.convertTextStringToNumberSymbol(mTestName);
 
         if (mNumberSystemType.equals(NumberSystemType.PYTHAGOREAN)) {
             assert (symbol.getNumberSymbolValue() == 7);
@@ -117,13 +80,13 @@ public class RSNumerologyTest {
 
     @Test
     public void testNumSingularizeReducesToBaseNumberSymbolValue() {
-        assert(numSingularizeValue(4) == 4);
-        assert(numSingularizeValue(9) == 9);
-        assert(numSingularizeValue(11) == 11);
-        assert(numSingularizeValue(33) == 33);
-        assert(numSingularizeValue(22) == 22);
-        assert(numSingularizeValue(25) == 7);
-        assert(numSingularizeValue(63) == 9);
+        assert(mTestProcessor.singularizeValue(4) == 4);
+        assert(mTestProcessor.singularizeValue(9) == 9);
+        assert(mTestProcessor.singularizeValue(11) == 11);
+        assert(mTestProcessor.singularizeValue(33) == 33);
+        assert(mTestProcessor.singularizeValue(22) == 22);
+        assert(mTestProcessor.singularizeValue(25) == 7);
+        assert(mTestProcessor.singularizeValue(63) == 9);
     }
 
 }
