@@ -18,5 +18,5 @@ public enum NumberStrata {
     BASENUMBER,
     DERIVEDNUMBER,
     GROUPEDNUMBERS,
-    MAPPEDNUMBERS
+    RELATEDNUMBERS
 }
