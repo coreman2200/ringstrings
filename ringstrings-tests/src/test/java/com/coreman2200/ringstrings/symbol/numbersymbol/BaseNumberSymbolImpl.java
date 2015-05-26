@@ -15,14 +15,14 @@ package com.coreman2200.ringstrings.symbol.numbersymbol;
  */
 
 public class BaseNumberSymbolImpl extends NumberSymbolImpl implements IBaseNumberSymbol {
-    private BaseNumberSymbols numberSymbolID;
+    protected BaseNumberSymbols numberSymbolID;
 
     public BaseNumberSymbolImpl(BaseNumberSymbols symbol) {
         super(symbol.getBaseNumberValue());
         this.numberSymbolID = symbol;
     }
 
-    public BaseNumberSymbols getBaseNumberSymbolID() {
+    public final BaseNumberSymbols getBaseNumberSymbolID() {
         return this.numberSymbolID;
     }
 
