@@ -22,10 +22,18 @@ import javax.management.RuntimeErrorException;
 
 
 abstract public class AbstractSymbol implements ISymbol {
-    private HashMap<Enum<? extends Enum<?>>, Object>  symbolDataMap;
+    private HashMap<Enum<? extends Enum<?>>, Object> symbolDataMap;
 
     protected AbstractSymbol() {
         produceSymbol();
+    }
+
+    private void produceSymbol() {
+        initializeSymbolMap();
+    }
+
+    private void initializeSymbolMap() {
+        symbolDataMap = new HashMap<Enum<? extends Enum<?>>, Object>();
     }
 
     protected final void addSymbolDataForKey(Enum<? extends Enum<?>> key, Object data) { //throws RuntimeException {
@@ -66,12 +74,11 @@ abstract public class AbstractSymbol implements ISymbol {
         return symbolDataMap.get(key);
     }
 
-    private final void produceSymbol() {
-        initializeSymbolMap();
+    protected HashMap<Enum<? extends Enum<?>>, Object> prepareSymbolToStore() {
+        throw new NoClassDefFoundError("Must be overridden.");
     }
-
-    private final void initializeSymbolMap() {
-        symbolDataMap = new HashMap<Enum<? extends Enum<?>>, Object>();
+    protected void refreshSymbolFromMap(HashMap<Enum<? extends Enum<?>>, Object> storedSymbolMap) {
+        throw new NoClassDefFoundError("Must be overridden.");
     }
 
 
