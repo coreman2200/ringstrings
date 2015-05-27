@@ -49,4 +49,16 @@ public class NumberSystemTest {
         assert(mNumberSystem.size() == characters.length());
     }
 
+    @Test
+    public void testNumberSystemIsOKWhenPresentedNonMembers() {
+        final String characters = "abcdefg@hijklmnopqr%stuv)wxyz";
+        int counter = 0;
+
+        for (char c : characters.toCharArray()) {
+            counter++;
+        }
+
+        assert(mNumberSystem.size() == characters.length() - 3);
+    }
+
 }
