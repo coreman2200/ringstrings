@@ -1,4 +1,4 @@
-package com.coreman2200.ringstrings.symbol.inputprocessor;
+package com.coreman2200.ringstrings.symbol.inputprocessor.numerology;
 
 import com.coreman2200.ringstrings.symbol.numbersymbol.INumberSymbol;
 
@@ -21,4 +21,7 @@ public interface INumberSymbolInputProcessor {
     public int singularizeValue(int value);
     public int addDigitsOfValue(int value);
     public INumberSymbol convertValueToNumberSymbol(int value);
+    public String getConsonants(String text);
+    public String getVowels(String text);
+    public int getDigitOfValueInNthPlace(int value, int digit);
 }
