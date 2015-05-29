@@ -19,5 +19,8 @@ public enum GroupedNumberSymbols {
     CHALLENGES,
     PERIODS,
     PINNACLES,
-    PERSONAL
+    PERSONAL,
+    KARMIC_LESSONS,
+    HIDDEN_PASSIONS,
+    CHART
 }

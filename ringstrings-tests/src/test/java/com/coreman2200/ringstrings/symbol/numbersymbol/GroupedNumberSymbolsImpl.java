@@ -1,6 +1,9 @@
 package com.coreman2200.ringstrings.symbol.numbersymbol;
 
+import org.robolectric.util.Logger;
+
 import java.util.LinkedHashMap;
+import java.util.List;
 
 /**
  * GroupedNumberSymbolsImpl
@@ -17,11 +20,64 @@ import java.util.LinkedHashMap;
  */
 
 public class GroupedNumberSymbolsImpl extends NumberSymbolImpl implements IGroupedNumberSymbols {
-    LinkedHashMap<NumberStrata, INumberSymbol> mGroupedNumberSymbolsList;
+    protected LinkedHashMap<Enum<? extends Enum<?>>, INumberSymbol> mGroupedNumberSymbolsMap;
+    protected final GroupedNumberSymbols mGroupedNumberSymbolID;
 
-    protected GroupedNumberSymbolsImpl() { // TODO: How to describe as a value a group
-        super(BaseNumberSymbols.getBaseNumberSymbolIDForValue(0).getBaseNumberValue());
-        mGroupedNumberSymbolsList = new LinkedHashMap<>();
+    public GroupedNumberSymbolsImpl(GroupedNumberSymbols group) {
+        super(0);
+        mGroupedNumberSymbolID = group;
+        mGroupedNumberSymbolsMap = new LinkedHashMap<>();
+    }
+
+    public final void addNumberSymbol(Enum<? extends Enum<?>> name, INumberSymbol symbol) {
+        assert (symbol != null);
+        assert (name != null);
+        mGroupedNumberSymbolsMap.put(name, symbol);
+        System.out.println(name.toString() + " added to "+ mGroupedNumberSymbolID.toString() + "! value: " + symbol.getNumberSymbolValue());
+    }
+
+    public final void removeNumberSymbol(Enum<? extends Enum<?>> name) {
+        assert (name != null);
+        if (!mGroupedNumberSymbolsMap.containsKey(name))
+            throw new NullPointerException("Grouped Symbol does not have elem named " + name.toString());
+        mGroupedNumberSymbolsMap.remove(name);
+    }
+
+    @Override
+    public final int size() {
+        int size = 0;
+        for (INumberSymbol symbol : mGroupedNumberSymbolsMap.values())
+            size += symbol.size();
+        return size;
+    }
+
+    @Override
+    public String getName() {
+        return mGroupedNumberSymbolID.toString();
+    }
+
+    @Override
+    public final INumberSymbol getNumberSymbol(Enum<? extends Enum<?>> name) {
+        assert (name != null);
+        if (!mGroupedNumberSymbolsMap.containsKey(name))
+            throw new NullPointerException("Elem does not exist within grouped symbols");
+        return mGroupedNumberSymbolsMap.get(name);
+    }
+
+    public IGroupedNumberSymbols getGroupedNumberSymbol(Enum<? extends Enum<?>> name) {
+        return (IGroupedNumberSymbols)getNumberSymbol(name);
+    }
+
+    @Override
+    public final GroupedNumberSymbols getGroupID() {
+        return this.mGroupedNumberSymbolID;
+    }
+
+    @Override
+    protected void produceNumberSymbol() {
+        super.produceNumberSymbol();
+        System.out.println("New "+ numberSymbolStrata.toString() +" produced! ");
+
     }
 
     @Override

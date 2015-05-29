@@ -15,5 +15,4 @@ package com.coreman2200.ringstrings.symbol;
  */
 
 public interface IGroupedSymbols extends ISymbol {
-
 }

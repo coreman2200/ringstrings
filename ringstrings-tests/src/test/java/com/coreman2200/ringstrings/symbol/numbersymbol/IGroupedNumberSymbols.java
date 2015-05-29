@@ -1,6 +1,7 @@
 package com.coreman2200.ringstrings.symbol.numbersymbol;
 
 import com.coreman2200.ringstrings.symbol.IGroupedSymbols;
+import java.util.List;
 
 /**
  * IGroupedNumberSymbol
@@ -16,6 +17,9 @@ import com.coreman2200.ringstrings.symbol.IGroupedSymbols;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public interface IGroupedNumberSymbols extends IGroupedSymbols {
-
+public interface IGroupedNumberSymbols extends IGroupedSymbols, INumberSymbol {
+    void addNumberSymbol(Enum<? extends Enum<?>> name, INumberSymbol symbol);
+    INumberSymbol getNumberSymbol(Enum<? extends Enum<?>> name);
+    IGroupedNumberSymbols getGroupedNumberSymbol(Enum<? extends Enum<?>> name);
+    GroupedNumberSymbols getGroupID();
 }
