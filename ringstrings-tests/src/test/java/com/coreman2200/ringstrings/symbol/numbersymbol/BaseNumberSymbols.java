@@ -20,7 +20,7 @@ import java.util.HashMap;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public enum BaseNumberSymbols {
+public enum BaseNumberSymbols implements INumberSymbol {
     ZERO(0),
     ONE(1),
     TWO(2),
@@ -59,12 +59,18 @@ public enum BaseNumberSymbols {
         return this.numberSymbol;
     }
 
-    public int getBaseNumberValue() {
+    public int getNumberSymbolValue() {
         return this.baseValue;
     }
 
+    public String getName() { return this.toString(); }
+
+    public NumberStrata getNumberSymbolStrata() { return NumberStrata.BASENUMBER; }
+
+    public int size() { return this.getBaseNumberSymbol().size(); }
+
     private static Map<Integer, IBaseNumberSymbol> mapBaseNumberSymbols() {
-        Map<Integer, IBaseNumberSymbol> mMap = new HashMap<Integer, IBaseNumberSymbol>();
+        Map<Integer, IBaseNumberSymbol> mMap = new HashMap<>();
 
         for (BaseNumberSymbols symbol : BaseNumberSymbols.values())
             mMap.put(symbol.baseValue, symbol.numberSymbol);
