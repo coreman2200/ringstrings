@@ -18,6 +18,6 @@ import java.util.Comparator;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-abstract public class AbstractSymbolComparator<ISymbol> implements Comparator<ISymbol> {
+abstract public class AbstractSymbolComparator<T> implements Comparator<ISymbol> {
 
 }
