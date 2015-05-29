@@ -15,5 +15,7 @@ package com.coreman2200.ringstrings.symbol;
  */
 
 public interface ISymbol {
+    public String getName();
+    public int size();
     // TODO: Each Symbol must ...
 }
