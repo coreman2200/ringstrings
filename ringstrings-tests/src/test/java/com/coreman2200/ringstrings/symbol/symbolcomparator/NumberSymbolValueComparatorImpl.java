@@ -1,12 +1,10 @@
 package com.coreman2200.ringstrings.symbol.symbolcomparator;
 
-import com.coreman2200.ringstrings.symbol.ISymbol;
-
 import java.util.Comparator;
 
 /**
- * SymbolComparator
- * TODO: Stub.
+ * NumberSymbolValueComparatorImpl
+ * Compares number symbol values
  *
  * Created by Cory Higginbottom on 5/26/15
  * http://github.com/coreman2200
@@ -18,6 +16,11 @@ import java.util.Comparator;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-abstract public class SymbolComparatorImpl<ISymbol> implements Comparator<ISymbol> {
+ public class NumberSymbolValueComparatorImpl<INumberSymbol> implements Comparator<INumberSymbol> {
+
+    @Override
+    public int compare(INumberSymbol o1, INumberSymbol o2) {
+        return o2.getNumberSymbolValue() - o1.getNumberSymbolValue();
+    }
 
 }

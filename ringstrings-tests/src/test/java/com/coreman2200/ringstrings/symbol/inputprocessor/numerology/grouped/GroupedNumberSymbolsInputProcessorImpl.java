@@ -1,6 +1,8 @@
-package com.coreman2200.ringstrings.symbol.inputprocessor.numerology;
+package com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped;
 
 import com.coreman2200.ringstrings.numerology.numbersystem.NumberSystemType;
+import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.NumberSymbolInputProcessorImpl;
+import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
 
 /**
  * GroupedNumberSymbolsInputProcessor
@@ -16,9 +18,15 @@ import com.coreman2200.ringstrings.numerology.numbersystem.NumberSystemType;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class GroupedNumberSymbolsInputProcessorImpl extends NumberSymbolInputProcessorImpl {
+public class GroupedNumberSymbolsInputProcessorImpl extends NumberSymbolInputProcessorImpl implements IGroupedNumberSymbolsInputProcessor {
 
     public GroupedNumberSymbolsInputProcessorImpl(NumberSystemType type) {
         super(type);
+    }
+
+    // TODO: Stub.
+    public IGroupedNumberSymbols produceGroupedNumberSymbols() {
+
+        return null;
     }
 }
