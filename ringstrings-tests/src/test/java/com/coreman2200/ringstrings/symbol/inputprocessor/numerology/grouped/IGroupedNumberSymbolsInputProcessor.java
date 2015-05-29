@@ -1,5 +1,7 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped;
 
+import com.coreman2200.ringstrings.symbol.IProfile;
+import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.INumberSymbolInputProcessor;
 import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
 
 /**
@@ -16,6 +18,6 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public interface IGroupedNumberSymbolsInputProcessor {
-    public IGroupedNumberSymbols produceGroupedNumberSymbols();
+public interface IGroupedNumberSymbolsInputProcessor extends INumberSymbolInputProcessor {
+    IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile(IProfile profile);
 }

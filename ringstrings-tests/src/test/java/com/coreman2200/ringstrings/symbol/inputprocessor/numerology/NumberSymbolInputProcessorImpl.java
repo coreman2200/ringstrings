@@ -8,6 +8,8 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.BaseNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.DerivedNumberSymbolImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.INumberSymbol;
 
+import org.robolectric.util.Logger;
+
 /**
  * NumberSymbolInputProcessor
  * Processes Input into INumberSymbol objects
@@ -25,10 +27,10 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.INumberSymbol;
 public class NumberSymbolInputProcessorImpl extends AbstractInputProcessor implements INumberSymbolInputProcessor {
 
     private static final char[] VOWEL_LIST = {'a', 'e', 'i', 'o', 'u', 'y'};
-    INumberSystem mNumberSystem;
+    protected INumberSystem mNumberSystem;
     int[] derivedFromValues = new int[2];
 
-    public NumberSymbolInputProcessorImpl(NumberSystemType type) {
+    protected void setNumberSystem(NumberSystemType type) {
         mNumberSystem = AbstractNumberSystem.createNumberSystemWithType(type);
     }
 
@@ -36,98 +38,11 @@ public class NumberSymbolInputProcessorImpl extends AbstractInputProcessor imple
 
         int totalValue = convertTextStringToValue(text);
 
+        resetDerivedFromValues();
         int singularized = singularizeValue(totalValue);
+        //System.out.println("From: " + text + " => " + totalValue + " => " + singularized + "(reduced)");
 
         return produceNumberSymbolForValue(singularized);
-    }
-
-    public final INumberSymbol convertValueToNumberSymbol(int value) {
-
-        int singularized = singularizeValue(value);
-
-        return produceNumberSymbolForValue(singularized);
-    }
-
-    public final int singularizeValue(int value) {
-        int singularized = value;
-
-        if (!BaseNumberSymbols.isValueBaseNumberSymbol(value)) {
-            singularized = addDigitsOfValue(value);
-            return singularizeValue(singularized);
-        }
-
-        return singularized;
-    }
-
-    public final int addDigitsOfValue(int value) {
-        derivedFromValues[0] = derivedFromValues[1] = 0;
-        int digitsInValue = String.valueOf(value).length();
-        int addedDigits = 0;
-
-        for (int j = 0; j < digitsInValue; j++) {
-            int digit = getDigitOfValueInNthPlace(value, j);
-            if (digitsInValue == 2)
-                updateDerivedFromValues(1 - j, digit); // 0: Left digit 1: Right digit ie. "23"..
-
-            addedDigits += digit;
-        }
-
-        return addedDigits;
-    }
-
-    public final int getDigitOfValueInNthPlace(int value, int digit)
-    {
-        String str = String.valueOf(value);
-        int posOfDigit = (str.length() - 1) - digit;
-        if (posOfDigit < 0 || posOfDigit > str.length())
-            throw new IndexOutOfBoundsException("Digit " + digit + " not found in value '" + value + "'");
-
-        char cDigit = str.charAt(posOfDigit);
-
-        return Integer.parseInt(String.valueOf(cDigit));
-    }
-
-    private final void updateDerivedFromValues(int index, int digit) {
-        this.derivedFromValues[index] = digit;
-    }
-
-    public final String getConsonants(String text)
-    {
-        char[] cArrayOfText = prepareTextForProcessing(text);
-        StringBuilder resultingConsonantStringBuilder = new StringBuilder();
-
-        for (char c : cArrayOfText) {
-            if (!isCharAVowel(c) || (c == 'y' && checkIsYBeingUsedAsAVowelInString(text) == false))
-                resultingConsonantStringBuilder.append(c);
-        }
-
-        return resultingConsonantStringBuilder.toString();
-    }
-
-    public final String getVowels(String text) {
-        final char[] cArrayOfText = prepareTextForProcessing(text);
-        StringBuilder resultingVowelStringBuilder = new StringBuilder();
-
-        for (char c : cArrayOfText) {
-            if (isCharAVowel(c)) {
-                if (c != 'y' || checkIsYBeingUsedAsAVowelInString(text))
-                    resultingVowelStringBuilder.append(c);
-            }
-        }
-
-        return resultingVowelStringBuilder.toString();
-    }
-
-    protected final INumberSymbol produceNumberSymbolForValue(int value) {
-
-        if (derivedFromValues[0] == 0 || derivedFromValues[1] == 0) {
-            return BaseNumberSymbols.getBaseNumberSymbolIDForValue(value).getBaseNumberSymbol();
-        } else {
-            BaseNumberSymbols derivedNumber = BaseNumberSymbols.getBaseNumberSymbolIDForValue(value);
-            BaseNumberSymbols root1 = BaseNumberSymbols.getBaseNumberSymbolIDForValue(value);
-            BaseNumberSymbols root2 = BaseNumberSymbols.getBaseNumberSymbolIDForValue(value);
-            return new DerivedNumberSymbolImpl(derivedNumber, root1, root2);
-        }
     }
 
     protected final int convertTextStringToValue(String text) {
@@ -141,6 +56,114 @@ public class NumberSymbolInputProcessorImpl extends AbstractInputProcessor imple
         }
 
         return totalValue;
+    }
+
+    public final INumberSymbol convertValueToNumberSymbol(int value) {
+
+        resetDerivedFromValues();
+        int singularized = singularizeValue(value);
+        //System.out.println("From: " + value + " => " + singularized + "(reduced)");
+
+        return produceNumberSymbolForValue(singularized);
+    }
+
+    private final void resetDerivedFromValues() {
+        this.derivedFromValues[0] = this.derivedFromValues[1] = 0;
+    }
+
+    private final void derivedFromValue(int value) {
+        assert(digitsInValue(value) == 2);
+        // Left/Right flip-flop..
+        this.derivedFromValues[0] = getDigitOfValueInNthPlace(value, 1);
+        this.derivedFromValues[1] = getDigitOfValueInNthPlace(value, 0);
+    }
+
+    public final INumberSymbol produceNumberSymbolForValue(int value) {
+        if (derivedFromValues[0] == 0) // if there is no left digit..
+            return produceBaseNumberSymbolForValue(value);
+        else
+            return produceDerivedNumberSymbolForValue(value);
+    }
+
+    protected final INumberSymbol produceBaseNumberSymbolForValue(int value) {
+        return BaseNumberSymbols.getBaseNumberSymbolIDForValue(value).getBaseNumberSymbol();
+    }
+
+    protected final INumberSymbol produceDerivedNumberSymbolForValue(int value) {
+        BaseNumberSymbols derivedNumber = BaseNumberSymbols.getBaseNumberSymbolIDForValue(value);
+        BaseNumberSymbols root1 = BaseNumberSymbols.getBaseNumberSymbolIDForValue(derivedFromValues[0]);
+        BaseNumberSymbols root2 = BaseNumberSymbols.getBaseNumberSymbolIDForValue(derivedFromValues[1]);
+        assert(root1 != null);
+        assert (root2 != null);
+        assert (derivedFromValues[0] != 0);
+        return new DerivedNumberSymbolImpl(derivedNumber, root1, root2);
+    }
+
+    protected final int singularizeValue(int value) {
+        int singularized = value;
+
+        if (!BaseNumberSymbols.isValueBaseNumberSymbol(value)) {
+            singularized = addDigitsOfValue(value);
+            if (digitsInValue(value) == 2)
+                derivedFromValue(value);
+            return singularizeValue(singularized);
+        }
+
+        return singularized;
+    }
+
+    protected final int digitsInValue(int value) {
+        return String.valueOf(value).length();
+    }
+
+    protected final int addDigitsOfValue(int value) {
+        int digitsInValue = digitsInValue(value);
+        int addedDigits = 0;
+
+        for (int j = 0; j < digitsInValue; j++) {
+            addedDigits += getDigitOfValueInNthPlace(value, j);
+        }
+
+        return addedDigits;
+    }
+
+    protected final int getDigitOfValueInNthPlace(int value, int digit)
+    {
+        String str = String.valueOf(value);
+        int posOfDigit = (str.length() - 1) - digit;
+        if (posOfDigit < 0 || posOfDigit > str.length())
+            throw new IndexOutOfBoundsException("Digit " + digit + " not found in value '" + value + "'");
+
+        char cDigit = str.charAt(posOfDigit);
+
+        return Integer.parseInt(String.valueOf(cDigit));
+    }
+
+    protected final String getConsonants(String text)
+    {
+        char[] cArrayOfText = prepareTextForProcessing(text);
+        StringBuilder resultingConsonantStringBuilder = new StringBuilder();
+
+        for (char c : cArrayOfText) {
+            if (!isCharAVowel(c) || (c == 'y' && checkIsYBeingUsedAsAVowelInString(text) == false))
+                resultingConsonantStringBuilder.append(c);
+        }
+
+        return resultingConsonantStringBuilder.toString();
+    }
+
+    protected final String getVowels(String text) {
+        final char[] cArrayOfText = prepareTextForProcessing(text);
+        StringBuilder resultingVowelStringBuilder = new StringBuilder();
+
+        for (char c : cArrayOfText) {
+            if (isCharAVowel(c)) {
+                if (c != 'y' || checkIsYBeingUsedAsAVowelInString(text))
+                    resultingVowelStringBuilder.append(c);
+            }
+        }
+
+        return resultingVowelStringBuilder.toString();
     }
 
     protected final char[] prepareTextForProcessing(String text) {
