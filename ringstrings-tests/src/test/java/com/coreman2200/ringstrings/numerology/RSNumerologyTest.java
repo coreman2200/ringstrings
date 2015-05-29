@@ -3,18 +3,23 @@ package com.coreman2200.ringstrings.numerology;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.Robolectric;
 import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
 import org.robolectric.util.Logger;
 
 import com.coreman2200.ringstrings.BuildConfig;
-import com.coreman2200.ringstrings.numerology.numbersystem.AbstractNumberSystem;
-import com.coreman2200.ringstrings.numerology.numbersystem.INumberSystem;
 import com.coreman2200.ringstrings.numerology.numbersystem.NumberSystemType;
-import com.coreman2200.ringstrings.symbol.inputprocessor.INumberSymbolInputProcessor;
-import com.coreman2200.ringstrings.symbol.inputprocessor.NumberSymbolInputProcessorImpl;
-import com.coreman2200.ringstrings.symbol.numbersymbol.BaseNumberSymbols;
+import com.coreman2200.ringstrings.symbol.IProfile;
+import com.coreman2200.ringstrings.symbol.RandomizedTestProfileImpl;
+import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.INumberSymbolInputProcessor;
+import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.NumberSymbolInputProcessorImpl;
+import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.NumerologicalChartProcessorImpl;
+import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped.IGroupedNumberSymbolsInputProcessor;
+import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped.PinnaclesProcessorImpl;
+import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped.QualitiesProcessorImpl;
+import com.coreman2200.ringstrings.symbol.numbersymbol.DerivedNumberSymbols;
+import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbols;
+import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.INumberSymbol;
 
 //import static org.assertj.android.api.Assertions.assertThat;
@@ -36,57 +41,40 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.INumberSymbol;
 @RunWith(RobolectricGradleTestRunner.class)
 @Config(constants = BuildConfig.class)
 public class RSNumerologyTest {
-    final String mTestName = "Cory";
-    INumberSystem mNumberSystem;
-    NumberSystemType mNumberSystemType = NumberSystemType.PYTHAGOREAN;
-    INumberSymbolInputProcessor mTestProcessor;
 
-    @Before
-    public void setup() {
-        mTestProcessor = new NumberSymbolInputProcessorImpl(mNumberSystemType);
+    final IProfile mTestProfile = new RandomizedTestProfileImpl();
+    final IGroupedNumberSymbolsInputProcessor mTestProcessor = new NumerologicalChartProcessorImpl();
+
+    private boolean numCheckKarmicDebt(int val) {
+        return DerivedNumberSymbols.isValueDerivedNumberSymbol(val);
     }
 
     @Test
-    public void testAddingDigitsProducesCorrectSum() {
-        int val1 = 1000;
-        int exp1 = 1;
-        int val2 = 1234;
-        int exp2 = 1+2+3+4;
-        int val3 = 1004;
-        int exp3 = 1+0+0+4;
-        int val4 = 22;
-        int exp4 = 2+2;
+    public void testQualitiesProcessor() {
+        int highval = 0;
+        int lowval = 0;
+        double averageSize = 0;
 
-        assert(mTestProcessor.addDigitsOfValue(val1) == exp1);
-        assert(mTestProcessor.addDigitsOfValue(val2) == exp2);
-        assert(mTestProcessor.addDigitsOfValue(val3) == exp3);
-        assert(mTestProcessor.addDigitsOfValue(val4) == exp4);
+        for (int i = 0; i < 1000; i++) {
+            mTestProfile.genProfile();
+            IGroupedNumberSymbols grouped = mTestProcessor.produceGroupedNumberSymbolsForProfile(mTestProfile);
 
-    }
+            // TODO: assert (grouped.size() == 0); ??
 
-    // Poorly named method to test RSNumerology counterpart vs new constructs..
-    @Test
-    public void testChaldeanizeProducesAccurateValuesPerNumberSystem()
-    {
-        INumberSymbol symbol = mTestProcessor.convertTextStringToNumberSymbol(mTestName);
+            averageSize = (averageSize + grouped.size())/(i+1.0);
 
-        if (mNumberSystemType.equals(NumberSystemType.PYTHAGOREAN)) {
-            assert (symbol.getNumberSymbolValue() == 7);
-        } else {
-            assert (symbol.getNumberSymbolValue() == 4);
+            if (grouped.size() > highval)
+                highval = grouped.size();
+
+            if (grouped.size() < lowval)
+                lowval = grouped.size();
         }
-        //return singularized;
-    }
 
-    @Test
-    public void testNumSingularizeReducesToBaseNumberSymbolValue() {
-        assert(mTestProcessor.singularizeValue(4) == 4);
-        assert(mTestProcessor.singularizeValue(9) == 9);
-        assert(mTestProcessor.singularizeValue(11) == 11);
-        assert(mTestProcessor.singularizeValue(33) == 33);
-        assert(mTestProcessor.singularizeValue(22) == 22);
-        assert(mTestProcessor.singularizeValue(25) == 7);
-        assert(mTestProcessor.singularizeValue(63) == 9);
+
+        System.out.println("grouped size average: " + averageSize);
+        System.out.println("grouped size low: " + lowval);
+        System.out.println("grouped size high: " + highval);
+
     }
 
 }
