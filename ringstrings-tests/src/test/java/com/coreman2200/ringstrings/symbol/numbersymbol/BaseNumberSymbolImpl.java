@@ -18,7 +18,7 @@ public class BaseNumberSymbolImpl extends NumberSymbolImpl implements IBaseNumbe
     protected BaseNumberSymbols numberSymbolID;
 
     public BaseNumberSymbolImpl(BaseNumberSymbols symbol) {
-        super(symbol.getBaseNumberValue());
+        super(symbol.getNumberSymbolValue());
         this.numberSymbolID = symbol;
     }
 
@@ -29,6 +29,13 @@ public class BaseNumberSymbolImpl extends NumberSymbolImpl implements IBaseNumbe
     @Override
     protected void setNumberStrata() {
         this.numberSymbolStrata = NumberStrata.BASENUMBER;
+    }
+
+    @Override
+    protected void produceNumberSymbol() {
+        super.produceNumberSymbol();
+        System.out.println("New "+ numberSymbolStrata.toString() +" produced! value: " + symbolValue);
+
     }
 
 }

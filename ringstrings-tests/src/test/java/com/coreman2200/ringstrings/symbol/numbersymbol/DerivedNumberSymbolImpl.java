@@ -31,9 +31,13 @@ public class DerivedNumberSymbolImpl extends BaseNumberSymbolImpl implements IDe
     }
 
     private void setDerivedSymbols() {
-        addSymbolDataForKey(Derived.LEFT, this.derivedSymbols[0]);
-        addSymbolDataForKey(Derived.RIGHT, this.derivedSymbols[1]);
+        addSymbolDataForKey(Derived.LEFT, this.derivedSymbols[0].getNumberSymbolValue());
+        addSymbolDataForKey(Derived.RIGHT, this.derivedSymbols[1].getNumberSymbolValue());
+        System.out.println(symbolValue + "(" + derivedSymbols[0].toString() + "+" + derivedSymbols[1].toString() + ")");
     }
+
+    @Override
+    public int size() { return 3; } // Three Elements?
 
     @Override
     public BaseNumberSymbols getFirstDerivedValue() {
@@ -49,4 +53,6 @@ public class DerivedNumberSymbolImpl extends BaseNumberSymbolImpl implements IDe
     protected void setNumberStrata() {
         this.numberSymbolStrata = NumberStrata.DERIVEDNUMBER;
     }
+
+
 }

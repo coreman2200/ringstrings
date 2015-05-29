@@ -2,6 +2,8 @@ package com.coreman2200.ringstrings.symbol.numbersymbol;
 
 import com.coreman2200.ringstrings.symbol.AbstractSymbol;
 
+import org.robolectric.util.Logger;
+
 /**
  * NumberSymbolImpl
  * Implements ISymbol. Symbol elements relevant to Numerological aspects of the app.
@@ -37,6 +39,10 @@ public class NumberSymbolImpl extends AbstractSymbol implements INumberSymbol {
 
     public int getNumberSymbolValue() {
         return symbolValue;
+    }
+
+    public String getName() {
+        return numberSymbolStrata.toString() + symbolValue;
     }
 
     protected void produceNumberSymbol() {

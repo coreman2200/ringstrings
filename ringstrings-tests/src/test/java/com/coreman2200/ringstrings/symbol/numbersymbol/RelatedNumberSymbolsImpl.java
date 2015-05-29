@@ -1,7 +1,7 @@
 package com.coreman2200.ringstrings.symbol.numbersymbol;
 
 import com.coreman2200.ringstrings.symbol.RelatedSymbolMap;
-import com.coreman2200.ringstrings.symbol.symbolcomparator.NumberSymbolComparatorImpl;
+import com.coreman2200.ringstrings.symbol.symbolcomparator.NumberSymbolValueComparatorImpl;
 
 /**
  * RelatedNumberSymbolsImpl
@@ -18,8 +18,8 @@ import com.coreman2200.ringstrings.symbol.symbolcomparator.NumberSymbolComparato
  */
 
 public class RelatedNumberSymbolsImpl extends NumberSymbolImpl implements IRelatedNumberSymbols {
-    protected NumberSymbolComparatorImpl<INumberSymbol> mNumberSymbolComparator;
-    protected RelatedSymbolMap<NumberStrata, IGroupedNumberSymbol> mRelatedNumberSymbolMap;
+    protected NumberSymbolValueComparatorImpl<INumberSymbol> mNumberSymbolComparator;
+    protected RelatedSymbolMap<NumberStrata, IGroupedNumberSymbols> mRelatedNumberSymbolMap;
 
     protected RelatedNumberSymbolsImpl() {
         super(0);
