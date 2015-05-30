@@ -15,7 +15,7 @@ package com.coreman2200.ringstrings.symbol.numbersymbol;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class ListedNumberSymbolsImpl extends  GroupedNumberSymbolsImpl implements IListedNumberSymbols {
+public class ListedNumberSymbolsImpl extends GroupedNumberSymbolsImpl implements IListedNumberSymbols {
     private enum Listed { // Note: It is not possible to have anymore than 9 elems in a list..
         L0, L1, L2, L3, L4, L5, L6, L7, L8, L9
     }
@@ -25,6 +25,7 @@ public class ListedNumberSymbolsImpl extends  GroupedNumberSymbolsImpl implement
     }
 
     public final void addNumberSymbol(INumberSymbol symbol) {
+        assert (mGroupedNumberSymbolsMap.size() < 10);
         Listed pos = Listed.values()[mGroupedNumberSymbolsMap.size()];
         addNumberSymbol(pos, symbol);
     }

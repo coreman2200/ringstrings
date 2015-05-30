@@ -27,6 +27,9 @@ public class BaseNumberSymbolImpl extends NumberSymbolImpl implements IBaseNumbe
     }
 
     @Override
+    public  int size() { return 1;}
+
+    @Override
     protected void setNumberStrata() {
         this.numberSymbolStrata = NumberStrata.BASENUMBER;
     }
@@ -34,7 +37,7 @@ public class BaseNumberSymbolImpl extends NumberSymbolImpl implements IBaseNumbe
     @Override
     protected void produceNumberSymbol() {
         super.produceNumberSymbol();
-        System.out.println("New "+ numberSymbolStrata.toString() +" produced! value: " + symbolValue);
+        //System.out.println("New "+ numberSymbolStrata.toString() +" produced! value: " + symbolValue);
 
     }
 

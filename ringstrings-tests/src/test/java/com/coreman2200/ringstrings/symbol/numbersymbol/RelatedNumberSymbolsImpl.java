@@ -5,7 +5,7 @@ import com.coreman2200.ringstrings.symbol.symbolcomparator.NumberSymbolValueComp
 
 /**
  * RelatedNumberSymbolsImpl
- * TODO: Stubb.
+ * Related Number Symbols are lists of numbers compared by comparator.
  *
  * Created by Cory Higginbottom on 5/26/15
  * http://github.com/coreman2200
@@ -21,13 +21,14 @@ public class RelatedNumberSymbolsImpl extends NumberSymbolImpl implements IRelat
     protected NumberSymbolValueComparatorImpl<INumberSymbol> mNumberSymbolComparator;
     protected RelatedSymbolMap<NumberStrata, IGroupedNumberSymbols> mRelatedNumberSymbolMap;
 
-    protected RelatedNumberSymbolsImpl() {
+    // TODO: Public for test
+    public RelatedNumberSymbolsImpl() {
         super(0);
         mRelatedNumberSymbolMap = new RelatedSymbolMap<>();
     }
 
     @Override
     protected void setNumberStrata() {
-        this.numberSymbolStrata = NumberStrata.GROUPEDNUMBERS;
+        this.numberSymbolStrata = NumberStrata.RELATIONALNUMBERMAP;
     }
 }

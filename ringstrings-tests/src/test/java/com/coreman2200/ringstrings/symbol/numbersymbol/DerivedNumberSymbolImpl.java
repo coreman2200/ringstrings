@@ -1,5 +1,7 @@
 package com.coreman2200.ringstrings.symbol.numbersymbol;
 
+import java.util.HashMap;
+
 /**
  * DerivedNumberSymbolImpl
  * Derived Number Symbols are number symbols with two Base Number Symbols
@@ -17,36 +19,68 @@ package com.coreman2200.ringstrings.symbol.numbersymbol;
 
 public class DerivedNumberSymbolImpl extends BaseNumberSymbolImpl implements IDerivedNumberSymbol {
     private enum Derived {
-        LEFT,
-        RIGHT
+        LEFTDIGIT,
+        RIGHTDIGIT,
+        KARMIC_DEBT
     }
 
-    private final BaseNumberSymbols[] derivedSymbols;
+    private HashMap<Derived, Integer> mDerivedSymbols;
+    private DerivedKarmicDebtSymbols mKarmicDebtSymbol = DerivedKarmicDebtSymbols.NONE;
 
     public DerivedNumberSymbolImpl(BaseNumberSymbols symbol, BaseNumberSymbols derived1, BaseNumberSymbols derived2) {
         super(symbol);
         this.numberSymbolID = symbol;
-        this.derivedSymbols = new BaseNumberSymbols[] {derived1, derived2};
-        this.setDerivedSymbols();
+        this.setDerivedSymbols(derived1, derived2);
+        this.checkForKarmicDebt();
     }
 
-    private void setDerivedSymbols() {
-        addSymbolDataForKey(Derived.LEFT, this.derivedSymbols[0].getNumberSymbolValue());
-        addSymbolDataForKey(Derived.RIGHT, this.derivedSymbols[1].getNumberSymbolValue());
-        System.out.println(symbolValue + "(" + derivedSymbols[0].toString() + "+" + derivedSymbols[1].toString() + ")");
+    private void setDerivedSymbols(BaseNumberSymbols left, BaseNumberSymbols right) {
+        mDerivedSymbols = new HashMap<>();
+        mDerivedSymbols.put(Derived.LEFTDIGIT, left.getNumberSymbolValue());
+        mDerivedSymbols.put(Derived.RIGHTDIGIT, right.getNumberSymbolValue());
+        addSymbolDataForKey(Derived.LEFTDIGIT, left.getNumberSymbolValue());
+        addSymbolDataForKey(Derived.RIGHTDIGIT, right.getNumberSymbolValue());
+        //System.out.println(symbolValue + "(" + derivedSymbols[0].toString() + "+" + derivedSymbols[1].toString() + ")");
+    }
+
+    private void checkForKarmicDebt() {
+        int derivedDigitsValue = getDerivedSymbolsValue();
+        DerivedKarmicDebtSymbols symbol = DerivedKarmicDebtSymbols.getKarmicDebtSymbolForValue(derivedDigitsValue);
+        if (!symbol.equals(DerivedKarmicDebtSymbols.NONE))
+            setKarmicDebtSymbol(symbol);
+    }
+
+    private void setKarmicDebtSymbol(DerivedKarmicDebtSymbols number) {
+        mDerivedSymbols.put(Derived.KARMIC_DEBT, number.value());
+        addSymbolDataForKey(Derived.KARMIC_DEBT, number.value());
+        //System.out.println("Karmic Debt Number found: " + number.toString());
+    }
+
+    private int getDerivedSymbolsValue() {
+        String leftdigit = String.valueOf(mDerivedSymbols.get(Derived.LEFTDIGIT));
+        String rightdigit = String.valueOf(mDerivedSymbols.get(Derived.RIGHTDIGIT));
+        return Integer.valueOf(leftdigit+rightdigit);
+    }
+
+    public boolean hasKarmicDebtValue() {
+        return mKarmicDebtSymbol != DerivedKarmicDebtSymbols.NONE;
+    }
+
+    public DerivedKarmicDebtSymbols getKarmicDebt() {
+        return this.mKarmicDebtSymbol;
     }
 
     @Override
-    public int size() { return 3; } // Three Elements?
+    public int size() { return (hasKarmicDebtValue()) ? 4 : 3; }
 
     @Override
-    public BaseNumberSymbols getFirstDerivedValue() {
-        return this.derivedSymbols[0];
+    public BaseNumberSymbols getLeftDigitNumberSymbol() {
+        return BaseNumberSymbols.getBaseNumberSymbolIDForValue(mDerivedSymbols.get(Derived.LEFTDIGIT));
     }
 
     @Override
-    public BaseNumberSymbols getSecondDerivedValue() {
-        return this.derivedSymbols[1];
+    public BaseNumberSymbols getRightDigitNumberSymbol() {
+        return BaseNumberSymbols.getBaseNumberSymbolIDForValue(mDerivedSymbols.get(Derived.RIGHTDIGIT));
     }
 
     @Override

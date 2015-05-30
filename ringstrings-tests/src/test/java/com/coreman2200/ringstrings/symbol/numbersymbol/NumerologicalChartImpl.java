@@ -19,5 +19,8 @@ public class NumerologicalChartImpl extends GroupedNumberSymbolsImpl implements 
         super(GroupedNumberSymbols.CHART);
     }
 
-
+    @Override
+    protected void setNumberStrata() {
+        this.numberSymbolStrata = NumberStrata.CHARTEDNUMBERS;
+    }
 }

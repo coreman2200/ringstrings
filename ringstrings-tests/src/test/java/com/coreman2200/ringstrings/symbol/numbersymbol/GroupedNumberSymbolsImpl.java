@@ -1,5 +1,7 @@
 package com.coreman2200.ringstrings.symbol.numbersymbol;
 
+import com.coreman2200.ringstrings.symbol.IGroupedSymbols;
+
 import org.robolectric.util.Logger;
 
 import java.util.LinkedHashMap;
@@ -19,7 +21,7 @@ import java.util.List;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class GroupedNumberSymbolsImpl extends NumberSymbolImpl implements IGroupedNumberSymbols {
+public class GroupedNumberSymbolsImpl extends NumberSymbolImpl implements IGroupedSymbols, IGroupedNumberSymbols {
     protected LinkedHashMap<Enum<? extends Enum<?>>, INumberSymbol> mGroupedNumberSymbolsMap;
     protected final GroupedNumberSymbols mGroupedNumberSymbolID;
 
@@ -33,26 +35,21 @@ public class GroupedNumberSymbolsImpl extends NumberSymbolImpl implements IGroup
         assert (symbol != null);
         assert (name != null);
         mGroupedNumberSymbolsMap.put(name, symbol);
-        System.out.println(name.toString() + " added to "+ mGroupedNumberSymbolID.toString() + "! value: " + symbol.getNumberSymbolValue());
-    }
-
-    public final void removeNumberSymbol(Enum<? extends Enum<?>> name) {
-        assert (name != null);
-        if (!mGroupedNumberSymbolsMap.containsKey(name))
-            throw new NullPointerException("Grouped Symbol does not have elem named " + name.toString());
-        mGroupedNumberSymbolsMap.remove(name);
+        System.out.println(name.toString() + " added to " + mGroupedNumberSymbolID.toString() + "! value: " + symbol.getNumberSymbolValue());
     }
 
     @Override
     public final int size() {
         int size = 0;
+
         for (INumberSymbol symbol : mGroupedNumberSymbolsMap.values())
             size += symbol.size();
+        //System.out.println(mGroupedNumberSymbolID.name() + "'s size: " + size);
         return size;
     }
 
     @Override
-    public String getName() {
+    public String name() {
         return mGroupedNumberSymbolID.toString();
     }
 
@@ -76,7 +73,7 @@ public class GroupedNumberSymbolsImpl extends NumberSymbolImpl implements IGroup
     @Override
     protected void produceNumberSymbol() {
         super.produceNumberSymbol();
-        System.out.println("New "+ numberSymbolStrata.toString() +" produced! ");
+        //System.out.println("New " + numberSymbolStrata.toString() + " produced! ");
 
     }
 
