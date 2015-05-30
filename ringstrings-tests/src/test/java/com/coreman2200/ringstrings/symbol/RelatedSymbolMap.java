@@ -1,10 +1,12 @@
 package com.coreman2200.ringstrings.symbol;
 
 import java.util.TreeMap;
+import com.coreman2200.ringstrings.symbol.numbersymbol.NumberStrata;
+import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
 
 /**
  * RelatedSymbolMap
- * TODO: Stubb.
+ * Related Symbol Maps apply comparators to member symbols and group symbols
  *
  * Created by Cory Higginbottom on 5/26/15
  * http://github.com/coreman2200
@@ -16,6 +18,6 @@ import java.util.TreeMap;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class RelatedSymbolMap<NumberStrata, IGroupedNumberSymbol> extends TreeMap<NumberStrata, IGroupedNumberSymbol> {
+public class RelatedSymbolMap<T, V> extends TreeMap<SymbolStrata, IGroupedNumberSymbols> {
 
 }
