@@ -1,10 +1,10 @@
 package com.coreman2200.ringstrings.symbol;
 
 /**
- * ISymbol
- * Defines interface for all Symbol elements in MyResonance (numbers, celestial bodies, individuals..)
+ * IChartedSymbols
+ * Interface for all Charted Symbol objects
  *
- * Created by Cory Higginbottom on 5/24/15
+ * Created by Cory Higginbottom on 5/29/15
  * http://github.com/coreman2200
  *
  * Licensed under the GNU General Public License (GPL), Version 2.0.
@@ -14,8 +14,6 @@ package com.coreman2200.ringstrings.symbol;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public interface ISymbol {
-    public String name();
-    public int size();
-    // TODO: Each Symbol must ...
+public interface IChartedSymbols extends IGroupedSymbols {
+    // TODO: save/load chart, rebuild chart
 }
