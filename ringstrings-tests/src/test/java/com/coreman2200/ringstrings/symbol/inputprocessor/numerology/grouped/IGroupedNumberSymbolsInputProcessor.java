@@ -1,7 +1,7 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped;
 
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.INumberSymbolInputProcessor;
-import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IGroupedNumberSymbols;
 
 /**
  * IGroupedNumberSymbolsInputProcessor

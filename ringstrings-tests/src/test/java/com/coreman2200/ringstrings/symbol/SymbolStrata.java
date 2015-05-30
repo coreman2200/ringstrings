@@ -39,7 +39,7 @@ public enum SymbolStrata {
     public static SymbolStrata getSymbolStrataFor(Enum<? extends Enum<?>> stratatype) {
         for (SymbolStrata strata : SymbolStrata.values()) {
             if (strata.mStrataTypeList.contains(stratatype)) {
-                System.out.println(stratatype.toString() + "'s strata attained: " + strata.toString());
+                //System.out.println(stratatype.toString() + "'s strata attained: " + strata.toString());
                 return strata;
             }
         }

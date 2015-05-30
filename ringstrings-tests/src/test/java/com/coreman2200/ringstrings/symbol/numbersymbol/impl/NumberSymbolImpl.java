@@ -1,9 +1,9 @@
-package com.coreman2200.ringstrings.symbol.numbersymbol;
+package com.coreman2200.ringstrings.symbol.numbersymbol.impl;
 
 import com.coreman2200.ringstrings.symbol.AbstractSymbol;
 import com.coreman2200.ringstrings.symbol.SymbolStrata;
-
-import org.robolectric.util.Logger;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
+import com.coreman2200.ringstrings.symbol.numbersymbol.NumberStrata;
 
 /**
  * NumberSymbolImpl
@@ -47,6 +47,9 @@ public class NumberSymbolImpl extends AbstractSymbol implements INumberSymbol {
     }
 
     public int size() { throw new NoClassDefFoundError("Must be overridden");}
+
+    @Override
+    public SymbolStrata symbolStrata() { return SymbolStrata.getSymbolStrataFor(getNumberSymbolStrata()); }
 
     protected void produceNumberSymbol() {
         addSymbolDataForKey(numberSymbolStrata, symbolValue);

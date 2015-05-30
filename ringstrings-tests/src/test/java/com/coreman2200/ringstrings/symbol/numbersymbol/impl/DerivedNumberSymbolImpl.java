@@ -1,4 +1,9 @@
-package com.coreman2200.ringstrings.symbol.numbersymbol;
+package com.coreman2200.ringstrings.symbol.numbersymbol.impl;
+
+import com.coreman2200.ringstrings.symbol.numbersymbol.BaseNumberSymbols;
+import com.coreman2200.ringstrings.symbol.numbersymbol.DerivedKarmicDebtSymbols;
+import com.coreman2200.ringstrings.symbol.numbersymbol.NumberStrata;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IDerivedNumberSymbol;
 
 import java.util.HashMap;
 

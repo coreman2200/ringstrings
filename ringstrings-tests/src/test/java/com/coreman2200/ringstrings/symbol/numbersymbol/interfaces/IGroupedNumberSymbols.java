@@ -1,7 +1,7 @@
-package com.coreman2200.ringstrings.symbol.numbersymbol;
+package com.coreman2200.ringstrings.symbol.numbersymbol.interfaces;
 
 import com.coreman2200.ringstrings.symbol.IGroupedSymbols;
-import java.util.List;
+import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbols;
 
 /**
  * IGroupedNumberSymbol

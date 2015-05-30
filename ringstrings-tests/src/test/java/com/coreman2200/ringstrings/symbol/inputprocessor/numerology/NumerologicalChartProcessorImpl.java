@@ -9,8 +9,8 @@ import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped.Pers
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped.PinnaclesProcessorImpl;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped.QualitiesProcessorImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbols;
-import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbolsImpl;
-import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
+import com.coreman2200.ringstrings.symbol.numbersymbol.impl.GroupedNumberSymbolsImpl;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IGroupedNumberSymbols;
 
 /**
  * NumerologicalChartProcessorImpl

@@ -1,8 +1,8 @@
-package com.coreman2200.ringstrings.chart;
+package com.coreman2200.ringstrings.symbol;
 
 /**
- * IChartedSymbols
- * Interface describing charted symbols in general
+ * Charts
+ * Describes Astrological and Numerological as (currently?) available chart types
  *
  * Created by Cory Higginbottom on 5/28/15
  * http://github.com/coreman2200
@@ -14,5 +14,7 @@ package com.coreman2200.ringstrings.chart;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public interface IChartedSymbols {
+public enum Charts {
+    ASTROLOGICAL,
+    NUMEROLOGICAL
 }

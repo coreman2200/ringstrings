@@ -1,6 +1,10 @@
-package com.coreman2200.ringstrings.symbol.numbersymbol;
+package com.coreman2200.ringstrings.symbol.numbersymbol.impl;
 
 import com.coreman2200.ringstrings.symbol.RelatedSymbolMap;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IRelatedNumberSymbols;
+import com.coreman2200.ringstrings.symbol.numbersymbol.NumberStrata;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IGroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.symbolcomparator.NumberSymbolValueComparatorImpl;
 
 /**
@@ -21,7 +25,6 @@ public class RelatedNumberSymbolsImpl extends NumberSymbolImpl implements IRelat
     protected NumberSymbolValueComparatorImpl<INumberSymbol> mNumberSymbolComparator;
     protected RelatedSymbolMap<NumberStrata, IGroupedNumberSymbols> mRelatedNumberSymbolMap;
 
-    // TODO: Public for test
     public RelatedNumberSymbolsImpl() {
         super(0);
         mRelatedNumberSymbolMap = new RelatedSymbolMap<>();

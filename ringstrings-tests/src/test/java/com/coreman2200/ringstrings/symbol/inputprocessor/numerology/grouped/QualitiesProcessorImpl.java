@@ -2,11 +2,11 @@ package com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped;
 
 import com.coreman2200.ringstrings.symbol.numbersymbol.BaseNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbols;
-import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbolsImpl;
-import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
-import com.coreman2200.ringstrings.symbol.numbersymbol.IListedNumberSymbols;
-import com.coreman2200.ringstrings.symbol.numbersymbol.INumberSymbol;
-import com.coreman2200.ringstrings.symbol.numbersymbol.ListedNumberSymbolsImpl;
+import com.coreman2200.ringstrings.symbol.numbersymbol.impl.GroupedNumberSymbolsImpl;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IGroupedNumberSymbols;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IListedNumberSymbols;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
+import com.coreman2200.ringstrings.symbol.numbersymbol.impl.ListedNumberSymbolsImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.Qualities;
 
 import java.util.Arrays;

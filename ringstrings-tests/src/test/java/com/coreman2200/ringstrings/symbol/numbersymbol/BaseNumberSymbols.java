@@ -1,6 +1,8 @@
 package com.coreman2200.ringstrings.symbol.numbersymbol;
 
-import com.coreman2200.ringstrings.symbol.ISymbol;
+import com.coreman2200.ringstrings.symbol.numbersymbol.impl.BaseNumberSymbolImpl;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IBaseNumberSymbol;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
 
 import java.util.Collections;
 import java.util.Map;

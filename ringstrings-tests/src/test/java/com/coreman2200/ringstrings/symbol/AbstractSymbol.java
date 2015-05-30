@@ -83,6 +83,8 @@ abstract public class AbstractSymbol implements ISymbol {
 
     abstract public int size();
 
+    public SymbolStrata symbolStrata() {return SymbolStrata.SYMBOL;}
+
     // TODO: Stubbed.
     protected final void storeSymbol()  {};
     protected final void restoreSymbol() {};

@@ -1,9 +1,4 @@
-package com.coreman2200.ringstrings.chart;
-
-import com.coreman2200.ringstrings.symbol.IGroupedSymbols;
-import com.coreman2200.ringstrings.symbol.ISymbol;
-import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbolsImpl;
-import com.coreman2200.ringstrings.symbol.numbersymbol.IChartedNumberSymbols;
+package com.coreman2200.ringstrings.symbol;
 
 /**
  * AbstractChart
@@ -20,7 +15,7 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.IChartedNumberSymbols;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-abstract public class AbstractChart implements IChartedSymbols {
+abstract public class AbstractChart implements com.coreman2200.ringstrings.chart.IChartedSymbols {
     private final Charts mChartType;
     public AbstractChart(Charts charttype) {
         super();

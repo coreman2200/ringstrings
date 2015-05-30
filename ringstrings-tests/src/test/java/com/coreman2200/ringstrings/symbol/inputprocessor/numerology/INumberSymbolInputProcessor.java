@@ -1,6 +1,6 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.numerology;
 
-import com.coreman2200.ringstrings.symbol.numbersymbol.INumberSymbol;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
 
 /**
  * INumberSymbolInputProcessor

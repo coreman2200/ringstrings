@@ -8,10 +8,9 @@ import org.robolectric.annotation.Config;
 import com.coreman2200.ringstrings.BuildConfig;
 import com.coreman2200.ringstrings.profile.IProfile;
 import com.coreman2200.ringstrings.profile.RandomizedTestProfileImpl;
-import com.coreman2200.ringstrings.profile.TestProfileImpl;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.NumerologicalChartProcessorImpl;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped.IGroupedNumberSymbolsInputProcessor;
-import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IGroupedNumberSymbols;
 
 //import static org.assertj.android.api.Assertions.assertThat;
 

@@ -2,7 +2,7 @@ package com.coreman2200.ringstrings.symbol;
 
 /**
  * IRelatedSymbols
- * TODO: Stub.
+ * Interface for symbols related per some comparator.
  *
  * Created by Cory Higginbottom on 5/26/15
  * http://github.com/coreman2200

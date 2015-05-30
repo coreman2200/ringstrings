@@ -1,9 +1,7 @@
 package com.coreman2200.ringstrings.symbol;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.Robolectric;
 import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
 
@@ -12,16 +10,15 @@ import com.coreman2200.ringstrings.profile.IProfile;
 import com.coreman2200.ringstrings.profile.TestProfileImpl;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.NumerologicalChartProcessorImpl;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped.IGroupedNumberSymbolsInputProcessor;
-import com.coreman2200.ringstrings.symbol.numbersymbol.BaseNumberSymbolImpl;
+import com.coreman2200.ringstrings.symbol.numbersymbol.impl.BaseNumberSymbolImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.BaseNumberSymbols;
-import com.coreman2200.ringstrings.symbol.numbersymbol.DerivedNumberSymbolImpl;
+import com.coreman2200.ringstrings.symbol.numbersymbol.impl.DerivedNumberSymbolImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbols;
-import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbolsImpl;
-import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
-import com.coreman2200.ringstrings.symbol.numbersymbol.INumberSymbol;
-import com.coreman2200.ringstrings.symbol.numbersymbol.ListedNumberSymbolsImpl;
-import com.coreman2200.ringstrings.symbol.numbersymbol.NumerologicalChartImpl;
-import com.coreman2200.ringstrings.symbol.numbersymbol.RelatedNumberSymbolsImpl;
+import com.coreman2200.ringstrings.symbol.numbersymbol.impl.GroupedNumberSymbolsImpl;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
+import com.coreman2200.ringstrings.symbol.numbersymbol.impl.ListedNumberSymbolsImpl;
+import com.coreman2200.ringstrings.symbol.chart.NumerologicalChartImpl;
+import com.coreman2200.ringstrings.symbol.numbersymbol.impl.RelatedNumberSymbolsImpl;
 
 /**
  * TestSymbolStrata
@@ -61,7 +58,7 @@ public class TestSymbolStrata {
 
     @Test
     public void testNumerologicalChartStratas() {
-        IGroupedNumberSymbols grouped = mTestProcessor.produceGroupedNumberSymbolsForProfile();
+        mTestProcessor.produceGroupedNumberSymbolsForProfile();
     }
 
 }

@@ -1,4 +1,9 @@
-package com.coreman2200.ringstrings.symbol.numbersymbol;
+package com.coreman2200.ringstrings.symbol.chart;
+
+import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbols;
+import com.coreman2200.ringstrings.symbol.numbersymbol.NumberStrata;
+import com.coreman2200.ringstrings.symbol.numbersymbol.impl.GroupedNumberSymbolsImpl;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IChartedNumberSymbols;
 
 /**
  * NumerologicalChartImpl

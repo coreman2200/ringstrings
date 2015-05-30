@@ -5,10 +5,8 @@ import com.coreman2200.ringstrings.numerology.numbersystem.INumberSystem;
 import com.coreman2200.ringstrings.numerology.numbersystem.NumberSystemType;
 import com.coreman2200.ringstrings.symbol.inputprocessor.AbstractInputProcessor;
 import com.coreman2200.ringstrings.symbol.numbersymbol.BaseNumberSymbols;
-import com.coreman2200.ringstrings.symbol.numbersymbol.DerivedNumberSymbolImpl;
-import com.coreman2200.ringstrings.symbol.numbersymbol.INumberSymbol;
-
-import org.robolectric.util.Logger;
+import com.coreman2200.ringstrings.symbol.numbersymbol.impl.DerivedNumberSymbolImpl;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
 
 /**
  * NumberSymbolInputProcessor

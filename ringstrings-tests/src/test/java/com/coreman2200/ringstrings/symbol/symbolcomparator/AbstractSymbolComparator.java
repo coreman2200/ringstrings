@@ -6,7 +6,7 @@ import java.util.Comparator;
 
 /**
  * AbstractSymbolComparator
- * TODO: Stub.
+ * A Symbol Comparator sorts Symbol objects per some further defined comparing routine.
  *
  * Created by Cory Higginbottom on 5/26/15
  * http://github.com/coreman2200

@@ -1,8 +1,8 @@
 package com.coreman2200.ringstrings.symbol;
 
 import java.util.TreeMap;
-import com.coreman2200.ringstrings.symbol.numbersymbol.NumberStrata;
-import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
+
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IGroupedNumberSymbols;
 
 /**
  * RelatedSymbolMap

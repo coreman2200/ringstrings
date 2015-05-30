@@ -1,11 +1,12 @@
-package com.coreman2200.ringstrings.symbol.numbersymbol;
+package com.coreman2200.ringstrings.symbol.numbersymbol.impl;
 
 import com.coreman2200.ringstrings.symbol.IGroupedSymbols;
-
-import org.robolectric.util.Logger;
+import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbols;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
+import com.coreman2200.ringstrings.symbol.numbersymbol.NumberStrata;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IGroupedNumberSymbols;
 
 import java.util.LinkedHashMap;
-import java.util.List;
 
 /**
  * GroupedNumberSymbolsImpl

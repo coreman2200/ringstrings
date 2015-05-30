@@ -1,4 +1,8 @@
-package com.coreman2200.ringstrings.symbol.numbersymbol;
+package com.coreman2200.ringstrings.symbol.numbersymbol.impl;
+
+import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbols;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IListedNumberSymbols;
 
 /**
  * ListedNumberSymbolsImpl

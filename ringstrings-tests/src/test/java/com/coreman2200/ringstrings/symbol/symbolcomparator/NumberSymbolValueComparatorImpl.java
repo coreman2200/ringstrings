@@ -1,7 +1,7 @@
 package com.coreman2200.ringstrings.symbol.symbolcomparator;
 
 import java.util.Comparator;
-import com.coreman2200.ringstrings.symbol.numbersymbol.INumberSymbol;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
 
 /**
  * NumberSymbolValueComparatorImpl
