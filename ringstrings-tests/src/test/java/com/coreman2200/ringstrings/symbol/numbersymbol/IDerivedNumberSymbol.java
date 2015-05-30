@@ -1,5 +1,7 @@
 package com.coreman2200.ringstrings.symbol.numbersymbol;
 
+import com.coreman2200.ringstrings.symbol.IRelatedSymbols;
+
 /**
  * IDerivedNumberSymbol
  * Interface for derived symbols.
@@ -14,7 +16,8 @@ package com.coreman2200.ringstrings.symbol.numbersymbol;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public interface IDerivedNumberSymbol extends INumberSymbol {
-    BaseNumberSymbols getFirstDerivedValue();
-    BaseNumberSymbols getSecondDerivedValue();
+public interface IDerivedNumberSymbol extends INumberSymbol, IRelatedSymbols {
+    BaseNumberSymbols getLeftDigitNumberSymbol();
+    BaseNumberSymbols getRightDigitNumberSymbol();
+    DerivedKarmicDebtSymbols getKarmicDebt();
 }

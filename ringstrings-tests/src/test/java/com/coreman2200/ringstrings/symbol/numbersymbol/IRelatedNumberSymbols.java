@@ -2,7 +2,7 @@ package com.coreman2200.ringstrings.symbol.numbersymbol;
 
 /**
  * IRelatedNumberSymbols
- * TODO: Stubb.
+ * Related number symbols are lists of symbols related per comparison of some shared metric (size, value..)
  *
  * Created by Cory Higginbottom on 5/26/15
  * http://github.com/coreman2200

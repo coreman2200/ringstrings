@@ -1,5 +1,7 @@
 package com.coreman2200.ringstrings.symbol.numbersymbol;
 
+import com.coreman2200.ringstrings.chart.IChartedSymbols;
+
 /**
  * IChartedNumberSymbols
  * Interface describing a grouping of number symbols expressed as a Numerological chart.
@@ -14,5 +16,5 @@ package com.coreman2200.ringstrings.symbol.numbersymbol;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public interface IChartedNumberSymbols extends IGroupedNumberSymbols {
+public interface IChartedNumberSymbols extends IChartedSymbols, IGroupedNumberSymbols {
 }
