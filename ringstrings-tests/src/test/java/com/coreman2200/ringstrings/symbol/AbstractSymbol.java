@@ -36,12 +36,12 @@ abstract public class AbstractSymbol implements ISymbol {
         symbolDataMap = new HashMap<Enum<? extends Enum<?>>, Object>();
     }
 
-    protected final void addSymbolDataForKey(Enum<? extends Enum<?>> key, Object data) { //throws RuntimeException {
+    protected final void addSymbolDataForKey(Enum<? extends Enum<?>> key, Object data) throws RuntimeException {
         assert(key != null);
         assert(data != null);
 
         if (symbolDataMap.containsKey(key))
-            System.out.println("Symbol method does not permit altering existing values by this means.");
+            throw new RuntimeException("Symbol method does not permit altering existing values by this means.");
 
         symbolDataMap.put(key, data);
     }
@@ -81,10 +81,7 @@ abstract public class AbstractSymbol implements ISymbol {
         throw new NoClassDefFoundError("Must be overridden.");
     }
 
-    public int size() {
-        return 1;
-    }
-
+    abstract public int size();
 
     // TODO: Stubbed.
     protected final void storeSymbol()  {};
