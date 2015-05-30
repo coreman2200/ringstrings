@@ -1,7 +1,5 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped;
 
-import com.coreman2200.ringstrings.symbol.IProfile;
-import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.NumberSymbolInputProcessorImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.BaseNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbolsImpl;
@@ -10,16 +8,14 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.IListedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.INumberSymbol;
 import com.coreman2200.ringstrings.symbol.numbersymbol.ListedNumberSymbolsImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.Qualities;
-import com.coreman2200.ringstrings.symbol.symbolcomparator.NumberSymbolValueComparatorImpl;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.ArrayList;
-import java.util.TreeMap;
 
 /**
  * QualitiesProcessorImpl
- * description
+ * Processes the user's different numerological qualities.
  *
  * Created by Cory Higginbottom on 5/27/15
  * http://github.com/coreman2200
@@ -192,8 +188,7 @@ public class QualitiesProcessorImpl extends GroupedNumberSymbolsInputProcessorIm
     }
 
     @Override
-    public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile(IProfile profile) {
-        super.produceGroupedNumberSymbolsForProfile(profile);
+    public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile() {
         processedQualities = new GroupedNumberSymbolsImpl(GroupedNumberSymbols.QUALITIES);
         processedQualities.addNumberSymbol(Qualities.LIFEPATH, numGetLifePath());
         processedQualities.addNumberSymbol(Qualities.BALANCE, numGetBalance());

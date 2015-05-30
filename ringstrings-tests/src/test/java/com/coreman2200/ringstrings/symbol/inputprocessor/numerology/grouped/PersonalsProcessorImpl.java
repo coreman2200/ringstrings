@@ -1,11 +1,9 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped;
 
-import com.coreman2200.ringstrings.symbol.IProfile;
 import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbolsImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.INumberSymbol;
-import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.Challenges;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.Personal;
 
 import java.util.ArrayList;
@@ -48,29 +46,24 @@ public class PersonalsProcessorImpl  extends GroupedNumberSymbolsInputProcessorI
 
     private int numGetPersonalDay()
     {
-        int val = singularizeValue(numGetPersonalMonth() + singularizeValue(userProfile.getBirthMonth()));
-
-        return val;
+        return singularizeValue(numGetPersonalMonth() + singularizeValue(userProfile.getBirthMonth()));
     }
 
     private int numGetPersonalMonth()
     {
-        int val = singularizeValue(numGetPersonalYear() + singularizeValue(userProfile.getBirthDay()));
-
-        return val;
+        return singularizeValue(numGetPersonalYear() + singularizeValue(userProfile.getBirthDay()));
     }
 
     private int numGetPersonalYear()
     {
-        int i = singularizeValue(userProfile.getBirthMonth());
-        int j = singularizeValue(userProfile.getBirthDay());
-        int k = singularizeValue(userProfile.getBirthYear()) + (i + j);
+        int month = singularizeValue(userProfile.getBirthMonth());
+        int day = singularizeValue(userProfile.getBirthDay());
+        int year = singularizeValue(userProfile.getBirthYear());
 
-        return singularizeValue(k);
+        return singularizeValue(month + day + year);
     }
 
-    public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile(IProfile profile) {
-        super.produceGroupedNumberSymbolsForProfile(profile);
+    public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile() {
         return getPersonals();
     }
 }

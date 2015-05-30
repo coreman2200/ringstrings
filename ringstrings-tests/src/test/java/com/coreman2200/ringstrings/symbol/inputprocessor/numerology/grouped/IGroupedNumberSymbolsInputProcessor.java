@@ -1,12 +1,11 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped;
 
-import com.coreman2200.ringstrings.symbol.IProfile;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.INumberSymbolInputProcessor;
 import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
 
 /**
  * IGroupedNumberSymbolsInputProcessor
- * TODO: Stub.
+ * Interface for processing Grouped Number Symbols.
  *
  * Created by Cory Higginbottom on 5/26/15
  * http://github.com/coreman2200
@@ -19,5 +18,5 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
  */
 
 public interface IGroupedNumberSymbolsInputProcessor extends INumberSymbolInputProcessor {
-    IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile(IProfile profile);
+    IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile();
 }

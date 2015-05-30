@@ -1,14 +1,12 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped;
 
-import com.coreman2200.ringstrings.numerology.numbersystem.AbstractNumberSystem;
-import com.coreman2200.ringstrings.numerology.numbersystem.NumberSystemType;
-import com.coreman2200.ringstrings.symbol.IProfile;
+import com.coreman2200.ringstrings.profile.IProfile;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.NumberSymbolInputProcessorImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
 
 /**
  * GroupedNumberSymbolsInputProcessor
- * TODO: Stub.
+ * Base class for grouped number symbol input processors used to produce a chart.
  *
  * Created by Cory Higginbottom on 5/26/15
  * http://github.com/coreman2200
@@ -20,17 +18,18 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class GroupedNumberSymbolsInputProcessorImpl extends NumberSymbolInputProcessorImpl implements IGroupedNumberSymbolsInputProcessor {
+abstract public class GroupedNumberSymbolsInputProcessorImpl extends NumberSymbolInputProcessorImpl implements IGroupedNumberSymbolsInputProcessor {
     protected IProfile userProfile;
 
-    public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile(IProfile profile) {
-        assert (profile != null);
-        setProfile(profile);
-        return null;
+    protected GroupedNumberSymbolsInputProcessorImpl() {
+        super();
     }
 
-    private void setProfile(IProfile profile) {
-        this.userProfile = profile;
-        setNumberSystem(profile.getNumberSystem());
+    public void setUserProfileAndNumberSystem(IProfile profile) {
+        assert (profile != null);
+        userProfile = profile;
+        setNumberSystem(userProfile.getNumberSystem());
     }
+
+    abstract public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile();
 }

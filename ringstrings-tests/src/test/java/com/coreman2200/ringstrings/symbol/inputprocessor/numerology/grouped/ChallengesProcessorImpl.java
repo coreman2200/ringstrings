@@ -1,6 +1,5 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped;
 
-import com.coreman2200.ringstrings.symbol.IProfile;
 import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbolsImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
@@ -52,8 +51,7 @@ public class ChallengesProcessorImpl extends GroupedNumberSymbolsInputProcessorI
         return challenges;
     }
 
-    public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile(IProfile profile) {
-        super.produceGroupedNumberSymbolsForProfile(profile);
+    public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile() {
         return getChallenges();
     }
 

@@ -1,6 +1,6 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.numerology;
 
-import com.coreman2200.ringstrings.symbol.IProfile;
+import com.coreman2200.ringstrings.profile.IProfile;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped.ChallengesProcessorImpl;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped.GroupedNumberSymbolsInputProcessorImpl;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped.IGroupedNumberSymbolsInputProcessor;
@@ -29,8 +29,34 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
 public class NumerologicalChartProcessorImpl extends GroupedNumberSymbolsInputProcessorImpl implements IGroupedNumberSymbolsInputProcessor {
     private IGroupedNumberSymbolsInputProcessor mProcessor;
 
-    public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile(IProfile profile) {
-        super.produceGroupedNumberSymbolsForProfile(profile);
+    public NumerologicalChartProcessorImpl(IProfile profile) {
+        super();
+        setUserProfileAndNumberSystem(profile);
+    }
+
+    protected IGroupedNumberSymbolsInputProcessor genProcessorType(GroupedNumberSymbols type) {
+        switch (type) {
+            case QUALITIES:
+                return prepProcessor(new QualitiesProcessorImpl());
+            case CHALLENGES:
+                return prepProcessor(new ChallengesProcessorImpl());
+            case PERIODS:
+                return prepProcessor(new PeriodsProcessorImpl());
+            case PERSONAL:
+                return prepProcessor(new PersonalsProcessorImpl());
+            case PINNACLES:
+                return prepProcessor(new PinnaclesProcessorImpl());
+            default:
+                throw new RuntimeException("Improper GroupedSymbol type. Processor unavailable");
+        }
+    }
+
+    private IGroupedNumberSymbolsInputProcessor prepProcessor(GroupedNumberSymbolsInputProcessorImpl processor) {
+        processor.setUserProfileAndNumberSystem(userProfile);
+        return processor;
+    }
+
+    public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile() {
         IGroupedNumberSymbols chart = new GroupedNumberSymbolsImpl(GroupedNumberSymbols.CHART);
 
         chart.addNumberSymbol(GroupedNumberSymbols.QUALITIES, getQualities());
@@ -42,23 +68,23 @@ public class NumerologicalChartProcessorImpl extends GroupedNumberSymbolsInputPr
     }
 
     private IGroupedNumberSymbols getQualities() {
-        return new QualitiesProcessorImpl().produceGroupedNumberSymbolsForProfile(userProfile);
+        return genProcessorType(GroupedNumberSymbols.QUALITIES).produceGroupedNumberSymbolsForProfile();
     }
 
     private IGroupedNumberSymbols getChallenges() {
-        return new ChallengesProcessorImpl().produceGroupedNumberSymbolsForProfile(userProfile);
+        return genProcessorType(GroupedNumberSymbols.CHALLENGES).produceGroupedNumberSymbolsForProfile();
     }
 
     private IGroupedNumberSymbols getPinnacles() {
-        return new PinnaclesProcessorImpl().produceGroupedNumberSymbolsForProfile(userProfile);
+        return genProcessorType(GroupedNumberSymbols.PINNACLES).produceGroupedNumberSymbolsForProfile();
     }
 
     private IGroupedNumberSymbols getPeriods() {
-        return new PeriodsProcessorImpl().produceGroupedNumberSymbolsForProfile(userProfile);
+        return genProcessorType(GroupedNumberSymbols.PERIODS).produceGroupedNumberSymbolsForProfile();
     }
 
     private IGroupedNumberSymbols getPersonals() {
-        return new PersonalsProcessorImpl().produceGroupedNumberSymbolsForProfile(userProfile);
+        return genProcessorType(GroupedNumberSymbols.PERSONAL).produceGroupedNumberSymbolsForProfile();
     }
 
 }
