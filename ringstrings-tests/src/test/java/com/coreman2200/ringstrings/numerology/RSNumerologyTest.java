@@ -1,26 +1,17 @@
 package com.coreman2200.ringstrings.numerology;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
-import org.robolectric.util.Logger;
 
 import com.coreman2200.ringstrings.BuildConfig;
-import com.coreman2200.ringstrings.numerology.numbersystem.NumberSystemType;
-import com.coreman2200.ringstrings.symbol.IProfile;
-import com.coreman2200.ringstrings.symbol.RandomizedTestProfileImpl;
-import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.INumberSymbolInputProcessor;
-import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.NumberSymbolInputProcessorImpl;
+import com.coreman2200.ringstrings.profile.IProfile;
+import com.coreman2200.ringstrings.profile.RandomizedTestProfileImpl;
+import com.coreman2200.ringstrings.profile.TestProfileImpl;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.NumerologicalChartProcessorImpl;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped.IGroupedNumberSymbolsInputProcessor;
-import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped.PinnaclesProcessorImpl;
-import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped.QualitiesProcessorImpl;
-import com.coreman2200.ringstrings.symbol.numbersymbol.DerivedNumberSymbols;
-import com.coreman2200.ringstrings.symbol.numbersymbol.GroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.IGroupedNumberSymbols;
-import com.coreman2200.ringstrings.symbol.numbersymbol.INumberSymbol;
 
 //import static org.assertj.android.api.Assertions.assertThat;
 
@@ -43,37 +34,37 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.INumberSymbol;
 public class RSNumerologyTest {
 
     final IProfile mTestProfile = new RandomizedTestProfileImpl();
-    final IGroupedNumberSymbolsInputProcessor mTestProcessor = new NumerologicalChartProcessorImpl();
-
-    private boolean numCheckKarmicDebt(int val) {
-        return DerivedNumberSymbols.isValueDerivedNumberSymbol(val);
-    }
+    final IGroupedNumberSymbolsInputProcessor mTestProcessor = new NumerologicalChartProcessorImpl(mTestProfile);
 
     @Test
-    public void testQualitiesProcessor() {
+    public void testRandomNumerologyChartProcessor() {
         int highval = 0;
-        int lowval = 0;
+        int lowval = 1000;
+        int testCount = 1000;
         double averageSize = 0;
 
-        for (int i = 0; i < 1000; i++) {
+        long loopstart = System.currentTimeMillis();
+
+        for (int i = 0; i < testCount; i++) {
             mTestProfile.genProfile();
-            IGroupedNumberSymbols grouped = mTestProcessor.produceGroupedNumberSymbolsForProfile(mTestProfile);
+            IGroupedNumberSymbols grouped = mTestProcessor.produceGroupedNumberSymbolsForProfile();
 
-            // TODO: assert (grouped.size() == 0); ??
+            int gsize = grouped.size();
+            averageSize += gsize;
 
-            averageSize = (averageSize + grouped.size())/(i+1.0);
-
-            if (grouped.size() > highval)
+            if (gsize > highval)
                 highval = grouped.size();
 
             if (grouped.size() < lowval)
                 lowval = grouped.size();
         }
-
+        long elapsedtime = (System.currentTimeMillis() - loopstart)/1000;
+        averageSize /= testCount;
 
         System.out.println("grouped size average: " + averageSize);
         System.out.println("grouped size low: " + lowval);
         System.out.println("grouped size high: " + highval);
+        System.out.println("Time to process " + testCount + " charts ~ " + elapsedtime + " seconds.");
 
     }
 
