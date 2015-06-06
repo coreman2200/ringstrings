@@ -17,5 +17,6 @@ import com.coreman2200.ringstrings.RSIO.IFileHandler;
  */
 
 public interface ISwissephFileHandler extends IFileHandler {
-    void initEphemerisData();
+    String getEphemerisPath();
+    boolean isEphemerisDataAvailable();
 }
