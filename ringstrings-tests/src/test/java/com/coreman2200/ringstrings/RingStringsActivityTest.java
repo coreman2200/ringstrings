@@ -8,12 +8,13 @@ import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
 
 import com.coreman2200.ringstrings.BuildConfig;
+import com.coreman2200.ringstrings.RingStringsActivity;
 
-//import static org.assertj.android.api.Assertions.assertThat;
+import static org.assertj.android.api.Assertions.assertThat;
 
 /**
  * RingStringsActivityTest
- * description
+ * Test RingStringsActivity.
  *
  * Created by Cory Higginbottom on 5/23/15
  * http://github.com/coreman2200
