@@ -1,5 +1,7 @@
 package com.coreman2200.ringstrings.profile;
 
+import android.location.Location;
+
 import com.coreman2200.ringstrings.numerology.numbersystem.NumberSystemType;
 
 import java.util.Calendar;
@@ -99,11 +101,31 @@ public class RandomizedTestProfileImpl  implements IProfile {
             "Keith", "Stewart", "Douglas", "Jonathan", "Matthew", "Daniel", "Grant", "Joseph", "Jason", "Anthony"};
 
     private final static String[] LAST_APPENDS = {"s", "enstein", "lion", "son", "short", "dumdiddly", "inions", "idious-Law"};
+    private final NumberSystemType testNumberSystemType = NumberSystemType.PYTHAGOREAN;
 
     private static String[] testName = new String[3];
-    private static Calendar mTestDate = new GregorianCalendar(Locale.US);
+    private static GregorianCalendar mTestDate = new GregorianCalendar(Locale.US);
 
-    private final NumberSystemType testNumberSystemType = NumberSystemType.PYTHAGOREAN;
+    private static Location mBirthplace = new Location("randomtest");
+    private static Location mCurrentLoc = new Location("randomtest");
+
+
+    public RandomizedTestProfileImpl() {
+        setBirthplace();
+        setCurrentLoc();
+    }
+
+    private void setBirthplace() {
+        mBirthplace.setLatitude(42.3600825);
+        mBirthplace.setLongitude(-71.0588801);
+        mBirthplace.setAltitude(10);
+    }
+
+    private void setCurrentLoc() {
+        mCurrentLoc.setLatitude(37.7749295);
+        mCurrentLoc.setLongitude(-122.4194155);
+        mCurrentLoc.setAltitude(16);
+    }
 
     public String getFirstName() { return testName[0]; }
     public String getMiddleName(){ return testName[1]; }
@@ -115,7 +137,7 @@ public class RandomizedTestProfileImpl  implements IProfile {
     public int getBirthMinute() { return mTestDate.get(Calendar.MINUTE); }
 
     @Override
-    public Calendar getBirthDate() {
+    public GregorianCalendar getBirthDate() {
         return mTestDate;
     }
 
@@ -133,4 +155,13 @@ public class RandomizedTestProfileImpl  implements IProfile {
 
     }
     public NumberSystemType getNumberSystem() { return testNumberSystemType; }
+
+
+    public Location getBirthLocation() {
+        return mBirthplace;
+    }
+
+    public Location getCurrentLocation() {
+        return mCurrentLoc;
+    }
 }

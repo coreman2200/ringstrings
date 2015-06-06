@@ -1,5 +1,7 @@
 package com.coreman2200.ringstrings.profile;
 
+import android.location.Location;
+
 import com.coreman2200.ringstrings.numerology.numbersystem.NumberSystemType;
 
 import java.util.Calendar;
@@ -22,8 +24,28 @@ import java.util.GregorianCalendar;
 public final class TestProfileImpl implements IProfile {
 
     private final String[] testName = {"Cory", "Michael", "Higginbottom"};
-    private static Calendar mTestDate = new GregorianCalendar(1986, 11, 23, 17, 36);
     private final NumberSystemType testNumberSystemType = NumberSystemType.PYTHAGOREAN;
+
+    private static GregorianCalendar mTestDate = new GregorianCalendar(1986, 11, 23, 17, 36);
+    private static Location mBirthplace = new Location("test");
+    private static Location mCurrentLoc = new Location("test");
+
+    public TestProfileImpl() {
+        setBirthplace();
+        setCurrentLoc();
+    }
+
+    private void setBirthplace() {
+        mBirthplace.setLatitude(42.3600825);
+        mBirthplace.setLongitude(-71.0588801);
+        mBirthplace.setAltitude(10);
+    }
+
+    private void setCurrentLoc() {
+        mCurrentLoc.setLatitude(37.7749295);
+        mCurrentLoc.setLongitude(-122.4194155);
+        mCurrentLoc.setAltitude(16);
+    }
 
     public String getFirstName() { return testName[0]; }
     public String getMiddleName(){ return testName[1]; }
@@ -34,12 +56,21 @@ public final class TestProfileImpl implements IProfile {
     public int getBirthHour() { return mTestDate.get(Calendar.HOUR_OF_DAY); }
     public int getBirthMinute() { return mTestDate.get(Calendar.MINUTE); }
 
-    @Override
-    public Calendar getBirthDate() {
-        return mTestDate;
-    }
 
     public NumberSystemType getNumberSystem() { return testNumberSystemType; }
+
+    public Location getBirthLocation() {
+        return mBirthplace;
+    }
+
+    public Location getCurrentLocation() {
+        return mCurrentLoc;
+    }
+
+    @Override
+    public GregorianCalendar getBirthDate() {
+        return mTestDate;
+    }
 
     @Override
     public void genProfile() {
