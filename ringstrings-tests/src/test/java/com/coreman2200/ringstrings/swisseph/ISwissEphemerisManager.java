@@ -1,6 +1,7 @@
 package com.coreman2200.ringstrings.swisseph;
 
-import java.util.GregorianCalendar;
+import com.coreman2200.ringstrings.profile.IProfileTestLoc;
+
 
 /**
  * ISwissEphemerisManager
@@ -17,6 +18,6 @@ import java.util.GregorianCalendar;
  */
 
 public interface ISwissEphemerisManager {
-    void setDate(GregorianCalendar date);
-    void setMaxOrb(double orb);
+    void testAstrGetHousesForProfile(IProfileTestLoc profile);
+    void testAstrPlaceHousesForProfile(IProfileTestLoc profile);
 }
