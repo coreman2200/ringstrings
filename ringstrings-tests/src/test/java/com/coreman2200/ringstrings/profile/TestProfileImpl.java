@@ -7,6 +7,7 @@ import org.robolectric.shadows.ShadowLocation;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.TimeZone;
 
 /**
  * TestProfileImpl
@@ -22,7 +23,7 @@ import java.util.GregorianCalendar;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public final class TestProfileImpl implements IProfile {
+public final class TestProfileImpl implements IProfile, IProfileTestLoc {
 
     private final String[] testName = {"Cory", "Michael", "Higginbottom"};
     private final NumberSystemType testNumberSystemType = NumberSystemType.PYTHAGOREAN;
@@ -34,18 +35,23 @@ public final class TestProfileImpl implements IProfile {
     public TestProfileImpl() {
         setBirthplace();
         setCurrentLoc();
+        setBirthplaceTimeOffset();
     }
 
     private void setBirthplace() {
-        mBirthplace.setLatitude(42.3600825);
-        mBirthplace.setLongitude(-71.0588801);
-        mBirthplace.setAltitude(10);
+        mBirthplace.setLatitude(42.21);
+        mBirthplace.setLongitude(-71.03);
+        mBirthplace.setAltitude(9.48);
     }
 
     private void setCurrentLoc() {
         mCurrentLoc.setLatitude(37.7749295);
         mCurrentLoc.setLongitude(-122.4194155);
         mCurrentLoc.setAltitude(16);
+    }
+
+    private void setBirthplaceTimeOffset() {
+        mTestDate.setTimeZone(TimeZone.getTimeZone("GMT-5"));
     }
 
     public String getFirstName() { return testName[0]; }

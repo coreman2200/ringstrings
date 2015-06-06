@@ -3,9 +3,13 @@ package com.coreman2200.ringstrings.profile;
 
 import com.coreman2200.ringstrings.numerology.numbersystem.NumberSystemType;
 
+import org.robolectric.shadows.ShadowLocation;
+
+import java.time.ZoneId;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Locale;
+import java.util.TimeZone;
 
 /**
  * RandomizedTestProfileImpl
@@ -112,18 +116,23 @@ public class RandomizedTestProfileImpl  implements IProfile {
     public RandomizedTestProfileImpl() {
         setBirthplace();
         setCurrentLoc();
+        setBirthplaceTimeOffset();
     }
 
     private void setBirthplace() {
-        mBirthplace.setLatitude(42.3600825);
-        mBirthplace.setLongitude(-71.0588801);
-        mBirthplace.setAltitude(10);
+        mBirthplace.setLatitude(42.21);
+        mBirthplace.setLongitude(-71.03);
+        mBirthplace.setAltitude(9.48);
     }
 
     private void setCurrentLoc() {
         mCurrentLoc.setLatitude(37.7749295);
         mCurrentLoc.setLongitude(-122.4194155);
         mCurrentLoc.setAltitude(16);
+    }
+
+    private void setBirthplaceTimeOffset() {
+        mTestDate.setTimeZone(TimeZone.getTimeZone("GMT-5"));
     }
 
     public String getFirstName() { return testName[0]; }
