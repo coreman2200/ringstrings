@@ -3,24 +3,22 @@ package com.coreman2200.ringstrings.swisseph;
 import android.app.Activity;
 
 import com.coreman2200.ringstrings.BuildConfig;
-import com.coreman2200.ringstrings.R;
 import com.coreman2200.ringstrings.RingStringsActivity;
+import com.coreman2200.ringstrings.profile.IProfileTestLoc;
+import com.coreman2200.ringstrings.profile.TestProfileImpl;
 
-import org.junit.Test;
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricGradleTestRunner;
-import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
-import org.robolectric.shadows.ShadowResources;
-
 
 /**
- * TestSwissephHandlerImpl
- * Let's see if we can connect successfully to swisseph
+ * TestSwissEphemerisManagerImpl
+ * Tests for Swisseph manager.
  *
- * Created by Cory Higginbottom on 5/29/15
+ * Created by Cory Higginbottom on 6/6/15
  * http://github.com/coreman2200
  *
  * Licensed under the GNU General Public License (GPL), Version 2.0.
@@ -32,30 +30,29 @@ import org.robolectric.shadows.ShadowResources;
 
 @RunWith(RobolectricGradleTestRunner.class)
 @Config(constants = BuildConfig.class)
-public class TestSwissephHandlerImpl {
+public class TestSwissEphemerisManagerImpl {
     private ISwissephFileHandler mTestFileHandler;
     private Activity mTestActivity;
+    private ISwissEphemerisManager mTestSwissephManager;
+    private IProfileTestLoc mTestProfile;
 
     @Before
     public void setup() {
         mTestActivity = Robolectric.setupActivity(RingStringsActivity.class);
         mTestFileHandler = new SwissephFileHandlerImpl(mTestActivity.getApplicationContext());
+        assert(mTestFileHandler.isEphemerisDataAvailable());
+        mTestSwissephManager = new SwissEphemerisManagerImpl(mTestFileHandler.getEphemerisPath());
+        mTestProfile = new TestProfileImpl();
     }
 
     @Test
-    public void testShadowResourcesCanProduceCorrectResourceNames() {
-        ShadowResources resources = Shadows.shadowOf(mTestActivity.getResources());
-        String filename1 = resources.getResourceName(R.raw.seas_18);
-        String filename2 = resources.getResourceName(R.raw.semo_18);
-        String filename3 = resources.getResourceName(R.raw.sepl_18);
-
-        assert (!filename1.isEmpty());
-        assert (!filename2.isEmpty());
-        assert (!filename3.isEmpty());
+    public void testSwissephManagerProducesHouseCuspValues() {
+        mTestSwissephManager.testAstrGetHousesForProfile(mTestProfile);
     }
 
     @Test
-    public void testInitializingSwisseph() {
-        assert(!mTestFileHandler.getEphemerisPath().isEmpty());
+    public void testSwissephManagerProducesAccuratePlacementInHouses() {
+        mTestSwissephManager.testAstrPlaceHousesForProfile(mTestProfile);
     }
+
 }
