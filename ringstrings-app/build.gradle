@@ -1,6 +1,18 @@
 apply plugin: 'com.android.application'
 
+/* Variables */
+ext.debugBuild = "RingStrings-debug"
+
 android {
+    signingConfigs {
+        debug {
+            keyAlias debugBuild
+            keyPassword getPassword(debugBuild, "RSDBG_KEY_PASSWORD")
+            storeFile file('/Users/new/git/ringstrings/rsdebugkeystore.jks')
+            storePassword getPassword(debugBuild, "RSDBG_STORE_PASSWORD")
+        }
+    }
+
     compileSdkVersion 21
     buildToolsVersion "22.0.1"
     defaultConfig {
@@ -11,6 +23,7 @@ android {
         versionName "0.1"
         testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
         testApplicationId 'com.coreman2200.ringstrings'
+        signingConfig signingConfigs.debug
     }
 
     sourceSets {
@@ -21,14 +34,25 @@ android {
         }
     }
 
-    productFlavors {
-    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
+    productFlavors {
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
 }
 
 dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':core')
+    compile 'com.squareup.assertj:assertj-android:1.0.0'
+    compile 'com.android.support:appcompat-v7:22.1.1'
+    androidTestCompile 'com.jayway.android.robotium:robotium-solo:5.3.1'
     compile files('libs/swisseph-2.01.00-00.jar')
 }
