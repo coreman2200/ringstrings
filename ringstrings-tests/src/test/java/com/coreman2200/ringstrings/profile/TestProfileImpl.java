@@ -1,8 +1,9 @@
 package com.coreman2200.ringstrings.profile;
 
-import android.location.Location;
-
 import com.coreman2200.ringstrings.numerology.numbersystem.NumberSystemType;
+
+import org.robolectric.Shadows;
+import org.robolectric.shadows.ShadowLocation;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -27,8 +28,8 @@ public final class TestProfileImpl implements IProfile {
     private final NumberSystemType testNumberSystemType = NumberSystemType.PYTHAGOREAN;
 
     private static GregorianCalendar mTestDate = new GregorianCalendar(1986, 11, 23, 17, 36);
-    private static Location mBirthplace = new Location("test");
-    private static Location mCurrentLoc = new Location("test");
+    private static ShadowLocation mBirthplace = new ShadowLocation();
+    private static ShadowLocation mCurrentLoc = new ShadowLocation();
 
     public TestProfileImpl() {
         setBirthplace();
@@ -59,11 +60,11 @@ public final class TestProfileImpl implements IProfile {
 
     public NumberSystemType getNumberSystem() { return testNumberSystemType; }
 
-    public Location getBirthLocation() {
+    public ShadowLocation getBirthLocation() {
         return mBirthplace;
     }
 
-    public Location getCurrentLocation() {
+    public ShadowLocation getCurrentLocation() {
         return mCurrentLoc;
     }
 

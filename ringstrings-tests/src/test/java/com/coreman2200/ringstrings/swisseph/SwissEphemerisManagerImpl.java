@@ -1,7 +1,6 @@
 package com.coreman2200.ringstrings.swisseph;
 
 import android.annotation.TargetApi;
-import android.location.Location;
 import android.text.format.Time;
 
 import com.sun.istack.internal.NotNull;
@@ -28,7 +27,7 @@ import swisseph.SwissEph;
 public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
     private final SwissEph mEphemeris;
     private SweDate mSwissephDate;
-    private Location mGeoLocation;
+    private ShadowLocation mGeoLocation;
     private double mMaxOrb = 3.0; // Cleanup..
 
     public SwissEphemerisManagerImpl(String ephepath) {

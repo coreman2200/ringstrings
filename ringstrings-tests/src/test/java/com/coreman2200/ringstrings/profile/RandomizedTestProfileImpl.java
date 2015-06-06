@@ -1,6 +1,5 @@
 package com.coreman2200.ringstrings.profile;
 
-import android.location.Location;
 
 import com.coreman2200.ringstrings.numerology.numbersystem.NumberSystemType;
 
@@ -106,8 +105,8 @@ public class RandomizedTestProfileImpl  implements IProfile {
     private static String[] testName = new String[3];
     private static GregorianCalendar mTestDate = new GregorianCalendar(Locale.US);
 
-    private static Location mBirthplace = new Location("randomtest");
-    private static Location mCurrentLoc = new Location("randomtest");
+    private static ShadowLocation mBirthplace = new ShadowLocation();
+    private static ShadowLocation mCurrentLoc = new ShadowLocation();
 
 
     public RandomizedTestProfileImpl() {
@@ -157,11 +156,11 @@ public class RandomizedTestProfileImpl  implements IProfile {
     public NumberSystemType getNumberSystem() { return testNumberSystemType; }
 
 
-    public Location getBirthLocation() {
+    public ShadowLocation getBirthLocation() {
         return mBirthplace;
     }
 
-    public Location getCurrentLocation() {
+    public ShadowLocation getCurrentLocation() {
         return mCurrentLoc;
     }
 }

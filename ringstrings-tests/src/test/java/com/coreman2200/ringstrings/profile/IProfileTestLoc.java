@@ -1,14 +1,15 @@
 package com.coreman2200.ringstrings.profile;
 
-import android.location.Location;
-
 import com.coreman2200.ringstrings.numerology.numbersystem.NumberSystemType;
+
+import org.robolectric.shadows.ShadowLocation;
+
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 /**
- * IProfile
- * Interface for Profiles (data structures used to store raw user input/data)
+ * IProfileTestLoc
+ * Test extension of IProfile to handle android.location.Location methods
  *
  * Created by Cory Higginbottom on 5/27/15
  * http://github.com/coreman2200
@@ -20,18 +21,8 @@ import java.util.GregorianCalendar;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public interface IProfile {
-    String getFirstName();
-    String getMiddleName();
-    String getLastName();
-    GregorianCalendar getBirthDate();
-    Location getBirthLocation();
-    Location getCurrentLocation();
-    int getBirthDay();
-    int getBirthMonth();
-    int getBirthYear();
-    int getBirthHour();
-    int getBirthMinute();
-    void genProfile();
-    NumberSystemType getNumberSystem();
+public interface IProfileTestLoc extends IProfile {
+    ShadowLocation getBirthLocation();
+    ShadowLocation getCurrentLocation();
+
 }
