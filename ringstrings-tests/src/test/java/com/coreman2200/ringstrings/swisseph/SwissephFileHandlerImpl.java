@@ -32,12 +32,12 @@ public class SwissephFileHandlerImpl extends FileHandlerImpl implements ISwissep
         super(context);
     }
 
-    public void initEphemerisData() {
-        if (!isEpheDataAvailable())
-            moveEpheToExt();
+    private void initEphemerisData() {
+        if (!isEphemerisDataAvailable())
+            moveEphemerisToDataStorage();
     }
 
-    private boolean isEpheDataAvailable() {
+    public boolean isEphemerisDataAvailable() {
         String[] filenames = {_EPHEASTROIDDATA, _EPHEMOONDATA, _EPHEPLANETARYDATA};
 
         for (String filename : filenames) {
@@ -48,7 +48,7 @@ public class SwissephFileHandlerImpl extends FileHandlerImpl implements ISwissep
         return true;
     }
 
-    private void moveEpheToExt()
+    private void moveEphemerisToDataStorage()
     {
         try
         {
@@ -63,10 +63,10 @@ public class SwissephFileHandlerImpl extends FileHandlerImpl implements ISwissep
     }
 
     private File getFileFromEpheDirectoryNamed(String name) {
-        return new File(getEpheDir() + name);
+        return new File(getEphemerisPath() + name);
     }
 
-    public String getEpheDir()
+    public final String getEphemerisPath()
     {
         String ephedir = getAbsolutePathWithAppend(_EPHEDIR);
         createDirectory(ephedir);
