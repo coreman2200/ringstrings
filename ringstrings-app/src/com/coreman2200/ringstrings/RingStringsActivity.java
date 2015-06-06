@@ -30,47 +30,19 @@ import com.coreman2200.ringstrings.google.maps.RSGoogleLoc;
 public class RingStringsActivity extends Activity
 {
 	private static final int INPUT_QUEUE_SIZE = 20;
-	private RSGFXBase mGLView;
+	//private RSGFXBase mGLView;
 	private ArrayBlockingQueue<InputObject> inputObjectPool;
 
   public void onCreate(Bundle paramBundle)
   {
 	    super.onCreate(paramBundle);
 	    
-	    /*
-	    // Check if the system supports OpenGL ES 2.0.
-	    final ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-	    final ConfigurationInfo configurationInfo = activityManager.getDeviceConfigurationInfo();
-	    final boolean supportsEs2 = configurationInfo.reqGlEsVersion >= 0x20000;
-	 
-	    if (supportsEs2)
-	    	mGLView = new RSGFXBase(this.getApplicationContext());
-	    else
-	        return;
-	    */
-	    
         setContentView(R.layout.main);
 	    RSIO.initRSIO(this);
-	    RSIO.loadGlobals();
+	    //RSIO.loadGlobals();
 	    RSIO.initEpheData();
-	    Person.setToday();
+	    //Person.setToday();
 	    Location myLoc = RSGoogleLoc.getCrntLocation(this);
-	    
-	    //RSTests.loadProfile(RSTests.CoryH, true, true);
-
-	    //new LoaderAsync().execute(RSIO.getProfiles());
-	    createInputObjectPool();
-	    
-	    //Person.setToday(new GregorianCalendar(2012, 7, 29, 12, 0));
-	    //Location myLoc = new Location("Test Location");
-	    //myLoc.setLatitude(37.750222D);
-	    //myLoc.setLongitude(-122.418779);
-	    //RSGoogleLoc.setCrntLocation(myLoc);
-	    
-	    //HigherEntity.setFilter(0xFF000F - (Astrology.AST_TRANSIT));
-	    //RSTests.loadProfile(RSTests.CoryH, true, true);
-	    //RSTests.getCurrentAtLoc(RSTests.CoryH, 37.750222D, -122.418779, new GregorianCalendar(2012, 7, 29, 12, 0));
-	    //RSTests.loadAllProfiles();
 	    
   }
   
@@ -92,13 +64,13 @@ public class RingStringsActivity extends Activity
 			  for (int i = 0; i < hist; i++) {
 			  InputObject input = inputObjectPool.take();
 			  input.useEventHistory(event, i);
-			  mGLView.getRenderer().feedInput(input);
+			  //mGLView.getRenderer().feedInput(input);
 			  }
 		  }
 		  // current last
 		  InputObject input = inputObjectPool.take();
 		  input.useEvent(event);
-		  mGLView.getRenderer().feedInput(input);
+		  //mGLView.getRenderer().feedInput(input);
 	  } catch (InterruptedException e) { }
 	  // don't allow more than 60 motion events per second
 	  try {
