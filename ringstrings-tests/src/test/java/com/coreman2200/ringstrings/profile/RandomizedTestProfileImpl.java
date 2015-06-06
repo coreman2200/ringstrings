@@ -114,12 +114,17 @@ public class RandomizedTestProfileImpl  implements IProfile {
     public int getBirthHour() { return mTestDate.get(Calendar.HOUR_OF_DAY); }
     public int getBirthMinute() { return mTestDate.get(Calendar.MINUTE); }
 
+    @Override
+    public Calendar getBirthDate() {
+        return mTestDate;
+    }
+
     public void genProfile() {
         testName[0] = NAMES[(int)(Math.random()*NAMES.length)];
         testName[1] = NAMES[(int)(Math.random()*NAMES.length)];
         testName[2] = NAMES[(int)(Math.random()*NAMES.length)] + LAST_APPENDS[(int)(Math.random()*LAST_APPENDS.length)];
 
-        mTestDate.set(1600 + (int) (Math.random() * 800), (int) (Math.random() * 12),
+        mTestDate.set(1800 + (int) (Math.random() * 600), (int) (Math.random() * 12),
                 (int) (Math.random() * 31), (int) (Math.random() * 24), (int) (Math.random() * 60));
 
         System.out.println("Name: " + getFirstName() + " " + getMiddleName() + " " + getLastName());

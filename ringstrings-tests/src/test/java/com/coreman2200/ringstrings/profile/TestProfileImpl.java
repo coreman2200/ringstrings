@@ -33,6 +33,12 @@ public final class TestProfileImpl implements IProfile {
     public int getBirthYear() { return mTestDate.get(Calendar.YEAR); }
     public int getBirthHour() { return mTestDate.get(Calendar.HOUR_OF_DAY); }
     public int getBirthMinute() { return mTestDate.get(Calendar.MINUTE); }
+
+    @Override
+    public Calendar getBirthDate() {
+        return mTestDate;
+    }
+
     public NumberSystemType getNumberSystem() { return testNumberSystemType; }
 
     @Override
