@@ -1,7 +1,10 @@
 package com.coreman2200.ringstrings.profile;
 
+import android.location.Location;
+
 import com.coreman2200.ringstrings.numerology.numbersystem.NumberSystemType;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 /**
  * IProfile
@@ -21,7 +24,9 @@ public interface IProfile {
     String getFirstName();
     String getMiddleName();
     String getLastName();
-    Calendar getBirthDate();
+    GregorianCalendar getBirthDate();
+    Location getBirthLocation();
+    Location getCurrentLocation();
     int getBirthDay();
     int getBirthMonth();
     int getBirthYear();
