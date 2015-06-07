@@ -4,11 +4,16 @@ import com.coreman2200.ringstrings.profile.IProfileTestLoc;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.CelestialBodies;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.Houses;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.Zodiac;
+import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IAstralSymbol;
+import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.ICelestialBodySymbol;
+import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IHouseSymbol;
+import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IZodiacSymbol;
 
 import org.robolectric.shadows.ShadowLocation;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.HashMap;
 
 import swisseph.SweConst;
 import swisseph.SweDate;
@@ -16,7 +21,8 @@ import swisseph.SwissEph;
 
 /**
  * SwissEphemerisManagerImpl
- * Implementation of SwissEphemerisManager.
+ * The SwissEphemerisManager serves as an access point to the swisseph lib to calculate the necessary
+ * components of an Astrological chart.
  *
  * Created by Cory Higginbottom on 6/5/15
  * http://github.com/coreman2200
@@ -31,25 +37,22 @@ import swisseph.SwissEph;
 public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
     private final int sweCalcFlags = SweConst.SEFLG_SWIEPH | SweConst.SEFLG_TRUEPOS | SweConst.SEFLG_SPEED;//33040;
     private final String mEphemerisFilesPath;
+    private final int mAppliedHouseSystem = (int)'T'; // Polich/Page ("topocentric")
     private SwissEph mEphemeris;
     private SweDate mSwissephDate;
     private ShadowLocation mGeoLocation;
-    private double mMaxOrb = 3.0; // Cleanup..
 
     private double armc; // TODO: "The ARMC (= sidereal time)"
     private double mCuspOffset;
-
-    private final int mAppliedHouseSystem = (int)'T'; // Polich/Page ("topocentric")
     private double[] mCusp = new double[13];
-    private double[] mLongitudinalSpeeds = new double[CelestialBodies.values().length];
+
+    private HashMap<Houses, IHouseSymbol> mProducedHouses;
+    private HashMap<Zodiac, IZodiacSymbol> mProducedZodiac;
+    private HashMap<CelestialBodies, IAstralSymbol> mProducedBodies;
+
 
     public SwissEphemerisManagerImpl(String ephepath) {
         mEphemerisFilesPath = ephepath;
-    }
-
-    private void initSwisseph() {
-        mEphemeris = new SwissEph(mEphemerisFilesPath);
-        assert(mEphemeris != null);
     }
 
     public void testAstrGetHousesForProfile(IProfileTestLoc profile) {
@@ -57,19 +60,7 @@ public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
         setDate(profile.getBirthDate());
         setLocation(profile.getBirthLocation());
         astrGetHouses();
-        for (double cusp : mCusp)
-            System.out.println("cusp: " + cusp);
-
         closeSwisseph();
-    }
-
-    private void astrGetHouses()
-    {
-        double[] arrayOfHouses = new double[10];
-        mEphemeris.swe_houses(mSwissephDate.getJulDay(), 0, mGeoLocation.getLatitude(), mGeoLocation.getLongitude(), mAppliedHouseSystem, mCusp, arrayOfHouses);
-        armc = arrayOfHouses[2];
-        mCuspOffset = (mCusp[4] / 30.0);
-        System.out.println("armc: " + armc + " offset:" + mCuspOffset);
     }
 
     public void testAstrPlaceHousesForProfile(IProfileTestLoc profile) {
@@ -81,65 +72,88 @@ public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
         closeSwisseph();
     }
 
-    private void astrPlacePlanets()
-    {
-        StringBuffer reterrbuff = new StringBuffer();
-        CelestialBodies[] celestialBodyValues = CelestialBodies.values();
-        int celestialBodyCount = CelestialBodies.values().length;
-        double[] housePosForBodies = new double[celestialBodyCount];
+    private void initSwisseph() {
+        mEphemeris = new SwissEph(mEphemerisFilesPath);
+        assert(mEphemeris != null);
+    }
 
-        /*  arrayOfDouble2 && arrayOfDouble3 on swe_calc.. output param receives...
-            xx[0]:   longitude
-            xx[1]:   latitude
-            xx[2]:   distance in AU
-            xx[3]:   speed in longitude (degree / day)
-            xx[4]:   speed in latitude (degree / day)
-            xx[5]:   speed in distance (AU / day)
-         */
-        // output array for individual celestial bodies/elems
-        double[] bodiesCalcOutput = new double[6];
-        // output array for orientation.
+    private void astrGetHouses()
+    {
+        double[] arrayOfHouses = new double[10];
+        mEphemeris.swe_houses(mSwissephDate.getJulDay(), 0, mGeoLocation.getLatitude(), mGeoLocation.getLongitude(), mAppliedHouseSystem, mCusp, arrayOfHouses);
+        armc = arrayOfHouses[2];
+        mCuspOffset = (mCusp[4] / 30.0);
+
+        mProducedHouses = new HashMap<>();
+
+        System.out.println("armc: " + armc + " offset:" + mCuspOffset);
+    }
+
+    private void astrPlacePlanets() {
+        double[] topoCalcOutput = calcTopographicHousePositions();
+        double eclipticObliquity = topoCalcOutput[0];
+
+        mProducedBodies = new HashMap<>();
+
+        for (CelestialBodies body : CelestialBodies.values()) {
+            if (body.isRealCelestialBody())
+                calcPlacementForBody(body, eclipticObliquity);
+        }
+    }
+
+    private double[] calcTopographicHousePositions() {
+        StringBuffer reterrbuff = new StringBuffer();
         double[] topoCalcOutput = new double[6];
         double julianDay = mSwissephDate.getJulDay();
 
         double lon = mGeoLocation.getLongitude();
         double lat = mGeoLocation.getLatitude();
         double alt = mGeoLocation.getAltitude();
+
         System.out.println("Setting topological position. lon:" + lon + ", lat:" + lat + ", alt:" + alt);
         mEphemeris.swe_set_topo(lon, lat, alt);
         mEphemeris.swe_calc_ut(julianDay, -1, sweCalcFlags, topoCalcOutput, reterrbuff);
-        if (reterrbuff.length() > 0)
-            throw new RuntimeException(reterrbuff.toString());
+        assert (reterrbuff.length() == 0);
 
-        double eclipticObliquity = topoCalcOutput[0];
-        float degInHouse, degInSign;
-        double cuspstart;
+        return topoCalcOutput;
+    }
 
+    private void calcPlacementForBody(CelestialBodies body, double eclipticObliquity) {
+        StringBuffer reterrbuff = new StringBuffer();
+        double[] bodiesCalcOutput = new double[6];
+        double julianDay = mSwissephDate.getJulDay();
+        double degInHouse, degInSign, cuspstart, longitudinalSpeed;
 
-        for (int i = 0; i < celestialBodyCount-2; i++) { // for all non-fictitious bodies TODO: cleanup
-            System.out.print("Calculating position of " + celestialBodyValues[i].toString() + "..");
-            mEphemeris.swe_calc_ut(julianDay, celestialBodyValues[i].getSwissephValue(), sweCalcFlags, bodiesCalcOutput, reterrbuff);
-            assert (reterrbuff.length() == 0);
+        System.out.print("Calculating position of " + body.toString() + "..");
+        mEphemeris.swe_calc_ut(julianDay, body.getSwissephValue(), sweCalcFlags, bodiesCalcOutput, reterrbuff);
+        assert (reterrbuff.length() == 0);
 
+        double housePlacement = mEphemeris.swe_house_pos(armc, mGeoLocation.getLatitude(), eclipticObliquity, mAppliedHouseSystem, bodiesCalcOutput, reterrbuff);
+        assert (reterrbuff.length() == 0);
 
+        cuspstart = (int)(bodiesCalcOutput[0]/30.0); // Sign..
+        degInSign = (float)(bodiesCalcOutput[0] % 30.0);
+        degInHouse = (float)(bodiesCalcOutput[0] - mCusp[((int)housePlacement)]);
+        longitudinalSpeed = bodiesCalcOutput[3];
 
-            housePosForBodies[i] = mEphemeris.swe_house_pos(armc, mGeoLocation.getLatitude(), eclipticObliquity, mAppliedHouseSystem, bodiesCalcOutput, reterrbuff);
-            assert (reterrbuff.length() == 0);
+        Houses house = getHouseForAtPosition(housePlacement);
 
-            cuspstart = (int)(bodiesCalcOutput[0]/30.0); // Sign..
-            degInSign = (float)(bodiesCalcOutput[0] % 30.0);
-            degInHouse = (float)(bodiesCalcOutput[0] - mCusp[((int)housePosForBodies[i])]);
-            mLongitudinalSpeeds[i] = bodiesCalcOutput[3];
+        boolean retrograde = longitudinalSpeed < 0;
 
+        if (retrograde)
+            System.out.print("(retrograde)");
+        System.out.print(" in " + house.toString() + "..");
+        System.out.println(" under " + Zodiac.values()[(int) cuspstart] + "..");
+    }
 
-            int houseindex = (int)(housePosForBodies[i] - mCuspOffset) + 12;
-            System.out.print(" in " + Houses.values()[houseindex % 12] + "..");
-            System.out.println(" under " + Zodiac.values()[(int) cuspstart] + "..");
+    private Houses getHouseForAtPosition(double placement) {
+        int houseindex = getHouseIndexForPosition(placement);
+        return Houses.values()[houseindex];
+    }
 
-            System.out.print("degInSign: " + degInSign);
-            System.out.print(" degInHouse: " + degInHouse);
-            System.out.println(" retrograde: " + ((!celestialBodyValues[i].equals(CelestialBodies.NORTHNODE) && mLongitudinalSpeeds[i] < 0) ? "yes" : "no"));
-        }
+    private int getHouseIndexForPosition(double placement) {
+        int houseindex = (int)(placement - mCuspOffset) + Houses.values().length;
+        return houseindex % Houses.values().length;
     }
 
     private void setDate(GregorianCalendar date) {
@@ -161,11 +175,6 @@ public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
 
     private void setLocation(ShadowLocation location) {
         mGeoLocation = location;
-    }
-
-    public void setMaxOrb(double orb) {
-        if (orb >= 0.0D)
-            mMaxOrb = orb;
     }
 
     private void closeSwisseph() {
