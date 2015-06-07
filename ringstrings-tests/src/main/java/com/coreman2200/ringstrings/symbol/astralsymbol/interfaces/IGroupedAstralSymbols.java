@@ -5,7 +5,7 @@ import com.coreman2200.ringstrings.symbol.IRelatedSymbols;
 
 /**
  * IGroupedAstralSymbols
- * Interface describing basic functionality for all related astrological symbol derived types.
+ * Interface describing basic functionality for all grouped astrological symbol derived types.
  *
  * Created by Cory Higginbottom on 6/6/15
  * http://github.com/coreman2200
