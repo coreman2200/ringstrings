@@ -15,34 +15,40 @@ package com.coreman2200.ringstrings.symbol.astralsymbol.grouped;
  */
 
 public enum CelestialBodies {
-    SUN(0),
-    MOON(1),
-    MERCURY(2),
-    VENUS(3),
-    MARS(4),
-    JUPITER(5),
-    SATURN(6),
-    URANUS(7),
-    NEPTUNE(8),
-    PLUTO(9),
-    NORTHNODE(11),
-    LILITH(13),
+    SUN(0, true),
+    MOON(1, true),
+    MERCURY(2, true),
+    VENUS(3, true),
+    MARS(4, true),
+    JUPITER(5, true),
+    SATURN(6, true),
+    URANUS(7, true),
+    NEPTUNE(8, true),
+    PLUTO(9, true),
+    NORTHNODE(11, false),
+    LILITH(13, true),
     //EARTH(14), TODO: See if breaks Swisseph by including. Orig does Not include Earth celbody..
-    CHIRON(15),
-    CERES(17),
-    PALLAS(18),
-    JUNO(19),
-    VESTA(20),
-    ASCENDANT(98),
-    MIDHEAVEN(99);
+    CHIRON(15, true),
+    CERES(17, true),
+    PALLAS(18, true),
+    JUNO(19, true),
+    VESTA(20, true),
+    ASCENDANT(98, false),
+    MIDHEAVEN(99, false);
 
     int mSwissephValue;
+    boolean mIsRealBody;
 
-    CelestialBodies(int val) {
+    CelestialBodies(int val, boolean isreal) {
         this.mSwissephValue = val;
+        this.mIsRealBody = isreal;
     }
 
     public int getSwissephValue() {
         return this.mSwissephValue;
+    }
+
+    public boolean isRealCelestialBody() {
+        return this.mIsRealBody;
     }
 }
