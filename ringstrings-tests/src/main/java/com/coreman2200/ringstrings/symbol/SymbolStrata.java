@@ -1,5 +1,6 @@
 package com.coreman2200.ringstrings.symbol;
 
+import com.coreman2200.ringstrings.symbol.astralsymbol.AstralStrata;
 import com.coreman2200.ringstrings.symbol.numbersymbol.NumberStrata;
 
 import org.omg.CosNaming.NamingContextPackage.NotFoundHelper;
@@ -24,10 +25,12 @@ import java.util.Collections;
  */
 
 public enum SymbolStrata {
-    SYMBOL(NumberStrata.BASENUMBER),
-    RELATED_SYMBOLS(NumberStrata.DERIVEDNUMBER, NumberStrata.GROUPEDNUMBERS),
-    CHART(NumberStrata.CHARTEDNUMBERS),
-    RELATIONAL_MAP(NumberStrata.RELATIONALNUMBERMAP);
+    SYMBOL(NumberStrata.BASENUMBER, AstralStrata.ASTRALBODY),
+    RELATED_SYMBOLS(NumberStrata.DERIVEDNUMBER, NumberStrata.GROUPEDNUMBERS,
+                    AstralStrata.ASTRALZODIAC, AstralStrata.ASTRALHOUSE,
+                    AstralStrata.ASTRALASPECT),
+    CHART(NumberStrata.CHARTEDNUMBERS, AstralStrata.ASTRALCHART),
+    RELATIONAL_MAP(NumberStrata.RELATIONALNUMBERMAP, AstralStrata.RELATIONALASTRALMAP);
 
     private List<Enum> mStrataTypeList;
 
