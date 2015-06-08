@@ -26,8 +26,7 @@ public interface IProfile {
     int getBirthDay();
     int getBirthMonth();
     int getBirthYear();
-    int getBirthHour();
-    int getBirthMinute();
+    double getMaxOrb();
     void genProfile();
     NumberSystemType getNumberSystem();
 }
