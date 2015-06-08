@@ -22,8 +22,8 @@ import com.coreman2200.ringstrings.symbol.symbolcomparator.NumberSymbolValueComp
  */
 
 public class RelatedNumberSymbolsImpl extends NumberSymbolImpl implements IRelatedNumberSymbols {
-    protected NumberSymbolValueComparatorImpl<INumberSymbol> mNumberSymbolComparator;
-    protected RelatedSymbolMap<NumberStrata, IGroupedNumberSymbols> mRelatedNumberSymbolMap;
+    protected NumberSymbolValueComparatorImpl mNumberSymbolComparator;
+    protected RelatedSymbolMap<INumberSymbol> mRelatedNumberSymbolMap;
 
     public RelatedNumberSymbolsImpl() {
         super(0);
