@@ -23,9 +23,28 @@ public enum Aspects {
     QUINCUNX(150),
     OPPOSITION(180);
 
-    int mAspectDegree;
+    final double mAspectDegree;
 
     Aspects(int degree) {
         mAspectDegree = degree;
     }
+
+    public boolean checkValueWithinOrbOfAspect(double degree, double orb) {
+
+        if (mAspectDegree == 0 &&  (360.0 - degree) < orb) {
+            return true;
+        }
+
+        double diff = Math.abs(degree - mAspectDegree);
+
+        boolean ret = diff <= orb;
+
+        return ret;
+    }
+
+    public double aspectDegree() {
+        return mAspectDegree;
+    }
+
+
 }
