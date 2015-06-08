@@ -17,7 +17,7 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
- public class NumberSymbolValueComparatorImpl<T> implements Comparator<INumberSymbol> {
+ public class NumberSymbolValueComparatorImpl implements Comparator<INumberSymbol> {
 
     @Override
     public int compare(INumberSymbol o1, INumberSymbol o2) {
