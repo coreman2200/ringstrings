@@ -2,6 +2,8 @@ package com.coreman2200.ringstrings.symbol.astralsymbol.interfaces;
 
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.CelestialBodies;
 
+import java.util.Collection;
+
 /**
  * IHouseSymbol
  * Interface for House Symbols
@@ -17,6 +19,5 @@ import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.CelestialBodies;
  */
 
 public interface IHouseSymbol extends IGroupedAstralSymbols {
-    CelestialBodies[] getBodySymbolsInHouse();
-    void addBodySymbolToHouse(CelestialBodies body);
+    Collection<IAstralSymbol> getBodySymbolsInHouse();
 }

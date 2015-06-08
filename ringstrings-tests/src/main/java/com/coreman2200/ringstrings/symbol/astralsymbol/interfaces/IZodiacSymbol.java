@@ -2,6 +2,8 @@ package com.coreman2200.ringstrings.symbol.astralsymbol.interfaces;
 
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.CelestialBodies;
 
+import java.util.Collection;
+
 /**
  * IZodiacSymbol
  * Interface for Zodiac Symbols
@@ -17,6 +19,5 @@ import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.CelestialBodies;
  */
 
 public interface IZodiacSymbol extends IGroupedAstralSymbols {
-    CelestialBodies[] getBodySymbolsInSign();
-    void addBodySymbolToSign(CelestialBodies body);
+    Collection<IAstralSymbol> getBodySymbolsInSign();
 }

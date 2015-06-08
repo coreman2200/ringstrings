@@ -18,5 +18,6 @@ import com.coreman2200.ringstrings.symbol.IRelatedSymbols;
  */
 
 public interface IGroupedAstralSymbols extends IAstralSymbol, IGroupedSymbols {
-
+    void addAstralSymbol(Enum<? extends Enum<?>> name, IAstralSymbol symbol);
+    IAstralSymbol getAstralSymbol(Enum<? extends Enum<?>> name);
 }

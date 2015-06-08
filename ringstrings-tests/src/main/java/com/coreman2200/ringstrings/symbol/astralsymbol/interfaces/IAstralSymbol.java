@@ -20,4 +20,5 @@ import com.coreman2200.ringstrings.symbol.astralsymbol.AstralStrata;
 public interface IAstralSymbol extends ISymbol {
     AstralStrata getAstralSymbolStrata();
     double getAstralSymbolDegree();
+    Enum<? extends Enum<?>> getAstralSymbolID();
 }

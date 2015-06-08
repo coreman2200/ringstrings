@@ -16,4 +16,5 @@ package com.coreman2200.ringstrings.symbol.astralsymbol.interfaces;
  */
 
 public interface IFictionalBodySymbol extends IAstralSymbol {
+
 }

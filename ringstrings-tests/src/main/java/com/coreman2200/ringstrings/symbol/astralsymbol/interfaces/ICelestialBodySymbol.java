@@ -20,9 +20,10 @@ import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.Zodiac;
  */
 
 public interface ICelestialBodySymbol extends IAstralSymbol {
-    Houses getHouse();
-    Zodiac getSign();
-    CelestialBodies getCelestialBodySymbolID();
-    Aspects getAspectWithBody(CelestialBodies body);
-    Aspects[] getAllAspects();
+    boolean checkInRetrogradeMotion();
+    //CelestialBodies getCelestialBodySymbolID();
+    //Houses getHouse();
+    //Zodiac getSign();
+    //Aspects getAspectWithBody(CelestialBodies body);
+    //Aspects[] getAllAspects();
 }
