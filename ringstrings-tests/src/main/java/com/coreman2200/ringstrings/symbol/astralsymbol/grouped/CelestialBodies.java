@@ -25,7 +25,8 @@ public enum CelestialBodies {
     URANUS(7, true),
     NEPTUNE(8, true),
     PLUTO(9, true),
-    NORTHNODE(11, false),
+    NORTHNODE(11, true),
+    SOUTHNODE(100, false),
     LILITH(13, true),
     //EARTH(14), TODO: See if breaks Swisseph by including. Orig does Not include Earth celbody..
     CHIRON(15, true),
