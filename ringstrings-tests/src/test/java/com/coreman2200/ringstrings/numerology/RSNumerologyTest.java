@@ -7,6 +7,7 @@ import org.robolectric.annotation.Config;
 
 import com.coreman2200.ringstrings.BuildConfig;
 import com.coreman2200.ringstrings.profile.IProfile;
+import com.coreman2200.ringstrings.profile.IProfileTestLoc;
 import com.coreman2200.ringstrings.profile.RandomizedTestProfileImpl;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.NumerologicalChartProcessorImpl;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped.IGroupedNumberSymbolsInputProcessor;
@@ -28,14 +29,14 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IGroupedNumber
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-//@RunWith(RobolectricGradleTestRunner.class)
-//@Config(constants = BuildConfig.class)
+@RunWith(RobolectricGradleTestRunner.class)
+@Config(constants = BuildConfig.class)
 public class RSNumerologyTest {
 
-    final IProfile mTestProfile = new RandomizedTestProfileImpl();
+    final IProfileTestLoc mTestProfile = new RandomizedTestProfileImpl();
     final IGroupedNumberSymbolsInputProcessor mTestProcessor = new NumerologicalChartProcessorImpl(mTestProfile);
 
-    //@Test
+    @Test
     public void testRandomNumerologyChartProcessor() {
         int highval = 0;
         int lowval = 1000;
