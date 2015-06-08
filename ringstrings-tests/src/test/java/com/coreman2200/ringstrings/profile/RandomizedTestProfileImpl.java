@@ -25,7 +25,7 @@ import java.util.TimeZone;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class RandomizedTestProfileImpl  implements IProfile {
+public class RandomizedTestProfileImpl  implements IProfile, IProfileTestLoc {
     private final String[] NAMES = {"Nicola", "Karen", "Fiona", "Susan", "Claire", "Sharon", "Angela", "Gillian",
             "Julie", "Michelle", "Jacqueline", "Amanda", "Tracy", "Louise", "Jennifer", "Alison", "Sarah", "Donna",
             "Caroline", "Elaine", "Lynn", "Margaret", "Elizabeth", "Lesley", "Deborah", "Pauline", "Lorraine", "Laura",
@@ -105,6 +105,7 @@ public class RandomizedTestProfileImpl  implements IProfile {
 
     private final static String[] LAST_APPENDS = {"s", "enstein", "lion", "son", "short", "dumdiddly", "inions", "idious-Law"};
     private final NumberSystemType testNumberSystemType = NumberSystemType.PYTHAGOREAN;
+    private final double mMaxOrb = 2.0;
 
     private static String[] testName = new String[3];
     private static GregorianCalendar mTestDate = new GregorianCalendar(Locale.US);
@@ -120,19 +121,19 @@ public class RandomizedTestProfileImpl  implements IProfile {
     }
 
     private void setBirthplace() {
-        mBirthplace.setLatitude(42.21);
-        mBirthplace.setLongitude(-71.03);
-        mBirthplace.setAltitude(9.48);
+        mBirthplace.setLatitude(-60.0 + (Math.random()*120));
+        mBirthplace.setLongitude(-180.0 + (Math.random()*360));
+        mBirthplace.setAltitude(Math.random()*100);
     }
 
     private void setCurrentLoc() {
-        mCurrentLoc.setLatitude(37.7749295);
-        mCurrentLoc.setLongitude(-122.4194155);
-        mCurrentLoc.setAltitude(16);
+        mCurrentLoc.setLatitude(-60.0 + (Math.random()*120));
+        mCurrentLoc.setLongitude(-180.0 + (Math.random()*360));
+        mCurrentLoc.setAltitude(Math.random()*100);
     }
 
     private void setBirthplaceTimeOffset() {
-        mTestDate.setTimeZone(TimeZone.getTimeZone("GMT-5"));
+        mTestDate.setTimeZone(TimeZone.getTimeZone("GMT"));
     }
 
     public String getFirstName() { return testName[0]; }
@@ -141,8 +142,10 @@ public class RandomizedTestProfileImpl  implements IProfile {
     public int getBirthDay() { return mTestDate.get(Calendar.DAY_OF_MONTH); }
     public int getBirthMonth() { return mTestDate.get(Calendar.MONTH)+1; }
     public int getBirthYear() { return mTestDate.get(Calendar.YEAR); }
-    public int getBirthHour() { return mTestDate.get(Calendar.HOUR_OF_DAY); }
-    public int getBirthMinute() { return mTestDate.get(Calendar.MINUTE); }
+
+    public double getMaxOrb() {
+        return mMaxOrb;
+    }
 
     @Override
     public GregorianCalendar getBirthDate() {
@@ -157,9 +160,13 @@ public class RandomizedTestProfileImpl  implements IProfile {
         mTestDate.set(1800 + (int) (Math.random() * 600), (int) (Math.random() * 12),
                 (int) (Math.random() * 31), (int) (Math.random() * 24), (int) (Math.random() * 60));
 
-        System.out.println("Name: " + getFirstName() + " " + getMiddleName() + " " + getLastName());
-        System.out.println("Birth: " + mTestDate.getTime());
-        System.out.println("=================================RandomlyGeneratedUser");
+
+        setBirthplace();
+        setCurrentLoc();
+
+        //System.out.println("Name: " + getFirstName() + " " + getMiddleName() + " " + getLastName());
+        //System.out.println("Birth: " + mTestDate.getTime());
+        //System.out.println("=================================RandomlyGeneratedUser");
 
     }
     public NumberSystemType getNumberSystem() { return testNumberSystemType; }

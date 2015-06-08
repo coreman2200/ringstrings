@@ -27,6 +27,7 @@ public final class TestProfileImpl implements IProfile, IProfileTestLoc {
 
     private final String[] testName = {"Cory", "Michael", "Higginbottom"};
     private final NumberSystemType testNumberSystemType = NumberSystemType.PYTHAGOREAN;
+    private final double mMaxOrb = 2.0;
 
     private static GregorianCalendar mTestDate = new GregorianCalendar(1986, 11, 23, 17, 36);
     private static ShadowLocation mBirthplace = new ShadowLocation();
@@ -60,9 +61,6 @@ public final class TestProfileImpl implements IProfile, IProfileTestLoc {
     public int getBirthDay() { return mTestDate.get(Calendar.DAY_OF_MONTH); }
     public int getBirthMonth() { return mTestDate.get(Calendar.MONTH)+1; }
     public int getBirthYear() { return mTestDate.get(Calendar.YEAR); }
-    public int getBirthHour() { return mTestDate.get(Calendar.HOUR_OF_DAY); }
-    public int getBirthMinute() { return mTestDate.get(Calendar.MINUTE); }
-
 
     public NumberSystemType getNumberSystem() { return testNumberSystemType; }
 
@@ -74,6 +72,10 @@ public final class TestProfileImpl implements IProfile, IProfileTestLoc {
         return mCurrentLoc;
     }
 
+    public double getMaxOrb() {
+        return mMaxOrb;
+    }
+
     @Override
     public GregorianCalendar getBirthDate() {
         return mTestDate;
@@ -81,8 +83,8 @@ public final class TestProfileImpl implements IProfile, IProfileTestLoc {
 
     @Override
     public void genProfile() {
-        System.out.println("Name: " + getFirstName() + " " + getMiddleName() + " " + getLastName());
-        System.out.println("Birth: " + mTestDate.getTime());
-        System.out.println("=================================TestGeneratedUser");
+        //System.out.println("Name: " + getFirstName() + " " + getMiddleName() + " " + getLastName());
+        //System.out.println("Birth: " + mTestDate.getTime());
+        //System.out.println("=================================TestGeneratedUser");
     }
 }
