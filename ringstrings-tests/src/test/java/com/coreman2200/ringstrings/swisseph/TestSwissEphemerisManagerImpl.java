@@ -46,13 +46,13 @@ public class TestSwissEphemerisManagerImpl {
     }
 
     @Test
-    public void testSwissephManagerProducesHouseCuspValues() {
-        mTestSwissephManager.testAstrGetHousesForProfile(mTestProfile);
+    public void testSwissephManagerProducesAccurateNatalPlacementInHouses() {
+        mTestSwissephManager.produceNatalAstralMappingsForProfile(mTestProfile);
     }
 
     @Test
-    public void testSwissephManagerProducesAccuratePlacementInHouses() {
-        mTestSwissephManager.testAstrPlaceHousesForProfile(mTestProfile);
+    public void testSwissephManagerProducesAccurateCurrentPlacementInHouses() {
+        mTestSwissephManager.produceCurrentAstralMappingsForProfile(mTestProfile);
     }
 
 }
