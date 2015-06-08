@@ -36,7 +36,6 @@ public class GroupedNumberSymbolsImpl extends NumberSymbolImpl implements IGroup
         assert (symbol != null);
         assert (name != null);
         mGroupedNumberSymbolsMap.put(name, symbol);
-        System.out.println(name.toString() + " added to " + mGroupedNumberSymbolID.toString() + "! value: " + symbol.getNumberSymbolValue());
     }
 
     @Override
@@ -45,7 +44,6 @@ public class GroupedNumberSymbolsImpl extends NumberSymbolImpl implements IGroup
 
         for (INumberSymbol symbol : mGroupedNumberSymbolsMap.values())
             size += symbol.size();
-        //System.out.println(mGroupedNumberSymbolID.name() + "'s size: " + size);
         return size;
     }
 
@@ -74,8 +72,6 @@ public class GroupedNumberSymbolsImpl extends NumberSymbolImpl implements IGroup
     @Override
     protected void produceNumberSymbol() {
         super.produceNumberSymbol();
-        //System.out.println("New " + numberSymbolStrata.toString() + " produced! ");
-
     }
 
     @Override
