@@ -1,0 +1,14 @@
+attribute vec4 Position;
+attribute vec2 TextureCoord;
+attribute mediump float pointSize;
+
+uniform mat4 u_mvpMatrix;
+
+varying vec2 TextureCoordOut;
+
+void main(void)
+{
+    gl_Position = u_mvpMatrix * Position;
+    TextureCoordOut = TextureCoord;
+    gl_PointSize = pointSize;
+}
