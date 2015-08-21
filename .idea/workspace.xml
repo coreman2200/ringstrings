@@ -7,36 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b2f262b-0f73-4fef-990f-12929521e3dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/symbolcomparator/SymbolComparatorImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/symbolcomparator/SymbolSizeComparatorImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/symbolcomparator/SymbolStrataComparatorImpl.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/profilemap/AbstractProfileSymbolMap.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/profilemap/AbstractProfileSymbolMap.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/profilemap/ProfileSymbolMapImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/AbstractRelationalSymbolMap.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/AbstractRelationalSymbolMap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/symbolcomparator/AspectComparatorImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/symbolcomparator/AspectComparatorImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/symbolcomparator/AstralSymbolDegreeComparatorImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/symbolcomparator/AstralSymbolDegreeComparatorImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/chart/AstrologicalChartImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/chart/AstrologicalChartImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/impl/GroupedAstralSymbolsImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/impl/GroupedAstralSymbolsImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/symbolcomparator/NumberSymbolValueComparatorImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/symbolcomparator/NumberSymbolValueComparatorImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/chart/NumerologicalChartImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/chart/NumerologicalChartImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/ProfileInputProcessor.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/ProfileInputProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/QualitiesProcessorImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/QualitiesProcessorImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/RelatedSymbolMap$1.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/RelatedSymbolMap$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/RelatedSymbolMap$SortOrder.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/RelatedSymbolMap$SortOrder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/RelatedSymbolMap.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/RelatedSymbolMap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/swisseph/SwissEphemerisManagerImpl$1.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/swisseph/SwissEphemerisManagerImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/swisseph/SwissEphemerisManagerImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/swisseph/SwissEphemerisManagerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/TestProfileInputProcessor.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/TestProfileInputProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/profilemap/UserProfileSymbolMapImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/profilemap/UserProfileSymbolMapImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/test-results/binary/testDebug/output.bin.idx" afterPath="$PROJECT_DIR$/ringstrings-app/build/test-results/binary/testDebug/output.bin.idx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/test-results/binary/testDebug/output.bin" afterPath="$PROJECT_DIR$/ringstrings-app/build/test-results/binary/testDebug/output.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/test-results/binary/testDebug/results.bin" afterPath="$PROJECT_DIR$/ringstrings-app/build/test-results/binary/testDebug/results.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/AbstractRelationalSymbolMap.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/AbstractRelationalSymbolMap.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/profilemap/AbstractProfileSymbolMap.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/symbolcomparator/AspectComparatorImpl.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/symbolcomparator/AspectComparatorImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/symbolcomparator/AstralSymbolDegreeComparatorImpl.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/symbolcomparator/AstralSymbolDegreeComparatorImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/chart/AstrologicalChartImpl.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/chart/AstrologicalChartImpl.java" />
@@ -45,24 +16,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/chart/NumerologicalChartImpl.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/chart/NumerologicalChartImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/ProfileInputProcessor.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/ProfileInputProcessor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/QualitiesProcessorImpl.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/QualitiesProcessorImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/RelatedSymbolMap.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/RelatedSymbolMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.NumberSystemTest.xml" afterPath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.NumberSystemTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl.xml" afterPath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestProfileInputProcessor.xml" afterPath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestProfileInputProcessor.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestSwissEphemerisManagerImpl.xml" afterPath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestSwissEphemerisManagerImpl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestSwissephHandlerImpl.xml" afterPath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestSwissephHandlerImpl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestSymbolStrata.xml" afterPath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestSymbolStrata.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestProfileInputProcessor.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestProfileInputProcessor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/profilemap/UserProfileSymbolMapImpl.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/profilemap/UserProfileSymbolMapImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.NumberSystemTest.html" afterPath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.NumberSystemTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl.html" afterPath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestProfileInputProcessor.html" afterPath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestProfileInputProcessor.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestSwissEphemerisManagerImpl.html" afterPath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestSwissEphemerisManagerImpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestSwissephHandlerImpl.html" afterPath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestSwissephHandlerImpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestSymbolStrata.html" afterPath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestSymbolStrata.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/packages/com.coreman2200.ringstrings.html" afterPath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/packages/com.coreman2200.ringstrings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/index.html" afterPath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ringstrings.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -150,11 +104,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SymbolSizeComparatorImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SymbolSizeComparatorImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/symbolcomparator/SymbolSizeComparatorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6207865">
-              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SymbolComparatorImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/symbolcomparator/SymbolComparatorImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -170,10 +134,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProfileSymbolMapImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProfileSymbolMapImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/profilemap/ProfileSymbolMapImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.49438202">
               <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
               <folding />
             </state>
@@ -3265,14 +3229,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/symbolcomparator/SymbolComparatorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/symbolcomparator/AstralSymbolDegreeComparatorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.252809">
@@ -3425,14 +3381,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/profilemap/ProfileSymbolMapImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestProfileInputProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3475,8 +3423,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/symbolcomparator/SymbolSizeComparatorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6207865">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/symbolcomparator/SymbolComparatorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/profilemap/ProfileSymbolMapImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49438202">
+          <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
           <folding />
         </state>
       </provider>
