@@ -1,5 +1,9 @@
 package com.coreman2200.ringstrings.symbol;
 
+import com.coreman2200.ringstrings.symbol.symbolcomparator.SymbolComparatorImpl;
+import com.coreman2200.ringstrings.symbol.symbolcomparator.SymbolSizeComparatorImpl;
+
+import java.util.Collection;
 import java.util.LinkedList;
 
 /**
@@ -16,29 +20,27 @@ import java.util.LinkedList;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-abstract public class AbstractRelationalSymbolMap extends AbstractSymbol implements IRelationalSymbolMap {
-    private RelatedSymbolMap<IChartedSymbols> mChartedSymbolMaps;
+abstract public class AbstractRelationalSymbolMap<T> extends AbstractSymbol implements IRelationalSymbolMap {
+    private RelatedSymbolMap<T> mChartedSymbolMaps;
 
     protected AbstractRelationalSymbolMap() {
         super();
-        mChartedSymbolMaps = new RelatedSymbolMap<>();
+        mChartedSymbolMaps = new RelatedSymbolMap<>(new SymbolSizeComparatorImpl());
     }
 
-    public void addChart(IChartedSymbols chart) {
-        mChartedSymbolMaps.put(chart.getChartType(), chart);
+    protected void addSymbolMap(Enum<? extends Enum<?>> key, T symbolmap) {
+        mChartedSymbolMaps.put(key, symbolmap);
     }
 
-    public void addCharts(LinkedList<IChartedSymbols> charts) {
-        for (IChartedSymbols chart : charts)
-            this.addChart(chart);
+    protected T getSymbolMap(Enum<? extends Enum<?>> key) {
+        return mChartedSymbolMaps.get(key);
     }
 
-    @Override
-    public int size() {
-        int size = 0;
-        for (IChartedSymbols chart : mChartedSymbolMaps.getSortedSymbols(RelatedSymbolMap.SortOrder.ASCENDING)) {
-            size += chart.size();
-        }
-        return size;
+    protected void setSymbolComparator(SymbolComparatorImpl<T> comparator) {
+        mChartedSymbolMaps.setCurrentComparator(comparator);
+    }
+
+    protected Collection<T> getSortedSymbols(RelatedSymbolMap.SortOrder order) {
+        return mChartedSymbolMaps.getSortedSymbols(order);
     }
 }
