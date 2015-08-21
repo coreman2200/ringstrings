@@ -3,8 +3,10 @@ package com.coreman2200.ringstrings;
 import android.app.Activity;
 
 import com.coreman2200.ringstrings.profile.IProfileTestLoc;
+import com.coreman2200.ringstrings.profile.RandomizedTestProfileImpl;
 import com.coreman2200.ringstrings.swisseph.ISwissephFileHandler;
 import com.coreman2200.ringstrings.swisseph.SwissephFileHandlerImpl;
+import com.coreman2200.ringstrings.symbol.Charts;
 import com.coreman2200.ringstrings.symbol.IChartedSymbols;
 import com.coreman2200.ringstrings.symbol.inputprocessor.astrology.ProfileInputProcessor;
 import com.coreman2200.ringstrings.symbol.profilemap.UserProfileSymbolMapImpl;
@@ -54,8 +56,40 @@ public class TestProfileInputProcessor {
         LinkedList<IChartedSymbols> charts = mTestProcessor.produceUserCharts();
         UserProfileSymbolMapImpl user = new UserProfileSymbolMapImpl(mTestProfile);
         user.addCharts(charts);
-        user.testGenerateLog();
     }
 
+    //@Test
+    public void testDurationProcessorProducesXRandomProfiles() {
+        mTestProfile = new RandomizedTestProfileImpl();
+        int highval = 0;
+        int lowval = Integer.MAX_VALUE;
+        int testCount = 1000;
+        double averageSize = 0;
 
+        long loopstart = System.currentTimeMillis();
+
+        LinkedList<IChartedSymbols> charts;
+        for (int i = 0; i < testCount; i++) {
+            mTestProfile.genProfile();
+            charts = mTestProcessor.produceUserCharts();
+            UserProfileSymbolMapImpl user = new UserProfileSymbolMapImpl(mTestProfile);
+            user.addCharts(charts);
+
+            int gsize = user.size();
+            averageSize += gsize;
+
+            if (gsize > highval)
+                highval = user.size();
+
+            if (user.size() < lowval)
+                lowval = user.size();
+        }
+        long elapsedtime = (System.currentTimeMillis() - loopstart)/1000;
+        averageSize /= testCount;
+
+        System.out.println("user size average: " + averageSize);
+        System.out.println("user size low: " + lowval);
+        System.out.println("user size high: " + highval);
+        System.out.println("Time to process " + testCount + " users ~ " + elapsedtime + " seconds.");
+    }
 }
