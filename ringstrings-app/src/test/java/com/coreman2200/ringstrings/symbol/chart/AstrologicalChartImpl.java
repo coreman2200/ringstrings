@@ -37,7 +37,7 @@ public class AstrologicalChartImpl extends AstralSymbolImpl implements IGroupedA
     public AstrologicalChartImpl(Charts chart, double offset) {
         super(chart, offset);
         AstralSymbolDegreeComparatorImpl comparator = new AstralSymbolDegreeComparatorImpl(offset);
-        mMappedChart = new RelatedSymbolMap(comparator);
+        mMappedChart = new RelatedSymbolMap<>(comparator);
         mSymbolStrata = AstralStrata.ASTRALCHART;
         mChartType = chart;
     }
@@ -84,11 +84,7 @@ public class AstrologicalChartImpl extends AstralSymbolImpl implements IGroupedA
         double wrappeddegree = (Houses.values().length + offsetplacement) % Houses.values().length;
         int index = (int)wrappeddegree;
         Houses house = Houses.values()[index];
-        System.out.println(body.name() + " in " + house.name());
         IHouseSymbol housesymbol = (IHouseSymbol)mMappedChart.get(house);
-        System.out.println("Expected FromCusp: " + housesymbol.getAstralSymbolDegree() + " actual: " + offsetplacement*30);
-        System.out.println("Difference: " + Math.abs(housesymbol.getAstralSymbolDegree() - wrappeddegree));
-        System.out.println("Degree Offset: " + mDegree);
         housesymbol.testGenerateLoggings();
         assert (housesymbol.getAstralSymbol(body) != null);
         return house;
@@ -98,7 +94,6 @@ public class AstrologicalChartImpl extends AstralSymbolImpl implements IGroupedA
         IAstralSymbol bodysymbol = mMappedChart.get(body);
         int index = (int)(bodysymbol.getAstralSymbolDegree() / 30.0);
         Zodiac sign = Zodiac.values()[index];
-        System.out.println(body.name() + " in " + sign.name());
         IGroupedAstralSymbols signsymbol = (IGroupedAstralSymbols)mMappedChart.get(sign);
         assert (signsymbol.getAstralSymbol(body) != null);
         return sign;
