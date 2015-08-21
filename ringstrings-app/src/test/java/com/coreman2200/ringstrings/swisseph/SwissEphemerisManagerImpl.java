@@ -161,11 +161,36 @@ public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
         mProducedBodies.put(body, celbody);
         celbody.setRetrograde(retrograde);
 
-        System.out.print(body.name() + " in house: " + mBodyHousePlacements[bodyindex] + " - offset: ");
-        System.out.println(mBodyHousePlacements[bodyindex] - mCuspOffset);
-
         addBodyToHouse(celbody);
         addBodyToZodiac(celbody);
+    }
+
+    private void addBodyToHouse(IAstralSymbol symbol) {
+        Houses house = getHouseForPosition(symbol.getAstralSymbolDegree());
+        IHouseSymbol housesymbol = (IHouseSymbol)mProducedHouses.get(house);
+        housesymbol.addAstralSymbol(symbol.getAstralSymbolID(), symbol);
+    }
+
+    private Houses getHouseForPosition(double placement) {
+        Houses house = Houses.values()[getHouseIndexForPosition(placement)];
+        return house;
+    }
+
+    private int getHouseIndexForPosition(double placement) {
+        double houseplacement = wrapDegree(placement - mCuspOrientationOffset)/30.0;
+        return (int)(houseplacement % Houses.values().length);
+    }
+
+    private void addBodyToZodiac(IAstralSymbol symbol) {
+        Zodiac sign = getZodiacSignForPosition(symbol.getAstralSymbolDegree());
+        IZodiacSymbol signsymbol = (IZodiacSymbol)mProducedZodiac.get(sign);
+        signsymbol.addAstralSymbol(symbol.getAstralSymbolID(), symbol);
+    }
+
+    private Zodiac getZodiacSignForPosition(double placement) {
+        int index = (int)(placement/30.0);
+        Zodiac sign = Zodiac.values()[index];
+        return sign;
     }
 
     private void createFictionalBody(CelestialBodies body) {
@@ -185,21 +210,13 @@ public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
     }
 
     private void produceAscendantSymbol() {
-        double degree = wrapDegree(mCusp[1] + mCuspOrientationOffset);
-
-        System.out.println("mCusp: " + mCusp[1] + " + offset: " + (mCusp[1] + mCuspOrientationOffset) + " wrapped: " + degree);
-        IAstralSymbol ascendant = new CelestialBodySymbolImpl(CelestialBodies.ASCENDANT, degree);
+        IAstralSymbol ascendant = new CelestialBodySymbolImpl(CelestialBodies.ASCENDANT, mCuspOrientationOffset);
         mProducedBodies.put(CelestialBodies.ASCENDANT, ascendant);
         IHouseSymbol housei = (IHouseSymbol)mProducedHouses.get(Houses.HOUSEI);
         housei.addAstralSymbol(CelestialBodies.ASCENDANT, ascendant);
         addBodyToZodiac(ascendant);
     }
 
-    private double wrapDegree(double degree) {
-        return (360.0 + degree) % 360.0;
-    }
-
-    // TODO: Inaccurate Zodiac for Midheaven
     private void produceMidheavenSymbol() {
         double degree = wrapDegree(mCusp[10] + mCuspOrientationOffset);
         IAstralSymbol midheaven = new CelestialBodySymbolImpl(CelestialBodies.MIDHEAVEN, degree);
@@ -222,33 +239,8 @@ public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
         addBodyToZodiac(southnode);
     }
 
-    private void addBodyToHouse(IAstralSymbol symbol) {
-        CelestialBodies body = (CelestialBodies)symbol.getAstralSymbolID();
-        Houses house = getHouseForPosition(mBodyHousePlacements[body.ordinal()]);
-        IHouseSymbol housesymbol = (IHouseSymbol)mProducedHouses.get(house);
-        housesymbol.addAstralSymbol(symbol.getAstralSymbolID(), symbol);
-    }
-
-    private void addBodyToZodiac(IAstralSymbol symbol) {
-        Zodiac sign = getZodiacSignForPosition(symbol.getAstralSymbolDegree());
-        IZodiacSymbol signsymbol = (IZodiacSymbol)mProducedZodiac.get(sign);
-        signsymbol.addAstralSymbol(symbol.getAstralSymbolID(), symbol);
-    }
-
-    private Zodiac getZodiacSignForPosition(double placement) {
-        int index = (int)(placement/30.0);
-        Zodiac sign = Zodiac.values()[index];
-        return sign;
-    }
-
-    private Houses getHouseForPosition(double placement) {
-        Houses house = Houses.values()[getHouseIndexForPosition(placement)];
-        return house;
-    }
-
-    private int getHouseIndexForPosition(double placement) {
-        double houseplacement = (placement - mCuspOffset) + Houses.values().length;
-        return (int)(houseplacement % Houses.values().length);
+    private double wrapDegree(double degree) {
+        return (360.0 + degree) % 360.0;
     }
 
     private void setDate(GregorianCalendar date) {
