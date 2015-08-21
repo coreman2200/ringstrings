@@ -20,7 +20,7 @@ import java.util.Map;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class AspectComparatorImpl implements Comparator<Map.Entry<Enum<? extends Enum<?>>, IAstralSymbol>> {
+public class AspectComparatorImpl extends SymbolComparatorImpl<IAstralSymbol> {
     private double mMaxOrb;
 
     public AspectComparatorImpl(double maxorb) {

@@ -19,7 +19,7 @@ import java.util.Map;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class AstralSymbolDegreeComparatorImpl implements Comparator<Map.Entry<Enum<? extends Enum<?>>, IAstralSymbol>> {
+public class AstralSymbolDegreeComparatorImpl extends SymbolComparatorImpl<IAstralSymbol> {
     private double mOffset;
 
     public AstralSymbolDegreeComparatorImpl(double offset) {

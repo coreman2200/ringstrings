@@ -1,6 +1,8 @@
 package com.coreman2200.ringstrings.symbol.symbolcomparator;
 
 import java.util.Comparator;
+import java.util.Map;
+
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
 
 /**
@@ -17,11 +19,11 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
- public class NumberSymbolValueComparatorImpl implements Comparator<INumberSymbol> {
+ public class NumberSymbolValueComparatorImpl extends SymbolComparatorImpl<INumberSymbol> {
 
     @Override
-    public int compare(INumberSymbol o1, INumberSymbol o2) {
-        return o2.getNumberSymbolValue() - o1.getNumberSymbolValue();
+    public int compare(Map.Entry<Enum<? extends Enum<?>>, INumberSymbol> o1, Map.Entry<Enum<? extends Enum<?>>, INumberSymbol> o2) {
+        return o2.getValue().getNumberSymbolValue() - o1.getValue().getNumberSymbolValue();
     }
 
 }
