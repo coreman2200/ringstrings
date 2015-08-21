@@ -30,7 +30,6 @@ abstract public class GroupedAstralSymbolsImpl extends AstralSymbolImpl implemen
 
     public void addAstralSymbol(Enum<? extends Enum<?>> name, IAstralSymbol symbol) {
         mGroupedAstralSymbols.put(name, symbol);
-        System.out.println(name.name() + " in " + mSymbolID.name());
     }
 
     public IAstralSymbol getAstralSymbol(Enum<? extends Enum<?>> name) {
