@@ -137,7 +137,7 @@ public class QualitiesProcessorImpl extends GroupedNumberSymbolsInputProcessorIm
         for (char c : nameArray) {
             int charValue = mNumberSystem.numValueForChar(c);
             BaseNumberSymbols symbol = BaseNumberSymbols.getBaseNumberSymbolIDForValue(charValue);
-            int count = occurrences.get(symbol);
+            Integer count = (!occurrences.containsKey(symbol)) ? Integer.valueOf(0) : occurrences.get(symbol);
             occurrences.put(symbol, ++count);
         }
         return occurrences;
