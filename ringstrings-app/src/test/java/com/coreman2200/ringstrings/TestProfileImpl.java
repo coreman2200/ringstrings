@@ -28,7 +28,7 @@ public final class TestProfileImpl implements IProfile, IProfileTestLoc {
 
     private final String[] testName = {"Cory", "Michael", "Higginbottom"};
     private final NumberSystemType testNumberSystemType = NumberSystemType.PYTHAGOREAN;
-    private final double mMaxOrb = 2.0;
+    private final double mMaxOrb = 2.0; // TODO: Why is the max orbital distance for aspects set here?
 
     private static GregorianCalendar mTestDate = new GregorianCalendar(1986, 11, 23, 17, 36);
     private static ShadowLocation mBirthplace = new ShadowLocation();

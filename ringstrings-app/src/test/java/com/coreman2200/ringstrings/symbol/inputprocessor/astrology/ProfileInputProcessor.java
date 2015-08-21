@@ -33,7 +33,7 @@ public class ProfileInputProcessor {
 
     public LinkedList<IChartedSymbols> produceUserCharts() {
         mCharts = new LinkedList<>();
-        AstrologicalChartInputProcessorImpl astroprocessor = new AstrologicalChartInputProcessorImpl(mProfile, "");
+        AstrologicalChartInputProcessorImpl astroprocessor = new AstrologicalChartInputProcessorImpl(mProfile, ""); // TODO: ~""
         mCharts.add(astroprocessor.produceAstrologicalChart(Charts.ASTRAL_NATAL));
         mCharts.add(astroprocessor.produceAstrologicalChart(Charts.ASTRAL_CURRENT));
 
