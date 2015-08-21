@@ -28,7 +28,6 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IGroupedNumber
  */
 
 public class NumerologicalChartProcessorImpl extends GroupedNumberSymbolsInputProcessorImpl implements IGroupedNumberSymbolsInputProcessor {
-    private IGroupedNumberSymbolsInputProcessor mProcessor;
 
     public NumerologicalChartProcessorImpl(IProfile profile) {
         super();
@@ -60,32 +59,19 @@ public class NumerologicalChartProcessorImpl extends GroupedNumberSymbolsInputPr
     public IChartedNumberSymbols produceGroupedNumberSymbolsForProfile() {
         IChartedNumberSymbols chart = new NumerologicalChartImpl();
 
-        chart.addNumberSymbol(GroupedNumberSymbols.QUALITIES, getQualities());
-        chart.addNumberSymbol(GroupedNumberSymbols.CHALLENGES, getChallenges());
-        chart.addNumberSymbol(GroupedNumberSymbols.PERIODS, getPeriods());
-        chart.addNumberSymbol(GroupedNumberSymbols.PERSONAL, getPersonals());
-        chart.addNumberSymbol(GroupedNumberSymbols.PINNACLES, getPinnacles());
+        // Grouped Symbols that establish the full number symbol
+        final GroupedNumberSymbols[] groupedSymbols = { GroupedNumberSymbols.QUALITIES, GroupedNumberSymbols.CHALLENGES,
+                                                        GroupedNumberSymbols.PERIODS, GroupedNumberSymbols.PERSONAL,
+                                                        GroupedNumberSymbols.PINNACLES };
+
+        for (GroupedNumberSymbols type : groupedSymbols)
+            chart.addNumberSymbol(type, getGroupedNumberSymbolsForType(type));
+
         return chart;
     }
 
-    private IGroupedNumberSymbols getQualities() {
-        return genProcessorType(GroupedNumberSymbols.QUALITIES).produceGroupedNumberSymbolsForProfile();
-    }
-
-    private IGroupedNumberSymbols getChallenges() {
-        return genProcessorType(GroupedNumberSymbols.CHALLENGES).produceGroupedNumberSymbolsForProfile();
-    }
-
-    private IGroupedNumberSymbols getPinnacles() {
-        return genProcessorType(GroupedNumberSymbols.PINNACLES).produceGroupedNumberSymbolsForProfile();
-    }
-
-    private IGroupedNumberSymbols getPeriods() {
-        return genProcessorType(GroupedNumberSymbols.PERIODS).produceGroupedNumberSymbolsForProfile();
-    }
-
-    private IGroupedNumberSymbols getPersonals() {
-        return genProcessorType(GroupedNumberSymbols.PERSONAL).produceGroupedNumberSymbolsForProfile();
+    private IGroupedNumberSymbols getGroupedNumberSymbolsForType(GroupedNumberSymbols type) {
+        return genProcessorType(type).produceGroupedNumberSymbolsForProfile();
     }
 
 }
