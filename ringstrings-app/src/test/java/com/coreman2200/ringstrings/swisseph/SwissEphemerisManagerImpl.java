@@ -67,7 +67,7 @@ public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
         setDate(profile.getBirthDate());
         setLocation(profile.getBirthLocation());
         astrSetZodiac();
-        astrGetHouses();
+        astrSetHouses();
         astrPlaceBodies();
         closeSwisseph();
     }
@@ -76,7 +76,7 @@ public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
         setDate((GregorianCalendar)GregorianCalendar.getInstance());
         setLocation(profile.getCurrentLocation());
         astrSetZodiac();
-        astrGetHouses();
+        astrSetHouses();
         astrPlaceBodies();
         closeSwisseph();
     }
@@ -95,13 +95,13 @@ public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
         }
     }
 
-    private void astrGetHouses()
+    private void astrSetHouses() // TODO: Constants for these numerical values..
     {
         double[] ascmc = new double[10];
         mEphemeris.swe_houses(mSwissephDate.getJulDay(), 0, mGeoLocation.getLatitude(), mGeoLocation.getLongitude(), mAppliedHouseSystem, mCusp, ascmc);
         armc = ascmc[2];
         mCuspOrientationOffset = mCusp[4];
-        mCuspOffset = (mCuspOrientationOffset / 30.0);
+        mCuspOffset = (mCuspOrientationOffset / Houses.values().length); // TODO: 30 => Houses.values().length ?
 
         mProducedHouses = new HashMap<>();
 
