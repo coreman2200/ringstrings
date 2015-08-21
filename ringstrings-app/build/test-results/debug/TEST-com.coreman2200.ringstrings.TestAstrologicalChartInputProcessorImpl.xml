@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl" tests="4" skipped="0" failures="1" errors="0" timestamp="2015-07-25T01:28:01" hostname="news-MacBook-Pro.local" time="9.133">
+<testsuite name="com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl" tests="4" skipped="0" failures="1" errors="0" timestamp="2015-08-21T16:57:12" hostname="199-241-201-12.PUBLIC.monkeybrains.net" time="7.092">
   <properties/>
-  <testcase name="testProcessorProducesBirthChart" classname="com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl" time="8.375"/>
-  <testcase name="testProcessorProducesCurrentChart" classname="com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl" time="0.309"/>
-  <testcase name="testChartProducesCorrectSignForBodies" classname="com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl" time="0.228"/>
+  <testcase name="testProcessorProducesBirthChart" classname="com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl" time="6.374"/>
+  <testcase name="testProcessorProducesCurrentChart" classname="com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl" time="0.298"/>
+  <testcase name="testChartProducesCorrectSignForBodies" classname="com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl" time="0.2"/>
   <testcase name="testChartProducesCorrectHouseForBodies" classname="com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl" time="0.219">
     <failure message="java.lang.AssertionError" type="java.lang.AssertionError">java.lang.AssertionError
 	at com.coreman2200.ringstrings.symbol.chart.AstrologicalChartImpl.getHouseForBody(AstrologicalChartImpl.java:93)
 	at com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl.testChartProducesCorrectHouseForBodies(TestAstrologicalChartInputProcessorImpl.java:73)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
+	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
@@ -32,9 +32,9 @@
 	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:64)
 	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:50)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
+	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
 	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
 	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
@@ -42,102 +42,30 @@
 	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:106)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
+	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
 	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
 	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)
 	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:745)
 </failure>
   </testcase>
-  <system-out><![CDATA[SUN in house: 9.41326829791069 - offset: 5.954907800123911
-SUN in HOUSEVI
-SUN in CAPRICORN
-MOON in house: 6.40902379155159 - offset: 2.95066329376481
-MOON in HOUSEIII
-MOON in VIRGO
-MERCURY in house: 8.869254797697067 - offset: 5.410894299910288
-MERCURY in HOUSEVI
-MERCURY in SAGITTARIUS
-VENUS in house: 7.700911372900009 - offset: 4.2425508751132295
-VENUS in HOUSEV
-VENUS in SCORPIO
-MARS in house: 12.288302570581436 - offset: 8.829942072794656
-MARS in HOUSEIX
-MARS in PISCES
-JUPITER in house: 12.246600210666656 - offset: 8.788239712879877
-JUPITER in HOUSEIX
-JUPITER in PISCES
-SATURN in house: 8.642856508493423 - offset: 5.184496010706644
-SATURN in HOUSEVI
-SATURN in SAGITTARIUS
-URANUS in house: 9.00216057896614 - offset: 5.543800081179361
-URANUS in HOUSEVI
-URANUS in SAGITTARIUS
-NEPTUNE in house: 9.601570099592209 - offset: 6.143209601805429
-NEPTUNE in HOUSEVII
-NEPTUNE in CAPRICORN
-PLUTO in house: 7.913769960403442 - offset: 4.455409462616663
-PLUTO in HOUSEV
-PLUTO in SCORPIO
-NORTHNODE in house: 12.84310507774353 - offset: 9.38474457995675
-NORTHNODE in HOUSEX
-NORTHNODE in ARIES
-SOUTHNODE in HOUSEIV
-SOUTHNODE in LIBRA
-LILITH in house: 4.358978450298309 - offset: 0.9006179525115292
-LILITH in HOUSEI
-LILITH in CANCER
-CHIRON in house: 2.878826528787613 - offset: -0.5795339689991672
-CHIRON in HOUSEXII
-CHIRON in GEMINI
-CERES in house: 8.209057480096817 - offset: 4.750696982310037
-CERES in HOUSEV
-CERES in SAGITTARIUS
-PALLAS in house: 7.906520038843155 - offset: 4.448159541056375
-PALLAS in HOUSEV
-PALLAS in SCORPIO
-JUNO in house: 9.755551964044571 - offset: 6.297191466257791
-JUNO in HOUSEVII
-JUNO in CAPRICORN
-VESTA in house: 12.944712430238724 - offset: 9.486351932451944
-VESTA in HOUSEX
-VESTA in ARIES
-mCusp: 26.12056859196562 + offset: 129.87138352556903 wrapped: 129.87138352556906
-ASCENDANT in HOUSEI
-ASCENDANT in LEO
-MIDHEAVEN in HOUSEX
-MIDHEAVEN in ARIES
-NORTHNODE in OPPOSITION
-SOUTHNODE in OPPOSITION
-PALLAS in CONJUNCTION
-PLUTO in CONJUNCTION
-VENUS in SEMISEXTILE
-SOUTHNODE in SEMISEXTILE
-PLUTO in SEXTILE
-JUNO in SEXTILE
-JUNO in QUINCUNX
-ASCENDANT in QUINCUNX
-LILITH in QUINCUNX
-MERCURY in QUINCUNX
-MERCURY in SQUARE
-MARS in SQUARE
-MARS in QUINCUNX
-SOUTHNODE in QUINCUNX
-SATURN in SQUARE
-JUPITER in SQUARE
-URANUS in SQUARE
-MOON in SQUARE
-CHIRON in TRINE
-SOUTHNODE in TRINE
-JUPITER in QUINCUNX
-SOUTHNODE in QUINCUNX
-CERES in SEMISEXTILE
-SUN in SEMISEXTILE
+  <system-out><![CDATA[Symbols in HOUSEI
+Symbols in HOUSEII
+Symbols in HOUSEIII
+Symbols in HOUSEIV
+Symbols in HOUSEV
+Symbols in HOUSEVI
+Symbols in HOUSEVII
+Symbols in HOUSEVIII
+Symbols in HOUSEIX
+Symbols in HOUSEX
+Symbols in HOUSEXI
+Symbols in HOUSEXII
 SUN in house: 9.41326829791069 - offset: 5.954907800123911
 SUN in HOUSEVI
 SUN in CAPRICORN
@@ -196,32 +124,44 @@ ASCENDANT in HOUSEI
 ASCENDANT in LEO
 MIDHEAVEN in HOUSEX
 MIDHEAVEN in ARIES
-NORTHNODE in OPPOSITION
-SOUTHNODE in OPPOSITION
-PALLAS in CONJUNCTION
-PLUTO in CONJUNCTION
-VENUS in SEMISEXTILE
-SOUTHNODE in SEMISEXTILE
-PLUTO in SEXTILE
-JUNO in SEXTILE
+SATURN in SQUARE
+JUPITER in SQUARE
+JUPITER in TRINE
+VENUS in TRINE
+CERES in SEMISEXTILE
+SUN in SEMISEXTILE
 JUNO in QUINCUNX
 ASCENDANT in QUINCUNX
+VENUS in QUINCUNX
+CHIRON in QUINCUNX
+CHIRON in SEXTILE
+NORTHNODE in SEXTILE
 LILITH in QUINCUNX
 MERCURY in QUINCUNX
 MERCURY in SQUARE
 MARS in SQUARE
+PLUTO in SQUARE
+ASCENDANT in SQUARE
 MARS in QUINCUNX
 SOUTHNODE in QUINCUNX
-SATURN in SQUARE
-JUPITER in SQUARE
+NORTHNODE in OPPOSITION
+SOUTHNODE in OPPOSITION
+PALLAS in SQUARE
+ASCENDANT in SQUARE
 URANUS in SQUARE
 MOON in SQUARE
-CHIRON in TRINE
-SOUTHNODE in TRINE
-JUPITER in QUINCUNX
-SOUTHNODE in QUINCUNX
-CERES in SEMISEXTILE
-SUN in SEMISEXTILE
+Symbols in HOUSEI
+Symbols in HOUSEII
+Symbols in HOUSEIII
+Symbols in HOUSEIV
+Symbols in HOUSEV
+Symbols in HOUSEVI
+Symbols in HOUSEVII
+Symbols in HOUSEVIII
+Symbols in HOUSEIX
+Symbols in HOUSEX
+Symbols in HOUSEXI
+Symbols in HOUSEXII
 SUN in house: 9.41326829791069 - offset: 5.954907800123911
 SUN in HOUSEVI
 SUN in CAPRICORN
@@ -280,52 +220,44 @@ ASCENDANT in HOUSEI
 ASCENDANT in LEO
 MIDHEAVEN in HOUSEX
 MIDHEAVEN in ARIES
-NORTHNODE in OPPOSITION
-SOUTHNODE in OPPOSITION
-PALLAS in CONJUNCTION
-PLUTO in CONJUNCTION
-VENUS in SEMISEXTILE
-SOUTHNODE in SEMISEXTILE
-PLUTO in SEXTILE
-JUNO in SEXTILE
+SATURN in SQUARE
+JUPITER in SQUARE
+JUPITER in TRINE
+VENUS in TRINE
+CERES in SEMISEXTILE
+SUN in SEMISEXTILE
 JUNO in QUINCUNX
 ASCENDANT in QUINCUNX
+VENUS in QUINCUNX
+CHIRON in QUINCUNX
+CHIRON in SEXTILE
+NORTHNODE in SEXTILE
 LILITH in QUINCUNX
 MERCURY in QUINCUNX
 MERCURY in SQUARE
 MARS in SQUARE
+PLUTO in SQUARE
+ASCENDANT in SQUARE
 MARS in QUINCUNX
 SOUTHNODE in QUINCUNX
-SATURN in SQUARE
-JUPITER in SQUARE
+NORTHNODE in OPPOSITION
+SOUTHNODE in OPPOSITION
+PALLAS in SQUARE
+ASCENDANT in SQUARE
 URANUS in SQUARE
 MOON in SQUARE
-CHIRON in TRINE
-SOUTHNODE in TRINE
-JUPITER in QUINCUNX
-SOUTHNODE in QUINCUNX
-CERES in SEMISEXTILE
-SUN in SEMISEXTILE
-SUN in CAPRICORN
-MOON in VIRGO
-MERCURY in SAGITTARIUS
-VENUS in SCORPIO
-MARS in PISCES
-JUPITER in PISCES
-SATURN in SAGITTARIUS
-URANUS in SAGITTARIUS
-NEPTUNE in CAPRICORN
-PLUTO in SCORPIO
-NORTHNODE in ARIES
-SOUTHNODE in LIBRA
-LILITH in CANCER
-CHIRON in GEMINI
-CERES in SAGITTARIUS
-PALLAS in SCORPIO
-JUNO in CAPRICORN
-VESTA in ARIES
-ASCENDANT in LEO
-MIDHEAVEN in ARIES
+Symbols in HOUSEI
+Symbols in HOUSEII
+Symbols in HOUSEIII
+Symbols in HOUSEIV
+Symbols in HOUSEV
+Symbols in HOUSEVI
+Symbols in HOUSEVII
+Symbols in HOUSEVIII
+Symbols in HOUSEIX
+Symbols in HOUSEX
+Symbols in HOUSEXI
+Symbols in HOUSEXII
 SUN in house: 9.41326829791069 - offset: 5.954907800123911
 SUN in HOUSEVI
 SUN in CAPRICORN
@@ -384,41 +316,157 @@ ASCENDANT in HOUSEI
 ASCENDANT in LEO
 MIDHEAVEN in HOUSEX
 MIDHEAVEN in ARIES
-NORTHNODE in OPPOSITION
-SOUTHNODE in OPPOSITION
-PALLAS in CONJUNCTION
-PLUTO in CONJUNCTION
-VENUS in SEMISEXTILE
-SOUTHNODE in SEMISEXTILE
-PLUTO in SEXTILE
-JUNO in SEXTILE
+SATURN in SQUARE
+JUPITER in SQUARE
+JUPITER in TRINE
+VENUS in TRINE
+CERES in SEMISEXTILE
+SUN in SEMISEXTILE
 JUNO in QUINCUNX
 ASCENDANT in QUINCUNX
+VENUS in QUINCUNX
+CHIRON in QUINCUNX
+CHIRON in SEXTILE
+NORTHNODE in SEXTILE
 LILITH in QUINCUNX
 MERCURY in QUINCUNX
 MERCURY in SQUARE
 MARS in SQUARE
+PLUTO in SQUARE
+ASCENDANT in SQUARE
 MARS in QUINCUNX
 SOUTHNODE in QUINCUNX
-SATURN in SQUARE
-JUPITER in SQUARE
+NORTHNODE in OPPOSITION
+SOUTHNODE in OPPOSITION
+PALLAS in SQUARE
+ASCENDANT in SQUARE
 URANUS in SQUARE
 MOON in SQUARE
-CHIRON in TRINE
-SOUTHNODE in TRINE
-JUPITER in QUINCUNX
-SOUTHNODE in QUINCUNX
+SUN in CAPRICORN
+MOON in VIRGO
+MERCURY in SAGITTARIUS
+VENUS in SCORPIO
+MARS in PISCES
+JUPITER in PISCES
+SATURN in SAGITTARIUS
+URANUS in SAGITTARIUS
+NEPTUNE in CAPRICORN
+PLUTO in SCORPIO
+NORTHNODE in ARIES
+SOUTHNODE in LIBRA
+LILITH in CANCER
+CHIRON in GEMINI
+CERES in SAGITTARIUS
+PALLAS in SCORPIO
+JUNO in CAPRICORN
+VESTA in ARIES
+ASCENDANT in LEO
+MIDHEAVEN in ARIES
+Symbols in HOUSEI
+Symbols in HOUSEII
+Symbols in HOUSEIII
+Symbols in HOUSEIV
+Symbols in HOUSEV
+Symbols in HOUSEVI
+Symbols in HOUSEVII
+Symbols in HOUSEVIII
+Symbols in HOUSEIX
+Symbols in HOUSEX
+Symbols in HOUSEXI
+Symbols in HOUSEXII
+SUN in house: 9.41326829791069 - offset: 5.954907800123911
+SUN in HOUSEVI
+SUN in CAPRICORN
+MOON in house: 6.40902379155159 - offset: 2.95066329376481
+MOON in HOUSEIII
+MOON in VIRGO
+MERCURY in house: 8.869254797697067 - offset: 5.410894299910288
+MERCURY in HOUSEVI
+MERCURY in SAGITTARIUS
+VENUS in house: 7.700911372900009 - offset: 4.2425508751132295
+VENUS in HOUSEV
+VENUS in SCORPIO
+MARS in house: 12.288302570581436 - offset: 8.829942072794656
+MARS in HOUSEIX
+MARS in PISCES
+JUPITER in house: 12.246600210666656 - offset: 8.788239712879877
+JUPITER in HOUSEIX
+JUPITER in PISCES
+SATURN in house: 8.642856508493423 - offset: 5.184496010706644
+SATURN in HOUSEVI
+SATURN in SAGITTARIUS
+URANUS in house: 9.00216057896614 - offset: 5.543800081179361
+URANUS in HOUSEVI
+URANUS in SAGITTARIUS
+NEPTUNE in house: 9.601570099592209 - offset: 6.143209601805429
+NEPTUNE in HOUSEVII
+NEPTUNE in CAPRICORN
+PLUTO in house: 7.913769960403442 - offset: 4.455409462616663
+PLUTO in HOUSEV
+PLUTO in SCORPIO
+NORTHNODE in house: 12.84310507774353 - offset: 9.38474457995675
+NORTHNODE in HOUSEX
+NORTHNODE in ARIES
+SOUTHNODE in HOUSEIV
+SOUTHNODE in LIBRA
+LILITH in house: 4.358978450298309 - offset: 0.9006179525115292
+LILITH in HOUSEI
+LILITH in CANCER
+CHIRON in house: 2.878826528787613 - offset: -0.5795339689991672
+CHIRON in HOUSEXII
+CHIRON in GEMINI
+CERES in house: 8.209057480096817 - offset: 4.750696982310037
+CERES in HOUSEV
+CERES in SAGITTARIUS
+PALLAS in house: 7.906520038843155 - offset: 4.448159541056375
+PALLAS in HOUSEV
+PALLAS in SCORPIO
+JUNO in house: 9.755551964044571 - offset: 6.297191466257791
+JUNO in HOUSEVII
+JUNO in CAPRICORN
+VESTA in house: 12.944712430238724 - offset: 9.486351932451944
+VESTA in HOUSEX
+VESTA in ARIES
+mCusp: 26.12056859196562 + offset: 129.87138352556903 wrapped: 129.87138352556906
+ASCENDANT in HOUSEI
+ASCENDANT in LEO
+MIDHEAVEN in HOUSEX
+MIDHEAVEN in ARIES
+SATURN in SQUARE
+JUPITER in SQUARE
+JUPITER in TRINE
+VENUS in TRINE
 CERES in SEMISEXTILE
 SUN in SEMISEXTILE
+JUNO in QUINCUNX
+ASCENDANT in QUINCUNX
+VENUS in QUINCUNX
+CHIRON in QUINCUNX
+CHIRON in SEXTILE
+NORTHNODE in SEXTILE
+LILITH in QUINCUNX
+MERCURY in QUINCUNX
+MERCURY in SQUARE
+MARS in SQUARE
+PLUTO in SQUARE
+ASCENDANT in SQUARE
+MARS in QUINCUNX
+SOUTHNODE in QUINCUNX
+NORTHNODE in OPPOSITION
+SOUTHNODE in OPPOSITION
+PALLAS in SQUARE
+ASCENDANT in SQUARE
+URANUS in SQUARE
+MOON in SQUARE
 SUN in HOUSEVI
 Expected FromCusp: 158.0625413288866 actual: 167.84860616779105
 Difference: 152.46758778996022
 Degree Offset: 103.75081493360341
 Symbols in HOUSEVI
-MERCURY degree: 260.3924628736588
 SATURN degree: 254.4516553741827
-URANUS degree: 263.11182919999254
+MERCURY degree: 260.3924628736588
 SUN degree: 271.59942110139446
+URANUS degree: 263.11182919999254
 MOON in HOUSEIII
 Expected FromCusp: 83.02287843869058 actual: 69.79026745531002
 Difference: 80.69653619018025
@@ -430,60 +478,60 @@ Expected FromCusp: 158.0625413288866 actual: 156.6416479400554
 Difference: 152.84115306421808
 Degree Offset: 103.75081493360341
 Symbols in HOUSEVI
-MERCURY degree: 260.3924628736588
 SATURN degree: 254.4516553741827
-URANUS degree: 263.11182919999254
+MERCURY degree: 260.3924628736588
 SUN degree: 271.59942110139446
+URANUS degree: 263.11182919999254
 VENUS in HOUSEV
 Expected FromCusp: 126.70266901455233 actual: 123.4527196598856
 Difference: 122.5875783592228
 Degree Offset: 103.75081493360341
 Symbols in HOUSEV
-PALLAS degree: 219.90949637433468
+CERES degree: 241.73803225241895
 VENUS degree: 227.203534593489
 PLUTO degree: 219.2481430515801
-CERES degree: 241.73803225241895
+PALLAS degree: 219.90949637433468
 MARS in HOUSEIX
 Expected FromCusp: 263.02287843869055 actual: 245.2428591027618
 Difference: 254.8481164685985
 Degree Offset: 103.75081493360341
 Symbols in HOUSEIX
-MARS degree: 348.99367403636523
 JUPITER degree: 346.2886178584036
+MARS degree: 348.99367403636523
 JUPITER in HOUSEIX
 Expected FromCusp: 263.02287843869055 actual: 242.53780292480022
 Difference: 254.9382850078639
 Degree Offset: 103.75081493360341
 Symbols in HOUSEIX
-MARS degree: 348.99367403636523
 JUPITER degree: 346.2886178584036
+MARS degree: 348.99367403636523
 SATURN in HOUSEVI
 Expected FromCusp: 158.0625413288866 actual: 150.7008404405793
 Difference: 153.0391799808673
 Degree Offset: 103.75081493360341
 Symbols in HOUSEVI
-MERCURY degree: 260.3924628736588
 SATURN degree: 254.4516553741827
-URANUS degree: 263.11182919999254
+MERCURY degree: 260.3924628736588
 SUN degree: 271.59942110139446
+URANUS degree: 263.11182919999254
 URANUS in HOUSEVI
 Expected FromCusp: 158.0625413288866 actual: 159.36101426638913
 Difference: 152.75050752000695
 Degree Offset: 103.75081493360341
 Symbols in HOUSEVI
-MERCURY degree: 260.3924628736588
 SATURN degree: 254.4516553741827
-URANUS degree: 263.11182919999254
+MERCURY degree: 260.3924628736588
 SUN degree: 271.59942110139446
+URANUS degree: 263.11182919999254
 NEPTUNE in HOUSEVI
 Expected FromCusp: 158.0625413288866 actual: 171.6298964547173
 Difference: 152.34154478039602
 Degree Offset: 103.75081493360341
 Symbols in HOUSEVI
-MERCURY degree: 260.3924628736588
 SATURN degree: 254.4516553741827
-URANUS degree: 263.11182919999254
+MERCURY degree: 260.3924628736588
 SUN degree: 271.59942110139446
+URANUS degree: 263.11182919999254
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

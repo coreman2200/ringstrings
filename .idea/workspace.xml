@@ -7,444 +7,127 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b2f262b-0f73-4fef-990f-12929521e3dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/resources/raw/seas_18.se1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/resources/raw/semo_18.se1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/resources/raw/sepl_18.se1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/profilemap/AbstractProfileSymbolMap.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/AstrologicalChartInputProcessorImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/astrology/Astrology.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/entities/Entity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/deprbizlogic/GlobalLL.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/entities/HigherEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/swisseph/ISwissEphemerisManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/depruielems/InputObject.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/numerology/Numerology.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/entities/Person.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/ProfileInputProcessor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/astrology/RSAstrology.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/depruielems/RSDialog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/rsgfx/RSGFXBase.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/rsgfx/RSGFXCamera.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/rsgfx/RSGFXDisplay.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/rsgfx/RSGFXEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/rsgfx/RSGFXIcon.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/rsgfx/RSGFXLight.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/rsgfx/RSGFXRender.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/rsgfx/RSGFXRing.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/rsgfx/RSGFXShaderManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/rsgfx/RSGFXShaderProgram.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/rsgfx/RSGFXText.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/maps/RSGoogleLoc.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/io/RSIO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/depruielems/RSInput.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/maps/RSMapActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/deprbizlogic/RSMath.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/numerology/RSNumerology.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/profile/RandomizedTestProfileImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/deprbizlogic/RingString.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/RingStringsActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/io/SaveData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/io/SaveDataAST.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/io/SaveDataNUM.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/io/SaveDataPSN.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/swisseph/SwissEphemerisManagerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/entities/Tags.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/profilemap/UserProfileSymbolMapImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/io/XMLPullGlobals.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_22_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/deprbizlogic/calcRunnable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/deprbizlogic/currentRunnable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/resources/raw/gouraud_frag.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/resources/raw/gouraud_vert.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mockable_android_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mockito_core_1_9_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/objenesis_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/io/orientateRunnable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/resources/raw/renderglow_frag.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/resources/raw/renderglow_vert.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/resources/raw/renderlight_frag.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/resources/raw/renderlight_vert.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/resources/raw/rendertext_frag.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/resources/raw/rendertext_vert.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/io/reviveRunnable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/robolectric_3_0_rc3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/robolectric_annotations_3_0_rc3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/robolectric_resources_3_0_rc3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/robolectric_utils_3_0_rc3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/robotium_solo_5_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/shadows_core_3_0_rc3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/shadows_support_v4_3_0_rc3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/resources/raw/simple_frag.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/resources/raw/simple_vert.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_22_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_22_2_0.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/_Users_new_git_RingStrings_ringstrings_app_build_intermediates_classes_debug.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/_Users_new_git_RingStrings_ringstrings_app_build_intermediates_dependency_cache_debug.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/assertj_core_1_7_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/ringstrings_tests_ringstrings_tests.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/build/generated/source/buildConfig/debug/com/coreman2200/ringstrings/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/incremental/aidl/debug/dependency.store" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/gen/com/coreman2200/ringstrings/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/gen/com/coreman2200/ringstrings/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/RingStringsActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/astrology/Astrology.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/astrology/RSAstrology.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/deprbizlogic/GlobalLL.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/deprbizlogic/RSMath.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/deprbizlogic/RingString.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/deprbizlogic/calcRunnable.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/deprbizlogic/currentRunnable.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/depruielems/InputObject.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/depruielems/RSDialog.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/depruielems/RSInput.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/entities/Entity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/entities/HigherEntity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/entities/Person.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/entities/Tags.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/file/io/RSIO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/file/io/SaveData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/file/io/SaveDataAST.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/file/io/SaveDataNUM.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/file/io/SaveDataPSN.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/file/io/XMLPullGlobals.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/file/io/orientateRunnable.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/file/io/reviveRunnable.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/google/maps/RSGoogleLoc.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/google/maps/RSMapActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/numerology/Numerology.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/numerology/RSNumerology.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/swisseph/TestSwissEphemerisManagerImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/swisseph/TestSwissephHandlerImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/symbol/TestSymbolStrata.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXBase.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXCamera.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXDisplay.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXEntity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXIcon.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXLight.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXRender.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXRing.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXShaderManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXShaderProgram.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-app/src/rsgfx/RSGFXText.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/numerology/numbersystem/AbstractNumberSystem.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/numerology/numbersystem/ChaldeanNumberSystem.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/numerology/numbersystem/INumberSystem.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/numerology/numbersystem/NumberSystemType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/numerology/numbersystem/PythagoreanNumberSystem.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/profile/IProfile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/AbstractChart.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/AbstractSymbol.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/Charts.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/IChartedSymbols.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/IGroupedSymbols.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/IRelatedSymbols.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/IRelationalSymbolMap.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/ISymbol.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/RelatedSymbolMap.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/SymbolStrata.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/AstralStrata.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/grouped/Aspects.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/grouped/AstralCharts.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/grouped/CelestialBodies.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/grouped/Houses.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/grouped/Zodiac.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/impl/AspectedSymbolsImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/impl/AstralSymbolImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/impl/CelestialBodySymbolImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/impl/FictionalBodySymbolImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/impl/GroupedAstralSymbolsImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/impl/HouseSymbolImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/impl/ZodiacSymbolImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/interfaces/IAstralSymbol.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/interfaces/ICelestialBodySymbol.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/interfaces/IChartedAstralSymbols.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/interfaces/IFictionalBodySymbol.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/interfaces/IGroupedAstralSymbols.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/interfaces/IHouseSymbol.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/astralsymbol/interfaces/IZodiacSymbol.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/chart/AstrologicalChartImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/chart/NumerologicalChartImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/inputprocessor/AbstractInputProcessor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/INumberSymbolInputProcessor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/NumberSymbolInputProcessorImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/NumerologicalChartProcessorImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/ChallengesProcessorImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/GroupedNumberSymbolsInputProcessorImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/IGroupedNumberSymbolsInputProcessor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/PeriodsProcessorImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/PersonalsProcessorImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/PinnaclesProcessorImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/QualitiesProcessorImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/NumberStrata.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/BaseNumberSymbols.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/Challenges.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/DerivedKarmicDebtSymbols.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/GroupedNumberSymbols.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/Periods.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/Personal.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/Pinnacles.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/Qualities.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/impl/BaseNumberSymbolImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/impl/DerivedNumberSymbolImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/impl/GroupedNumberSymbolsImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/impl/ListedNumberSymbolsImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/impl/NumberSymbolImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/impl/RelatedNumberSymbolsImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/interfaces/IBaseNumberSymbol.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/interfaces/IChartedNumberSymbols.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/interfaces/IDerivedNumberSymbol.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/interfaces/IGroupedNumberSymbols.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/interfaces/IListedNumberSymbols.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/interfaces/INumberSymbol.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/numbersymbol/interfaces/IRelatedNumberSymbols.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/symbolcomparator/AspectComparatorImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/symbolcomparator/AstralSymbolDegreeComparatorImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/main/java/com/coreman2200/ringstrings/symbol/symbolcomparator/NumberSymbolValueComparatorImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/astrology/RSAstrologyTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/numerology/RSNumerologyTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/numerology/numbersystem/NumberSystemTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/profile/RandomizedTestProfileImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/profile/TestProfileImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/swisseph/ISwissEphemerisManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/swisseph/SwissEphemerisManagerImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/AstrologicalChartInputProcessorImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/TestAstrologicalChartInputProcessorImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/test/resources/robolectric.properties" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/RingStrings.iml" afterPath="$PROJECT_DIR$/ringstrings.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Icon/RSIco_0000_Lilith.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Icon/RSIco_0000_Lilith.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Icon/RSIco_0003_Saturn.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Icon/RSIco_0003_Saturn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Icon/RSIco_0006_Moon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Icon/RSIco_0006_Moon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Icon/RSIco_0009_Mercury.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Icon/RSIco_0009_Mercury.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Icon/RSIco_0012_Sun.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Icon/RSIco_0012_Sun.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Icon/RSIco_0015_Uranus.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Icon/RSIco_0015_Uranus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Icon/RSIco_0018_Mars.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Icon/RSIco_0018_Mars.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Icon/RSIco_0021_Neptune.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Icon/RSIco_0021_Neptune.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Icon/RSIco_0024_Venus.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Icon/RSIco_0024_Venus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Icon/RSIco_0027_Jupiter.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Icon/RSIco_0027_Jupiter.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Icon/RSIco_0030_Pluto.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Icon/RSIco_0030_Pluto.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Icon/RSIco_0033_Asteroid.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Icon/RSIco_0033_Asteroid.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Specular/RSIco_0001_Lilith-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Specular/RSIco_0001_Lilith-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Specular/RSIco_0004_Saturn-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Specular/RSIco_0004_Saturn-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Specular/RSIco_0007_Moon-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Specular/RSIco_0007_Moon-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Specular/RSIco_0010_Mercury-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Specular/RSIco_0010_Mercury-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Specular/RSIco_0013_Sun-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Specular/RSIco_0013_Sun-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Specular/RSIco_0016_Uranus-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Specular/RSIco_0016_Uranus-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Specular/RSIco_0019_Mars-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Specular/RSIco_0019_Mars-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Specular/RSIco_0022_Neptune-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Specular/RSIco_0022_Neptune-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Specular/RSIco_0025_Venus-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Specular/RSIco_0025_Venus-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Specular/RSIco_0028_Jupiter-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Specular/RSIco_0028_Jupiter-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Specular/RSIco_0031_Pluto-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Specular/RSIco_0031_Pluto-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Specular/RSIco_0034_Asteroid-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Specular/RSIco_0034_Asteroid-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0002_LilithIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0002_LilithIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0005_SaturnIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0005_SaturnIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0008_MoonIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0008_MoonIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0011_MercuryIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0011_MercuryIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0014_SunIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0014_SunIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0017_UranusIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0017_UranusIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0020_MarsIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0020_MarsIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0023_NeptuneIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0023_NeptuneIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0026_VenusIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0026_VenusIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0029_JupiterIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0029_JupiterIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0032_PlutoIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0032_PlutoIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0035_PallasIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0035_PallasIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0036_CeresIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0036_CeresIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0037_VestaIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0037_VestaIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0038_JunoIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0038_JunoIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0039_ChironIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0039_ChironIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0040_SagittariusSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0040_SagittariusSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0041_LibraSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0041_LibraSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0042_ScorpioSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0042_ScorpioSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0043_CapricornSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0043_CapricornSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0044_AquariusSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0044_AquariusSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0045_GeminiSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0045_GeminiSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0046_TaurusSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0046_TaurusSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0047_NorthNodeSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0047_NorthNodeSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0048_SouthNodeSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0048_SouthNodeSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0049_CancerSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0049_CancerSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0050_AriesSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0050_AriesSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0051_VirgoSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0051_VirgoSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0052_AscendantSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0052_AscendantSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0053_LeoSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0053_LeoSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0054_Sextile.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0054_Sextile.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0055_Square.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0055_Square.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0056_Trine.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0056_Trine.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0057_Opposite.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0057_Opposite.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0058_Quincunx.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0058_Quincunx.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0059_Semi-Sextile.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0059_Semi-Sextile.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/Symbol/RSIco_0060_Conjunct.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/Symbol/RSIco_0060_Conjunct.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-hdpi/rezlights.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/rezlights.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Icon/RSIco_0000_Lilith.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Icon/RSIco_0000_Lilith.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Icon/RSIco_0003_Saturn.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Icon/RSIco_0003_Saturn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Icon/RSIco_0006_Moon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Icon/RSIco_0006_Moon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Icon/RSIco_0009_Mercury.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Icon/RSIco_0009_Mercury.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Icon/RSIco_0012_Sun.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Icon/RSIco_0012_Sun.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Icon/RSIco_0015_Uranus.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Icon/RSIco_0015_Uranus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Icon/RSIco_0018_Mars.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Icon/RSIco_0018_Mars.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Icon/RSIco_0021_Neptune.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Icon/RSIco_0021_Neptune.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Icon/RSIco_0024_Venus.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Icon/RSIco_0024_Venus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Icon/RSIco_0027_Jupiter.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Icon/RSIco_0027_Jupiter.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Icon/RSIco_0030_Pluto.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Icon/RSIco_0030_Pluto.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Icon/RSIco_0033_Asteroid.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Icon/RSIco_0033_Asteroid.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Specular/RSIco_0001_Lilith-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Specular/RSIco_0001_Lilith-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Specular/RSIco_0004_Saturn-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Specular/RSIco_0004_Saturn-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Specular/RSIco_0007_Moon-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Specular/RSIco_0007_Moon-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Specular/RSIco_0010_Mercury-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Specular/RSIco_0010_Mercury-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Specular/RSIco_0013_Sun-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Specular/RSIco_0013_Sun-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Specular/RSIco_0016_Uranus-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Specular/RSIco_0016_Uranus-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Specular/RSIco_0019_Mars-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Specular/RSIco_0019_Mars-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Specular/RSIco_0022_Neptune-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Specular/RSIco_0022_Neptune-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Specular/RSIco_0025_Venus-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Specular/RSIco_0025_Venus-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Specular/RSIco_0028_Jupiter-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Specular/RSIco_0028_Jupiter-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Specular/RSIco_0031_Pluto-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Specular/RSIco_0031_Pluto-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Specular/RSIco_0034_Asteroid-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Specular/RSIco_0034_Asteroid-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0002_LilithIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0002_LilithIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0005_SaturnIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0005_SaturnIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0008_MoonIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0008_MoonIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0011_MercuryIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0011_MercuryIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0014_SunIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0014_SunIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0017_UranusIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0017_UranusIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0020_MarsIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0020_MarsIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0023_NeptuneIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0023_NeptuneIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0026_VenusIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0026_VenusIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0029_JupiterIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0029_JupiterIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0032_PlutoIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0032_PlutoIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0035_PallasIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0035_PallasIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0036_CeresIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0036_CeresIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0037_VestaIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0037_VestaIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0038_JunoIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0038_JunoIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0039_ChironIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0039_ChironIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0040_SagittariusSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0040_SagittariusSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0041_LibraSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0041_LibraSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0042_ScorpioSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0042_ScorpioSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0043_CapricornSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0043_CapricornSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0044_AquariusSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0044_AquariusSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0045_GeminiSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0045_GeminiSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0046_TaurusSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0046_TaurusSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0047_NorthNodeSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0047_NorthNodeSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0048_SouthNodeSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0048_SouthNodeSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0049_CancerSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0049_CancerSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0050_AriesSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0050_AriesSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0051_VirgoSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0051_VirgoSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0052_AscendantSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0052_AscendantSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0053_LeoSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0053_LeoSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0054_Sextile.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0054_Sextile.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0055_Square.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0055_Square.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0056_Trine.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0056_Trine.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0057_Opposite.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0057_Opposite.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0058_Quincunx.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0058_Quincunx.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0059_Semi-Sextile.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0059_Semi-Sextile.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/Symbol/RSIco_0060_Conjunct.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/Symbol/RSIco_0060_Conjunct.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/ic_launcher.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-ldpi/rezlights.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-ldpi/rezlights.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Icon/RSIco_0000_Lilith.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Icon/RSIco_0000_Lilith.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Icon/RSIco_0003_Saturn.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Icon/RSIco_0003_Saturn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Icon/RSIco_0006_Moon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Icon/RSIco_0006_Moon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Icon/RSIco_0009_Mercury.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Icon/RSIco_0009_Mercury.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Icon/RSIco_0012_Sun.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Icon/RSIco_0012_Sun.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Icon/RSIco_0015_Uranus.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Icon/RSIco_0015_Uranus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Icon/RSIco_0018_Mars.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Icon/RSIco_0018_Mars.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Icon/RSIco_0021_Neptune.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Icon/RSIco_0021_Neptune.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Icon/RSIco_0024_Venus.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Icon/RSIco_0024_Venus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Icon/RSIco_0027_Jupiter.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Icon/RSIco_0027_Jupiter.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Icon/RSIco_0030_Pluto.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Icon/RSIco_0030_Pluto.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Icon/RSIco_0033_Asteroid.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Icon/RSIco_0033_Asteroid.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Specular/RSIco_0001_Lilith-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Specular/RSIco_0001_Lilith-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Specular/RSIco_0004_Saturn-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Specular/RSIco_0004_Saturn-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Specular/RSIco_0007_Moon-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Specular/RSIco_0007_Moon-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Specular/RSIco_0010_Mercury-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Specular/RSIco_0010_Mercury-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Specular/RSIco_0013_Sun-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Specular/RSIco_0013_Sun-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Specular/RSIco_0016_Uranus-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Specular/RSIco_0016_Uranus-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Specular/RSIco_0019_Mars-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Specular/RSIco_0019_Mars-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Specular/RSIco_0022_Neptune-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Specular/RSIco_0022_Neptune-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Specular/RSIco_0025_Venus-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Specular/RSIco_0025_Venus-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Specular/RSIco_0028_Jupiter-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Specular/RSIco_0028_Jupiter-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Specular/RSIco_0031_Pluto-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Specular/RSIco_0031_Pluto-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Specular/RSIco_0034_Asteroid-Specular.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Specular/RSIco_0034_Asteroid-Specular.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0002_LilithIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0002_LilithIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0005_SaturnIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0005_SaturnIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0008_MoonIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0008_MoonIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0011_MercuryIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0011_MercuryIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0014_SunIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0014_SunIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0017_UranusIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0017_UranusIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0020_MarsIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0020_MarsIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0023_NeptuneIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0023_NeptuneIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0026_VenusIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0026_VenusIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0029_JupiterIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0029_JupiterIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0032_PlutoIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0032_PlutoIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0035_PallasIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0035_PallasIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0036_CeresIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0036_CeresIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0037_VestaIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0037_VestaIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0038_JunoIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0038_JunoIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0039_ChironIcon.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0039_ChironIcon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0040_SagittariusSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0040_SagittariusSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0041_LibraSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0041_LibraSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0042_ScorpioSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0042_ScorpioSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0043_CapricornSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0043_CapricornSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0044_AquariusSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0044_AquariusSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0045_GeminiSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0045_GeminiSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0046_TaurusSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0046_TaurusSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0047_NorthNodeSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0047_NorthNodeSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0048_SouthNodeSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0048_SouthNodeSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0049_CancerSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0049_CancerSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0050_AriesSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0050_AriesSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0051_VirgoSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0051_VirgoSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0052_AscendantSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0052_AscendantSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0053_LeoSymbol.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0053_LeoSymbol.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0054_Sextile.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0054_Sextile.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0055_Square.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0055_Square.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0056_Trine.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0056_Trine.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0057_Opposite.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0057_Opposite.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0058_Quincunx.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0058_Quincunx.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0059_Semi-Sextile.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0059_Semi-Sextile.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/Symbol/RSIco_0060_Conjunct.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/Symbol/RSIco_0060_Conjunct.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-mdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/drawable-mdpi/rezlights.png" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/drawable-hdpi/rezlights.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/layout/main.xml" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/layout/main.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/layout/mapsmain.xml" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/layout/mapsmain.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/raw/gouraud_frag.txt" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/raw/gouraud_frag.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/raw/gouraud_vert.txt" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/raw/gouraud_vert.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/raw/renderglow_frag.txt" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/raw/renderglow_frag.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/raw/renderglow_vert.txt" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/raw/renderglow_vert.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/raw/renderlight_frag.txt" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/raw/renderlight_frag.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/raw/renderlight_vert.txt" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/raw/renderlight_vert.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/raw/rendertext_frag.txt" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/raw/rendertext_frag.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/raw/rendertext_vert.txt" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/raw/rendertext_vert.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/raw/seas_18.se1" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/raw/seas_18.se1" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/raw/semo_18.se1" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/raw/semo_18.se1" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/raw/sepl_18.se1" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/raw/sepl_18.se1" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/raw/simple_frag.txt" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/raw/simple_frag.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/raw/simple_vert.txt" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/raw/simple_vert.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/values/arrays.xml" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/values/arrays.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/values/public.xml" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/values/public.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/values/strings.xml" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/values/strings.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/values/styles.xml" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/values/styles.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/xml/gent.xml" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/xml/gent.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/res/xml/gtags.xml" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/res/xml/gtags.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-app/src/com/coreman2200/ringstrings/file/io/LoaderAsync.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/io/LoaderAsync.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/RSIO/FileHandlerImpl.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/RSIO/FileHandlerImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/RSIO/IFileHandler.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/RSIO/IFileHandler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/RingStringsActivityTest.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/RingStringsActivityTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/profile/IProfileTestLoc.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/profile/IProfileTestLoc.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/swisseph/ISwissephFileHandler.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/swisseph/ISwissephFileHandler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ringstrings-tests/src/test/java/com/coreman2200/ringstrings/swisseph/SwissephFileHandlerImpl.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/swisseph/SwissephFileHandlerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/generated/source/r/debug/com/coreman2200/ringstrings/R.java" afterPath="$PROJECT_DIR$/ringstrings-app/build/generated/source/r/debug/com/coreman2200/ringstrings/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build.gradle" afterPath="$PROJECT_DIR$/ringstrings-app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/res/debug/xml/gent.xml" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/res/debug/xml/gent.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/res/debug/xml/gtags.xml" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/res/debug/xml/gtags.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/profilemap/AbstractProfileSymbolMap.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/profilemap/AbstractProfileSymbolMap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/AbstractRelationalSymbolMap.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/AbstractRelationalSymbolMap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/AbstractSymbol.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/AbstractSymbol.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/symbolcomparator/AspectComparatorImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/symbolcomparator/AspectComparatorImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/impl/AspectedSymbolsImpl$AspectType.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/impl/AspectedSymbolsImpl$AspectType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/grouped/Aspects.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/grouped/Aspects.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/grouped/AstralCharts.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/grouped/AstralCharts.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/AstralStrata.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/AstralStrata.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/symbolcomparator/AstralSymbolDegreeComparatorImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/symbolcomparator/AstralSymbolDegreeComparatorImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/impl/AstralSymbolImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/impl/AstralSymbolImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/chart/AstrologicalChartImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/chart/AstrologicalChartImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/AstrologicalChartInputProcessorImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/AstrologicalChartInputProcessorImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/astrology/Astrology.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/astrology/Astrology.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/BaseNumberSymbols.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/BaseNumberSymbols.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/grouped/CelestialBodies.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/grouped/CelestialBodies.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/impl/CelestialBodySymbolImpl$Motion.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/impl/CelestialBodySymbolImpl$Motion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/Challenges.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/Challenges.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/ChallengesProcessorImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/ChallengesProcessorImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/Charts.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/Charts.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/DerivedKarmicDebtSymbols.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/DerivedKarmicDebtSymbols.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/impl/DerivedNumberSymbolImpl$Derived.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/impl/DerivedNumberSymbolImpl$Derived.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/relationalmaps/Entities.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/relationalmaps/Entities.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/entities/Entity.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/entities/Entity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/RSIO/FileHandlerImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/RSIO/FileHandlerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/deprbizlogic/GlobalLL.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/deprbizlogic/GlobalLL.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/GroupedNumberSymbols.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/GroupedNumberSymbols.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/impl/GroupedNumberSymbolsImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/impl/GroupedNumberSymbolsImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/GroupedNumberSymbolsInputProcessorImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/GroupedNumberSymbolsInputProcessorImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/entities/HigherEntity.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/entities/HigherEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/impl/HouseSymbolImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/impl/HouseSymbolImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/grouped/Houses.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/grouped/Houses.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/depruielems/InputObject.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/depruielems/InputObject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/impl/ListedNumberSymbolsImpl$Listed.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/impl/ListedNumberSymbolsImpl$Listed.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/impl/ListedNumberSymbolsImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/impl/ListedNumberSymbolsImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/NumberStrata.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/NumberStrata.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/NumberSymbolInputProcessorImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/NumberSymbolInputProcessorImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/symbolcomparator/NumberSymbolValueComparatorImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/symbolcomparator/NumberSymbolValueComparatorImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/NumberSystemTest.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/NumberSystemTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/numbersystem/NumberSystemType.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/numbersystem/NumberSystemType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/chart/NumerologicalChartImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/chart/NumerologicalChartImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/NumerologicalChartProcessorImpl$1.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/NumerologicalChartProcessorImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/NumerologicalChartProcessorImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/NumerologicalChartProcessorImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/numerology/Numerology.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/numerology/Numerology.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/Periods.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/Periods.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/PeriodsProcessorImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/PeriodsProcessorImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/entities/Person.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/entities/Person.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/Personal.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/Personal.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/PersonalsProcessorImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/PersonalsProcessorImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/Pinnacles.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/Pinnacles.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/PinnaclesProcessorImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/PinnaclesProcessorImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/ProfileInputProcessor.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/ProfileInputProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/Qualities.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/Qualities.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/QualitiesProcessorImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/QualitiesProcessorImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/astrology/RSAstrology.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/astrology/RSAstrology.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/depruielems/RSDialog.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/depruielems/RSDialog.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/rsgfx/RSGFXBase.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/rsgfx/RSGFXBase.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/rsgfx/RSGFXCamera.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/rsgfx/RSGFXCamera.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/rsgfx/RSGFXEntity.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/rsgfx/RSGFXEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/rsgfx/RSGFXLight.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/rsgfx/RSGFXLight.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/rsgfx/RSGFXRender.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/rsgfx/RSGFXRender.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/rsgfx/RSGFXRing.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/rsgfx/RSGFXRing.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/rsgfx/RSGFXShaderManager.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/rsgfx/RSGFXShaderManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/rsgfx/RSGFXShaderProgram.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/rsgfx/RSGFXShaderProgram.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/rsgfx/RSGFXText.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/rsgfx/RSGFXText.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/maps/RSGoogleLoc.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/maps/RSGoogleLoc.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/io/RSIO.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/io/RSIO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/deprbizlogic/RSMath.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/deprbizlogic/RSMath.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/numerology/RSNumerology.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/numerology/RSNumerology.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/profile/RandomizedTestProfileImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/profile/RandomizedTestProfileImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/RelatedSymbolMap$1.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/RelatedSymbolMap$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/RelatedSymbolMap$SortOrder.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/RelatedSymbolMap$SortOrder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/RelatedSymbolMap.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/RelatedSymbolMap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/deprbizlogic/RingString.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/deprbizlogic/RingString.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/RingStringsActivity$LoaderAsync.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/RingStringsActivity$LoaderAsync.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/RingStringsActivity.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/RingStringsActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/io/SaveDataAST.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/io/SaveDataAST.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/io/SaveDataNUM.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/io/SaveDataNUM.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/io/SaveDataPSN.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/io/SaveDataPSN.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/swisseph/SwissEphemerisManagerImpl$1.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/swisseph/SwissEphemerisManagerImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/swisseph/SwissEphemerisManagerImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/swisseph/SwissEphemerisManagerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/swisseph/SwissephFileHandlerImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/swisseph/SwissephFileHandlerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/SymbolStrata.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/SymbolStrata.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/entities/Tags.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/entities/Tags.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/TestAstrologicalChartInputProcessorImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/TestAstrologicalChartInputProcessorImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/TestProfileImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/TestProfileImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/TestProfileInputProcessor.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/TestProfileInputProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/TestSwissEphemerisManagerImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/TestSwissEphemerisManagerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/TestSwissephHandlerImpl.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/TestSwissephHandlerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/TestSymbolStrata.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/TestSymbolStrata.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/io/XMLPullGlobals.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/debug/com/coreman2200/ringstrings/oldz/io/XMLPullGlobals.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/grouped/Zodiac.class" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/classes/test/debug/com/coreman2200/ringstrings/symbol/astralsymbol/grouped/Zodiac.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/test-results/binary/testDebug/output.bin.idx" afterPath="$PROJECT_DIR$/ringstrings-app/build/test-results/binary/testDebug/output.bin.idx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/test-results/binary/testDebug/output.bin" afterPath="$PROJECT_DIR$/ringstrings-app/build/test-results/binary/testDebug/output.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/test-results/binary/testDebug/results.bin" afterPath="$PROJECT_DIR$/ringstrings-app/build/test-results/binary/testDebug/results.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/NumerologicalChartProcessorImpl.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/NumerologicalChartProcessorImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/ProfileInputProcessor.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/ProfileInputProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/swisseph/SwissEphemerisManagerImpl.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/swisseph/SwissEphemerisManagerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.NumberSystemTest.xml" afterPath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.NumberSystemTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl.xml" afterPath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestProfileInputProcessor.xml" afterPath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestProfileInputProcessor.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestSwissEphemerisManagerImpl.xml" afterPath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestSwissEphemerisManagerImpl.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestSwissephHandlerImpl.xml" afterPath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestSwissephHandlerImpl.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestSymbolStrata.xml" afterPath="$PROJECT_DIR$/ringstrings-app/build/test-results/debug/TEST-com.coreman2200.ringstrings.TestSymbolStrata.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestProfileImpl.java" afterPath="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestProfileImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.NumberSystemTest.html" afterPath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.NumberSystemTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl.html" afterPath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestProfileInputProcessor.html" afterPath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestProfileInputProcessor.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestSwissEphemerisManagerImpl.html" afterPath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestSwissEphemerisManagerImpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestSwissephHandlerImpl.html" afterPath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestSwissephHandlerImpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestSymbolStrata.html" afterPath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/classes/com.coreman2200.ringstrings.TestSymbolStrata.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/packages/com.coreman2200.ringstrings.html" afterPath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/packages/com.coreman2200.ringstrings.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/index.html" afterPath="$PROJECT_DIR$/ringstrings-app/build/reports/tests/debug/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/res/debug/layout/main.xml" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/res/debug/layout/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/build/intermediates/res/debug/layout/mapsmain.xml" afterPath="$PROJECT_DIR$/ringstrings-app/build/intermediates/res/debug/layout/mapsmain.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proguard.cfg" afterPath="$PROJECT_DIR$/proguard.cfg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ringstrings-app/ringstrings-app.iml" afterPath="$PROJECT_DIR$/ringstrings-app/ringstrings-app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ringstrings.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -512,75 +195,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RingStringsActivityTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/RingStringsActivityTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RingStringsActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/RingStringsActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestAstrologicalChartInputProcessorImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestAstrologicalChartInputProcessorImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestAstrologicalChartInputProcessorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46348315">
-              <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ringstrings.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ringstrings.iml">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="project.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project.properties">
+      <file leaf-file-name="AstrologicalChartInputProcessorImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/AstrologicalChartInputProcessorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+              <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="local.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local.properties">
+      <file leaf-file-name="TestProfileImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestProfileImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="62" column="107" selection-start-line="62" selection-start-column="107" selection-end-line="62" selection-end-column="107" />
               <folding />
             </state>
           </provider>
@@ -590,10 +229,77 @@
         <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestSymbolStrata.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestSwissephHandlerImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestSwissephHandlerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestSwissEphemerisManagerImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestSwissEphemerisManagerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="54" column="79" selection-start-line="54" selection-start-column="79" selection-end-line="54" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SwissEphemerisManagerImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/swisseph/SwissEphemerisManagerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.2162921">
+              <caret line="98" column="4" selection-start-line="98" selection-start-column="4" selection-end-line="98" selection-end-column="4" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#2693#2694#0" expanded="true" />
+                <element signature="e#2739#2740#0" expanded="true" />
+                <element signature="method#initSwisseph#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+                <element signature="method#astrSetZodiac#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+                <element signature="method#astrSetHouses#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+                <element signature="method#astrPlaceBodies#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+                <element signature="method#calcTopographicHousePositions#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+                <element signature="method#calcPlacementForBody#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+                <element signature="method#addBodyToHouse#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+                <element signature="method#getHouseForPosition#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+                <element signature="method#getHouseIndexForPosition#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+                <element signature="method#addBodyToZodiac#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+                <element signature="method#getZodiacSignForPosition#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+                <element signature="method#createFictionalBody#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+                <element signature="method#produceAscendantSymbol#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+                <element signature="method#produceMidheavenSymbol#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+                <element signature="method#produceSouthNodeSymbol#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+                <element signature="method#setDate#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AstrologicalChartImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/chart/AstrologicalChartImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="86" column="29" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HouseSymbolImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/astralsymbol/impl/HouseSymbolImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -2237,6 +1943,11 @@
         <option value="$PROJECT_DIR$/ringstrings-app/ringstrings-app.iml" />
         <option value="$PROJECT_DIR$/ringstrings-app/build.gradle" />
         <option value="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestAstrologicalChartInputProcessorImpl.java" />
+        <option value="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/ProfileInputProcessor.java" />
+        <option value="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestProfileImpl.java" />
+        <option value="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/NumerologicalChartProcessorImpl.java" />
+        <option value="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/astralsymbol/impl/HouseSymbolImpl.java" />
+        <option value="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/swisseph/SwissEphemerisManagerImpl.java" />
       </list>
     </option>
   </component>
@@ -2271,41 +1982,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings-app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings-app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2408,6 +2085,154 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="symbol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="symbol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inputprocessor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="symbol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inputprocessor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrology" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swisseph" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -2478,7 +2303,41 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings-app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings-app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scratches" />
     </panes>
   </component>
@@ -2499,7 +2358,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings" />
     <property name="FullScreen" value="false" />
-    <property name="android.project.structure.last.selected" value="ringstrings-app" />
+    <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/ringstrings-app/build.gradle" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -2525,7 +2384,7 @@
       <recent name="$PROJECT_DIR$/ringstrings-app/build/generated/source/buildConfig/androidTest/debug/com/coreman2200/ringstrings" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RoboTests">
+  <component name="RunManager" selected="JUnit.TestAstrologicalChartInputProcessorImpl">
     <configuration default="false" name="NumberSystemTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -2552,10 +2411,38 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="false" name="TestAstrologicalChartInputProcessorImpl" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.coreman2200.ringstrings.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ringstrings-app" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="com.coreman2200.ringstrings" />
+      <option name="MAIN_CLASS_NAME" value="com.coreman2200.ringstrings.TestAstrologicalChartInputProcessorImpl" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidNativeRunConfigurationType" factoryName="Android Native">
       <module name="" />
-      <option name="DEBUGGER_TYPE" value="LLDB" />
+      <option name="WORKING_DIR" value="" />
+      <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
       <option name="ACTIVITY_CLASS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -2588,6 +2475,7 @@
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="ringstrings-app" />
       <option name="ACTIVITY_CLASS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -2760,6 +2648,7 @@
     <configuration default="false" name="ringstrings-app" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="ringstrings-app" />
       <option name="ACTIVITY_CLASS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -2830,15 +2719,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Android Application.ringstrings-app" />
       <item index="1" class="java.lang.String" itemvalue="Gradle.ready robotests" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.RoboTests" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.NumberSystemTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TestAstrologicalChartInputProcessorImpl" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.NumberSystemTest" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestAstrologicalChartInputProcessorImpl" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.NumberSystemTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
@@ -2878,16 +2769,15 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3524452" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25686592" sideWeight="0.5520833" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25686592" sideWeight="0.5520833" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2899,6 +2789,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -2928,77 +2820,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robolectric/robolectric/3.0-SNAPSHOT/12b1d14eeef51bb2203d6649e5667330a43593b7/robolectric-3.0-SNAPSHOT-sources.jar!/org/robolectric/RobolectricTestRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/main/java/com/coreman2200/ringstrings/oldz/astrology/RSAstrology.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/swisseph/ISwissEphemerisManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/numbersymbol/NumberStrata.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/numbersystem/AbstractNumberSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/RelatedSymbolMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/IGroupedNumberSymbolsInputProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/numbersymbol/interfaces/IGroupedNumberSymbols.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/ISymbol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/astralsymbol/interfaces/IHouseSymbol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/numbersymbol/interfaces/INumberSymbol.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3069,40 +2890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestSwissephHandlerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestSwissEphemerisManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestProfileInputProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestProfileImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/profile/RandomizedTestProfileImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3110,24 +2897,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/AstrologicalChartInputProcessorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/profile/IProfile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7277628">
           <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/swisseph/SwissEphemerisManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7681941">
-          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -3149,7 +2922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3157,7 +2929,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3173,7 +2944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3181,7 +2951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3189,7 +2958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3197,7 +2965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3205,27 +2972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/NumberSystemTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestSymbolStrata.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3233,7 +2979,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3241,7 +2986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3249,7 +2993,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3257,7 +3000,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3265,7 +3007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.74336284">
           <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3273,9 +3014,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3291,7 +3030,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3303,12 +3041,181 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/IGroupedNumberSymbolsInputProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="63" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/GroupedNumberSymbolsInputProcessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/ProfileInputProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="84" selection-start-line="37" selection-start-column="84" selection-end-line="37" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestProfileInputProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/NumberSystemTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestProfileImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="107" selection-start-line="62" selection-start-column="107" selection-end-line="62" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestSwissephHandlerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestSwissEphemerisManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="79" selection-start-line="54" selection-start-column="79" selection-end-line="54" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/astralsymbol/interfaces/IChartedAstralSymbols.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7050562">
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestSymbolStrata.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/grouped/QualitiesProcessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.783708">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/numerology/NumerologicalChartProcessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6853933">
+          <caret line="39" column="47" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/astralsymbol/grouped/CelestialBodies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/TestAstrologicalChartInputProcessorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46348315">
-          <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/numbersymbol/grouped/GroupedNumberSymbols.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3258427">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/inputprocessor/astrology/AstrologicalChartInputProcessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/astralsymbol/grouped/Zodiac.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33146068">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/astralsymbol/impl/HouseSymbolImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/symbol/chart/AstrologicalChartImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="29" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ringstrings-app/src/test/java/com/coreman2200/ringstrings/swisseph/SwissEphemerisManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2162921">
+          <caret line="98" column="4" selection-start-line="98" selection-start-column="4" selection-end-line="98" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2693#2694#0" expanded="true" />
+            <element signature="e#2739#2740#0" expanded="true" />
+            <element signature="method#initSwisseph#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+            <element signature="method#astrSetZodiac#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+            <element signature="method#astrSetHouses#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+            <element signature="method#astrPlaceBodies#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+            <element signature="method#calcTopographicHousePositions#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+            <element signature="method#calcPlacementForBody#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+            <element signature="method#addBodyToHouse#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+            <element signature="method#getHouseForPosition#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+            <element signature="method#getHouseIndexForPosition#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+            <element signature="method#addBodyToZodiac#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+            <element signature="method#getZodiacSignForPosition#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+            <element signature="method#createFictionalBody#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+            <element signature="method#produceAscendantSymbol#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+            <element signature="method#produceMidheavenSymbol#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+            <element signature="method#produceSouthNodeSymbol#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
+            <element signature="method#setDate#0;class#SwissEphemerisManagerImpl#0" expanded="false" />
           </folding>
         </state>
       </provider>
