@@ -1,5 +1,8 @@
 package com.coreman2200.ringstrings.symbol;
 
+import com.coreman2200.ringstrings.symbol.symbolcomparator.SymbolComparatorImpl;
+import com.coreman2200.ringstrings.symbol.symbolcomparator.SymbolStrataComparatorImpl;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -35,20 +38,21 @@ public class RelatedSymbolMap<T> {
 
     protected HashMap<Enum<? extends Enum<?>>, T> mBackingUnsortedMap;
     protected SortedSet<Map.Entry<Enum<? extends Enum<?>>, T>> mSortedInstanceSet;
-    private Comparator<Map.Entry<Enum<? extends Enum<?>>, T>> mCurrentComparator;
+    private SymbolComparatorImpl mCurrentComparator;
 
     public RelatedSymbolMap() {
+        mCurrentComparator = new SymbolStrataComparatorImpl();
         mBackingUnsortedMap = new HashMap<>();
         mSortedInstanceSet = new TreeSet<>();
     }
 
-    public RelatedSymbolMap(Comparator<Map.Entry<Enum<? extends Enum<?>>, T>> comparator) {
+    public RelatedSymbolMap(SymbolComparatorImpl comparator) {
         mCurrentComparator = comparator;
         mBackingUnsortedMap = new HashMap<>();
         mSortedInstanceSet = new TreeSet<>(comparator);
     }
 
-    private void setCurrentComparator(Comparator<Map.Entry<Enum<? extends Enum<?>>, T>> comparator) {
+    public void setCurrentComparator(SymbolComparatorImpl comparator) {
         mCurrentComparator = comparator;
         resortMap();
     }
@@ -90,20 +94,11 @@ public class RelatedSymbolMap<T> {
         }
     }
 
-    public Collection<T> getSymbolsSortedBy(Comparator<Map.Entry<Enum<? extends Enum<?>>, T>> comparator, SortOrder order) {
+    public Collection<T> getSymbolsSortedBy(SymbolComparatorImpl comparator, SortOrder order) {
         setCurrentComparator(comparator);
         resortMap();
 
-        switch (order) {
-            case ASCENDING:
-                return produceValueListFromSortedSet();
-            case DESCENDING:
-                List sortedset = produceValueListFromSortedSet();
-                Collections.reverse(sortedset);
-                return (sortedset);
-            default:
-                throw new RuntimeException("Sort order not set.");
-        }
+        return getSortedSymbols(order);
     }
 
     private List<T> produceValueListFromSortedSet() {
