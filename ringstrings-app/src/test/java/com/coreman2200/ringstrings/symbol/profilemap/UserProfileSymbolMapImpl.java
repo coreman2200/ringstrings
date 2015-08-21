@@ -17,7 +17,7 @@ import com.coreman2200.ringstrings.symbol.relationalmaps.Entities;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class UserProfileSymbolMapImpl extends AbstractProfileSymbolMap {
+public class UserProfileSymbolMapImpl extends ProfileSymbolMapImpl {
 
     public UserProfileSymbolMapImpl(IProfileTestLoc profile) {
         super(Entities.USER, profile);

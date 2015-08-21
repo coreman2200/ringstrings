@@ -1,11 +1,14 @@
 package com.coreman2200.ringstrings.symbol.chart;
 
 import com.coreman2200.ringstrings.symbol.Charts;
+import com.coreman2200.ringstrings.symbol.ISymbol;
+import com.coreman2200.ringstrings.symbol.RelatedSymbolMap;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.GroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.NumberStrata;
 import com.coreman2200.ringstrings.symbol.numbersymbol.impl.GroupedNumberSymbolsImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IChartedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
+import com.coreman2200.ringstrings.symbol.symbolcomparator.SymbolStrataComparatorImpl;
 
 import java.util.Collection;
 
@@ -31,9 +34,12 @@ public class NumerologicalChartImpl extends GroupedNumberSymbolsImpl implements 
     }
 
     public void testGenerateLoggingsForFullChart() {
-        Collection<INumberSymbol> chart = mGroupedNumberSymbolsMap.values();
+        RelatedSymbolMap<INumberSymbol> relatedsymbols = new RelatedSymbolMap<>(new SymbolStrataComparatorImpl());
+        relatedsymbols.putAll(mGroupedNumberSymbolsMap);
 
-        System.out.println(name() + " Astrological Chart");
+        Collection<INumberSymbol> chart = relatedsymbols.getSortedSymbols(RelatedSymbolMap.SortOrder.ASCENDING);
+
+        System.out.println(name() + " Numerological Chart");
         for (INumberSymbol symbol : chart) {
             System.out.print(symbol.name());
             System.out.print(" value: " + symbol.getNumberSymbolValue());
