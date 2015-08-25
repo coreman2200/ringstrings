@@ -1,6 +1,6 @@
 package com.coreman2200.ringstrings.symbol.astralsymbol.interfaces;
 
-import com.coreman2200.ringstrings.symbol.ISymbol;
+import com.coreman2200.ringstrings.symbol.symbolinterface.ISymbol;
 import com.coreman2200.ringstrings.symbol.astralsymbol.AstralStrata;
 
 /**

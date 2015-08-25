@@ -1,5 +1,8 @@
 package com.coreman2200.ringstrings.symbol.astralsymbol.interfaces;
 
+import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.Houses;
+import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.Zodiac;
+
 /**
  * ICelestialBodySymbol
  * Specifies methods for all celestial body symbols.
@@ -17,8 +20,10 @@ package com.coreman2200.ringstrings.symbol.astralsymbol.interfaces;
 public interface ICelestialBodySymbol extends IAstralSymbol {
     boolean checkInRetrogradeMotion();
     //CelestialBodies getCelestialBodySymbolID();
-    //Houses getHouse();
-    //Zodiac getSign();
+    IHouseSymbol getHouse();
+    void setHouse(IHouseSymbol house);
+    IZodiacSymbol getSign();
+    void setSign(IZodiacSymbol sign);
     //Aspects getAspectWithBody(CelestialBodies body);
     //Aspects[] getAllAspects();
 }

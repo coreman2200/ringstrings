@@ -18,5 +18,4 @@ import java.util.Collection;
 
 public interface IHouseSymbol extends IGroupedAstralSymbols {
     Collection<IAstralSymbol> getBodySymbolsInHouse();
-    void testGenerateLoggings();
 }

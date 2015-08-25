@@ -3,6 +3,7 @@ package com.coreman2200.ringstrings.symbol.astralsymbol.impl;
 import com.coreman2200.ringstrings.symbol.astralsymbol.AstralStrata;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.Zodiac;
 import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IAstralSymbol;
+import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.ICelestialBodySymbol;
 import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IZodiacSymbol;
 
 import java.util.Collection;
@@ -25,9 +26,19 @@ public class ZodiacSymbolImpl extends GroupedAstralSymbolsImpl implements IZodia
 
     public ZodiacSymbolImpl(Zodiac symbolid, double degree) {
         super(symbolid, degree);
+    }
+
+    public Collection<IAstralSymbol> getBodySymbolsInSign() { return getAllSymbols(); }
+
+    @Override
+    protected void setSymbolStrata() {
         mSymbolStrata = AstralStrata.ASTRALZODIAC;
     }
 
-    public Collection<IAstralSymbol> getBodySymbolsInSign() { return mGroupedAstralSymbols.values(); }
+    public void addAstralSymbol(Enum<? extends Enum<?>> name, IAstralSymbol symbol) {
+        super.addAstralSymbol(name, symbol);
+        ICelestialBodySymbol body = (ICelestialBodySymbol)symbol;
+        body.setSign(this);
+    }
 
 }

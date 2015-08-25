@@ -1,6 +1,6 @@
 package com.coreman2200.ringstrings.symbol.astralsymbol.interfaces;
 
-import com.coreman2200.ringstrings.symbol.IGroupedSymbols;
+import com.coreman2200.ringstrings.symbol.symbolinterface.IGroupedSymbols;
 
 /**
  * IGroupedAstralSymbols
@@ -16,7 +16,7 @@ import com.coreman2200.ringstrings.symbol.IGroupedSymbols;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public interface IGroupedAstralSymbols extends IAstralSymbol, IGroupedSymbols {
+public interface IGroupedAstralSymbols extends IAstralSymbol, IGroupedSymbols { // TODO: Check for quality..
     void addAstralSymbol(Enum<? extends Enum<?>> name, IAstralSymbol symbol);
     IAstralSymbol getAstralSymbol(Enum<? extends Enum<?>> name);
 }

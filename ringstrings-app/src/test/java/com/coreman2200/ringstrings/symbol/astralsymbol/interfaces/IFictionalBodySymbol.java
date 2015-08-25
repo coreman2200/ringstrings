@@ -15,6 +15,6 @@ package com.coreman2200.ringstrings.symbol.astralsymbol.interfaces;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public interface IFictionalBodySymbol extends IAstralSymbol {
+public interface IFictionalBodySymbol extends IAstralSymbol, ICelestialBodySymbol {
 
 }

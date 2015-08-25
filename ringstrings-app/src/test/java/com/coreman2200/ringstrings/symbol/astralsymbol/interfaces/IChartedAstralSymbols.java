@@ -1,6 +1,6 @@
 package com.coreman2200.ringstrings.symbol.astralsymbol.interfaces;
 
-import com.coreman2200.ringstrings.symbol.IChartedSymbols;
+import com.coreman2200.ringstrings.symbol.symbolinterface.IChartedSymbols;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.CelestialBodies;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.Houses;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.Zodiac;
