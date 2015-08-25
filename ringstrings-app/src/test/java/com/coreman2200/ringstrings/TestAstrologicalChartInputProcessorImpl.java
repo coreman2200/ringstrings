@@ -6,7 +6,7 @@ import com.coreman2200.ringstrings.profile.IProfileTestLoc;
 import com.coreman2200.ringstrings.profile.RandomizedTestProfileImpl;
 import com.coreman2200.ringstrings.swisseph.ISwissephFileHandler;
 import com.coreman2200.ringstrings.swisseph.SwissephFileHandlerImpl;
-import com.coreman2200.ringstrings.symbol.Charts;
+import com.coreman2200.ringstrings.symbol.chart.Charts;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.CelestialBodies;
 import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IChartedAstralSymbols;
 import com.coreman2200.ringstrings.symbol.inputprocessor.astrology.AstrologicalChartInputProcessorImpl;
@@ -17,8 +17,6 @@ import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
-
-import com.coreman2200.ringstrings.RingStringsActivity;
 
 /**
  * TestAstrologicalChartInputProcessorImpl
