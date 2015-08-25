@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.coreman2200.ringstrings.NumberSystemTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-08-21T20:33:31" hostname="199-241-201-12.PUBLIC.monkeybrains.net" time="4.448">
+<testsuite name="com.coreman2200.ringstrings.NumberSystemTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-08-24T21:45:46" hostname="199-241-201-12.PUBLIC.monkeybrains.net" time="5.274">
   <properties/>
-  <testcase name="testNumberSystemIsFilledForAllLetters" classname="com.coreman2200.ringstrings.NumberSystemTest" time="4.434"/>
+  <testcase name="testNumberSystemIsFilledForAllLetters" classname="com.coreman2200.ringstrings.NumberSystemTest" time="5.261"/>
   <testcase name="testNumberSystemIsOKWhenPresentedNonMembers" classname="com.coreman2200.ringstrings.NumberSystemTest" time="0.013"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
