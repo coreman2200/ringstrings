@@ -73,6 +73,8 @@ public enum BaseNumberSymbols implements INumberSymbol {
 
     public SymbolStrata symbolStrata() { return this.numberSymbol.symbolStrata(); }
 
+    public void testGenerateLogs() { this.numberSymbol.testGenerateLogs(); }
+
     private static Map<Integer, IBaseNumberSymbol> mapBaseNumberSymbols() {
         Map<Integer, IBaseNumberSymbol> mMap = new HashMap<>();
 

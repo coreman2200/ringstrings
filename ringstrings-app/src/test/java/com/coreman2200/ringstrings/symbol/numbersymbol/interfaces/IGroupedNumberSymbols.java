@@ -1,6 +1,6 @@
 package com.coreman2200.ringstrings.symbol.numbersymbol.interfaces;
 
-import com.coreman2200.ringstrings.symbol.IGroupedSymbols;
+import com.coreman2200.ringstrings.symbol.symbolinterface.IGroupedSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.GroupedNumberSymbols;
 
 /**
@@ -21,5 +21,4 @@ public interface IGroupedNumberSymbols extends IGroupedSymbols, INumberSymbol {
     void addNumberSymbol(Enum<? extends Enum<?>> name, INumberSymbol symbol);
     INumberSymbol getNumberSymbol(Enum<? extends Enum<?>> name);
     IGroupedNumberSymbols getGroupedNumberSymbol(Enum<? extends Enum<?>> name);
-    GroupedNumberSymbols getGroupID();
 }

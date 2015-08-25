@@ -22,5 +22,6 @@ public enum GroupedNumberSymbols {
     PERSONAL,
     KARMIC_LESSONS,
     HIDDEN_PASSIONS,
-    CHART
+    CHART,
+    RELATIONAL
 }

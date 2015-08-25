@@ -1,11 +1,12 @@
 package com.coreman2200.ringstrings.symbol.numbersymbol.impl;
 
-import com.coreman2200.ringstrings.symbol.IGroupedSymbols;
+import com.coreman2200.ringstrings.symbol.symbolinterface.IGroupedSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.GroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
 import com.coreman2200.ringstrings.symbol.numbersymbol.NumberStrata;
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IGroupedNumberSymbols;
 
+import java.util.Collection;
 import java.util.LinkedHashMap;
 
 /**
@@ -23,41 +24,25 @@ import java.util.LinkedHashMap;
  */
 
 public class GroupedNumberSymbolsImpl extends NumberSymbolImpl implements IGroupedSymbols, IGroupedNumberSymbols {
-    protected LinkedHashMap<Enum<? extends Enum<?>>, INumberSymbol> mGroupedNumberSymbolsMap;
-    protected final GroupedNumberSymbols mGroupedNumberSymbolID;
 
     public GroupedNumberSymbolsImpl(GroupedNumberSymbols group) {
-        super(0);
-        mGroupedNumberSymbolID = group;
-        mGroupedNumberSymbolsMap = new LinkedHashMap<>();
+        super(group, 0);
     }
 
     public final void addNumberSymbol(Enum<? extends Enum<?>> name, INumberSymbol symbol) {
         assert (symbol != null);
         assert (name != null);
-        mGroupedNumberSymbolsMap.put(name, symbol);
-    }
-
-    @Override
-    public final int size() {
-        int size = 0;
-
-        for (INumberSymbol symbol : mGroupedNumberSymbolsMap.values())
-            size += symbol.size();
-        return size;
+        addSymbolDataForKey(name, symbol);
     }
 
     @Override
     public String name() {
-        return mGroupedNumberSymbolID.toString();
+        return mSymbolID.toString();
     }
 
     @Override
     public final INumberSymbol getNumberSymbol(Enum<? extends Enum<?>> name) {
-        assert (name != null);
-        if (!mGroupedNumberSymbolsMap.containsKey(name))
-            throw new NullPointerException("Elem does not exist within grouped symbols");
-        return mGroupedNumberSymbolsMap.get(name);
+        return getSymbolDataForKey(name);
     }
 
     public IGroupedNumberSymbols getGroupedNumberSymbol(Enum<? extends Enum<?>> name) {
@@ -65,17 +50,8 @@ public class GroupedNumberSymbolsImpl extends NumberSymbolImpl implements IGroup
     }
 
     @Override
-    public final GroupedNumberSymbols getGroupID() {
-        return this.mGroupedNumberSymbolID;
-    }
-
-    @Override
-    protected void produceNumberSymbol() {
-        super.produceNumberSymbol();
-    }
-
-    @Override
-    protected void setNumberStrata() {
+    protected void setSymbolStrata() {
         this.mSymbolStrata = NumberStrata.GROUPEDNUMBERS;
     }
+
 }

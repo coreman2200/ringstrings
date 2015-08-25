@@ -15,5 +15,5 @@ package com.coreman2200.ringstrings.symbol.numbersymbol.interfaces;
  */
 
 public interface IListedNumberSymbols extends IGroupedNumberSymbols {
-    public void addNumberSymbol(INumberSymbol symbol);
+    void addNumberSymbol(INumberSymbol symbol);
 }

@@ -1,6 +1,6 @@
 package com.coreman2200.ringstrings.symbol.numbersymbol.interfaces;
 
-import com.coreman2200.ringstrings.symbol.IRelatedSymbols;
+import com.coreman2200.ringstrings.symbol.symbolinterface.IRelatedSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.BaseNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.DerivedKarmicDebtSymbols;
 
@@ -19,7 +19,7 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.DerivedKarmicDebt
  */
 
 public interface IDerivedNumberSymbol extends INumberSymbol, IRelatedSymbols {
-    BaseNumberSymbols getLeftDigitNumberSymbol();
-    BaseNumberSymbols getRightDigitNumberSymbol();
+    INumberSymbol getLeftDigitNumberSymbol();
+    INumberSymbol getRightDigitNumberSymbol();
     DerivedKarmicDebtSymbols getKarmicDebt();
 }

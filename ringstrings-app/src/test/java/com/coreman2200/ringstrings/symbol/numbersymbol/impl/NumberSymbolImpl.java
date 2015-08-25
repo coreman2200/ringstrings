@@ -1,6 +1,8 @@
 package com.coreman2200.ringstrings.symbol.numbersymbol.impl;
 
 import com.coreman2200.ringstrings.symbol.AbstractSymbol;
+import com.coreman2200.ringstrings.symbol.SymbolStrata;
+import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.BaseNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
 import com.coreman2200.ringstrings.symbol.numbersymbol.NumberStrata;
 
@@ -18,18 +20,15 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.NumberStrata;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class NumberSymbolImpl extends AbstractSymbol implements INumberSymbol {
+abstract public class NumberSymbolImpl extends AbstractSymbol<INumberSymbol> implements INumberSymbol {
     protected int symbolValue;
 
-    protected NumberSymbolImpl(int value) {
-        super();
+    protected NumberSymbolImpl(Enum<? extends Enum<?>> id, int value) {
+        super(id);
         this.symbolValue = value;
-        setNumberStrata();
-        produceNumberSymbol();
-    }
 
-    protected void setNumberStrata() throws RuntimeException {
-        throw new RuntimeException("Must Override.");
+        if (symbolStrata().compareTo(SymbolStrata.RELATED_SYMBOLS) <= 0)
+            addSymbolDataForKey(id, this);
     }
 
     public final NumberStrata getNumberSymbolStrata() {
@@ -41,13 +40,16 @@ public class NumberSymbolImpl extends AbstractSymbol implements INumberSymbol {
     }
 
     public String name() {
-        return mSymbolStrata.toString() + symbolValue;
+        return Integer.toString(symbolValue);
     }
 
-    public int size() { throw new NoClassDefFoundError("Must be overridden");}
-
-    protected void produceNumberSymbol() {
-        addSymbolDataForKey(mSymbolStrata, symbolValue);
+    @Override
+    public void testGenerateLogs() {
+        if (symbolStrata().compareTo(SymbolStrata.RELATED_SYMBOLS) <= 0) {
+            System.out.print(name().toLowerCase());
+            System.out.println(" value: " + symbolValue);
+        }
+        super.testGenerateLogs();
     }
 
 }

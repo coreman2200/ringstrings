@@ -19,30 +19,19 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IBaseNumberSym
  */
 
 public class BaseNumberSymbolImpl extends NumberSymbolImpl implements IBaseNumberSymbol {
-    protected BaseNumberSymbols numberSymbolID;
 
     public BaseNumberSymbolImpl(BaseNumberSymbols symbol) {
-        super(symbol.getNumberSymbolValue());
-        this.numberSymbolID = symbol;
+        super(symbol, symbol.getNumberSymbolValue());
+        this.mSymbolID = symbol;
     }
 
     public final BaseNumberSymbols getBaseNumberSymbolID() {
-        return this.numberSymbolID;
+        return (BaseNumberSymbols)mSymbolID;
     }
 
     @Override
-    public  int size() { return 1;}
-
-    @Override
-    protected void setNumberStrata() {
+    protected void setSymbolStrata() {
         this.mSymbolStrata = NumberStrata.BASENUMBER;
-    }
-
-    @Override
-    protected void produceNumberSymbol() {
-        super.produceNumberSymbol();
-        //System.out.println("New "+ numberSymbolStrata.toString() +" produced! value: " + symbolValue);
-
     }
 
 }

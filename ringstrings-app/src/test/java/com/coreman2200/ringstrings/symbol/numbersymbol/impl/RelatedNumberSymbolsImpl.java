@@ -1,6 +1,7 @@
 package com.coreman2200.ringstrings.symbol.numbersymbol.impl;
 
 import com.coreman2200.ringstrings.symbol.RelatedSymbolMap;
+import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.GroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IRelatedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.NumberStrata;
@@ -25,12 +26,12 @@ public class RelatedNumberSymbolsImpl extends NumberSymbolImpl implements IRelat
     protected RelatedSymbolMap<INumberSymbol> mRelatedNumberSymbolMap;
 
     public RelatedNumberSymbolsImpl() {
-        super(0);
+        super(GroupedNumberSymbols.RELATIONAL, 0);
         mRelatedNumberSymbolMap = new RelatedSymbolMap<>();
     }
 
     @Override
-    protected void setNumberStrata() {
+    protected void setSymbolStrata() {
         this.mSymbolStrata = NumberStrata.RELATIONALNUMBERMAP;
     }
 }
