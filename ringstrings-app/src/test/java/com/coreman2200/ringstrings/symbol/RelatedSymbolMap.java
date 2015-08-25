@@ -2,6 +2,7 @@ package com.coreman2200.ringstrings.symbol;
 
 import com.coreman2200.ringstrings.symbol.symbolcomparator.SymbolComparatorImpl;
 import com.coreman2200.ringstrings.symbol.symbolcomparator.SymbolStrataComparatorImpl;
+import com.coreman2200.ringstrings.symbol.symbolinterface.ISymbol;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,7 +31,7 @@ import java.util.TreeSet;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class RelatedSymbolMap<T> {
+public class RelatedSymbolMap<T extends ISymbol> {
     public enum SortOrder {
         ASCENDING,
         DESCENDING
@@ -77,8 +78,23 @@ public class RelatedSymbolMap<T> {
         return mBackingUnsortedMap.get(key);
     }
 
+    public boolean containsKey(Enum<? extends Enum<?>> key) { return mBackingUnsortedMap.containsKey(key); }
+
+    public void remove(Enum<? extends Enum<?>> key) {
+        mBackingUnsortedMap.remove(key);
+        resortMap();
+    }
+
     public int size() {
         return mBackingUnsortedMap.values().size();
+    }
+
+    public SortedSet<Map.Entry<Enum<? extends Enum<?>>, T>> getSortedSymbolMap() {
+        return mSortedInstanceSet;
+    }
+
+    public Collection<T> getUnsortedSymbols() {
+        return mBackingUnsortedMap.values();
     }
 
     public Collection<T> getSortedSymbols(SortOrder order) {
@@ -92,13 +108,6 @@ public class RelatedSymbolMap<T> {
             default:
                 throw new RuntimeException("Sort order not set.");
         }
-    }
-
-    public Collection<T> getSymbolsSortedBy(SymbolComparatorImpl comparator, SortOrder order) {
-        setCurrentComparator(comparator);
-        resortMap();
-
-        return getSortedSymbols(order);
     }
 
     private List<T> produceValueListFromSortedSet() {
