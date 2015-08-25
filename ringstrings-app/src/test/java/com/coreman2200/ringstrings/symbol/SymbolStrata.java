@@ -1,6 +1,7 @@
 package com.coreman2200.ringstrings.symbol;
 
 import com.coreman2200.ringstrings.symbol.astralsymbol.AstralStrata;
+import com.coreman2200.ringstrings.symbol.entitysymbol.EntityStrata;
 import com.coreman2200.ringstrings.symbol.numbersymbol.NumberStrata;
 
 import java.util.List;
@@ -22,11 +23,14 @@ import java.util.Arrays;
 
 public enum SymbolStrata {
     SYMBOL(NumberStrata.BASENUMBER, AstralStrata.ASTRALBODY),
-    RELATED_SYMBOLS(NumberStrata.DERIVEDNUMBER, NumberStrata.GROUPEDNUMBERS,
+    RELATED_SYMBOLS(NumberStrata.DERIVEDNUMBER,
                     AstralStrata.ASTRALZODIAC, AstralStrata.ASTRALHOUSE,
                     AstralStrata.ASTRALASPECT),
+    GROUP(NumberStrata.GROUPEDNUMBERS, AstralStrata.ASTRALGROUP ),
     CHART(NumberStrata.CHARTEDNUMBERS, AstralStrata.ASTRALCHART),
-    RELATIONAL_MAP(NumberStrata.RELATIONALNUMBERMAP, AstralStrata.RELATIONALASTRALMAP);
+    RELATIONAL_MAP(NumberStrata.RELATIONALNUMBERMAP, AstralStrata.RELATIONALASTRALMAP),
+    ENTITY(EntityStrata.TAG, EntityStrata.LIGHT, EntityStrata.RING, EntityStrata.PROFILE, EntityStrata.USER,
+            EntityStrata.SOCIAL, EntityStrata.GROUPED, EntityStrata.ALL, EntityStrata.GLOBAL );
 
     private List<Enum> mStrataTypeList;
 
