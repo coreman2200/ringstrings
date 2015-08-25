@@ -1,10 +1,10 @@
-package com.coreman2200.ringstrings.symbol;
+package com.coreman2200.ringstrings.symbol.symbolinterface;
 
 /**
- * IGroupedSymbols
- * General base interface for grouped symbols.
+ * IRelatedSymbolMapping
+ * Interface for Relational Symbol Maps.
  *
- * Created by Cory Higginbottom on 5/26/15
+ * Created by Cory Higginbottom on 5/29/15
  * http://github.com/coreman2200
  *
  * Licensed under the GNU General Public License (GPL), Version 2.0.
@@ -14,5 +14,6 @@ package com.coreman2200.ringstrings.symbol;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public interface IGroupedSymbols extends ISymbol {
+public interface IRelatedSymbolMapping extends IGroupedSymbols {
+
 }

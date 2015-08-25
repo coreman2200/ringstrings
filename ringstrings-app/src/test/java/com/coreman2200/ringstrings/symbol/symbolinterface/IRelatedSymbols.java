@@ -1,10 +1,10 @@
-package com.coreman2200.ringstrings.symbol;
+package com.coreman2200.ringstrings.symbol.symbolinterface;
 
 /**
- * Charts
- * Describes Astrological and Numerological as (currently?) available chart types
+ * IRelatedSymbols
+ * Interface for symbols related per some comparator.
  *
- * Created by Cory Higginbottom on 5/28/15
+ * Created by Cory Higginbottom on 5/26/15
  * http://github.com/coreman2200
  *
  * Licensed under the GNU General Public License (GPL), Version 2.0.
@@ -14,8 +14,5 @@ package com.coreman2200.ringstrings.symbol;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public enum Charts {
-    ASTRAL_NATAL,
-    ASTRAL_CURRENT,
-    NUMEROLOGICAL
+public interface IRelatedSymbols extends IGroupedSymbols {
 }

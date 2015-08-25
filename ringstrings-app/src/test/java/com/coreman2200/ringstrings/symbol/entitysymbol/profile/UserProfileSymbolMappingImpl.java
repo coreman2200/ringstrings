@@ -1,10 +1,10 @@
-package com.coreman2200.ringstrings.symbol.profilemap;
+package com.coreman2200.ringstrings.symbol.entitysymbol.profile;
 
 import com.coreman2200.ringstrings.profile.IProfileTestLoc;
-import com.coreman2200.ringstrings.symbol.relationalmaps.Entities;
+import com.coreman2200.ringstrings.symbol.entitysymbol.EntityStrata;
 
 /**
- * UserProfileSymbolMapImpl
+ * UserProfileSymbolMappingImpl
  * User Entity
  *
  * Created by Cory Higginbottom on 6/10/15
@@ -17,12 +17,10 @@ import com.coreman2200.ringstrings.symbol.relationalmaps.Entities;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class UserProfileSymbolMapImpl extends ProfileSymbolMapImpl {
+public class UserProfileSymbolMappingImpl extends ProfileSymbolMappingImpl {
 
-    public UserProfileSymbolMapImpl(IProfileTestLoc profile) {
-        super(Entities.USER, profile);
-
-
+    public UserProfileSymbolMappingImpl(IProfileTestLoc profile) {
+        super(EntityStrata.USER, profile);
     }
 
 }

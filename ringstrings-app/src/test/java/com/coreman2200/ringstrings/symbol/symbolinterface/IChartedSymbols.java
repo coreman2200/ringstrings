@@ -1,4 +1,6 @@
-package com.coreman2200.ringstrings.symbol;
+package com.coreman2200.ringstrings.symbol.symbolinterface;
+
+import com.coreman2200.ringstrings.symbol.chart.Charts;
 
 /**
  * IChartedSymbols

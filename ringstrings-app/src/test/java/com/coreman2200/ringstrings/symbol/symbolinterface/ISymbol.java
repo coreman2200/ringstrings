@@ -1,4 +1,6 @@
-package com.coreman2200.ringstrings.symbol;
+package com.coreman2200.ringstrings.symbol.symbolinterface;
+
+import com.coreman2200.ringstrings.symbol.SymbolStrata;
 
 /**
  * ISymbol
@@ -18,5 +20,6 @@ public interface ISymbol {
     String name();
     int size();
     SymbolStrata symbolStrata();
+    void testGenerateLogs();
     // TODO: Each Symbol must ...
 }

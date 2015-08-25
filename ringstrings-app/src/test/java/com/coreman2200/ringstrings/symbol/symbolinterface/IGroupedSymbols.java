@@ -1,8 +1,8 @@
-package com.coreman2200.ringstrings.symbol;
+package com.coreman2200.ringstrings.symbol.symbolinterface;
 
 /**
- * IRelatedSymbols
- * Interface for symbols related per some comparator.
+ * IGroupedSymbols
+ * General base interface for grouped symbols.
  *
  * Created by Cory Higginbottom on 5/26/15
  * http://github.com/coreman2200
@@ -14,5 +14,5 @@ package com.coreman2200.ringstrings.symbol;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public interface IRelatedSymbols extends IGroupedSymbols {
+public interface IGroupedSymbols extends ISymbol {
 }

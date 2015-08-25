@@ -1,10 +1,10 @@
-package com.coreman2200.ringstrings.symbol;
+package com.coreman2200.ringstrings.symbol.entitysymbol;
 
 /**
- * IRelationalSymbolMap
- * Interface for Relational Symbol Maps.
+ * EntityStrata
+ * Enums Entity Symbols
  *
- * Created by Cory Higginbottom on 5/29/15
+ * Created by Cory Higginbottom on 6/10/15
  * http://github.com/coreman2200
  *
  * Licensed under the GNU General Public License (GPL), Version 2.0.
@@ -14,6 +14,14 @@ package com.coreman2200.ringstrings.symbol;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public interface IRelationalSymbolMap extends IGroupedSymbols {
-
+public enum EntityStrata {
+    TAG,
+    LIGHT,
+    RING,
+    PROFILE,
+    USER,
+    SOCIAL,
+    GROUPED,
+    ALL,
+    GLOBAL
 }

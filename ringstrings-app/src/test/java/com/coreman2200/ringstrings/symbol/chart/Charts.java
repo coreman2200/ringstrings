@@ -1,10 +1,10 @@
-package com.coreman2200.ringstrings.symbol.relationalmaps;
+package com.coreman2200.ringstrings.symbol.chart;
 
 /**
- * Entities
- * Enums Entity Symbols (collections of chart datas
+ * Charts
+ * Describes Astrological and Numerological as (currently?) available chart types
  *
- * Created by Cory Higginbottom on 6/10/15
+ * Created by Cory Higginbottom on 5/28/15
  * http://github.com/coreman2200
  *
  * Licensed under the GNU General Public License (GPL), Version 2.0.
@@ -14,10 +14,8 @@ package com.coreman2200.ringstrings.symbol.relationalmaps;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public enum Entities {
-    USER,
-    SOCIAL,
-    GROUPED,
-    ALL,
-    NETWORK
+public enum Charts {
+    ASTRAL_NATAL,
+    ASTRAL_CURRENT,
+    NUMEROLOGICAL
 }
