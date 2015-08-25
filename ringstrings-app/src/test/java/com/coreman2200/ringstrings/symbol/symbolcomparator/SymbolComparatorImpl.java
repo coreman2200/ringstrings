@@ -1,6 +1,7 @@
 package com.coreman2200.ringstrings.symbol.symbolcomparator;
 
 import com.coreman2200.ringstrings.symbol.SymbolStrata;
+import com.coreman2200.ringstrings.symbol.symbolinterface.ISymbol;
 
 import java.util.Comparator;
 import java.util.Map;
@@ -19,6 +20,11 @@ import java.util.Map;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-abstract public class SymbolComparatorImpl<T> implements Comparator<Map.Entry<Enum<? extends Enum<?>>, T>> {
+abstract public class SymbolComparatorImpl<T extends ISymbol> implements Comparator<Map.Entry<Enum<? extends Enum<?>>, T>> {
+    private boolean mExclusiveCompare;
+
+    public SymbolComparatorImpl() { mExclusiveCompare = false; }
+
+    public SymbolComparatorImpl(boolean exclusive) { mExclusiveCompare = exclusive; }
 
 }

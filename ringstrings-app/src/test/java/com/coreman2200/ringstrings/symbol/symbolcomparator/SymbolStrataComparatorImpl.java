@@ -1,10 +1,8 @@
 package com.coreman2200.ringstrings.symbol.symbolcomparator;
 
-import com.coreman2200.ringstrings.symbol.ISymbol;
+import com.coreman2200.ringstrings.symbol.symbolinterface.ISymbol;
 import com.coreman2200.ringstrings.symbol.SymbolStrata;
-import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IAstralSymbol;
 
-import java.util.Comparator;
 import java.util.Map;
 
 /**
