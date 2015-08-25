@@ -1,6 +1,6 @@
 package com.coreman2200.ringstrings.symbol.astralsymbol.impl;
 
-import com.coreman2200.ringstrings.symbol.IRelatedSymbols;
+import com.coreman2200.ringstrings.symbol.symbolinterface.IRelatedSymbols;
 import com.coreman2200.ringstrings.symbol.astralsymbol.AstralStrata;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.Aspects;
 import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IAspectSymbol;
@@ -32,10 +32,14 @@ public class AspectedSymbolsImpl extends GroupedAstralSymbolsImpl implements IAs
         super(id, getDegreeBetweenSymbols(id, s1, s2));
         double  degree = Math.abs(s1.getAstralSymbolDegree() - s2.getAstralSymbolDegree());
         //System.out.println(s1.name() + " and " + s2.name() + " aspected in " + id.name() + "(" + degree + ")");
-        addAstralSymbol(s1.getAstralSymbolID(), s1);
-        addAstralSymbol(s2.getAstralSymbolID(), s2);
-        mSymbolStrata = AstralStrata.ASTRALASPECT;
+        addSymbolDataForKey(s1.getAstralSymbolID(), s1);
+        addSymbolDataForKey(s2.getAstralSymbolID(), s2);
         mType = AspectType.ASPECT;
+    }
+
+    @Override
+    protected void setSymbolStrata() {
+        mSymbolStrata = AstralStrata.ASTRALASPECT;
     }
 
     public void setType(AspectType type) {

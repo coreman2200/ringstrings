@@ -3,6 +3,8 @@ package com.coreman2200.ringstrings.symbol.astralsymbol.impl;
 import com.coreman2200.ringstrings.symbol.astralsymbol.AstralStrata;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.CelestialBodies;
 import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.ICelestialBodySymbol;
+import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IHouseSymbol;
+import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IZodiacSymbol;
 
 /**
  * CelestialBodySymbolImpl
@@ -27,21 +29,42 @@ public class CelestialBodySymbolImpl extends AstralSymbolImpl implements ICelest
 
 
     private boolean mIsRetrograde;
+    private IHouseSymbol mHouse;
+    private IZodiacSymbol mSign;
 
     public CelestialBodySymbolImpl(CelestialBodies body, double degree) {
         super(body, degree);
-        mSymbolStrata = AstralStrata.ASTRALBODY;
     }
 
     public void setRetrograde(boolean retrograde) {
         mIsRetrograde = retrograde;
-        addSymbolDataForKey(Motion.DIRECTION, (mIsRetrograde) ? Motion.RETROGRADE : Motion.DIRECT);
     }
 
     public boolean checkInRetrogradeMotion() {
         return mIsRetrograde;
     }
 
+    public IHouseSymbol getHouse() {
+        return  mHouse;
+    }
 
+    public void setHouse(IHouseSymbol house) {
+        assert (house != null);
+        mHouse = house;
+    }
+
+    public IZodiacSymbol getSign() {
+        return mSign;
+    }
+
+    public void setSign(IZodiacSymbol sign) {
+        assert (sign != null);
+        mSign = sign;
+    }
+
+    @Override
+    protected void setSymbolStrata() {
+        mSymbolStrata = AstralStrata.ASTRALBODY;
+    }
 
 }

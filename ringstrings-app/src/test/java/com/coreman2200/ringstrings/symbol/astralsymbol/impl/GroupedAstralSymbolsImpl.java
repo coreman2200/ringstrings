@@ -1,6 +1,6 @@
 package com.coreman2200.ringstrings.symbol.astralsymbol.impl;
 
-import com.coreman2200.ringstrings.symbol.IGroupedSymbols;
+import com.coreman2200.ringstrings.symbol.symbolinterface.IGroupedSymbols;
 import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IAstralSymbol;
 import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IGroupedAstralSymbols;
 
@@ -21,23 +21,16 @@ import java.util.HashMap;
  */
 
 abstract public class GroupedAstralSymbolsImpl extends AstralSymbolImpl implements IGroupedAstralSymbols, IGroupedSymbols {
-    protected HashMap<Enum<? extends Enum<?>>, IAstralSymbol> mGroupedAstralSymbols;
 
     public GroupedAstralSymbolsImpl(Enum<? extends Enum<?>> id, double degree) {
         super(id, degree);
-        mGroupedAstralSymbols = new HashMap<>();
-    }
-
-    public void addAstralSymbol(Enum<? extends Enum<?>> name, IAstralSymbol symbol) {
-        mGroupedAstralSymbols.put(name, symbol);
     }
 
     public IAstralSymbol getAstralSymbol(Enum<? extends Enum<?>> name) {
-        return mGroupedAstralSymbols.get(name);
+        return getSymbolDataForKey(name);
     }
 
-    @Override
-    public int size() {
-        return mGroupedAstralSymbols.size();
+    public void addAstralSymbol(Enum<? extends Enum<?>> name, IAstralSymbol symbol) {
+        addSymbolDataForKey(name, symbol);
     }
 }

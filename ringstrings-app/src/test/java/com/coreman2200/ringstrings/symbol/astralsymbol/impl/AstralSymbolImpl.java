@@ -1,7 +1,8 @@
 package com.coreman2200.ringstrings.symbol.astralsymbol.impl;
 
 import com.coreman2200.ringstrings.symbol.AbstractSymbol;
-import com.coreman2200.ringstrings.symbol.ISymbol;
+import com.coreman2200.ringstrings.symbol.SymbolStrata;
+import com.coreman2200.ringstrings.symbol.symbolinterface.ISymbol;
 import com.coreman2200.ringstrings.symbol.astralsymbol.AstralStrata;
 import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IAstralSymbol;
 
@@ -19,13 +20,15 @@ import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IAstralSymbol;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-abstract public class AstralSymbolImpl extends AbstractSymbol implements IAstralSymbol, ISymbol {
-    protected Enum<? extends Enum<?>> mSymbolID;
+abstract public class AstralSymbolImpl extends AbstractSymbol<IAstralSymbol> implements IAstralSymbol, ISymbol {
     protected double mDegree;
 
     protected AstralSymbolImpl(Enum<? extends Enum<?>> symbolid, double degree) {
-        mSymbolID = symbolid;
+        super(symbolid);
         mDegree = degree;
+
+        if (symbolStrata().compareTo(SymbolStrata.RELATED_SYMBOLS) <= 0)
+            addSymbolDataForKey(symbolid, this);
     }
 
     public final double getAstralSymbolDegree() {
@@ -41,12 +44,13 @@ abstract public class AstralSymbolImpl extends AbstractSymbol implements IAstral
         return mSymbolID;
     }
 
-    public String name() {
-        return mSymbolID.toString();
-    }
-
-    public int size() {
-        return 1;
+    @Override
+    public void testGenerateLogs() {
+        if (symbolStrata().compareTo(SymbolStrata.RELATED_SYMBOLS) <= 0) {
+            System.out.print(name());
+            System.out.println(" degree: " + mDegree);
+        }
+        super.testGenerateLogs();
     }
 
     protected static double wrapDegree(double degree) {

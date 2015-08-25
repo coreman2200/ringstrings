@@ -18,11 +18,13 @@ import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IFictionalBody
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class FictionalBodySymbolImpl extends AstralSymbolImpl implements IFictionalBodySymbol {
+public class FictionalBodySymbolImpl extends CelestialBodySymbolImpl implements IFictionalBodySymbol {
 
     public FictionalBodySymbolImpl(CelestialBodies body, double degree) {
         super(body, degree);
-        mSymbolStrata = AstralStrata.ASTRALBODY;
     }
 
+    public boolean checkInRetrogradeMotion() {
+        return false;
+    }
 }

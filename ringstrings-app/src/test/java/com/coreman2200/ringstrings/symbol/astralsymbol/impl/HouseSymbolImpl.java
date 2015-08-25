@@ -3,6 +3,7 @@ package com.coreman2200.ringstrings.symbol.astralsymbol.impl;
 import com.coreman2200.ringstrings.symbol.astralsymbol.AstralStrata;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.Houses;
 import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IAstralSymbol;
+import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.ICelestialBodySymbol;
 import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IHouseSymbol;
 
 import java.util.Collection;
@@ -25,15 +26,18 @@ public class HouseSymbolImpl extends GroupedAstralSymbolsImpl implements IHouseS
 
     public HouseSymbolImpl(Houses symbolid, double degree) {
         super(symbolid, degree);
+    }
+
+    public Collection<IAstralSymbol> getBodySymbolsInHouse() { return getAllSymbols(); }
+
+    @Override
+    protected void setSymbolStrata() {
         mSymbolStrata = AstralStrata.ASTRALHOUSE;
     }
 
-    public void testGenerateLoggings() {
-        System.out.println("Symbols in " + name());
-        for (IAstralSymbol symbol : mGroupedAstralSymbols.values()) {
-            System.out.println(symbol.name() + " degree: " + symbol.getAstralSymbolDegree());
-        }
+    public void addAstralSymbol(Enum<? extends Enum<?>> name, IAstralSymbol symbol) {
+        super.addAstralSymbol(name, symbol);
+        ICelestialBodySymbol body = (ICelestialBodySymbol)symbol;
+        body.setHouse(this);
     }
-
-    public Collection<IAstralSymbol> getBodySymbolsInHouse() { return mGroupedAstralSymbols.values(); }
 }
