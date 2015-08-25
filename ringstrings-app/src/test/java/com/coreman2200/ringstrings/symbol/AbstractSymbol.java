@@ -1,6 +1,11 @@
 package com.coreman2200.ringstrings.symbol;
 
+import com.coreman2200.ringstrings.symbol.symbolcomparator.SymbolComparatorImpl;
+import com.coreman2200.ringstrings.symbol.symbolinterface.ISymbol;
+
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * AbstractSymbol
@@ -17,23 +22,32 @@ import java.util.HashMap;
  */
 
 
-abstract public class AbstractSymbol implements ISymbol {
-    private HashMap<Enum<? extends Enum<?>>, Object> symbolDataMap;
+abstract public class AbstractSymbol<T> implements ISymbol {
+    private RelatedSymbolMap<T> symbolDataMap;
     protected Enum<? extends Enum<?>> mSymbolStrata;
+    protected Enum<? extends Enum<?>> mSymbolID;
 
-    protected AbstractSymbol() {
-        produceSymbol();
-    }
-
-    private void produceSymbol() {
+    protected AbstractSymbol(Enum<? extends Enum<?>> id) {
+        assert (id != null);
+        mSymbolID = id;
+        setSymbolStrata();
         initializeSymbolMap();
+
     }
 
     private void initializeSymbolMap() {
-        symbolDataMap = new HashMap<Enum<? extends Enum<?>>, Object>();
+        symbolDataMap = new RelatedSymbolMap<>();
     }
 
-    protected final void addSymbolDataForKey(Enum<? extends Enum<?>> key, Object data) throws RuntimeException {
+    //abstract protected void produceSymbol();
+
+    abstract protected void setSymbolStrata();
+
+    protected void setSymbolComparator(SymbolComparatorImpl<T> comparator) {
+        symbolDataMap.setCurrentComparator(comparator);
+    }
+
+    protected final void addSymbolDataForKey(Enum<? extends Enum<?>> key, T data) throws RuntimeException {
         assert(key != null);
         assert(data != null);
 
@@ -43,7 +57,11 @@ abstract public class AbstractSymbol implements ISymbol {
         symbolDataMap.put(key, data);
     }
 
-    protected final void updateSymbolDataForKey(Enum<? extends Enum<?>> key, Object data) throws NullPointerException {
+    public void addSymbolMap(Map<Enum<? extends Enum<?>>, T> map) {
+        symbolDataMap.putAll(map);
+    }
+
+    protected final void updateSymbolDataForKey(Enum<? extends Enum<?>> key, T data) throws NullPointerException {
         assert(key != null);
         assert(data != null);
 
@@ -62,7 +80,7 @@ abstract public class AbstractSymbol implements ISymbol {
             throw new NullPointerException(key.name() + "does not exist as an element within this Symbol.");
     }
 
-    protected final Object getSymbolDataForKey(Enum<? extends Enum<?>> key) throws NullPointerException {
+    protected final T getSymbolDataForKey(Enum<? extends Enum<?>> key) throws NullPointerException {
         assert (key != null);
 
         if (!symbolDataMap.containsKey(key))
@@ -71,16 +89,58 @@ abstract public class AbstractSymbol implements ISymbol {
         return symbolDataMap.get(key);
     }
 
-    protected HashMap<Enum<? extends Enum<?>>, Object> prepareSymbolToStore() {
+    protected final Collection<T> getAllSymbols() throws NullPointerException {
+        return symbolDataMap.getUnsortedSymbols();
+    }
+
+    protected final Collection<T> getSortedSymbols(RelatedSymbolMap.SortOrder order) {
+        return symbolDataMap.getSortedSymbols(order);
+    }
+
+    protected HashMap<Enum<? extends Enum<?>>, T> prepareSymbolToStore() {
         throw new NoClassDefFoundError("Must be overridden.");
     }
-    protected void refreshSymbolFromMap(HashMap<Enum<? extends Enum<?>>, Object> storedSymbolMap) {
+    protected void refreshSymbolFromMap(HashMap<Enum<? extends Enum<?>>, T> storedSymbolMap) {
         throw new NoClassDefFoundError("Must be overridden.");
     }
 
-    abstract public int size();
+    final public int size() {
+        if (symbolStrata().compareTo(SymbolStrata.CHART) < 0)
+            return symbolDataMap.size();
+
+        Collection<T> allSymbols = getAllSymbols();
+
+        int size = 0;
+        for (T elem : allSymbols) {
+            ISymbol symbol = (ISymbol)elem;
+            size += symbol.size();
+        }
+        return size;
+    }
+
+    public String name() {
+        return mSymbolID.toString();
+    }
 
     public final SymbolStrata symbolStrata() {return SymbolStrata.getSymbolStrataFor(mSymbolStrata);}
+
+    public void testGenerateLogs() {
+        for (Map.Entry<Enum<? extends Enum<?>>, T> entry: symbolDataMap.getSortedSymbolMap()) {
+            ISymbol symbol = (ISymbol)entry.getValue();
+
+            int strataDepth = symbol.symbolStrata().ordinal()+1;
+            String strataSpacing = String.format("%1$" + strataDepth + "s", "").replace(' ', '*');
+
+            System.out.print(strataSpacing + " ");
+
+            if (!entry.getKey().name().contentEquals(symbol.name()))
+                System.out.print(entry.getKey().name() + ": ");
+            System.out.print(symbol.name());
+            System.out.println(" -strata: " + symbol.symbolStrata().name().toLowerCase());
+            if (symbol.symbolStrata().compareTo(SymbolStrata.GROUP) >= 0)
+                symbol.testGenerateLogs();
+        }
+    }
 
     // TODO: Stubbed.
     protected final void storeSymbol()  {};
