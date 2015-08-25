@@ -1,10 +1,11 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.astrology;
 
 import com.coreman2200.ringstrings.profile.IProfileTestLoc;
-import com.coreman2200.ringstrings.symbol.Charts;
-import com.coreman2200.ringstrings.symbol.IChartedSymbols;
+import com.coreman2200.ringstrings.symbol.chart.Charts;
+import com.coreman2200.ringstrings.symbol.symbolinterface.IChartedSymbols;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.NumerologicalChartProcessorImpl;
 
+import java.util.Collection;
 import java.util.LinkedList;
 
 /**
@@ -24,14 +25,14 @@ import java.util.LinkedList;
 public class ProfileInputProcessor {
     private IProfileTestLoc mProfile;
     private final String mEphemerisDirectoryPath; // TODO: Inappropriate to place here..
-    LinkedList<IChartedSymbols> mCharts;
+    Collection<IChartedSymbols> mCharts;
 
     public ProfileInputProcessor(IProfileTestLoc profile, String ephedir) {
         mProfile = profile;
         mEphemerisDirectoryPath = ephedir;
     }
 
-    public LinkedList<IChartedSymbols> produceUserCharts() {
+    public Collection<IChartedSymbols> produceUserCharts() {
         mCharts = new LinkedList<>();
         AstrologicalChartInputProcessorImpl astroprocessor = new AstrologicalChartInputProcessorImpl(mProfile, mEphemerisDirectoryPath);
         mCharts.add(astroprocessor.produceAstrologicalChart(Charts.ASTRAL_NATAL));
@@ -41,11 +42,6 @@ public class ProfileInputProcessor {
         mCharts.add(numberprocessor.produceGroupedNumberSymbolsForProfile());
 
         return mCharts;
-    }
-
-    public void testGenerateLog() {
-        for (IChartedSymbols chart : mCharts)
-            chart.testGenerateLoggingsForFullChart();
     }
 
 }

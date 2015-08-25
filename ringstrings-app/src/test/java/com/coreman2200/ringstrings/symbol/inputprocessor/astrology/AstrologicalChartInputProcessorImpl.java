@@ -3,7 +3,11 @@ package com.coreman2200.ringstrings.symbol.inputprocessor.astrology;
 import com.coreman2200.ringstrings.profile.IProfileTestLoc;
 import com.coreman2200.ringstrings.swisseph.ISwissEphemerisManager;
 import com.coreman2200.ringstrings.swisseph.SwissEphemerisManagerImpl;
-import com.coreman2200.ringstrings.symbol.Charts;
+import com.coreman2200.ringstrings.symbol.astralsymbol.impl.GroupedAstralSymbolsImpl;
+import com.coreman2200.ringstrings.symbol.astralsymbol.impl.ListedAstralSymbolsImpl;
+import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IGroupedAstralSymbols;
+import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IListedAstralSymbols;
+import com.coreman2200.ringstrings.symbol.chart.Charts;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.Aspects;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.AstralCharts;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.CelestialBodies;
@@ -13,6 +17,7 @@ import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IChartedAstral
 import com.coreman2200.ringstrings.symbol.chart.AstrologicalChartImpl;
 
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
@@ -53,11 +58,14 @@ public class AstrologicalChartInputProcessorImpl {
     }
 
     private void calcAspects() {
-        boolean setAsTransit = (mProcessedChart.getAstralSymbolID().equals(AstralCharts.CURRENT));
+        AspectedSymbolsImpl.AspectType aspectType = (mProcessedChart.getAstralSymbolID().equals(AstralCharts.CURRENT)) ?
+                AspectedSymbolsImpl.AspectType.TRANSIT : AspectedSymbolsImpl.AspectType.ASPECT;
 
         Map<Enum<? extends Enum<?>>, IAstralSymbol> bodies = mSwissephManager.getProducedCelestialBodyMap();
 
         Collection<IAstralSymbol> comparelist = new LinkedList<>(bodies.values());
+
+        HashMap<Enum<? extends Enum<?>>, IAstralSymbol> aspectList = new HashMap<>();
 
         for (Enum<? extends Enum<?>> body : bodies.keySet()) {
             if (!((CelestialBodies)body).isRealCelestialBody())
@@ -68,12 +76,17 @@ public class AstrologicalChartInputProcessorImpl {
             AspectedSymbolsImpl aspect = checkForAspects(bodysymbol, comparelist);
 
             if (aspect != null) {
-                if (setAsTransit)
-                    aspect.setType(AspectedSymbolsImpl.AspectType.TRANSIT);
+                aspect.setType(aspectType);
+                IListedAstralSymbols list = (IListedAstralSymbols)aspectList.get(aspect.getAstralSymbolID());
 
-                mProcessedChart.addAstralSymbol(aspect.getAstralSymbolID(), aspect);
+                if (list == null)
+                    list = new ListedAstralSymbolsImpl(aspect.getAstralSymbolID());
+
+                list.addAstralSymbol(aspect);
+                aspectList.put(list.getAstralSymbolID(), list);
             }
         }
+        mProcessedChart.addAstralMappings(aspectList);
     }
 
     private AspectedSymbolsImpl checkForAspects(IAstralSymbol body, Collection<IAstralSymbol> comparelist) {

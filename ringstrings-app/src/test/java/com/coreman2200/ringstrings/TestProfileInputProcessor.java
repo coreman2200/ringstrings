@@ -6,10 +6,10 @@ import com.coreman2200.ringstrings.profile.IProfileTestLoc;
 import com.coreman2200.ringstrings.profile.RandomizedTestProfileImpl;
 import com.coreman2200.ringstrings.swisseph.ISwissephFileHandler;
 import com.coreman2200.ringstrings.swisseph.SwissephFileHandlerImpl;
-import com.coreman2200.ringstrings.symbol.Charts;
-import com.coreman2200.ringstrings.symbol.IChartedSymbols;
+import com.coreman2200.ringstrings.symbol.symbolinterface.IChartedSymbols;
 import com.coreman2200.ringstrings.symbol.inputprocessor.astrology.ProfileInputProcessor;
-import com.coreman2200.ringstrings.symbol.profilemap.UserProfileSymbolMapImpl;
+import com.coreman2200.ringstrings.symbol.entitysymbol.profile.LocalProfileSymbolMappingImpl;
+import com.coreman2200.ringstrings.symbol.entitysymbol.profile.UserProfileSymbolMappingImpl;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -18,7 +18,7 @@ import org.robolectric.Robolectric;
 import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
 
-import java.util.LinkedList;
+import java.util.Collection;
 
 /**
  * TestProfileInputProcessor
@@ -47,15 +47,16 @@ public class TestProfileInputProcessor {
         mTestActivity = Robolectric.setupActivity(RingStringsActivity.class);
         mTestFileHandler = new SwissephFileHandlerImpl(mTestActivity.getApplicationContext());
         assert(mTestFileHandler.isEphemerisDataAvailable());
-        mTestProfile = new TestProfileImpl();
+        mTestProfile = new TestFriendProfileImpl();
         mTestProcessor = new ProfileInputProcessor(mTestProfile, mTestFileHandler.getEphemerisPath());
     }
 
     @Test
     public void testProfileInputProcessorProducesUserProfile() {
-        LinkedList<IChartedSymbols> charts = mTestProcessor.produceUserCharts();
-        UserProfileSymbolMapImpl user = new UserProfileSymbolMapImpl(mTestProfile);
+        Collection<IChartedSymbols> charts = mTestProcessor.produceUserCharts();
+        UserProfileSymbolMappingImpl user = new UserProfileSymbolMappingImpl(mTestProfile);
         user.addCharts(charts);
+        user.testGenerateLogs();
     }
 
     //@Test
@@ -68,21 +69,22 @@ public class TestProfileInputProcessor {
 
         long loopstart = System.currentTimeMillis();
 
-        LinkedList<IChartedSymbols> charts;
+        Collection<IChartedSymbols> charts;
         for (int i = 0; i < testCount; i++) {
             mTestProfile.genProfile();
             charts = mTestProcessor.produceUserCharts();
-            UserProfileSymbolMapImpl user = new UserProfileSymbolMapImpl(mTestProfile);
-            user.addCharts(charts);
+            LocalProfileSymbolMappingImpl profile = new LocalProfileSymbolMappingImpl(mTestProfile);
+            profile.addCharts(charts);
+            //user.testGenerateLog();
 
-            int gsize = user.size();
+            int gsize = profile.size();
             averageSize += gsize;
 
             if (gsize > highval)
-                highval = user.size();
+                highval = profile.size();
 
-            if (user.size() < lowval)
-                lowval = user.size();
+            if (profile.size() < lowval)
+                lowval = profile.size();
         }
         long elapsedtime = (System.currentTimeMillis() - loopstart)/1000;
         averageSize /= testCount;

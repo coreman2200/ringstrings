@@ -1,13 +1,16 @@
 package com.coreman2200.ringstrings.symbol.chart;
 
-import com.coreman2200.ringstrings.symbol.Charts;
-import com.coreman2200.ringstrings.symbol.ISymbol;
 import com.coreman2200.ringstrings.symbol.RelatedSymbolMap;
+import com.coreman2200.ringstrings.symbol.SymbolStrata;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.GroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.NumberStrata;
 import com.coreman2200.ringstrings.symbol.numbersymbol.impl.GroupedNumberSymbolsImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IChartedNumberSymbols;
+import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IGroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
+import com.coreman2200.ringstrings.symbol.symbolcomparator.ChainedSymbolComparatorImpl;
+import com.coreman2200.ringstrings.symbol.symbolcomparator.NumberSymbolOrderComparatorImpl;
+import com.coreman2200.ringstrings.symbol.symbolcomparator.NumberSymbolValueComparatorImpl;
 import com.coreman2200.ringstrings.symbol.symbolcomparator.SymbolStrataComparatorImpl;
 
 import java.util.Collection;
@@ -31,21 +34,16 @@ public class NumerologicalChartImpl extends GroupedNumberSymbolsImpl implements 
 
     public NumerologicalChartImpl() {
         super(GroupedNumberSymbols.CHART);
+        ChainedSymbolComparatorImpl comparator = new ChainedSymbolComparatorImpl(new SymbolStrataComparatorImpl(),
+                new NumberSymbolOrderComparatorImpl());
+        setSymbolComparator(comparator);
     }
 
     public void testGenerateLoggingsForFullChart() {
-        RelatedSymbolMap<INumberSymbol> relatedsymbols = new RelatedSymbolMap<>(new SymbolStrataComparatorImpl());
-        relatedsymbols.putAll(mGroupedNumberSymbolsMap);
-
-        Collection<INumberSymbol> chart = relatedsymbols.getSortedSymbols(RelatedSymbolMap.SortOrder.ASCENDING);
+        Collection<INumberSymbol> chart = getSortedSymbols(RelatedSymbolMap.SortOrder.ASCENDING);
 
         System.out.println(name() + " Numerological Chart");
-        for (INumberSymbol symbol : chart) {
-            System.out.print(symbol.name());
-            System.out.print(" value: " + symbol.getNumberSymbolValue());
-            System.out.print(" strata: " + symbol.getNumberSymbolStrata());
-            System.out.println(" size: " + symbol.size());
-        }
+        testGenerateLogs();
     }
 
     public Charts getChartType() {
@@ -53,7 +51,7 @@ public class NumerologicalChartImpl extends GroupedNumberSymbolsImpl implements 
     }
 
     @Override
-    protected void setNumberStrata() {
+    protected void setSymbolStrata() {
         this.mSymbolStrata = NumberStrata.CHARTEDNUMBERS;
     }
 }
