@@ -1,6 +1,8 @@
 -- Merging decision tree log ---
 manifest
 ADDED from AndroidManifest.xml:2:1
+	xmlns:android
+		ADDED from AndroidManifest.xml:2:11
 	package
 		ADDED from AndroidManifest.xml:3:5
 		INJECTED from AndroidManifest.xml:0:0
@@ -8,8 +10,6 @@ ADDED from AndroidManifest.xml:2:1
 	android:versionName
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
-	xmlns:android
-		ADDED from AndroidManifest.xml:2:11
 	android:versionCode
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
@@ -31,10 +31,10 @@ ADDED from AndroidManifest.xml:8:2
 		ADDED from AndroidManifest.xml:8:19
 uses-feature#0x00020000
 ADDED from AndroidManifest.xml:9:2
-	android:glEsVersion
-		ADDED from AndroidManifest.xml:9:16
 	android:required
 		ADDED from AndroidManifest.xml:9:49
+	android:glEsVersion
+		ADDED from AndroidManifest.xml:9:16
 application
 ADDED from AndroidManifest.xml:11:5
 MERGED from com.android.support:appcompat-v7:22.2.0:22:5
