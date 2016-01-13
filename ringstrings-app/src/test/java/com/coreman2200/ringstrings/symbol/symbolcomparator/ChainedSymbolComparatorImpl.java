@@ -1,5 +1,7 @@
 package com.coreman2200.ringstrings.symbol.symbolcomparator;
 
+import com.coreman2200.ringstrings.symbol.symbolinterface.ISymbol;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +20,7 @@ import java.util.Map;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class ChainedSymbolComparatorImpl<T> extends SymbolComparatorImpl<T> {
+public class ChainedSymbolComparatorImpl<T extends ISymbol> extends SymbolComparatorImpl<T> {
     final private List<SymbolComparatorImpl<T>> mComparatorList;
 
     public ChainedSymbolComparatorImpl(List<SymbolComparatorImpl<T>> comparatorList) {
