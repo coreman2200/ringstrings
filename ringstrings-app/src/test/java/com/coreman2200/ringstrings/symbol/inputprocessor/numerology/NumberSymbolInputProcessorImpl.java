@@ -1,8 +1,11 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.numerology;
 
-import com.coreman2200.ringstrings.numbersystem.AbstractNumberSystem;
+import android.support.annotation.NonNull;
+
+import com.coreman2200.ringstrings.numbersystem.NumberSystem;
 import com.coreman2200.ringstrings.numbersystem.INumberSystem;
 import com.coreman2200.ringstrings.numbersystem.NumberSystemType;
+import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
 import com.coreman2200.ringstrings.symbol.inputprocessor.AbstractInputProcessor;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.BaseNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.impl.DerivedNumberSymbolImpl;
@@ -23,13 +26,16 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
  */
 
 public class NumberSymbolInputProcessorImpl extends AbstractInputProcessor implements INumberSymbolInputProcessor {
-
     private static final char[] VOWEL_LIST = {'a', 'e', 'i', 'o', 'u', 'y'};
     protected INumberSystem mNumberSystem;
     int[] derivedFromValues = new int[2];
 
+    public NumberSymbolInputProcessorImpl(RingStringsAppSettings settings) {
+        super(settings);
+    }
+
     protected void setNumberSystem(NumberSystemType type) {
-        mNumberSystem = AbstractNumberSystem.createNumberSystemWithType(type);
+        mNumberSystem = NumberSystem.createNumberSystemWithType(type);
     }
 
     public final INumberSymbol convertTextStringToNumberSymbol(String text) {
@@ -76,7 +82,7 @@ public class NumberSymbolInputProcessorImpl extends AbstractInputProcessor imple
         this.derivedFromValues[1] = getDigitOfValueInNthPlace(value, 0);
     }
 
-    public final INumberSymbol produceNumberSymbolForValue(int value) {
+    protected final INumberSymbol produceNumberSymbolForValue(int value) {
         if (derivedFromValues[0] == 0) // if there is no left digit..
             return produceBaseNumberSymbolForValue(value);
         else

@@ -1,18 +1,19 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped;
 
+import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.GroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.impl.GroupedNumberSymbolsImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IGroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
-import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.Challenges;
+import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.Periods;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 /**
- * ChallengesProcessorImpl
- * Processes the Challenges in a Numerological chart.
+ * PeriodsProcessor
+ * Processes the Period Cycles in a Number Chart.
  *
  * Created by Cory Higginbottom on 5/28/15
  * http://github.com/coreman2200
@@ -24,35 +25,35 @@ import java.util.List;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class ChallengesProcessorImpl extends GroupedNumberSymbolsInputProcessorImpl implements IGroupedNumberSymbolsInputProcessor {
+public class PeriodsProcessor extends GroupedNumberSymbolsInputProcessor implements IGroupedNumberSymbolsInputProcessor {
 
-    IGroupedNumberSymbols getChallenges() {
+    public PeriodsProcessor(RingStringsAppSettings settings) {
+        super(settings);
+    }
+
+    IGroupedNumberSymbols getPeriods() {
         int reducedMonth = singularizeValue(userProfile.getBirthMonth());
         int reducedDay = singularizeValue(userProfile.getBirthDay());
         int reducedYear = singularizeValue(userProfile.getBirthYear());
 
-        IGroupedNumberSymbols challenges = new GroupedNumberSymbolsImpl(GroupedNumberSymbols.CHALLENGES);
-        List<INumberSymbol> challengelist = new ArrayList<>(4);
+        IGroupedNumberSymbols periods = new GroupedNumberSymbolsImpl(GroupedNumberSymbols.PERIODS);
+        List<INumberSymbol> periodslist = new ArrayList<>(3);
 
-        challengelist.add(convertValueToNumberSymbol(Math.abs(reducedDay - reducedMonth)));
-        challengelist.add(convertValueToNumberSymbol(Math.abs(reducedYear - reducedDay)));
-        int p1 = challengelist.get(0).getNumberSymbolValue();
-        int p2 = challengelist.get(1).getNumberSymbolValue();
-        challengelist.add(convertValueToNumberSymbol(Math.abs(p2 - p1)));
-        challengelist.add(convertValueToNumberSymbol(Math.abs(reducedYear - reducedMonth)));
+        periodslist.add(convertValueToNumberSymbol(reducedMonth));
+        periodslist.add(convertValueToNumberSymbol(reducedDay));
+        periodslist.add(convertValueToNumberSymbol(reducedYear));
 
-        Iterator<INumberSymbol> iter = challengelist.listIterator();
-        for (Challenges c : Challenges.values()) {
+        Iterator<INumberSymbol> iter = periodslist.listIterator();
+        for (Periods p : Periods.values()) {
             INumberSymbol symbol = iter.next();
             assert (symbol != null);
-            challenges.addNumberSymbol(c, symbol);
+            periods.addNumberSymbol(p, symbol);
         }
 
-        return challenges;
+        return periods;
     }
 
     public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile() {
-        return getChallenges();
+        return getPeriods();
     }
-
 }

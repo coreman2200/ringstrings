@@ -1,5 +1,6 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped;
 
+import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.GroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.impl.GroupedNumberSymbolsImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IGroupedNumberSymbols;
@@ -11,7 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * PinnaclesProcessorImpl
+ * PinnaclesProcessor
  * Processes input into Pinnacles Number Symbols Grouping.
  *
  * Created by Cory Higginbottom on 5/27/15
@@ -24,7 +25,11 @@ import java.util.List;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class PinnaclesProcessorImpl extends GroupedNumberSymbolsInputProcessorImpl implements IGroupedNumberSymbolsInputProcessor {
+public class PinnaclesProcessor extends GroupedNumberSymbolsInputProcessor implements IGroupedNumberSymbolsInputProcessor {
+
+    public PinnaclesProcessor(RingStringsAppSettings settings) {
+        super(settings);
+    }
 
     private IGroupedNumberSymbols getPinnacles() {
         int reducedMonth = singularizeValue(userProfile.getBirthMonth());

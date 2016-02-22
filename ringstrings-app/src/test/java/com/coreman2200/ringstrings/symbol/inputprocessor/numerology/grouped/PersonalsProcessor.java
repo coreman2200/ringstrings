@@ -1,5 +1,6 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped;
 
+import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.GroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.impl.GroupedNumberSymbolsImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IGroupedNumberSymbols;
@@ -11,7 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * PersonalsProcessorImpl
+ * PersonalsProcessor
  * Processes the user's personal day, month, year..
  *
  * Created by Cory Higginbottom on 5/28/15
@@ -24,7 +25,11 @@ import java.util.List;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class PersonalsProcessorImpl  extends GroupedNumberSymbolsInputProcessorImpl implements IGroupedNumberSymbolsInputProcessor {
+public class PersonalsProcessor extends GroupedNumberSymbolsInputProcessor implements IGroupedNumberSymbolsInputProcessor {
+
+    public PersonalsProcessor(RingStringsAppSettings settings) {
+        super(settings);
+    }
 
     IGroupedNumberSymbols getPersonals() {
         IGroupedNumberSymbols personals = new GroupedNumberSymbolsImpl(GroupedNumberSymbols.PERSONAL);

@@ -1,5 +1,6 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped;
 
+import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.BaseNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.GroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.impl.GroupedNumberSymbolsImpl;
@@ -14,7 +15,7 @@ import java.util.HashMap;
 import java.util.ArrayList;
 
 /**
- * QualitiesProcessorImpl
+ * QualitiesProcessor
  * Processes the user's different numerological qualities.
  *
  * Created by Cory Higginbottom on 5/27/15
@@ -27,8 +28,12 @@ import java.util.ArrayList;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class QualitiesProcessorImpl extends GroupedNumberSymbolsInputProcessorImpl implements IGroupedNumberSymbolsInputProcessor {
+public class QualitiesProcessor extends GroupedNumberSymbolsInputProcessor implements IGroupedNumberSymbolsInputProcessor {
     IGroupedNumberSymbols processedQualities;
+
+    public QualitiesProcessor(RingStringsAppSettings settings) {
+        super(settings);
+    }
 
     private String getFirstCharacterOfString(String text) {
         return text.substring(0, 1);
@@ -44,7 +49,7 @@ public class QualitiesProcessorImpl extends GroupedNumberSymbolsInputProcessorIm
         return convertValueToNumberSymbol(firstNameFirstLetter + midNameFirstLetter + lastNameFirstLetter);
     }
 
-    // ??
+    // TODO: ?? Not used..
     private INumberSymbol numGetBirthDay()
     {
         return convertValueToNumberSymbol(userProfile.getBirthDay());
@@ -106,9 +111,9 @@ public class QualitiesProcessorImpl extends GroupedNumberSymbolsInputProcessorIm
     }
 
     // Karmic Lessons Count..
-    private INumberSymbol numGetSubconsciouSelf()
+    private INumberSymbol numGetSubconsciousSelf()
     {
-        IGroupedNumberSymbols karmiclessons = processedQualities.getGroupedNumberSymbol(Qualities.KARMICLESSONS);
+        IGroupedNumberSymbols karmiclessons = processedQualities.getGroupedNumberSymbol(Qualities.KARMICLESSON);
 
         int karmiccount = karmiclessons.size();
         return convertValueToNumberSymbol(9 - karmiccount);
@@ -120,7 +125,7 @@ public class QualitiesProcessorImpl extends GroupedNumberSymbolsInputProcessorIm
         if (passions.size() == 0)
             return BaseNumberSymbols.ZERO.getBaseNumberSymbol();
 
-        IListedNumberSymbols hpgroup = new ListedNumberSymbolsImpl(GroupedNumberSymbols.HIDDEN_PASSIONS);
+        IListedNumberSymbols hpgroup = new ListedNumberSymbolsImpl(GroupedNumberSymbols.HIDDENPASSIONS);
 
         for (INumberSymbol lesson : passions)
             hpgroup.addNumberSymbol(lesson);
@@ -163,7 +168,7 @@ public class QualitiesProcessorImpl extends GroupedNumberSymbolsInputProcessorIm
     private INumberSymbol numGetKarmicLessonsListFromOccurrenceMap(HashMap<BaseNumberSymbols, Integer> occurrences) {
         final ArrayList<INumberSymbol> lessons = getListOfNotOccurredFromMap(occurrences);
 
-        IListedNumberSymbols klgroup = new ListedNumberSymbolsImpl(GroupedNumberSymbols.KARMIC_LESSONS);
+        IListedNumberSymbols klgroup = new ListedNumberSymbolsImpl(GroupedNumberSymbols.KARMICLESSON);
 
         for (INumberSymbol lesson : lessons)
             klgroup.addNumberSymbol(lesson);
@@ -189,6 +194,7 @@ public class QualitiesProcessorImpl extends GroupedNumberSymbolsInputProcessorIm
 
     @Override
     public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile() {
+        // TODO: Protocol for building grouped & charted elems..
         processedQualities = new GroupedNumberSymbolsImpl(GroupedNumberSymbols.QUALITIES);
         processedQualities.addNumberSymbol(Qualities.LIFEPATH, numGetLifePath());
         processedQualities.addNumberSymbol(Qualities.BALANCE, numGetBalance());
@@ -200,9 +206,9 @@ public class QualitiesProcessorImpl extends GroupedNumberSymbolsInputProcessorIm
 
         HashMap<BaseNumberSymbols, Integer> occurrences = numMapOccurenceOfNumberSymbolsInName();
         processedQualities.addNumberSymbol(Qualities.HIDDENPASSIONS, numGetHiddenPassionsFromOccurrenceMap(occurrences));
-        processedQualities.addNumberSymbol(Qualities.KARMICLESSONS, numGetKarmicLessonsListFromOccurrenceMap(occurrences));
+        processedQualities.addNumberSymbol(Qualities.KARMICLESSON, numGetKarmicLessonsListFromOccurrenceMap(occurrences));
 
-        processedQualities.addNumberSymbol(Qualities.SUBCONSCIOUSSELF, numGetSubconsciouSelf());
+        processedQualities.addNumberSymbol(Qualities.SUBCONSCIOUSSELF, numGetSubconsciousSelf());
 
         return processedQualities;
     }
