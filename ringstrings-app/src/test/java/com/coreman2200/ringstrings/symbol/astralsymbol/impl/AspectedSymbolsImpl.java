@@ -20,7 +20,7 @@ import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IAstralSymbol;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class AspectedSymbolsImpl extends GroupedAstralSymbolsImpl implements IAspectSymbol, IRelatedSymbols {
+public class AspectedSymbolsImpl extends GroupedAstralSymbolsImpl implements IAspectSymbol {
     public enum AspectType {
         ASPECT,
         TRANSIT
@@ -37,6 +37,14 @@ public class AspectedSymbolsImpl extends GroupedAstralSymbolsImpl implements IAs
         mType = AspectType.ASPECT;
     }
 
+    private static double getDegreeBetweenSymbols(Aspects aspect, IAstralSymbol s1, IAstralSymbol s2) {
+        double deg1 = s1.getAstralSymbolDegree();
+        double deg2 = s2.getAstralSymbolDegree();
+        double deghalf = aspect.aspectDegree()/2;
+
+        return (deg1 > deg2) ? wrapDegree(deg2 + deghalf) : wrapDegree(deg1 + deghalf);
+    }
+
     @Override
     protected void setSymbolStrata() {
         mSymbolStrata = AstralStrata.ASTRALASPECT;
@@ -44,14 +52,6 @@ public class AspectedSymbolsImpl extends GroupedAstralSymbolsImpl implements IAs
 
     public void setType(AspectType type) {
         mType = type;
-    }
-
-    private static double getDegreeBetweenSymbols(Aspects aspect, IAstralSymbol s1, IAstralSymbol s2) {
-        double deg1 = s1.getAstralSymbolDegree();
-        double deg2 = s2.getAstralSymbolDegree();
-        double deghalf = aspect.aspectDegree()/2;
-
-        return (deg1 > deg2) ? wrapDegree(deg2 + deghalf) : wrapDegree(deg1 + deghalf);
     }
 
 }

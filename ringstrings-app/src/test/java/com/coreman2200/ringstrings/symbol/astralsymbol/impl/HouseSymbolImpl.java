@@ -38,6 +38,7 @@ public class HouseSymbolImpl extends GroupedAstralSymbolsImpl implements IHouseS
     public void addAstralSymbol(Enum<? extends Enum<?>> name, IAstralSymbol symbol) {
         super.addAstralSymbol(name, symbol);
         ICelestialBodySymbol body = (ICelestialBodySymbol)symbol;
+        // TODO: Should the body know the parent?
         body.setHouse(this);
     }
 }

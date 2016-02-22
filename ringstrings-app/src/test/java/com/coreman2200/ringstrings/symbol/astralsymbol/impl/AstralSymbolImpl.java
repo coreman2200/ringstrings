@@ -20,15 +20,15 @@ import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IAstralSymbol;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-abstract public class AstralSymbolImpl extends AbstractSymbol<IAstralSymbol> implements IAstralSymbol, ISymbol {
+abstract public class AstralSymbolImpl extends AbstractSymbol<IAstralSymbol> implements IAstralSymbol {
     protected double mDegree;
 
     protected AstralSymbolImpl(Enum<? extends Enum<?>> symbolid, double degree) {
         super(symbolid);
         mDegree = degree;
 
-        if (symbolStrata().compareTo(SymbolStrata.RELATED_SYMBOLS) <= 0)
-            addSymbolDataForKey(symbolid, this);
+        //if (symbolStrata().compareTo(SymbolStrata.RELATED_SYMBOLS) <= 0)
+        //    addSymbolDataForKey(symbolid, this);
     }
 
     public final double getAstralSymbolDegree() {

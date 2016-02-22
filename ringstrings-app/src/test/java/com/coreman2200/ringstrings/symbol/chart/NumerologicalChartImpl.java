@@ -34,6 +34,7 @@ public class NumerologicalChartImpl extends GroupedNumberSymbolsImpl implements 
 
     public NumerologicalChartImpl() {
         super(GroupedNumberSymbols.CHART);
+        // TODO: Chains?? These aren't even tested to function properly, so.. Supertest code..
         ChainedSymbolComparatorImpl comparator = new ChainedSymbolComparatorImpl(new SymbolStrataComparatorImpl(),
                 new NumberSymbolOrderComparatorImpl());
         setSymbolComparator(comparator);

@@ -20,7 +20,7 @@ import java.util.HashMap;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-abstract public class GroupedAstralSymbolsImpl extends AstralSymbolImpl implements IGroupedAstralSymbols, IGroupedSymbols {
+abstract public class GroupedAstralSymbolsImpl extends AstralSymbolImpl implements IGroupedAstralSymbols {
 
     public GroupedAstralSymbolsImpl(Enum<? extends Enum<?>> id, double degree) {
         super(id, degree);

@@ -23,7 +23,7 @@ import java.util.LinkedHashMap;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class GroupedNumberSymbolsImpl extends NumberSymbolImpl implements IGroupedSymbols, IGroupedNumberSymbols {
+public class GroupedNumberSymbolsImpl extends NumberSymbolImpl implements IGroupedNumberSymbols {
 
     public GroupedNumberSymbolsImpl(GroupedNumberSymbols group) {
         super(group, 0);

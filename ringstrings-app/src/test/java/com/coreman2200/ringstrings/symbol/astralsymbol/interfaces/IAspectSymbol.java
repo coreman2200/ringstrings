@@ -1,6 +1,7 @@
 package com.coreman2200.ringstrings.symbol.astralsymbol.interfaces;
 
 import com.coreman2200.ringstrings.symbol.astralsymbol.impl.AspectedSymbolsImpl;
+import com.coreman2200.ringstrings.symbol.symbolinterface.IRelatedSymbols;
 
 /**
  * IAspectSymbol
@@ -16,6 +17,6 @@ import com.coreman2200.ringstrings.symbol.astralsymbol.impl.AspectedSymbolsImpl;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public interface IAspectSymbol {
+public interface IAspectSymbol extends IGroupedAstralSymbols, IRelatedSymbols {
     void setType(AspectedSymbolsImpl.AspectType type);
 }

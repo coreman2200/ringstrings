@@ -25,6 +25,7 @@ public class BaseNumberSymbolImpl extends NumberSymbolImpl implements IBaseNumbe
         this.mSymbolID = symbol;
     }
 
+    // TODO: Is this necessary? Check uses for this && for relevance in interface..
     public final BaseNumberSymbols getBaseNumberSymbolID() {
         return (BaseNumberSymbols)mSymbolID;
     }

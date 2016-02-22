@@ -19,6 +19,7 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.DerivedKarmicDebt
  */
 
 public interface IDerivedNumberSymbol extends INumberSymbol, IRelatedSymbols {
+    int getDerivedSymbolsValue();
     INumberSymbol getLeftDigitNumberSymbol();
     INumberSymbol getRightDigitNumberSymbol();
     DerivedKarmicDebtSymbols getKarmicDebt();

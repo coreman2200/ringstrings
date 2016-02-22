@@ -20,8 +20,8 @@ public enum GroupedNumberSymbols {
     PERIODS,
     PINNACLES,
     PERSONAL,
-    KARMIC_LESSONS,
-    HIDDEN_PASSIONS,
+    KARMICLESSON,
+    HIDDENPASSIONS,
     CHART,
     RELATIONAL
 }

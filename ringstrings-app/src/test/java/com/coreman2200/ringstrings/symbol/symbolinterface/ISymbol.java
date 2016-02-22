@@ -2,6 +2,10 @@ package com.coreman2200.ringstrings.symbol.symbolinterface;
 
 import com.coreman2200.ringstrings.symbol.SymbolStrata;
 
+import java.util.Collection;
+import java.util.Map;
+import java.util.Set;
+
 /**
  * ISymbol
  * Defines interface for all Symbol elements in MyResonance (numbers, celestial bodies, individuals..)
@@ -16,10 +20,12 @@ import com.coreman2200.ringstrings.symbol.SymbolStrata;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public interface ISymbol {
+public interface ISymbol<T extends ISymbol> {
     String name();
     int size();
     SymbolStrata symbolStrata();
+    Enum<? extends Enum<?>> symbolID();
+    Collection<Enum<? extends Enum<?>>> symbolIDCollection();
+    Set<Map.Entry<Enum<? extends Enum<?>>, T>> produceSymbol();
     void testGenerateLogs();
-    // TODO: Each Symbol must ...
 }

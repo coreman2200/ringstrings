@@ -38,13 +38,21 @@ public enum SymbolStrata {
         this.mStrataTypeList = Arrays.asList(stratas);
     }
 
-    public static SymbolStrata getSymbolStrataFor(Enum<? extends Enum<?>> stratatype) {
+    public List<Enum> getRelevantSymbolGroup() {
+        return mStrataTypeList;
+    }
+
+    static public SymbolStrata getSymbolStrataFor(Enum<? extends Enum<?>> stratatype) {
+        if (stratatype.getClass().equals(SymbolStrata.class))
+            return (SymbolStrata)stratatype;
+
         for (SymbolStrata strata : SymbolStrata.values()) {
             if (strata.mStrataTypeList.contains(stratatype)) {
                 return strata;
             }
         }
 
+        // TODO: assert (false);
         throw new NullPointerException();
      }
 

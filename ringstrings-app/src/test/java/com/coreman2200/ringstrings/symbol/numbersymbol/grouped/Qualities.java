@@ -1,7 +1,7 @@
 package com.coreman2200.ringstrings.symbol.numbersymbol.grouped;
 
 /**
- * Qualities
+ * Quality
  * description
  *
  * Created by Cory Higginbottom on 5/27/15
@@ -24,5 +24,5 @@ public enum Qualities {
     SUBCONSCIOUSSELF,
     PERSONALITY,
     HIDDENPASSIONS,
-    KARMICLESSONS
+    KARMICLESSON
 }

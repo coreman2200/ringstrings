@@ -38,6 +38,7 @@ public class ZodiacSymbolImpl extends GroupedAstralSymbolsImpl implements IZodia
     public void addAstralSymbol(Enum<? extends Enum<?>> name, IAstralSymbol symbol) {
         super.addAstralSymbol(name, symbol);
         ICelestialBodySymbol body = (ICelestialBodySymbol)symbol;
+        // TODO: Should the body know the parent?
         body.setSign(this);
     }
 

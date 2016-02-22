@@ -1,10 +1,10 @@
 package com.coreman2200.ringstrings.symbol.symbolinterface;
 
-import com.coreman2200.ringstrings.symbol.chart.Charts;
+import com.coreman2200.ringstrings.symbol.entitysymbol.EntityStrata;
 
 /**
- * IChartedSymbols
- * Interface for all Charted Symbol objects
+ * IEntitySymbol
+ * Interface for Entity Symbols.
  *
  * Created by Cory Higginbottom on 5/29/15
  * http://github.com/coreman2200
@@ -16,7 +16,6 @@ import com.coreman2200.ringstrings.symbol.chart.Charts;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public interface IChartedSymbols extends IGroupedSymbols {
-    void testGenerateLoggingsForFullChart();
-    Charts getChartType();
+public interface IEntitySymbol extends IRelatedSymbolMapping {
+
 }

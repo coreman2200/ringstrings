@@ -35,6 +35,7 @@ public class AstrologicalChartImpl extends AstralSymbolImpl implements IGroupedA
 
     public AstrologicalChartImpl(Charts chart, double offset) {
         super(chart, offset);
+        // // TODO: Chains?? These aren't even tested to function properly, so.. Supertest code..
         ChainedSymbolComparatorImpl comparator = new ChainedSymbolComparatorImpl(new AstralHouseComparatorImpl(), new AstralSymbolDegreeComparatorImpl(offset));
         setSymbolComparator(new AstralHouseComparatorImpl());
         mChartType = chart;

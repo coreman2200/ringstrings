@@ -59,8 +59,8 @@ public class RelatedSymbolMap<T extends ISymbol> {
     }
 
     private void resortMap() {
-        mSortedInstanceSet.clear();
         mSortedInstanceSet = new TreeSet<>(mCurrentComparator);
+        mSortedInstanceSet.clear();
         mSortedInstanceSet.addAll(mBackingUnsortedMap.entrySet());
     }
 
@@ -90,7 +90,12 @@ public class RelatedSymbolMap<T extends ISymbol> {
     }
 
     public SortedSet<Map.Entry<Enum<? extends Enum<?>>, T>> getSortedSymbolMap() {
+        resortMap();
         return mSortedInstanceSet;
+    }
+
+    public Collection<Enum<? extends Enum<?>>> getUnsortedSymbolIDs() {
+        return mBackingUnsortedMap.keySet();
     }
 
     public Collection<T> getUnsortedSymbols() {
@@ -99,9 +104,9 @@ public class RelatedSymbolMap<T extends ISymbol> {
 
     public Collection<T> getSortedSymbols(SortOrder order) {
         switch (order) {
-            case ASCENDING:
-                return produceValueListFromSortedSet();
             case DESCENDING:
+                return produceValueListFromSortedSet();
+            case ASCENDING:
                 List sortedset = produceValueListFromSortedSet();
                 Collections.reverse(sortedset);
                 return (sortedset);
@@ -112,8 +117,31 @@ public class RelatedSymbolMap<T extends ISymbol> {
 
     private List<T> produceValueListFromSortedSet() {
         List<T> list = new ArrayList<>();
+        resortMap();
         for (Map.Entry<Enum<? extends Enum<?>>, T> entry : mSortedInstanceSet)
             list.add(entry.getValue());
+
+        return list;
+    }
+
+    public Collection<Enum<? extends Enum<?>>> getSortedSymbolIDs(SortOrder order) {
+        switch (order) {
+            case DESCENDING:
+                return produceKeyListFromSortedSet();
+            case ASCENDING:
+                List sortedset = produceKeyListFromSortedSet();
+                Collections.reverse(sortedset);
+                return (sortedset);
+            default:
+                throw new RuntimeException("Sort order not set.");
+        }
+    }
+
+    private List<Enum<? extends Enum<?>>> produceKeyListFromSortedSet() {
+        List<Enum<? extends Enum<?>>> list = new ArrayList<>();
+        resortMap();
+        for (Map.Entry<Enum<? extends Enum<?>>, T> entry : mSortedInstanceSet)
+            list.add(entry.getKey());
 
         return list;
     }

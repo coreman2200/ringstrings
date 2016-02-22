@@ -22,7 +22,7 @@ import com.coreman2200.ringstrings.symbol.symbolcomparator.NumberSymbolValueComp
  */
 
 public class RelatedNumberSymbolsImpl extends NumberSymbolImpl implements IRelatedNumberSymbols {
-    protected NumberSymbolValueComparatorImpl mNumberSymbolComparator;
+    protected NumberSymbolValueComparatorImpl mNumberSymbolComparator; // TODO: Restrict access to comparators..
     protected RelatedSymbolMap<INumberSymbol> mRelatedNumberSymbolMap;
 
     public RelatedNumberSymbolsImpl() {

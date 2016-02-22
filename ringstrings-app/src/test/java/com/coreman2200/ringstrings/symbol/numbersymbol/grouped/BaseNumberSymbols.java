@@ -6,9 +6,12 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.impl.BaseNumberSymbolImpl
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IBaseNumberSymbol;
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Set;
 
 /**
  * BaseNumberSymbol
@@ -36,9 +39,9 @@ public enum BaseNumberSymbols implements INumberSymbol {
     EIGHT(8),
     NINE(9),
     ELEVEN(11),
-    TWENTY_TWO(22),
-    THIRTY_THREE(33),
-    FOURTY_FOUR(44);
+    TWENTYTWO(22),
+    THIRTYTHREE(33);
+    //FOURTYFOUR(44);
 
     static private final Map<Integer, IBaseNumberSymbol> baseNumbers = Collections.unmodifiableMap(mapBaseNumberSymbols());
     private final int baseValue;
@@ -72,6 +75,21 @@ public enum BaseNumberSymbols implements INumberSymbol {
     public int size() { return this.getBaseNumberSymbol().size(); }
 
     public SymbolStrata symbolStrata() { return this.numberSymbol.symbolStrata(); }
+
+    public Enum<? extends Enum<?>> symbolID() { return this; }
+
+    public final Collection<Enum<? extends Enum<?>>> symbolIDCollection() {
+        Collection<Enum<? extends Enum<?>>> symbolIDs = new ArrayList<>();
+        symbolIDs.add(symbolID());
+        return symbolIDs;
+    }
+
+    public final Set<Map.Entry<NumberStrata, INumberSymbol>> produceSymbol() {
+        HashMap<NumberStrata, INumberSymbol> map = new HashMap<>();
+        map.put(getNumberSymbolStrata(), this);
+        Set<Map.Entry<NumberStrata, INumberSymbol>> set = map.entrySet();
+        return set;
+    }
 
     public void testGenerateLogs() { this.numberSymbol.testGenerateLogs(); }
 

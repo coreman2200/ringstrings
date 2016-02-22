@@ -16,6 +16,6 @@ package com.coreman2200.ringstrings.symbol.chart;
 
 public enum Charts {
     ASTRAL_NATAL,
-    ASTRAL_CURRENT,
+    ASTRAL_CURRENT, // TODO: Current to include Numerological symbols? Redef..
     NUMEROLOGICAL
 }

@@ -27,7 +27,8 @@ public class DerivedNumberSymbolImpl extends BaseNumberSymbolImpl implements IDe
     private enum Derived {
         LEFTDIGIT,
         RIGHTDIGIT,
-        KARMIC_DEBT
+        KARMIC_DEBT,
+        DERIVED_VALUE
     }
 
     //private HashMap<Derived, Integer> mDerivedSymbols;
@@ -56,11 +57,11 @@ public class DerivedNumberSymbolImpl extends BaseNumberSymbolImpl implements IDe
     private void setKarmicDebtSymbol(DerivedKarmicDebtSymbols number) {
         mKarmicDebtSymbol = number;
         // TODO: Give BaseNumberSymbols treatment
-        //addSymbolDataForKey(Derived.KARMIC_DEBT, BaseNumberSymbols.getBaseNumberSymbolIDForValue(number.value()) );
+        addSymbolDataForKey(Derived.KARMIC_DEBT, BaseNumberSymbols.getBaseNumberSymbolIDForValue(number.value()) );
         //System.out.println("Karmic Debt Number found: " + number.toString());
     }
 
-    private int getDerivedSymbolsValue() {
+    public int getDerivedSymbolsValue() {
         String leftdigit = String.valueOf(getSymbolDataForKey(Derived.LEFTDIGIT).getNumberSymbolValue());
         String rightdigit = String.valueOf(getSymbolDataForKey(Derived.RIGHTDIGIT).getNumberSymbolValue());
         return Integer.valueOf(leftdigit+rightdigit);
