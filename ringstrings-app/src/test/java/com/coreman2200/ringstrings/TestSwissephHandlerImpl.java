@@ -38,7 +38,7 @@ public class TestSwissephHandlerImpl {
     @Before
     public void setup() {
         mTestActivity = Robolectric.setupActivity(RingStringsActivity.class);
-        mTestFileHandler = new SwissephFileHandlerImpl(mTestActivity.getApplicationContext());
+        mTestFileHandler = SwissephFileHandlerImpl.getInstance(mTestActivity);
     }
 
     @Test
@@ -56,5 +56,7 @@ public class TestSwissephHandlerImpl {
     @Test
     public void testInitializingSwisseph() {
         assert(!mTestFileHandler.getEphemerisPath().isEmpty());
+        assert( mTestFileHandler.isEphemerisDataAvailable() );
     }
+
 }

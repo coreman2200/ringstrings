@@ -1,13 +1,20 @@
 package com.coreman2200.ringstrings;
 
+import android.app.Activity;
+
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.Robolectric;
 import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
 
-import com.coreman2200.ringstrings.profile.IProfile;
+import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
+import com.coreman2200.ringstrings.profiledata.ProfileDataBundleAdapter;
+import com.coreman2200.ringstrings.profiledata.TestDefaultDataBundles;
+import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
 import com.coreman2200.ringstrings.symbol.SymbolStrata;
-import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.NumerologicalChartProcessorImpl;
+import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.NumerologicalChartProcessor;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped.IGroupedNumberSymbolsInputProcessor;
 import com.coreman2200.ringstrings.symbol.numbersymbol.impl.BaseNumberSymbolImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.BaseNumberSymbols;
@@ -37,8 +44,17 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.impl.RelatedNumberSymbols
 @Config(constants = BuildConfig.class)
 public class TestSymbolStrata {
 
-    final IProfile mTestProfile = new TestProfileImpl();
-    final IGroupedNumberSymbolsInputProcessor mTestProcessor = new NumerologicalChartProcessorImpl(mTestProfile);
+    final IProfileDataBundle mTestProfile = new ProfileDataBundleAdapter(TestDefaultDataBundles.testProfileBundleCoryH);
+    IGroupedNumberSymbolsInputProcessor mTestProcessor;
+    private Activity mTestActivity;
+    private RingStringsAppSettings mAppSettings;
+
+    @Before
+    public void setup() {
+        mTestActivity = Robolectric.setupActivity(RingStringsActivity.class);
+        mAppSettings = TestDefaultDataBundles.produceDefaultAppSettingsBundle(mTestActivity);
+        mTestProcessor = new NumerologicalChartProcessor(mTestProfile, mAppSettings);
+    }
 
     @Test
     public void testAllStrataForNumberSymbols() {
@@ -46,7 +62,7 @@ public class TestSymbolStrata {
         INumberSymbol[] numberSymbols = {new BaseNumberSymbolImpl(eight),
                                         new DerivedNumberSymbolImpl(eight, eight, eight),
                                         new GroupedNumberSymbolsImpl(GroupedNumberSymbols.QUALITIES),
-                                        new ListedNumberSymbolsImpl(GroupedNumberSymbols.KARMIC_LESSONS),
+                                        new ListedNumberSymbolsImpl(GroupedNumberSymbols.KARMICLESSON),
                                         new NumerologicalChartImpl(),
                                         new RelatedNumberSymbolsImpl()};
 

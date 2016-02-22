@@ -2,11 +2,12 @@ package com.coreman2200.ringstrings;
 
 import android.app.Activity;
 
-import com.coreman2200.ringstrings.profile.IProfileTestLoc;
+import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
+import com.coreman2200.ringstrings.profiledata.ProfileDataBundleAdapter;
+import com.coreman2200.ringstrings.profiledata.TestDefaultDataBundles;
+import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
 import com.coreman2200.ringstrings.swisseph.ISwissEphemerisManager;
-import com.coreman2200.ringstrings.swisseph.ISwissephFileHandler;
 import com.coreman2200.ringstrings.swisseph.SwissEphemerisManagerImpl;
-import com.coreman2200.ringstrings.swisseph.SwissephFileHandlerImpl;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -32,18 +33,17 @@ import org.robolectric.annotation.Config;
 @RunWith(RobolectricGradleTestRunner.class)
 @Config(constants = BuildConfig.class)
 public class TestSwissEphemerisManagerImpl {
-    private ISwissephFileHandler mTestFileHandler;
     private Activity mTestActivity;
     private ISwissEphemerisManager mTestSwissephManager;
-    private IProfileTestLoc mTestProfile;
+    private IProfileDataBundle mTestProfile;
+    private RingStringsAppSettings mAppSettings;
 
     @Before
     public void setup() {
         mTestActivity = Robolectric.setupActivity(RingStringsActivity.class);
-        mTestFileHandler = new SwissephFileHandlerImpl(mTestActivity.getApplicationContext());
-        assert(mTestFileHandler.isEphemerisDataAvailable());
-        mTestSwissephManager = new SwissEphemerisManagerImpl(mTestFileHandler.getEphemerisPath());
-        mTestProfile = new TestProfileImpl();
+        mAppSettings = TestDefaultDataBundles.produceDefaultAppSettingsBundle(mTestActivity);
+        mTestSwissephManager = new SwissEphemerisManagerImpl(mAppSettings.astro);
+        mTestProfile = new ProfileDataBundleAdapter(TestDefaultDataBundles.testProfileBundleCoryH);
     }
 
     @Test

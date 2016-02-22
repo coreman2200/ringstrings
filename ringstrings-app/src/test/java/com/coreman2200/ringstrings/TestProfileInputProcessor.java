@@ -1,15 +1,17 @@
 package com.coreman2200.ringstrings;
 
 import android.app.Activity;
+import android.content.Context;
 
-import com.coreman2200.ringstrings.profile.IProfileTestLoc;
-import com.coreman2200.ringstrings.profile.RandomizedTestProfileImpl;
+import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
+import com.coreman2200.ringstrings.profiledata.ProfileDataBundleAdapter;
+import com.coreman2200.ringstrings.profiledata.TestDefaultDataBundles;
+import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
 import com.coreman2200.ringstrings.swisseph.ISwissephFileHandler;
-import com.coreman2200.ringstrings.swisseph.SwissephFileHandlerImpl;
+import com.coreman2200.ringstrings.symbol.entitysymbol.Profile.LocalProfileSymbolImpl;
+import com.coreman2200.ringstrings.symbol.entitysymbol.Profile.UserProfileSymbolImpl;
 import com.coreman2200.ringstrings.symbol.symbolinterface.IChartedSymbols;
-import com.coreman2200.ringstrings.symbol.inputprocessor.astrology.ProfileInputProcessor;
-import com.coreman2200.ringstrings.symbol.entitysymbol.profile.LocalProfileSymbolMappingImpl;
-import com.coreman2200.ringstrings.symbol.entitysymbol.profile.UserProfileSymbolMappingImpl;
+import com.coreman2200.ringstrings.symbol.inputprocessor.ProfileInputProcessor;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -37,31 +39,29 @@ import java.util.Collection;
 @RunWith(RobolectricGradleTestRunner.class)
 @Config(constants = BuildConfig.class)
 public class TestProfileInputProcessor {
-    private IProfileTestLoc mTestProfile;
+    private IProfileDataBundle mTestProfile;
     private ISwissephFileHandler mTestFileHandler;
     private Activity mTestActivity;
     private ProfileInputProcessor mTestProcessor;
+    private RingStringsAppSettings mAppSettings;
 
     @Before
     public void setup() {
         mTestActivity = Robolectric.setupActivity(RingStringsActivity.class);
-        mTestFileHandler = new SwissephFileHandlerImpl(mTestActivity.getApplicationContext());
-        assert(mTestFileHandler.isEphemerisDataAvailable());
-        mTestProfile = new TestFriendProfileImpl();
-        mTestProcessor = new ProfileInputProcessor(mTestProfile, mTestFileHandler.getEphemerisPath());
+        mAppSettings = TestDefaultDataBundles.produceDefaultAppSettingsBundle(mTestActivity);
+        mTestProfile = new ProfileDataBundleAdapter(TestDefaultDataBundles.testProfileBundleCoryH);
+        mTestProcessor = new ProfileInputProcessor(mTestProfile, mAppSettings);
     }
 
     @Test
     public void testProfileInputProcessorProducesUserProfile() {
-        Collection<IChartedSymbols> charts = mTestProcessor.produceUserCharts();
-        UserProfileSymbolMappingImpl user = new UserProfileSymbolMappingImpl(mTestProfile);
-        user.addCharts(charts);
+        UserProfileSymbolImpl user = new UserProfileSymbolImpl(mTestProfile, mAppSettings);
         user.testGenerateLogs();
     }
 
     //@Test
     public void testDurationProcessorProducesXRandomProfiles() {
-        mTestProfile = new RandomizedTestProfileImpl();
+        mTestProfile = new ProfileDataBundleAdapter(TestDefaultDataBundles.generateRandomProfile());
         int highval = 0;
         int lowval = Integer.MAX_VALUE;
         int testCount = 1000;
@@ -69,12 +69,12 @@ public class TestProfileInputProcessor {
 
         long loopstart = System.currentTimeMillis();
 
+        Context context = mTestActivity.getApplicationContext();
+
         Collection<IChartedSymbols> charts;
         for (int i = 0; i < testCount; i++) {
-            mTestProfile.genProfile();
-            charts = mTestProcessor.produceUserCharts();
-            LocalProfileSymbolMappingImpl profile = new LocalProfileSymbolMappingImpl(mTestProfile);
-            profile.addCharts(charts);
+            mTestProfile = new ProfileDataBundleAdapter(TestDefaultDataBundles.generateRandomProfile());
+            LocalProfileSymbolImpl profile = new LocalProfileSymbolImpl(mTestProfile, mAppSettings);
             //user.testGenerateLog();
 
             int gsize = profile.size();
