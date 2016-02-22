@@ -1,12 +1,12 @@
 {
-    "ZERO": {
+    "0": {
         "Description": "Zero.",
         "Qualities": [
             "zero"
         ],
         "Name": "0"
     },
-    "ONE": {
+    "1": {
         "Description": "One is the Spark of Presence. One sings of Divinity and Inspiration. Leadership. The Beginning.",
         "Qualities": [
             "beginning",
@@ -22,7 +22,7 @@
         ],
         "Name": "1"
     },
-    "TWO": {
+    "2": {
         "Description": "Two expresses duality. Harmony. The Truth of Oneness is given clarity and distinction through contrast.",
         "Qualities": [
             "harmony",
@@ -37,7 +37,7 @@
         ],
         "Name": "2"
     },
-    "THREE": {
+    "3": {
         "Description": "Three is the number of Creativity, Expression, and Culmination. All. Cycles (Beginning, Middle, End).",
         "Qualities": [
             "creativity",
@@ -52,7 +52,7 @@
         ],
         "Name": "3"
     },
-    "FOUR": {
+    "4": {
         "Description": "Four is the number of building, structure, organization, and wordly and tangible expression",
         "Qualities": [
             "earth",
@@ -68,7 +68,7 @@
         ],
         "Name": "4"
     },
-    "FIVE": {
+    "5": {
         "Description": "Five is the number of exploration, curiosity, freedom and the Journey.",
         "Qualities": [
             "freedom",
@@ -82,7 +82,7 @@
         ],
         "Name": "5"
     },
-    "SIX": {
+    "6": {
         "Description": "Six is the resonance of compassion and understanding. Expressive Love and protection. Wisdom gained through one's experiences.",
         "Qualities": [
             "compassion",
@@ -100,7 +100,7 @@
         ],
         "Name": "6"
     },
-    "SEVEN": {
+    "7": {
         "Description": "Seven is mystical wisdom, intuition, and of the truth connecting all within the cosmos. Hightened sensitivity and awareness.",
         "Qualities": [
             "mysticism",
@@ -113,7 +113,7 @@
         ],
         "Name": "7"
     },
-    "EIGHT": {
+    "8": {
         "Description": "Eight is the number of karma, gain, achievement, and the worldly application of all knowledge and wisdom. Raising.",
         "Qualities": [
             "building",
@@ -128,7 +128,7 @@
         ],
         "Name": "8"
     },
-    "NINE": {
+    "9": {
         "Description": "Nine is the resonance of completion. Attainment. A wisdom that has been made complete and connected with all that came before it in this cycle. Transformation.",
         "Qualities": [
             "completion",
@@ -142,7 +142,7 @@
         ],
         "Name": "9"
     },
-    "ELEVEN": {
+    "11": {
         "Description": "Eleven (11\/2), A Master Number that resonates as the gateway to greater wisdom and spiritual attainment. Vision and Thinking.",
         "Qualities": [
             "gateway",
@@ -156,7 +156,7 @@
         ],
         "Name": "11"
     },
-    "TWENTYTWO": {
+    "22": {
         "Description": "Twenty-Two (22\/4), A Master Number expressed as strong world will, a powerful and determined builder. The manifestation of dreams unto tangability.",
         "Qualities": [
             "master number",
@@ -170,7 +170,7 @@
         ],
         "Name": "22"
     },
-    "THIRTYTHREE": {
+    "33": {
         "Description": "Thirty-Three (33\/6), A Master Number that resonates as the Altruistic. The healer and the teacher. The expression of great love and vision. Selflessness and kindness.",
         "Qualities": [
             "master number",
@@ -185,14 +185,14 @@
         ],
         "Name": "33"
     },
-    "KARMICDEBT10": {
+    "10": {
         "Description": "Karmic Debt Number 10: Good Karma",
         "Qualities": [
             "one"
         ],
         "Name": "10"
     },
-    "KARMICDEBT13": {
+    "13": {
         "Description": "Karmic Debt Number 13: You will have to work long and hard for the things you want ~ there always seems to be something to stumble over as you strive to progress, and it may grow on you how heavy a burden it is to do so much and seemingly get nowhere.. Persist. Never give up. While in a past life you may have gotten away with too little work (or translating your brilliance and creativity into actual Things), you will have to put in a bit extra leg work ~ but the most successful people do the very same, and that's just how they come to be so very successful.",
         "Qualities": [
             "three",
@@ -202,7 +202,7 @@
         ],
         "Name": "13"
     },
-    "KARMICDEBT14": {
+    "14": {
         "Description": "Karmic Debt Number 14: In a past life, there was little effort made to reign in on over-indulgence ~ there was little no structure ~ and as a reflection of this, there is even more need for structure and will-power in this aspect of your life. It will oftentimes feel like you slip through the cracks, or like there's no foundation upon which you may stand at all. Just remain dedicated to your highest goal and attaining it. And avoid over-indulgence when and wherever possible!",
         "Qualities": [
             "four",
@@ -213,7 +213,7 @@
         ],
         "Name": "14"
     },
-    "KARMICDEBT16": {
+    "16": {
         "Description": "Karmic Debt Number 16: You will feel acutely aware of the fact that a Higher Presence or Realm is to blame for the dissolution of your ego, and all things that you have toiled so much to create ~ but this collapse is a reflection of the Need to dissolve the ego, and all things that separate you from Higher Wisdom (7). Trust your Intuition: Do not build even higher walls against the world, for that is what got you here in the first place (past life)! Recognize, instead, that through such painful humility, you are permitted an opportunity to more Greatly align with your True purpose. But first, learn to love and care for the world around you.",
         "Qualities": [
             "six",
@@ -226,7 +226,7 @@
         ],
         "Name": "16"
     },
-    "KARMICDEBT19": {
+    "19": {
         "Description": "Karmic Debt Number 19: In a past life, Selfishness(1) and\/or greed had brought you to use the great wisdom of the (9) to your own ends, or against the better good of the world. Now it'll often feel that every effort to Shine(1) takes a harsh blow, or you meet some kind of resistence; you will have to meet the challenges of the 9: selflessness, duty, and the practice of abundant compassion and understanding.",
         "Qualities": [
             "nine",
@@ -240,21 +240,21 @@
         ],
         "Name": "19"
     },
-    "LIFEPATH": {
+    "LIFEPATHNUMBER": {
         "Description": "Your Life Path Number represents the path you should take through life and the talents and skills you have to make your journey a rewarding one.",
         "Qualities": [
             "life journey"
         ],
         "Name": "Life Path Number"
     },
-    "BIRTHDAY": {
+    "BIRTHDAYNUMBER": {
         "Description": "This number is most influential between your 28th and 56th year. While it is not the most important number in your profile, it does have an effect on your Life’s Path and Destiny.",
         "Qualities": [
             "talents"
         ],
         "Name": "Birth Day Number"
     },
-    "EXPRESSION": {
+    "EXPRESSIONNUMBER": {
         "Description": "Some numerologists refer to this number as the Destiny, because it represents a lifelong target at which you are aiming.  You work at fulfilling this potential every day of your life.  Thus, the Expression number reveals your inner goal, the person you aim to be.",
         "Qualities": [
             "inner goal",
@@ -263,7 +263,7 @@
         ],
         "Name": "Expression Number"
     },
-    "MINOREXPRESSION": {
+    "MINOREXPRESSIONNUMBER": {
         "Description": "Some numerologists refer to this number as the Destiny, because it represents a lifelong target at which you are aiming.  You work at fulfilling this potential every day of your life.  Thus, the Expression number reveals your inner goal, the person you aim to be.",
         "Qualities": [
             "inner goal",
@@ -272,7 +272,7 @@
         ],
         "Name": "Minor Expression Number"
     },
-    "SOULURGE": {
+    "SOULURGENUMBER": {
         "Description": "Your innermost yearning; the dreams closest to your heart. Consequently, it shows your underlying motivation, or the general intention behind many of your actions. It dramatically influences the choices you make in life.",
         "Qualities": [
             "desire",
@@ -280,7 +280,7 @@
         ],
         "Name": "Soul Urge Number"
     },
-    "MINORSOULURGE": {
+    "MINORSOULURGENUMBER": {
         "Description": "Your innermost yearning; the dreams closest to your heart. Consequently, it shows your underlying motivation, or the general intention behind many of your actions. It dramatically influences the choices you make in life.",
         "Qualities": [
             "desire",
@@ -288,28 +288,28 @@
         ],
         "Name": "Minor Soul Urge Number"
     },
-    "PERSONALITY": {
+    "PERSONALITYNUMBER": {
         "Description": "Your Personality, much like your Ascendent, is the first impression you are willing to show the world ~ much like an entry-way to your true nature. It is those aspects that you feel comfortable sharing with people at the outset of a relationship.",
         "Qualities": [
             "personality"
         ],
         "Name": "Personality Number"
     },
-    "MINORPERSONALITY": {
+    "MINORPERSONALITYNUMBER": {
         "Description": "Your Personality, much like your Ascendent, is the first impression you are willing to show the world ~ much like an entry-way to your true nature. It is those aspects that you feel comfortable sharing with people at the outset of a relationship.",
         "Qualities": [
             "personality"
         ],
         "Name": "Minor Personality Number"
     },
-    "BALANCE": {
+    "BALANCENUMBER": {
         "Description": "Your Balance Number reflects the traits you need to bring to the forefront in order the get through difficult periods with the least amount of damage or time wasted on negative influences.",
         "Qualities": [
             "balance"
         ],
         "Name": "Balance Number"
     },
-    "MATURITY": {
+    "MATURITYNUMBER": {
         "Description": "Your Maturity number indicates an underlying wish or desire that gradually surfaces as you mature. This underlying goal begins to emerge as you gain a better understanding of yourself.",
         "Qualities": [
             "goals"
@@ -330,7 +330,7 @@
         ],
         "Name": "Karmic Debt"
     },
-    "HIDDENPASSIONS": {
+    "HIDDENPASSIONSNUMBER": {
         "Description": "Having the talent demands that you express it, that you experience this part of you, and that you live according to its nature. In this way, the Hidden Passion shapes your personality, and guides your life.",
         "Qualities": [
             "passion",
@@ -338,14 +338,14 @@
         ],
         "Name": "Hidden Passions Number"
     },
-    "RATIONALTHOUGHT": {
+    "RATIONALTHOUGHTNUMBER": {
         "Description": "Your Rational Thought number reveals what can probably best be described as your way of thinking.. How you are naturally predisposed to tackling ideas.",
         "Qualities": [
             "thinking"
         ],
         "Name": "Rational Thought Number"
     },
-    "SUBCONSCIOUSSELF": {
+    "SUBCONSCIOUSSELFNUMBER": {
         "Description": "The Subconscious Self reflects the confidence you have in your personal power and competence, as well as in your ability and Way of dealing with sudden events and situations. It shows your capacity to correctly assess a situation and to respond appropriately.",
         "Qualities": [
             "power",
@@ -353,14 +353,14 @@
         ],
         "Name": "Subconscious Self Number"
     },
-    "PERIODS": {
+    "PERIODCYCLES": {
         "Description": "Your Period Cycles are based on the date of your birth. Each Period Cycle lasts approximately twenty-seven years, or three complete epicycles of nine years each.",
         "Qualities": [
             "27 years"
         ],
         "Name": "Period Cycles"
     },
-    "CYCLE1": {
+    "CYCLEONE": {
         "Description": "Finding and Orienting Self in the World",
         "Qualities": [
             "27 years",
@@ -369,7 +369,7 @@
         ],
         "Name": "Cycle One"
     },
-    "CYCLE2": {
+    "CYCLETWO": {
         "Description": "Upon coming to better Understand oneself in the World, this Cycle expresses itself as the gradual emergence of our individual and creative talents.",
         "Qualities": [
             "27 years",
@@ -377,7 +377,7 @@
         ],
         "Name": "Cycle Two"
     },
-    "CYCLE3": {
+    "CYCLETHREE": {
         "Description": "The Third and final Cycle represents a flowering of our inner being. Our true nature has come to fruition. It is during this period that one has the greatest degree of self-expression and personal power.",
         "Qualities": [
             "27 years",
@@ -392,7 +392,7 @@
         ],
         "Name": "Challenges"
     },
-    "CHALLENGE1": {
+    "CHALLENGEONE": {
         "Description": "Your First Challenge moves to the foreground in the early part of your life, and often endures to early mid-life, by which time you will have overcome this obstacle.",
         "Qualities": [
             "lessons",
@@ -400,7 +400,7 @@
         ],
         "Name": "Challenge One"
     },
-    "CHALLENGE2": {
+    "CHALLENGETWO": {
         "Description": "Before you conclude your First Challenge, the Second Challenge will be influencing you. Your Second Challenge will be felt most intensely in the middle part of your life.",
         "Qualities": [
             "lessons",
@@ -408,7 +408,7 @@
         ],
         "Name": "Challenge Two"
     },
-    "CHALLENGE3": {
+    "CHALLENGETHREE": {
         "Description": "The Third or Main Challenge is unique. It will be felt during your entire life, and is more strongly felt than the other Challenges.",
         "Qualities": [
             "lessons",
@@ -416,7 +416,7 @@
         ],
         "Name": "Challenge Three"
     },
-    "CHALLENGE4": {
+    "CHALLENGEFOUR": {
         "Description": "The Fourth and last Challenge begins in late mid-life, and endures throughout the rest of your life.",
         "Qualities": [
             "lessons",
@@ -431,49 +431,49 @@
         ],
         "Name": "Pinnacles"
     },
-    "PINNACLE1": {
+    "1STPINNACLE": {
         "Description": "First 27 years of your life (plus your Life Path Number)",
         "Qualities": [
             "growth"
         ],
         "Name": "1st Pinnacle"
     },
-    "PINNACLE2": {
+    "2NDPINNACLE": {
         "Description": "9 years",
         "Qualities": [
             "growth"
         ],
         "Name": "2nd Pinnacle"
     },
-    "PINNACLE3": {
+    "3RDPINNACLE": {
         "Description": "9 years",
         "Qualities": [
             "growth"
         ],
         "Name": "3rd Pinnacle"
     },
-    "PINNACLE4": {
+    "4THPINNACLE": {
         "Description": "Remainder of your life",
         "Qualities": [
             "growth"
         ],
         "Name": "4th Pinnacle"
     },
-    "YEAR": {
+    "PERSONALYEAR": {
         "Description": "The Personal Years form the building steps that mark your progress through life. Each numbered year has its own characteristics, as symbolized by the number itself.",
         "Qualities": [
             "annual"
         ],
         "Name": "Personal Year"
     },
-    "MONTH": {
+    "PERSONALMONTH": {
         "Description": "The numbers within the monthly and daily cycles have a similar, though less pronounced, impact on us as the yearly cycle has.",
         "Qualities": [
             "monthly"
         ],
         "Name": "Personal Month"
     },
-    "DAY": {
+    "PERSONALDAY": {
         "Description": "The numbers within the monthly and daily cycles have a similar, though less pronounced, impact on us as the yearly cycle has.",
         "Qualities": [
             "daily"
