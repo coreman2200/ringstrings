@@ -15,7 +15,7 @@ package com.coreman2200.ringstrings.symbol.entitysymbol;
  */
 
 public enum EntityStrata {
-    TAG,
+    TAG, // TODO: New description of Symbol or Entity do not include TAG...
     LIGHT,
     RING,
     PROFILE,
