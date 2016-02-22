@@ -27,12 +27,28 @@ import java.io.InputStream;
  */
 
 abstract public class FileHandlerImpl {
-    private final ShadowContext mContext;
-    private final ShadowResources mResources;
+    protected final Context mContext;
+    private final Resources mResources;
 
     protected FileHandlerImpl(Context context) {
-        mContext = Shadows.shadowOf(context);
-        mResources = Shadows.shadowOf(mContext.getResources());
+        mContext = context;
+        mResources = mContext.getResources();
+    }
+
+    protected String writeInputStreamToString(InputStream is) {
+        try
+        {
+            byte [] buffer = new byte[is.available()];
+            while (is.read(buffer) != -1);
+            return new String(buffer);
+
+        }
+        catch (Exception localException)
+        {
+            localException.printStackTrace();
+            assert (false);
+        }
+        return null;
     }
 
     protected void writeInputStreamToFile(InputStream is, File file) {
@@ -76,7 +92,7 @@ abstract public class FileHandlerImpl {
 
     protected String getAbsolutePathWithAppend(String directory) {
         assert (!directory.substring(0,1).contentEquals(File.separator));
-        final String datapath = mContext.getShadowApplication().getApplicationContext().getFilesDir().getAbsolutePath();
+        final String datapath = mContext.getApplicationContext().getFilesDir().getAbsolutePath();
         return datapath + File.separator + directory;
     }
 }

@@ -15,11 +15,10 @@ package com.coreman2200.ringstrings.numbersystem;
  */
 
 
-public class ChaldeanNumberSystem extends AbstractNumberSystem {
+public class ChaldeanNumberSystem extends NumberSystem {
 
-    public ChaldeanNumberSystem()
-    {
-        super();
+    public ChaldeanNumberSystem() {
+        super(NumberSystemType.CHALDEAN);
     }
 
     @Override

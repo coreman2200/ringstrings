@@ -1,6 +1,9 @@
 package com.coreman2200.ringstrings.swisseph;
 
-import com.coreman2200.ringstrings.profile.IProfileTestLoc;
+import android.location.Location;
+
+import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
+import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.CelestialBodies;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.Houses;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.Zodiac;
@@ -44,7 +47,7 @@ public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
     private String mEphemerisFilesPath;
     private SwissEph mEphemeris;
     private SweDate mSwissephDate;
-    private ShadowLocation mGeoLocation;
+    private Location mGeoLocation;
     private StringBuffer mErrorOutputBuffer;
 
     private double armc; // "The ARMC (= sidereal time)"
@@ -58,11 +61,11 @@ public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
     private HashMap<Enum<? extends Enum<?>>, IAstralSymbol> mProducedBodies;
 
 
-    public SwissEphemerisManagerImpl(String ephepath) {
-        mEphemerisFilesPath = ephepath;
+    public SwissEphemerisManagerImpl(RingStringsAppSettings.AstrologySettings astroSettings) {
+        mEphemerisFilesPath = astroSettings.ephe_dir;
     }
 
-    public void produceNatalAstralMappingsForProfile(IProfileTestLoc profile) {
+    public void produceNatalAstralMappingsForProfile(IProfileDataBundle profile) {
         initSwisseph();
         setDate(profile.getBirthDate());
         setLocation(profile.getBirthLocation());
@@ -71,7 +74,10 @@ public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
         astrPlaceBodies();
         closeSwisseph();
     }
-    public void produceCurrentAstralMappingsForProfile(IProfileTestLoc profile) {
+    public void produceCurrentAstralMappingsForProfile(IProfileDataBundle profile) {
+        if (profile.getCurrentLocation() == null)
+            return;
+
         initSwisseph();
         setDate((GregorianCalendar)GregorianCalendar.getInstance());
         setLocation(profile.getCurrentLocation());
@@ -148,6 +154,9 @@ public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
         double julianDay = mSwissephDate.getJulDay();
 
         mEphemeris.swe_calc_ut(julianDay, body.getSwissephValue(), sweCalcFlags, bodiesCalcOutput, mErrorOutputBuffer);
+        if (mErrorOutputBuffer.length() > 0)
+            System.out.println(mErrorOutputBuffer.toString());
+
         assert (mErrorOutputBuffer.length() == 0);
 
         int bodyindex = body.ordinal();
@@ -260,7 +269,7 @@ public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
         //System.out.println("Julian date for date " + date.getTime() + " : " + mSwissephDate.getJulDay());
     }
 
-    private void setLocation(ShadowLocation location) {
+    private void setLocation(Location location) {
         mGeoLocation = location;
     }
 

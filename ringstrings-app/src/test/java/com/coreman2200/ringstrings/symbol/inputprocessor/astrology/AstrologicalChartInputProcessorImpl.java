@@ -1,11 +1,12 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.astrology;
 
-import com.coreman2200.ringstrings.profile.IProfileTestLoc;
+import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
+import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
+import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
 import com.coreman2200.ringstrings.swisseph.ISwissEphemerisManager;
 import com.coreman2200.ringstrings.swisseph.SwissEphemerisManagerImpl;
-import com.coreman2200.ringstrings.symbol.astralsymbol.impl.GroupedAstralSymbolsImpl;
 import com.coreman2200.ringstrings.symbol.astralsymbol.impl.ListedAstralSymbolsImpl;
-import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IGroupedAstralSymbols;
+import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IAspectSymbol;
 import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IListedAstralSymbols;
 import com.coreman2200.ringstrings.symbol.chart.Charts;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.Aspects;
@@ -15,6 +16,7 @@ import com.coreman2200.ringstrings.symbol.astralsymbol.impl.AspectedSymbolsImpl;
 import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IAstralSymbol;
 import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IChartedAstralSymbols;
 import com.coreman2200.ringstrings.symbol.chart.AstrologicalChartImpl;
+import com.coreman2200.ringstrings.symbol.inputprocessor.AbstractInputProcessor;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -35,14 +37,15 @@ import java.util.Map;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class AstrologicalChartInputProcessorImpl {
-    private IProfileTestLoc mUserProfile;
+public class AstrologicalChartInputProcessorImpl extends AbstractInputProcessor {
+    private IProfileDataBundle mUserProfile;
     private ISwissEphemerisManager mSwissephManager;
     private IChartedAstralSymbols mProcessedChart;
 
-    public AstrologicalChartInputProcessorImpl(IProfileTestLoc profile, String ephedir) {
+    public AstrologicalChartInputProcessorImpl(IProfileDataBundle profile, RingStringsAppSettings settings) {
+        super(settings);
         mUserProfile = profile;
-        mSwissephManager = new SwissEphemerisManagerImpl(ephedir);
+        mSwissephManager = new SwissEphemerisManagerImpl(settings.astro);
         assert (mSwissephManager != null);
     }
 
@@ -73,7 +76,7 @@ public class AstrologicalChartInputProcessorImpl {
 
             IAstralSymbol bodysymbol = bodies.get(body);
             comparelist.remove(bodysymbol);
-            AspectedSymbolsImpl aspect = checkForAspects(bodysymbol, comparelist);
+            IAspectSymbol aspect = checkForAspects(bodysymbol, comparelist);
 
             if (aspect != null) {
                 aspect.setType(aspectType);
@@ -89,8 +92,8 @@ public class AstrologicalChartInputProcessorImpl {
         mProcessedChart.addAstralMappings(aspectList);
     }
 
-    private AspectedSymbolsImpl checkForAspects(IAstralSymbol body, Collection<IAstralSymbol> comparelist) {
-        double orb = mUserProfile.getMaxOrb();
+    private IAspectSymbol checkForAspects(IAstralSymbol body, Collection<IAstralSymbol> comparelist) {
+        double orb = mAppSettings.astro.max_orb;
         double deg1 = body.getAstralSymbolDegree();
 
         for (IAstralSymbol elem : comparelist) {

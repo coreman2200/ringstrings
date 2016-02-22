@@ -2,10 +2,12 @@ package com.coreman2200.ringstrings;
 
 import android.app.Activity;
 
-import com.coreman2200.ringstrings.profile.IProfileTestLoc;
-import com.coreman2200.ringstrings.profile.RandomizedTestProfileImpl;
+import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
+import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
+import com.coreman2200.ringstrings.profiledata.ProfileDataBundleAdapter;
+import com.coreman2200.ringstrings.profiledata.TestDefaultDataBundles;
+import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
 import com.coreman2200.ringstrings.swisseph.ISwissephFileHandler;
-import com.coreman2200.ringstrings.swisseph.SwissephFileHandlerImpl;
 import com.coreman2200.ringstrings.symbol.chart.Charts;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.CelestialBodies;
 import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IChartedAstralSymbols;
@@ -35,18 +37,18 @@ import org.robolectric.annotation.Config;
 @RunWith(RobolectricGradleTestRunner.class)
 @Config(constants = BuildConfig.class)
 public class TestAstrologicalChartInputProcessorImpl {
-    private IProfileTestLoc mTestProfile;
+    private IProfileDataBundle mTestProfile;
     private ISwissephFileHandler mTestFileHandler;
     private AstrologicalChartInputProcessorImpl mTestProcessor;
     private Activity mTestActivity;
+    private RingStringsAppSettings mAppSettings;
 
     @Before
     public void setup() {
         mTestActivity = Robolectric.setupActivity(RingStringsActivity.class);
-        mTestFileHandler = new SwissephFileHandlerImpl(mTestActivity.getApplicationContext());
-        assert(mTestFileHandler.isEphemerisDataAvailable());
-        mTestProfile = new TestProfileImpl();
-        mTestProcessor = new AstrologicalChartInputProcessorImpl(mTestProfile, mTestFileHandler.getEphemerisPath());
+        mAppSettings = TestDefaultDataBundles.produceDefaultAppSettingsBundle(mTestActivity);
+        mTestProfile = new ProfileDataBundleAdapter(TestDefaultDataBundles.testProfileBundleCoryH);
+        mTestProcessor = new AstrologicalChartInputProcessorImpl(mTestProfile, mAppSettings);
     }
 
     @Test
@@ -83,7 +85,7 @@ public class TestAstrologicalChartInputProcessorImpl {
 
     //@Test
     public void testDurationProcessorProducesXRandomBirthCharts() {
-        mTestProfile = new RandomizedTestProfileImpl();
+        mTestProfile = new ProfileDataBundleAdapter(TestDefaultDataBundles.generateRandomProfile());
         int highval = 0;
         int lowval = Integer.MAX_VALUE;
         int testCount = 1000;
@@ -93,7 +95,7 @@ public class TestAstrologicalChartInputProcessorImpl {
 
         IChartedAstralSymbols chart;
         for (int i = 0; i < testCount; i++) {
-            mTestProfile.genProfile();
+            mTestProfile = new ProfileDataBundleAdapter(TestDefaultDataBundles.generateRandomProfile());
             chart = mTestProcessor.produceAstrologicalChart(Charts.ASTRAL_NATAL);
 
             int gsize = chart.size();

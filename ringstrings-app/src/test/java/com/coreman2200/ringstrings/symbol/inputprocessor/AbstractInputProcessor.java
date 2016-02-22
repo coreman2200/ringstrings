@@ -1,5 +1,10 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor;
 
+import android.content.Context;
+import android.support.annotation.NonNull;
+
+import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
+
 /**
  * AbstractInputProcessor
  * Processes input data into Symbols (abstract)
@@ -15,4 +20,9 @@ package com.coreman2200.ringstrings.symbol.inputprocessor;
  */
 
 public class AbstractInputProcessor {
+    protected RingStringsAppSettings mAppSettings;
+
+    protected AbstractInputProcessor(@NonNull RingStringsAppSettings settings) {
+        mAppSettings = settings;
+    }
 }

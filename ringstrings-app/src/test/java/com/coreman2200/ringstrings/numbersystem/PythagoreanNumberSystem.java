@@ -15,10 +15,9 @@ package com.coreman2200.ringstrings.numbersystem;
  */
 
 
-public class PythagoreanNumberSystem extends AbstractNumberSystem {
-    public PythagoreanNumberSystem()
-    {
-
+public class PythagoreanNumberSystem extends NumberSystem {
+    public PythagoreanNumberSystem() {
+        super(NumberSystemType.PYTHAGOREAN);
     }
 
     @Override

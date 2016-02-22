@@ -1,6 +1,7 @@
 package com.coreman2200.ringstrings.swisseph;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 
 import com.coreman2200.ringstrings.R;
 import com.coreman2200.ringstrings.RSIO.FileHandlerImpl;
@@ -22,14 +23,23 @@ import java.io.File;
  */
 
 public class SwissephFileHandlerImpl extends FileHandlerImpl implements ISwissephFileHandler {
+    private static SwissephFileHandlerImpl mInstance;
     private static final String _EPHEDIR = "ephe/";
     // Data files comprise Ephemeris for planetary, astroid, and moon datas between 1800 AD – 2399 AD
     private static final String _EPHEASTROIDDATA = "seas_18.se1";
     private static final String _EPHEMOONDATA = "semo_18.se1";
     private static final String _EPHEPLANETARYDATA = "sepl_18.se1";
 
-    public SwissephFileHandlerImpl(Context context) {
+    private SwissephFileHandlerImpl(Context context) {
         super(context);
+        initEphemerisData();
+    }
+
+    static public SwissephFileHandlerImpl getInstance(@NonNull Context context) {
+        if (mInstance == null || mInstance.mContext != context)
+            mInstance = new SwissephFileHandlerImpl(context);
+
+        return mInstance;
     }
 
     private void initEphemerisData() {

@@ -1,6 +1,7 @@
 package com.coreman2200.ringstrings.swisseph;
 
-import com.coreman2200.ringstrings.profile.IProfileTestLoc;
+import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
+import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
 import com.coreman2200.ringstrings.symbol.astralsymbol.interfaces.IAstralSymbol;
 
 import java.util.Map;
@@ -21,8 +22,8 @@ import java.util.Map;
  */
 
 public interface ISwissEphemerisManager {
-    void produceNatalAstralMappingsForProfile(IProfileTestLoc profile);
-    void produceCurrentAstralMappingsForProfile(IProfileTestLoc profile);
+    void produceNatalAstralMappingsForProfile(IProfileDataBundle profile);
+    void produceCurrentAstralMappingsForProfile(IProfileDataBundle profile);
     double getCuspOffset();
     Map<Enum<? extends Enum<?>>, IAstralSymbol> getProducedZodiacMap();
     Map<Enum<? extends Enum<?>>, IAstralSymbol> getProducedHouseMap();
