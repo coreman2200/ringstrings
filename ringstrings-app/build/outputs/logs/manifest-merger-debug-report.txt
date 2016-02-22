@@ -37,8 +37,13 @@ ADDED from AndroidManifest.xml:9:2
 		ADDED from AndroidManifest.xml:9:16
 application
 ADDED from AndroidManifest.xml:11:5
-MERGED from com.android.support:appcompat-v7:22.2.0:22:5
-MERGED from com.android.support:support-v4:22.2.0:22:5
+MERGED from com.android.support:appcompat-v7:23.1.1:22:5
+MERGED from com.android.support:support-v4:23.1.1:22:5
+MERGED from com.android.support:design:23.1.1:22:5
+MERGED from com.android.support:appcompat-v7:23.1.1:22:5
+MERGED from com.android.support:support-v4:23.1.1:22:5
+MERGED from com.android.support:support-v4:23.1.1:22:5
+MERGED from com.android.support:support-v4:23.1.1:22:5
 	android:label
 		ADDED from AndroidManifest.xml:13:9
 	android:allowBackup
@@ -73,8 +78,15 @@ ADDED from AndroidManifest.xml:23:17
 		ADDED from AndroidManifest.xml:23:27
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
-MERGED from com.android.support:appcompat-v7:22.2.0:20:5
-MERGED from com.android.support:support-v4:22.2.0:20:5
+MERGED from com.android.support:appcompat-v7:23.1.1:20:5
+MERGED from com.android.support:support-v4:23.1.1:20:5
+MERGED from com.android.support:design:23.1.1:20:5
+MERGED from com.android.support:appcompat-v7:23.1.1:20:5
+MERGED from com.android.support:support-v4:23.1.1:20:5
+MERGED from com.android.support:recyclerview-v7:23.1.1:20:5
+MERGED from com.android.support:support-v4:23.1.1:20:5
+MERGED from com.android.support:support-v4:23.1.1:20:5
+MERGED from io.reactivex:rxandroid:1.0.1:19:5
 	android:targetSdkVersion
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
