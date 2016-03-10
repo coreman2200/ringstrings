@@ -62,9 +62,9 @@ public class SwissephFileHandlerImpl extends FileHandlerImpl implements ISwissep
     {
         try
         {
-            writeInputStreamToFile(getInputStreamToRawResource(R.raw.seas_18), getFileFromEpheDirectoryNamed(_EPHEASTROIDDATA));
-            writeInputStreamToFile(getInputStreamToRawResource(R.raw.semo_18), getFileFromEpheDirectoryNamed(_EPHEMOONDATA));
-            writeInputStreamToFile(getInputStreamToRawResource(R.raw.sepl_18), getFileFromEpheDirectoryNamed(_EPHEPLANETARYDATA));
+            writeInputStreamToFile(getInputStreamForRawResource(R.raw.seas_18), getFileFromEpheDirectoryNamed(_EPHEASTROIDDATA));
+            writeInputStreamToFile(getInputStreamForRawResource(R.raw.semo_18), getFileFromEpheDirectoryNamed(_EPHEMOONDATA));
+            writeInputStreamToFile(getInputStreamForRawResource(R.raw.sepl_18), getFileFromEpheDirectoryNamed(_EPHEPLANETARYDATA));
         }
         catch (Exception localException)
         {
