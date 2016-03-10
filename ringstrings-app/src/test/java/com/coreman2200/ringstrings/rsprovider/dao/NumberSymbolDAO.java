@@ -10,6 +10,8 @@ import com.coreman2200.ringstrings.rsprovider.RingStringsDbHelper;
 import com.coreman2200.ringstrings.symbol.SymbolStrata;
 import com.coreman2200.ringstrings.symbol.chart.Charts;
 import com.coreman2200.ringstrings.symbol.chart.NumerologicalChartImpl;
+import com.coreman2200.ringstrings.symbol.entitysymbol.Lights.ILightSymbol;
+import com.coreman2200.ringstrings.symbol.entitysymbol.Lights.LightSymbolImpl;
 import com.coreman2200.ringstrings.symbol.inputprocessor.entity.symboldef.SymbolDefFileHandlerImpl;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.NumberSymbolInputProcessorImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.NumberStrata;
@@ -36,15 +38,15 @@ import java.util.Map;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class NumberSymbolDAO extends AbstractSymbolDAO<INumberSymbol> {
+public class NumberSymbolDAO extends AbstractSymbolDAO {
 
-    private NumberSymbolDAO(INumberSymbol symbol, SymbolIDBundle idbundle) {
-        super(symbol, idbundle);
+    private NumberSymbolDAO(ILightSymbol symbol) {
+        super(symbol);
 
     }
 
-    public static NumberSymbolDAO fromNumberSymbolWithIds(INumberSymbol symbol, SymbolIDBundle idbundle) {
-        return new NumberSymbolDAO(symbol, idbundle);
+    public static NumberSymbolDAO fromLightSymbol(ILightSymbol symbol) {
+        return new NumberSymbolDAO(symbol);
     }
 
     public static NumberSymbolDAO fromCursor(RingStringsAppSettings settings, Cursor cursor) throws IOException {
@@ -56,28 +58,17 @@ public class NumberSymbolDAO extends AbstractSymbolDAO<INumberSymbol> {
         final SymbolIDBundle bundle = produceIdBundleWithMap(projMap, settings);
         final Integer value = projMap.get(RingStringsContract.Symbols._VALUE);
         final INumberSymbol symbol = produceNumberSymbol(value, bundle);
+        final ILightSymbol ls = new LightSymbolImpl(bundle, symbol);
 
-        return new NumberSymbolDAO(symbol, bundle);
-    }
-
-    private static SymbolIDBundle produceIdBundleWithMap(Map<String, Integer> map, RingStringsAppSettings settings) {
-        return new SymbolIDBundle.Builder()
-                .profile_id(map.get(RingStringsContract.Symbols._PROFILEID))
-                .chart_id(map.get(RingStringsContract.Symbols._CHARTID))
-                .strata_id(map.get(RingStringsContract.Symbols._STRATAID))
-                .type_id(map.get(RingStringsContract.Symbols._TYPEID))
-                .symbol_id(map.get(RingStringsContract.Symbols._SYMBOLID))
-                .desc_id(map.get(RingStringsContract.Symbols._DESC_ID))
-                .settings(settings)
-                .build();
+        return new NumberSymbolDAO(ls);
     }
 
     private static INumberSymbol produceNumberSymbol(Integer value, SymbolIDBundle bundle) {
-        NumberStrata numstrata = NumberStrata.values()[bundle.strata_id];
+        NumberStrata numstrata = NumberStrata.values()[bundle.type_id];
 
         switch (numstrata) {
             case GROUPEDNUMBERS:
-                GroupedNumberSymbols grouped = GroupedNumberSymbols.values()[bundle.type_id];
+                GroupedNumberSymbols grouped = GroupedNumberSymbols.values()[bundle.symbol_id];
                 return new GroupedNumberSymbolsImpl(grouped);
             case CHARTEDNUMBERS:
                 return new NumerologicalChartImpl();
@@ -94,13 +85,15 @@ public class NumberSymbolDAO extends AbstractSymbolDAO<INumberSymbol> {
     @Override
     public ContentValues getContentValues() {
         int value;
-        if (mSymbol.getNumberSymbolStrata().equals(NumberStrata.DERIVEDNUMBER))
-            value =  ((IDerivedNumberSymbol)mSymbol).getDerivedSymbolsValue();
+        INumberSymbol ns = (INumberSymbol)(mSymbol.getSymbol());
+        if (ns.getNumberSymbolStrata().equals(NumberStrata.DERIVEDNUMBER))
+            value = ((IDerivedNumberSymbol)ns).getDerivedSymbolsValue();
         else
-            value = mSymbol.getNumberSymbolValue();
+            value = ns.getNumberSymbolValue();
 
         ContentValues contentvalues = super.getContentValues();
         contentvalues.put(RingStringsDbHelper.COL_VALUE, value);
+
         return contentvalues;
     }
 }

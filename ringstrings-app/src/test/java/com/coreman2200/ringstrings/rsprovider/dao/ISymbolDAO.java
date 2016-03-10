@@ -1,8 +1,12 @@
 package com.coreman2200.ringstrings.rsprovider.dao;
 
+import android.content.ContentProviderOperation;
 import android.content.ContentValues;
 
+import com.coreman2200.ringstrings.symbol.entitysymbol.Lights.ILightSymbol;
 import com.coreman2200.ringstrings.symbol.symbolinterface.ISymbol;
+
+import java.util.List;
 
 /**
  * ISymbolDAO
@@ -18,9 +22,10 @@ import com.coreman2200.ringstrings.symbol.symbolinterface.ISymbol;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public interface ISymbolDAO<T extends ISymbol> {
-    T getSymbol();
+public interface ISymbolDAO {
+    ILightSymbol getSymbol();
     ContentValues getContentValues();
+    List<ContentProviderOperation> batchCreate();
     void add() throws Exception;
     void delete() throws Exception;
 
