@@ -23,12 +23,13 @@ public class RingStringsDbHelper extends SQLiteOpenHelper {
     public static final String COL_SYMBOL = RingStringsDbSchema.COL_SYMBOL;
     public static final String COL_QUALITY = RingStringsDbSchema.COL_QUALITY;
     public static final String COL_SYMBOLDEF = RingStringsDbSchema.COL_SYMBOLDEF;
-    public static final String COL_PROTOMESSAGE = RingStringsDbSchema.COL_PROTOMESSAGE;
+    public static final String COL_MESSAGE = RingStringsDbSchema.COL_MESSAGE;
     public static final String COL_NAME = RingStringsDbSchema.COL_NAME;
     public static final String COL_DESC = RingStringsDbSchema.COL_DESC;
     public static final String COL_DEGREE = RingStringsDbSchema.COL_DEGREE;
     public static final String COL_VALUE = RingStringsDbSchema.COL_VALUE;
     public static final String COL_SIZE = RingStringsDbSchema.COL_SIZE;
+    public static final String COL_COUNT = RingStringsDbSchema.COL_COUNT;
 
     public RingStringsDbHelper(Context context) {
         super(context, NAME, null, VERSION);
@@ -39,6 +40,8 @@ public class RingStringsDbHelper extends SQLiteOpenHelper {
         db.execSQL(RingStringsDbSchema.DDL_CREATE_TBL_SYMBOLS);
         db.execSQL(RingStringsDbSchema.DDL_CREATE_TBL_QUALITIES);
         db.execSQL(RingStringsDbSchema.DDL_CREATE_TBL_SYMBOLDEFS);
+        db.execSQL(RingStringsDbSchema.DDL_CREATE_TBL_SYMBOLQUALITY_JUNCT);
+        db.execSQL(RingStringsDbSchema.DDL_CREATE_TBL_DEFQUAL_JUNCT);
         db.execSQL(RingStringsDbSchema.DDL_CREATE_TRIGGER_DEL_SYMBOLS);
     }
 
@@ -47,6 +50,8 @@ public class RingStringsDbHelper extends SQLiteOpenHelper {
         db.execSQL(RingStringsDbSchema.DDL_DROP_TBL_SYMBOLS);
         db.execSQL(RingStringsDbSchema.DDL_DROP_TBL_QUALITY);
         db.execSQL(RingStringsDbSchema.DDL_DROP_TBL_SYMBOLDEF);
+        db.execSQL(RingStringsDbSchema.DDL_DROP_TBL_DEFQUAL_JUNCT);
+        db.execSQL(RingStringsDbSchema.DDL_DROP_TBL_SYMBOLQUALITY_JUNCT);
         db.execSQL(RingStringsDbSchema.DDL_DROP_TRIGGER_DEL_SYMBOLS);
         onCreate(db);
     }

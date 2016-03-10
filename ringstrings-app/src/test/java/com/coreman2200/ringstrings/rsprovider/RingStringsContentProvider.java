@@ -14,6 +14,8 @@ import android.net.Uri;
 import android.os.ParcelFileDescriptor;
 import android.text.TextUtils;
 
+import org.assertj.core.util.Strings;
+
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -38,10 +40,14 @@ public class RingStringsContentProvider  extends ContentProvider {
     // helper constants for use with the UriMatcher
     private static final int SYMBOL_LIST = 1;
     private static final int SYMBOL_ID = 2;
-    private static final int QUALITY_LIST = 5;
-    private static final int QUALITY_ID = 6;
+    private static final int QUALITY_LIST = 4;
+    private static final int QUALITY_ID = 5;
     private static final int SYMBOLDEF_ID = 7;
     private static final int SYMBOLDEF_LIST = 8;
+    private static final int DEFQUALITY_ID = 9;
+    private static final int DEFQUALITY_LIST  = 10;
+    private static final int SYMBOLQUALITY_ID = 11;
+    private static final int SYMBOLQUALITY_LIST  = 12;
     private static final UriMatcher URI_MATCHER;
 
     private RingStringsDbHelper mHelper = null;
@@ -56,6 +62,10 @@ public class RingStringsContentProvider  extends ContentProvider {
         URI_MATCHER.addURI(RingStringsContract.AUTHORITY, "quality/#", QUALITY_ID);
         URI_MATCHER.addURI(RingStringsContract.AUTHORITY, "symboldef", SYMBOLDEF_LIST);
         URI_MATCHER.addURI(RingStringsContract.AUTHORITY, "symboldef/#", SYMBOLDEF_ID);
+        URI_MATCHER.addURI(RingStringsContract.AUTHORITY, "symboldef_quality", DEFQUALITY_LIST);
+        URI_MATCHER.addURI(RingStringsContract.AUTHORITY, "symboldef_quality/#", DEFQUALITY_ID);
+        URI_MATCHER.addURI(RingStringsContract.AUTHORITY, "symbol_quality", SYMBOLQUALITY_LIST);
+        URI_MATCHER.addURI(RingStringsContract.AUTHORITY, "symbol_quality/#", SYMBOLQUALITY_ID);
     }
 
 
@@ -80,6 +90,15 @@ public class RingStringsContentProvider  extends ContentProvider {
                 return RingStringsContract.SymbolDescription.CONTENT_ITEM_TYPE;
             case SYMBOLDEF_LIST:
                 return RingStringsContract.SymbolDescription.CONTENT_TYPE;
+            case DEFQUALITY_ID:
+                return RingStringsContract.SymbolDefQualities.CONTENT_ITEM_TYPE;
+            case DEFQUALITY_LIST:
+                return RingStringsContract.SymbolDefQualities.CONTENT_TYPE;
+            case SYMBOLQUALITY_ID:
+                return RingStringsContract.SymbolQualities.CONTENT_ITEM_TYPE;
+            case SYMBOLQUALITY_LIST:
+                return RingStringsContract.SymbolQualities.CONTENT_TYPE;
+
             default:
                 throw new IllegalArgumentException("Unsupported URI: " + uri);
         }
@@ -87,17 +106,34 @@ public class RingStringsContentProvider  extends ContentProvider {
 
     @Override
     public Uri insert(Uri uri, ContentValues values) {
+
         if (URI_MATCHER.match(uri) != SYMBOL_LIST
                 && URI_MATCHER.match(uri) != QUALITY_LIST
-                && URI_MATCHER.match(uri) != SYMBOLDEF_LIST ) {
+                && URI_MATCHER.match(uri) != SYMBOLDEF_LIST
+                && URI_MATCHER.match(uri) != DEFQUALITY_LIST
+                && URI_MATCHER.match(uri) != SYMBOLQUALITY_LIST) {
             throw new IllegalArgumentException(
                     "Unsupported URI for insertion: " + uri);
         }
         SQLiteDatabase db = mHelper.getWritableDatabase();
 
         long id;
+
+
         if (URI_MATCHER.match(uri) == SYMBOL_LIST) {
             id = db.insert(RingStringsDbSchema.TBL_SYMBOLS, null, values);
+
+        } else if (URI_MATCHER.match(uri) == QUALITY_LIST) {
+            id = db.insert(RingStringsDbSchema.TBL_QUALITIES, null, values);
+
+        } else if (URI_MATCHER.match(uri) == SYMBOLDEF_LIST) {
+            id = db.insert(RingStringsDbSchema.TBL_SYMBOLDEFS, null, values);
+
+        } else if (URI_MATCHER.match(uri) == DEFQUALITY_LIST) {
+            id = db.insert(RingStringsDbSchema.TBL_DEFQUAL_JUNCT, null, values);
+
+        } else if (URI_MATCHER.match(uri) == SYMBOLQUALITY_LIST) {
+            id = db.insert(RingStringsDbSchema.TBL_SYMBOLQUAL_JUNCT, null, values);
 
         } else {
             // this insertWithOnConflict is a special case; CONFLICT_REPLACE
@@ -142,15 +178,24 @@ public class RingStringsContentProvider  extends ContentProvider {
         boolean useAuthorityUri = false;
         switch (URI_MATCHER.match(uri)) {
             case SYMBOL_LIST:
-                builder.setTables(RingStringsDbSchema.TBL_SYMBOLS);
                 if (TextUtils.isEmpty(sortOrder)) {
-                    sortOrder = RingStringsContract.Symbols.SORT_ORDER_DEFAULT;
+                    sortOrder = RingStringsContract.Symbols.SORT_ORDER_STRATA;
                 }
-                break;
+                Cursor cursor = db.rawQuery(symbolQuery(projection, selection, sortOrder), selectionArgs);
+
+                // if we want to be notified of any changes:
+                if (useAuthorityUri) {
+                    cursor.setNotificationUri(getContext().getContentResolver(), RingStringsContract.CONTENT_URI);
+                }
+                else {
+                    cursor.setNotificationUri(getContext().getContentResolver(), uri);
+                }
+                return cursor;
+
             case SYMBOL_ID:
                 builder.setTables(RingStringsDbSchema.TBL_SYMBOLS);
                 // limit query to one row at most:
-                builder.appendWhere(RingStringsContract.Symbols._ID + " = "
+                builder.appendWhere(RingStringsContract.Symbols._SYMBOLID + " = "
                         + uri.getLastPathSegment());
                 break;
             case QUALITY_LIST:
@@ -159,7 +204,7 @@ public class RingStringsContentProvider  extends ContentProvider {
             case QUALITY_ID:
                 builder.setTables(RingStringsDbSchema.TBL_QUALITIES);
                 // limit query to one row at most:
-                builder.appendWhere(RingStringsDbSchema.TBL_SYMBOLS + "." + RingStringsContract.Quality._ID + " = " + uri.getLastPathSegment());
+                builder.appendWhere(RingStringsDbSchema.TBL_QUALITIES + "." + RingStringsContract.Quality._QUALITY_ID + " = " + uri.getLastPathSegment());
                 break;
             case SYMBOLDEF_LIST:
                 builder.setTables(RingStringsDbSchema.TBL_SYMBOLDEFS);
@@ -167,7 +212,23 @@ public class RingStringsContentProvider  extends ContentProvider {
             case SYMBOLDEF_ID:
                 builder.setTables(RingStringsDbSchema.TBL_SYMBOLDEFS);
                 // limit query to one row at most:
-                builder.appendWhere(RingStringsDbSchema.TBL_SYMBOLS + "." + RingStringsContract.SymbolDescription._ID + " = " + uri.getLastPathSegment());
+                builder.appendWhere(RingStringsDbSchema.TBL_SYMBOLDEFS + "." + RingStringsContract.SymbolDescription._DESC_ID + " = " + uri.getLastPathSegment());
+                break;
+            case SYMBOLQUALITY_LIST:
+                builder.setTables(RingStringsDbSchema.TBL_SYMBOLQUAL_JUNCT);
+                break;
+            case SYMBOLQUALITY_ID:
+                builder.setTables(RingStringsDbSchema.TBL_SYMBOLQUAL_JUNCT);
+                // limit query to one row at most:
+                builder.appendWhere(RingStringsDbSchema.TBL_SYMBOLQUAL_JUNCT + "." + RingStringsContract.Quality._QUALITY_ID + " = " + uri.getLastPathSegment());
+                break;
+            case DEFQUALITY_LIST:
+                builder.setTables(RingStringsDbSchema.TBL_DEFQUAL_JUNCT);
+                break;
+            case DEFQUALITY_ID:
+                builder.setTables(RingStringsDbSchema.TBL_DEFQUAL_JUNCT);
+                // limit query to one row at most:
+                builder.appendWhere(RingStringsDbSchema.TBL_DEFQUAL_JUNCT + "." + RingStringsContract.SymbolDescription._DESC_ID + " = " + uri.getLastPathSegment());
                 break;
             default:
                 throw new IllegalArgumentException("Unsupported URI: " + uri);
@@ -183,6 +244,22 @@ public class RingStringsContentProvider  extends ContentProvider {
             cursor.setNotificationUri(getContext().getContentResolver(), uri);
         }
         return cursor;
+    }
+
+    private String symbolQuery(String[] projection, String selection, String sortOrder) {
+        StringBuilder selectionBuilder = new StringBuilder();
+
+        //String projString = (projection != null) ? Strings.join(projection).with(", ") : "*";
+        //System.out.println(projString);
+
+        selectionBuilder.append("SELECT * FROM ");
+        selectionBuilder.append(RingStringsDbSchema.LEFT_OUTER_JOIN_STATEMENT + " \n");
+        if (selection != null && !selection.isEmpty())
+            selectionBuilder.append(selection + " \n");
+        selectionBuilder.append("ORDER BY " + sortOrder);
+
+        System.out.println(selectionBuilder.toString());
+        return selectionBuilder.toString();
     }
 
     @Override
