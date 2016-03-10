@@ -1,5 +1,6 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped;
 
+import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
 import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.GroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.impl.GroupedNumberSymbolsImpl;
@@ -31,7 +32,12 @@ public class ChallengesProcessor extends GroupedNumberSymbolsInputProcessor impl
         super(settings);
     }
 
-    IGroupedNumberSymbols getChallenges() {
+    public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile(IProfileDataBundle profile) {
+        this.userProfile = profile;
+        return getChallenges();
+    }
+
+    private IGroupedNumberSymbols getChallenges() {
         int reducedMonth = singularizeValue(userProfile.getBirthMonth());
         int reducedDay = singularizeValue(userProfile.getBirthDay());
         int reducedYear = singularizeValue(userProfile.getBirthYear());
@@ -54,10 +60,6 @@ public class ChallengesProcessor extends GroupedNumberSymbolsInputProcessor impl
         }
 
         return challenges;
-    }
-
-    public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile() {
-        return getChallenges();
     }
 
 }

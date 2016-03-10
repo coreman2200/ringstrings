@@ -1,5 +1,6 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped;
 
+import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.INumberSymbolInputProcessor;
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IGroupedNumberSymbols;
 
@@ -18,5 +19,5 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IGroupedNumber
  */
 
 public interface IGroupedNumberSymbolsInputProcessor extends INumberSymbolInputProcessor {
-    IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile();
+    IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile(IProfileDataBundle profile);
 }

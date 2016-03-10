@@ -1,5 +1,6 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped;
 
+import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
 import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.BaseNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.GroupedNumberSymbols;
@@ -193,7 +194,8 @@ public class QualitiesProcessor extends GroupedNumberSymbolsInputProcessor imple
     }
 
     @Override
-    public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile() {
+    public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile(IProfileDataBundle profile) {
+        userProfile = profile;
         // TODO: Protocol for building grouped & charted elems..
         processedQualities = new GroupedNumberSymbolsImpl(GroupedNumberSymbols.QUALITIES);
         processedQualities.addNumberSymbol(Qualities.LIFEPATH, numGetLifePath());

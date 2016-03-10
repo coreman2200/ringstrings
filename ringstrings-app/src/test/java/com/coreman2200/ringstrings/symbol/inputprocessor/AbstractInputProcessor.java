@@ -1,6 +1,5 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 
 import com.coreman2200.ringstrings.protos.RingStringsAppSettings;

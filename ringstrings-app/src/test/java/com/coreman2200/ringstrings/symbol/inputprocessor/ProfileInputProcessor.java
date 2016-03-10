@@ -1,14 +1,22 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor;
 
+import android.database.Cursor;
+
 import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
 import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
+import com.coreman2200.ringstrings.rsprovider.RingStringsContract;
 import com.coreman2200.ringstrings.symbol.chart.Charts;
+import com.coreman2200.ringstrings.symbol.entitysymbol.EntityStrata;
+import com.coreman2200.ringstrings.symbol.entitysymbol.Profile.IProfileSymbol;
+import com.coreman2200.ringstrings.symbol.entitysymbol.Profile.LocalProfileSymbolImpl;
+import com.coreman2200.ringstrings.symbol.entitysymbol.Profile.UserProfileSymbolImpl;
 import com.coreman2200.ringstrings.symbol.inputprocessor.astrology.AstrologicalChartInputProcessorImpl;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.NumerologicalChartProcessor;
 import com.coreman2200.ringstrings.symbol.symbolinterface.IChartedSymbols;
 
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.Map;
 
 /**
  * ProfileInputProcessor
@@ -25,22 +33,32 @@ import java.util.LinkedList;
  */
 
 public class ProfileInputProcessor extends AbstractInputProcessor {
-    private IProfileDataBundle mProfileData;
-    Collection<IChartedSymbols> mCharts;
 
-    public ProfileInputProcessor(IProfileDataBundle profile, RingStringsAppSettings settings) {
+    private IProfileDataBundle mProfileData;
+
+    public ProfileInputProcessor(RingStringsAppSettings settings) {
         super(settings);
-        mProfileData = profile;
     }
 
-    public Collection<IChartedSymbols> produceUserCharts() {
-        mCharts = new LinkedList<>();
-        AstrologicalChartInputProcessorImpl astroprocessor = new AstrologicalChartInputProcessorImpl(mProfileData, mAppSettings);
-        mCharts.add(astroprocessor.produceAstrologicalChart(Charts.ASTRAL_NATAL));
-        mCharts.add(astroprocessor.produceAstrologicalChart(Charts.ASTRAL_CURRENT));
+    public IProfileSymbol produceProfile(IProfileDataBundle profile, EntityStrata type) {
+        mProfileData = profile;
 
-        NumerologicalChartProcessor numberprocessor = new NumerologicalChartProcessor(mProfileData, mAppSettings);
-        mCharts.add(numberprocessor.produceGroupedNumberSymbolsForProfile());
+        switch (type) {
+            case USER:
+                return new UserProfileSymbolImpl(mProfileData, produceProfileCharts());
+            default:
+                return new LocalProfileSymbolImpl(mProfileData, produceProfileCharts());
+        }
+    }
+
+    private Collection<IChartedSymbols> produceProfileCharts() {
+        Collection<IChartedSymbols> mCharts = new LinkedList<>();
+        AstrologicalChartInputProcessorImpl astroprocessor = new AstrologicalChartInputProcessorImpl(mAppSettings);
+        mCharts.add(astroprocessor.produceAstrologicalChart(mProfileData, Charts.ASTRAL_NATAL));
+        mCharts.add(astroprocessor.produceAstrologicalChart(mProfileData, Charts.ASTRAL_CURRENT));
+
+        NumerologicalChartProcessor numberprocessor = new NumerologicalChartProcessor(mAppSettings);
+        mCharts.add(numberprocessor.produceGroupedNumberSymbolsForProfile(mProfileData));
 
         return mCharts;
     }

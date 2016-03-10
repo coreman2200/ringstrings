@@ -42,14 +42,14 @@ public class AstrologicalChartInputProcessorImpl extends AbstractInputProcessor 
     private ISwissEphemerisManager mSwissephManager;
     private IChartedAstralSymbols mProcessedChart;
 
-    public AstrologicalChartInputProcessorImpl(IProfileDataBundle profile, RingStringsAppSettings settings) {
+    public AstrologicalChartInputProcessorImpl(RingStringsAppSettings settings) {
         super(settings);
-        mUserProfile = profile;
         mSwissephManager = new SwissEphemerisManagerImpl(settings.astro);
         assert (mSwissephManager != null);
     }
 
-    public IChartedAstralSymbols produceAstrologicalChart(Charts type) {
+    public IChartedAstralSymbols produceAstrologicalChart(IProfileDataBundle profile, Charts type) {
+        mUserProfile = profile;
         mSwissephManager.produceNatalAstralMappingsForProfile(mUserProfile);
         mProcessedChart = new AstrologicalChartImpl(type, mSwissephManager.getCuspOffset());
         mProcessedChart.addAstralMappings(mSwissephManager.getProducedZodiacMap());

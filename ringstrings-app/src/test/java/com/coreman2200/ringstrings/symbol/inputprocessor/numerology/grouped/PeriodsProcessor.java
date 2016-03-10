@@ -1,5 +1,6 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped;
 
+import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
 import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
 import com.coreman2200.ringstrings.symbol.numbersymbol.grouped.GroupedNumberSymbols;
 import com.coreman2200.ringstrings.symbol.numbersymbol.impl.GroupedNumberSymbolsImpl;
@@ -53,7 +54,8 @@ public class PeriodsProcessor extends GroupedNumberSymbolsInputProcessor impleme
         return periods;
     }
 
-    public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile() {
+    public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile(IProfileDataBundle profile) {
+        userProfile = profile;
         return getPeriods();
     }
 }

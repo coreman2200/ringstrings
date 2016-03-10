@@ -25,12 +25,13 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IGroupedNumber
 
 public class NumerologicalChartProcessor extends GroupedNumberSymbolsInputProcessor implements IGroupedNumberSymbolsInputProcessor {
 
-    public NumerologicalChartProcessor(IProfileDataBundle profile, RingStringsAppSettings settings) {
+    public NumerologicalChartProcessor(RingStringsAppSettings settings) {
         super(settings);
-        setUserProfile(profile);
     }
 
-    public IChartedNumberSymbols produceGroupedNumberSymbolsForProfile() {
+    public IChartedNumberSymbols produceGroupedNumberSymbolsForProfile(IProfileDataBundle profile) {
+        assert (profile != null);
+        userProfile = profile;
         IChartedNumberSymbols chart = new NumerologicalChartImpl();
 
         // Grouped Symbols that establish the full number symbol
@@ -45,13 +46,11 @@ public class NumerologicalChartProcessor extends GroupedNumberSymbolsInputProces
     }
 
     private IGroupedNumberSymbols getGroupedNumberSymbolsForType(GroupedNumberSymbols type) {
-        return genProcessorType(type).produceGroupedNumberSymbolsForProfile();
+        return genProcessorType(type).produceGroupedNumberSymbolsForProfile(userProfile);
     }
     
     protected IGroupedNumberSymbolsInputProcessor genProcessorType(GroupedNumberSymbols type) {
-        GroupedNumberSymbolsInputProcessor ip = GroupedNumberSymbolsInputProcessor.getProcessor(mAppSettings, type);
-        ip.setUserProfile(userProfile);
-        return ip;
+        return GroupedNumberSymbolsInputProcessor.getProcessor(mAppSettings, type);
     }
 
 }

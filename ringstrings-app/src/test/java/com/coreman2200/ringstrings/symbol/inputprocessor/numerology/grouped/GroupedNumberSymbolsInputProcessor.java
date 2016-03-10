@@ -29,17 +29,12 @@ abstract public class GroupedNumberSymbolsInputProcessor extends NumberSymbolInp
         setNumberSystem(getNumberSystemType());
     }
 
-    public void setUserProfile(IProfileDataBundle profile) {
-        assert (profile != null);
-        userProfile = profile;
-    }
-
     private NumberSystemType getNumberSystemType() {
         final int ordinal = mAppSettings.num.number_system.getValue();
         return NumberSystemType.values()[ordinal];
     }
 
-    abstract public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile();
+    abstract public IGroupedNumberSymbols produceGroupedNumberSymbolsForProfile(IProfileDataBundle profile);
 
 
     //QUALITIES, CHALLENGES, PERIODS, PINNACLES, PERSONAL, KARMICLESSON, HIDDENPASSIONS, CHART, RELATIONAL
