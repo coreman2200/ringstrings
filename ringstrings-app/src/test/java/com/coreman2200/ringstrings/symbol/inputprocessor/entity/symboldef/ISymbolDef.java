@@ -21,5 +21,5 @@ import java.util.Collection;
 public interface ISymbolDef {
     String getName();
     String getDescription();
-    Collection<Enum<? extends Enum<?>>> getQualities();
+    Collection<TagSymbols> getQualities();
 }

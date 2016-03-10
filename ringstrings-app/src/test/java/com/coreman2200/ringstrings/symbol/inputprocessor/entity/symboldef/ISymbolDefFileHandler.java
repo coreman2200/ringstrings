@@ -1,6 +1,7 @@
 package com.coreman2200.ringstrings.symbol.inputprocessor.entity.symboldef;
 
 import com.coreman2200.ringstrings.RSIO.IFileHandler;
+import com.coreman2200.ringstrings.protos.SymbolDescription;
 
 /**
  * ISymbolDefFileHandler
@@ -17,6 +18,6 @@ import com.coreman2200.ringstrings.RSIO.IFileHandler;
  */
 
 public interface ISymbolDefFileHandler extends IFileHandler {
-    ISymbolDef produceSymbolDefForSymbol(Enum<? extends Enum<?>> symbol);
+    SymbolDescription produceSymbolDefForSymbol(Enum<? extends Enum<?>> symbol);
 
 }

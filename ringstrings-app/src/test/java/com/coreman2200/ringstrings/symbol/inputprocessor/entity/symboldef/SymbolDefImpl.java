@@ -26,7 +26,7 @@ import java.util.Collection;
 public class SymbolDefImpl implements ISymbolDef {
     private String mDescription;
     private String mName;
-    private Collection<Enum<? extends Enum<?>>> mTags;
+    private Collection<TagSymbols> mTags;
     private Enum<? extends Enum<?>> mID;
 
     public SymbolDefImpl(Enum<? extends Enum<?>> id, JSONObject symbol) {
@@ -42,9 +42,9 @@ public class SymbolDefImpl implements ISymbolDef {
         }
     }
 
-    private Collection<Enum<? extends Enum<?>>> produceQualities(JSONArray qualities) throws JSONException {
+    private Collection<TagSymbols> produceQualities(JSONArray qualities) throws JSONException {
 
-        Collection<Enum<? extends Enum<?>>> tags = new ArrayList<>(qualities.length());
+        Collection<TagSymbols> tags = new ArrayList<>(qualities.length());
         for (int i = 0; i < qualities.length(); i++) {
             tags.add(TagSymbols.getTagForString(qualities.getString(i)));
         }
@@ -55,7 +55,7 @@ public class SymbolDefImpl implements ISymbolDef {
     public Enum<? extends Enum<?>> symbolID() { return mID;}
 
     @Override
-    public Collection<Enum<? extends Enum<?>>> getQualities() {
+    public Collection<TagSymbols> getQualities() {
         return mTags;
     }
 

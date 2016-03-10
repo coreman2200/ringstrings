@@ -4,14 +4,16 @@ import android.content.Context;
 
 import com.coreman2200.ringstrings.R;
 import com.coreman2200.ringstrings.RSIO.FileHandlerImpl;
+import com.coreman2200.ringstrings.protos.SymbolDescription;
 
+import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONML;
 import org.json.JSONObject;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Locale;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -29,13 +31,30 @@ import java.util.Map;
  */
 
 public class SymbolDefFileHandlerImpl extends FileHandlerImpl implements ISymbolDefFileHandler {
-    static private SymbolDefFileHandlerImpl mInstance;
-    private Map<Enum<? extends Enum<?>>, ISymbolDef> mSymbolDefs = new HashMap<>();
+    enum SymbolDefKeys {
+        NAME("Name"),
+        QUALITIES("Qualities"),
+        DESCRIPTION("Description"),
+        COLOR("Color");
+
+        final String mKey;
+
+        SymbolDefKeys(final String key) {
+            mKey = key;
+        }
+
+        final public String getKey() {
+            return mKey;
+        }
+    }
+
+    private static SymbolDefFileHandlerImpl mInstance;
+    private static final Map<Enum<? extends Enum<?>>, SymbolDescription> mSymbolDefs = new HashMap<>();
     private JSONObject mSymbolData;
 
     private SymbolDefFileHandlerImpl(Context context) {
         super(context);
-        produceSymbolDefDataObject();
+        produceSymbolDefJSONDataObject();
         mInstance = this;
     }
 
@@ -51,8 +70,8 @@ public class SymbolDefFileHandlerImpl extends FileHandlerImpl implements ISymbol
         return mInstance;
     }
 
-    private void produceSymbolDefDataObject() {
-        InputStream symboldefIS = this.getInputStreamToRawResource(R.raw.symboldefs); // TODO: access to R.raw.symboldefs?
+    private void produceSymbolDefJSONDataObject() {
+        InputStream symboldefIS = this.getInputStreamForRawResource(R.raw.symboldefs); // TODO: access to R.raw.symboldefs?
         try {
             mSymbolData = new JSONObject(writeInputStreamToString(symboldefIS));
         } catch (JSONException e) {
@@ -62,22 +81,47 @@ public class SymbolDefFileHandlerImpl extends FileHandlerImpl implements ISymbol
 
     }
 
-    public ISymbolDef produceSymbolDefForSymbol(Enum<? extends Enum<?>> symbol) {
-        ISymbolDef symboldef = mSymbolDefs.get(symbol);
+    public SymbolDescription produceSymbolDefForSymbol(Enum<? extends Enum<?>> symbol) {
+        SymbolDescription symboldef = mSymbolDefs.get(symbol);
         if (symboldef == null)
             symboldef = makeSymbolDefForSymbol(symbol);
 
         return symboldef;
     }
 
-    private ISymbolDef makeSymbolDefForSymbol(Enum<? extends Enum<?>> symbol) {
+    private SymbolDescription makeSymbolDefForSymbol(Enum<? extends Enum<?>> symbol) {
         JSONObject symbolData = mSymbolData.optJSONObject(symbol.name());
         if (symbolData == null)
             return null;
 
-        ISymbolDef symbolDef = new SymbolDefImpl(symbol, symbolData);
-        mSymbolDefs.put(symbol, symbolDef);
-        return symbolDef;
+        SymbolDescription def = null;
+        try {
+            List<String> qualities = getListFromJSONArray(symbolData.getJSONArray(SymbolDefKeys.QUALITIES.getKey()));
+            def =new SymbolDescription.Builder()
+                    .name(symbolData.getString(SymbolDefKeys.NAME.getKey()))
+                    .description(symbolData.getString(SymbolDefKeys.DESCRIPTION.getKey()))
+                    .qualities(qualities)
+                    //.color(####)
+                    .build();
+
+            mSymbolDefs.put(symbol, def);
+        } catch (JSONException e) {
+            System.out.println(e.getLocalizedMessage());
+            assert (false);
+        }
+        return def;
+    }
+
+    private List<String> getListFromJSONArray(JSONArray array) throws JSONException {
+        List<String> list = new ArrayList<>();
+
+        if (array == null)
+            return list;
+
+        for (int i =0; i < array.length(); i++)
+            list.add(array.getString(i));
+
+        return list;
     }
 
 }
