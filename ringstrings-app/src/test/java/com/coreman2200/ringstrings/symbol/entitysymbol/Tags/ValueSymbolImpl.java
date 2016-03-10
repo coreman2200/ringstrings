@@ -2,9 +2,11 @@ package com.coreman2200.ringstrings.symbol.entitysymbol.Tags;
 
 import com.coreman2200.ringstrings.symbol.SymbolStrata;
 import com.coreman2200.ringstrings.symbol.numbersymbol.NumberStrata;
+import com.coreman2200.ringstrings.symbol.symbolinterface.ISymbol;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -51,11 +53,31 @@ public class ValueSymbolImpl implements IValueSymbol {
         return symbolIDs;
     }
 
-    public final Set<Map.Entry<Enum<? extends Enum<?>>, IValueSymbol>> produceSymbol() {
+    @Override
+    public Collection<TagSymbols> getQualities() {
+        Collection<TagSymbols> empty = Collections.EMPTY_SET;
+        return  empty;
+    }
+
+    @Override
+    public int getTagCount(TagSymbols tag) {
+        return mValue;
+    }
+
+    @Override
+    public Enum<? extends Enum<?>> symbolType() {
+        return symbolID();
+    }
+
+    @Override
+    public boolean containsSymbol(ISymbol symbol) {
+        return false;
+    }
+
+    public final Map<Enum<? extends Enum<?>>, IValueSymbol> produceSymbol() {
         HashMap<Enum<? extends Enum<?>>, IValueSymbol> map = new HashMap<>();
         map.put(NumberStrata.BASENUMBER, this);
-        Set<Map.Entry<Enum<? extends Enum<?>>, IValueSymbol>> set = map.entrySet();
-        return set;
+        return map;
     }
 
     public void testGenerateLogs() {  }

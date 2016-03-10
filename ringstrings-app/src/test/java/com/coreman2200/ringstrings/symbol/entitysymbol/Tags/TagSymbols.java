@@ -2,6 +2,7 @@ package com.coreman2200.ringstrings.symbol.entitysymbol.Tags;
 
 import com.coreman2200.ringstrings.symbol.SymbolStrata;
 import com.coreman2200.ringstrings.symbol.entitysymbol.EntityStrata;
+import com.coreman2200.ringstrings.symbol.symbolinterface.ISymbol;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -70,6 +71,11 @@ public enum TagSymbols implements ITagSymbol {
 
     public Enum<? extends Enum<?>> symbolID() { return this; }
 
+    @Override
+    public Enum<? extends Enum<?>> symbolType() {
+        return getEntityID();
+    }
+
     // TODO: Poor dependency
     public final Collection<Enum<? extends Enum<?>>> symbolIDCollection() {
         Collection<Enum<? extends Enum<?>>> symbolIDs = new ArrayList<>();
@@ -77,14 +83,30 @@ public enum TagSymbols implements ITagSymbol {
         return symbolIDs;
     }
 
-    public final Set<Map.Entry<EntityStrata, ITagSymbol>> produceSymbol() {
+    public final Map<EntityStrata, ITagSymbol> produceSymbol() {
         HashMap<EntityStrata, ITagSymbol> map = new HashMap<>();
         map.put(getEntityID(), this);
-        Set<Map.Entry<EntityStrata, ITagSymbol>> set = map.entrySet();
-        return set;
+        return map;
+    }
+
+    @Override
+    public Collection<TagSymbols> getQualities() {
+        Collection<TagSymbols> tags = new ArrayList<>();
+        tags.add(this);
+        return tags;
+    }
+
+    @Override
+    public int getTagCount(TagSymbols tag) {
+        return 1;
     }
 
     public void testGenerateLogs() { }
+
+    @Override
+    public boolean containsSymbol(ISymbol symbol) {
+        return (symbol instanceof ITagSymbol);
+    }
 
     @Override
     public String toString() {
