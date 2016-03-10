@@ -5,6 +5,7 @@ import com.coreman2200.ringstrings.symbol.numbersymbol.NumberStrata;
 import com.coreman2200.ringstrings.symbol.numbersymbol.impl.BaseNumberSymbolImpl;
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.IBaseNumberSymbol;
 import com.coreman2200.ringstrings.symbol.numbersymbol.interfaces.INumberSymbol;
+import com.coreman2200.ringstrings.symbol.symbolinterface.ISymbol;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -78,17 +79,26 @@ public enum BaseNumberSymbols implements INumberSymbol {
 
     public Enum<? extends Enum<?>> symbolID() { return this; }
 
+    @Override
+    public Enum<? extends Enum<?>> symbolType() {
+        return getNumberSymbolStrata();
+    }
+
+    @Override
+    public boolean containsSymbol(ISymbol symbol) {
+        return this.equals(symbol);
+    }
+
     public final Collection<Enum<? extends Enum<?>>> symbolIDCollection() {
         Collection<Enum<? extends Enum<?>>> symbolIDs = new ArrayList<>();
         symbolIDs.add(symbolID());
         return symbolIDs;
     }
 
-    public final Set<Map.Entry<NumberStrata, INumberSymbol>> produceSymbol() {
+    public final Map<NumberStrata, INumberSymbol> produceSymbol() {
         HashMap<NumberStrata, INumberSymbol> map = new HashMap<>();
         map.put(getNumberSymbolStrata(), this);
-        Set<Map.Entry<NumberStrata, INumberSymbol>> set = map.entrySet();
-        return set;
+        return map;
     }
 
     public void testGenerateLogs() { this.numberSymbol.testGenerateLogs(); }

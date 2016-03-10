@@ -57,7 +57,7 @@ public class DerivedNumberSymbolImpl extends BaseNumberSymbolImpl implements IDe
     private void setKarmicDebtSymbol(DerivedKarmicDebtSymbols number) {
         mKarmicDebtSymbol = number;
         // TODO: Give BaseNumberSymbols treatment
-        addSymbolDataForKey(Derived.KARMIC_DEBT, BaseNumberSymbols.getBaseNumberSymbolIDForValue(number.value()) );
+        addSymbolDataForKey(Derived.KARMIC_DEBT, DerivedKarmicDebtSymbols.getKarmicDebtSymbolForValue(number.value()) );
         //System.out.println("Karmic Debt Number found: " + number.toString());
     }
 

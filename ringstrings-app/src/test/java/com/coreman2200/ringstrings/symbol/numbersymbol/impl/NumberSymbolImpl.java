@@ -27,8 +27,8 @@ abstract public class NumberSymbolImpl extends AbstractSymbol<INumberSymbol> imp
         super(id);
         this.symbolValue = value;
 
-        //if (symbolStrata().compareTo(SymbolStrata.RELATED_SYMBOLS) <= 0)
-        //    addSymbolDataForKey(id, this);
+        if (symbolStrata().compareTo(SymbolStrata.RELATED_SYMBOLS) <= 0)
+            addSymbolDataForKey(id, this);
     }
 
     public final NumberStrata getNumberSymbolStrata() {
