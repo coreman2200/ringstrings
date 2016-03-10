@@ -2,8 +2,12 @@ package com.coreman2200.ringstrings.symbol.entitysymbol.Profile;
 
 import com.coreman2200.ringstrings.rsprovider.dao.ISymbolDAO;
 import com.coreman2200.ringstrings.symbol.entitysymbol.Lights.ILightSymbol;
+import com.coreman2200.ringstrings.symbol.entitysymbol.Tags.TagSymbols;
+import com.coreman2200.ringstrings.symbol.symbolinterface.IEntitySymbol;
+import com.coreman2200.ringstrings.symbol.symbolinterface.ISymbol;
 
 import java.util.Collection;
+import java.util.Map;
 
 /**
  * IProfileSymbol
@@ -21,5 +25,5 @@ import java.util.Collection;
 
 public interface IProfileSymbol extends ILightSymbol {
     boolean saveProfile();
-
+    ILightSymbol produceLightSymbolFor(ISymbol symbol);
 }

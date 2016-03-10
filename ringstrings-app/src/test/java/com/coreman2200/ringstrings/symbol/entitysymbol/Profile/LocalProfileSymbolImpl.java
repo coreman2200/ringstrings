@@ -1,10 +1,11 @@
 package com.coreman2200.ringstrings.symbol.entitysymbol.Profile;
 
-import android.content.Context;
 
 import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
-import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
 import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
+import com.coreman2200.ringstrings.symbol.symbolinterface.IChartedSymbols;
+
+import java.util.Collection;
 
 /**
  * LocalProfileSymbolImpl
@@ -22,8 +23,8 @@ import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
 
 public class LocalProfileSymbolImpl extends AbstractProfileSymbol {
 
-    public LocalProfileSymbolImpl(IProfileDataBundle profile, RingStringsAppSettings settings) {
-        super(profile, settings);
+    public LocalProfileSymbolImpl(IProfileDataBundle profile, Collection<IChartedSymbols> data) {
+        super(profile, data);
     }
 
 }
