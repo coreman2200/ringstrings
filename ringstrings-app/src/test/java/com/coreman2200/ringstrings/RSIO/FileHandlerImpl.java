@@ -72,7 +72,7 @@ abstract public class FileHandlerImpl {
         }
     }
 
-    protected InputStream getInputStreamToRawResource(int resource) {
+    protected InputStream getInputStreamForRawResource(int resource) {
         return mResources.openRawResource(resource);
     }
 
