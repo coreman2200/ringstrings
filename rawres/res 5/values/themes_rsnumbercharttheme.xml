@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="RSNumberChartTheme" parent="@style/_RSNumberChartTheme"/>
+
+  <style name="_RSNumberChartTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+
+    <item name="android:editTextBackground">@drawable/rsnumbercharttheme_edit_text_holo_light</item>
+
+    <item name="android:textColorHighlight">#99cc0000</item>
+    <item name="android:textSelectHandleLeft">@drawable/rsnumbercharttheme_text_select_handle_left</item>
+    <item name="android:textSelectHandleRight">@drawable/rsnumbercharttheme_text_select_handle_right</item>
+    <item name="android:textSelectHandle">@drawable/rsnumbercharttheme_text_select_handle_middle</item>
+
+    <item name="android:listChoiceIndicatorMultiple">@drawable/rsnumbercharttheme_btn_check_holo_light</item>
+
+    <item name="android:listChoiceIndicatorSingle">@drawable/rsnumbercharttheme_btn_radio_holo_light</item>
+
+    <item name="android:buttonStyle">@style/ButtonRSNumberChartTheme</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonRSNumberChartTheme</item>
+
+    <item name="android:dropDownSpinnerStyle">@style/SpinnerRSNumberChartTheme</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarRSNumberChartTheme</item>
+
+  </style>
+
+</resources>

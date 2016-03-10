@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "/Users/new/git/ringstrings/ringstrings-app/build/intermediates/res/merged/debug/raw/symboldefs.txt",
+        "source": "/Users/new/git/ringstrings/ringstrings-app/src/main/res/raw/symboldefs.txt"
+    },
+    {
+        "merged": "/Users/new/git/ringstrings/ringstrings-app/build/intermediates/res/merged/debug/raw/gtags.xml",
+        "source": "/Users/new/git/ringstrings/ringstrings-app/src/main/res/raw/gtags.xml"
+    },
+    {
+        "merged": "/Users/new/git/ringstrings/ringstrings-app/build/intermediates/res/merged/debug/raw/renderglow_vert.txt",
+        "source": "/Users/new/git/ringstrings/ringstrings-app/src/main/res/raw/renderglow_vert.txt"
+    },
+    {
+        "merged": "/Users/new/git/ringstrings/ringstrings-app/build/intermediates/res/merged/debug/raw/renderlight_vert.txt",
+        "source": "/Users/new/git/ringstrings/ringstrings-app/src/main/res/raw/renderlight_vert.txt"
+    },
+    {
+        "merged": "/Users/new/git/ringstrings/ringstrings-app/build/intermediates/res/merged/debug/raw/renderlight_frag.txt",
+        "source": "/Users/new/git/ringstrings/ringstrings-app/src/main/res/raw/renderlight_frag.txt"
+    },
+    {
+        "merged": "/Users/new/git/ringstrings/ringstrings-app/build/intermediates/res/merged/debug/raw/simple_frag.txt",
+        "source": "/Users/new/git/ringstrings/ringstrings-app/src/main/res/raw/simple_frag.txt"
+    },
+    {
+        "merged": "/Users/new/git/ringstrings/ringstrings-app/build/intermediates/res/merged/debug/raw/semo_18.se1",
+        "source": "/Users/new/git/ringstrings/ringstrings-app/src/main/res/raw/semo_18.se1"
+    },
+    {
+        "merged": "/Users/new/git/ringstrings/ringstrings-app/build/intermediates/res/merged/debug/raw/rendertext_vert.txt",
+        "source": "/Users/new/git/ringstrings/ringstrings-app/src/main/res/raw/rendertext_vert.txt"
+    },
+    {
+        "merged": "/Users/new/git/ringstrings/ringstrings-app/build/intermediates/res/merged/debug/raw/rendertext_frag.txt",
+        "source": "/Users/new/git/ringstrings/ringstrings-app/src/main/res/raw/rendertext_frag.txt"
+    },
+    {
+        "merged": "/Users/new/git/ringstrings/ringstrings-app/build/intermediates/res/merged/debug/raw/gouraud_vert.txt",
+        "source": "/Users/new/git/ringstrings/ringstrings-app/src/main/res/raw/gouraud_vert.txt"
+    },
+    {
+        "merged": "/Users/new/git/ringstrings/ringstrings-app/build/intermediates/res/merged/debug/raw/sepl_18.se1",
+        "source": "/Users/new/git/ringstrings/ringstrings-app/src/main/res/raw/sepl_18.se1"
+    },
+    {
+        "merged": "/Users/new/git/ringstrings/ringstrings-app/build/intermediates/res/merged/debug/raw/renderglow_frag.txt",
+        "source": "/Users/new/git/ringstrings/ringstrings-app/src/main/res/raw/renderglow_frag.txt"
+    },
+    {
+        "merged": "/Users/new/git/ringstrings/ringstrings-app/build/intermediates/res/merged/debug/raw/gouraud_frag.txt",
+        "source": "/Users/new/git/ringstrings/ringstrings-app/src/main/res/raw/gouraud_frag.txt"
+    },
+    {
+        "merged": "/Users/new/git/ringstrings/ringstrings-app/build/intermediates/res/merged/debug/raw/simple_vert.txt",
+        "source": "/Users/new/git/ringstrings/ringstrings-app/src/main/res/raw/simple_vert.txt"
+    },
+    {
+        "merged": "/Users/new/git/ringstrings/ringstrings-app/build/intermediates/res/merged/debug/raw/seas_18.se1",
+        "source": "/Users/new/git/ringstrings/ringstrings-app/src/main/res/raw/seas_18.se1"
+    },
+    {
+        "merged": "/Users/new/git/ringstrings/ringstrings-app/build/intermediates/res/merged/debug/raw/gent.xml",
+        "source": "/Users/new/git/ringstrings/ringstrings-app/src/main/res/raw/gent.xml"
+    }
+]

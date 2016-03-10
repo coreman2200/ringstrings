@@ -9,34 +9,39 @@ package com.coreman2200.ringstrings;
 
 public final class R {
     public static final class anim {
-        public static final int abc_fade_in=0x7f050000;
-        public static final int abc_fade_out=0x7f050001;
-        public static final int abc_grow_fade_in_from_bottom=0x7f050002;
-        public static final int abc_popup_enter=0x7f050003;
-        public static final int abc_popup_exit=0x7f050004;
-        public static final int abc_shrink_fade_out_from_bottom=0x7f050005;
-        public static final int abc_slide_in_bottom=0x7f050006;
-        public static final int abc_slide_in_top=0x7f050007;
-        public static final int abc_slide_out_bottom=0x7f050008;
-        public static final int abc_slide_out_top=0x7f050009;
-        public static final int design_fab_in=0x7f05000a;
-        public static final int design_fab_out=0x7f05000b;
-        public static final int design_snackbar_in=0x7f05000c;
-        public static final int design_snackbar_out=0x7f05000d;
+        public static final int abc_fade_in=0x7f040000;
+        public static final int abc_fade_out=0x7f040001;
+        public static final int abc_grow_fade_in_from_bottom=0x7f040002;
+        public static final int abc_popup_enter=0x7f040003;
+        public static final int abc_popup_exit=0x7f040004;
+        public static final int abc_shrink_fade_out_from_bottom=0x7f040005;
+        public static final int abc_slide_in_bottom=0x7f040006;
+        public static final int abc_slide_in_top=0x7f040007;
+        public static final int abc_slide_out_bottom=0x7f040008;
+        public static final int abc_slide_out_top=0x7f040009;
+        public static final int design_bottom_sheet_slide_in=0x7f04000a;
+        public static final int design_bottom_sheet_slide_out=0x7f04000b;
+        public static final int design_fab_in=0x7f04000c;
+        public static final int design_fab_out=0x7f04000d;
+        public static final int design_snackbar_in=0x7f04000e;
+        public static final int design_snackbar_out=0x7f04000f;
+    }
+    public static final class animator {
+        public static final int fab_anim=0x7f050000;
     }
     public static final class attr {
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionBarDivider=0x7f0100a5;
+        public static final int actionBarDivider=0x7f01003e;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionBarItemBackground=0x7f0100a6;
+        public static final int actionBarItemBackground=0x7f01003f;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionBarPopupTheme=0x7f01009f;
+        public static final int actionBarPopupTheme=0x7f010038;
         /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -54,117 +59,117 @@ containing a value of this type.
 <tr><td><code>wrap_content</code></td><td>0</td><td></td></tr>
 </table>
          */
-        public static final int actionBarSize=0x7f0100a4;
+        public static final int actionBarSize=0x7f01003d;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionBarSplitStyle=0x7f0100a1;
+        public static final int actionBarSplitStyle=0x7f01003a;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionBarStyle=0x7f0100a0;
+        public static final int actionBarStyle=0x7f010039;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionBarTabBarStyle=0x7f01009b;
+        public static final int actionBarTabBarStyle=0x7f010034;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionBarTabStyle=0x7f01009a;
+        public static final int actionBarTabStyle=0x7f010033;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionBarTabTextStyle=0x7f01009c;
+        public static final int actionBarTabTextStyle=0x7f010035;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionBarTheme=0x7f0100a2;
+        public static final int actionBarTheme=0x7f01003b;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionBarWidgetTheme=0x7f0100a3;
+        public static final int actionBarWidgetTheme=0x7f01003c;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionButtonStyle=0x7f0100bf;
+        public static final int actionButtonStyle=0x7f010058;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionDropDownStyle=0x7f0100bb;
+        public static final int actionDropDownStyle=0x7f010054;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionLayout=0x7f010051;
+        public static final int actionLayout=0x7f0100c6;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionMenuTextAppearance=0x7f0100a7;
+        public static final int actionMenuTextAppearance=0x7f010040;
         /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
-        public static final int actionMenuTextColor=0x7f0100a8;
+        public static final int actionMenuTextColor=0x7f010041;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionModeBackground=0x7f0100ab;
+        public static final int actionModeBackground=0x7f010044;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionModeCloseButtonStyle=0x7f0100aa;
+        public static final int actionModeCloseButtonStyle=0x7f010043;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionModeCloseDrawable=0x7f0100ad;
+        public static final int actionModeCloseDrawable=0x7f010046;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionModeCopyDrawable=0x7f0100af;
+        public static final int actionModeCopyDrawable=0x7f010048;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionModeCutDrawable=0x7f0100ae;
+        public static final int actionModeCutDrawable=0x7f010047;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionModeFindDrawable=0x7f0100b3;
+        public static final int actionModeFindDrawable=0x7f01004c;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionModePasteDrawable=0x7f0100b0;
+        public static final int actionModePasteDrawable=0x7f010049;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionModePopupWindowStyle=0x7f0100b5;
+        public static final int actionModePopupWindowStyle=0x7f01004e;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionModeSelectAllDrawable=0x7f0100b1;
+        public static final int actionModeSelectAllDrawable=0x7f01004a;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionModeShareDrawable=0x7f0100b2;
+        public static final int actionModeShareDrawable=0x7f01004b;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionModeSplitBackground=0x7f0100ac;
+        public static final int actionModeSplitBackground=0x7f010045;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionModeStyle=0x7f0100a9;
+        public static final int actionModeStyle=0x7f010042;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionModeWebSearchDrawable=0x7f0100b4;
+        public static final int actionModeWebSearchDrawable=0x7f01004d;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionOverflowButtonStyle=0x7f01009d;
+        public static final int actionOverflowButtonStyle=0x7f010036;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int actionOverflowMenuStyle=0x7f01009e;
+        public static final int actionOverflowMenuStyle=0x7f010037;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -172,7 +177,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int actionProviderClass=0x7f010053;
+        public static final int actionProviderClass=0x7f0100c8;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -180,15 +185,15 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int actionViewClass=0x7f010052;
+        public static final int actionViewClass=0x7f0100c7;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int activityChooserViewStyle=0x7f0100c7;
+        public static final int activityChooserViewStyle=0x7f010060;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int alertDialogButtonGroupStyle=0x7f0100ea;
+        public static final int alertDialogButtonGroupStyle=0x7f010083;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -196,15 +201,15 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int alertDialogCenterButtons=0x7f0100eb;
+        public static final int alertDialogCenterButtons=0x7f010084;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int alertDialogStyle=0x7f0100e9;
+        public static final int alertDialogStyle=0x7f010082;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int alertDialogTheme=0x7f0100ec;
+        public static final int alertDialogTheme=0x7f010085;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -212,7 +217,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int allowStacking=0x7f010028;
+        public static final int allowStacking=0x7f010099;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -222,7 +227,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int arrowHeadLength=0x7f010044;
+        public static final int arrowHeadLength=0x7f0100b8;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -232,11 +237,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int arrowShaftLength=0x7f010045;
+        public static final int arrowShaftLength=0x7f0100b9;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int autoCompleteTextViewStyle=0x7f0100f1;
+        public static final int autoCompleteTextViewStyle=0x7f01008a;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -261,7 +266,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int backgroundTint=0x7f01010e;
+        public static final int backgroundTint=0x7f010118;
         /** <p>Must be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -275,7 +280,7 @@ containing a value of this type.
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
          */
-        public static final int backgroundTintMode=0x7f01010f;
+        public static final int backgroundTintMode=0x7f010119;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -285,7 +290,15 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int barLength=0x7f010046;
+        public static final int barLength=0x7f0100ba;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int behavior_hideable=0x7f010098;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -295,7 +308,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int behavior_overlapTop=0x7f010062;
+        public static final int behavior_overlapTop=0x7f0100d7;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -305,31 +318,49 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int borderWidth=0x7f01004b;
+        public static final int behavior_peekHeight=0x7f010097;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int borderWidth=0x7f0100bf;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int borderlessButtonStyle=0x7f0100c4;
+        public static final int borderlessButtonStyle=0x7f01005d;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int buttonBarButtonStyle=0x7f0100c1;
+        public static final int bottomSheetDialogTheme=0x7f0100b1;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int buttonBarNegativeButtonStyle=0x7f0100ef;
+        public static final int bottomSheetStyle=0x7f0100b2;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int buttonBarNeutralButtonStyle=0x7f0100f0;
+        public static final int buttonBarButtonStyle=0x7f01005a;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int buttonBarPositiveButtonStyle=0x7f0100ee;
+        public static final int buttonBarNegativeButtonStyle=0x7f010088;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int buttonBarStyle=0x7f0100c0;
+        public static final int buttonBarNeutralButtonStyle=0x7f010089;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int buttonBarPositiveButtonStyle=0x7f010087;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int buttonBarStyle=0x7f010059;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -337,11 +368,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int buttonStyle=0x7f0100f2;
+        public static final int buttonStyle=0x7f01008b;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int buttonStyleSmall=0x7f0100f3;
+        public static final int buttonStyleSmall=0x7f01008c;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -350,7 +381,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int buttonTint=0x7f010038;
+        public static final int buttonTint=0x7f0100a9;
         /** <p>Must be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -364,19 +395,19 @@ containing a value of this type.
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
          */
-        public static final int buttonTintMode=0x7f010039;
+        public static final int buttonTintMode=0x7f0100aa;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int checkboxStyle=0x7f0100f4;
+        public static final int checkboxStyle=0x7f01008d;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int checkedTextViewStyle=0x7f0100f5;
+        public static final int checkedTextViewStyle=0x7f01008e;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int closeIcon=0x7f010067;
+        public static final int closeIcon=0x7f0100dc;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -388,11 +419,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int collapseContentDescription=0x7f010105;
+        public static final int collapseContentDescription=0x7f01010f;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int collapseIcon=0x7f010104;
+        public static final int collapseIcon=0x7f01010e;
         /** <p>Must be one or more (separated by '|') of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -411,11 +442,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>end</code></td><td>0x00800005</td><td></td></tr>
 </table>
          */
-        public static final int collapsedTitleGravity=0x7f010035;
+        public static final int collapsedTitleGravity=0x7f0100a6;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int collapsedTitleTextAppearance=0x7f010031;
+        public static final int collapsedTitleTextAppearance=0x7f0100a2;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -424,7 +455,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int color=0x7f010040;
+        public static final int color=0x7f0100b4;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -433,7 +464,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int colorAccent=0x7f0100e2;
+        public static final int colorAccent=0x7f01007b;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -442,7 +473,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int colorButtonNormal=0x7f0100e6;
+        public static final int colorButtonNormal=0x7f01007f;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -451,7 +482,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int colorControlActivated=0x7f0100e4;
+        public static final int colorControlActivated=0x7f01007d;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -460,7 +491,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int colorControlHighlight=0x7f0100e5;
+        public static final int colorControlHighlight=0x7f01007e;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -469,7 +500,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int colorControlNormal=0x7f0100e3;
+        public static final int colorControlNormal=0x7f01007c;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -478,7 +509,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int colorPrimary=0x7f0100e0;
+        public static final int colorPrimary=0x7f010079;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -487,7 +518,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int colorPrimaryDark=0x7f0100e1;
+        public static final int colorPrimaryDark=0x7f01007a;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -496,11 +527,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int colorSwitchThumbNormal=0x7f0100e7;
+        public static final int colorSwitchThumbNormal=0x7f010080;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int commitIcon=0x7f01006c;
+        public static final int commitIcon=0x7f0100e1;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -549,11 +580,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int contentScrim=0x7f010032;
+        public static final int contentScrim=0x7f0100a3;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int controlBackground=0x7f0100e8;
+        public static final int controlBackground=0x7f010081;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -561,7 +592,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int counterEnabled=0x7f01008b;
+        public static final int counterEnabled=0x7f010101;
         /** <p>Must be an integer value, such as "<code>100</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -569,15 +600,15 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int counterMaxLength=0x7f01008c;
+        public static final int counterMaxLength=0x7f010102;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int counterOverflowTextAppearance=0x7f01008e;
+        public static final int counterOverflowTextAppearance=0x7f010104;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int counterTextAppearance=0x7f01008d;
+        public static final int counterTextAppearance=0x7f010103;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -589,7 +620,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int defaultQueryHint=0x7f010066;
+        public static final int defaultQueryHint=0x7f0100db;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -599,11 +630,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int dialogPreferredPadding=0x7f0100b9;
+        public static final int dialogPreferredPadding=0x7f010052;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int dialogTheme=0x7f0100b8;
+        public static final int dialogTheme=0x7f010051;
         /** <p>Must be one or more (separated by '|') of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -627,7 +658,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int dividerHorizontal=0x7f0100c6;
+        public static final int dividerHorizontal=0x7f01005f;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -637,11 +668,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int dividerPadding=0x7f01004f;
+        public static final int dividerPadding=0x7f0100c4;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int dividerVertical=0x7f0100c5;
+        public static final int dividerVertical=0x7f01005e;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -651,7 +682,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int drawableSize=0x7f010042;
+        public static final int drawableSize=0x7f0100b6;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -659,7 +690,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int dropDownListViewStyle=0x7f0100d8;
+        public static final int dropDownListViewStyle=0x7f010071;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -669,21 +700,21 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int dropdownListPreferredItemHeight=0x7f0100bc;
+        public static final int dropdownListPreferredItemHeight=0x7f010055;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int editTextBackground=0x7f0100cd;
+        public static final int editTextBackground=0x7f010066;
         /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
-        public static final int editTextColor=0x7f0100cc;
+        public static final int editTextColor=0x7f010065;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int editTextStyle=0x7f0100f6;
+        public static final int editTextStyle=0x7f01008f;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -701,11 +732,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int errorEnabled=0x7f010089;
+        public static final int errorEnabled=0x7f0100ff;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int errorTextAppearance=0x7f01008a;
+        public static final int errorTextAppearance=0x7f010100;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -736,7 +767,7 @@ containing a value of this type.
 <tr><td><code>end</code></td><td>0x00800005</td><td></td></tr>
 </table>
          */
-        public static final int expandedTitleGravity=0x7f010036;
+        public static final int expandedTitleGravity=0x7f0100a7;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -746,7 +777,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int expandedTitleMargin=0x7f01002b;
+        public static final int expandedTitleMargin=0x7f01009c;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -756,7 +787,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int expandedTitleMarginBottom=0x7f01002f;
+        public static final int expandedTitleMarginBottom=0x7f0100a0;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -766,7 +797,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int expandedTitleMarginEnd=0x7f01002e;
+        public static final int expandedTitleMarginEnd=0x7f01009f;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -776,7 +807,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int expandedTitleMarginStart=0x7f01002c;
+        public static final int expandedTitleMarginStart=0x7f01009d;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -786,11 +817,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int expandedTitleMarginTop=0x7f01002d;
+        public static final int expandedTitleMarginTop=0x7f01009e;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int expandedTitleTextAppearance=0x7f010030;
+        public static final int expandedTitleTextAppearance=0x7f0100a1;
         /** <p>Must be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -801,7 +832,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>mini</code></td><td>1</td><td></td></tr>
 </table>
          */
-        public static final int fabSize=0x7f010049;
+        public static final int fabSize=0x7f0100bd;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -809,7 +840,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int foregroundInsidePadding=0x7f01004c;
+        public static final int foregroundInsidePadding=0x7f0100c1;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -819,15 +850,15 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int gapBetweenBars=0x7f010043;
+        public static final int gapBetweenBars=0x7f0100b7;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int goIcon=0x7f010068;
+        public static final int goIcon=0x7f0100dd;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int headerLayout=0x7f01005a;
+        public static final int headerLayout=0x7f0100cf;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -853,15 +884,23 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int hintAnimationEnabled=0x7f01008f;
+        public static final int hintAnimationEnabled=0x7f010105;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int hintEnabled=0x7f0100fe;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int hintTextAppearance=0x7f010088;
+        public static final int hintTextAppearance=0x7f0100fd;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int homeAsUpIndicator=0x7f0100be;
+        public static final int homeAsUpIndicator=0x7f010057;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -877,11 +916,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int iconifiedByDefault=0x7f010064;
+        public static final int iconifiedByDefault=0x7f0100d9;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int imageButtonStyle=0x7f0100ce;
+        public static final int imageButtonStyle=0x7f010067;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -899,7 +938,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
-        public static final int insetForeground=0x7f010061;
+        public static final int insetForeground=0x7f0100d6;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -911,7 +950,7 @@ containing a value of this type.
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int itemBackground=0x7f010058;
+        public static final int itemBackground=0x7f0100cd;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -920,7 +959,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int itemIconTint=0x7f010056;
+        public static final int itemIconTint=0x7f0100cb;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -934,7 +973,7 @@ containing a value of this type.
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int itemTextAppearance=0x7f010059;
+        public static final int itemTextAppearance=0x7f0100ce;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -943,15 +982,15 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int itemTextColor=0x7f010057;
+        public static final int itemTextColor=0x7f0100cc;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int keylines=0x7f01003a;
+        public static final int keylines=0x7f0100ab;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int layout=0x7f010063;
+        public static final int layout=0x7f0100d8;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -959,11 +998,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int layoutManager=0x7f01005d;
+        public static final int layoutManager=0x7f0100d2;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int layout_anchor=0x7f01003d;
+        public static final int layout_anchor=0x7f0100ae;
         /** <p>Must be one or more (separated by '|') of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -986,7 +1025,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>end</code></td><td>0x00800005</td><td></td></tr>
 </table>
          */
-        public static final int layout_anchorGravity=0x7f01003f;
+        public static final int layout_anchorGravity=0x7f0100b0;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -994,7 +1033,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int layout_behavior=0x7f01003c;
+        public static final int layout_behavior=0x7f0100ad;
         /** <p>Must be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -1006,7 +1045,7 @@ containing a value of this type.
 <tr><td><code>parallax</code></td><td>2</td><td></td></tr>
 </table>
          */
-        public static final int layout_collapseMode=0x7f010029;
+        public static final int layout_collapseMode=0x7f01009a;
         /** <p>Must be a floating point value, such as "<code>1.2</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1014,7 +1053,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int layout_collapseParallaxMultiplier=0x7f01002a;
+        public static final int layout_collapseParallaxMultiplier=0x7f01009b;
         /** <p>Must be an integer value, such as "<code>100</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1022,7 +1061,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int layout_keyline=0x7f01003e;
+        public static final int layout_keyline=0x7f0100af;
         /** <p>Must be one or more (separated by '|') of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -1044,11 +1083,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int listChoiceBackgroundIndicator=0x7f0100df;
+        public static final int listChoiceBackgroundIndicator=0x7f010078;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int listDividerAlertDialog=0x7f0100ba;
+        public static final int listDividerAlertDialog=0x7f010053;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -1060,7 +1099,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int listPopupWindowStyle=0x7f0100d9;
+        public static final int listPopupWindowStyle=0x7f010072;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1070,7 +1109,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int listPreferredItemHeight=0x7f0100d3;
+        public static final int listPreferredItemHeight=0x7f01006c;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1080,7 +1119,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int listPreferredItemHeightLarge=0x7f0100d5;
+        public static final int listPreferredItemHeightLarge=0x7f01006e;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1090,7 +1129,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int listPreferredItemHeightSmall=0x7f0100d4;
+        public static final int listPreferredItemHeightSmall=0x7f01006d;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1100,7 +1139,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int listPreferredItemPaddingLeft=0x7f0100d6;
+        public static final int listPreferredItemPaddingLeft=0x7f01006f;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1110,7 +1149,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int listPreferredItemPaddingRight=0x7f0100d7;
+        public static final int listPreferredItemPaddingRight=0x7f010070;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -1122,7 +1161,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int logoDescription=0x7f010108;
+        public static final int logoDescription=0x7f010112;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1132,7 +1171,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int maxActionInlineWidth=0x7f010070;
+        public static final int maxActionInlineWidth=0x7f0100e5;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1142,7 +1181,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int maxButtonHeight=0x7f010103;
+        public static final int maxButtonHeight=0x7f01010d;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1150,11 +1189,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int measureWithLargestChild=0x7f01004d;
+        public static final int measureWithLargestChild=0x7f0100c2;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int menu=0x7f010055;
+        public static final int menu=0x7f0100ca;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -1166,11 +1205,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int navigationContentDescription=0x7f010107;
+        public static final int navigationContentDescription=0x7f010111;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int navigationIcon=0x7f010106;
+        public static final int navigationIcon=0x7f010110;
         /** <p>Must be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -1190,7 +1229,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int overlapAnchor=0x7f01005b;
+        public static final int overlapAnchor=0x7f0100d0;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1200,7 +1239,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int paddingEnd=0x7f01010c;
+        public static final int paddingEnd=0x7f010116;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1210,15 +1249,15 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int paddingStart=0x7f01010b;
+        public static final int paddingStart=0x7f010115;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int panelBackground=0x7f0100dc;
+        public static final int panelBackground=0x7f010075;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int panelMenuListTheme=0x7f0100de;
+        public static final int panelMenuListTheme=0x7f010077;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1228,11 +1267,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int panelMenuListWidth=0x7f0100dd;
+        public static final int panelMenuListWidth=0x7f010076;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int popupMenuStyle=0x7f0100ca;
+        public static final int popupMenuStyle=0x7f010063;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -1240,7 +1279,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int popupWindowStyle=0x7f0100cb;
+        public static final int popupWindowStyle=0x7f010064;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1248,7 +1287,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int preserveIconSpacing=0x7f010054;
+        public static final int preserveIconSpacing=0x7f0100c9;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1258,7 +1297,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int pressedTranslationZ=0x7f01004a;
+        public static final int pressedTranslationZ=0x7f0100be;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1276,7 +1315,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int queryBackground=0x7f01006e;
+        public static final int queryBackground=0x7f0100e3;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1284,15 +1323,23 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int queryHint=0x7f010065;
+        public static final int queryHint=0x7f0100da;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int radioButtonStyle=0x7f0100f7;
+        public static final int radioButtonStyle=0x7f010090;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int ratingBarStyle=0x7f0100f8;
+        public static final int ratingBarStyle=0x7f010091;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int ratingBarStyleIndicator=0x7f010092;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int ratingBarStyleSmall=0x7f010093;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1300,7 +1347,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int reverseLayout=0x7f01005f;
+        public static final int reverseLayout=0x7f0100d4;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -1309,31 +1356,31 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int rippleColor=0x7f010048;
+        public static final int rippleColor=0x7f0100bc;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int searchHintIcon=0x7f01006a;
+        public static final int searchHintIcon=0x7f0100df;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int searchIcon=0x7f010069;
+        public static final int searchIcon=0x7f0100de;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int searchViewStyle=0x7f0100d2;
+        public static final int searchViewStyle=0x7f01006b;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int seekBarStyle=0x7f0100f9;
+        public static final int seekBarStyle=0x7f010094;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int selectableItemBackground=0x7f0100c2;
+        public static final int selectableItemBackground=0x7f01005b;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int selectableItemBackgroundBorderless=0x7f0100c3;
+        public static final int selectableItemBackgroundBorderless=0x7f01005c;
         /** <p>Must be one or more (separated by '|') of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -1347,7 +1394,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>collapseActionView</code></td><td>8</td><td></td></tr>
 </table>
          */
-        public static final int showAsAction=0x7f010050;
+        public static final int showAsAction=0x7f0100c5;
         /** <p>Must be one or more (separated by '|') of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -1360,7 +1407,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>end</code></td><td>4</td><td></td></tr>
 </table>
          */
-        public static final int showDividers=0x7f01004e;
+        public static final int showDividers=0x7f0100c3;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1368,7 +1415,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int showText=0x7f010077;
+        public static final int showText=0x7f0100ec;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -1380,7 +1427,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int spanCount=0x7f01005e;
+        public static final int spanCount=0x7f0100d3;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1388,15 +1435,15 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int spinBars=0x7f010041;
+        public static final int spinBars=0x7f0100b5;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int spinnerDropDownItemStyle=0x7f0100bd;
+        public static final int spinnerDropDownItemStyle=0x7f010056;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int spinnerStyle=0x7f0100fa;
+        public static final int spinnerStyle=0x7f010095;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1404,27 +1451,31 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int splitTrack=0x7f010076;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int stackFromEnd=0x7f010060;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int state_above_anchor=0x7f01005c;
+        public static final int splitTrack=0x7f0100eb;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int statusBarBackground=0x7f01003b;
+        public static final int srcCompat=0x7f010027;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stackFromEnd=0x7f0100d5;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int state_above_anchor=0x7f0100d1;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int statusBarBackground=0x7f0100ac;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -1433,11 +1484,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int statusBarScrim=0x7f010033;
+        public static final int statusBarScrim=0x7f0100a4;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int submitBackground=0x7f01006f;
+        public static final int submitBackground=0x7f0100e4;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1449,7 +1500,7 @@ containing a value of this type.
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int subtitleTextAppearance=0x7f0100fd;
+        public static final int subtitleTextAppearance=0x7f010107;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -1458,7 +1509,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int subtitleTextColor=0x7f01010a;
+        public static final int subtitleTextColor=0x7f010114;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -1466,7 +1517,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int suggestionRowLayout=0x7f01006d;
+        public static final int suggestionRowLayout=0x7f0100e2;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1476,7 +1527,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int switchMinWidth=0x7f010074;
+        public static final int switchMinWidth=0x7f0100e9;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1486,19 +1537,19 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int switchPadding=0x7f010075;
+        public static final int switchPadding=0x7f0100ea;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int switchStyle=0x7f0100fb;
+        public static final int switchStyle=0x7f010096;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int switchTextAppearance=0x7f010073;
+        public static final int switchTextAppearance=0x7f0100e8;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int tabBackground=0x7f01007b;
+        public static final int tabBackground=0x7f0100f0;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1508,7 +1559,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int tabContentStart=0x7f01007a;
+        public static final int tabContentStart=0x7f0100ef;
         /** <p>Must be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -1519,7 +1570,7 @@ containing a value of this type.
 <tr><td><code>center</code></td><td>1</td><td></td></tr>
 </table>
          */
-        public static final int tabGravity=0x7f01007d;
+        public static final int tabGravity=0x7f0100f2;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -1528,7 +1579,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int tabIndicatorColor=0x7f010078;
+        public static final int tabIndicatorColor=0x7f0100ed;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1538,7 +1589,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int tabIndicatorHeight=0x7f010079;
+        public static final int tabIndicatorHeight=0x7f0100ee;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1548,7 +1599,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int tabMaxWidth=0x7f01007f;
+        public static final int tabMaxWidth=0x7f0100f4;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1558,7 +1609,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int tabMinWidth=0x7f01007e;
+        public static final int tabMinWidth=0x7f0100f3;
         /** <p>Must be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -1569,7 +1620,7 @@ containing a value of this type.
 <tr><td><code>fixed</code></td><td>1</td><td></td></tr>
 </table>
          */
-        public static final int tabMode=0x7f01007c;
+        public static final int tabMode=0x7f0100f1;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1579,7 +1630,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int tabPadding=0x7f010087;
+        public static final int tabPadding=0x7f0100fc;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1589,7 +1640,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int tabPaddingBottom=0x7f010086;
+        public static final int tabPaddingBottom=0x7f0100fb;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1599,7 +1650,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int tabPaddingEnd=0x7f010085;
+        public static final int tabPaddingEnd=0x7f0100fa;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1609,7 +1660,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int tabPaddingStart=0x7f010083;
+        public static final int tabPaddingStart=0x7f0100f8;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1619,7 +1670,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int tabPaddingTop=0x7f010084;
+        public static final int tabPaddingTop=0x7f0100f9;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -1628,11 +1679,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int tabSelectedTextColor=0x7f010082;
+        public static final int tabSelectedTextColor=0x7f0100f7;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int tabTextAppearance=0x7f010080;
+        public static final int tabTextAppearance=0x7f0100f5;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -1641,52 +1692,61 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int tabTextColor=0x7f010081;
+        public static final int tabTextColor=0x7f0100f6;
         /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
          */
-        public static final int textAllCaps=0x7f010027;
+        public static final int textAllCaps=0x7f010028;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int textAppearanceLargePopupMenu=0x7f0100b6;
+        public static final int textAppearanceLargePopupMenu=0x7f01004f;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int textAppearanceListItem=0x7f0100da;
+        public static final int textAppearanceListItem=0x7f010073;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int textAppearanceListItemSmall=0x7f0100db;
+        public static final int textAppearanceListItemSmall=0x7f010074;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int textAppearanceSearchResultSubtitle=0x7f0100d0;
+        public static final int textAppearanceSearchResultSubtitle=0x7f010069;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int textAppearanceSearchResultTitle=0x7f0100cf;
+        public static final int textAppearanceSearchResultTitle=0x7f010068;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int textAppearanceSmallPopupMenu=0x7f0100b7;
+        public static final int textAppearanceSmallPopupMenu=0x7f010050;
         /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
-        public static final int textColorAlertDialogListItem=0x7f0100ed;
+        public static final int textColorAlertDialogListItem=0x7f010086;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textColorError=0x7f0100b3;
         /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
-        public static final int textColorSearchUrl=0x7f0100d1;
+        public static final int textColorSearchUrl=0x7f01006a;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int theme=0x7f01010d;
+        public static final int theme=0x7f010117;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1696,7 +1756,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int thickness=0x7f010047;
+        public static final int thickness=0x7f0100bb;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1706,7 +1766,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int thumbTextPadding=0x7f010072;
+        public static final int thumbTextPadding=0x7f0100e7;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1722,7 +1782,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int titleEnabled=0x7f010037;
+        public static final int titleEnabled=0x7f0100a8;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1732,7 +1792,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int titleMarginBottom=0x7f010102;
+        public static final int titleMarginBottom=0x7f01010c;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1742,7 +1802,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int titleMarginEnd=0x7f010100;
+        public static final int titleMarginEnd=0x7f01010a;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1752,7 +1812,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int titleMarginStart=0x7f0100ff;
+        public static final int titleMarginStart=0x7f010109;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1762,7 +1822,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int titleMarginTop=0x7f010101;
+        public static final int titleMarginTop=0x7f01010b;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1772,11 +1832,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int titleMargins=0x7f0100fe;
+        public static final int titleMargins=0x7f010108;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int titleTextAppearance=0x7f0100fc;
+        public static final int titleTextAppearance=0x7f010106;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -1785,7 +1845,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int titleTextColor=0x7f010109;
+        public static final int titleTextColor=0x7f010113;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -1793,23 +1853,19 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int toolbarId=0x7f010034;
+        public static final int toolbarId=0x7f0100a5;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int toolbarNavigationButtonStyle=0x7f0100c9;
+        public static final int toolbarNavigationButtonStyle=0x7f010062;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int toolbarStyle=0x7f0100c8;
+        public static final int toolbarStyle=0x7f010061;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int track=0x7f010071;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int voiceIcon=0x7f01006b;
+        public static final int track=0x7f0100e6;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1817,7 +1873,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int windowActionBar=0x7f010090;
+        public static final int useCompatPadding=0x7f0100c0;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int voiceIcon=0x7f0100e0;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1825,7 +1885,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int windowActionBarOverlay=0x7f010092;
+        public static final int windowActionBar=0x7f010029;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1833,85 +1893,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int windowActionModeOverlay=0x7f010093;
-        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
-some parent container.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int windowFixedHeightMajor=0x7f010097;
-        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
-some parent container.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int windowFixedHeightMinor=0x7f010095;
-        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
-some parent container.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int windowFixedWidthMajor=0x7f010094;
-        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
-some parent container.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int windowFixedWidthMinor=0x7f010096;
-        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
-some parent container.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int windowMinWidthMajor=0x7f010098;
-        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
-some parent container.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int windowMinWidthMinor=0x7f010099;
+        public static final int windowActionBarOverlay=0x7f01002b;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1919,842 +1901,1362 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int windowNoTitle=0x7f010091;
+        public static final int windowActionModeOverlay=0x7f01002c;
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
+some parent container.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int windowFixedHeightMajor=0x7f010030;
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
+some parent container.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int windowFixedHeightMinor=0x7f01002e;
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
+some parent container.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int windowFixedWidthMajor=0x7f01002d;
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
+some parent container.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int windowFixedWidthMinor=0x7f01002f;
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
+some parent container.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int windowMinWidthMajor=0x7f010031;
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
+some parent container.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int windowMinWidthMinor=0x7f010032;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int windowNoTitle=0x7f01002a;
     }
     public static final class bool {
-        public static final int abc_action_bar_embed_tabs=0x7f080003;
-        public static final int abc_action_bar_embed_tabs_pre_jb=0x7f080001;
-        public static final int abc_action_bar_expanded_action_views_exclusive=0x7f080004;
-        public static final int abc_allow_stacked_button_bar=0x7f080000;
-        public static final int abc_config_actionMenuItemAllCaps=0x7f080005;
-        public static final int abc_config_allowActionMenuItemTextWithIcon=0x7f080002;
-        public static final int abc_config_closeDialogWhenTouchOutside=0x7f080006;
-        public static final int abc_config_showMenuShortcutsWhenKeyboardPresent=0x7f080007;
+        public static final int abc_action_bar_embed_tabs=0x7f090003;
+        public static final int abc_action_bar_embed_tabs_pre_jb=0x7f090001;
+        public static final int abc_action_bar_expanded_action_views_exclusive=0x7f090004;
+        public static final int abc_allow_stacked_button_bar=0x7f090000;
+        public static final int abc_config_actionMenuItemAllCaps=0x7f090005;
+        public static final int abc_config_allowActionMenuItemTextWithIcon=0x7f090002;
+        public static final int abc_config_closeDialogWhenTouchOutside=0x7f090006;
+        public static final int abc_config_showMenuShortcutsWhenKeyboardPresent=0x7f090007;
     }
     public static final class color {
-        public static final int abc_background_cache_hint_selector_material_dark=0x7f0c0043;
-        public static final int abc_background_cache_hint_selector_material_light=0x7f0c0044;
-        public static final int abc_color_highlight_material=0x7f0c0045;
-        public static final int abc_input_method_navigation_guard=0x7f0c0000;
-        public static final int abc_primary_text_disable_only_material_dark=0x7f0c0046;
-        public static final int abc_primary_text_disable_only_material_light=0x7f0c0047;
-        public static final int abc_primary_text_material_dark=0x7f0c0048;
-        public static final int abc_primary_text_material_light=0x7f0c0049;
-        public static final int abc_search_url_text=0x7f0c004a;
-        public static final int abc_search_url_text_normal=0x7f0c0001;
-        public static final int abc_search_url_text_pressed=0x7f0c0002;
-        public static final int abc_search_url_text_selected=0x7f0c0003;
-        public static final int abc_secondary_text_material_dark=0x7f0c004b;
-        public static final int abc_secondary_text_material_light=0x7f0c004c;
-        public static final int accent_material_dark=0x7f0c0004;
-        public static final int accent_material_light=0x7f0c0005;
-        public static final int background_floating_material_dark=0x7f0c0006;
-        public static final int background_floating_material_light=0x7f0c0007;
-        public static final int background_material_dark=0x7f0c0008;
-        public static final int background_material_light=0x7f0c0009;
-        public static final int bright_foreground_disabled_material_dark=0x7f0c000a;
-        public static final int bright_foreground_disabled_material_light=0x7f0c000b;
-        public static final int bright_foreground_inverse_material_dark=0x7f0c000c;
-        public static final int bright_foreground_inverse_material_light=0x7f0c000d;
-        public static final int bright_foreground_material_dark=0x7f0c000e;
-        public static final int bright_foreground_material_light=0x7f0c000f;
-        public static final int button_material_dark=0x7f0c0010;
-        public static final int button_material_light=0x7f0c0011;
-        public static final int design_fab_shadow_end_color=0x7f0c0012;
-        public static final int design_fab_shadow_mid_color=0x7f0c0013;
-        public static final int design_fab_shadow_start_color=0x7f0c0014;
-        public static final int design_fab_stroke_end_inner_color=0x7f0c0015;
-        public static final int design_fab_stroke_end_outer_color=0x7f0c0016;
-        public static final int design_fab_stroke_top_inner_color=0x7f0c0017;
-        public static final int design_fab_stroke_top_outer_color=0x7f0c0018;
-        public static final int design_snackbar_background_color=0x7f0c0019;
-        public static final int design_textinput_error_color=0x7f0c001a;
-        public static final int dim_foreground_disabled_material_dark=0x7f0c001b;
-        public static final int dim_foreground_disabled_material_light=0x7f0c001c;
-        public static final int dim_foreground_material_dark=0x7f0c001d;
-        public static final int dim_foreground_material_light=0x7f0c001e;
-        public static final int foreground_material_dark=0x7f0c001f;
-        public static final int foreground_material_light=0x7f0c0020;
-        public static final int highlighted_text_material_dark=0x7f0c0021;
-        public static final int highlighted_text_material_light=0x7f0c0022;
-        public static final int hint_foreground_material_dark=0x7f0c0023;
-        public static final int hint_foreground_material_light=0x7f0c0024;
-        public static final int material_blue_grey_800=0x7f0c0025;
-        public static final int material_blue_grey_900=0x7f0c0026;
-        public static final int material_blue_grey_950=0x7f0c0027;
-        public static final int material_deep_teal_200=0x7f0c0028;
-        public static final int material_deep_teal_500=0x7f0c0029;
-        public static final int material_grey_100=0x7f0c002a;
-        public static final int material_grey_300=0x7f0c002b;
-        public static final int material_grey_50=0x7f0c002c;
-        public static final int material_grey_600=0x7f0c002d;
-        public static final int material_grey_800=0x7f0c002e;
-        public static final int material_grey_850=0x7f0c002f;
-        public static final int material_grey_900=0x7f0c0030;
-        public static final int primary_dark_material_dark=0x7f0c0031;
-        public static final int primary_dark_material_light=0x7f0c0032;
-        public static final int primary_material_dark=0x7f0c0033;
-        public static final int primary_material_light=0x7f0c0034;
-        public static final int primary_text_default_material_dark=0x7f0c0035;
-        public static final int primary_text_default_material_light=0x7f0c0036;
-        public static final int primary_text_disabled_material_dark=0x7f0c0037;
-        public static final int primary_text_disabled_material_light=0x7f0c0038;
-        public static final int ripple_material_dark=0x7f0c0039;
-        public static final int ripple_material_light=0x7f0c003a;
-        public static final int secondary_text_default_material_dark=0x7f0c003b;
-        public static final int secondary_text_default_material_light=0x7f0c003c;
-        public static final int secondary_text_disabled_material_dark=0x7f0c003d;
-        public static final int secondary_text_disabled_material_light=0x7f0c003e;
-        public static final int switch_thumb_disabled_material_dark=0x7f0c003f;
-        public static final int switch_thumb_disabled_material_light=0x7f0c0040;
-        public static final int switch_thumb_material_dark=0x7f0c004d;
-        public static final int switch_thumb_material_light=0x7f0c004e;
-        public static final int switch_thumb_normal_material_dark=0x7f0c0041;
-        public static final int switch_thumb_normal_material_light=0x7f0c0042;
+        public static final int abc_background_cache_hint_selector_material_dark=0x7f0d0050;
+        public static final int abc_background_cache_hint_selector_material_light=0x7f0d0051;
+        public static final int abc_color_highlight_material=0x7f0d0052;
+        public static final int abc_input_method_navigation_guard=0x7f0d0000;
+        public static final int abc_primary_text_disable_only_material_dark=0x7f0d0053;
+        public static final int abc_primary_text_disable_only_material_light=0x7f0d0054;
+        public static final int abc_primary_text_material_dark=0x7f0d0055;
+        public static final int abc_primary_text_material_light=0x7f0d0056;
+        public static final int abc_search_url_text=0x7f0d0057;
+        public static final int abc_search_url_text_normal=0x7f0d0001;
+        public static final int abc_search_url_text_pressed=0x7f0d0002;
+        public static final int abc_search_url_text_selected=0x7f0d0003;
+        public static final int abc_secondary_text_material_dark=0x7f0d0058;
+        public static final int abc_secondary_text_material_light=0x7f0d0059;
+        public static final int accent=0x7f0d0004;
+        public static final int accent_material_dark=0x7f0d0005;
+        public static final int accent_material_light=0x7f0d0006;
+        public static final int background_floating_material_dark=0x7f0d0007;
+        public static final int background_floating_material_light=0x7f0d0008;
+        public static final int background_material_dark=0x7f0d0009;
+        public static final int background_material_light=0x7f0d000a;
+        public static final int bright_foreground_disabled_material_dark=0x7f0d000b;
+        public static final int bright_foreground_disabled_material_light=0x7f0d000c;
+        public static final int bright_foreground_inverse_material_dark=0x7f0d000d;
+        public static final int bright_foreground_inverse_material_light=0x7f0d000e;
+        public static final int bright_foreground_material_dark=0x7f0d000f;
+        public static final int bright_foreground_material_light=0x7f0d0010;
+        public static final int button_material_dark=0x7f0d0011;
+        public static final int button_material_light=0x7f0d0012;
+        public static final int design_fab_shadow_end_color=0x7f0d0013;
+        public static final int design_fab_shadow_mid_color=0x7f0d0014;
+        public static final int design_fab_shadow_start_color=0x7f0d0015;
+        public static final int design_fab_stroke_end_inner_color=0x7f0d0016;
+        public static final int design_fab_stroke_end_outer_color=0x7f0d0017;
+        public static final int design_fab_stroke_top_inner_color=0x7f0d0018;
+        public static final int design_fab_stroke_top_outer_color=0x7f0d0019;
+        public static final int design_snackbar_background_color=0x7f0d001a;
+        public static final int design_textinput_error_color_dark=0x7f0d001b;
+        public static final int design_textinput_error_color_light=0x7f0d001c;
+        public static final int dim_foreground_disabled_material_dark=0x7f0d001d;
+        public static final int dim_foreground_disabled_material_light=0x7f0d001e;
+        public static final int dim_foreground_material_dark=0x7f0d001f;
+        public static final int dim_foreground_material_light=0x7f0d0020;
+        public static final int divider=0x7f0d0021;
+        public static final int foreground_material_dark=0x7f0d0022;
+        public static final int foreground_material_light=0x7f0d0023;
+        public static final int highlighted_text_material_dark=0x7f0d0024;
+        public static final int highlighted_text_material_light=0x7f0d0025;
+        public static final int hint_foreground_material_dark=0x7f0d0026;
+        public static final int hint_foreground_material_light=0x7f0d0027;
+        public static final int icons=0x7f0d0028;
+        public static final int material_blue_grey_800=0x7f0d0029;
+        public static final int material_blue_grey_900=0x7f0d002a;
+        public static final int material_blue_grey_950=0x7f0d002b;
+        public static final int material_deep_teal_200=0x7f0d002c;
+        public static final int material_deep_teal_500=0x7f0d002d;
+        public static final int material_grey_100=0x7f0d002e;
+        public static final int material_grey_300=0x7f0d002f;
+        public static final int material_grey_50=0x7f0d0030;
+        public static final int material_grey_600=0x7f0d0031;
+        public static final int material_grey_800=0x7f0d0032;
+        public static final int material_grey_850=0x7f0d0033;
+        public static final int material_grey_900=0x7f0d0034;
+        public static final int primary=0x7f0d0035;
+        public static final int primary_dark=0x7f0d0036;
+        public static final int primary_dark_material_dark=0x7f0d0037;
+        public static final int primary_dark_material_light=0x7f0d0038;
+        public static final int primary_light=0x7f0d0039;
+        public static final int primary_material_dark=0x7f0d003a;
+        public static final int primary_material_light=0x7f0d003b;
+        public static final int primary_text=0x7f0d003c;
+        public static final int primary_text_default_material_dark=0x7f0d003d;
+        public static final int primary_text_default_material_light=0x7f0d003e;
+        public static final int primary_text_disabled_material_dark=0x7f0d003f;
+        public static final int primary_text_disabled_material_light=0x7f0d0040;
+        public static final int ripple_material_dark=0x7f0d0041;
+        public static final int ripple_material_light=0x7f0d0042;
+        public static final int rsastralcharttheme_color=0x7f0d0043;
+        public static final int rsbasetheme_color=0x7f0d0044;
+        public static final int rscurrentcharttheme_color=0x7f0d0045;
+        public static final int rsnumbercharttheme_color=0x7f0d0046;
+        public static final int secondary_text=0x7f0d0047;
+        public static final int secondary_text_default_material_dark=0x7f0d0048;
+        public static final int secondary_text_default_material_light=0x7f0d0049;
+        public static final int secondary_text_disabled_material_dark=0x7f0d004a;
+        public static final int secondary_text_disabled_material_light=0x7f0d004b;
+        public static final int switch_thumb_disabled_material_dark=0x7f0d004c;
+        public static final int switch_thumb_disabled_material_light=0x7f0d004d;
+        public static final int switch_thumb_material_dark=0x7f0d005a;
+        public static final int switch_thumb_material_light=0x7f0d005b;
+        public static final int switch_thumb_normal_material_dark=0x7f0d004e;
+        public static final int switch_thumb_normal_material_light=0x7f0d004f;
     }
     public static final class dimen {
-        public static final int abc_action_bar_content_inset_material=0x7f09000d;
-        public static final int abc_action_bar_default_height_material=0x7f090001;
-        public static final int abc_action_bar_default_padding_end_material=0x7f09000e;
-        public static final int abc_action_bar_default_padding_start_material=0x7f09000f;
-        public static final int abc_action_bar_icon_vertical_padding_material=0x7f090019;
-        public static final int abc_action_bar_overflow_padding_end_material=0x7f09001a;
-        public static final int abc_action_bar_overflow_padding_start_material=0x7f09001b;
-        public static final int abc_action_bar_progress_bar_size=0x7f090002;
-        public static final int abc_action_bar_stacked_max_height=0x7f09001c;
-        public static final int abc_action_bar_stacked_tab_max_width=0x7f09001d;
-        public static final int abc_action_bar_subtitle_bottom_margin_material=0x7f09001e;
-        public static final int abc_action_bar_subtitle_top_margin_material=0x7f09001f;
-        public static final int abc_action_button_min_height_material=0x7f090020;
-        public static final int abc_action_button_min_width_material=0x7f090021;
-        public static final int abc_action_button_min_width_overflow_material=0x7f090022;
-        public static final int abc_alert_dialog_button_bar_height=0x7f090000;
-        public static final int abc_button_inset_horizontal_material=0x7f090023;
-        public static final int abc_button_inset_vertical_material=0x7f090024;
-        public static final int abc_button_padding_horizontal_material=0x7f090025;
-        public static final int abc_button_padding_vertical_material=0x7f090026;
-        public static final int abc_config_prefDialogWidth=0x7f090005;
-        public static final int abc_control_corner_material=0x7f090027;
-        public static final int abc_control_inset_material=0x7f090028;
-        public static final int abc_control_padding_material=0x7f090029;
-        public static final int abc_dialog_fixed_height_major=0x7f090006;
-        public static final int abc_dialog_fixed_height_minor=0x7f090007;
-        public static final int abc_dialog_fixed_width_major=0x7f090008;
-        public static final int abc_dialog_fixed_width_minor=0x7f090009;
-        public static final int abc_dialog_list_padding_vertical_material=0x7f09002a;
-        public static final int abc_dialog_min_width_major=0x7f09000a;
-        public static final int abc_dialog_min_width_minor=0x7f09000b;
-        public static final int abc_dialog_padding_material=0x7f09002b;
-        public static final int abc_dialog_padding_top_material=0x7f09002c;
-        public static final int abc_disabled_alpha_material_dark=0x7f09002d;
-        public static final int abc_disabled_alpha_material_light=0x7f09002e;
-        public static final int abc_dropdownitem_icon_width=0x7f09002f;
-        public static final int abc_dropdownitem_text_padding_left=0x7f090030;
-        public static final int abc_dropdownitem_text_padding_right=0x7f090031;
-        public static final int abc_edit_text_inset_bottom_material=0x7f090032;
-        public static final int abc_edit_text_inset_horizontal_material=0x7f090033;
-        public static final int abc_edit_text_inset_top_material=0x7f090034;
-        public static final int abc_floating_window_z=0x7f090035;
-        public static final int abc_list_item_padding_horizontal_material=0x7f090036;
-        public static final int abc_panel_menu_list_width=0x7f090037;
-        public static final int abc_search_view_preferred_width=0x7f090038;
-        public static final int abc_search_view_text_min_width=0x7f09000c;
-        public static final int abc_seekbar_track_background_height_material=0x7f090039;
-        public static final int abc_seekbar_track_progress_height_material=0x7f09003a;
-        public static final int abc_select_dialog_padding_start_material=0x7f09003b;
-        public static final int abc_switch_padding=0x7f090017;
-        public static final int abc_text_size_body_1_material=0x7f09003c;
-        public static final int abc_text_size_body_2_material=0x7f09003d;
-        public static final int abc_text_size_button_material=0x7f09003e;
-        public static final int abc_text_size_caption_material=0x7f09003f;
-        public static final int abc_text_size_display_1_material=0x7f090040;
-        public static final int abc_text_size_display_2_material=0x7f090041;
-        public static final int abc_text_size_display_3_material=0x7f090042;
-        public static final int abc_text_size_display_4_material=0x7f090043;
-        public static final int abc_text_size_headline_material=0x7f090044;
-        public static final int abc_text_size_large_material=0x7f090045;
-        public static final int abc_text_size_medium_material=0x7f090046;
-        public static final int abc_text_size_menu_material=0x7f090047;
-        public static final int abc_text_size_small_material=0x7f090048;
-        public static final int abc_text_size_subhead_material=0x7f090049;
-        public static final int abc_text_size_subtitle_material_toolbar=0x7f090003;
-        public static final int abc_text_size_title_material=0x7f09004a;
-        public static final int abc_text_size_title_material_toolbar=0x7f090004;
-        public static final int design_appbar_elevation=0x7f09004b;
-        public static final int design_fab_border_width=0x7f09004c;
-        public static final int design_fab_content_size=0x7f09004d;
-        public static final int design_fab_elevation=0x7f09004e;
-        public static final int design_fab_size_mini=0x7f09004f;
-        public static final int design_fab_size_normal=0x7f090050;
-        public static final int design_fab_translation_z_pressed=0x7f090051;
-        public static final int design_navigation_elevation=0x7f090052;
-        public static final int design_navigation_icon_padding=0x7f090053;
-        public static final int design_navigation_icon_size=0x7f090054;
-        public static final int design_navigation_max_width=0x7f090055;
-        public static final int design_navigation_padding_bottom=0x7f090056;
-        public static final int design_navigation_padding_top_default=0x7f090018;
-        public static final int design_navigation_separator_vertical_padding=0x7f090057;
-        public static final int design_snackbar_action_inline_max_width=0x7f090010;
-        public static final int design_snackbar_background_corner_radius=0x7f090011;
-        public static final int design_snackbar_elevation=0x7f090058;
-        public static final int design_snackbar_extra_spacing_horizontal=0x7f090012;
-        public static final int design_snackbar_max_width=0x7f090013;
-        public static final int design_snackbar_min_width=0x7f090014;
-        public static final int design_snackbar_padding_horizontal=0x7f090059;
-        public static final int design_snackbar_padding_vertical=0x7f09005a;
-        public static final int design_snackbar_padding_vertical_2lines=0x7f090015;
-        public static final int design_snackbar_text_size=0x7f09005b;
-        public static final int design_tab_max_width=0x7f09005c;
-        public static final int design_tab_scrollable_min_width=0x7f090016;
-        public static final int design_tab_text_size=0x7f09005d;
-        public static final int design_tab_text_size_2line=0x7f09005e;
-        public static final int disabled_alpha_material_dark=0x7f09005f;
-        public static final int disabled_alpha_material_light=0x7f090060;
-        public static final int highlight_alpha_material_colored=0x7f090061;
-        public static final int highlight_alpha_material_dark=0x7f090062;
-        public static final int highlight_alpha_material_light=0x7f090063;
-        public static final int item_touch_helper_max_drag_scroll_per_frame=0x7f090064;
-        public static final int notification_large_icon_height=0x7f090065;
-        public static final int notification_large_icon_width=0x7f090066;
-        public static final int notification_subtext_size=0x7f090067;
+        public static final int abc_action_bar_content_inset_material=0x7f0a000d;
+        public static final int abc_action_bar_default_height_material=0x7f0a0001;
+        public static final int abc_action_bar_default_padding_end_material=0x7f0a000e;
+        public static final int abc_action_bar_default_padding_start_material=0x7f0a000f;
+        public static final int abc_action_bar_icon_vertical_padding_material=0x7f0a001a;
+        public static final int abc_action_bar_overflow_padding_end_material=0x7f0a001b;
+        public static final int abc_action_bar_overflow_padding_start_material=0x7f0a001c;
+        public static final int abc_action_bar_progress_bar_size=0x7f0a0002;
+        public static final int abc_action_bar_stacked_max_height=0x7f0a001d;
+        public static final int abc_action_bar_stacked_tab_max_width=0x7f0a001e;
+        public static final int abc_action_bar_subtitle_bottom_margin_material=0x7f0a001f;
+        public static final int abc_action_bar_subtitle_top_margin_material=0x7f0a0020;
+        public static final int abc_action_button_min_height_material=0x7f0a0021;
+        public static final int abc_action_button_min_width_material=0x7f0a0022;
+        public static final int abc_action_button_min_width_overflow_material=0x7f0a0023;
+        public static final int abc_alert_dialog_button_bar_height=0x7f0a0000;
+        public static final int abc_button_inset_horizontal_material=0x7f0a0024;
+        public static final int abc_button_inset_vertical_material=0x7f0a0025;
+        public static final int abc_button_padding_horizontal_material=0x7f0a0026;
+        public static final int abc_button_padding_vertical_material=0x7f0a0027;
+        public static final int abc_config_prefDialogWidth=0x7f0a0005;
+        public static final int abc_control_corner_material=0x7f0a0028;
+        public static final int abc_control_inset_material=0x7f0a0029;
+        public static final int abc_control_padding_material=0x7f0a002a;
+        public static final int abc_dialog_fixed_height_major=0x7f0a0006;
+        public static final int abc_dialog_fixed_height_minor=0x7f0a0007;
+        public static final int abc_dialog_fixed_width_major=0x7f0a0008;
+        public static final int abc_dialog_fixed_width_minor=0x7f0a0009;
+        public static final int abc_dialog_list_padding_vertical_material=0x7f0a002b;
+        public static final int abc_dialog_min_width_major=0x7f0a000a;
+        public static final int abc_dialog_min_width_minor=0x7f0a000b;
+        public static final int abc_dialog_padding_material=0x7f0a002c;
+        public static final int abc_dialog_padding_top_material=0x7f0a002d;
+        public static final int abc_disabled_alpha_material_dark=0x7f0a002e;
+        public static final int abc_disabled_alpha_material_light=0x7f0a002f;
+        public static final int abc_dropdownitem_icon_width=0x7f0a0030;
+        public static final int abc_dropdownitem_text_padding_left=0x7f0a0031;
+        public static final int abc_dropdownitem_text_padding_right=0x7f0a0032;
+        public static final int abc_edit_text_inset_bottom_material=0x7f0a0033;
+        public static final int abc_edit_text_inset_horizontal_material=0x7f0a0034;
+        public static final int abc_edit_text_inset_top_material=0x7f0a0035;
+        public static final int abc_floating_window_z=0x7f0a0036;
+        public static final int abc_list_item_padding_horizontal_material=0x7f0a0037;
+        public static final int abc_panel_menu_list_width=0x7f0a0038;
+        public static final int abc_search_view_preferred_width=0x7f0a0039;
+        public static final int abc_search_view_text_min_width=0x7f0a000c;
+        public static final int abc_seekbar_track_background_height_material=0x7f0a003a;
+        public static final int abc_seekbar_track_progress_height_material=0x7f0a003b;
+        public static final int abc_select_dialog_padding_start_material=0x7f0a003c;
+        public static final int abc_switch_padding=0x7f0a0018;
+        public static final int abc_text_size_body_1_material=0x7f0a003d;
+        public static final int abc_text_size_body_2_material=0x7f0a003e;
+        public static final int abc_text_size_button_material=0x7f0a003f;
+        public static final int abc_text_size_caption_material=0x7f0a0040;
+        public static final int abc_text_size_display_1_material=0x7f0a0041;
+        public static final int abc_text_size_display_2_material=0x7f0a0042;
+        public static final int abc_text_size_display_3_material=0x7f0a0043;
+        public static final int abc_text_size_display_4_material=0x7f0a0044;
+        public static final int abc_text_size_headline_material=0x7f0a0045;
+        public static final int abc_text_size_large_material=0x7f0a0046;
+        public static final int abc_text_size_medium_material=0x7f0a0047;
+        public static final int abc_text_size_menu_material=0x7f0a0048;
+        public static final int abc_text_size_small_material=0x7f0a0049;
+        public static final int abc_text_size_subhead_material=0x7f0a004a;
+        public static final int abc_text_size_subtitle_material_toolbar=0x7f0a0003;
+        public static final int abc_text_size_title_material=0x7f0a004b;
+        public static final int abc_text_size_title_material_toolbar=0x7f0a0004;
+        public static final int activity_horizontal_margin=0x7f0a0019;
+        public static final int activity_vertical_margin=0x7f0a004c;
+        public static final int design_appbar_elevation=0x7f0a004d;
+        public static final int design_bottom_sheet_modal_elevation=0x7f0a004e;
+        public static final int design_bottom_sheet_modal_peek_height=0x7f0a004f;
+        public static final int design_fab_border_width=0x7f0a0050;
+        public static final int design_fab_elevation=0x7f0a0051;
+        public static final int design_fab_image_size=0x7f0a0052;
+        public static final int design_fab_size_mini=0x7f0a0053;
+        public static final int design_fab_size_normal=0x7f0a0054;
+        public static final int design_fab_translation_z_pressed=0x7f0a0055;
+        public static final int design_navigation_elevation=0x7f0a0056;
+        public static final int design_navigation_icon_padding=0x7f0a0057;
+        public static final int design_navigation_icon_size=0x7f0a0058;
+        public static final int design_navigation_max_width=0x7f0a0010;
+        public static final int design_navigation_padding_bottom=0x7f0a0059;
+        public static final int design_navigation_separator_vertical_padding=0x7f0a005a;
+        public static final int design_snackbar_action_inline_max_width=0x7f0a0011;
+        public static final int design_snackbar_background_corner_radius=0x7f0a0012;
+        public static final int design_snackbar_elevation=0x7f0a005b;
+        public static final int design_snackbar_extra_spacing_horizontal=0x7f0a0013;
+        public static final int design_snackbar_max_width=0x7f0a0014;
+        public static final int design_snackbar_min_width=0x7f0a0015;
+        public static final int design_snackbar_padding_horizontal=0x7f0a005c;
+        public static final int design_snackbar_padding_vertical=0x7f0a005d;
+        public static final int design_snackbar_padding_vertical_2lines=0x7f0a0016;
+        public static final int design_snackbar_text_size=0x7f0a005e;
+        public static final int design_tab_max_width=0x7f0a005f;
+        public static final int design_tab_scrollable_min_width=0x7f0a0017;
+        public static final int design_tab_text_size=0x7f0a0060;
+        public static final int design_tab_text_size_2line=0x7f0a0061;
+        public static final int disabled_alpha_material_dark=0x7f0a0062;
+        public static final int disabled_alpha_material_light=0x7f0a0063;
+        public static final int highlight_alpha_material_colored=0x7f0a0064;
+        public static final int highlight_alpha_material_dark=0x7f0a0065;
+        public static final int highlight_alpha_material_light=0x7f0a0066;
+        public static final int item_touch_helper_max_drag_scroll_per_frame=0x7f0a0067;
+        public static final int item_touch_helper_swipe_escape_max_velocity=0x7f0a0068;
+        public static final int item_touch_helper_swipe_escape_velocity=0x7f0a0069;
+        public static final int nav_drawer_width=0x7f0a006a;
+        public static final int notification_large_icon_height=0x7f0a006b;
+        public static final int notification_large_icon_width=0x7f0a006c;
+        public static final int notification_subtext_size=0x7f0a006d;
+        public static final int symbolview_symbolfab_fabelevation=0x7f0a006e;
+        public static final int symbolview_symbolfab_fabpress_translation_z=0x7f0a006f;
+        public static final int symbolview_symbolfab_fabsize=0x7f0a0070;
+        public static final int symbolview_symbolfab_fabsize_small=0x7f0a0071;
+        public static final int symbolview_symbolicon_marginleft=0x7f0a0072;
+        public static final int symbolview_symbolicon_maxlength=0x7f0a0073;
+        public static final int symbolview_symbolname_textpadding=0x7f0a0074;
+        public static final int symbolview_symbolname_textsize=0x7f0a0075;
+        public static final int tab_host_default_height=0x7f0a0076;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha=0x7f020000;
-        public static final int abc_action_bar_item_background_material=0x7f020002;
-        public static final int abc_btn_borderless_material=0x7f020003;
-        public static final int abc_btn_check_material=0x7f020004;
-        public static final int abc_btn_check_to_on_mtrl_000=0x7f020005;
-        public static final int abc_btn_check_to_on_mtrl_015=0x7f020006;
-        public static final int abc_btn_colored_material=0x7f020007;
-        public static final int abc_btn_default_mtrl_shape=0x7f020008;
-        public static final int abc_btn_radio_material=0x7f020009;
-        public static final int abc_btn_radio_to_on_mtrl_000=0x7f02000a;
-        public static final int abc_btn_radio_to_on_mtrl_015=0x7f02000b;
-        public static final int abc_btn_rating_star_off_mtrl_alpha=0x7f02000c;
-        public static final int abc_btn_rating_star_on_mtrl_alpha=0x7f02000d;
-        public static final int abc_btn_switch_to_on_mtrl_00001=0x7f02000e;
-        public static final int abc_btn_switch_to_on_mtrl_00012=0x7f02000f;
-        public static final int abc_cab_background_internal_bg=0x7f020010;
-        public static final int abc_cab_background_top_material=0x7f020011;
-        public static final int abc_cab_background_top_mtrl_alpha=0x7f020012;
-        public static final int abc_control_background_material=0x7f020013;
-        public static final int abc_dialog_material_background_dark=0x7f020014;
-        public static final int abc_dialog_material_background_light=0x7f020015;
-        public static final int abc_edit_text_material=0x7f020016;
-        public static final int abc_ic_ab_back_mtrl_am_alpha=0x7f020017;
-        public static final int abc_ic_clear_mtrl_alpha=0x7f020018;
-        public static final int abc_ic_commit_search_api_mtrl_alpha=0x7f020019;
-        public static final int abc_ic_go_search_api_mtrl_alpha=0x7f02001a;
-        public static final int abc_ic_menu_copy_mtrl_am_alpha=0x7f02001b;
-        public static final int abc_ic_menu_cut_mtrl_alpha=0x7f02001c;
-        public static final int abc_ic_menu_moreoverflow_mtrl_alpha=0x7f02001d;
-        public static final int abc_ic_menu_paste_mtrl_am_alpha=0x7f02001e;
-        public static final int abc_ic_menu_selectall_mtrl_alpha=0x7f02001f;
-        public static final int abc_ic_menu_share_mtrl_alpha=0x7f020020;
-        public static final int abc_ic_search_api_mtrl_alpha=0x7f020021;
-        public static final int abc_ic_voice_search_api_mtrl_alpha=0x7f020022;
-        public static final int abc_item_background_holo_dark=0x7f020023;
-        public static final int abc_item_background_holo_light=0x7f020024;
-        public static final int abc_list_divider_mtrl_alpha=0x7f020025;
-        public static final int abc_list_focused_holo=0x7f020026;
-        public static final int abc_list_longpressed_holo=0x7f020027;
-        public static final int abc_list_pressed_holo_dark=0x7f020028;
-        public static final int abc_list_pressed_holo_light=0x7f020029;
-        public static final int abc_list_selector_background_transition_holo_dark=0x7f02002a;
-        public static final int abc_list_selector_background_transition_holo_light=0x7f02002b;
-        public static final int abc_list_selector_disabled_holo_dark=0x7f02002c;
-        public static final int abc_list_selector_disabled_holo_light=0x7f02002d;
-        public static final int abc_list_selector_holo_dark=0x7f02002e;
-        public static final int abc_list_selector_holo_light=0x7f02002f;
-        public static final int abc_menu_hardkey_panel_mtrl_mult=0x7f020030;
-        public static final int abc_popup_background_mtrl_mult=0x7f020031;
-        public static final int abc_ratingbar_full_material=0x7f020032;
-        public static final int abc_scrubber_control_off_mtrl_alpha=0x7f020033;
-        public static final int abc_scrubber_control_to_pressed_mtrl_000=0x7f020034;
-        public static final int abc_scrubber_control_to_pressed_mtrl_005=0x7f020035;
-        public static final int abc_scrubber_primary_mtrl_alpha=0x7f020036;
-        public static final int abc_scrubber_track_mtrl_alpha=0x7f020037;
-        public static final int abc_seekbar_thumb_material=0x7f020038;
-        public static final int abc_seekbar_track_material=0x7f020039;
-        public static final int abc_spinner_mtrl_am_alpha=0x7f02003a;
-        public static final int abc_spinner_textfield_background_material=0x7f02003b;
-        public static final int abc_switch_thumb_material=0x7f02003c;
-        public static final int abc_switch_track_mtrl_alpha=0x7f02003d;
-        public static final int abc_tab_indicator_material=0x7f02003e;
-        public static final int abc_tab_indicator_mtrl_alpha=0x7f02003f;
-        public static final int abc_text_cursor_material=0x7f020040;
-        public static final int abc_textfield_activated_mtrl_alpha=0x7f020041;
-        public static final int abc_textfield_default_mtrl_alpha=0x7f020042;
-        public static final int abc_textfield_search_activated_mtrl_alpha=0x7f020043;
-        public static final int abc_textfield_search_default_mtrl_alpha=0x7f020044;
-        public static final int abc_textfield_search_material=0x7f020045;
-        public static final int design_fab_background=0x7f020046;
-        public static final int design_snackbar_background=0x7f020047;
-        public static final int ic_launcher=0x7f020048;
-        public static final int notification_template_icon_bg=0x7f020049;
-        public static final int rezlights=0x7f020001;
+        public static final int abc_action_bar_item_background_material=0x7f020001;
+        public static final int abc_btn_borderless_material=0x7f020002;
+        public static final int abc_btn_check_material=0x7f020003;
+        public static final int abc_btn_checkbox_checked_mtrl=0x7f020004;
+        public static final int abc_btn_checkbox_unchecked_mtrl=0x7f020005;
+        public static final int abc_btn_colored_material=0x7f020006;
+        public static final int abc_btn_default_mtrl_shape=0x7f020007;
+        public static final int abc_btn_radio_material=0x7f020008;
+        public static final int abc_btn_radio_off_mtrl=0x7f020009;
+        public static final int abc_btn_radio_on_mtrl=0x7f02000a;
+        public static final int abc_btn_rating_star_off_mtrl_alpha=0x7f02000b;
+        public static final int abc_btn_rating_star_on_mtrl_alpha=0x7f02000c;
+        public static final int abc_btn_switch_to_on_mtrl_00001=0x7f02000d;
+        public static final int abc_btn_switch_to_on_mtrl_00012=0x7f02000e;
+        public static final int abc_cab_background_internal_bg=0x7f02000f;
+        public static final int abc_cab_background_top_material=0x7f020010;
+        public static final int abc_cab_background_top_mtrl_alpha=0x7f020011;
+        public static final int abc_control_background_material=0x7f020012;
+        public static final int abc_dialog_material_background_dark=0x7f020013;
+        public static final int abc_dialog_material_background_light=0x7f020014;
+        public static final int abc_edit_text_material=0x7f020015;
+        public static final int abc_ic_ab_back_material=0x7f020016;
+        public static final int abc_ic_clear_material=0x7f020017;
+        public static final int abc_ic_commit_search_api_mtrl_alpha=0x7f020018;
+        public static final int abc_ic_go_search_api_material=0x7f020019;
+        public static final int abc_ic_menu_copy_material=0x7f02001a;
+        public static final int abc_ic_menu_cut_material=0x7f02001b;
+        public static final int abc_ic_menu_overflow_material=0x7f02001c;
+        public static final int abc_ic_menu_paste_material=0x7f02001d;
+        public static final int abc_ic_menu_selectall_material=0x7f02001e;
+        public static final int abc_ic_menu_share_material=0x7f02001f;
+        public static final int abc_ic_search_api_mtrl_alpha=0x7f020020;
+        public static final int abc_ic_star_black_16dp=0x7f020021;
+        public static final int abc_ic_star_black_36dp=0x7f020022;
+        public static final int abc_ic_star_half_black_16dp=0x7f020023;
+        public static final int abc_ic_star_half_black_36dp=0x7f020024;
+        public static final int abc_ic_voice_search_api_material=0x7f020025;
+        public static final int abc_item_background_holo_dark=0x7f020026;
+        public static final int abc_item_background_holo_light=0x7f020027;
+        public static final int abc_list_divider_mtrl_alpha=0x7f020028;
+        public static final int abc_list_focused_holo=0x7f020029;
+        public static final int abc_list_longpressed_holo=0x7f02002a;
+        public static final int abc_list_pressed_holo_dark=0x7f02002b;
+        public static final int abc_list_pressed_holo_light=0x7f02002c;
+        public static final int abc_list_selector_background_transition_holo_dark=0x7f02002d;
+        public static final int abc_list_selector_background_transition_holo_light=0x7f02002e;
+        public static final int abc_list_selector_disabled_holo_dark=0x7f02002f;
+        public static final int abc_list_selector_disabled_holo_light=0x7f020030;
+        public static final int abc_list_selector_holo_dark=0x7f020031;
+        public static final int abc_list_selector_holo_light=0x7f020032;
+        public static final int abc_menu_hardkey_panel_mtrl_mult=0x7f020033;
+        public static final int abc_popup_background_mtrl_mult=0x7f020034;
+        public static final int abc_ratingbar_full_material=0x7f020035;
+        public static final int abc_ratingbar_indicator_material=0x7f020036;
+        public static final int abc_ratingbar_small_material=0x7f020037;
+        public static final int abc_scrubber_control_off_mtrl_alpha=0x7f020038;
+        public static final int abc_scrubber_control_to_pressed_mtrl_000=0x7f020039;
+        public static final int abc_scrubber_control_to_pressed_mtrl_005=0x7f02003a;
+        public static final int abc_scrubber_primary_mtrl_alpha=0x7f02003b;
+        public static final int abc_scrubber_track_mtrl_alpha=0x7f02003c;
+        public static final int abc_seekbar_thumb_material=0x7f02003d;
+        public static final int abc_seekbar_track_material=0x7f02003e;
+        public static final int abc_spinner_mtrl_am_alpha=0x7f02003f;
+        public static final int abc_spinner_textfield_background_material=0x7f020040;
+        public static final int abc_switch_thumb_material=0x7f020041;
+        public static final int abc_switch_track_mtrl_alpha=0x7f020042;
+        public static final int abc_tab_indicator_material=0x7f020043;
+        public static final int abc_tab_indicator_mtrl_alpha=0x7f020044;
+        public static final int abc_text_cursor_material=0x7f020045;
+        public static final int abc_textfield_activated_mtrl_alpha=0x7f020046;
+        public static final int abc_textfield_default_mtrl_alpha=0x7f020047;
+        public static final int abc_textfield_search_activated_mtrl_alpha=0x7f020048;
+        public static final int abc_textfield_search_default_mtrl_alpha=0x7f020049;
+        public static final int abc_textfield_search_material=0x7f02004a;
+        public static final int design_fab_background=0x7f02004b;
+        public static final int design_snackbar_background=0x7f02004c;
+        public static final int ic_launcher=0x7f02004d;
+        public static final int ic_rssymbol_symbolicon_aquarius=0x7f02004e;
+        public static final int ic_rssymbol_symbolicon_aries=0x7f02004f;
+        public static final int ic_rssymbol_symbolicon_ascendant=0x7f020050;
+        public static final int ic_rssymbol_symbolicon_cancer=0x7f020051;
+        public static final int ic_rssymbol_symbolicon_capricorn=0x7f020052;
+        public static final int ic_rssymbol_symbolicon_ceres=0x7f020053;
+        public static final int ic_rssymbol_symbolicon_chiron=0x7f020054;
+        public static final int ic_rssymbol_symbolicon_conjunct=0x7f020055;
+        public static final int ic_rssymbol_symbolicon_gemini=0x7f020056;
+        public static final int ic_rssymbol_symbolicon_juno=0x7f020057;
+        public static final int ic_rssymbol_symbolicon_jupiter=0x7f020058;
+        public static final int ic_rssymbol_symbolicon_leo=0x7f020059;
+        public static final int ic_rssymbol_symbolicon_libra=0x7f02005a;
+        public static final int ic_rssymbol_symbolicon_lilith=0x7f02005b;
+        public static final int ic_rssymbol_symbolicon_mars=0x7f02005c;
+        public static final int ic_rssymbol_symbolicon_mercury=0x7f02005d;
+        public static final int ic_rssymbol_symbolicon_moon=0x7f02005e;
+        public static final int ic_rssymbol_symbolicon_neptune=0x7f02005f;
+        public static final int ic_rssymbol_symbolicon_northnode=0x7f020060;
+        public static final int ic_rssymbol_symbolicon_opposite=0x7f020061;
+        public static final int ic_rssymbol_symbolicon_pallas=0x7f020062;
+        public static final int ic_rssymbol_symbolicon_pluto=0x7f020063;
+        public static final int ic_rssymbol_symbolicon_quincunx=0x7f020064;
+        public static final int ic_rssymbol_symbolicon_sagittarius=0x7f020065;
+        public static final int ic_rssymbol_symbolicon_saturn=0x7f020066;
+        public static final int ic_rssymbol_symbolicon_scorpio=0x7f020067;
+        public static final int ic_rssymbol_symbolicon_semisextile=0x7f020068;
+        public static final int ic_rssymbol_symbolicon_sextile=0x7f020069;
+        public static final int ic_rssymbol_symbolicon_southnode=0x7f02006a;
+        public static final int ic_rssymbol_symbolicon_square=0x7f02006b;
+        public static final int ic_rssymbol_symbolicon_sun=0x7f02006c;
+        public static final int ic_rssymbol_symbolicon_taurus=0x7f02006d;
+        public static final int ic_rssymbol_symbolicon_trine=0x7f02006e;
+        public static final int ic_rssymbol_symbolicon_uranus=0x7f02006f;
+        public static final int ic_rssymbol_symbolicon_venus=0x7f020070;
+        public static final int ic_rssymbol_symbolicon_vesta=0x7f020071;
+        public static final int ic_rssymbol_symbolicon_virgo=0x7f020072;
+        public static final int notification_template_icon_bg=0x7f020190;
+        public static final int rezlights=0x7f020073;
+        public static final int rsastralcharttheme_activated_background_holo_light=0x7f020074;
+        public static final int rsastralcharttheme_btn_check_holo_light=0x7f020075;
+        public static final int rsastralcharttheme_btn_check_off_disabled_focused_holo_light=0x7f020076;
+        public static final int rsastralcharttheme_btn_check_off_disabled_holo_light=0x7f020077;
+        public static final int rsastralcharttheme_btn_check_off_focused_holo_light=0x7f020078;
+        public static final int rsastralcharttheme_btn_check_off_holo_light=0x7f020079;
+        public static final int rsastralcharttheme_btn_check_off_pressed_holo_light=0x7f02007a;
+        public static final int rsastralcharttheme_btn_check_on_disabled_focused_holo_light=0x7f02007b;
+        public static final int rsastralcharttheme_btn_check_on_disabled_holo_light=0x7f02007c;
+        public static final int rsastralcharttheme_btn_check_on_focused_holo_light=0x7f02007d;
+        public static final int rsastralcharttheme_btn_check_on_holo_light=0x7f02007e;
+        public static final int rsastralcharttheme_btn_check_on_pressed_holo_light=0x7f02007f;
+        public static final int rsastralcharttheme_btn_default_disabled_focused_holo_light=0x7f020080;
+        public static final int rsastralcharttheme_btn_default_disabled_holo_light=0x7f020081;
+        public static final int rsastralcharttheme_btn_default_focused_holo_light=0x7f020082;
+        public static final int rsastralcharttheme_btn_default_holo_light=0x7f020083;
+        public static final int rsastralcharttheme_btn_default_normal_holo_light=0x7f020084;
+        public static final int rsastralcharttheme_btn_default_pressed_holo_light=0x7f020085;
+        public static final int rsastralcharttheme_btn_radio_holo_light=0x7f020086;
+        public static final int rsastralcharttheme_btn_radio_off_disabled_focused_holo_light=0x7f020087;
+        public static final int rsastralcharttheme_btn_radio_off_disabled_holo_light=0x7f020088;
+        public static final int rsastralcharttheme_btn_radio_off_focused_holo_light=0x7f020089;
+        public static final int rsastralcharttheme_btn_radio_off_holo_light=0x7f02008a;
+        public static final int rsastralcharttheme_btn_radio_off_pressed_holo_light=0x7f02008b;
+        public static final int rsastralcharttheme_btn_radio_on_disabled_focused_holo_light=0x7f02008c;
+        public static final int rsastralcharttheme_btn_radio_on_disabled_holo_light=0x7f02008d;
+        public static final int rsastralcharttheme_btn_radio_on_focused_holo_light=0x7f02008e;
+        public static final int rsastralcharttheme_btn_radio_on_holo_light=0x7f02008f;
+        public static final int rsastralcharttheme_btn_radio_on_pressed_holo_light=0x7f020090;
+        public static final int rsastralcharttheme_edit_text_holo_light=0x7f020091;
+        public static final int rsastralcharttheme_ic_navigation_drawer=0x7f020092;
+        public static final int rsastralcharttheme_item_background_holo_light=0x7f020093;
+        public static final int rsastralcharttheme_list_activated_holo=0x7f020094;
+        public static final int rsastralcharttheme_list_focused_holo=0x7f020095;
+        public static final int rsastralcharttheme_list_longpressed_holo=0x7f020096;
+        public static final int rsastralcharttheme_list_pressed_holo_light=0x7f020097;
+        public static final int rsastralcharttheme_list_selector_background_transition_holo_light=0x7f020098;
+        public static final int rsastralcharttheme_list_selector_disabled_holo_light=0x7f020099;
+        public static final int rsastralcharttheme_list_selector_holo_light=0x7f02009a;
+        public static final int rsastralcharttheme_scrubber_control_disabled_holo=0x7f02009b;
+        public static final int rsastralcharttheme_scrubber_control_focused_holo=0x7f02009c;
+        public static final int rsastralcharttheme_scrubber_control_normal_holo=0x7f02009d;
+        public static final int rsastralcharttheme_scrubber_control_pressed_holo=0x7f02009e;
+        public static final int rsastralcharttheme_scrubber_control_selector_holo_light=0x7f02009f;
+        public static final int rsastralcharttheme_scrubber_primary_holo=0x7f0200a0;
+        public static final int rsastralcharttheme_scrubber_progress_horizontal_holo_light=0x7f0200a1;
+        public static final int rsastralcharttheme_scrubber_secondary_holo=0x7f0200a2;
+        public static final int rsastralcharttheme_scrubber_track_holo_light=0x7f0200a3;
+        public static final int rsastralcharttheme_spinner_background_holo_light=0x7f0200a4;
+        public static final int rsastralcharttheme_spinner_default_holo_light=0x7f0200a5;
+        public static final int rsastralcharttheme_spinner_disabled_holo_light=0x7f0200a6;
+        public static final int rsastralcharttheme_spinner_focused_holo_light=0x7f0200a7;
+        public static final int rsastralcharttheme_spinner_pressed_holo_light=0x7f0200a8;
+        public static final int rsastralcharttheme_tab_indicator_holo=0x7f0200a9;
+        public static final int rsastralcharttheme_tab_selected_focused_holo=0x7f0200aa;
+        public static final int rsastralcharttheme_tab_selected_holo=0x7f0200ab;
+        public static final int rsastralcharttheme_tab_selected_pressed_holo=0x7f0200ac;
+        public static final int rsastralcharttheme_tab_unselected_focused_holo=0x7f0200ad;
+        public static final int rsastralcharttheme_tab_unselected_holo=0x7f0200ae;
+        public static final int rsastralcharttheme_tab_unselected_pressed_holo=0x7f0200af;
+        public static final int rsastralcharttheme_text_select_handle_left=0x7f0200b0;
+        public static final int rsastralcharttheme_text_select_handle_middle=0x7f0200b1;
+        public static final int rsastralcharttheme_text_select_handle_right=0x7f0200b2;
+        public static final int rsastralcharttheme_textfield_activated_holo_light=0x7f0200b3;
+        public static final int rsastralcharttheme_textfield_default_holo_light=0x7f0200b4;
+        public static final int rsastralcharttheme_textfield_disabled_focused_holo_light=0x7f0200b5;
+        public static final int rsastralcharttheme_textfield_disabled_holo_light=0x7f0200b6;
+        public static final int rsastralcharttheme_textfield_focused_holo_light=0x7f0200b7;
+        public static final int rsbasetheme_activated_background_holo_light=0x7f0200b8;
+        public static final int rsbasetheme_btn_check_holo_light=0x7f0200b9;
+        public static final int rsbasetheme_btn_check_off_disabled_focused_holo_light=0x7f0200ba;
+        public static final int rsbasetheme_btn_check_off_disabled_holo_light=0x7f0200bb;
+        public static final int rsbasetheme_btn_check_off_focused_holo_light=0x7f0200bc;
+        public static final int rsbasetheme_btn_check_off_holo_light=0x7f0200bd;
+        public static final int rsbasetheme_btn_check_off_pressed_holo_light=0x7f0200be;
+        public static final int rsbasetheme_btn_check_on_disabled_focused_holo_light=0x7f0200bf;
+        public static final int rsbasetheme_btn_check_on_disabled_holo_light=0x7f0200c0;
+        public static final int rsbasetheme_btn_check_on_focused_holo_light=0x7f0200c1;
+        public static final int rsbasetheme_btn_check_on_holo_light=0x7f0200c2;
+        public static final int rsbasetheme_btn_check_on_pressed_holo_light=0x7f0200c3;
+        public static final int rsbasetheme_btn_default_disabled_focused_holo_light=0x7f0200c4;
+        public static final int rsbasetheme_btn_default_disabled_holo_light=0x7f0200c5;
+        public static final int rsbasetheme_btn_default_focused_holo_light=0x7f0200c6;
+        public static final int rsbasetheme_btn_default_holo_light=0x7f0200c7;
+        public static final int rsbasetheme_btn_default_normal_holo_light=0x7f0200c8;
+        public static final int rsbasetheme_btn_default_pressed_holo_light=0x7f0200c9;
+        public static final int rsbasetheme_btn_radio_holo_light=0x7f0200ca;
+        public static final int rsbasetheme_btn_radio_off_disabled_focused_holo_light=0x7f0200cb;
+        public static final int rsbasetheme_btn_radio_off_disabled_holo_light=0x7f0200cc;
+        public static final int rsbasetheme_btn_radio_off_focused_holo_light=0x7f0200cd;
+        public static final int rsbasetheme_btn_radio_off_holo_light=0x7f0200ce;
+        public static final int rsbasetheme_btn_radio_off_pressed_holo_light=0x7f0200cf;
+        public static final int rsbasetheme_btn_radio_on_disabled_focused_holo_light=0x7f0200d0;
+        public static final int rsbasetheme_btn_radio_on_disabled_holo_light=0x7f0200d1;
+        public static final int rsbasetheme_btn_radio_on_focused_holo_light=0x7f0200d2;
+        public static final int rsbasetheme_btn_radio_on_holo_light=0x7f0200d3;
+        public static final int rsbasetheme_btn_radio_on_pressed_holo_light=0x7f0200d4;
+        public static final int rsbasetheme_edit_text_holo_light=0x7f0200d5;
+        public static final int rsbasetheme_ic_navigation_drawer=0x7f0200d6;
+        public static final int rsbasetheme_item_background_holo_light=0x7f0200d7;
+        public static final int rsbasetheme_list_activated_holo=0x7f0200d8;
+        public static final int rsbasetheme_list_focused_holo=0x7f0200d9;
+        public static final int rsbasetheme_list_longpressed_holo=0x7f0200da;
+        public static final int rsbasetheme_list_pressed_holo_light=0x7f0200db;
+        public static final int rsbasetheme_list_selector_background_transition_holo_light=0x7f0200dc;
+        public static final int rsbasetheme_list_selector_disabled_holo_light=0x7f0200dd;
+        public static final int rsbasetheme_list_selector_holo_light=0x7f0200de;
+        public static final int rsbasetheme_scrubber_control_disabled_holo=0x7f0200df;
+        public static final int rsbasetheme_scrubber_control_focused_holo=0x7f0200e0;
+        public static final int rsbasetheme_scrubber_control_normal_holo=0x7f0200e1;
+        public static final int rsbasetheme_scrubber_control_pressed_holo=0x7f0200e2;
+        public static final int rsbasetheme_scrubber_control_selector_holo_light=0x7f0200e3;
+        public static final int rsbasetheme_scrubber_primary_holo=0x7f0200e4;
+        public static final int rsbasetheme_scrubber_progress_horizontal_holo_light=0x7f0200e5;
+        public static final int rsbasetheme_scrubber_secondary_holo=0x7f0200e6;
+        public static final int rsbasetheme_scrubber_track_holo_light=0x7f0200e7;
+        public static final int rsbasetheme_spinner_background_holo_light=0x7f0200e8;
+        public static final int rsbasetheme_spinner_default_holo_light=0x7f0200e9;
+        public static final int rsbasetheme_spinner_disabled_holo_light=0x7f0200ea;
+        public static final int rsbasetheme_spinner_focused_holo_light=0x7f0200eb;
+        public static final int rsbasetheme_spinner_pressed_holo_light=0x7f0200ec;
+        public static final int rsbasetheme_tab_indicator_holo=0x7f0200ed;
+        public static final int rsbasetheme_tab_selected_focused_holo=0x7f0200ee;
+        public static final int rsbasetheme_tab_selected_holo=0x7f0200ef;
+        public static final int rsbasetheme_tab_selected_pressed_holo=0x7f0200f0;
+        public static final int rsbasetheme_tab_unselected_focused_holo=0x7f0200f1;
+        public static final int rsbasetheme_tab_unselected_holo=0x7f0200f2;
+        public static final int rsbasetheme_tab_unselected_pressed_holo=0x7f0200f3;
+        public static final int rsbasetheme_text_select_handle_left=0x7f0200f4;
+        public static final int rsbasetheme_text_select_handle_middle=0x7f0200f5;
+        public static final int rsbasetheme_text_select_handle_right=0x7f0200f6;
+        public static final int rsbasetheme_textfield_activated_holo_light=0x7f0200f7;
+        public static final int rsbasetheme_textfield_default_holo_light=0x7f0200f8;
+        public static final int rsbasetheme_textfield_disabled_focused_holo_light=0x7f0200f9;
+        public static final int rsbasetheme_textfield_disabled_holo_light=0x7f0200fa;
+        public static final int rsbasetheme_textfield_focused_holo_light=0x7f0200fb;
+        public static final int rscurrentcharttheme_activated_background_holo_light=0x7f0200fc;
+        public static final int rscurrentcharttheme_btn_check_holo_light=0x7f0200fd;
+        public static final int rscurrentcharttheme_btn_check_off_disabled_focused_holo_light=0x7f0200fe;
+        public static final int rscurrentcharttheme_btn_check_off_disabled_holo_light=0x7f0200ff;
+        public static final int rscurrentcharttheme_btn_check_off_focused_holo_light=0x7f020100;
+        public static final int rscurrentcharttheme_btn_check_off_holo_light=0x7f020101;
+        public static final int rscurrentcharttheme_btn_check_off_pressed_holo_light=0x7f020102;
+        public static final int rscurrentcharttheme_btn_check_on_disabled_focused_holo_light=0x7f020103;
+        public static final int rscurrentcharttheme_btn_check_on_disabled_holo_light=0x7f020104;
+        public static final int rscurrentcharttheme_btn_check_on_focused_holo_light=0x7f020105;
+        public static final int rscurrentcharttheme_btn_check_on_holo_light=0x7f020106;
+        public static final int rscurrentcharttheme_btn_check_on_pressed_holo_light=0x7f020107;
+        public static final int rscurrentcharttheme_btn_default_disabled_focused_holo_light=0x7f020108;
+        public static final int rscurrentcharttheme_btn_default_disabled_holo_light=0x7f020109;
+        public static final int rscurrentcharttheme_btn_default_focused_holo_light=0x7f02010a;
+        public static final int rscurrentcharttheme_btn_default_holo_light=0x7f02010b;
+        public static final int rscurrentcharttheme_btn_default_normal_holo_light=0x7f02010c;
+        public static final int rscurrentcharttheme_btn_default_pressed_holo_light=0x7f02010d;
+        public static final int rscurrentcharttheme_btn_radio_holo_light=0x7f02010e;
+        public static final int rscurrentcharttheme_btn_radio_off_disabled_focused_holo_light=0x7f02010f;
+        public static final int rscurrentcharttheme_btn_radio_off_disabled_holo_light=0x7f020110;
+        public static final int rscurrentcharttheme_btn_radio_off_focused_holo_light=0x7f020111;
+        public static final int rscurrentcharttheme_btn_radio_off_holo_light=0x7f020112;
+        public static final int rscurrentcharttheme_btn_radio_off_pressed_holo_light=0x7f020113;
+        public static final int rscurrentcharttheme_btn_radio_on_disabled_focused_holo_light=0x7f020114;
+        public static final int rscurrentcharttheme_btn_radio_on_disabled_holo_light=0x7f020115;
+        public static final int rscurrentcharttheme_btn_radio_on_focused_holo_light=0x7f020116;
+        public static final int rscurrentcharttheme_btn_radio_on_holo_light=0x7f020117;
+        public static final int rscurrentcharttheme_btn_radio_on_pressed_holo_light=0x7f020118;
+        public static final int rscurrentcharttheme_edit_text_holo_light=0x7f020119;
+        public static final int rscurrentcharttheme_ic_navigation_drawer=0x7f02011a;
+        public static final int rscurrentcharttheme_item_background_holo_light=0x7f02011b;
+        public static final int rscurrentcharttheme_list_activated_holo=0x7f02011c;
+        public static final int rscurrentcharttheme_list_focused_holo=0x7f02011d;
+        public static final int rscurrentcharttheme_list_longpressed_holo=0x7f02011e;
+        public static final int rscurrentcharttheme_list_pressed_holo_light=0x7f02011f;
+        public static final int rscurrentcharttheme_list_selector_background_transition_holo_light=0x7f020120;
+        public static final int rscurrentcharttheme_list_selector_disabled_holo_light=0x7f020121;
+        public static final int rscurrentcharttheme_list_selector_holo_light=0x7f020122;
+        public static final int rscurrentcharttheme_scrubber_control_disabled_holo=0x7f020123;
+        public static final int rscurrentcharttheme_scrubber_control_focused_holo=0x7f020124;
+        public static final int rscurrentcharttheme_scrubber_control_normal_holo=0x7f020125;
+        public static final int rscurrentcharttheme_scrubber_control_pressed_holo=0x7f020126;
+        public static final int rscurrentcharttheme_scrubber_control_selector_holo_light=0x7f020127;
+        public static final int rscurrentcharttheme_scrubber_primary_holo=0x7f020128;
+        public static final int rscurrentcharttheme_scrubber_progress_horizontal_holo_light=0x7f020129;
+        public static final int rscurrentcharttheme_scrubber_secondary_holo=0x7f02012a;
+        public static final int rscurrentcharttheme_scrubber_track_holo_light=0x7f02012b;
+        public static final int rscurrentcharttheme_spinner_background_holo_light=0x7f02012c;
+        public static final int rscurrentcharttheme_spinner_default_holo_light=0x7f02012d;
+        public static final int rscurrentcharttheme_spinner_disabled_holo_light=0x7f02012e;
+        public static final int rscurrentcharttheme_spinner_focused_holo_light=0x7f02012f;
+        public static final int rscurrentcharttheme_spinner_pressed_holo_light=0x7f020130;
+        public static final int rscurrentcharttheme_tab_indicator_holo=0x7f020131;
+        public static final int rscurrentcharttheme_tab_selected_focused_holo=0x7f020132;
+        public static final int rscurrentcharttheme_tab_selected_holo=0x7f020133;
+        public static final int rscurrentcharttheme_tab_selected_pressed_holo=0x7f020134;
+        public static final int rscurrentcharttheme_tab_unselected_focused_holo=0x7f020135;
+        public static final int rscurrentcharttheme_tab_unselected_holo=0x7f020136;
+        public static final int rscurrentcharttheme_tab_unselected_pressed_holo=0x7f020137;
+        public static final int rscurrentcharttheme_text_select_handle_left=0x7f020138;
+        public static final int rscurrentcharttheme_text_select_handle_middle=0x7f020139;
+        public static final int rscurrentcharttheme_text_select_handle_right=0x7f02013a;
+        public static final int rscurrentcharttheme_textfield_activated_holo_light=0x7f02013b;
+        public static final int rscurrentcharttheme_textfield_default_holo_light=0x7f02013c;
+        public static final int rscurrentcharttheme_textfield_disabled_focused_holo_light=0x7f02013d;
+        public static final int rscurrentcharttheme_textfield_disabled_holo_light=0x7f02013e;
+        public static final int rscurrentcharttheme_textfield_focused_holo_light=0x7f02013f;
+        public static final int rsnumbercharttheme_activated_background_holo_light=0x7f020140;
+        public static final int rsnumbercharttheme_btn_check_holo_light=0x7f020141;
+        public static final int rsnumbercharttheme_btn_check_off_disabled_focused_holo_light=0x7f020142;
+        public static final int rsnumbercharttheme_btn_check_off_disabled_holo_light=0x7f020143;
+        public static final int rsnumbercharttheme_btn_check_off_focused_holo_light=0x7f020144;
+        public static final int rsnumbercharttheme_btn_check_off_holo_light=0x7f020145;
+        public static final int rsnumbercharttheme_btn_check_off_pressed_holo_light=0x7f020146;
+        public static final int rsnumbercharttheme_btn_check_on_disabled_focused_holo_light=0x7f020147;
+        public static final int rsnumbercharttheme_btn_check_on_disabled_holo_light=0x7f020148;
+        public static final int rsnumbercharttheme_btn_check_on_focused_holo_light=0x7f020149;
+        public static final int rsnumbercharttheme_btn_check_on_holo_light=0x7f02014a;
+        public static final int rsnumbercharttheme_btn_check_on_pressed_holo_light=0x7f02014b;
+        public static final int rsnumbercharttheme_btn_default_disabled_focused_holo_light=0x7f02014c;
+        public static final int rsnumbercharttheme_btn_default_disabled_holo_light=0x7f02014d;
+        public static final int rsnumbercharttheme_btn_default_focused_holo_light=0x7f02014e;
+        public static final int rsnumbercharttheme_btn_default_holo_light=0x7f02014f;
+        public static final int rsnumbercharttheme_btn_default_normal_holo_light=0x7f020150;
+        public static final int rsnumbercharttheme_btn_default_pressed_holo_light=0x7f020151;
+        public static final int rsnumbercharttheme_btn_radio_holo_light=0x7f020152;
+        public static final int rsnumbercharttheme_btn_radio_off_disabled_focused_holo_light=0x7f020153;
+        public static final int rsnumbercharttheme_btn_radio_off_disabled_holo_light=0x7f020154;
+        public static final int rsnumbercharttheme_btn_radio_off_focused_holo_light=0x7f020155;
+        public static final int rsnumbercharttheme_btn_radio_off_holo_light=0x7f020156;
+        public static final int rsnumbercharttheme_btn_radio_off_pressed_holo_light=0x7f020157;
+        public static final int rsnumbercharttheme_btn_radio_on_disabled_focused_holo_light=0x7f020158;
+        public static final int rsnumbercharttheme_btn_radio_on_disabled_holo_light=0x7f020159;
+        public static final int rsnumbercharttheme_btn_radio_on_focused_holo_light=0x7f02015a;
+        public static final int rsnumbercharttheme_btn_radio_on_holo_light=0x7f02015b;
+        public static final int rsnumbercharttheme_btn_radio_on_pressed_holo_light=0x7f02015c;
+        public static final int rsnumbercharttheme_edit_text_holo_light=0x7f02015d;
+        public static final int rsnumbercharttheme_ic_navigation_drawer=0x7f02015e;
+        public static final int rsnumbercharttheme_item_background_holo_light=0x7f02015f;
+        public static final int rsnumbercharttheme_list_activated_holo=0x7f020160;
+        public static final int rsnumbercharttheme_list_focused_holo=0x7f020161;
+        public static final int rsnumbercharttheme_list_longpressed_holo=0x7f020162;
+        public static final int rsnumbercharttheme_list_pressed_holo_light=0x7f020163;
+        public static final int rsnumbercharttheme_list_selector_background_transition_holo_light=0x7f020164;
+        public static final int rsnumbercharttheme_list_selector_disabled_holo_light=0x7f020165;
+        public static final int rsnumbercharttheme_list_selector_holo_light=0x7f020166;
+        public static final int rsnumbercharttheme_scrubber_control_disabled_holo=0x7f020167;
+        public static final int rsnumbercharttheme_scrubber_control_focused_holo=0x7f020168;
+        public static final int rsnumbercharttheme_scrubber_control_normal_holo=0x7f020169;
+        public static final int rsnumbercharttheme_scrubber_control_pressed_holo=0x7f02016a;
+        public static final int rsnumbercharttheme_scrubber_control_selector_holo_light=0x7f02016b;
+        public static final int rsnumbercharttheme_scrubber_primary_holo=0x7f02016c;
+        public static final int rsnumbercharttheme_scrubber_progress_horizontal_holo_light=0x7f02016d;
+        public static final int rsnumbercharttheme_scrubber_secondary_holo=0x7f02016e;
+        public static final int rsnumbercharttheme_scrubber_track_holo_light=0x7f02016f;
+        public static final int rsnumbercharttheme_spinner_background_holo_light=0x7f020170;
+        public static final int rsnumbercharttheme_spinner_default_holo_light=0x7f020171;
+        public static final int rsnumbercharttheme_spinner_disabled_holo_light=0x7f020172;
+        public static final int rsnumbercharttheme_spinner_focused_holo_light=0x7f020173;
+        public static final int rsnumbercharttheme_spinner_pressed_holo_light=0x7f020174;
+        public static final int rsnumbercharttheme_tab_indicator_holo=0x7f020175;
+        public static final int rsnumbercharttheme_tab_selected_focused_holo=0x7f020176;
+        public static final int rsnumbercharttheme_tab_selected_holo=0x7f020177;
+        public static final int rsnumbercharttheme_tab_selected_pressed_holo=0x7f020178;
+        public static final int rsnumbercharttheme_tab_unselected_focused_holo=0x7f020179;
+        public static final int rsnumbercharttheme_tab_unselected_holo=0x7f02017a;
+        public static final int rsnumbercharttheme_tab_unselected_pressed_holo=0x7f02017b;
+        public static final int rsnumbercharttheme_text_select_handle_left=0x7f02017c;
+        public static final int rsnumbercharttheme_text_select_handle_middle=0x7f02017d;
+        public static final int rsnumbercharttheme_text_select_handle_right=0x7f02017e;
+        public static final int rsnumbercharttheme_textfield_activated_holo_light=0x7f02017f;
+        public static final int rsnumbercharttheme_textfield_default_holo_light=0x7f020180;
+        public static final int rsnumbercharttheme_textfield_disabled_focused_holo_light=0x7f020181;
+        public static final int rsnumbercharttheme_textfield_disabled_holo_light=0x7f020182;
+        public static final int rsnumbercharttheme_textfield_focused_holo_light=0x7f020183;
+        public static final int rssymbolview_symbol_asteroid=0x7f020184;
+        public static final int rssymbolview_symbol_jupiter=0x7f020185;
+        public static final int rssymbolview_symbol_lilith=0x7f020186;
+        public static final int rssymbolview_symbol_mars=0x7f020187;
+        public static final int rssymbolview_symbol_mercury=0x7f020188;
+        public static final int rssymbolview_symbol_moon=0x7f020189;
+        public static final int rssymbolview_symbol_neptune=0x7f02018a;
+        public static final int rssymbolview_symbol_pluto=0x7f02018b;
+        public static final int rssymbolview_symbol_saturn=0x7f02018c;
+        public static final int rssymbolview_symbol_sun=0x7f02018d;
+        public static final int rssymbolview_symbol_uranus=0x7f02018e;
+        public static final int rssymbolview_symbol_venus=0x7f02018f;
     }
     public static final class id {
-        public static final int action0=0x7f0d0071;
-        public static final int action_bar=0x7f0d005a;
-        public static final int action_bar_activity_content=0x7f0d0000;
-        public static final int action_bar_container=0x7f0d0059;
-        public static final int action_bar_root=0x7f0d0055;
-        public static final int action_bar_spinner=0x7f0d0001;
-        public static final int action_bar_subtitle=0x7f0d003b;
-        public static final int action_bar_title=0x7f0d003a;
-        public static final int action_context_bar=0x7f0d005b;
-        public static final int action_divider=0x7f0d0075;
-        public static final int action_menu_divider=0x7f0d0002;
-        public static final int action_menu_presenter=0x7f0d0003;
-        public static final int action_mode_bar=0x7f0d0057;
-        public static final int action_mode_bar_stub=0x7f0d0056;
-        public static final int action_mode_close_button=0x7f0d003c;
-        public static final int activity_chooser_view_content=0x7f0d003d;
-        public static final int alertTitle=0x7f0d0049;
-        public static final int always=0x7f0d0032;
-        public static final int beginning=0x7f0d0030;
-        public static final int bottom=0x7f0d001c;
-        public static final int buttonPanel=0x7f0d0044;
-        public static final int cancel_action=0x7f0d0072;
-        public static final int center=0x7f0d001d;
-        public static final int center_horizontal=0x7f0d001e;
-        public static final int center_vertical=0x7f0d001f;
-        public static final int checkbox=0x7f0d0052;
-        public static final int chronometer=0x7f0d0078;
-        public static final int clip_horizontal=0x7f0d002b;
-        public static final int clip_vertical=0x7f0d002c;
-        public static final int collapseActionView=0x7f0d0033;
-        public static final int contentPanel=0x7f0d004a;
-        public static final int custom=0x7f0d0050;
-        public static final int customPanel=0x7f0d004f;
-        public static final int decor_content_parent=0x7f0d0058;
-        public static final int default_activity_button=0x7f0d0040;
-        public static final int design_menu_item_action_area=0x7f0d006f;
-        public static final int design_menu_item_action_area_stub=0x7f0d006e;
-        public static final int design_menu_item_text=0x7f0d006d;
-        public static final int design_navigation_view=0x7f0d006c;
-        public static final int disableHome=0x7f0d000e;
-        public static final int edit_query=0x7f0d005c;
-        public static final int end=0x7f0d0020;
-        public static final int end_padder=0x7f0d007d;
-        public static final int enterAlways=0x7f0d0015;
-        public static final int enterAlwaysCollapsed=0x7f0d0016;
-        public static final int exitUntilCollapsed=0x7f0d0017;
-        public static final int expand_activities_button=0x7f0d003e;
-        public static final int expanded_menu=0x7f0d0051;
-        public static final int fill=0x7f0d002d;
-        public static final int fill_horizontal=0x7f0d002e;
-        public static final int fill_vertical=0x7f0d0021;
-        public static final int fixed=0x7f0d0037;
-        public static final int home=0x7f0d0004;
-        public static final int homeAsUp=0x7f0d000f;
-        public static final int icon=0x7f0d0042;
-        public static final int ifRoom=0x7f0d0034;
-        public static final int image=0x7f0d003f;
-        public static final int info=0x7f0d007c;
-        public static final int item_touch_helper_previous_elevation=0x7f0d0005;
-        public static final int left=0x7f0d0022;
-        public static final int line1=0x7f0d0076;
-        public static final int line3=0x7f0d007a;
-        public static final int listMode=0x7f0d000b;
-        public static final int list_item=0x7f0d0041;
-        public static final int mapview=0x7f0d0070;
-        public static final int media_actions=0x7f0d0074;
-        public static final int middle=0x7f0d0031;
-        public static final int mini=0x7f0d002f;
-        public static final int multiply=0x7f0d0026;
-        public static final int navigation_header_container=0x7f0d006b;
-        public static final int never=0x7f0d0035;
-        public static final int none=0x7f0d0010;
-        public static final int normal=0x7f0d000c;
-        public static final int parallax=0x7f0d001a;
-        public static final int parentPanel=0x7f0d0046;
-        public static final int pin=0x7f0d001b;
-        public static final int progress_circular=0x7f0d0006;
-        public static final int progress_horizontal=0x7f0d0007;
-        public static final int radio=0x7f0d0054;
-        public static final int right=0x7f0d0023;
-        public static final int screen=0x7f0d0027;
-        public static final int scroll=0x7f0d0018;
-        public static final int scrollIndicatorDown=0x7f0d004e;
-        public static final int scrollIndicatorUp=0x7f0d004b;
-        public static final int scrollView=0x7f0d004c;
-        public static final int scrollable=0x7f0d0038;
-        public static final int search_badge=0x7f0d005e;
-        public static final int search_bar=0x7f0d005d;
-        public static final int search_button=0x7f0d005f;
-        public static final int search_close_btn=0x7f0d0064;
-        public static final int search_edit_frame=0x7f0d0060;
-        public static final int search_go_btn=0x7f0d0066;
-        public static final int search_mag_icon=0x7f0d0061;
-        public static final int search_plate=0x7f0d0062;
-        public static final int search_src_text=0x7f0d0063;
-        public static final int search_voice_btn=0x7f0d0067;
-        public static final int select_dialog_listview=0x7f0d0068;
-        public static final int shortcut=0x7f0d0053;
-        public static final int showCustom=0x7f0d0011;
-        public static final int showHome=0x7f0d0012;
-        public static final int showTitle=0x7f0d0013;
-        public static final int snackbar_action=0x7f0d006a;
-        public static final int snackbar_text=0x7f0d0069;
-        public static final int snap=0x7f0d0019;
-        public static final int spacer=0x7f0d0045;
-        public static final int split_action_bar=0x7f0d0008;
-        public static final int src_atop=0x7f0d0028;
-        public static final int src_in=0x7f0d0029;
-        public static final int src_over=0x7f0d002a;
-        public static final int start=0x7f0d0024;
-        public static final int status_bar_latest_event_content=0x7f0d0073;
-        public static final int submit_area=0x7f0d0065;
-        public static final int tabMode=0x7f0d000d;
-        public static final int text=0x7f0d007b;
-        public static final int text2=0x7f0d0079;
-        public static final int textSpacerNoButtons=0x7f0d004d;
-        public static final int time=0x7f0d0077;
-        public static final int title=0x7f0d0043;
-        public static final int title_template=0x7f0d0048;
-        public static final int top=0x7f0d0025;
-        public static final int topPanel=0x7f0d0047;
-        public static final int up=0x7f0d0009;
-        public static final int useLogo=0x7f0d0014;
-        public static final int view_offset_helper=0x7f0d000a;
-        public static final int withText=0x7f0d0036;
-        public static final int wrap_content=0x7f0d0039;
+        public static final int action0=0x7f0e0075;
+        public static final int action_bar=0x7f0e005a;
+        public static final int action_bar_activity_content=0x7f0e0000;
+        public static final int action_bar_container=0x7f0e0059;
+        public static final int action_bar_root=0x7f0e0055;
+        public static final int action_bar_spinner=0x7f0e0001;
+        public static final int action_bar_subtitle=0x7f0e003b;
+        public static final int action_bar_title=0x7f0e003a;
+        public static final int action_context_bar=0x7f0e005b;
+        public static final int action_divider=0x7f0e0079;
+        public static final int action_menu_divider=0x7f0e0002;
+        public static final int action_menu_presenter=0x7f0e0003;
+        public static final int action_mode_bar=0x7f0e0057;
+        public static final int action_mode_bar_stub=0x7f0e0056;
+        public static final int action_mode_close_button=0x7f0e003c;
+        public static final int activity_chooser_view_content=0x7f0e003d;
+        public static final int alertTitle=0x7f0e0049;
+        public static final int always=0x7f0e0033;
+        public static final int beginning=0x7f0e0031;
+        public static final int bottom=0x7f0e001d;
+        public static final int buttonPanel=0x7f0e0044;
+        public static final int cancel_action=0x7f0e0076;
+        public static final int center=0x7f0e001e;
+        public static final int center_horizontal=0x7f0e001f;
+        public static final int center_vertical=0x7f0e0020;
+        public static final int checkbox=0x7f0e0052;
+        public static final int chronometer=0x7f0e007c;
+        public static final int clip_horizontal=0x7f0e002c;
+        public static final int clip_vertical=0x7f0e002d;
+        public static final int collapseActionView=0x7f0e0034;
+        public static final int contentPanel=0x7f0e004a;
+        public static final int custom=0x7f0e0050;
+        public static final int customPanel=0x7f0e004f;
+        public static final int decor_content_parent=0x7f0e0058;
+        public static final int default_activity_button=0x7f0e0040;
+        public static final int design_bottom_sheet=0x7f0e0069;
+        public static final int design_menu_item_action_area=0x7f0e0070;
+        public static final int design_menu_item_action_area_stub=0x7f0e006f;
+        public static final int design_menu_item_text=0x7f0e006e;
+        public static final int design_navigation_view=0x7f0e006d;
+        public static final int disableHome=0x7f0e000e;
+        public static final int drawerList=0x7f0e0073;
+        public static final int drawer_layout=0x7f0e0082;
+        public static final int edit_query=0x7f0e005c;
+        public static final int end=0x7f0e0021;
+        public static final int end_padder=0x7f0e0081;
+        public static final int enterAlways=0x7f0e0015;
+        public static final int enterAlwaysCollapsed=0x7f0e0016;
+        public static final int exitUntilCollapsed=0x7f0e0017;
+        public static final int expand_activities_button=0x7f0e003e;
+        public static final int expanded_menu=0x7f0e0051;
+        public static final int fab_1=0x7f0e0071;
+        public static final int fill=0x7f0e002e;
+        public static final int fill_horizontal=0x7f0e002f;
+        public static final int fill_vertical=0x7f0e0022;
+        public static final int fixed=0x7f0e0038;
+        public static final int fragment_navigation_drawer=0x7f0e0083;
+        public static final int home=0x7f0e0004;
+        public static final int homeAsUp=0x7f0e000f;
+        public static final int icon=0x7f0e0042;
+        public static final int ifRoom=0x7f0e0035;
+        public static final int image=0x7f0e003f;
+        public static final int info=0x7f0e0080;
+        public static final int item_touch_helper_previous_elevation=0x7f0e0005;
+        public static final int left=0x7f0e0023;
+        public static final int line1=0x7f0e007a;
+        public static final int line3=0x7f0e007e;
+        public static final int listMode=0x7f0e000b;
+        public static final int list_item=0x7f0e0041;
+        public static final int mapview=0x7f0e0074;
+        public static final int media_actions=0x7f0e0078;
+        public static final int middle=0x7f0e0032;
+        public static final int mini=0x7f0e0030;
+        public static final int multiply=0x7f0e0027;
+        public static final int nav_header_container=0x7f0e0072;
+        public static final int navigation_header_container=0x7f0e006c;
+        public static final int never=0x7f0e0036;
+        public static final int none=0x7f0e0010;
+        public static final int normal=0x7f0e000c;
+        public static final int parallax=0x7f0e001b;
+        public static final int parentPanel=0x7f0e0046;
+        public static final int pin=0x7f0e001c;
+        public static final int progress_circular=0x7f0e0006;
+        public static final int progress_horizontal=0x7f0e0007;
+        public static final int radio=0x7f0e0054;
+        public static final int right=0x7f0e0024;
+        public static final int screen=0x7f0e0028;
+        public static final int scroll=0x7f0e0018;
+        public static final int scrollIndicatorDown=0x7f0e004e;
+        public static final int scrollIndicatorUp=0x7f0e004b;
+        public static final int scrollView=0x7f0e004c;
+        public static final int scrollable=0x7f0e0039;
+        public static final int search_badge=0x7f0e005e;
+        public static final int search_bar=0x7f0e005d;
+        public static final int search_button=0x7f0e005f;
+        public static final int search_close_btn=0x7f0e0064;
+        public static final int search_edit_frame=0x7f0e0060;
+        public static final int search_go_btn=0x7f0e0066;
+        public static final int search_mag_icon=0x7f0e0061;
+        public static final int search_plate=0x7f0e0062;
+        public static final int search_src_text=0x7f0e0063;
+        public static final int search_voice_btn=0x7f0e0067;
+        public static final int select_dialog_listview=0x7f0e0068;
+        public static final int shortcut=0x7f0e0053;
+        public static final int showCustom=0x7f0e0011;
+        public static final int showHome=0x7f0e0012;
+        public static final int showTitle=0x7f0e0013;
+        public static final int snackbar_action=0x7f0e006b;
+        public static final int snackbar_text=0x7f0e006a;
+        public static final int snap=0x7f0e0019;
+        public static final int spacer=0x7f0e0045;
+        public static final int split_action_bar=0x7f0e0008;
+        public static final int src_atop=0x7f0e0029;
+        public static final int src_in=0x7f0e002a;
+        public static final int src_over=0x7f0e002b;
+        public static final int start=0x7f0e0025;
+        public static final int status_bar_latest_event_content=0x7f0e0077;
+        public static final int submit_area=0x7f0e0065;
+        public static final int tabMode=0x7f0e000d;
+        public static final int tabs=0x7f0e0086;
+        public static final int text=0x7f0e007f;
+        public static final int text2=0x7f0e007d;
+        public static final int textSpacerNoButtons=0x7f0e004d;
+        public static final int textview_symbolname=0x7f0e0085;
+        public static final int time=0x7f0e007b;
+        public static final int title=0x7f0e0043;
+        public static final int title_template=0x7f0e0048;
+        public static final int toolbar=0x7f0e0084;
+        public static final int top=0x7f0e0026;
+        public static final int topPanel=0x7f0e0047;
+        public static final int up=0x7f0e0009;
+        public static final int useLogo=0x7f0e0014;
+        public static final int view_offset_helper=0x7f0e000a;
+        public static final int viewpager=0x7f0e0087;
+        public static final int withText=0x7f0e0037;
+        public static final int wrap_content=0x7f0e001a;
     }
     public static final class integer {
-        public static final int abc_config_activityDefaultDur=0x7f0b0002;
-        public static final int abc_config_activityShortDur=0x7f0b0003;
-        public static final int abc_max_action_buttons=0x7f0b0000;
-        public static final int cancel_button_image_alpha=0x7f0b0004;
-        public static final int design_snackbar_text_max_lines=0x7f0b0001;
-        public static final int status_bar_notification_info_maxnum=0x7f0b0005;
+        public static final int abc_config_activityDefaultDur=0x7f0c0002;
+        public static final int abc_config_activityShortDur=0x7f0c0003;
+        public static final int abc_max_action_buttons=0x7f0c0000;
+        public static final int bottom_sheet_slide_duration=0x7f0c0004;
+        public static final int cancel_button_image_alpha=0x7f0c0005;
+        public static final int design_snackbar_text_max_lines=0x7f0c0001;
+        public static final int status_bar_notification_info_maxnum=0x7f0c0006;
     }
     public static final class layout {
-        public static final int abc_action_bar_title_item=0x7f030001;
-        public static final int abc_action_bar_up_container=0x7f030002;
-        public static final int abc_action_bar_view_list_nav_layout=0x7f030003;
-        public static final int abc_action_menu_item_layout=0x7f030004;
-        public static final int abc_action_menu_layout=0x7f030005;
-        public static final int abc_action_mode_bar=0x7f030006;
-        public static final int abc_action_mode_close_item_material=0x7f030007;
-        public static final int abc_activity_chooser_view=0x7f030008;
-        public static final int abc_activity_chooser_view_list_item=0x7f030009;
-        public static final int abc_alert_dialog_button_bar_material=0x7f03000a;
-        public static final int abc_alert_dialog_material=0x7f03000b;
-        public static final int abc_dialog_title_material=0x7f03000c;
-        public static final int abc_expanded_menu_layout=0x7f03000d;
-        public static final int abc_list_menu_item_checkbox=0x7f03000e;
-        public static final int abc_list_menu_item_icon=0x7f03000f;
-        public static final int abc_list_menu_item_layout=0x7f030010;
-        public static final int abc_list_menu_item_radio=0x7f030011;
-        public static final int abc_popup_menu_item_layout=0x7f030012;
-        public static final int abc_screen_content_include=0x7f030013;
-        public static final int abc_screen_simple=0x7f030014;
-        public static final int abc_screen_simple_overlay_action_mode=0x7f030015;
-        public static final int abc_screen_toolbar=0x7f030016;
-        public static final int abc_search_dropdown_item_icons_2line=0x7f030017;
-        public static final int abc_search_view=0x7f030018;
-        public static final int abc_select_dialog_material=0x7f030019;
-        public static final int design_layout_snackbar=0x7f03001a;
-        public static final int design_layout_snackbar_include=0x7f03001b;
-        public static final int design_layout_tab_icon=0x7f03001c;
-        public static final int design_layout_tab_text=0x7f03001d;
-        public static final int design_menu_item_action_area=0x7f03001e;
-        public static final int design_navigation_item=0x7f03001f;
-        public static final int design_navigation_item_header=0x7f030020;
-        public static final int design_navigation_item_separator=0x7f030021;
-        public static final int design_navigation_item_subheader=0x7f030022;
-        public static final int design_navigation_menu=0x7f030023;
-        public static final int design_navigation_menu_item=0x7f030024;
-        public static final int main=0x7f030000;
-        public static final int mapsmain=0x7f030025;
-        public static final int notification_media_action=0x7f030026;
-        public static final int notification_media_cancel_action=0x7f030027;
-        public static final int notification_template_big_media=0x7f030028;
-        public static final int notification_template_big_media_narrow=0x7f030029;
-        public static final int notification_template_lines=0x7f03002a;
-        public static final int notification_template_media=0x7f03002b;
-        public static final int notification_template_part_chronometer=0x7f03002c;
-        public static final int notification_template_part_time=0x7f03002d;
-        public static final int select_dialog_item_material=0x7f03002e;
-        public static final int select_dialog_multichoice_material=0x7f03002f;
-        public static final int select_dialog_singlechoice_material=0x7f030030;
-        public static final int support_simple_spinner_dropdown_item=0x7f030031;
+        public static final int abc_action_bar_title_item=0x7f030000;
+        public static final int abc_action_bar_up_container=0x7f030001;
+        public static final int abc_action_bar_view_list_nav_layout=0x7f030002;
+        public static final int abc_action_menu_item_layout=0x7f030003;
+        public static final int abc_action_menu_layout=0x7f030004;
+        public static final int abc_action_mode_bar=0x7f030005;
+        public static final int abc_action_mode_close_item_material=0x7f030006;
+        public static final int abc_activity_chooser_view=0x7f030007;
+        public static final int abc_activity_chooser_view_list_item=0x7f030008;
+        public static final int abc_alert_dialog_button_bar_material=0x7f030009;
+        public static final int abc_alert_dialog_material=0x7f03000a;
+        public static final int abc_dialog_title_material=0x7f03000b;
+        public static final int abc_expanded_menu_layout=0x7f03000c;
+        public static final int abc_list_menu_item_checkbox=0x7f03000d;
+        public static final int abc_list_menu_item_icon=0x7f03000e;
+        public static final int abc_list_menu_item_layout=0x7f03000f;
+        public static final int abc_list_menu_item_radio=0x7f030010;
+        public static final int abc_popup_menu_item_layout=0x7f030011;
+        public static final int abc_screen_content_include=0x7f030012;
+        public static final int abc_screen_simple=0x7f030013;
+        public static final int abc_screen_simple_overlay_action_mode=0x7f030014;
+        public static final int abc_screen_toolbar=0x7f030015;
+        public static final int abc_search_dropdown_item_icons_2line=0x7f030016;
+        public static final int abc_search_view=0x7f030017;
+        public static final int abc_select_dialog_material=0x7f030018;
+        public static final int activity_test=0x7f030019;
+        public static final int design_bottom_sheet_dialog=0x7f03001a;
+        public static final int design_layout_snackbar=0x7f03001b;
+        public static final int design_layout_snackbar_include=0x7f03001c;
+        public static final int design_layout_tab_icon=0x7f03001d;
+        public static final int design_layout_tab_text=0x7f03001e;
+        public static final int design_menu_item_action_area=0x7f03001f;
+        public static final int design_navigation_item=0x7f030020;
+        public static final int design_navigation_item_header=0x7f030021;
+        public static final int design_navigation_item_separator=0x7f030022;
+        public static final int design_navigation_item_subheader=0x7f030023;
+        public static final int design_navigation_menu=0x7f030024;
+        public static final int design_navigation_menu_item=0x7f030025;
+        public static final int fab_layout=0x7f030026;
+        public static final int fragment_navigation_drawer=0x7f030027;
+        public static final int fragment_symbolviewcontent_empty=0x7f030028;
+        public static final int main=0x7f030029;
+        public static final int mapsmain=0x7f03002a;
+        public static final int nav_drawer_row=0x7f03002b;
+        public static final int notification_media_action=0x7f03002c;
+        public static final int notification_media_cancel_action=0x7f03002d;
+        public static final int notification_template_big_media=0x7f03002e;
+        public static final int notification_template_big_media_narrow=0x7f03002f;
+        public static final int notification_template_lines=0x7f030030;
+        public static final int notification_template_media=0x7f030031;
+        public static final int notification_template_part_chronometer=0x7f030032;
+        public static final int notification_template_part_time=0x7f030033;
+        public static final int rsastralcharttheme_tab_indicator_holo=0x7f030034;
+        public static final int rsbasetheme_tab_indicator_holo=0x7f030035;
+        public static final int rscurrentcharttheme_tab_indicator_holo=0x7f030036;
+        public static final int rsnumbercharttheme_tab_indicator_holo=0x7f030037;
+        public static final int rssymbolview_layout=0x7f030038;
+        public static final int rssymbolview_symbolimageview=0x7f030039;
+        public static final int select_dialog_item_material=0x7f03003a;
+        public static final int select_dialog_multichoice_material=0x7f03003b;
+        public static final int select_dialog_singlechoice_material=0x7f03003c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03003d;
     }
     public static final class raw {
-        public static final int gent=0x7f040000;
-        public static final int gouraud_frag=0x7f040002;
-        public static final int gouraud_vert=0x7f040003;
-        public static final int gtags=0x7f040001;
-        public static final int renderglow_frag=0x7f040004;
-        public static final int renderglow_vert=0x7f040005;
-        public static final int renderlight_frag=0x7f040006;
-        public static final int renderlight_vert=0x7f040007;
-        public static final int rendertext_frag=0x7f040008;
-        public static final int rendertext_vert=0x7f040009;
-        public static final int seas_18=0x7f04000a;
-        public static final int semo_18=0x7f04000b;
-        public static final int sepl_18=0x7f04000c;
-        public static final int simple_frag=0x7f04000d;
-        public static final int simple_vert=0x7f04000e;
-        public static final int symboldefs=0x7f04000f;
+        public static final int gent=0x7f070000;
+        public static final int gouraud_frag=0x7f070001;
+        public static final int gouraud_vert=0x7f070002;
+        public static final int gtags=0x7f070003;
+        public static final int renderglow_frag=0x7f070004;
+        public static final int renderglow_vert=0x7f070005;
+        public static final int renderlight_frag=0x7f070006;
+        public static final int renderlight_vert=0x7f070007;
+        public static final int rendertext_frag=0x7f070008;
+        public static final int rendertext_vert=0x7f070009;
+        public static final int seas_18=0x7f07000a;
+        public static final int semo_18=0x7f07000b;
+        public static final int sepl_18=0x7f07000c;
+        public static final int simple_frag=0x7f07000d;
+        public static final int simple_vert=0x7f07000e;
+        public static final int symboldefs=0x7f07000f;
     }
     public static final class string {
-        public static final int abc_action_bar_home_description=0x7f070002;
-        public static final int abc_action_bar_home_description_format=0x7f070003;
-        public static final int abc_action_bar_home_subtitle_description_format=0x7f070004;
-        public static final int abc_action_bar_up_description=0x7f070005;
-        public static final int abc_action_menu_overflow_description=0x7f070006;
-        public static final int abc_action_mode_done=0x7f070007;
-        public static final int abc_activity_chooser_view_see_all=0x7f070008;
-        public static final int abc_activitychooserview_choose_application=0x7f070009;
-        public static final int abc_capital_off=0x7f07000a;
-        public static final int abc_capital_on=0x7f07000b;
-        public static final int abc_search_hint=0x7f07000c;
-        public static final int abc_searchview_description_clear=0x7f07000d;
-        public static final int abc_searchview_description_query=0x7f07000e;
-        public static final int abc_searchview_description_search=0x7f07000f;
-        public static final int abc_searchview_description_submit=0x7f070010;
-        public static final int abc_searchview_description_voice=0x7f070011;
-        public static final int abc_shareactionprovider_share_with=0x7f070012;
-        public static final int abc_shareactionprovider_share_with_application=0x7f070013;
-        public static final int abc_toolbar_collapse_description=0x7f070014;
-        public static final int app_name=0x7f070001;
-        public static final int appbar_scrolling_view_behavior=0x7f070016;
-        public static final int character_counter_pattern=0x7f070017;
-        public static final int hello=0x7f070000;
-        public static final int status_bar_notification_info_overflow=0x7f070015;
+        public static final int abc_action_bar_home_description=0x7f080000;
+        public static final int abc_action_bar_home_description_format=0x7f080001;
+        public static final int abc_action_bar_home_subtitle_description_format=0x7f080002;
+        public static final int abc_action_bar_up_description=0x7f080003;
+        public static final int abc_action_menu_overflow_description=0x7f080004;
+        public static final int abc_action_mode_done=0x7f080005;
+        public static final int abc_activity_chooser_view_see_all=0x7f080006;
+        public static final int abc_activitychooserview_choose_application=0x7f080007;
+        public static final int abc_capital_off=0x7f080008;
+        public static final int abc_capital_on=0x7f080009;
+        public static final int abc_search_hint=0x7f08000a;
+        public static final int abc_searchview_description_clear=0x7f08000b;
+        public static final int abc_searchview_description_query=0x7f08000c;
+        public static final int abc_searchview_description_search=0x7f08000d;
+        public static final int abc_searchview_description_submit=0x7f08000e;
+        public static final int abc_searchview_description_voice=0x7f08000f;
+        public static final int abc_shareactionprovider_share_with=0x7f080010;
+        public static final int abc_shareactionprovider_share_with_application=0x7f080011;
+        public static final int abc_toolbar_collapse_description=0x7f080012;
+        public static final int app_name=0x7f080014;
+        public static final int appbar_scrolling_view_behavior=0x7f080015;
+        public static final int bottom_sheet_behavior=0x7f080016;
+        public static final int character_counter_pattern=0x7f080017;
+        public static final int drawer_close=0x7f080018;
+        public static final int drawer_open=0x7f080019;
+        public static final int hello=0x7f08001a;
+        public static final int hello_blank_fragment=0x7f08001b;
+        public static final int status_bar_notification_info_overflow=0x7f080013;
+        public static final int symbolview_compared=0x7f08001c;
+        public static final int symbolview_details=0x7f08001d;
+        public static final int symbolview_profile=0x7f08001e;
+        public static final int symbolview_related=0x7f08001f;
+        public static final int title_activity_test=0x7f080020;
     }
     public static final class style {
-        public static final int AlertDialog_AppCompat=0x7f0a007e;
-        public static final int AlertDialog_AppCompat_Light=0x7f0a007f;
-        public static final int Animation_AppCompat_Dialog=0x7f0a0080;
-        public static final int Animation_AppCompat_DropDownUp=0x7f0a0081;
-        public static final int Base_AlertDialog_AppCompat=0x7f0a0082;
-        public static final int Base_AlertDialog_AppCompat_Light=0x7f0a0083;
-        public static final int Base_Animation_AppCompat_Dialog=0x7f0a0084;
-        public static final int Base_Animation_AppCompat_DropDownUp=0x7f0a0085;
-        public static final int Base_DialogWindowTitle_AppCompat=0x7f0a0086;
-        public static final int Base_DialogWindowTitleBackground_AppCompat=0x7f0a0087;
-        public static final int Base_TextAppearance_AppCompat=0x7f0a0030;
-        public static final int Base_TextAppearance_AppCompat_Body1=0x7f0a0031;
-        public static final int Base_TextAppearance_AppCompat_Body2=0x7f0a0032;
-        public static final int Base_TextAppearance_AppCompat_Button=0x7f0a001a;
-        public static final int Base_TextAppearance_AppCompat_Caption=0x7f0a0033;
-        public static final int Base_TextAppearance_AppCompat_Display1=0x7f0a0034;
-        public static final int Base_TextAppearance_AppCompat_Display2=0x7f0a0035;
-        public static final int Base_TextAppearance_AppCompat_Display3=0x7f0a0036;
-        public static final int Base_TextAppearance_AppCompat_Display4=0x7f0a0037;
-        public static final int Base_TextAppearance_AppCompat_Headline=0x7f0a0038;
-        public static final int Base_TextAppearance_AppCompat_Inverse=0x7f0a0005;
-        public static final int Base_TextAppearance_AppCompat_Large=0x7f0a0039;
-        public static final int Base_TextAppearance_AppCompat_Large_Inverse=0x7f0a0006;
-        public static final int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f0a003a;
-        public static final int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f0a003b;
-        public static final int Base_TextAppearance_AppCompat_Medium=0x7f0a003c;
-        public static final int Base_TextAppearance_AppCompat_Medium_Inverse=0x7f0a0007;
-        public static final int Base_TextAppearance_AppCompat_Menu=0x7f0a003d;
-        public static final int Base_TextAppearance_AppCompat_SearchResult=0x7f0a0088;
-        public static final int Base_TextAppearance_AppCompat_SearchResult_Subtitle=0x7f0a003e;
-        public static final int Base_TextAppearance_AppCompat_SearchResult_Title=0x7f0a003f;
-        public static final int Base_TextAppearance_AppCompat_Small=0x7f0a0040;
-        public static final int Base_TextAppearance_AppCompat_Small_Inverse=0x7f0a0008;
-        public static final int Base_TextAppearance_AppCompat_Subhead=0x7f0a0041;
-        public static final int Base_TextAppearance_AppCompat_Subhead_Inverse=0x7f0a0009;
-        public static final int Base_TextAppearance_AppCompat_Title=0x7f0a0042;
-        public static final int Base_TextAppearance_AppCompat_Title_Inverse=0x7f0a000a;
-        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f0a0043;
-        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f0a0044;
-        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f0a0045;
-        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f0a0046;
-        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f0a0047;
-        public static final int Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f0a0048;
-        public static final int Base_TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f0a0049;
-        public static final int Base_TextAppearance_AppCompat_Widget_Button=0x7f0a004a;
-        public static final int Base_TextAppearance_AppCompat_Widget_Button_Inverse=0x7f0a007a;
-        public static final int Base_TextAppearance_AppCompat_Widget_DropDownItem=0x7f0a0089;
-        public static final int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f0a004b;
-        public static final int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f0a004c;
-        public static final int Base_TextAppearance_AppCompat_Widget_Switch=0x7f0a004d;
-        public static final int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f0a004e;
-        public static final int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0a008a;
-        public static final int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f0a004f;
-        public static final int Base_TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f0a0050;
-        public static final int Base_Theme_AppCompat=0x7f0a0051;
-        public static final int Base_Theme_AppCompat_CompactMenu=0x7f0a008b;
-        public static final int Base_Theme_AppCompat_Dialog=0x7f0a000b;
-        public static final int Base_Theme_AppCompat_Dialog_Alert=0x7f0a008c;
-        public static final int Base_Theme_AppCompat_Dialog_FixedSize=0x7f0a008d;
-        public static final int Base_Theme_AppCompat_Dialog_MinWidth=0x7f0a008e;
-        public static final int Base_Theme_AppCompat_DialogWhenLarge=0x7f0a0002;
-        public static final int Base_Theme_AppCompat_Light=0x7f0a0052;
-        public static final int Base_Theme_AppCompat_Light_DarkActionBar=0x7f0a008f;
-        public static final int Base_Theme_AppCompat_Light_Dialog=0x7f0a000c;
-        public static final int Base_Theme_AppCompat_Light_Dialog_Alert=0x7f0a0090;
-        public static final int Base_Theme_AppCompat_Light_Dialog_FixedSize=0x7f0a0091;
-        public static final int Base_Theme_AppCompat_Light_Dialog_MinWidth=0x7f0a0092;
-        public static final int Base_Theme_AppCompat_Light_DialogWhenLarge=0x7f0a0003;
-        public static final int Base_ThemeOverlay_AppCompat=0x7f0a0093;
-        public static final int Base_ThemeOverlay_AppCompat_ActionBar=0x7f0a0094;
-        public static final int Base_ThemeOverlay_AppCompat_Dark=0x7f0a0095;
-        public static final int Base_ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0a0096;
-        public static final int Base_ThemeOverlay_AppCompat_Light=0x7f0a0097;
-        public static final int Base_V11_Theme_AppCompat_Dialog=0x7f0a000d;
-        public static final int Base_V11_Theme_AppCompat_Light_Dialog=0x7f0a000e;
-        public static final int Base_V12_Widget_AppCompat_AutoCompleteTextView=0x7f0a0016;
-        public static final int Base_V12_Widget_AppCompat_EditText=0x7f0a0017;
-        public static final int Base_V21_Theme_AppCompat=0x7f0a0053;
-        public static final int Base_V21_Theme_AppCompat_Dialog=0x7f0a0054;
-        public static final int Base_V21_Theme_AppCompat_Light=0x7f0a0055;
-        public static final int Base_V21_Theme_AppCompat_Light_Dialog=0x7f0a0056;
-        public static final int Base_V22_Theme_AppCompat=0x7f0a0078;
-        public static final int Base_V22_Theme_AppCompat_Light=0x7f0a0079;
-        public static final int Base_V23_Theme_AppCompat=0x7f0a007b;
-        public static final int Base_V23_Theme_AppCompat_Light=0x7f0a007c;
-        public static final int Base_V7_Theme_AppCompat=0x7f0a0098;
-        public static final int Base_V7_Theme_AppCompat_Dialog=0x7f0a0099;
-        public static final int Base_V7_Theme_AppCompat_Light=0x7f0a009a;
-        public static final int Base_V7_Theme_AppCompat_Light_Dialog=0x7f0a009b;
-        public static final int Base_V7_Widget_AppCompat_AutoCompleteTextView=0x7f0a009c;
-        public static final int Base_V7_Widget_AppCompat_EditText=0x7f0a009d;
-        public static final int Base_Widget_AppCompat_ActionBar=0x7f0a009e;
-        public static final int Base_Widget_AppCompat_ActionBar_Solid=0x7f0a009f;
-        public static final int Base_Widget_AppCompat_ActionBar_TabBar=0x7f0a00a0;
-        public static final int Base_Widget_AppCompat_ActionBar_TabText=0x7f0a0057;
-        public static final int Base_Widget_AppCompat_ActionBar_TabView=0x7f0a0058;
-        public static final int Base_Widget_AppCompat_ActionButton=0x7f0a0059;
-        public static final int Base_Widget_AppCompat_ActionButton_CloseMode=0x7f0a005a;
-        public static final int Base_Widget_AppCompat_ActionButton_Overflow=0x7f0a005b;
-        public static final int Base_Widget_AppCompat_ActionMode=0x7f0a00a1;
-        public static final int Base_Widget_AppCompat_ActivityChooserView=0x7f0a00a2;
-        public static final int Base_Widget_AppCompat_AutoCompleteTextView=0x7f0a0018;
-        public static final int Base_Widget_AppCompat_Button=0x7f0a005c;
-        public static final int Base_Widget_AppCompat_Button_Borderless=0x7f0a005d;
-        public static final int Base_Widget_AppCompat_Button_Borderless_Colored=0x7f0a005e;
-        public static final int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0a00a3;
-        public static final int Base_Widget_AppCompat_Button_Colored=0x7f0a007d;
-        public static final int Base_Widget_AppCompat_Button_Small=0x7f0a005f;
-        public static final int Base_Widget_AppCompat_ButtonBar=0x7f0a0060;
-        public static final int Base_Widget_AppCompat_ButtonBar_AlertDialog=0x7f0a00a4;
-        public static final int Base_Widget_AppCompat_CompoundButton_CheckBox=0x7f0a0061;
-        public static final int Base_Widget_AppCompat_CompoundButton_RadioButton=0x7f0a0062;
-        public static final int Base_Widget_AppCompat_CompoundButton_Switch=0x7f0a00a5;
-        public static final int Base_Widget_AppCompat_DrawerArrowToggle=0x7f0a0000;
-        public static final int Base_Widget_AppCompat_DrawerArrowToggle_Common=0x7f0a00a6;
-        public static final int Base_Widget_AppCompat_DropDownItem_Spinner=0x7f0a0063;
-        public static final int Base_Widget_AppCompat_EditText=0x7f0a0019;
-        public static final int Base_Widget_AppCompat_ImageButton=0x7f0a0064;
-        public static final int Base_Widget_AppCompat_Light_ActionBar=0x7f0a00a7;
-        public static final int Base_Widget_AppCompat_Light_ActionBar_Solid=0x7f0a00a8;
-        public static final int Base_Widget_AppCompat_Light_ActionBar_TabBar=0x7f0a00a9;
-        public static final int Base_Widget_AppCompat_Light_ActionBar_TabText=0x7f0a0065;
-        public static final int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f0a0066;
-        public static final int Base_Widget_AppCompat_Light_ActionBar_TabView=0x7f0a0067;
-        public static final int Base_Widget_AppCompat_Light_PopupMenu=0x7f0a0068;
-        public static final int Base_Widget_AppCompat_Light_PopupMenu_Overflow=0x7f0a0069;
-        public static final int Base_Widget_AppCompat_ListPopupWindow=0x7f0a006a;
-        public static final int Base_Widget_AppCompat_ListView=0x7f0a006b;
-        public static final int Base_Widget_AppCompat_ListView_DropDown=0x7f0a006c;
-        public static final int Base_Widget_AppCompat_ListView_Menu=0x7f0a006d;
-        public static final int Base_Widget_AppCompat_PopupMenu=0x7f0a006e;
-        public static final int Base_Widget_AppCompat_PopupMenu_Overflow=0x7f0a006f;
-        public static final int Base_Widget_AppCompat_PopupWindow=0x7f0a00aa;
-        public static final int Base_Widget_AppCompat_ProgressBar=0x7f0a000f;
-        public static final int Base_Widget_AppCompat_ProgressBar_Horizontal=0x7f0a0010;
-        public static final int Base_Widget_AppCompat_RatingBar=0x7f0a0070;
-        public static final int Base_Widget_AppCompat_SearchView=0x7f0a00ab;
-        public static final int Base_Widget_AppCompat_SearchView_ActionBar=0x7f0a00ac;
-        public static final int Base_Widget_AppCompat_SeekBar=0x7f0a0071;
-        public static final int Base_Widget_AppCompat_Spinner=0x7f0a0072;
-        public static final int Base_Widget_AppCompat_Spinner_Underlined=0x7f0a0004;
-        public static final int Base_Widget_AppCompat_TextView_SpinnerItem=0x7f0a0073;
-        public static final int Base_Widget_AppCompat_Toolbar=0x7f0a00ad;
-        public static final int Base_Widget_AppCompat_Toolbar_Button_Navigation=0x7f0a0074;
-        public static final int Base_Widget_Design_TabLayout=0x7f0a00ae;
-        public static final int Platform_AppCompat=0x7f0a0011;
-        public static final int Platform_AppCompat_Light=0x7f0a0012;
-        public static final int Platform_ThemeOverlay_AppCompat=0x7f0a0075;
-        public static final int Platform_ThemeOverlay_AppCompat_Dark=0x7f0a0076;
-        public static final int Platform_ThemeOverlay_AppCompat_Light=0x7f0a0077;
-        public static final int Platform_V11_AppCompat=0x7f0a0013;
-        public static final int Platform_V11_AppCompat_Light=0x7f0a0014;
-        public static final int Platform_V14_AppCompat=0x7f0a001b;
-        public static final int Platform_V14_AppCompat_Light=0x7f0a001c;
-        public static final int Platform_Widget_AppCompat_Spinner=0x7f0a0015;
-        public static final int RezDataTheme=0x7f0a00af;
-        public static final int RezDescText=0x7f0a00b0;
-        public static final int RezHeaderText=0x7f0a00b1;
-        public static final int RezTextView=0x7f0a00b2;
-        public static final int RtlOverlay_DialogWindowTitle_AppCompat=0x7f0a0022;
-        public static final int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem=0x7f0a0023;
-        public static final int RtlOverlay_Widget_AppCompat_DialogTitle_Icon=0x7f0a0024;
-        public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem=0x7f0a0025;
-        public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup=0x7f0a0026;
-        public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text=0x7f0a0027;
-        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown=0x7f0a0028;
-        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1=0x7f0a0029;
-        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2=0x7f0a002a;
-        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Query=0x7f0a002b;
-        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Text=0x7f0a002c;
-        public static final int RtlOverlay_Widget_AppCompat_SearchView_MagIcon=0x7f0a002d;
-        public static final int RtlUnderlay_Widget_AppCompat_ActionButton=0x7f0a002e;
-        public static final int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow=0x7f0a002f;
-        public static final int TextAppearance_AppCompat=0x7f0a00b3;
-        public static final int TextAppearance_AppCompat_Body1=0x7f0a00b4;
-        public static final int TextAppearance_AppCompat_Body2=0x7f0a00b5;
-        public static final int TextAppearance_AppCompat_Button=0x7f0a00b6;
-        public static final int TextAppearance_AppCompat_Caption=0x7f0a00b7;
-        public static final int TextAppearance_AppCompat_Display1=0x7f0a00b8;
-        public static final int TextAppearance_AppCompat_Display2=0x7f0a00b9;
-        public static final int TextAppearance_AppCompat_Display3=0x7f0a00ba;
-        public static final int TextAppearance_AppCompat_Display4=0x7f0a00bb;
-        public static final int TextAppearance_AppCompat_Headline=0x7f0a00bc;
-        public static final int TextAppearance_AppCompat_Inverse=0x7f0a00bd;
-        public static final int TextAppearance_AppCompat_Large=0x7f0a00be;
-        public static final int TextAppearance_AppCompat_Large_Inverse=0x7f0a00bf;
-        public static final int TextAppearance_AppCompat_Light_SearchResult_Subtitle=0x7f0a00c0;
-        public static final int TextAppearance_AppCompat_Light_SearchResult_Title=0x7f0a00c1;
-        public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f0a00c2;
-        public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f0a00c3;
-        public static final int TextAppearance_AppCompat_Medium=0x7f0a00c4;
-        public static final int TextAppearance_AppCompat_Medium_Inverse=0x7f0a00c5;
-        public static final int TextAppearance_AppCompat_Menu=0x7f0a00c6;
-        public static final int TextAppearance_AppCompat_SearchResult_Subtitle=0x7f0a00c7;
-        public static final int TextAppearance_AppCompat_SearchResult_Title=0x7f0a00c8;
-        public static final int TextAppearance_AppCompat_Small=0x7f0a00c9;
-        public static final int TextAppearance_AppCompat_Small_Inverse=0x7f0a00ca;
-        public static final int TextAppearance_AppCompat_Subhead=0x7f0a00cb;
-        public static final int TextAppearance_AppCompat_Subhead_Inverse=0x7f0a00cc;
-        public static final int TextAppearance_AppCompat_Title=0x7f0a00cd;
-        public static final int TextAppearance_AppCompat_Title_Inverse=0x7f0a00ce;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f0a00cf;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f0a00d0;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f0a00d1;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f0a00d2;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f0a00d3;
-        public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f0a00d4;
-        public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse=0x7f0a00d5;
-        public static final int TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f0a00d6;
-        public static final int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse=0x7f0a00d7;
-        public static final int TextAppearance_AppCompat_Widget_Button=0x7f0a00d8;
-        public static final int TextAppearance_AppCompat_Widget_Button_Inverse=0x7f0a00d9;
-        public static final int TextAppearance_AppCompat_Widget_DropDownItem=0x7f0a00da;
-        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f0a00db;
-        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f0a00dc;
-        public static final int TextAppearance_AppCompat_Widget_Switch=0x7f0a00dd;
-        public static final int TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f0a00de;
-        public static final int TextAppearance_Design_CollapsingToolbar_Expanded=0x7f0a00df;
-        public static final int TextAppearance_Design_Counter=0x7f0a00e0;
-        public static final int TextAppearance_Design_Counter_Overflow=0x7f0a00e1;
-        public static final int TextAppearance_Design_Error=0x7f0a00e2;
-        public static final int TextAppearance_Design_Hint=0x7f0a00e3;
-        public static final int TextAppearance_Design_Snackbar_Message=0x7f0a00e4;
-        public static final int TextAppearance_Design_Tab=0x7f0a00e5;
-        public static final int TextAppearance_StatusBar_EventContent=0x7f0a001d;
-        public static final int TextAppearance_StatusBar_EventContent_Info=0x7f0a001e;
-        public static final int TextAppearance_StatusBar_EventContent_Line2=0x7f0a001f;
-        public static final int TextAppearance_StatusBar_EventContent_Time=0x7f0a0020;
-        public static final int TextAppearance_StatusBar_EventContent_Title=0x7f0a0021;
-        public static final int TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0a00e6;
-        public static final int TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f0a00e7;
-        public static final int TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f0a00e8;
-        public static final int Theme_AppCompat=0x7f0a00e9;
-        public static final int Theme_AppCompat_CompactMenu=0x7f0a00ea;
-        public static final int Theme_AppCompat_Dialog=0x7f0a00eb;
-        public static final int Theme_AppCompat_Dialog_Alert=0x7f0a00ec;
-        public static final int Theme_AppCompat_Dialog_MinWidth=0x7f0a00ed;
-        public static final int Theme_AppCompat_DialogWhenLarge=0x7f0a00ee;
-        public static final int Theme_AppCompat_Light=0x7f0a00ef;
-        public static final int Theme_AppCompat_Light_DarkActionBar=0x7f0a00f0;
-        public static final int Theme_AppCompat_Light_Dialog=0x7f0a00f1;
-        public static final int Theme_AppCompat_Light_Dialog_Alert=0x7f0a00f2;
-        public static final int Theme_AppCompat_Light_Dialog_MinWidth=0x7f0a00f3;
-        public static final int Theme_AppCompat_Light_DialogWhenLarge=0x7f0a00f4;
-        public static final int Theme_AppCompat_Light_NoActionBar=0x7f0a00f5;
-        public static final int Theme_AppCompat_NoActionBar=0x7f0a00f6;
-        public static final int ThemeOverlay_AppCompat=0x7f0a00f7;
-        public static final int ThemeOverlay_AppCompat_ActionBar=0x7f0a00f8;
-        public static final int ThemeOverlay_AppCompat_Dark=0x7f0a00f9;
-        public static final int ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0a00fa;
-        public static final int ThemeOverlay_AppCompat_Light=0x7f0a00fb;
-        public static final int Widget_AppCompat_ActionBar=0x7f0a00fc;
-        public static final int Widget_AppCompat_ActionBar_Solid=0x7f0a00fd;
-        public static final int Widget_AppCompat_ActionBar_TabBar=0x7f0a00fe;
-        public static final int Widget_AppCompat_ActionBar_TabText=0x7f0a00ff;
-        public static final int Widget_AppCompat_ActionBar_TabView=0x7f0a0100;
-        public static final int Widget_AppCompat_ActionButton=0x7f0a0101;
-        public static final int Widget_AppCompat_ActionButton_CloseMode=0x7f0a0102;
-        public static final int Widget_AppCompat_ActionButton_Overflow=0x7f0a0103;
-        public static final int Widget_AppCompat_ActionMode=0x7f0a0104;
-        public static final int Widget_AppCompat_ActivityChooserView=0x7f0a0105;
-        public static final int Widget_AppCompat_AutoCompleteTextView=0x7f0a0106;
-        public static final int Widget_AppCompat_Button=0x7f0a0107;
-        public static final int Widget_AppCompat_Button_Borderless=0x7f0a0108;
-        public static final int Widget_AppCompat_Button_Borderless_Colored=0x7f0a0109;
-        public static final int Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0a010a;
-        public static final int Widget_AppCompat_Button_Colored=0x7f0a010b;
-        public static final int Widget_AppCompat_Button_Small=0x7f0a010c;
-        public static final int Widget_AppCompat_ButtonBar=0x7f0a010d;
-        public static final int Widget_AppCompat_ButtonBar_AlertDialog=0x7f0a010e;
-        public static final int Widget_AppCompat_CompoundButton_CheckBox=0x7f0a010f;
-        public static final int Widget_AppCompat_CompoundButton_RadioButton=0x7f0a0110;
-        public static final int Widget_AppCompat_CompoundButton_Switch=0x7f0a0111;
-        public static final int Widget_AppCompat_DrawerArrowToggle=0x7f0a0112;
-        public static final int Widget_AppCompat_DropDownItem_Spinner=0x7f0a0113;
-        public static final int Widget_AppCompat_EditText=0x7f0a0114;
-        public static final int Widget_AppCompat_ImageButton=0x7f0a0115;
-        public static final int Widget_AppCompat_Light_ActionBar=0x7f0a0116;
-        public static final int Widget_AppCompat_Light_ActionBar_Solid=0x7f0a0117;
-        public static final int Widget_AppCompat_Light_ActionBar_Solid_Inverse=0x7f0a0118;
-        public static final int Widget_AppCompat_Light_ActionBar_TabBar=0x7f0a0119;
-        public static final int Widget_AppCompat_Light_ActionBar_TabBar_Inverse=0x7f0a011a;
-        public static final int Widget_AppCompat_Light_ActionBar_TabText=0x7f0a011b;
-        public static final int Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f0a011c;
-        public static final int Widget_AppCompat_Light_ActionBar_TabView=0x7f0a011d;
-        public static final int Widget_AppCompat_Light_ActionBar_TabView_Inverse=0x7f0a011e;
-        public static final int Widget_AppCompat_Light_ActionButton=0x7f0a011f;
-        public static final int Widget_AppCompat_Light_ActionButton_CloseMode=0x7f0a0120;
-        public static final int Widget_AppCompat_Light_ActionButton_Overflow=0x7f0a0121;
-        public static final int Widget_AppCompat_Light_ActionMode_Inverse=0x7f0a0122;
-        public static final int Widget_AppCompat_Light_ActivityChooserView=0x7f0a0123;
-        public static final int Widget_AppCompat_Light_AutoCompleteTextView=0x7f0a0124;
-        public static final int Widget_AppCompat_Light_DropDownItem_Spinner=0x7f0a0125;
-        public static final int Widget_AppCompat_Light_ListPopupWindow=0x7f0a0126;
-        public static final int Widget_AppCompat_Light_ListView_DropDown=0x7f0a0127;
-        public static final int Widget_AppCompat_Light_PopupMenu=0x7f0a0128;
-        public static final int Widget_AppCompat_Light_PopupMenu_Overflow=0x7f0a0129;
-        public static final int Widget_AppCompat_Light_SearchView=0x7f0a012a;
-        public static final int Widget_AppCompat_Light_Spinner_DropDown_ActionBar=0x7f0a012b;
-        public static final int Widget_AppCompat_ListPopupWindow=0x7f0a012c;
-        public static final int Widget_AppCompat_ListView=0x7f0a012d;
-        public static final int Widget_AppCompat_ListView_DropDown=0x7f0a012e;
-        public static final int Widget_AppCompat_ListView_Menu=0x7f0a012f;
-        public static final int Widget_AppCompat_PopupMenu=0x7f0a0130;
-        public static final int Widget_AppCompat_PopupMenu_Overflow=0x7f0a0131;
-        public static final int Widget_AppCompat_PopupWindow=0x7f0a0132;
-        public static final int Widget_AppCompat_ProgressBar=0x7f0a0133;
-        public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f0a0134;
-        public static final int Widget_AppCompat_RatingBar=0x7f0a0135;
-        public static final int Widget_AppCompat_SearchView=0x7f0a0136;
-        public static final int Widget_AppCompat_SearchView_ActionBar=0x7f0a0137;
-        public static final int Widget_AppCompat_SeekBar=0x7f0a0138;
-        public static final int Widget_AppCompat_Spinner=0x7f0a0139;
-        public static final int Widget_AppCompat_Spinner_DropDown=0x7f0a013a;
-        public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f0a013b;
-        public static final int Widget_AppCompat_Spinner_Underlined=0x7f0a013c;
-        public static final int Widget_AppCompat_TextView_SpinnerItem=0x7f0a013d;
-        public static final int Widget_AppCompat_Toolbar=0x7f0a013e;
-        public static final int Widget_AppCompat_Toolbar_Button_Navigation=0x7f0a013f;
-        public static final int Widget_Design_AppBarLayout=0x7f0a0140;
-        public static final int Widget_Design_CollapsingToolbar=0x7f0a0141;
-        public static final int Widget_Design_CoordinatorLayout=0x7f0a0142;
-        public static final int Widget_Design_FloatingActionButton=0x7f0a0143;
-        public static final int Widget_Design_NavigationView=0x7f0a0144;
-        public static final int Widget_Design_ScrimInsetsFrameLayout=0x7f0a0145;
-        public static final int Widget_Design_Snackbar=0x7f0a0146;
-        public static final int Widget_Design_TabLayout=0x7f0a0001;
-        public static final int Widget_Design_TextInputLayout=0x7f0a0147;
+        public static final int AlertDialog_AppCompat=0x7f0b0087;
+        public static final int AlertDialog_AppCompat_Light=0x7f0b0088;
+        public static final int Animation_AppCompat_Dialog=0x7f0b0089;
+        public static final int Animation_AppCompat_DropDownUp=0x7f0b008a;
+        public static final int Animation_Design_BottomSheetDialog=0x7f0b008b;
+        public static final int Base_AlertDialog_AppCompat=0x7f0b008c;
+        public static final int Base_AlertDialog_AppCompat_Light=0x7f0b008d;
+        public static final int Base_Animation_AppCompat_Dialog=0x7f0b008e;
+        public static final int Base_Animation_AppCompat_DropDownUp=0x7f0b008f;
+        public static final int Base_DialogWindowTitle_AppCompat=0x7f0b0090;
+        public static final int Base_DialogWindowTitleBackground_AppCompat=0x7f0b0091;
+        public static final int Base_TextAppearance_AppCompat=0x7f0b0037;
+        public static final int Base_TextAppearance_AppCompat_Body1=0x7f0b0038;
+        public static final int Base_TextAppearance_AppCompat_Body2=0x7f0b0039;
+        public static final int Base_TextAppearance_AppCompat_Button=0x7f0b0021;
+        public static final int Base_TextAppearance_AppCompat_Caption=0x7f0b003a;
+        public static final int Base_TextAppearance_AppCompat_Display1=0x7f0b003b;
+        public static final int Base_TextAppearance_AppCompat_Display2=0x7f0b003c;
+        public static final int Base_TextAppearance_AppCompat_Display3=0x7f0b003d;
+        public static final int Base_TextAppearance_AppCompat_Display4=0x7f0b003e;
+        public static final int Base_TextAppearance_AppCompat_Headline=0x7f0b003f;
+        public static final int Base_TextAppearance_AppCompat_Inverse=0x7f0b000c;
+        public static final int Base_TextAppearance_AppCompat_Large=0x7f0b0040;
+        public static final int Base_TextAppearance_AppCompat_Large_Inverse=0x7f0b000d;
+        public static final int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f0b0041;
+        public static final int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f0b0042;
+        public static final int Base_TextAppearance_AppCompat_Medium=0x7f0b0043;
+        public static final int Base_TextAppearance_AppCompat_Medium_Inverse=0x7f0b000e;
+        public static final int Base_TextAppearance_AppCompat_Menu=0x7f0b0044;
+        public static final int Base_TextAppearance_AppCompat_SearchResult=0x7f0b0092;
+        public static final int Base_TextAppearance_AppCompat_SearchResult_Subtitle=0x7f0b0045;
+        public static final int Base_TextAppearance_AppCompat_SearchResult_Title=0x7f0b0046;
+        public static final int Base_TextAppearance_AppCompat_Small=0x7f0b0047;
+        public static final int Base_TextAppearance_AppCompat_Small_Inverse=0x7f0b000f;
+        public static final int Base_TextAppearance_AppCompat_Subhead=0x7f0b0048;
+        public static final int Base_TextAppearance_AppCompat_Subhead_Inverse=0x7f0b0010;
+        public static final int Base_TextAppearance_AppCompat_Title=0x7f0b0049;
+        public static final int Base_TextAppearance_AppCompat_Title_Inverse=0x7f0b0011;
+        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f0b0080;
+        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f0b004a;
+        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f0b004b;
+        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f0b004c;
+        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f0b004d;
+        public static final int Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f0b004e;
+        public static final int Base_TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f0b004f;
+        public static final int Base_TextAppearance_AppCompat_Widget_Button=0x7f0b0050;
+        public static final int Base_TextAppearance_AppCompat_Widget_Button_Inverse=0x7f0b0081;
+        public static final int Base_TextAppearance_AppCompat_Widget_DropDownItem=0x7f0b0093;
+        public static final int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f0b0051;
+        public static final int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f0b0052;
+        public static final int Base_TextAppearance_AppCompat_Widget_Switch=0x7f0b0053;
+        public static final int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f0b0054;
+        public static final int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0b0094;
+        public static final int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f0b0055;
+        public static final int Base_TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f0b0056;
+        public static final int Base_Theme_AppCompat=0x7f0b0057;
+        public static final int Base_Theme_AppCompat_CompactMenu=0x7f0b0095;
+        public static final int Base_Theme_AppCompat_Dialog=0x7f0b0012;
+        public static final int Base_Theme_AppCompat_Dialog_Alert=0x7f0b0096;
+        public static final int Base_Theme_AppCompat_Dialog_FixedSize=0x7f0b0097;
+        public static final int Base_Theme_AppCompat_Dialog_MinWidth=0x7f0b0098;
+        public static final int Base_Theme_AppCompat_DialogWhenLarge=0x7f0b0002;
+        public static final int Base_Theme_AppCompat_Light=0x7f0b0058;
+        public static final int Base_Theme_AppCompat_Light_DarkActionBar=0x7f0b0099;
+        public static final int Base_Theme_AppCompat_Light_Dialog=0x7f0b0013;
+        public static final int Base_Theme_AppCompat_Light_Dialog_Alert=0x7f0b009a;
+        public static final int Base_Theme_AppCompat_Light_Dialog_FixedSize=0x7f0b009b;
+        public static final int Base_Theme_AppCompat_Light_Dialog_MinWidth=0x7f0b009c;
+        public static final int Base_Theme_AppCompat_Light_DialogWhenLarge=0x7f0b0003;
+        public static final int Base_ThemeOverlay_AppCompat=0x7f0b009d;
+        public static final int Base_ThemeOverlay_AppCompat_ActionBar=0x7f0b009e;
+        public static final int Base_ThemeOverlay_AppCompat_Dark=0x7f0b009f;
+        public static final int Base_ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0b00a0;
+        public static final int Base_ThemeOverlay_AppCompat_Light=0x7f0b00a1;
+        public static final int Base_V11_Theme_AppCompat_Dialog=0x7f0b0014;
+        public static final int Base_V11_Theme_AppCompat_Light_Dialog=0x7f0b0015;
+        public static final int Base_V12_Widget_AppCompat_AutoCompleteTextView=0x7f0b001d;
+        public static final int Base_V12_Widget_AppCompat_EditText=0x7f0b001e;
+        public static final int Base_V21_Theme_AppCompat=0x7f0b0059;
+        public static final int Base_V21_Theme_AppCompat_Dialog=0x7f0b005a;
+        public static final int Base_V21_Theme_AppCompat_Light=0x7f0b005b;
+        public static final int Base_V21_Theme_AppCompat_Light_Dialog=0x7f0b005c;
+        public static final int Base_V22_Theme_AppCompat=0x7f0b007e;
+        public static final int Base_V22_Theme_AppCompat_Light=0x7f0b007f;
+        public static final int Base_V23_Theme_AppCompat=0x7f0b0082;
+        public static final int Base_V23_Theme_AppCompat_Light=0x7f0b0083;
+        public static final int Base_V7_Theme_AppCompat=0x7f0b00a2;
+        public static final int Base_V7_Theme_AppCompat_Dialog=0x7f0b00a3;
+        public static final int Base_V7_Theme_AppCompat_Light=0x7f0b00a4;
+        public static final int Base_V7_Theme_AppCompat_Light_Dialog=0x7f0b00a5;
+        public static final int Base_V7_Widget_AppCompat_AutoCompleteTextView=0x7f0b00a6;
+        public static final int Base_V7_Widget_AppCompat_EditText=0x7f0b00a7;
+        public static final int Base_Widget_AppCompat_ActionBar=0x7f0b00a8;
+        public static final int Base_Widget_AppCompat_ActionBar_Solid=0x7f0b00a9;
+        public static final int Base_Widget_AppCompat_ActionBar_TabBar=0x7f0b00aa;
+        public static final int Base_Widget_AppCompat_ActionBar_TabText=0x7f0b005d;
+        public static final int Base_Widget_AppCompat_ActionBar_TabView=0x7f0b005e;
+        public static final int Base_Widget_AppCompat_ActionButton=0x7f0b005f;
+        public static final int Base_Widget_AppCompat_ActionButton_CloseMode=0x7f0b0060;
+        public static final int Base_Widget_AppCompat_ActionButton_Overflow=0x7f0b0061;
+        public static final int Base_Widget_AppCompat_ActionMode=0x7f0b00ab;
+        public static final int Base_Widget_AppCompat_ActivityChooserView=0x7f0b00ac;
+        public static final int Base_Widget_AppCompat_AutoCompleteTextView=0x7f0b001f;
+        public static final int Base_Widget_AppCompat_Button=0x7f0b0062;
+        public static final int Base_Widget_AppCompat_Button_Borderless=0x7f0b0063;
+        public static final int Base_Widget_AppCompat_Button_Borderless_Colored=0x7f0b0064;
+        public static final int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0b00ad;
+        public static final int Base_Widget_AppCompat_Button_Colored=0x7f0b0084;
+        public static final int Base_Widget_AppCompat_Button_Small=0x7f0b0065;
+        public static final int Base_Widget_AppCompat_ButtonBar=0x7f0b0066;
+        public static final int Base_Widget_AppCompat_ButtonBar_AlertDialog=0x7f0b00ae;
+        public static final int Base_Widget_AppCompat_CompoundButton_CheckBox=0x7f0b0067;
+        public static final int Base_Widget_AppCompat_CompoundButton_RadioButton=0x7f0b0068;
+        public static final int Base_Widget_AppCompat_CompoundButton_Switch=0x7f0b00af;
+        public static final int Base_Widget_AppCompat_DrawerArrowToggle=0x7f0b0000;
+        public static final int Base_Widget_AppCompat_DrawerArrowToggle_Common=0x7f0b00b0;
+        public static final int Base_Widget_AppCompat_DropDownItem_Spinner=0x7f0b0069;
+        public static final int Base_Widget_AppCompat_EditText=0x7f0b0020;
+        public static final int Base_Widget_AppCompat_ImageButton=0x7f0b006a;
+        public static final int Base_Widget_AppCompat_Light_ActionBar=0x7f0b00b1;
+        public static final int Base_Widget_AppCompat_Light_ActionBar_Solid=0x7f0b00b2;
+        public static final int Base_Widget_AppCompat_Light_ActionBar_TabBar=0x7f0b00b3;
+        public static final int Base_Widget_AppCompat_Light_ActionBar_TabText=0x7f0b006b;
+        public static final int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f0b006c;
+        public static final int Base_Widget_AppCompat_Light_ActionBar_TabView=0x7f0b006d;
+        public static final int Base_Widget_AppCompat_Light_PopupMenu=0x7f0b006e;
+        public static final int Base_Widget_AppCompat_Light_PopupMenu_Overflow=0x7f0b006f;
+        public static final int Base_Widget_AppCompat_ListPopupWindow=0x7f0b0070;
+        public static final int Base_Widget_AppCompat_ListView=0x7f0b0071;
+        public static final int Base_Widget_AppCompat_ListView_DropDown=0x7f0b0072;
+        public static final int Base_Widget_AppCompat_ListView_Menu=0x7f0b0073;
+        public static final int Base_Widget_AppCompat_PopupMenu=0x7f0b0074;
+        public static final int Base_Widget_AppCompat_PopupMenu_Overflow=0x7f0b0075;
+        public static final int Base_Widget_AppCompat_PopupWindow=0x7f0b00b4;
+        public static final int Base_Widget_AppCompat_ProgressBar=0x7f0b0016;
+        public static final int Base_Widget_AppCompat_ProgressBar_Horizontal=0x7f0b0017;
+        public static final int Base_Widget_AppCompat_RatingBar=0x7f0b0076;
+        public static final int Base_Widget_AppCompat_RatingBar_Indicator=0x7f0b0085;
+        public static final int Base_Widget_AppCompat_RatingBar_Small=0x7f0b0086;
+        public static final int Base_Widget_AppCompat_SearchView=0x7f0b00b5;
+        public static final int Base_Widget_AppCompat_SearchView_ActionBar=0x7f0b00b6;
+        public static final int Base_Widget_AppCompat_SeekBar=0x7f0b0077;
+        public static final int Base_Widget_AppCompat_Spinner=0x7f0b0078;
+        public static final int Base_Widget_AppCompat_Spinner_Underlined=0x7f0b0004;
+        public static final int Base_Widget_AppCompat_TextView_SpinnerItem=0x7f0b0079;
+        public static final int Base_Widget_AppCompat_Toolbar=0x7f0b00b7;
+        public static final int Base_Widget_AppCompat_Toolbar_Button_Navigation=0x7f0b007a;
+        public static final int Base_Widget_Design_TabLayout=0x7f0b00b8;
+        public static final int ButtonRSAstralChartTheme=0x7f0b00b9;
+        public static final int ButtonRSBaseTheme=0x7f0b00ba;
+        public static final int ButtonRSCurrentChartTheme=0x7f0b00bb;
+        public static final int ButtonRSNumberChartTheme=0x7f0b00bc;
+        public static final int ImageButtonRSAstralChartTheme=0x7f0b00bd;
+        public static final int ImageButtonRSBaseTheme=0x7f0b00be;
+        public static final int ImageButtonRSCurrentChartTheme=0x7f0b00bf;
+        public static final int ImageButtonRSNumberChartTheme=0x7f0b00c0;
+        public static final int Platform_AppCompat=0x7f0b0018;
+        public static final int Platform_AppCompat_Light=0x7f0b0019;
+        public static final int Platform_ThemeOverlay_AppCompat=0x7f0b007b;
+        public static final int Platform_ThemeOverlay_AppCompat_Dark=0x7f0b007c;
+        public static final int Platform_ThemeOverlay_AppCompat_Light=0x7f0b007d;
+        public static final int Platform_V11_AppCompat=0x7f0b001a;
+        public static final int Platform_V11_AppCompat_Light=0x7f0b001b;
+        public static final int Platform_V14_AppCompat=0x7f0b0022;
+        public static final int Platform_V14_AppCompat_Light=0x7f0b0023;
+        public static final int Platform_Widget_AppCompat_Spinner=0x7f0b001c;
+        public static final int RSAstralChartTheme=0x7f0b00c1;
+        public static final int RSBaseTheme=0x7f0b00c2;
+        public static final int RSCurrentChartTheme=0x7f0b00c3;
+        public static final int RSNumberChartTheme=0x7f0b00c4;
+        public static final int RtlOverlay_DialogWindowTitle_AppCompat=0x7f0b0029;
+        public static final int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem=0x7f0b002a;
+        public static final int RtlOverlay_Widget_AppCompat_DialogTitle_Icon=0x7f0b002b;
+        public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem=0x7f0b002c;
+        public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup=0x7f0b002d;
+        public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text=0x7f0b002e;
+        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown=0x7f0b002f;
+        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1=0x7f0b0030;
+        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2=0x7f0b0031;
+        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Query=0x7f0b0032;
+        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Text=0x7f0b0033;
+        public static final int RtlOverlay_Widget_AppCompat_SearchView_MagIcon=0x7f0b0034;
+        public static final int RtlUnderlay_Widget_AppCompat_ActionButton=0x7f0b0035;
+        public static final int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow=0x7f0b0036;
+        public static final int SeekBarRSAstralChartTheme=0x7f0b00c5;
+        public static final int SeekBarRSBaseTheme=0x7f0b00c6;
+        public static final int SeekBarRSCurrentChartTheme=0x7f0b00c7;
+        public static final int SeekBarRSNumberChartTheme=0x7f0b00c8;
+        public static final int SpinnerRSAstralChartTheme=0x7f0b00c9;
+        public static final int SpinnerRSBaseTheme=0x7f0b00ca;
+        public static final int SpinnerRSCurrentChartTheme=0x7f0b00cb;
+        public static final int SpinnerRSNumberChartTheme=0x7f0b00cc;
+        public static final int TabRSAstralChartTheme=0x7f0b00cd;
+        public static final int TabRSBaseTheme=0x7f0b00ce;
+        public static final int TabRSCurrentChartTheme=0x7f0b00cf;
+        public static final int TabRSNumberChartTheme=0x7f0b00d0;
+        public static final int TabTextRSAstralChartTheme=0x7f0b00d1;
+        public static final int TabTextRSBaseTheme=0x7f0b00d2;
+        public static final int TabTextRSCurrentChartTheme=0x7f0b00d3;
+        public static final int TabTextRSNumberChartTheme=0x7f0b00d4;
+        public static final int TextAppearance_AppCompat=0x7f0b00d5;
+        public static final int TextAppearance_AppCompat_Body1=0x7f0b00d6;
+        public static final int TextAppearance_AppCompat_Body2=0x7f0b00d7;
+        public static final int TextAppearance_AppCompat_Button=0x7f0b00d8;
+        public static final int TextAppearance_AppCompat_Caption=0x7f0b00d9;
+        public static final int TextAppearance_AppCompat_Display1=0x7f0b00da;
+        public static final int TextAppearance_AppCompat_Display2=0x7f0b00db;
+        public static final int TextAppearance_AppCompat_Display3=0x7f0b00dc;
+        public static final int TextAppearance_AppCompat_Display4=0x7f0b00dd;
+        public static final int TextAppearance_AppCompat_Headline=0x7f0b00de;
+        public static final int TextAppearance_AppCompat_Inverse=0x7f0b00df;
+        public static final int TextAppearance_AppCompat_Large=0x7f0b00e0;
+        public static final int TextAppearance_AppCompat_Large_Inverse=0x7f0b00e1;
+        public static final int TextAppearance_AppCompat_Light_SearchResult_Subtitle=0x7f0b00e2;
+        public static final int TextAppearance_AppCompat_Light_SearchResult_Title=0x7f0b00e3;
+        public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f0b00e4;
+        public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f0b00e5;
+        public static final int TextAppearance_AppCompat_Medium=0x7f0b00e6;
+        public static final int TextAppearance_AppCompat_Medium_Inverse=0x7f0b00e7;
+        public static final int TextAppearance_AppCompat_Menu=0x7f0b00e8;
+        public static final int TextAppearance_AppCompat_SearchResult_Subtitle=0x7f0b00e9;
+        public static final int TextAppearance_AppCompat_SearchResult_Title=0x7f0b00ea;
+        public static final int TextAppearance_AppCompat_Small=0x7f0b00eb;
+        public static final int TextAppearance_AppCompat_Small_Inverse=0x7f0b00ec;
+        public static final int TextAppearance_AppCompat_Subhead=0x7f0b00ed;
+        public static final int TextAppearance_AppCompat_Subhead_Inverse=0x7f0b00ee;
+        public static final int TextAppearance_AppCompat_Title=0x7f0b00ef;
+        public static final int TextAppearance_AppCompat_Title_Inverse=0x7f0b00f0;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f0b00f1;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f0b00f2;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f0b00f3;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f0b00f4;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f0b00f5;
+        public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f0b00f6;
+        public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse=0x7f0b00f7;
+        public static final int TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f0b00f8;
+        public static final int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse=0x7f0b00f9;
+        public static final int TextAppearance_AppCompat_Widget_Button=0x7f0b00fa;
+        public static final int TextAppearance_AppCompat_Widget_Button_Inverse=0x7f0b00fb;
+        public static final int TextAppearance_AppCompat_Widget_DropDownItem=0x7f0b00fc;
+        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f0b00fd;
+        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f0b00fe;
+        public static final int TextAppearance_AppCompat_Widget_Switch=0x7f0b00ff;
+        public static final int TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f0b0100;
+        public static final int TextAppearance_Design_CollapsingToolbar_Expanded=0x7f0b0101;
+        public static final int TextAppearance_Design_Counter=0x7f0b0102;
+        public static final int TextAppearance_Design_Counter_Overflow=0x7f0b0103;
+        public static final int TextAppearance_Design_Error=0x7f0b0104;
+        public static final int TextAppearance_Design_Hint=0x7f0b0105;
+        public static final int TextAppearance_Design_Snackbar_Message=0x7f0b0106;
+        public static final int TextAppearance_Design_Tab=0x7f0b0107;
+        public static final int TextAppearance_StatusBar_EventContent=0x7f0b0024;
+        public static final int TextAppearance_StatusBar_EventContent_Info=0x7f0b0025;
+        public static final int TextAppearance_StatusBar_EventContent_Line2=0x7f0b0026;
+        public static final int TextAppearance_StatusBar_EventContent_Time=0x7f0b0027;
+        public static final int TextAppearance_StatusBar_EventContent_Title=0x7f0b0028;
+        public static final int TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0b0108;
+        public static final int TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f0b0109;
+        public static final int TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f0b010a;
+        public static final int Theme_AppCompat=0x7f0b010b;
+        public static final int Theme_AppCompat_CompactMenu=0x7f0b010c;
+        public static final int Theme_AppCompat_DayNight=0x7f0b0005;
+        public static final int Theme_AppCompat_DayNight_DarkActionBar=0x7f0b0006;
+        public static final int Theme_AppCompat_DayNight_Dialog=0x7f0b0007;
+        public static final int Theme_AppCompat_DayNight_Dialog_Alert=0x7f0b0008;
+        public static final int Theme_AppCompat_DayNight_Dialog_MinWidth=0x7f0b0009;
+        public static final int Theme_AppCompat_DayNight_DialogWhenLarge=0x7f0b000a;
+        public static final int Theme_AppCompat_DayNight_NoActionBar=0x7f0b000b;
+        public static final int Theme_AppCompat_Dialog=0x7f0b010d;
+        public static final int Theme_AppCompat_Dialog_Alert=0x7f0b010e;
+        public static final int Theme_AppCompat_Dialog_MinWidth=0x7f0b010f;
+        public static final int Theme_AppCompat_DialogWhenLarge=0x7f0b0110;
+        public static final int Theme_AppCompat_Light=0x7f0b0111;
+        public static final int Theme_AppCompat_Light_DarkActionBar=0x7f0b0112;
+        public static final int Theme_AppCompat_Light_Dialog=0x7f0b0113;
+        public static final int Theme_AppCompat_Light_Dialog_Alert=0x7f0b0114;
+        public static final int Theme_AppCompat_Light_Dialog_MinWidth=0x7f0b0115;
+        public static final int Theme_AppCompat_Light_DialogWhenLarge=0x7f0b0116;
+        public static final int Theme_AppCompat_Light_NoActionBar=0x7f0b0117;
+        public static final int Theme_AppCompat_NoActionBar=0x7f0b0118;
+        public static final int Theme_Design=0x7f0b0119;
+        public static final int Theme_Design_BottomSheetDialog=0x7f0b011a;
+        public static final int Theme_Design_Light=0x7f0b011b;
+        public static final int Theme_Design_Light_BottomSheetDialog=0x7f0b011c;
+        public static final int Theme_Design_Light_NoActionBar=0x7f0b011d;
+        public static final int Theme_Design_NoActionBar=0x7f0b011e;
+        public static final int ThemeOverlay_AppCompat=0x7f0b011f;
+        public static final int ThemeOverlay_AppCompat_ActionBar=0x7f0b0120;
+        public static final int ThemeOverlay_AppCompat_Dark=0x7f0b0121;
+        public static final int ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0b0122;
+        public static final int ThemeOverlay_AppCompat_Light=0x7f0b0123;
+        public static final int Widget_AppCompat_ActionBar=0x7f0b0124;
+        public static final int Widget_AppCompat_ActionBar_Solid=0x7f0b0125;
+        public static final int Widget_AppCompat_ActionBar_TabBar=0x7f0b0126;
+        public static final int Widget_AppCompat_ActionBar_TabText=0x7f0b0127;
+        public static final int Widget_AppCompat_ActionBar_TabView=0x7f0b0128;
+        public static final int Widget_AppCompat_ActionButton=0x7f0b0129;
+        public static final int Widget_AppCompat_ActionButton_CloseMode=0x7f0b012a;
+        public static final int Widget_AppCompat_ActionButton_Overflow=0x7f0b012b;
+        public static final int Widget_AppCompat_ActionMode=0x7f0b012c;
+        public static final int Widget_AppCompat_ActivityChooserView=0x7f0b012d;
+        public static final int Widget_AppCompat_AutoCompleteTextView=0x7f0b012e;
+        public static final int Widget_AppCompat_Button=0x7f0b012f;
+        public static final int Widget_AppCompat_Button_Borderless=0x7f0b0130;
+        public static final int Widget_AppCompat_Button_Borderless_Colored=0x7f0b0131;
+        public static final int Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0b0132;
+        public static final int Widget_AppCompat_Button_Colored=0x7f0b0133;
+        public static final int Widget_AppCompat_Button_Small=0x7f0b0134;
+        public static final int Widget_AppCompat_ButtonBar=0x7f0b0135;
+        public static final int Widget_AppCompat_ButtonBar_AlertDialog=0x7f0b0136;
+        public static final int Widget_AppCompat_CompoundButton_CheckBox=0x7f0b0137;
+        public static final int Widget_AppCompat_CompoundButton_RadioButton=0x7f0b0138;
+        public static final int Widget_AppCompat_CompoundButton_Switch=0x7f0b0139;
+        public static final int Widget_AppCompat_DrawerArrowToggle=0x7f0b013a;
+        public static final int Widget_AppCompat_DropDownItem_Spinner=0x7f0b013b;
+        public static final int Widget_AppCompat_EditText=0x7f0b013c;
+        public static final int Widget_AppCompat_ImageButton=0x7f0b013d;
+        public static final int Widget_AppCompat_Light_ActionBar=0x7f0b013e;
+        public static final int Widget_AppCompat_Light_ActionBar_Solid=0x7f0b013f;
+        public static final int Widget_AppCompat_Light_ActionBar_Solid_Inverse=0x7f0b0140;
+        public static final int Widget_AppCompat_Light_ActionBar_TabBar=0x7f0b0141;
+        public static final int Widget_AppCompat_Light_ActionBar_TabBar_Inverse=0x7f0b0142;
+        public static final int Widget_AppCompat_Light_ActionBar_TabText=0x7f0b0143;
+        public static final int Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f0b0144;
+        public static final int Widget_AppCompat_Light_ActionBar_TabView=0x7f0b0145;
+        public static final int Widget_AppCompat_Light_ActionBar_TabView_Inverse=0x7f0b0146;
+        public static final int Widget_AppCompat_Light_ActionButton=0x7f0b0147;
+        public static final int Widget_AppCompat_Light_ActionButton_CloseMode=0x7f0b0148;
+        public static final int Widget_AppCompat_Light_ActionButton_Overflow=0x7f0b0149;
+        public static final int Widget_AppCompat_Light_ActionMode_Inverse=0x7f0b014a;
+        public static final int Widget_AppCompat_Light_ActivityChooserView=0x7f0b014b;
+        public static final int Widget_AppCompat_Light_AutoCompleteTextView=0x7f0b014c;
+        public static final int Widget_AppCompat_Light_DropDownItem_Spinner=0x7f0b014d;
+        public static final int Widget_AppCompat_Light_ListPopupWindow=0x7f0b014e;
+        public static final int Widget_AppCompat_Light_ListView_DropDown=0x7f0b014f;
+        public static final int Widget_AppCompat_Light_PopupMenu=0x7f0b0150;
+        public static final int Widget_AppCompat_Light_PopupMenu_Overflow=0x7f0b0151;
+        public static final int Widget_AppCompat_Light_SearchView=0x7f0b0152;
+        public static final int Widget_AppCompat_Light_Spinner_DropDown_ActionBar=0x7f0b0153;
+        public static final int Widget_AppCompat_ListPopupWindow=0x7f0b0154;
+        public static final int Widget_AppCompat_ListView=0x7f0b0155;
+        public static final int Widget_AppCompat_ListView_DropDown=0x7f0b0156;
+        public static final int Widget_AppCompat_ListView_Menu=0x7f0b0157;
+        public static final int Widget_AppCompat_PopupMenu=0x7f0b0158;
+        public static final int Widget_AppCompat_PopupMenu_Overflow=0x7f0b0159;
+        public static final int Widget_AppCompat_PopupWindow=0x7f0b015a;
+        public static final int Widget_AppCompat_ProgressBar=0x7f0b015b;
+        public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f0b015c;
+        public static final int Widget_AppCompat_RatingBar=0x7f0b015d;
+        public static final int Widget_AppCompat_RatingBar_Indicator=0x7f0b015e;
+        public static final int Widget_AppCompat_RatingBar_Small=0x7f0b015f;
+        public static final int Widget_AppCompat_SearchView=0x7f0b0160;
+        public static final int Widget_AppCompat_SearchView_ActionBar=0x7f0b0161;
+        public static final int Widget_AppCompat_SeekBar=0x7f0b0162;
+        public static final int Widget_AppCompat_Spinner=0x7f0b0163;
+        public static final int Widget_AppCompat_Spinner_DropDown=0x7f0b0164;
+        public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f0b0165;
+        public static final int Widget_AppCompat_Spinner_Underlined=0x7f0b0166;
+        public static final int Widget_AppCompat_TextView_SpinnerItem=0x7f0b0167;
+        public static final int Widget_AppCompat_Toolbar=0x7f0b0168;
+        public static final int Widget_AppCompat_Toolbar_Button_Navigation=0x7f0b0169;
+        public static final int Widget_Design_AppBarLayout=0x7f0b016a;
+        public static final int Widget_Design_BottomSheet_Modal=0x7f0b016b;
+        public static final int Widget_Design_CollapsingToolbar=0x7f0b016c;
+        public static final int Widget_Design_CoordinatorLayout=0x7f0b016d;
+        public static final int Widget_Design_FloatingActionButton=0x7f0b016e;
+        public static final int Widget_Design_NavigationView=0x7f0b016f;
+        public static final int Widget_Design_ScrimInsetsFrameLayout=0x7f0b0170;
+        public static final int Widget_Design_Snackbar=0x7f0b0171;
+        public static final int Widget_Design_TabLayout=0x7f0b0001;
+        public static final int Widget_Design_TextInputLayout=0x7f0b0172;
+        public static final int _RSAstralChartTheme=0x7f0b0173;
+        public static final int _RSBaseTheme=0x7f0b0174;
+        public static final int _RSCurrentChartTheme=0x7f0b0175;
+        public static final int _RSNumberChartTheme=0x7f0b0176;
     }
     public static final class xml {
         public static final int gent=0x7f060000;
@@ -2767,33 +3269,33 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionBar_background com.coreman2200.ringstrings:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundSplit com.coreman2200.ringstrings:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundStacked com.coreman2200.ringstrings:backgroundStacked}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetEnd com.coreman2200.ringstrings:contentInsetEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetLeft com.coreman2200.ringstrings:contentInsetLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetRight com.coreman2200.ringstrings:contentInsetRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetStart com.coreman2200.ringstrings:contentInsetStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_customNavigationLayout com.coreman2200.ringstrings:customNavigationLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_displayOptions com.coreman2200.ringstrings:displayOptions}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_divider com.coreman2200.ringstrings:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_elevation com.coreman2200.ringstrings:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_height com.coreman2200.ringstrings:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_hideOnContentScroll com.coreman2200.ringstrings:hideOnContentScroll}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.coreman2200.ringstrings:homeAsUpIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeLayout com.coreman2200.ringstrings:homeLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_icon com.coreman2200.ringstrings:icon}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.coreman2200.ringstrings:indeterminateProgressStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_itemPadding com.coreman2200.ringstrings:itemPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_logo com.coreman2200.ringstrings:logo}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_navigationMode com.coreman2200.ringstrings:navigationMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_popupTheme com.coreman2200.ringstrings:popupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarPadding com.coreman2200.ringstrings:progressBarPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarStyle com.coreman2200.ringstrings:progressBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitle com.coreman2200.ringstrings:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.coreman2200.ringstrings:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_title com.coreman2200.ringstrings:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_titleTextStyle com.coreman2200.ringstrings:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_background com.coreman2200.ringstrings.test:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundSplit com.coreman2200.ringstrings.test:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundStacked com.coreman2200.ringstrings.test:backgroundStacked}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetEnd com.coreman2200.ringstrings.test:contentInsetEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetLeft com.coreman2200.ringstrings.test:contentInsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetRight com.coreman2200.ringstrings.test:contentInsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetStart com.coreman2200.ringstrings.test:contentInsetStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_customNavigationLayout com.coreman2200.ringstrings.test:customNavigationLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_displayOptions com.coreman2200.ringstrings.test:displayOptions}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_divider com.coreman2200.ringstrings.test:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_elevation com.coreman2200.ringstrings.test:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_height com.coreman2200.ringstrings.test:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_hideOnContentScroll com.coreman2200.ringstrings.test:hideOnContentScroll}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.coreman2200.ringstrings.test:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeLayout com.coreman2200.ringstrings.test:homeLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_icon com.coreman2200.ringstrings.test:icon}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.coreman2200.ringstrings.test:indeterminateProgressStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_itemPadding com.coreman2200.ringstrings.test:itemPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_logo com.coreman2200.ringstrings.test:logo}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_navigationMode com.coreman2200.ringstrings.test:navigationMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_popupTheme com.coreman2200.ringstrings.test:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarPadding com.coreman2200.ringstrings.test:progressBarPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarStyle com.coreman2200.ringstrings.test:progressBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitle com.coreman2200.ringstrings.test:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.coreman2200.ringstrings.test:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_title com.coreman2200.ringstrings.test:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_titleTextStyle com.coreman2200.ringstrings.test:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionBar_background
            @see #ActionBar_backgroundSplit
@@ -2830,20 +3332,20 @@ containing a value of this type.
             0x7f01000e, 0x7f01000f, 0x7f010010, 0x7f010011,
             0x7f010012, 0x7f010013, 0x7f010014, 0x7f010015,
             0x7f010016, 0x7f010017, 0x7f010018, 0x7f010019,
-            0x7f01001a, 0x7f01001b, 0x7f0100be
+            0x7f01001a, 0x7f01001b, 0x7f010057
         };
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#background}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#background}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:background
+          @attr name com.coreman2200.ringstrings.test:background
         */
         public static final int ActionBar_background = 10;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2851,11 +3353,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.coreman2200.ringstrings:backgroundSplit
+          @attr name com.coreman2200.ringstrings.test:backgroundSplit
         */
         public static final int ActionBar_backgroundSplit = 12;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#backgroundStacked}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#backgroundStacked}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2863,11 +3365,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.coreman2200.ringstrings:backgroundStacked
+          @attr name com.coreman2200.ringstrings.test:backgroundStacked
         */
         public static final int ActionBar_backgroundStacked = 11;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2879,11 +3381,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:contentInsetEnd
+          @attr name com.coreman2200.ringstrings.test:contentInsetEnd
         */
         public static final int ActionBar_contentInsetEnd = 21;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2895,11 +3397,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:contentInsetLeft
+          @attr name com.coreman2200.ringstrings.test:contentInsetLeft
         */
         public static final int ActionBar_contentInsetLeft = 22;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2911,11 +3413,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:contentInsetRight
+          @attr name com.coreman2200.ringstrings.test:contentInsetRight
         */
         public static final int ActionBar_contentInsetRight = 23;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2927,21 +3429,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:contentInsetStart
+          @attr name com.coreman2200.ringstrings.test:contentInsetStart
         */
         public static final int ActionBar_contentInsetStart = 20;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#customNavigationLayout}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#customNavigationLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:customNavigationLayout
+          @attr name com.coreman2200.ringstrings.test:customNavigationLayout
         */
         public static final int ActionBar_customNavigationLayout = 13;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#displayOptions}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#displayOptions}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2959,21 +3461,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>showCustom</code></td><td>0x10</td><td></td></tr>
 <tr><td><code>disableHome</code></td><td>0x20</td><td></td></tr>
 </table>
-          @attr name com.coreman2200.ringstrings:displayOptions
+          @attr name com.coreman2200.ringstrings.test:displayOptions
         */
         public static final int ActionBar_displayOptions = 3;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#divider}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#divider}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:divider
+          @attr name com.coreman2200.ringstrings.test:divider
         */
         public static final int ActionBar_divider = 9;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#elevation}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#elevation}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2985,11 +3487,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:elevation
+          @attr name com.coreman2200.ringstrings.test:elevation
         */
         public static final int ActionBar_elevation = 24;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#height}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#height}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3001,11 +3503,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:height
+          @attr name com.coreman2200.ringstrings.test:height
         */
         public static final int ActionBar_height = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#hideOnContentScroll}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#hideOnContentScroll}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3015,51 +3517,51 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:hideOnContentScroll
+          @attr name com.coreman2200.ringstrings.test:hideOnContentScroll
         */
         public static final int ActionBar_hideOnContentScroll = 19;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:homeAsUpIndicator
+          @attr name com.coreman2200.ringstrings.test:homeAsUpIndicator
         */
         public static final int ActionBar_homeAsUpIndicator = 26;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#homeLayout}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#homeLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:homeLayout
+          @attr name com.coreman2200.ringstrings.test:homeLayout
         */
         public static final int ActionBar_homeLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#icon}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#icon}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:icon
+          @attr name com.coreman2200.ringstrings.test:icon
         */
         public static final int ActionBar_icon = 7;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#indeterminateProgressStyle}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#indeterminateProgressStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:indeterminateProgressStyle
+          @attr name com.coreman2200.ringstrings.test:indeterminateProgressStyle
         */
         public static final int ActionBar_indeterminateProgressStyle = 16;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#itemPadding}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#itemPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3071,21 +3573,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:itemPadding
+          @attr name com.coreman2200.ringstrings.test:itemPadding
         */
         public static final int ActionBar_itemPadding = 18;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#logo}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#logo}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:logo
+          @attr name com.coreman2200.ringstrings.test:logo
         */
         public static final int ActionBar_logo = 8;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#navigationMode}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#navigationMode}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3099,21 +3601,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>listMode</code></td><td>1</td><td></td></tr>
 <tr><td><code>tabMode</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.coreman2200.ringstrings:navigationMode
+          @attr name com.coreman2200.ringstrings.test:navigationMode
         */
         public static final int ActionBar_navigationMode = 2;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#popupTheme}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:popupTheme
+          @attr name com.coreman2200.ringstrings.test:popupTheme
         */
         public static final int ActionBar_popupTheme = 25;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#progressBarPadding}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#progressBarPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3125,21 +3627,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:progressBarPadding
+          @attr name com.coreman2200.ringstrings.test:progressBarPadding
         */
         public static final int ActionBar_progressBarPadding = 17;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#progressBarStyle}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#progressBarStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:progressBarStyle
+          @attr name com.coreman2200.ringstrings.test:progressBarStyle
         */
         public static final int ActionBar_progressBarStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#subtitle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3149,21 +3651,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:subtitle
+          @attr name com.coreman2200.ringstrings.test:subtitle
         */
         public static final int ActionBar_subtitle = 4;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:subtitleTextStyle
+          @attr name com.coreman2200.ringstrings.test:subtitleTextStyle
         */
         public static final int ActionBar_subtitleTextStyle = 6;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#title}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#title}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3173,17 +3675,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:title
+          @attr name com.coreman2200.ringstrings.test:title
         */
         public static final int ActionBar_title = 1;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:titleTextStyle
+          @attr name com.coreman2200.ringstrings.test:titleTextStyle
         */
         public static final int ActionBar_titleTextStyle = 5;
         /** Attributes that can be used with a ActionBarLayout.
@@ -3235,12 +3737,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionMode_background com.coreman2200.ringstrings:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_backgroundSplit com.coreman2200.ringstrings:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_closeItemLayout com.coreman2200.ringstrings:closeItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_height com.coreman2200.ringstrings:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.coreman2200.ringstrings:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_titleTextStyle com.coreman2200.ringstrings:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_background com.coreman2200.ringstrings.test:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_backgroundSplit com.coreman2200.ringstrings.test:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_closeItemLayout com.coreman2200.ringstrings.test:closeItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_height com.coreman2200.ringstrings.test:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.coreman2200.ringstrings.test:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_titleTextStyle com.coreman2200.ringstrings.test:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionMode_background
            @see #ActionMode_backgroundSplit
@@ -3254,17 +3756,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01000e, 0x7f01001c
         };
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#background}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#background}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:background
+          @attr name com.coreman2200.ringstrings.test:background
         */
         public static final int ActionMode_background = 3;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -3272,21 +3774,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.coreman2200.ringstrings:backgroundSplit
+          @attr name com.coreman2200.ringstrings.test:backgroundSplit
         */
         public static final int ActionMode_backgroundSplit = 4;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#closeItemLayout}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#closeItemLayout}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:closeItemLayout
+          @attr name com.coreman2200.ringstrings.test:closeItemLayout
         */
         public static final int ActionMode_closeItemLayout = 5;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#height}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#height}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -3298,27 +3800,27 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:height
+          @attr name com.coreman2200.ringstrings.test:height
         */
         public static final int ActionMode_height = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:subtitleTextStyle
+          @attr name com.coreman2200.ringstrings.test:subtitleTextStyle
         */
         public static final int ActionMode_subtitleTextStyle = 2;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:titleTextStyle
+          @attr name com.coreman2200.ringstrings.test:titleTextStyle
         */
         public static final int ActionMode_titleTextStyle = 1;
         /** Attributes that can be used with a ActivityChooserView.
@@ -3327,8 +3829,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.coreman2200.ringstrings:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.coreman2200.ringstrings:initialActivityCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.coreman2200.ringstrings.test:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.coreman2200.ringstrings.test:initialActivityCount}</code></td><td></td></tr>
            </table>
            @see #ActivityChooserView_expandActivityOverflowButtonDrawable
            @see #ActivityChooserView_initialActivityCount
@@ -3337,17 +3839,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01001d, 0x7f01001e
         };
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#expandActivityOverflowButtonDrawable}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#expandActivityOverflowButtonDrawable}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:expandActivityOverflowButtonDrawable
+          @attr name com.coreman2200.ringstrings.test:expandActivityOverflowButtonDrawable
         */
         public static final int ActivityChooserView_expandActivityOverflowButtonDrawable = 1;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#initialActivityCount}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#initialActivityCount}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
@@ -3357,7 +3859,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:initialActivityCount
+          @attr name com.coreman2200.ringstrings.test:initialActivityCount
         */
         public static final int ActivityChooserView_initialActivityCount = 0;
         /** Attributes that can be used with a AlertDialog.
@@ -3367,11 +3869,11 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AlertDialog_android_layout android:layout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout com.coreman2200.ringstrings:buttonPanelSideLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_listItemLayout com.coreman2200.ringstrings:listItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_listLayout com.coreman2200.ringstrings:listLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout com.coreman2200.ringstrings:multiChoiceItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout com.coreman2200.ringstrings:singleChoiceItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout com.coreman2200.ringstrings.test:buttonPanelSideLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_listItemLayout com.coreman2200.ringstrings.test:listItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_listLayout com.coreman2200.ringstrings.test:listLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout com.coreman2200.ringstrings.test:multiChoiceItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout com.coreman2200.ringstrings.test:singleChoiceItemLayout}</code></td><td></td></tr>
            </table>
            @see #AlertDialog_android_layout
            @see #AlertDialog_buttonPanelSideLayout
@@ -3391,53 +3893,53 @@ containing a value of this type.
         */
         public static final int AlertDialog_android_layout = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#buttonPanelSideLayout}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#buttonPanelSideLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:buttonPanelSideLayout
+          @attr name com.coreman2200.ringstrings.test:buttonPanelSideLayout
         */
         public static final int AlertDialog_buttonPanelSideLayout = 1;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#listItemLayout}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#listItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:listItemLayout
+          @attr name com.coreman2200.ringstrings.test:listItemLayout
         */
         public static final int AlertDialog_listItemLayout = 5;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#listLayout}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#listLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:listLayout
+          @attr name com.coreman2200.ringstrings.test:listLayout
         */
         public static final int AlertDialog_listLayout = 2;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#multiChoiceItemLayout}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#multiChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:multiChoiceItemLayout
+          @attr name com.coreman2200.ringstrings.test:multiChoiceItemLayout
         */
         public static final int AlertDialog_multiChoiceItemLayout = 3;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#singleChoiceItemLayout}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#singleChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:singleChoiceItemLayout
+          @attr name com.coreman2200.ringstrings.test:singleChoiceItemLayout
         */
         public static final int AlertDialog_singleChoiceItemLayout = 4;
         /** Attributes that can be used with a AppBarLayout.
@@ -3447,8 +3949,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AppBarLayout_android_background android:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppBarLayout_elevation com.coreman2200.ringstrings:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppBarLayout_expanded com.coreman2200.ringstrings:expanded}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppBarLayout_elevation com.coreman2200.ringstrings.test:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppBarLayout_expanded com.coreman2200.ringstrings.test:expanded}</code></td><td></td></tr>
            </table>
            @see #AppBarLayout_android_background
            @see #AppBarLayout_elevation
@@ -3464,7 +3966,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int AppBarLayout_android_background = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#elevation}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#elevation}
           attribute's value can be found in the {@link #AppBarLayout} array.
 
 
@@ -3476,11 +3978,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:elevation
+          @attr name com.coreman2200.ringstrings.test:elevation
         */
         public static final int AppBarLayout_elevation = 1;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#expanded}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#expanded}
           attribute's value can be found in the {@link #AppBarLayout} array.
 
 
@@ -3490,7 +3992,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:expanded
+          @attr name com.coreman2200.ringstrings.test:expanded
         */
         public static final int AppBarLayout_expanded = 2;
         /** Attributes that can be used with a AppBarLayout_LayoutParams.
@@ -3499,8 +4001,8 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AppBarLayout_LayoutParams_layout_scrollFlags com.coreman2200.ringstrings:layout_scrollFlags}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppBarLayout_LayoutParams_layout_scrollInterpolator com.coreman2200.ringstrings:layout_scrollInterpolator}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppBarLayout_LayoutParams_layout_scrollFlags com.coreman2200.ringstrings.test:layout_scrollFlags}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppBarLayout_LayoutParams_layout_scrollInterpolator com.coreman2200.ringstrings.test:layout_scrollInterpolator}</code></td><td></td></tr>
            </table>
            @see #AppBarLayout_LayoutParams_layout_scrollFlags
            @see #AppBarLayout_LayoutParams_layout_scrollInterpolator
@@ -3509,7 +4011,7 @@ containing a value of this type.
             0x7f010025, 0x7f010026
         };
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#layout_scrollFlags}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#layout_scrollFlags}
           attribute's value can be found in the {@link #AppBarLayout_LayoutParams} array.
 
 
@@ -3525,19 +4027,50 @@ containing a value of this type.
 <tr><td><code>enterAlwaysCollapsed</code></td><td>0x8</td><td></td></tr>
 <tr><td><code>snap</code></td><td>0x10</td><td></td></tr>
 </table>
-          @attr name com.coreman2200.ringstrings:layout_scrollFlags
+          @attr name com.coreman2200.ringstrings.test:layout_scrollFlags
         */
         public static final int AppBarLayout_LayoutParams_layout_scrollFlags = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#layout_scrollInterpolator}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#layout_scrollInterpolator}
           attribute's value can be found in the {@link #AppBarLayout_LayoutParams} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:layout_scrollInterpolator
+          @attr name com.coreman2200.ringstrings.test:layout_scrollInterpolator
         */
         public static final int AppBarLayout_LayoutParams_layout_scrollInterpolator = 1;
+        /** Attributes that can be used with a AppCompatImageView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #AppCompatImageView_android_src android:src}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatImageView_srcCompat com.coreman2200.ringstrings.test:srcCompat}</code></td><td></td></tr>
+           </table>
+           @see #AppCompatImageView_android_src
+           @see #AppCompatImageView_srcCompat
+         */
+        public static final int[] AppCompatImageView = {
+            0x01010119, 0x7f010027
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#src}
+          attribute's value can be found in the {@link #AppCompatImageView} array.
+          @attr name android:src
+        */
+        public static final int AppCompatImageView_android_src = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#srcCompat}
+          attribute's value can be found in the {@link #AppCompatImageView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:srcCompat
+        */
+        public static final int AppCompatImageView_srcCompat = 1;
         /** Attributes that can be used with a AppCompatTextView.
            <p>Includes the following attributes:</p>
            <table>
@@ -3545,13 +4078,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AppCompatTextView_android_textAppearance android:textAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTextView_textAllCaps com.coreman2200.ringstrings:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTextView_textAllCaps com.coreman2200.ringstrings.test:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #AppCompatTextView_android_textAppearance
            @see #AppCompatTextView_textAllCaps
          */
         public static final int[] AppCompatTextView = {
-            0x01010034, 0x7f010027
+            0x01010034, 0x7f010028
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#textAppearance}
@@ -3560,31 +4093,1634 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int AppCompatTextView_android_textAppearance = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#textAllCaps}
           attribute's value can be found in the {@link #AppCompatTextView} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name com.coreman2200.ringstrings:textAllCaps
+          @attr name com.coreman2200.ringstrings.test:textAllCaps
         */
         public static final int AppCompatTextView_textAllCaps = 1;
+        /** Attributes that can be used with a AppCompatTheme.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarDivider com.coreman2200.ringstrings.test:actionBarDivider}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarItemBackground com.coreman2200.ringstrings.test:actionBarItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarPopupTheme com.coreman2200.ringstrings.test:actionBarPopupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarSize com.coreman2200.ringstrings.test:actionBarSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarSplitStyle com.coreman2200.ringstrings.test:actionBarSplitStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarStyle com.coreman2200.ringstrings.test:actionBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarTabBarStyle com.coreman2200.ringstrings.test:actionBarTabBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarTabStyle com.coreman2200.ringstrings.test:actionBarTabStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarTabTextStyle com.coreman2200.ringstrings.test:actionBarTabTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarTheme com.coreman2200.ringstrings.test:actionBarTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarWidgetTheme com.coreman2200.ringstrings.test:actionBarWidgetTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionButtonStyle com.coreman2200.ringstrings.test:actionButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionDropDownStyle com.coreman2200.ringstrings.test:actionDropDownStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionMenuTextAppearance com.coreman2200.ringstrings.test:actionMenuTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionMenuTextColor com.coreman2200.ringstrings.test:actionMenuTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeBackground com.coreman2200.ringstrings.test:actionModeBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeCloseButtonStyle com.coreman2200.ringstrings.test:actionModeCloseButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeCloseDrawable com.coreman2200.ringstrings.test:actionModeCloseDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeCopyDrawable com.coreman2200.ringstrings.test:actionModeCopyDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeCutDrawable com.coreman2200.ringstrings.test:actionModeCutDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeFindDrawable com.coreman2200.ringstrings.test:actionModeFindDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModePasteDrawable com.coreman2200.ringstrings.test:actionModePasteDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModePopupWindowStyle com.coreman2200.ringstrings.test:actionModePopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeSelectAllDrawable com.coreman2200.ringstrings.test:actionModeSelectAllDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeShareDrawable com.coreman2200.ringstrings.test:actionModeShareDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeSplitBackground com.coreman2200.ringstrings.test:actionModeSplitBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeStyle com.coreman2200.ringstrings.test:actionModeStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeWebSearchDrawable com.coreman2200.ringstrings.test:actionModeWebSearchDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionOverflowButtonStyle com.coreman2200.ringstrings.test:actionOverflowButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionOverflowMenuStyle com.coreman2200.ringstrings.test:actionOverflowMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_activityChooserViewStyle com.coreman2200.ringstrings.test:activityChooserViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_alertDialogButtonGroupStyle com.coreman2200.ringstrings.test:alertDialogButtonGroupStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_alertDialogCenterButtons com.coreman2200.ringstrings.test:alertDialogCenterButtons}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_alertDialogStyle com.coreman2200.ringstrings.test:alertDialogStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_alertDialogTheme com.coreman2200.ringstrings.test:alertDialogTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_android_windowIsFloating android:windowIsFloating}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_autoCompleteTextViewStyle com.coreman2200.ringstrings.test:autoCompleteTextViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_borderlessButtonStyle com.coreman2200.ringstrings.test:borderlessButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonBarButtonStyle com.coreman2200.ringstrings.test:buttonBarButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonBarNegativeButtonStyle com.coreman2200.ringstrings.test:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonBarNeutralButtonStyle com.coreman2200.ringstrings.test:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonBarPositiveButtonStyle com.coreman2200.ringstrings.test:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonBarStyle com.coreman2200.ringstrings.test:buttonBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonStyle com.coreman2200.ringstrings.test:buttonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonStyleSmall com.coreman2200.ringstrings.test:buttonStyleSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_checkboxStyle com.coreman2200.ringstrings.test:checkboxStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_checkedTextViewStyle com.coreman2200.ringstrings.test:checkedTextViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorAccent com.coreman2200.ringstrings.test:colorAccent}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorButtonNormal com.coreman2200.ringstrings.test:colorButtonNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorControlActivated com.coreman2200.ringstrings.test:colorControlActivated}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorControlHighlight com.coreman2200.ringstrings.test:colorControlHighlight}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorControlNormal com.coreman2200.ringstrings.test:colorControlNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorPrimary com.coreman2200.ringstrings.test:colorPrimary}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorPrimaryDark com.coreman2200.ringstrings.test:colorPrimaryDark}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorSwitchThumbNormal com.coreman2200.ringstrings.test:colorSwitchThumbNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_controlBackground com.coreman2200.ringstrings.test:controlBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_dialogPreferredPadding com.coreman2200.ringstrings.test:dialogPreferredPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_dialogTheme com.coreman2200.ringstrings.test:dialogTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_dividerHorizontal com.coreman2200.ringstrings.test:dividerHorizontal}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_dividerVertical com.coreman2200.ringstrings.test:dividerVertical}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_dropDownListViewStyle com.coreman2200.ringstrings.test:dropDownListViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_dropdownListPreferredItemHeight com.coreman2200.ringstrings.test:dropdownListPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_editTextBackground com.coreman2200.ringstrings.test:editTextBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_editTextColor com.coreman2200.ringstrings.test:editTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_editTextStyle com.coreman2200.ringstrings.test:editTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_homeAsUpIndicator com.coreman2200.ringstrings.test:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_imageButtonStyle com.coreman2200.ringstrings.test:imageButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listChoiceBackgroundIndicator com.coreman2200.ringstrings.test:listChoiceBackgroundIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listDividerAlertDialog com.coreman2200.ringstrings.test:listDividerAlertDialog}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listPopupWindowStyle com.coreman2200.ringstrings.test:listPopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeight com.coreman2200.ringstrings.test:listPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightLarge com.coreman2200.ringstrings.test:listPreferredItemHeightLarge}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightSmall com.coreman2200.ringstrings.test:listPreferredItemHeightSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingLeft com.coreman2200.ringstrings.test:listPreferredItemPaddingLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingRight com.coreman2200.ringstrings.test:listPreferredItemPaddingRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_panelBackground com.coreman2200.ringstrings.test:panelBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_panelMenuListTheme com.coreman2200.ringstrings.test:panelMenuListTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_panelMenuListWidth com.coreman2200.ringstrings.test:panelMenuListWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_popupMenuStyle com.coreman2200.ringstrings.test:popupMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_popupWindowStyle com.coreman2200.ringstrings.test:popupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_radioButtonStyle com.coreman2200.ringstrings.test:radioButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_ratingBarStyle com.coreman2200.ringstrings.test:ratingBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_ratingBarStyleIndicator com.coreman2200.ringstrings.test:ratingBarStyleIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_ratingBarStyleSmall com.coreman2200.ringstrings.test:ratingBarStyleSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_searchViewStyle com.coreman2200.ringstrings.test:searchViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_seekBarStyle com.coreman2200.ringstrings.test:seekBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_selectableItemBackground com.coreman2200.ringstrings.test:selectableItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_selectableItemBackgroundBorderless com.coreman2200.ringstrings.test:selectableItemBackgroundBorderless}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_spinnerDropDownItemStyle com.coreman2200.ringstrings.test:spinnerDropDownItemStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_spinnerStyle com.coreman2200.ringstrings.test:spinnerStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_switchStyle com.coreman2200.ringstrings.test:switchStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceLargePopupMenu com.coreman2200.ringstrings.test:textAppearanceLargePopupMenu}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceListItem com.coreman2200.ringstrings.test:textAppearanceListItem}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSmall com.coreman2200.ringstrings.test:textAppearanceListItemSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultSubtitle com.coreman2200.ringstrings.test:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultTitle com.coreman2200.ringstrings.test:textAppearanceSearchResultTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceSmallPopupMenu com.coreman2200.ringstrings.test:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textColorAlertDialogListItem com.coreman2200.ringstrings.test:textColorAlertDialogListItem}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textColorSearchUrl com.coreman2200.ringstrings.test:textColorSearchUrl}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_toolbarNavigationButtonStyle com.coreman2200.ringstrings.test:toolbarNavigationButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_toolbarStyle com.coreman2200.ringstrings.test:toolbarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowActionBar com.coreman2200.ringstrings.test:windowActionBar}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowActionBarOverlay com.coreman2200.ringstrings.test:windowActionBarOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowActionModeOverlay com.coreman2200.ringstrings.test:windowActionModeOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMajor com.coreman2200.ringstrings.test:windowFixedHeightMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMinor com.coreman2200.ringstrings.test:windowFixedHeightMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMajor com.coreman2200.ringstrings.test:windowFixedWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMinor com.coreman2200.ringstrings.test:windowFixedWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowMinWidthMajor com.coreman2200.ringstrings.test:windowMinWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowMinWidthMinor com.coreman2200.ringstrings.test:windowMinWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowNoTitle com.coreman2200.ringstrings.test:windowNoTitle}</code></td><td></td></tr>
+           </table>
+           @see #AppCompatTheme_actionBarDivider
+           @see #AppCompatTheme_actionBarItemBackground
+           @see #AppCompatTheme_actionBarPopupTheme
+           @see #AppCompatTheme_actionBarSize
+           @see #AppCompatTheme_actionBarSplitStyle
+           @see #AppCompatTheme_actionBarStyle
+           @see #AppCompatTheme_actionBarTabBarStyle
+           @see #AppCompatTheme_actionBarTabStyle
+           @see #AppCompatTheme_actionBarTabTextStyle
+           @see #AppCompatTheme_actionBarTheme
+           @see #AppCompatTheme_actionBarWidgetTheme
+           @see #AppCompatTheme_actionButtonStyle
+           @see #AppCompatTheme_actionDropDownStyle
+           @see #AppCompatTheme_actionMenuTextAppearance
+           @see #AppCompatTheme_actionMenuTextColor
+           @see #AppCompatTheme_actionModeBackground
+           @see #AppCompatTheme_actionModeCloseButtonStyle
+           @see #AppCompatTheme_actionModeCloseDrawable
+           @see #AppCompatTheme_actionModeCopyDrawable
+           @see #AppCompatTheme_actionModeCutDrawable
+           @see #AppCompatTheme_actionModeFindDrawable
+           @see #AppCompatTheme_actionModePasteDrawable
+           @see #AppCompatTheme_actionModePopupWindowStyle
+           @see #AppCompatTheme_actionModeSelectAllDrawable
+           @see #AppCompatTheme_actionModeShareDrawable
+           @see #AppCompatTheme_actionModeSplitBackground
+           @see #AppCompatTheme_actionModeStyle
+           @see #AppCompatTheme_actionModeWebSearchDrawable
+           @see #AppCompatTheme_actionOverflowButtonStyle
+           @see #AppCompatTheme_actionOverflowMenuStyle
+           @see #AppCompatTheme_activityChooserViewStyle
+           @see #AppCompatTheme_alertDialogButtonGroupStyle
+           @see #AppCompatTheme_alertDialogCenterButtons
+           @see #AppCompatTheme_alertDialogStyle
+           @see #AppCompatTheme_alertDialogTheme
+           @see #AppCompatTheme_android_windowAnimationStyle
+           @see #AppCompatTheme_android_windowIsFloating
+           @see #AppCompatTheme_autoCompleteTextViewStyle
+           @see #AppCompatTheme_borderlessButtonStyle
+           @see #AppCompatTheme_buttonBarButtonStyle
+           @see #AppCompatTheme_buttonBarNegativeButtonStyle
+           @see #AppCompatTheme_buttonBarNeutralButtonStyle
+           @see #AppCompatTheme_buttonBarPositiveButtonStyle
+           @see #AppCompatTheme_buttonBarStyle
+           @see #AppCompatTheme_buttonStyle
+           @see #AppCompatTheme_buttonStyleSmall
+           @see #AppCompatTheme_checkboxStyle
+           @see #AppCompatTheme_checkedTextViewStyle
+           @see #AppCompatTheme_colorAccent
+           @see #AppCompatTheme_colorButtonNormal
+           @see #AppCompatTheme_colorControlActivated
+           @see #AppCompatTheme_colorControlHighlight
+           @see #AppCompatTheme_colorControlNormal
+           @see #AppCompatTheme_colorPrimary
+           @see #AppCompatTheme_colorPrimaryDark
+           @see #AppCompatTheme_colorSwitchThumbNormal
+           @see #AppCompatTheme_controlBackground
+           @see #AppCompatTheme_dialogPreferredPadding
+           @see #AppCompatTheme_dialogTheme
+           @see #AppCompatTheme_dividerHorizontal
+           @see #AppCompatTheme_dividerVertical
+           @see #AppCompatTheme_dropDownListViewStyle
+           @see #AppCompatTheme_dropdownListPreferredItemHeight
+           @see #AppCompatTheme_editTextBackground
+           @see #AppCompatTheme_editTextColor
+           @see #AppCompatTheme_editTextStyle
+           @see #AppCompatTheme_homeAsUpIndicator
+           @see #AppCompatTheme_imageButtonStyle
+           @see #AppCompatTheme_listChoiceBackgroundIndicator
+           @see #AppCompatTheme_listDividerAlertDialog
+           @see #AppCompatTheme_listPopupWindowStyle
+           @see #AppCompatTheme_listPreferredItemHeight
+           @see #AppCompatTheme_listPreferredItemHeightLarge
+           @see #AppCompatTheme_listPreferredItemHeightSmall
+           @see #AppCompatTheme_listPreferredItemPaddingLeft
+           @see #AppCompatTheme_listPreferredItemPaddingRight
+           @see #AppCompatTheme_panelBackground
+           @see #AppCompatTheme_panelMenuListTheme
+           @see #AppCompatTheme_panelMenuListWidth
+           @see #AppCompatTheme_popupMenuStyle
+           @see #AppCompatTheme_popupWindowStyle
+           @see #AppCompatTheme_radioButtonStyle
+           @see #AppCompatTheme_ratingBarStyle
+           @see #AppCompatTheme_ratingBarStyleIndicator
+           @see #AppCompatTheme_ratingBarStyleSmall
+           @see #AppCompatTheme_searchViewStyle
+           @see #AppCompatTheme_seekBarStyle
+           @see #AppCompatTheme_selectableItemBackground
+           @see #AppCompatTheme_selectableItemBackgroundBorderless
+           @see #AppCompatTheme_spinnerDropDownItemStyle
+           @see #AppCompatTheme_spinnerStyle
+           @see #AppCompatTheme_switchStyle
+           @see #AppCompatTheme_textAppearanceLargePopupMenu
+           @see #AppCompatTheme_textAppearanceListItem
+           @see #AppCompatTheme_textAppearanceListItemSmall
+           @see #AppCompatTheme_textAppearanceSearchResultSubtitle
+           @see #AppCompatTheme_textAppearanceSearchResultTitle
+           @see #AppCompatTheme_textAppearanceSmallPopupMenu
+           @see #AppCompatTheme_textColorAlertDialogListItem
+           @see #AppCompatTheme_textColorSearchUrl
+           @see #AppCompatTheme_toolbarNavigationButtonStyle
+           @see #AppCompatTheme_toolbarStyle
+           @see #AppCompatTheme_windowActionBar
+           @see #AppCompatTheme_windowActionBarOverlay
+           @see #AppCompatTheme_windowActionModeOverlay
+           @see #AppCompatTheme_windowFixedHeightMajor
+           @see #AppCompatTheme_windowFixedHeightMinor
+           @see #AppCompatTheme_windowFixedWidthMajor
+           @see #AppCompatTheme_windowFixedWidthMinor
+           @see #AppCompatTheme_windowMinWidthMajor
+           @see #AppCompatTheme_windowMinWidthMinor
+           @see #AppCompatTheme_windowNoTitle
+         */
+        public static final int[] AppCompatTheme = {
+            0x01010057, 0x010100ae, 0x7f010029, 0x7f01002a,
+            0x7f01002b, 0x7f01002c, 0x7f01002d, 0x7f01002e,
+            0x7f01002f, 0x7f010030, 0x7f010031, 0x7f010032,
+            0x7f010033, 0x7f010034, 0x7f010035, 0x7f010036,
+            0x7f010037, 0x7f010038, 0x7f010039, 0x7f01003a,
+            0x7f01003b, 0x7f01003c, 0x7f01003d, 0x7f01003e,
+            0x7f01003f, 0x7f010040, 0x7f010041, 0x7f010042,
+            0x7f010043, 0x7f010044, 0x7f010045, 0x7f010046,
+            0x7f010047, 0x7f010048, 0x7f010049, 0x7f01004a,
+            0x7f01004b, 0x7f01004c, 0x7f01004d, 0x7f01004e,
+            0x7f01004f, 0x7f010050, 0x7f010051, 0x7f010052,
+            0x7f010053, 0x7f010054, 0x7f010055, 0x7f010056,
+            0x7f010057, 0x7f010058, 0x7f010059, 0x7f01005a,
+            0x7f01005b, 0x7f01005c, 0x7f01005d, 0x7f01005e,
+            0x7f01005f, 0x7f010060, 0x7f010061, 0x7f010062,
+            0x7f010063, 0x7f010064, 0x7f010065, 0x7f010066,
+            0x7f010067, 0x7f010068, 0x7f010069, 0x7f01006a,
+            0x7f01006b, 0x7f01006c, 0x7f01006d, 0x7f01006e,
+            0x7f01006f, 0x7f010070, 0x7f010071, 0x7f010072,
+            0x7f010073, 0x7f010074, 0x7f010075, 0x7f010076,
+            0x7f010077, 0x7f010078, 0x7f010079, 0x7f01007a,
+            0x7f01007b, 0x7f01007c, 0x7f01007d, 0x7f01007e,
+            0x7f01007f, 0x7f010080, 0x7f010081, 0x7f010082,
+            0x7f010083, 0x7f010084, 0x7f010085, 0x7f010086,
+            0x7f010087, 0x7f010088, 0x7f010089, 0x7f01008a,
+            0x7f01008b, 0x7f01008c, 0x7f01008d, 0x7f01008e,
+            0x7f01008f, 0x7f010090, 0x7f010091, 0x7f010092,
+            0x7f010093, 0x7f010094, 0x7f010095, 0x7f010096
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionBarDivider}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionBarDivider
+        */
+        public static final int AppCompatTheme_actionBarDivider = 23;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionBarItemBackground}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionBarItemBackground
+        */
+        public static final int AppCompatTheme_actionBarItemBackground = 24;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionBarPopupTheme}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionBarPopupTheme
+        */
+        public static final int AppCompatTheme_actionBarPopupTheme = 17;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionBarSize}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>wrap_content</code></td><td>0</td><td></td></tr>
+</table>
+          @attr name com.coreman2200.ringstrings.test:actionBarSize
+        */
+        public static final int AppCompatTheme_actionBarSize = 22;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionBarSplitStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionBarSplitStyle
+        */
+        public static final int AppCompatTheme_actionBarSplitStyle = 19;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionBarStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionBarStyle
+        */
+        public static final int AppCompatTheme_actionBarStyle = 18;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionBarTabBarStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionBarTabBarStyle
+        */
+        public static final int AppCompatTheme_actionBarTabBarStyle = 13;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionBarTabStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionBarTabStyle
+        */
+        public static final int AppCompatTheme_actionBarTabStyle = 12;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionBarTabTextStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionBarTabTextStyle
+        */
+        public static final int AppCompatTheme_actionBarTabTextStyle = 14;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionBarTheme}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionBarTheme
+        */
+        public static final int AppCompatTheme_actionBarTheme = 20;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionBarWidgetTheme}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionBarWidgetTheme
+        */
+        public static final int AppCompatTheme_actionBarWidgetTheme = 21;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionButtonStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionButtonStyle
+        */
+        public static final int AppCompatTheme_actionButtonStyle = 49;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionDropDownStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionDropDownStyle
+        */
+        public static final int AppCompatTheme_actionDropDownStyle = 45;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionMenuTextAppearance}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionMenuTextAppearance
+        */
+        public static final int AppCompatTheme_actionMenuTextAppearance = 25;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionMenuTextColor}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionMenuTextColor
+        */
+        public static final int AppCompatTheme_actionMenuTextColor = 26;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionModeBackground}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionModeBackground
+        */
+        public static final int AppCompatTheme_actionModeBackground = 29;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionModeCloseButtonStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionModeCloseButtonStyle
+        */
+        public static final int AppCompatTheme_actionModeCloseButtonStyle = 28;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionModeCloseDrawable}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionModeCloseDrawable
+        */
+        public static final int AppCompatTheme_actionModeCloseDrawable = 31;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionModeCopyDrawable}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionModeCopyDrawable
+        */
+        public static final int AppCompatTheme_actionModeCopyDrawable = 33;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionModeCutDrawable}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionModeCutDrawable
+        */
+        public static final int AppCompatTheme_actionModeCutDrawable = 32;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionModeFindDrawable}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionModeFindDrawable
+        */
+        public static final int AppCompatTheme_actionModeFindDrawable = 37;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionModePasteDrawable}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionModePasteDrawable
+        */
+        public static final int AppCompatTheme_actionModePasteDrawable = 34;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionModePopupWindowStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionModePopupWindowStyle
+        */
+        public static final int AppCompatTheme_actionModePopupWindowStyle = 39;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionModeSelectAllDrawable}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionModeSelectAllDrawable
+        */
+        public static final int AppCompatTheme_actionModeSelectAllDrawable = 35;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionModeShareDrawable}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionModeShareDrawable
+        */
+        public static final int AppCompatTheme_actionModeShareDrawable = 36;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionModeSplitBackground}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionModeSplitBackground
+        */
+        public static final int AppCompatTheme_actionModeSplitBackground = 30;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionModeStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionModeStyle
+        */
+        public static final int AppCompatTheme_actionModeStyle = 27;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionModeWebSearchDrawable}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionModeWebSearchDrawable
+        */
+        public static final int AppCompatTheme_actionModeWebSearchDrawable = 38;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionOverflowButtonStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionOverflowButtonStyle
+        */
+        public static final int AppCompatTheme_actionOverflowButtonStyle = 15;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionOverflowMenuStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:actionOverflowMenuStyle
+        */
+        public static final int AppCompatTheme_actionOverflowMenuStyle = 16;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#activityChooserViewStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:activityChooserViewStyle
+        */
+        public static final int AppCompatTheme_activityChooserViewStyle = 57;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#alertDialogButtonGroupStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:alertDialogButtonGroupStyle
+        */
+        public static final int AppCompatTheme_alertDialogButtonGroupStyle = 92;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#alertDialogCenterButtons}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:alertDialogCenterButtons
+        */
+        public static final int AppCompatTheme_alertDialogCenterButtons = 93;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#alertDialogStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:alertDialogStyle
+        */
+        public static final int AppCompatTheme_alertDialogStyle = 91;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#alertDialogTheme}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:alertDialogTheme
+        */
+        public static final int AppCompatTheme_alertDialogTheme = 94;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#windowAnimationStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+          @attr name android:windowAnimationStyle
+        */
+        public static final int AppCompatTheme_android_windowAnimationStyle = 1;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#windowIsFloating}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+          @attr name android:windowIsFloating
+        */
+        public static final int AppCompatTheme_android_windowIsFloating = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#autoCompleteTextViewStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:autoCompleteTextViewStyle
+        */
+        public static final int AppCompatTheme_autoCompleteTextViewStyle = 99;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#borderlessButtonStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:borderlessButtonStyle
+        */
+        public static final int AppCompatTheme_borderlessButtonStyle = 54;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#buttonBarButtonStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:buttonBarButtonStyle
+        */
+        public static final int AppCompatTheme_buttonBarButtonStyle = 51;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#buttonBarNegativeButtonStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:buttonBarNegativeButtonStyle
+        */
+        public static final int AppCompatTheme_buttonBarNegativeButtonStyle = 97;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#buttonBarNeutralButtonStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:buttonBarNeutralButtonStyle
+        */
+        public static final int AppCompatTheme_buttonBarNeutralButtonStyle = 98;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#buttonBarPositiveButtonStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:buttonBarPositiveButtonStyle
+        */
+        public static final int AppCompatTheme_buttonBarPositiveButtonStyle = 96;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#buttonBarStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:buttonBarStyle
+        */
+        public static final int AppCompatTheme_buttonBarStyle = 50;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#buttonStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:buttonStyle
+        */
+        public static final int AppCompatTheme_buttonStyle = 100;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#buttonStyleSmall}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:buttonStyleSmall
+        */
+        public static final int AppCompatTheme_buttonStyleSmall = 101;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#checkboxStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:checkboxStyle
+        */
+        public static final int AppCompatTheme_checkboxStyle = 102;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#checkedTextViewStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:checkedTextViewStyle
+        */
+        public static final int AppCompatTheme_checkedTextViewStyle = 103;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#colorAccent}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:colorAccent
+        */
+        public static final int AppCompatTheme_colorAccent = 84;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#colorButtonNormal}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:colorButtonNormal
+        */
+        public static final int AppCompatTheme_colorButtonNormal = 88;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#colorControlActivated}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:colorControlActivated
+        */
+        public static final int AppCompatTheme_colorControlActivated = 86;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#colorControlHighlight}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:colorControlHighlight
+        */
+        public static final int AppCompatTheme_colorControlHighlight = 87;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#colorControlNormal}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:colorControlNormal
+        */
+        public static final int AppCompatTheme_colorControlNormal = 85;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#colorPrimary}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:colorPrimary
+        */
+        public static final int AppCompatTheme_colorPrimary = 82;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#colorPrimaryDark}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:colorPrimaryDark
+        */
+        public static final int AppCompatTheme_colorPrimaryDark = 83;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#colorSwitchThumbNormal}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:colorSwitchThumbNormal
+        */
+        public static final int AppCompatTheme_colorSwitchThumbNormal = 89;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#controlBackground}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:controlBackground
+        */
+        public static final int AppCompatTheme_controlBackground = 90;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#dialogPreferredPadding}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:dialogPreferredPadding
+        */
+        public static final int AppCompatTheme_dialogPreferredPadding = 43;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#dialogTheme}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:dialogTheme
+        */
+        public static final int AppCompatTheme_dialogTheme = 42;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#dividerHorizontal}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:dividerHorizontal
+        */
+        public static final int AppCompatTheme_dividerHorizontal = 56;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#dividerVertical}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:dividerVertical
+        */
+        public static final int AppCompatTheme_dividerVertical = 55;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#dropDownListViewStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:dropDownListViewStyle
+        */
+        public static final int AppCompatTheme_dropDownListViewStyle = 74;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#dropdownListPreferredItemHeight}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:dropdownListPreferredItemHeight
+        */
+        public static final int AppCompatTheme_dropdownListPreferredItemHeight = 46;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#editTextBackground}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:editTextBackground
+        */
+        public static final int AppCompatTheme_editTextBackground = 63;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#editTextColor}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name com.coreman2200.ringstrings.test:editTextColor
+        */
+        public static final int AppCompatTheme_editTextColor = 62;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#editTextStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:editTextStyle
+        */
+        public static final int AppCompatTheme_editTextStyle = 104;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#homeAsUpIndicator}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:homeAsUpIndicator
+        */
+        public static final int AppCompatTheme_homeAsUpIndicator = 48;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#imageButtonStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:imageButtonStyle
+        */
+        public static final int AppCompatTheme_imageButtonStyle = 64;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#listChoiceBackgroundIndicator}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:listChoiceBackgroundIndicator
+        */
+        public static final int AppCompatTheme_listChoiceBackgroundIndicator = 81;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#listDividerAlertDialog}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:listDividerAlertDialog
+        */
+        public static final int AppCompatTheme_listDividerAlertDialog = 44;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#listPopupWindowStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:listPopupWindowStyle
+        */
+        public static final int AppCompatTheme_listPopupWindowStyle = 75;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#listPreferredItemHeight}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:listPreferredItemHeight
+        */
+        public static final int AppCompatTheme_listPreferredItemHeight = 69;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#listPreferredItemHeightLarge}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:listPreferredItemHeightLarge
+        */
+        public static final int AppCompatTheme_listPreferredItemHeightLarge = 71;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#listPreferredItemHeightSmall}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:listPreferredItemHeightSmall
+        */
+        public static final int AppCompatTheme_listPreferredItemHeightSmall = 70;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#listPreferredItemPaddingLeft}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:listPreferredItemPaddingLeft
+        */
+        public static final int AppCompatTheme_listPreferredItemPaddingLeft = 72;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#listPreferredItemPaddingRight}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:listPreferredItemPaddingRight
+        */
+        public static final int AppCompatTheme_listPreferredItemPaddingRight = 73;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#panelBackground}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:panelBackground
+        */
+        public static final int AppCompatTheme_panelBackground = 78;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#panelMenuListTheme}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:panelMenuListTheme
+        */
+        public static final int AppCompatTheme_panelMenuListTheme = 80;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#panelMenuListWidth}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:panelMenuListWidth
+        */
+        public static final int AppCompatTheme_panelMenuListWidth = 79;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#popupMenuStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:popupMenuStyle
+        */
+        public static final int AppCompatTheme_popupMenuStyle = 60;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#popupWindowStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:popupWindowStyle
+        */
+        public static final int AppCompatTheme_popupWindowStyle = 61;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#radioButtonStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:radioButtonStyle
+        */
+        public static final int AppCompatTheme_radioButtonStyle = 105;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#ratingBarStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:ratingBarStyle
+        */
+        public static final int AppCompatTheme_ratingBarStyle = 106;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#ratingBarStyleIndicator}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:ratingBarStyleIndicator
+        */
+        public static final int AppCompatTheme_ratingBarStyleIndicator = 107;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#ratingBarStyleSmall}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:ratingBarStyleSmall
+        */
+        public static final int AppCompatTheme_ratingBarStyleSmall = 108;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#searchViewStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:searchViewStyle
+        */
+        public static final int AppCompatTheme_searchViewStyle = 68;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#seekBarStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:seekBarStyle
+        */
+        public static final int AppCompatTheme_seekBarStyle = 109;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#selectableItemBackground}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:selectableItemBackground
+        */
+        public static final int AppCompatTheme_selectableItemBackground = 52;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#selectableItemBackgroundBorderless}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:selectableItemBackgroundBorderless
+        */
+        public static final int AppCompatTheme_selectableItemBackgroundBorderless = 53;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#spinnerDropDownItemStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:spinnerDropDownItemStyle
+        */
+        public static final int AppCompatTheme_spinnerDropDownItemStyle = 47;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#spinnerStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:spinnerStyle
+        */
+        public static final int AppCompatTheme_spinnerStyle = 110;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#switchStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:switchStyle
+        */
+        public static final int AppCompatTheme_switchStyle = 111;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#textAppearanceLargePopupMenu}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:textAppearanceLargePopupMenu
+        */
+        public static final int AppCompatTheme_textAppearanceLargePopupMenu = 40;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#textAppearanceListItem}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:textAppearanceListItem
+        */
+        public static final int AppCompatTheme_textAppearanceListItem = 76;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#textAppearanceListItemSmall}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:textAppearanceListItemSmall
+        */
+        public static final int AppCompatTheme_textAppearanceListItemSmall = 77;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#textAppearanceSearchResultSubtitle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:textAppearanceSearchResultSubtitle
+        */
+        public static final int AppCompatTheme_textAppearanceSearchResultSubtitle = 66;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#textAppearanceSearchResultTitle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:textAppearanceSearchResultTitle
+        */
+        public static final int AppCompatTheme_textAppearanceSearchResultTitle = 65;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#textAppearanceSmallPopupMenu}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:textAppearanceSmallPopupMenu
+        */
+        public static final int AppCompatTheme_textAppearanceSmallPopupMenu = 41;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#textColorAlertDialogListItem}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name com.coreman2200.ringstrings.test:textColorAlertDialogListItem
+        */
+        public static final int AppCompatTheme_textColorAlertDialogListItem = 95;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#textColorSearchUrl}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name com.coreman2200.ringstrings.test:textColorSearchUrl
+        */
+        public static final int AppCompatTheme_textColorSearchUrl = 67;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#toolbarNavigationButtonStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:toolbarNavigationButtonStyle
+        */
+        public static final int AppCompatTheme_toolbarNavigationButtonStyle = 59;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#toolbarStyle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:toolbarStyle
+        */
+        public static final int AppCompatTheme_toolbarStyle = 58;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#windowActionBar}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:windowActionBar
+        */
+        public static final int AppCompatTheme_windowActionBar = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#windowActionBarOverlay}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:windowActionBarOverlay
+        */
+        public static final int AppCompatTheme_windowActionBarOverlay = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#windowActionModeOverlay}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:windowActionModeOverlay
+        */
+        public static final int AppCompatTheme_windowActionModeOverlay = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#windowFixedHeightMajor}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
+some parent container.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:windowFixedHeightMajor
+        */
+        public static final int AppCompatTheme_windowFixedHeightMajor = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#windowFixedHeightMinor}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
+some parent container.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:windowFixedHeightMinor
+        */
+        public static final int AppCompatTheme_windowFixedHeightMinor = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#windowFixedWidthMajor}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
+some parent container.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:windowFixedWidthMajor
+        */
+        public static final int AppCompatTheme_windowFixedWidthMajor = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#windowFixedWidthMinor}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
+some parent container.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:windowFixedWidthMinor
+        */
+        public static final int AppCompatTheme_windowFixedWidthMinor = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#windowMinWidthMajor}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
+some parent container.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:windowMinWidthMajor
+        */
+        public static final int AppCompatTheme_windowMinWidthMajor = 10;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#windowMinWidthMinor}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
+some parent container.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:windowMinWidthMinor
+        */
+        public static final int AppCompatTheme_windowMinWidthMinor = 11;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#windowNoTitle}
+          attribute's value can be found in the {@link #AppCompatTheme} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:windowNoTitle
+        */
+        public static final int AppCompatTheme_windowNoTitle = 3;
+        /** Attributes that can be used with a BottomSheetBehavior_Params.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #BottomSheetBehavior_Params_behavior_hideable com.coreman2200.ringstrings.test:behavior_hideable}</code></td><td></td></tr>
+           <tr><td><code>{@link #BottomSheetBehavior_Params_behavior_peekHeight com.coreman2200.ringstrings.test:behavior_peekHeight}</code></td><td></td></tr>
+           </table>
+           @see #BottomSheetBehavior_Params_behavior_hideable
+           @see #BottomSheetBehavior_Params_behavior_peekHeight
+         */
+        public static final int[] BottomSheetBehavior_Params = {
+            0x7f010097, 0x7f010098
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#behavior_hideable}
+          attribute's value can be found in the {@link #BottomSheetBehavior_Params} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:behavior_hideable
+        */
+        public static final int BottomSheetBehavior_Params_behavior_hideable = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#behavior_peekHeight}
+          attribute's value can be found in the {@link #BottomSheetBehavior_Params} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:behavior_peekHeight
+        */
+        public static final int BottomSheetBehavior_Params_behavior_peekHeight = 0;
         /** Attributes that can be used with a ButtonBarLayout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ButtonBarLayout_allowStacking com.coreman2200.ringstrings:allowStacking}</code></td><td></td></tr>
+           <tr><td><code>{@link #ButtonBarLayout_allowStacking com.coreman2200.ringstrings.test:allowStacking}</code></td><td></td></tr>
            </table>
            @see #ButtonBarLayout_allowStacking
          */
         public static final int[] ButtonBarLayout = {
-            0x7f010028
+            0x7f010099
         };
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#allowStacking}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#allowStacking}
           attribute's value can be found in the {@link #ButtonBarLayout} array.
 
 
@@ -3594,7 +5730,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:allowStacking
+          @attr name com.coreman2200.ringstrings.test:allowStacking
         */
         public static final int ButtonBarLayout_allowStacking = 0;
         /** Attributes that can be used with a CollapsingAppBarLayout_LayoutParams.
@@ -3603,17 +5739,17 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CollapsingAppBarLayout_LayoutParams_layout_collapseMode com.coreman2200.ringstrings:layout_collapseMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingAppBarLayout_LayoutParams_layout_collapseParallaxMultiplier com.coreman2200.ringstrings:layout_collapseParallaxMultiplier}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingAppBarLayout_LayoutParams_layout_collapseMode com.coreman2200.ringstrings.test:layout_collapseMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingAppBarLayout_LayoutParams_layout_collapseParallaxMultiplier com.coreman2200.ringstrings.test:layout_collapseParallaxMultiplier}</code></td><td></td></tr>
            </table>
            @see #CollapsingAppBarLayout_LayoutParams_layout_collapseMode
            @see #CollapsingAppBarLayout_LayoutParams_layout_collapseParallaxMultiplier
          */
         public static final int[] CollapsingAppBarLayout_LayoutParams = {
-            0x7f010029, 0x7f01002a
+            0x7f01009a, 0x7f01009b
         };
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#layout_collapseMode}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#layout_collapseMode}
           attribute's value can be found in the {@link #CollapsingAppBarLayout_LayoutParams} array.
 
 
@@ -3627,11 +5763,11 @@ containing a value of this type.
 <tr><td><code>pin</code></td><td>1</td><td></td></tr>
 <tr><td><code>parallax</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.coreman2200.ringstrings:layout_collapseMode
+          @attr name com.coreman2200.ringstrings.test:layout_collapseMode
         */
         public static final int CollapsingAppBarLayout_LayoutParams_layout_collapseMode = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#layout_collapseParallaxMultiplier}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#layout_collapseParallaxMultiplier}
           attribute's value can be found in the {@link #CollapsingAppBarLayout_LayoutParams} array.
 
 
@@ -3641,7 +5777,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:layout_collapseParallaxMultiplier
+          @attr name com.coreman2200.ringstrings.test:layout_collapseParallaxMultiplier
         */
         public static final int CollapsingAppBarLayout_LayoutParams_layout_collapseParallaxMultiplier = 1;
         /** Attributes that can be used with a CollapsingToolbarLayout.
@@ -3650,20 +5786,20 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_collapsedTitleGravity com.coreman2200.ringstrings:collapsedTitleGravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_collapsedTitleTextAppearance com.coreman2200.ringstrings:collapsedTitleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_contentScrim com.coreman2200.ringstrings:contentScrim}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleGravity com.coreman2200.ringstrings:expandedTitleGravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMargin com.coreman2200.ringstrings:expandedTitleMargin}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginBottom com.coreman2200.ringstrings:expandedTitleMarginBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginEnd com.coreman2200.ringstrings:expandedTitleMarginEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginStart com.coreman2200.ringstrings:expandedTitleMarginStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginTop com.coreman2200.ringstrings:expandedTitleMarginTop}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleTextAppearance com.coreman2200.ringstrings:expandedTitleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_statusBarScrim com.coreman2200.ringstrings:statusBarScrim}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_title com.coreman2200.ringstrings:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_titleEnabled com.coreman2200.ringstrings:titleEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_toolbarId com.coreman2200.ringstrings:toolbarId}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_collapsedTitleGravity com.coreman2200.ringstrings.test:collapsedTitleGravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_collapsedTitleTextAppearance com.coreman2200.ringstrings.test:collapsedTitleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_contentScrim com.coreman2200.ringstrings.test:contentScrim}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleGravity com.coreman2200.ringstrings.test:expandedTitleGravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMargin com.coreman2200.ringstrings.test:expandedTitleMargin}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginBottom com.coreman2200.ringstrings.test:expandedTitleMarginBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginEnd com.coreman2200.ringstrings.test:expandedTitleMarginEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginStart com.coreman2200.ringstrings.test:expandedTitleMarginStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginTop com.coreman2200.ringstrings.test:expandedTitleMarginTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleTextAppearance com.coreman2200.ringstrings.test:expandedTitleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_statusBarScrim com.coreman2200.ringstrings.test:statusBarScrim}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_title com.coreman2200.ringstrings.test:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_titleEnabled com.coreman2200.ringstrings.test:titleEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_toolbarId com.coreman2200.ringstrings.test:toolbarId}</code></td><td></td></tr>
            </table>
            @see #CollapsingToolbarLayout_collapsedTitleGravity
            @see #CollapsingToolbarLayout_collapsedTitleTextAppearance
@@ -3681,13 +5817,13 @@ containing a value of this type.
            @see #CollapsingToolbarLayout_toolbarId
          */
         public static final int[] CollapsingToolbarLayout = {
-            0x7f010003, 0x7f01002b, 0x7f01002c, 0x7f01002d,
-            0x7f01002e, 0x7f01002f, 0x7f010030, 0x7f010031,
-            0x7f010032, 0x7f010033, 0x7f010034, 0x7f010035,
-            0x7f010036, 0x7f010037
+            0x7f010003, 0x7f01009c, 0x7f01009d, 0x7f01009e,
+            0x7f01009f, 0x7f0100a0, 0x7f0100a1, 0x7f0100a2,
+            0x7f0100a3, 0x7f0100a4, 0x7f0100a5, 0x7f0100a6,
+            0x7f0100a7, 0x7f0100a8
         };
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#collapsedTitleGravity}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#collapsedTitleGravity}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -3708,21 +5844,21 @@ containing a value of this type.
 <tr><td><code>start</code></td><td>0x00800003</td><td></td></tr>
 <tr><td><code>end</code></td><td>0x00800005</td><td></td></tr>
 </table>
-          @attr name com.coreman2200.ringstrings:collapsedTitleGravity
+          @attr name com.coreman2200.ringstrings.test:collapsedTitleGravity
         */
         public static final int CollapsingToolbarLayout_collapsedTitleGravity = 11;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#collapsedTitleTextAppearance}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#collapsedTitleTextAppearance}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:collapsedTitleTextAppearance
+          @attr name com.coreman2200.ringstrings.test:collapsedTitleTextAppearance
         */
         public static final int CollapsingToolbarLayout_collapsedTitleTextAppearance = 7;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#contentScrim}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#contentScrim}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -3733,11 +5869,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:contentScrim
+          @attr name com.coreman2200.ringstrings.test:contentScrim
         */
         public static final int CollapsingToolbarLayout_contentScrim = 8;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#expandedTitleGravity}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#expandedTitleGravity}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -3758,11 +5894,11 @@ containing a value of this type.
 <tr><td><code>start</code></td><td>0x00800003</td><td></td></tr>
 <tr><td><code>end</code></td><td>0x00800005</td><td></td></tr>
 </table>
-          @attr name com.coreman2200.ringstrings:expandedTitleGravity
+          @attr name com.coreman2200.ringstrings.test:expandedTitleGravity
         */
         public static final int CollapsingToolbarLayout_expandedTitleGravity = 12;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#expandedTitleMargin}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#expandedTitleMargin}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -3774,11 +5910,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:expandedTitleMargin
+          @attr name com.coreman2200.ringstrings.test:expandedTitleMargin
         */
         public static final int CollapsingToolbarLayout_expandedTitleMargin = 1;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#expandedTitleMarginBottom}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#expandedTitleMarginBottom}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -3790,11 +5926,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:expandedTitleMarginBottom
+          @attr name com.coreman2200.ringstrings.test:expandedTitleMarginBottom
         */
         public static final int CollapsingToolbarLayout_expandedTitleMarginBottom = 5;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#expandedTitleMarginEnd}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#expandedTitleMarginEnd}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -3806,11 +5942,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:expandedTitleMarginEnd
+          @attr name com.coreman2200.ringstrings.test:expandedTitleMarginEnd
         */
         public static final int CollapsingToolbarLayout_expandedTitleMarginEnd = 4;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#expandedTitleMarginStart}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#expandedTitleMarginStart}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -3822,11 +5958,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:expandedTitleMarginStart
+          @attr name com.coreman2200.ringstrings.test:expandedTitleMarginStart
         */
         public static final int CollapsingToolbarLayout_expandedTitleMarginStart = 2;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#expandedTitleMarginTop}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#expandedTitleMarginTop}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -3838,21 +5974,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:expandedTitleMarginTop
+          @attr name com.coreman2200.ringstrings.test:expandedTitleMarginTop
         */
         public static final int CollapsingToolbarLayout_expandedTitleMarginTop = 3;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#expandedTitleTextAppearance}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#expandedTitleTextAppearance}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:expandedTitleTextAppearance
+          @attr name com.coreman2200.ringstrings.test:expandedTitleTextAppearance
         */
         public static final int CollapsingToolbarLayout_expandedTitleTextAppearance = 6;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#statusBarScrim}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#statusBarScrim}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -3863,11 +5999,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:statusBarScrim
+          @attr name com.coreman2200.ringstrings.test:statusBarScrim
         */
         public static final int CollapsingToolbarLayout_statusBarScrim = 9;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#title}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#title}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -3877,11 +6013,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:title
+          @attr name com.coreman2200.ringstrings.test:title
         */
         public static final int CollapsingToolbarLayout_title = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#titleEnabled}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#titleEnabled}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -3891,17 +6027,17 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:titleEnabled
+          @attr name com.coreman2200.ringstrings.test:titleEnabled
         */
         public static final int CollapsingToolbarLayout_titleEnabled = 13;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#toolbarId}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#toolbarId}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:toolbarId
+          @attr name com.coreman2200.ringstrings.test:toolbarId
         */
         public static final int CollapsingToolbarLayout_toolbarId = 10;
         /** Attributes that can be used with a CompoundButton.
@@ -3911,15 +6047,15 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #CompoundButton_android_button android:button}</code></td><td></td></tr>
-           <tr><td><code>{@link #CompoundButton_buttonTint com.coreman2200.ringstrings:buttonTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #CompoundButton_buttonTintMode com.coreman2200.ringstrings:buttonTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #CompoundButton_buttonTint com.coreman2200.ringstrings.test:buttonTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #CompoundButton_buttonTintMode com.coreman2200.ringstrings.test:buttonTintMode}</code></td><td></td></tr>
            </table>
            @see #CompoundButton_android_button
            @see #CompoundButton_buttonTint
            @see #CompoundButton_buttonTintMode
          */
         public static final int[] CompoundButton = {
-            0x01010107, 0x7f010038, 0x7f010039
+            0x01010107, 0x7f0100a9, 0x7f0100aa
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#button}
@@ -3928,7 +6064,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int CompoundButton_android_button = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#buttonTint}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#buttonTint}
           attribute's value can be found in the {@link #CompoundButton} array.
 
 
@@ -3939,11 +6075,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:buttonTint
+          @attr name com.coreman2200.ringstrings.test:buttonTint
         */
         public static final int CompoundButton_buttonTint = 1;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#buttonTintMode}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#buttonTintMode}
           attribute's value can be found in the {@link #CompoundButton} array.
 
 
@@ -3959,7 +6095,7 @@ containing a value of this type.
 <tr><td><code>multiply</code></td><td>14</td><td></td></tr>
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
-          @attr name com.coreman2200.ringstrings:buttonTintMode
+          @attr name com.coreman2200.ringstrings.test:buttonTintMode
         */
         public static final int CompoundButton_buttonTintMode = 2;
         /** Attributes that can be used with a CoordinatorLayout.
@@ -3968,33 +6104,33 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CoordinatorLayout_keylines com.coreman2200.ringstrings:keylines}</code></td><td></td></tr>
-           <tr><td><code>{@link #CoordinatorLayout_statusBarBackground com.coreman2200.ringstrings:statusBarBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_keylines com.coreman2200.ringstrings.test:keylines}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_statusBarBackground com.coreman2200.ringstrings.test:statusBarBackground}</code></td><td></td></tr>
            </table>
            @see #CoordinatorLayout_keylines
            @see #CoordinatorLayout_statusBarBackground
          */
         public static final int[] CoordinatorLayout = {
-            0x7f01003a, 0x7f01003b
+            0x7f0100ab, 0x7f0100ac
         };
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#keylines}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#keylines}
           attribute's value can be found in the {@link #CoordinatorLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:keylines
+          @attr name com.coreman2200.ringstrings.test:keylines
         */
         public static final int CoordinatorLayout_keylines = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#statusBarBackground}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#statusBarBackground}
           attribute's value can be found in the {@link #CoordinatorLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:statusBarBackground
+          @attr name com.coreman2200.ringstrings.test:statusBarBackground
         */
         public static final int CoordinatorLayout_statusBarBackground = 1;
         /** Attributes that can be used with a CoordinatorLayout_LayoutParams.
@@ -4004,10 +6140,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #CoordinatorLayout_LayoutParams_android_layout_gravity android:layout_gravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_anchor com.coreman2200.ringstrings:layout_anchor}</code></td><td></td></tr>
-           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_anchorGravity com.coreman2200.ringstrings:layout_anchorGravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_behavior com.coreman2200.ringstrings:layout_behavior}</code></td><td></td></tr>
-           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_keyline com.coreman2200.ringstrings:layout_keyline}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_anchor com.coreman2200.ringstrings.test:layout_anchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_anchorGravity com.coreman2200.ringstrings.test:layout_anchorGravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_behavior com.coreman2200.ringstrings.test:layout_behavior}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_keyline com.coreman2200.ringstrings.test:layout_keyline}</code></td><td></td></tr>
            </table>
            @see #CoordinatorLayout_LayoutParams_android_layout_gravity
            @see #CoordinatorLayout_LayoutParams_layout_anchor
@@ -4016,8 +6152,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            @see #CoordinatorLayout_LayoutParams_layout_keyline
          */
         public static final int[] CoordinatorLayout_LayoutParams = {
-            0x010100b3, 0x7f01003c, 0x7f01003d, 0x7f01003e,
-            0x7f01003f
+            0x010100b3, 0x7f0100ad, 0x7f0100ae, 0x7f0100af,
+            0x7f0100b0
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
@@ -4026,17 +6162,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int CoordinatorLayout_LayoutParams_android_layout_gravity = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#layout_anchor}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#layout_anchor}
           attribute's value can be found in the {@link #CoordinatorLayout_LayoutParams} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:layout_anchor
+          @attr name com.coreman2200.ringstrings.test:layout_anchor
         */
         public static final int CoordinatorLayout_LayoutParams_layout_anchor = 2;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#layout_anchorGravity}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#layout_anchorGravity}
           attribute's value can be found in the {@link #CoordinatorLayout_LayoutParams} array.
 
 
@@ -4061,11 +6197,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>start</code></td><td>0x00800003</td><td></td></tr>
 <tr><td><code>end</code></td><td>0x00800005</td><td></td></tr>
 </table>
-          @attr name com.coreman2200.ringstrings:layout_anchorGravity
+          @attr name com.coreman2200.ringstrings.test:layout_anchorGravity
         */
         public static final int CoordinatorLayout_LayoutParams_layout_anchorGravity = 4;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#layout_behavior}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#layout_behavior}
           attribute's value can be found in the {@link #CoordinatorLayout_LayoutParams} array.
 
 
@@ -4075,11 +6211,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:layout_behavior
+          @attr name com.coreman2200.ringstrings.test:layout_behavior
         */
         public static final int CoordinatorLayout_LayoutParams_layout_behavior = 1;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#layout_keyline}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#layout_keyline}
           attribute's value can be found in the {@link #CoordinatorLayout_LayoutParams} array.
 
 
@@ -4089,23 +6225,75 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:layout_keyline
+          @attr name com.coreman2200.ringstrings.test:layout_keyline
         */
         public static final int CoordinatorLayout_LayoutParams_layout_keyline = 3;
+        /** Attributes that can be used with a DesignTheme.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #DesignTheme_bottomSheetDialogTheme com.coreman2200.ringstrings.test:bottomSheetDialogTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #DesignTheme_bottomSheetStyle com.coreman2200.ringstrings.test:bottomSheetStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #DesignTheme_textColorError com.coreman2200.ringstrings.test:textColorError}</code></td><td></td></tr>
+           </table>
+           @see #DesignTheme_bottomSheetDialogTheme
+           @see #DesignTheme_bottomSheetStyle
+           @see #DesignTheme_textColorError
+         */
+        public static final int[] DesignTheme = {
+            0x7f0100b1, 0x7f0100b2, 0x7f0100b3
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#bottomSheetDialogTheme}
+          attribute's value can be found in the {@link #DesignTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:bottomSheetDialogTheme
+        */
+        public static final int DesignTheme_bottomSheetDialogTheme = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#bottomSheetStyle}
+          attribute's value can be found in the {@link #DesignTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.coreman2200.ringstrings.test:bottomSheetStyle
+        */
+        public static final int DesignTheme_bottomSheetStyle = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#textColorError}
+          attribute's value can be found in the {@link #DesignTheme} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:textColorError
+        */
+        public static final int DesignTheme_textColorError = 2;
         /** Attributes that can be used with a DrawerArrowToggle.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength com.coreman2200.ringstrings:arrowHeadLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength com.coreman2200.ringstrings:arrowShaftLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_barLength com.coreman2200.ringstrings:barLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_color com.coreman2200.ringstrings:color}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.coreman2200.ringstrings:drawableSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.coreman2200.ringstrings:gapBetweenBars}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_spinBars com.coreman2200.ringstrings:spinBars}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_thickness com.coreman2200.ringstrings:thickness}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength com.coreman2200.ringstrings.test:arrowHeadLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength com.coreman2200.ringstrings.test:arrowShaftLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_barLength com.coreman2200.ringstrings.test:barLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_color com.coreman2200.ringstrings.test:color}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.coreman2200.ringstrings.test:drawableSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.coreman2200.ringstrings.test:gapBetweenBars}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_spinBars com.coreman2200.ringstrings.test:spinBars}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_thickness com.coreman2200.ringstrings.test:thickness}</code></td><td></td></tr>
            </table>
            @see #DrawerArrowToggle_arrowHeadLength
            @see #DrawerArrowToggle_arrowShaftLength
@@ -4117,11 +6305,11 @@ containing a value of this type.
            @see #DrawerArrowToggle_thickness
          */
         public static final int[] DrawerArrowToggle = {
-            0x7f010040, 0x7f010041, 0x7f010042, 0x7f010043,
-            0x7f010044, 0x7f010045, 0x7f010046, 0x7f010047
+            0x7f0100b4, 0x7f0100b5, 0x7f0100b6, 0x7f0100b7,
+            0x7f0100b8, 0x7f0100b9, 0x7f0100ba, 0x7f0100bb
         };
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#arrowHeadLength}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#arrowHeadLength}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -4133,11 +6321,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:arrowHeadLength
+          @attr name com.coreman2200.ringstrings.test:arrowHeadLength
         */
         public static final int DrawerArrowToggle_arrowHeadLength = 4;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#arrowShaftLength}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#arrowShaftLength}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -4149,11 +6337,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:arrowShaftLength
+          @attr name com.coreman2200.ringstrings.test:arrowShaftLength
         */
         public static final int DrawerArrowToggle_arrowShaftLength = 5;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#barLength}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#barLength}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -4165,11 +6353,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:barLength
+          @attr name com.coreman2200.ringstrings.test:barLength
         */
         public static final int DrawerArrowToggle_barLength = 6;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#color}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#color}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -4180,11 +6368,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:color
+          @attr name com.coreman2200.ringstrings.test:color
         */
         public static final int DrawerArrowToggle_color = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#drawableSize}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#drawableSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -4196,11 +6384,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:drawableSize
+          @attr name com.coreman2200.ringstrings.test:drawableSize
         */
         public static final int DrawerArrowToggle_drawableSize = 2;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#gapBetweenBars}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#gapBetweenBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -4212,11 +6400,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:gapBetweenBars
+          @attr name com.coreman2200.ringstrings.test:gapBetweenBars
         */
         public static final int DrawerArrowToggle_gapBetweenBars = 3;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#spinBars}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#spinBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -4226,11 +6414,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:spinBars
+          @attr name com.coreman2200.ringstrings.test:spinBars
         */
         public static final int DrawerArrowToggle_spinBars = 1;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#thickness}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#thickness}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -4242,7 +6430,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:thickness
+          @attr name com.coreman2200.ringstrings.test:thickness
         */
         public static final int DrawerArrowToggle_thickness = 7;
         /** Attributes that can be used with a FloatingActionButton.
@@ -4251,13 +6439,14 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #FloatingActionButton_backgroundTint com.coreman2200.ringstrings:backgroundTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_backgroundTintMode com.coreman2200.ringstrings:backgroundTintMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_borderWidth com.coreman2200.ringstrings:borderWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_elevation com.coreman2200.ringstrings:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fabSize com.coreman2200.ringstrings:fabSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_pressedTranslationZ com.coreman2200.ringstrings:pressedTranslationZ}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_rippleColor com.coreman2200.ringstrings:rippleColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_backgroundTint com.coreman2200.ringstrings.test:backgroundTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_backgroundTintMode com.coreman2200.ringstrings.test:backgroundTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_borderWidth com.coreman2200.ringstrings.test:borderWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_elevation com.coreman2200.ringstrings.test:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fabSize com.coreman2200.ringstrings.test:fabSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_pressedTranslationZ com.coreman2200.ringstrings.test:pressedTranslationZ}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_rippleColor com.coreman2200.ringstrings.test:rippleColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_useCompatPadding com.coreman2200.ringstrings.test:useCompatPadding}</code></td><td></td></tr>
            </table>
            @see #FloatingActionButton_backgroundTint
            @see #FloatingActionButton_backgroundTintMode
@@ -4266,13 +6455,14 @@ containing a value of this type.
            @see #FloatingActionButton_fabSize
            @see #FloatingActionButton_pressedTranslationZ
            @see #FloatingActionButton_rippleColor
+           @see #FloatingActionButton_useCompatPadding
          */
         public static final int[] FloatingActionButton = {
-            0x7f01001a, 0x7f010048, 0x7f010049, 0x7f01004a,
-            0x7f01004b, 0x7f01010e, 0x7f01010f
+            0x7f01001a, 0x7f0100bc, 0x7f0100bd, 0x7f0100be,
+            0x7f0100bf, 0x7f0100c0, 0x7f010118, 0x7f010119
         };
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#backgroundTint}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#backgroundTint}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -4283,11 +6473,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:backgroundTint
+          @attr name com.coreman2200.ringstrings.test:backgroundTint
         */
-        public static final int FloatingActionButton_backgroundTint = 5;
+        public static final int FloatingActionButton_backgroundTint = 6;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#backgroundTintMode}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#backgroundTintMode}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -4303,11 +6493,11 @@ containing a value of this type.
 <tr><td><code>multiply</code></td><td>14</td><td></td></tr>
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
-          @attr name com.coreman2200.ringstrings:backgroundTintMode
+          @attr name com.coreman2200.ringstrings.test:backgroundTintMode
         */
-        public static final int FloatingActionButton_backgroundTintMode = 6;
+        public static final int FloatingActionButton_backgroundTintMode = 7;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#borderWidth}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#borderWidth}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -4319,11 +6509,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:borderWidth
+          @attr name com.coreman2200.ringstrings.test:borderWidth
         */
         public static final int FloatingActionButton_borderWidth = 4;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#elevation}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#elevation}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -4335,11 +6525,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:elevation
+          @attr name com.coreman2200.ringstrings.test:elevation
         */
         public static final int FloatingActionButton_elevation = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#fabSize}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#fabSize}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -4352,11 +6542,11 @@ containing a value of this type.
 <tr><td><code>normal</code></td><td>0</td><td></td></tr>
 <tr><td><code>mini</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.coreman2200.ringstrings:fabSize
+          @attr name com.coreman2200.ringstrings.test:fabSize
         */
         public static final int FloatingActionButton_fabSize = 2;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#pressedTranslationZ}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#pressedTranslationZ}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -4368,11 +6558,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:pressedTranslationZ
+          @attr name com.coreman2200.ringstrings.test:pressedTranslationZ
         */
         public static final int FloatingActionButton_pressedTranslationZ = 3;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#rippleColor}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#rippleColor}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -4383,9 +6573,23 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:rippleColor
+          @attr name com.coreman2200.ringstrings.test:rippleColor
         */
         public static final int FloatingActionButton_rippleColor = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#useCompatPadding}
+          attribute's value can be found in the {@link #FloatingActionButton} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:useCompatPadding
+        */
+        public static final int FloatingActionButton_useCompatPadding = 5;
         /** Attributes that can be used with a ForegroundLinearLayout.
            <p>Includes the following attributes:</p>
            <table>
@@ -4394,14 +6598,14 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #ForegroundLinearLayout_android_foreground android:foreground}</code></td><td></td></tr>
            <tr><td><code>{@link #ForegroundLinearLayout_android_foregroundGravity android:foregroundGravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #ForegroundLinearLayout_foregroundInsidePadding com.coreman2200.ringstrings:foregroundInsidePadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ForegroundLinearLayout_foregroundInsidePadding com.coreman2200.ringstrings.test:foregroundInsidePadding}</code></td><td></td></tr>
            </table>
            @see #ForegroundLinearLayout_android_foreground
            @see #ForegroundLinearLayout_android_foregroundGravity
            @see #ForegroundLinearLayout_foregroundInsidePadding
          */
         public static final int[] ForegroundLinearLayout = {
-            0x01010109, 0x01010200, 0x7f01004c
+            0x01010109, 0x01010200, 0x7f0100c1
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#foreground}
@@ -4416,7 +6620,7 @@ containing a value of this type.
         */
         public static final int ForegroundLinearLayout_android_foregroundGravity = 1;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#foregroundInsidePadding}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#foregroundInsidePadding}
           attribute's value can be found in the {@link #ForegroundLinearLayout} array.
 
 
@@ -4426,7 +6630,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:foregroundInsidePadding
+          @attr name com.coreman2200.ringstrings.test:foregroundInsidePadding
         */
         public static final int ForegroundLinearLayout_foregroundInsidePadding = 2;
         /** Attributes that can be used with a LinearLayoutCompat.
@@ -4440,10 +6644,10 @@ containing a value of this type.
            <tr><td><code>{@link #LinearLayoutCompat_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_orientation android:orientation}</code></td><td></td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_weightSum android:weightSum}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_divider com.coreman2200.ringstrings:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.coreman2200.ringstrings:dividerPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.coreman2200.ringstrings:measureWithLargestChild}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_showDividers com.coreman2200.ringstrings:showDividers}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_divider com.coreman2200.ringstrings.test:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.coreman2200.ringstrings.test:dividerPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.coreman2200.ringstrings.test:measureWithLargestChild}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_showDividers com.coreman2200.ringstrings.test:showDividers}</code></td><td></td></tr>
            </table>
            @see #LinearLayoutCompat_android_baselineAligned
            @see #LinearLayoutCompat_android_baselineAlignedChildIndex
@@ -4457,8 +6661,8 @@ containing a value of this type.
          */
         public static final int[] LinearLayoutCompat = {
             0x010100af, 0x010100c4, 0x01010126, 0x01010127,
-            0x01010128, 0x7f01000b, 0x7f01004d, 0x7f01004e,
-            0x7f01004f
+            0x01010128, 0x7f01000b, 0x7f0100c2, 0x7f0100c3,
+            0x7f0100c4
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#baselineAligned}
@@ -4491,17 +6695,17 @@ containing a value of this type.
         */
         public static final int LinearLayoutCompat_android_weightSum = 4;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#divider}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#divider}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:divider
+          @attr name com.coreman2200.ringstrings.test:divider
         */
         public static final int LinearLayoutCompat_divider = 5;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#dividerPadding}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#dividerPadding}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -4513,11 +6717,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:dividerPadding
+          @attr name com.coreman2200.ringstrings.test:dividerPadding
         */
         public static final int LinearLayoutCompat_dividerPadding = 8;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#measureWithLargestChild}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#measureWithLargestChild}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -4527,11 +6731,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:measureWithLargestChild
+          @attr name com.coreman2200.ringstrings.test:measureWithLargestChild
         */
         public static final int LinearLayoutCompat_measureWithLargestChild = 6;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#showDividers}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#showDividers}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -4546,7 +6750,7 @@ containing a value of this type.
 <tr><td><code>middle</code></td><td>2</td><td></td></tr>
 <tr><td><code>end</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name com.coreman2200.ringstrings:showDividers
+          @attr name com.coreman2200.ringstrings.test:showDividers
         */
         public static final int LinearLayoutCompat_showDividers = 7;
         /** Attributes that can be used with a LinearLayoutCompat_Layout.
@@ -4685,9 +6889,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MenuItem_actionLayout com.coreman2200.ringstrings:actionLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionProviderClass com.coreman2200.ringstrings:actionProviderClass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionViewClass com.coreman2200.ringstrings:actionViewClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionLayout com.coreman2200.ringstrings.test:actionLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionProviderClass com.coreman2200.ringstrings.test:actionProviderClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionViewClass com.coreman2200.ringstrings.test:actionViewClass}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_alphabeticShortcut android:alphabeticShortcut}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checked android:checked}</code></td><td></td></tr>
@@ -4701,7 +6905,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuItem_android_title android:title}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_titleCondensed android:titleCondensed}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_visible android:visible}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_showAsAction com.coreman2200.ringstrings:showAsAction}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_showAsAction com.coreman2200.ringstrings.test:showAsAction}</code></td><td></td></tr>
            </table>
            @see #MenuItem_actionLayout
            @see #MenuItem_actionProviderClass
@@ -4725,21 +6929,21 @@ containing a value of this type.
             0x01010002, 0x0101000e, 0x010100d0, 0x01010106,
             0x01010194, 0x010101de, 0x010101df, 0x010101e1,
             0x010101e2, 0x010101e3, 0x010101e4, 0x010101e5,
-            0x0101026f, 0x7f010050, 0x7f010051, 0x7f010052,
-            0x7f010053
+            0x0101026f, 0x7f0100c5, 0x7f0100c6, 0x7f0100c7,
+            0x7f0100c8
         };
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionLayout}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionLayout}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionLayout
+          @attr name com.coreman2200.ringstrings.test:actionLayout
         */
         public static final int MenuItem_actionLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionProviderClass}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionProviderClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -4749,11 +6953,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:actionProviderClass
+          @attr name com.coreman2200.ringstrings.test:actionProviderClass
         */
         public static final int MenuItem_actionProviderClass = 16;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionViewClass}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#actionViewClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -4763,7 +6967,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:actionViewClass
+          @attr name com.coreman2200.ringstrings.test:actionViewClass
         */
         public static final int MenuItem_actionViewClass = 15;
         /**
@@ -4845,7 +7049,7 @@ containing a value of this type.
         */
         public static final int MenuItem_android_visible = 4;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#showAsAction}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#showAsAction}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -4861,7 +7065,7 @@ containing a value of this type.
 <tr><td><code>withText</code></td><td>4</td><td></td></tr>
 <tr><td><code>collapseActionView</code></td><td>8</td><td></td></tr>
 </table>
-          @attr name com.coreman2200.ringstrings:showAsAction
+          @attr name com.coreman2200.ringstrings.test:showAsAction
         */
         public static final int MenuItem_showAsAction = 13;
         /** Attributes that can be used with a MenuView.
@@ -4877,7 +7081,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuView_android_itemTextAppearance android:itemTextAppearance}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuView_android_verticalDivider android:verticalDivider}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuView_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuView_preserveIconSpacing com.coreman2200.ringstrings:preserveIconSpacing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuView_preserveIconSpacing com.coreman2200.ringstrings.test:preserveIconSpacing}</code></td><td></td></tr>
            </table>
            @see #MenuView_android_headerBackground
            @see #MenuView_android_horizontalDivider
@@ -4890,7 +7094,7 @@ containing a value of this type.
          */
         public static final int[] MenuView = {
             0x010100ae, 0x0101012c, 0x0101012d, 0x0101012e,
-            0x0101012f, 0x01010130, 0x01010131, 0x7f010054
+            0x0101012f, 0x01010130, 0x01010131, 0x7f0100c9
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#headerBackground}
@@ -4935,7 +7139,7 @@ containing a value of this type.
         */
         public static final int MenuView_android_windowAnimationStyle = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#preserveIconSpacing}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#preserveIconSpacing}
           attribute's value can be found in the {@link #MenuView} array.
 
 
@@ -4945,7 +7149,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:preserveIconSpacing
+          @attr name com.coreman2200.ringstrings.test:preserveIconSpacing
         */
         public static final int MenuView_preserveIconSpacing = 7;
         /** Attributes that can be used with a NavigationView.
@@ -4957,13 +7161,13 @@ containing a value of this type.
            <tr><td><code>{@link #NavigationView_android_background android:background}</code></td><td></td></tr>
            <tr><td><code>{@link #NavigationView_android_fitsSystemWindows android:fitsSystemWindows}</code></td><td></td></tr>
            <tr><td><code>{@link #NavigationView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_elevation com.coreman2200.ringstrings:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_headerLayout com.coreman2200.ringstrings:headerLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_itemBackground com.coreman2200.ringstrings:itemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_itemIconTint com.coreman2200.ringstrings:itemIconTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_itemTextAppearance com.coreman2200.ringstrings:itemTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_itemTextColor com.coreman2200.ringstrings:itemTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_menu com.coreman2200.ringstrings:menu}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_elevation com.coreman2200.ringstrings.test:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_headerLayout com.coreman2200.ringstrings.test:headerLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_itemBackground com.coreman2200.ringstrings.test:itemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_itemIconTint com.coreman2200.ringstrings.test:itemIconTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_itemTextAppearance com.coreman2200.ringstrings.test:itemTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_itemTextColor com.coreman2200.ringstrings.test:itemTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_menu com.coreman2200.ringstrings.test:menu}</code></td><td></td></tr>
            </table>
            @see #NavigationView_android_background
            @see #NavigationView_android_fitsSystemWindows
@@ -4978,8 +7182,8 @@ containing a value of this type.
          */
         public static final int[] NavigationView = {
             0x010100d4, 0x010100dd, 0x0101011f, 0x7f01001a,
-            0x7f010055, 0x7f010056, 0x7f010057, 0x7f010058,
-            0x7f010059, 0x7f01005a
+            0x7f0100ca, 0x7f0100cb, 0x7f0100cc, 0x7f0100cd,
+            0x7f0100ce, 0x7f0100cf
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#background}
@@ -5000,7 +7204,7 @@ containing a value of this type.
         */
         public static final int NavigationView_android_maxWidth = 2;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#elevation}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#elevation}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
@@ -5012,31 +7216,31 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:elevation
+          @attr name com.coreman2200.ringstrings.test:elevation
         */
         public static final int NavigationView_elevation = 3;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#headerLayout}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#headerLayout}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:headerLayout
+          @attr name com.coreman2200.ringstrings.test:headerLayout
         */
         public static final int NavigationView_headerLayout = 9;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#itemBackground}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#itemBackground}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:itemBackground
+          @attr name com.coreman2200.ringstrings.test:itemBackground
         */
         public static final int NavigationView_itemBackground = 7;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#itemIconTint}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#itemIconTint}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
@@ -5047,21 +7251,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:itemIconTint
+          @attr name com.coreman2200.ringstrings.test:itemIconTint
         */
         public static final int NavigationView_itemIconTint = 5;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#itemTextAppearance}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#itemTextAppearance}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:itemTextAppearance
+          @attr name com.coreman2200.ringstrings.test:itemTextAppearance
         */
         public static final int NavigationView_itemTextAppearance = 8;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#itemTextColor}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#itemTextColor}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
@@ -5072,17 +7276,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:itemTextColor
+          @attr name com.coreman2200.ringstrings.test:itemTextColor
         */
         public static final int NavigationView_itemTextColor = 6;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#menu}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#menu}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:menu
+          @attr name com.coreman2200.ringstrings.test:menu
         */
         public static final int NavigationView_menu = 4;
         /** Attributes that can be used with a PopupWindow.
@@ -5092,13 +7296,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #PopupWindow_android_popupBackground android:popupBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #PopupWindow_overlapAnchor com.coreman2200.ringstrings:overlapAnchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PopupWindow_overlapAnchor com.coreman2200.ringstrings.test:overlapAnchor}</code></td><td></td></tr>
            </table>
            @see #PopupWindow_android_popupBackground
            @see #PopupWindow_overlapAnchor
          */
         public static final int[] PopupWindow = {
-            0x01010176, 0x7f01005b
+            0x01010176, 0x7f0100d0
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#popupBackground}
@@ -5107,7 +7311,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int PopupWindow_android_popupBackground = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#overlapAnchor}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#overlapAnchor}
           attribute's value can be found in the {@link #PopupWindow} array.
 
 
@@ -5117,7 +7321,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:overlapAnchor
+          @attr name com.coreman2200.ringstrings.test:overlapAnchor
         */
         public static final int PopupWindow_overlapAnchor = 1;
         /** Attributes that can be used with a PopupWindowBackgroundState.
@@ -5126,15 +7330,15 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.coreman2200.ringstrings:state_above_anchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.coreman2200.ringstrings.test:state_above_anchor}</code></td><td></td></tr>
            </table>
            @see #PopupWindowBackgroundState_state_above_anchor
          */
         public static final int[] PopupWindowBackgroundState = {
-            0x7f01005c
+            0x7f0100d1
         };
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#state_above_anchor}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#state_above_anchor}
           attribute's value can be found in the {@link #PopupWindowBackgroundState} array.
 
 
@@ -5144,7 +7348,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:state_above_anchor
+          @attr name com.coreman2200.ringstrings.test:state_above_anchor
         */
         public static final int PopupWindowBackgroundState_state_above_anchor = 0;
         /** Attributes that can be used with a RecyclerView.
@@ -5154,10 +7358,10 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #RecyclerView_android_orientation android:orientation}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_layoutManager com.coreman2200.ringstrings:layoutManager}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_reverseLayout com.coreman2200.ringstrings:reverseLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_spanCount com.coreman2200.ringstrings:spanCount}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_stackFromEnd com.coreman2200.ringstrings:stackFromEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_layoutManager com.coreman2200.ringstrings.test:layoutManager}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_reverseLayout com.coreman2200.ringstrings.test:reverseLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_spanCount com.coreman2200.ringstrings.test:spanCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_stackFromEnd com.coreman2200.ringstrings.test:stackFromEnd}</code></td><td></td></tr>
            </table>
            @see #RecyclerView_android_orientation
            @see #RecyclerView_layoutManager
@@ -5166,8 +7370,8 @@ containing a value of this type.
            @see #RecyclerView_stackFromEnd
          */
         public static final int[] RecyclerView = {
-            0x010100c4, 0x7f01005d, 0x7f01005e, 0x7f01005f,
-            0x7f010060
+            0x010100c4, 0x7f0100d2, 0x7f0100d3, 0x7f0100d4,
+            0x7f0100d5
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#orientation}
@@ -5176,7 +7380,7 @@ containing a value of this type.
         */
         public static final int RecyclerView_android_orientation = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#layoutManager}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#layoutManager}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
@@ -5186,11 +7390,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:layoutManager
+          @attr name com.coreman2200.ringstrings.test:layoutManager
         */
         public static final int RecyclerView_layoutManager = 1;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#reverseLayout}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#reverseLayout}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
@@ -5200,11 +7404,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:reverseLayout
+          @attr name com.coreman2200.ringstrings.test:reverseLayout
         */
         public static final int RecyclerView_reverseLayout = 3;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#spanCount}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#spanCount}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
@@ -5214,11 +7418,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:spanCount
+          @attr name com.coreman2200.ringstrings.test:spanCount
         */
         public static final int RecyclerView_spanCount = 2;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#stackFromEnd}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#stackFromEnd}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
@@ -5228,7 +7432,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:stackFromEnd
+          @attr name com.coreman2200.ringstrings.test:stackFromEnd
         */
         public static final int RecyclerView_stackFromEnd = 4;
         /** Attributes that can be used with a ScrimInsetsFrameLayout.
@@ -5237,15 +7441,15 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ScrimInsetsFrameLayout_insetForeground com.coreman2200.ringstrings:insetForeground}</code></td><td></td></tr>
+           <tr><td><code>{@link #ScrimInsetsFrameLayout_insetForeground com.coreman2200.ringstrings.test:insetForeground}</code></td><td></td></tr>
            </table>
            @see #ScrimInsetsFrameLayout_insetForeground
          */
         public static final int[] ScrimInsetsFrameLayout = {
-            0x7f010061
+            0x7f0100d6
         };
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#insetForeground}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#insetForeground}
           attribute's value can be found in the {@link #ScrimInsetsFrameLayout} array.
 
 
@@ -5253,7 +7457,7 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.coreman2200.ringstrings:insetForeground
+          @attr name com.coreman2200.ringstrings.test:insetForeground
         */
         public static final int ScrimInsetsFrameLayout_insetForeground = 0;
         /** Attributes that can be used with a ScrollingViewBehavior_Params.
@@ -5262,15 +7466,15 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ScrollingViewBehavior_Params_behavior_overlapTop com.coreman2200.ringstrings:behavior_overlapTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #ScrollingViewBehavior_Params_behavior_overlapTop com.coreman2200.ringstrings.test:behavior_overlapTop}</code></td><td></td></tr>
            </table>
            @see #ScrollingViewBehavior_Params_behavior_overlapTop
          */
         public static final int[] ScrollingViewBehavior_Params = {
-            0x7f010062
+            0x7f0100d7
         };
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#behavior_overlapTop}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#behavior_overlapTop}
           attribute's value can be found in the {@link #ScrollingViewBehavior_Params} array.
 
 
@@ -5282,7 +7486,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:behavior_overlapTop
+          @attr name com.coreman2200.ringstrings.test:behavior_overlapTop
         */
         public static final int ScrollingViewBehavior_Params_behavior_overlapTop = 0;
         /** Attributes that can be used with a SearchView.
@@ -5295,19 +7499,19 @@ containing a value of this type.
            <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_closeIcon com.coreman2200.ringstrings:closeIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_commitIcon com.coreman2200.ringstrings:commitIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_defaultQueryHint com.coreman2200.ringstrings:defaultQueryHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_goIcon com.coreman2200.ringstrings:goIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_iconifiedByDefault com.coreman2200.ringstrings:iconifiedByDefault}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_layout com.coreman2200.ringstrings:layout}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryBackground com.coreman2200.ringstrings:queryBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryHint com.coreman2200.ringstrings:queryHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_searchHintIcon com.coreman2200.ringstrings:searchHintIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_searchIcon com.coreman2200.ringstrings:searchIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_submitBackground com.coreman2200.ringstrings:submitBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_suggestionRowLayout com.coreman2200.ringstrings:suggestionRowLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_voiceIcon com.coreman2200.ringstrings:voiceIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_closeIcon com.coreman2200.ringstrings.test:closeIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_commitIcon com.coreman2200.ringstrings.test:commitIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_defaultQueryHint com.coreman2200.ringstrings.test:defaultQueryHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_goIcon com.coreman2200.ringstrings.test:goIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_iconifiedByDefault com.coreman2200.ringstrings.test:iconifiedByDefault}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_layout com.coreman2200.ringstrings.test:layout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryBackground com.coreman2200.ringstrings.test:queryBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryHint com.coreman2200.ringstrings.test:queryHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_searchHintIcon com.coreman2200.ringstrings.test:searchHintIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_searchIcon com.coreman2200.ringstrings.test:searchIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_submitBackground com.coreman2200.ringstrings.test:submitBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_suggestionRowLayout com.coreman2200.ringstrings.test:suggestionRowLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_voiceIcon com.coreman2200.ringstrings.test:voiceIcon}</code></td><td></td></tr>
            </table>
            @see #SearchView_android_focusable
            @see #SearchView_android_imeOptions
@@ -5329,10 +7533,10 @@ containing a value of this type.
          */
         public static final int[] SearchView = {
             0x010100da, 0x0101011f, 0x01010220, 0x01010264,
-            0x7f010063, 0x7f010064, 0x7f010065, 0x7f010066,
-            0x7f010067, 0x7f010068, 0x7f010069, 0x7f01006a,
-            0x7f01006b, 0x7f01006c, 0x7f01006d, 0x7f01006e,
-            0x7f01006f
+            0x7f0100d8, 0x7f0100d9, 0x7f0100da, 0x7f0100db,
+            0x7f0100dc, 0x7f0100dd, 0x7f0100de, 0x7f0100df,
+            0x7f0100e0, 0x7f0100e1, 0x7f0100e2, 0x7f0100e3,
+            0x7f0100e4
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#focusable}
@@ -5359,27 +7563,27 @@ containing a value of this type.
         */
         public static final int SearchView_android_maxWidth = 1;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#closeIcon}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#closeIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:closeIcon
+          @attr name com.coreman2200.ringstrings.test:closeIcon
         */
         public static final int SearchView_closeIcon = 8;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#commitIcon}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#commitIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:commitIcon
+          @attr name com.coreman2200.ringstrings.test:commitIcon
         */
         public static final int SearchView_commitIcon = 13;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#defaultQueryHint}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#defaultQueryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -5389,21 +7593,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:defaultQueryHint
+          @attr name com.coreman2200.ringstrings.test:defaultQueryHint
         */
         public static final int SearchView_defaultQueryHint = 7;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#goIcon}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#goIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:goIcon
+          @attr name com.coreman2200.ringstrings.test:goIcon
         */
         public static final int SearchView_goIcon = 9;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#iconifiedByDefault}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#iconifiedByDefault}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -5413,31 +7617,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:iconifiedByDefault
+          @attr name com.coreman2200.ringstrings.test:iconifiedByDefault
         */
         public static final int SearchView_iconifiedByDefault = 5;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#layout}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#layout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:layout
+          @attr name com.coreman2200.ringstrings.test:layout
         */
         public static final int SearchView_layout = 4;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#queryBackground}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#queryBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:queryBackground
+          @attr name com.coreman2200.ringstrings.test:queryBackground
         */
         public static final int SearchView_queryBackground = 15;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#queryHint}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#queryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -5447,57 +7651,57 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:queryHint
+          @attr name com.coreman2200.ringstrings.test:queryHint
         */
         public static final int SearchView_queryHint = 6;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#searchHintIcon}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#searchHintIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:searchHintIcon
+          @attr name com.coreman2200.ringstrings.test:searchHintIcon
         */
         public static final int SearchView_searchHintIcon = 11;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#searchIcon}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#searchIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:searchIcon
+          @attr name com.coreman2200.ringstrings.test:searchIcon
         */
         public static final int SearchView_searchIcon = 10;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#submitBackground}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#submitBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:submitBackground
+          @attr name com.coreman2200.ringstrings.test:submitBackground
         */
         public static final int SearchView_submitBackground = 16;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#suggestionRowLayout}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#suggestionRowLayout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:suggestionRowLayout
+          @attr name com.coreman2200.ringstrings.test:suggestionRowLayout
         */
         public static final int SearchView_suggestionRowLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#voiceIcon}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#voiceIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:voiceIcon
+          @attr name com.coreman2200.ringstrings.test:voiceIcon
         */
         public static final int SearchView_voiceIcon = 12;
         /** Attributes that can be used with a SnackbarLayout.
@@ -5507,15 +7711,15 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #SnackbarLayout_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SnackbarLayout_elevation com.coreman2200.ringstrings:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #SnackbarLayout_maxActionInlineWidth com.coreman2200.ringstrings:maxActionInlineWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SnackbarLayout_elevation com.coreman2200.ringstrings.test:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #SnackbarLayout_maxActionInlineWidth com.coreman2200.ringstrings.test:maxActionInlineWidth}</code></td><td></td></tr>
            </table>
            @see #SnackbarLayout_android_maxWidth
            @see #SnackbarLayout_elevation
            @see #SnackbarLayout_maxActionInlineWidth
          */
         public static final int[] SnackbarLayout = {
-            0x0101011f, 0x7f01001a, 0x7f010070
+            0x0101011f, 0x7f01001a, 0x7f0100e5
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#maxWidth}
@@ -5524,7 +7728,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SnackbarLayout_android_maxWidth = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#elevation}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#elevation}
           attribute's value can be found in the {@link #SnackbarLayout} array.
 
 
@@ -5536,11 +7740,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:elevation
+          @attr name com.coreman2200.ringstrings.test:elevation
         */
         public static final int SnackbarLayout_elevation = 1;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#maxActionInlineWidth}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#maxActionInlineWidth}
           attribute's value can be found in the {@link #SnackbarLayout} array.
 
 
@@ -5552,7 +7756,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:maxActionInlineWidth
+          @attr name com.coreman2200.ringstrings.test:maxActionInlineWidth
         */
         public static final int SnackbarLayout_maxActionInlineWidth = 2;
         /** Attributes that can be used with a Spinner.
@@ -5562,46 +7766,55 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #Spinner_android_dropDownWidth android:dropDownWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_android_entries android:entries}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_prompt android:prompt}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_popupTheme com.coreman2200.ringstrings:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_popupTheme com.coreman2200.ringstrings.test:popupTheme}</code></td><td></td></tr>
            </table>
            @see #Spinner_android_dropDownWidth
+           @see #Spinner_android_entries
            @see #Spinner_android_popupBackground
            @see #Spinner_android_prompt
            @see #Spinner_popupTheme
          */
         public static final int[] Spinner = {
-            0x01010176, 0x0101017b, 0x01010262, 0x7f01001b
+            0x010100b2, 0x01010176, 0x0101017b, 0x01010262,
+            0x7f01001b
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#dropDownWidth}
           attribute's value can be found in the {@link #Spinner} array.
           @attr name android:dropDownWidth
         */
-        public static final int Spinner_android_dropDownWidth = 2;
+        public static final int Spinner_android_dropDownWidth = 3;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#entries}
+          attribute's value can be found in the {@link #Spinner} array.
+          @attr name android:entries
+        */
+        public static final int Spinner_android_entries = 0;
         /**
           <p>This symbol is the offset where the {@link android.R.attr#popupBackground}
           attribute's value can be found in the {@link #Spinner} array.
           @attr name android:popupBackground
         */
-        public static final int Spinner_android_popupBackground = 0;
+        public static final int Spinner_android_popupBackground = 1;
         /**
           <p>This symbol is the offset where the {@link android.R.attr#prompt}
           attribute's value can be found in the {@link #Spinner} array.
           @attr name android:prompt
         */
-        public static final int Spinner_android_prompt = 1;
+        public static final int Spinner_android_prompt = 2;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#popupTheme}
           attribute's value can be found in the {@link #Spinner} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:popupTheme
+          @attr name com.coreman2200.ringstrings.test:popupTheme
         */
-        public static final int Spinner_popupTheme = 3;
+        public static final int Spinner_popupTheme = 4;
         /** Attributes that can be used with a SwitchCompat.
            <p>Includes the following attributes:</p>
            <table>
@@ -5611,13 +7824,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #SwitchCompat_android_textOff android:textOff}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompat_android_textOn android:textOn}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompat_android_thumb android:thumb}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_showText com.coreman2200.ringstrings:showText}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_splitTrack com.coreman2200.ringstrings:splitTrack}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchMinWidth com.coreman2200.ringstrings:switchMinWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchPadding com.coreman2200.ringstrings:switchPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.coreman2200.ringstrings:switchTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.coreman2200.ringstrings:thumbTextPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_track com.coreman2200.ringstrings:track}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_showText com.coreman2200.ringstrings.test:showText}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_splitTrack com.coreman2200.ringstrings.test:splitTrack}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchMinWidth com.coreman2200.ringstrings.test:switchMinWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchPadding com.coreman2200.ringstrings.test:switchPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.coreman2200.ringstrings.test:switchTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.coreman2200.ringstrings.test:thumbTextPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_track com.coreman2200.ringstrings.test:track}</code></td><td></td></tr>
            </table>
            @see #SwitchCompat_android_textOff
            @see #SwitchCompat_android_textOn
@@ -5631,9 +7844,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            @see #SwitchCompat_track
          */
         public static final int[] SwitchCompat = {
-            0x01010124, 0x01010125, 0x01010142, 0x7f010071,
-            0x7f010072, 0x7f010073, 0x7f010074, 0x7f010075,
-            0x7f010076, 0x7f010077
+            0x01010124, 0x01010125, 0x01010142, 0x7f0100e6,
+            0x7f0100e7, 0x7f0100e8, 0x7f0100e9, 0x7f0100ea,
+            0x7f0100eb, 0x7f0100ec
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#textOff}
@@ -5654,7 +7867,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SwitchCompat_android_thumb = 2;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#showText}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#showText}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5664,11 +7877,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:showText
+          @attr name com.coreman2200.ringstrings.test:showText
         */
         public static final int SwitchCompat_showText = 9;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#splitTrack}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#splitTrack}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5678,11 +7891,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:splitTrack
+          @attr name com.coreman2200.ringstrings.test:splitTrack
         */
         public static final int SwitchCompat_splitTrack = 8;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#switchMinWidth}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#switchMinWidth}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5694,11 +7907,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:switchMinWidth
+          @attr name com.coreman2200.ringstrings.test:switchMinWidth
         */
         public static final int SwitchCompat_switchMinWidth = 6;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#switchPadding}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#switchPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5710,21 +7923,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:switchPadding
+          @attr name com.coreman2200.ringstrings.test:switchPadding
         */
         public static final int SwitchCompat_switchPadding = 7;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#switchTextAppearance}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#switchTextAppearance}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:switchTextAppearance
+          @attr name com.coreman2200.ringstrings.test:switchTextAppearance
         */
         public static final int SwitchCompat_switchTextAppearance = 5;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#thumbTextPadding}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#thumbTextPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5736,41 +7949,76 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:thumbTextPadding
+          @attr name com.coreman2200.ringstrings.test:thumbTextPadding
         */
         public static final int SwitchCompat_thumbTextPadding = 4;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#track}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#track}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:track
+          @attr name com.coreman2200.ringstrings.test:track
         */
         public static final int SwitchCompat_track = 3;
+        /** Attributes that can be used with a TabItem.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #TabItem_android_icon android:icon}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabItem_android_layout android:layout}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabItem_android_text android:text}</code></td><td></td></tr>
+           </table>
+           @see #TabItem_android_icon
+           @see #TabItem_android_layout
+           @see #TabItem_android_text
+         */
+        public static final int[] TabItem = {
+            0x01010002, 0x010100f2, 0x0101014f
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#icon}
+          attribute's value can be found in the {@link #TabItem} array.
+          @attr name android:icon
+        */
+        public static final int TabItem_android_icon = 0;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#layout}
+          attribute's value can be found in the {@link #TabItem} array.
+          @attr name android:layout
+        */
+        public static final int TabItem_android_layout = 1;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#text}
+          attribute's value can be found in the {@link #TabItem} array.
+          @attr name android:text
+        */
+        public static final int TabItem_android_text = 2;
         /** Attributes that can be used with a TabLayout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #TabLayout_tabBackground com.coreman2200.ringstrings:tabBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabContentStart com.coreman2200.ringstrings:tabContentStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabGravity com.coreman2200.ringstrings:tabGravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabIndicatorColor com.coreman2200.ringstrings:tabIndicatorColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabIndicatorHeight com.coreman2200.ringstrings:tabIndicatorHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabMaxWidth com.coreman2200.ringstrings:tabMaxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabMinWidth com.coreman2200.ringstrings:tabMinWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabMode com.coreman2200.ringstrings:tabMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabPadding com.coreman2200.ringstrings:tabPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabPaddingBottom com.coreman2200.ringstrings:tabPaddingBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabPaddingEnd com.coreman2200.ringstrings:tabPaddingEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabPaddingStart com.coreman2200.ringstrings:tabPaddingStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabPaddingTop com.coreman2200.ringstrings:tabPaddingTop}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabSelectedTextColor com.coreman2200.ringstrings:tabSelectedTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabTextAppearance com.coreman2200.ringstrings:tabTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabTextColor com.coreman2200.ringstrings:tabTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabBackground com.coreman2200.ringstrings.test:tabBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabContentStart com.coreman2200.ringstrings.test:tabContentStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabGravity com.coreman2200.ringstrings.test:tabGravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabIndicatorColor com.coreman2200.ringstrings.test:tabIndicatorColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabIndicatorHeight com.coreman2200.ringstrings.test:tabIndicatorHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabMaxWidth com.coreman2200.ringstrings.test:tabMaxWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabMinWidth com.coreman2200.ringstrings.test:tabMinWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabMode com.coreman2200.ringstrings.test:tabMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPadding com.coreman2200.ringstrings.test:tabPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPaddingBottom com.coreman2200.ringstrings.test:tabPaddingBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPaddingEnd com.coreman2200.ringstrings.test:tabPaddingEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPaddingStart com.coreman2200.ringstrings.test:tabPaddingStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPaddingTop com.coreman2200.ringstrings.test:tabPaddingTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabSelectedTextColor com.coreman2200.ringstrings.test:tabSelectedTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabTextAppearance com.coreman2200.ringstrings.test:tabTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabTextColor com.coreman2200.ringstrings.test:tabTextColor}</code></td><td></td></tr>
            </table>
            @see #TabLayout_tabBackground
            @see #TabLayout_tabContentStart
@@ -5790,23 +8038,23 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            @see #TabLayout_tabTextColor
          */
         public static final int[] TabLayout = {
-            0x7f010078, 0x7f010079, 0x7f01007a, 0x7f01007b,
-            0x7f01007c, 0x7f01007d, 0x7f01007e, 0x7f01007f,
-            0x7f010080, 0x7f010081, 0x7f010082, 0x7f010083,
-            0x7f010084, 0x7f010085, 0x7f010086, 0x7f010087
+            0x7f0100ed, 0x7f0100ee, 0x7f0100ef, 0x7f0100f0,
+            0x7f0100f1, 0x7f0100f2, 0x7f0100f3, 0x7f0100f4,
+            0x7f0100f5, 0x7f0100f6, 0x7f0100f7, 0x7f0100f8,
+            0x7f0100f9, 0x7f0100fa, 0x7f0100fb, 0x7f0100fc
         };
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#tabBackground}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#tabBackground}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:tabBackground
+          @attr name com.coreman2200.ringstrings.test:tabBackground
         */
         public static final int TabLayout_tabBackground = 3;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#tabContentStart}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#tabContentStart}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -5818,11 +8066,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:tabContentStart
+          @attr name com.coreman2200.ringstrings.test:tabContentStart
         */
         public static final int TabLayout_tabContentStart = 2;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#tabGravity}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#tabGravity}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -5835,11 +8083,11 @@ containing a value of this type.
 <tr><td><code>fill</code></td><td>0</td><td></td></tr>
 <tr><td><code>center</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.coreman2200.ringstrings:tabGravity
+          @attr name com.coreman2200.ringstrings.test:tabGravity
         */
         public static final int TabLayout_tabGravity = 5;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#tabIndicatorColor}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#tabIndicatorColor}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -5850,11 +8098,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:tabIndicatorColor
+          @attr name com.coreman2200.ringstrings.test:tabIndicatorColor
         */
         public static final int TabLayout_tabIndicatorColor = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#tabIndicatorHeight}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#tabIndicatorHeight}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -5866,11 +8114,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:tabIndicatorHeight
+          @attr name com.coreman2200.ringstrings.test:tabIndicatorHeight
         */
         public static final int TabLayout_tabIndicatorHeight = 1;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#tabMaxWidth}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#tabMaxWidth}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -5882,11 +8130,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:tabMaxWidth
+          @attr name com.coreman2200.ringstrings.test:tabMaxWidth
         */
         public static final int TabLayout_tabMaxWidth = 7;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#tabMinWidth}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#tabMinWidth}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -5898,11 +8146,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:tabMinWidth
+          @attr name com.coreman2200.ringstrings.test:tabMinWidth
         */
         public static final int TabLayout_tabMinWidth = 6;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#tabMode}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#tabMode}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -5915,11 +8163,11 @@ containing a value of this type.
 <tr><td><code>scrollable</code></td><td>0</td><td></td></tr>
 <tr><td><code>fixed</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.coreman2200.ringstrings:tabMode
+          @attr name com.coreman2200.ringstrings.test:tabMode
         */
         public static final int TabLayout_tabMode = 4;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#tabPadding}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#tabPadding}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -5931,11 +8179,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:tabPadding
+          @attr name com.coreman2200.ringstrings.test:tabPadding
         */
         public static final int TabLayout_tabPadding = 15;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#tabPaddingBottom}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#tabPaddingBottom}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -5947,11 +8195,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:tabPaddingBottom
+          @attr name com.coreman2200.ringstrings.test:tabPaddingBottom
         */
         public static final int TabLayout_tabPaddingBottom = 14;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#tabPaddingEnd}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#tabPaddingEnd}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -5963,11 +8211,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:tabPaddingEnd
+          @attr name com.coreman2200.ringstrings.test:tabPaddingEnd
         */
         public static final int TabLayout_tabPaddingEnd = 13;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#tabPaddingStart}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#tabPaddingStart}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -5979,11 +8227,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:tabPaddingStart
+          @attr name com.coreman2200.ringstrings.test:tabPaddingStart
         */
         public static final int TabLayout_tabPaddingStart = 11;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#tabPaddingTop}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#tabPaddingTop}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -5995,11 +8243,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:tabPaddingTop
+          @attr name com.coreman2200.ringstrings.test:tabPaddingTop
         */
         public static final int TabLayout_tabPaddingTop = 12;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#tabSelectedTextColor}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#tabSelectedTextColor}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -6010,21 +8258,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:tabSelectedTextColor
+          @attr name com.coreman2200.ringstrings.test:tabSelectedTextColor
         */
         public static final int TabLayout_tabSelectedTextColor = 10;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#tabTextAppearance}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#tabTextAppearance}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:tabTextAppearance
+          @attr name com.coreman2200.ringstrings.test:tabTextAppearance
         */
         public static final int TabLayout_tabTextAppearance = 8;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#tabTextColor}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#tabTextColor}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -6035,7 +8283,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:tabTextColor
+          @attr name com.coreman2200.ringstrings.test:tabTextColor
         */
         public static final int TabLayout_tabTextColor = 9;
         /** Attributes that can be used with a TextAppearance.
@@ -6052,7 +8300,7 @@ containing a value of this type.
            <tr><td><code>{@link #TextAppearance_android_textSize android:textSize}</code></td><td></td></tr>
            <tr><td><code>{@link #TextAppearance_android_textStyle android:textStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #TextAppearance_android_typeface android:typeface}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextAppearance_textAllCaps com.coreman2200.ringstrings:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextAppearance_textAllCaps com.coreman2200.ringstrings.test:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #TextAppearance_android_shadowColor
            @see #TextAppearance_android_shadowDx
@@ -6067,7 +8315,7 @@ containing a value of this type.
         public static final int[] TextAppearance = {
             0x01010095, 0x01010096, 0x01010097, 0x01010098,
             0x01010161, 0x01010162, 0x01010163, 0x01010164,
-            0x7f010027
+            0x7f010028
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#shadowColor}
@@ -6118,14 +8366,14 @@ containing a value of this type.
         */
         public static final int TextAppearance_android_typeface = 1;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#textAllCaps}
           attribute's value can be found in the {@link #TextAppearance} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name com.coreman2200.ringstrings:textAllCaps
+          @attr name com.coreman2200.ringstrings.test:textAllCaps
         */
         public static final int TextAppearance_textAllCaps = 8;
         /** Attributes that can be used with a TextInputLayout.
@@ -6136,14 +8384,15 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #TextInputLayout_android_hint android:hint}</code></td><td></td></tr>
            <tr><td><code>{@link #TextInputLayout_android_textColorHint android:textColorHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_counterEnabled com.coreman2200.ringstrings:counterEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_counterMaxLength com.coreman2200.ringstrings:counterMaxLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_counterOverflowTextAppearance com.coreman2200.ringstrings:counterOverflowTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_counterTextAppearance com.coreman2200.ringstrings:counterTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_errorEnabled com.coreman2200.ringstrings:errorEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_errorTextAppearance com.coreman2200.ringstrings:errorTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_hintAnimationEnabled com.coreman2200.ringstrings:hintAnimationEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_hintTextAppearance com.coreman2200.ringstrings:hintTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_counterEnabled com.coreman2200.ringstrings.test:counterEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_counterMaxLength com.coreman2200.ringstrings.test:counterMaxLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_counterOverflowTextAppearance com.coreman2200.ringstrings.test:counterOverflowTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_counterTextAppearance com.coreman2200.ringstrings.test:counterTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_errorEnabled com.coreman2200.ringstrings.test:errorEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_errorTextAppearance com.coreman2200.ringstrings.test:errorTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_hintAnimationEnabled com.coreman2200.ringstrings.test:hintAnimationEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_hintEnabled com.coreman2200.ringstrings.test:hintEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_hintTextAppearance com.coreman2200.ringstrings.test:hintTextAppearance}</code></td><td></td></tr>
            </table>
            @see #TextInputLayout_android_hint
            @see #TextInputLayout_android_textColorHint
@@ -6154,12 +8403,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            @see #TextInputLayout_errorEnabled
            @see #TextInputLayout_errorTextAppearance
            @see #TextInputLayout_hintAnimationEnabled
+           @see #TextInputLayout_hintEnabled
            @see #TextInputLayout_hintTextAppearance
          */
         public static final int[] TextInputLayout = {
-            0x0101009a, 0x01010150, 0x7f010088, 0x7f010089,
-            0x7f01008a, 0x7f01008b, 0x7f01008c, 0x7f01008d,
-            0x7f01008e, 0x7f01008f
+            0x0101009a, 0x01010150, 0x7f0100fd, 0x7f0100fe,
+            0x7f0100ff, 0x7f010100, 0x7f010101, 0x7f010102,
+            0x7f010103, 0x7f010104, 0x7f010105
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#hint}
@@ -6174,7 +8424,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int TextInputLayout_android_textColorHint = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#counterEnabled}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#counterEnabled}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
@@ -6184,11 +8434,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:counterEnabled
+          @attr name com.coreman2200.ringstrings.test:counterEnabled
         */
-        public static final int TextInputLayout_counterEnabled = 5;
+        public static final int TextInputLayout_counterEnabled = 6;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#counterMaxLength}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#counterMaxLength}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
@@ -6198,31 +8448,31 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:counterMaxLength
+          @attr name com.coreman2200.ringstrings.test:counterMaxLength
         */
-        public static final int TextInputLayout_counterMaxLength = 6;
+        public static final int TextInputLayout_counterMaxLength = 7;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#counterOverflowTextAppearance}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#counterOverflowTextAppearance}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:counterOverflowTextAppearance
+          @attr name com.coreman2200.ringstrings.test:counterOverflowTextAppearance
         */
-        public static final int TextInputLayout_counterOverflowTextAppearance = 8;
+        public static final int TextInputLayout_counterOverflowTextAppearance = 9;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#counterTextAppearance}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#counterTextAppearance}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:counterTextAppearance
+          @attr name com.coreman2200.ringstrings.test:counterTextAppearance
         */
-        public static final int TextInputLayout_counterTextAppearance = 7;
+        public static final int TextInputLayout_counterTextAppearance = 8;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#errorEnabled}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#errorEnabled}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
@@ -6232,21 +8482,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:errorEnabled
+          @attr name com.coreman2200.ringstrings.test:errorEnabled
         */
-        public static final int TextInputLayout_errorEnabled = 3;
+        public static final int TextInputLayout_errorEnabled = 4;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#errorTextAppearance}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#errorTextAppearance}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:errorTextAppearance
+          @attr name com.coreman2200.ringstrings.test:errorTextAppearance
         */
-        public static final int TextInputLayout_errorTextAppearance = 4;
+        public static final int TextInputLayout_errorTextAppearance = 5;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#hintAnimationEnabled}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#hintAnimationEnabled}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
@@ -6256,1553 +8506,33 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:hintAnimationEnabled
+          @attr name com.coreman2200.ringstrings.test:hintAnimationEnabled
         */
-        public static final int TextInputLayout_hintAnimationEnabled = 9;
+        public static final int TextInputLayout_hintAnimationEnabled = 10;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#hintTextAppearance}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#hintEnabled}
+          attribute's value can be found in the {@link #TextInputLayout} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.coreman2200.ringstrings.test:hintEnabled
+        */
+        public static final int TextInputLayout_hintEnabled = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#hintTextAppearance}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:hintTextAppearance
+          @attr name com.coreman2200.ringstrings.test:hintTextAppearance
         */
         public static final int TextInputLayout_hintTextAppearance = 2;
-        /** Attributes that can be used with a Theme.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #Theme_actionBarDivider com.coreman2200.ringstrings:actionBarDivider}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarItemBackground com.coreman2200.ringstrings:actionBarItemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarPopupTheme com.coreman2200.ringstrings:actionBarPopupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarSize com.coreman2200.ringstrings:actionBarSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarSplitStyle com.coreman2200.ringstrings:actionBarSplitStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarStyle com.coreman2200.ringstrings:actionBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabBarStyle com.coreman2200.ringstrings:actionBarTabBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabStyle com.coreman2200.ringstrings:actionBarTabStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabTextStyle com.coreman2200.ringstrings:actionBarTabTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTheme com.coreman2200.ringstrings:actionBarTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarWidgetTheme com.coreman2200.ringstrings:actionBarWidgetTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionButtonStyle com.coreman2200.ringstrings:actionButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionDropDownStyle com.coreman2200.ringstrings:actionDropDownStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionMenuTextAppearance com.coreman2200.ringstrings:actionMenuTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionMenuTextColor com.coreman2200.ringstrings:actionMenuTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeBackground com.coreman2200.ringstrings:actionModeBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCloseButtonStyle com.coreman2200.ringstrings:actionModeCloseButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCloseDrawable com.coreman2200.ringstrings:actionModeCloseDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCopyDrawable com.coreman2200.ringstrings:actionModeCopyDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCutDrawable com.coreman2200.ringstrings:actionModeCutDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeFindDrawable com.coreman2200.ringstrings:actionModeFindDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModePasteDrawable com.coreman2200.ringstrings:actionModePasteDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModePopupWindowStyle com.coreman2200.ringstrings:actionModePopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeSelectAllDrawable com.coreman2200.ringstrings:actionModeSelectAllDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeShareDrawable com.coreman2200.ringstrings:actionModeShareDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeSplitBackground com.coreman2200.ringstrings:actionModeSplitBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeStyle com.coreman2200.ringstrings:actionModeStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeWebSearchDrawable com.coreman2200.ringstrings:actionModeWebSearchDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionOverflowButtonStyle com.coreman2200.ringstrings:actionOverflowButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionOverflowMenuStyle com.coreman2200.ringstrings:actionOverflowMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_activityChooserViewStyle com.coreman2200.ringstrings:activityChooserViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogButtonGroupStyle com.coreman2200.ringstrings:alertDialogButtonGroupStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogCenterButtons com.coreman2200.ringstrings:alertDialogCenterButtons}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogStyle com.coreman2200.ringstrings:alertDialogStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogTheme com.coreman2200.ringstrings:alertDialogTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_android_windowIsFloating android:windowIsFloating}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_autoCompleteTextViewStyle com.coreman2200.ringstrings:autoCompleteTextViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_borderlessButtonStyle com.coreman2200.ringstrings:borderlessButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarButtonStyle com.coreman2200.ringstrings:buttonBarButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarNegativeButtonStyle com.coreman2200.ringstrings:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarNeutralButtonStyle com.coreman2200.ringstrings:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarPositiveButtonStyle com.coreman2200.ringstrings:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarStyle com.coreman2200.ringstrings:buttonBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonStyle com.coreman2200.ringstrings:buttonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonStyleSmall com.coreman2200.ringstrings:buttonStyleSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_checkboxStyle com.coreman2200.ringstrings:checkboxStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_checkedTextViewStyle com.coreman2200.ringstrings:checkedTextViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorAccent com.coreman2200.ringstrings:colorAccent}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorButtonNormal com.coreman2200.ringstrings:colorButtonNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlActivated com.coreman2200.ringstrings:colorControlActivated}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlHighlight com.coreman2200.ringstrings:colorControlHighlight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlNormal com.coreman2200.ringstrings:colorControlNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorPrimary com.coreman2200.ringstrings:colorPrimary}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorPrimaryDark com.coreman2200.ringstrings:colorPrimaryDark}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorSwitchThumbNormal com.coreman2200.ringstrings:colorSwitchThumbNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_controlBackground com.coreman2200.ringstrings:controlBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dialogPreferredPadding com.coreman2200.ringstrings:dialogPreferredPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dialogTheme com.coreman2200.ringstrings:dialogTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dividerHorizontal com.coreman2200.ringstrings:dividerHorizontal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dividerVertical com.coreman2200.ringstrings:dividerVertical}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dropDownListViewStyle com.coreman2200.ringstrings:dropDownListViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight com.coreman2200.ringstrings:dropdownListPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextBackground com.coreman2200.ringstrings:editTextBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextColor com.coreman2200.ringstrings:editTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextStyle com.coreman2200.ringstrings:editTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_homeAsUpIndicator com.coreman2200.ringstrings:homeAsUpIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_imageButtonStyle com.coreman2200.ringstrings:imageButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator com.coreman2200.ringstrings:listChoiceBackgroundIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listDividerAlertDialog com.coreman2200.ringstrings:listDividerAlertDialog}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPopupWindowStyle com.coreman2200.ringstrings:listPopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeight com.coreman2200.ringstrings:listPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeightLarge com.coreman2200.ringstrings:listPreferredItemHeightLarge}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeightSmall com.coreman2200.ringstrings:listPreferredItemHeightSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemPaddingLeft com.coreman2200.ringstrings:listPreferredItemPaddingLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemPaddingRight com.coreman2200.ringstrings:listPreferredItemPaddingRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelBackground com.coreman2200.ringstrings:panelBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListTheme com.coreman2200.ringstrings:panelMenuListTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListWidth com.coreman2200.ringstrings:panelMenuListWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_popupMenuStyle com.coreman2200.ringstrings:popupMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_popupWindowStyle com.coreman2200.ringstrings:popupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_radioButtonStyle com.coreman2200.ringstrings:radioButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_ratingBarStyle com.coreman2200.ringstrings:ratingBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_searchViewStyle com.coreman2200.ringstrings:searchViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_seekBarStyle com.coreman2200.ringstrings:seekBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_selectableItemBackground com.coreman2200.ringstrings:selectableItemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_selectableItemBackgroundBorderless com.coreman2200.ringstrings:selectableItemBackgroundBorderless}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_spinnerDropDownItemStyle com.coreman2200.ringstrings:spinnerDropDownItemStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_spinnerStyle com.coreman2200.ringstrings:spinnerStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_switchStyle com.coreman2200.ringstrings:switchStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceLargePopupMenu com.coreman2200.ringstrings:textAppearanceLargePopupMenu}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceListItem com.coreman2200.ringstrings:textAppearanceListItem}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceListItemSmall com.coreman2200.ringstrings:textAppearanceListItemSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSearchResultSubtitle com.coreman2200.ringstrings:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSearchResultTitle com.coreman2200.ringstrings:textAppearanceSearchResultTitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSmallPopupMenu com.coreman2200.ringstrings:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textColorAlertDialogListItem com.coreman2200.ringstrings:textColorAlertDialogListItem}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textColorSearchUrl com.coreman2200.ringstrings:textColorSearchUrl}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_toolbarNavigationButtonStyle com.coreman2200.ringstrings:toolbarNavigationButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_toolbarStyle com.coreman2200.ringstrings:toolbarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionBar com.coreman2200.ringstrings:windowActionBar}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionBarOverlay com.coreman2200.ringstrings:windowActionBarOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionModeOverlay com.coreman2200.ringstrings:windowActionModeOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedHeightMajor com.coreman2200.ringstrings:windowFixedHeightMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedHeightMinor com.coreman2200.ringstrings:windowFixedHeightMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedWidthMajor com.coreman2200.ringstrings:windowFixedWidthMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedWidthMinor com.coreman2200.ringstrings:windowFixedWidthMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowMinWidthMajor com.coreman2200.ringstrings:windowMinWidthMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowMinWidthMinor com.coreman2200.ringstrings:windowMinWidthMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowNoTitle com.coreman2200.ringstrings:windowNoTitle}</code></td><td></td></tr>
-           </table>
-           @see #Theme_actionBarDivider
-           @see #Theme_actionBarItemBackground
-           @see #Theme_actionBarPopupTheme
-           @see #Theme_actionBarSize
-           @see #Theme_actionBarSplitStyle
-           @see #Theme_actionBarStyle
-           @see #Theme_actionBarTabBarStyle
-           @see #Theme_actionBarTabStyle
-           @see #Theme_actionBarTabTextStyle
-           @see #Theme_actionBarTheme
-           @see #Theme_actionBarWidgetTheme
-           @see #Theme_actionButtonStyle
-           @see #Theme_actionDropDownStyle
-           @see #Theme_actionMenuTextAppearance
-           @see #Theme_actionMenuTextColor
-           @see #Theme_actionModeBackground
-           @see #Theme_actionModeCloseButtonStyle
-           @see #Theme_actionModeCloseDrawable
-           @see #Theme_actionModeCopyDrawable
-           @see #Theme_actionModeCutDrawable
-           @see #Theme_actionModeFindDrawable
-           @see #Theme_actionModePasteDrawable
-           @see #Theme_actionModePopupWindowStyle
-           @see #Theme_actionModeSelectAllDrawable
-           @see #Theme_actionModeShareDrawable
-           @see #Theme_actionModeSplitBackground
-           @see #Theme_actionModeStyle
-           @see #Theme_actionModeWebSearchDrawable
-           @see #Theme_actionOverflowButtonStyle
-           @see #Theme_actionOverflowMenuStyle
-           @see #Theme_activityChooserViewStyle
-           @see #Theme_alertDialogButtonGroupStyle
-           @see #Theme_alertDialogCenterButtons
-           @see #Theme_alertDialogStyle
-           @see #Theme_alertDialogTheme
-           @see #Theme_android_windowAnimationStyle
-           @see #Theme_android_windowIsFloating
-           @see #Theme_autoCompleteTextViewStyle
-           @see #Theme_borderlessButtonStyle
-           @see #Theme_buttonBarButtonStyle
-           @see #Theme_buttonBarNegativeButtonStyle
-           @see #Theme_buttonBarNeutralButtonStyle
-           @see #Theme_buttonBarPositiveButtonStyle
-           @see #Theme_buttonBarStyle
-           @see #Theme_buttonStyle
-           @see #Theme_buttonStyleSmall
-           @see #Theme_checkboxStyle
-           @see #Theme_checkedTextViewStyle
-           @see #Theme_colorAccent
-           @see #Theme_colorButtonNormal
-           @see #Theme_colorControlActivated
-           @see #Theme_colorControlHighlight
-           @see #Theme_colorControlNormal
-           @see #Theme_colorPrimary
-           @see #Theme_colorPrimaryDark
-           @see #Theme_colorSwitchThumbNormal
-           @see #Theme_controlBackground
-           @see #Theme_dialogPreferredPadding
-           @see #Theme_dialogTheme
-           @see #Theme_dividerHorizontal
-           @see #Theme_dividerVertical
-           @see #Theme_dropDownListViewStyle
-           @see #Theme_dropdownListPreferredItemHeight
-           @see #Theme_editTextBackground
-           @see #Theme_editTextColor
-           @see #Theme_editTextStyle
-           @see #Theme_homeAsUpIndicator
-           @see #Theme_imageButtonStyle
-           @see #Theme_listChoiceBackgroundIndicator
-           @see #Theme_listDividerAlertDialog
-           @see #Theme_listPopupWindowStyle
-           @see #Theme_listPreferredItemHeight
-           @see #Theme_listPreferredItemHeightLarge
-           @see #Theme_listPreferredItemHeightSmall
-           @see #Theme_listPreferredItemPaddingLeft
-           @see #Theme_listPreferredItemPaddingRight
-           @see #Theme_panelBackground
-           @see #Theme_panelMenuListTheme
-           @see #Theme_panelMenuListWidth
-           @see #Theme_popupMenuStyle
-           @see #Theme_popupWindowStyle
-           @see #Theme_radioButtonStyle
-           @see #Theme_ratingBarStyle
-           @see #Theme_searchViewStyle
-           @see #Theme_seekBarStyle
-           @see #Theme_selectableItemBackground
-           @see #Theme_selectableItemBackgroundBorderless
-           @see #Theme_spinnerDropDownItemStyle
-           @see #Theme_spinnerStyle
-           @see #Theme_switchStyle
-           @see #Theme_textAppearanceLargePopupMenu
-           @see #Theme_textAppearanceListItem
-           @see #Theme_textAppearanceListItemSmall
-           @see #Theme_textAppearanceSearchResultSubtitle
-           @see #Theme_textAppearanceSearchResultTitle
-           @see #Theme_textAppearanceSmallPopupMenu
-           @see #Theme_textColorAlertDialogListItem
-           @see #Theme_textColorSearchUrl
-           @see #Theme_toolbarNavigationButtonStyle
-           @see #Theme_toolbarStyle
-           @see #Theme_windowActionBar
-           @see #Theme_windowActionBarOverlay
-           @see #Theme_windowActionModeOverlay
-           @see #Theme_windowFixedHeightMajor
-           @see #Theme_windowFixedHeightMinor
-           @see #Theme_windowFixedWidthMajor
-           @see #Theme_windowFixedWidthMinor
-           @see #Theme_windowMinWidthMajor
-           @see #Theme_windowMinWidthMinor
-           @see #Theme_windowNoTitle
-         */
-        public static final int[] Theme = {
-            0x01010057, 0x010100ae, 0x7f010090, 0x7f010091,
-            0x7f010092, 0x7f010093, 0x7f010094, 0x7f010095,
-            0x7f010096, 0x7f010097, 0x7f010098, 0x7f010099,
-            0x7f01009a, 0x7f01009b, 0x7f01009c, 0x7f01009d,
-            0x7f01009e, 0x7f01009f, 0x7f0100a0, 0x7f0100a1,
-            0x7f0100a2, 0x7f0100a3, 0x7f0100a4, 0x7f0100a5,
-            0x7f0100a6, 0x7f0100a7, 0x7f0100a8, 0x7f0100a9,
-            0x7f0100aa, 0x7f0100ab, 0x7f0100ac, 0x7f0100ad,
-            0x7f0100ae, 0x7f0100af, 0x7f0100b0, 0x7f0100b1,
-            0x7f0100b2, 0x7f0100b3, 0x7f0100b4, 0x7f0100b5,
-            0x7f0100b6, 0x7f0100b7, 0x7f0100b8, 0x7f0100b9,
-            0x7f0100ba, 0x7f0100bb, 0x7f0100bc, 0x7f0100bd,
-            0x7f0100be, 0x7f0100bf, 0x7f0100c0, 0x7f0100c1,
-            0x7f0100c2, 0x7f0100c3, 0x7f0100c4, 0x7f0100c5,
-            0x7f0100c6, 0x7f0100c7, 0x7f0100c8, 0x7f0100c9,
-            0x7f0100ca, 0x7f0100cb, 0x7f0100cc, 0x7f0100cd,
-            0x7f0100ce, 0x7f0100cf, 0x7f0100d0, 0x7f0100d1,
-            0x7f0100d2, 0x7f0100d3, 0x7f0100d4, 0x7f0100d5,
-            0x7f0100d6, 0x7f0100d7, 0x7f0100d8, 0x7f0100d9,
-            0x7f0100da, 0x7f0100db, 0x7f0100dc, 0x7f0100dd,
-            0x7f0100de, 0x7f0100df, 0x7f0100e0, 0x7f0100e1,
-            0x7f0100e2, 0x7f0100e3, 0x7f0100e4, 0x7f0100e5,
-            0x7f0100e6, 0x7f0100e7, 0x7f0100e8, 0x7f0100e9,
-            0x7f0100ea, 0x7f0100eb, 0x7f0100ec, 0x7f0100ed,
-            0x7f0100ee, 0x7f0100ef, 0x7f0100f0, 0x7f0100f1,
-            0x7f0100f2, 0x7f0100f3, 0x7f0100f4, 0x7f0100f5,
-            0x7f0100f6, 0x7f0100f7, 0x7f0100f8, 0x7f0100f9,
-            0x7f0100fa, 0x7f0100fb
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionBarDivider}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionBarDivider
-        */
-        public static final int Theme_actionBarDivider = 23;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionBarItemBackground}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionBarItemBackground
-        */
-        public static final int Theme_actionBarItemBackground = 24;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionBarPopupTheme}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionBarPopupTheme
-        */
-        public static final int Theme_actionBarPopupTheme = 17;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionBarSize}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>May be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>wrap_content</code></td><td>0</td><td></td></tr>
-</table>
-          @attr name com.coreman2200.ringstrings:actionBarSize
-        */
-        public static final int Theme_actionBarSize = 22;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionBarSplitStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionBarSplitStyle
-        */
-        public static final int Theme_actionBarSplitStyle = 19;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionBarStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionBarStyle
-        */
-        public static final int Theme_actionBarStyle = 18;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionBarTabBarStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionBarTabBarStyle
-        */
-        public static final int Theme_actionBarTabBarStyle = 13;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionBarTabStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionBarTabStyle
-        */
-        public static final int Theme_actionBarTabStyle = 12;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionBarTabTextStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionBarTabTextStyle
-        */
-        public static final int Theme_actionBarTabTextStyle = 14;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionBarTheme}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionBarTheme
-        */
-        public static final int Theme_actionBarTheme = 20;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionBarWidgetTheme}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionBarWidgetTheme
-        */
-        public static final int Theme_actionBarWidgetTheme = 21;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionButtonStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionButtonStyle
-        */
-        public static final int Theme_actionButtonStyle = 49;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionDropDownStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionDropDownStyle
-        */
-        public static final int Theme_actionDropDownStyle = 45;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionMenuTextAppearance}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionMenuTextAppearance
-        */
-        public static final int Theme_actionMenuTextAppearance = 25;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionMenuTextColor}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.coreman2200.ringstrings:actionMenuTextColor
-        */
-        public static final int Theme_actionMenuTextColor = 26;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionModeBackground}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionModeBackground
-        */
-        public static final int Theme_actionModeBackground = 29;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionModeCloseButtonStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionModeCloseButtonStyle
-        */
-        public static final int Theme_actionModeCloseButtonStyle = 28;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionModeCloseDrawable}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionModeCloseDrawable
-        */
-        public static final int Theme_actionModeCloseDrawable = 31;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionModeCopyDrawable}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionModeCopyDrawable
-        */
-        public static final int Theme_actionModeCopyDrawable = 33;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionModeCutDrawable}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionModeCutDrawable
-        */
-        public static final int Theme_actionModeCutDrawable = 32;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionModeFindDrawable}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionModeFindDrawable
-        */
-        public static final int Theme_actionModeFindDrawable = 37;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionModePasteDrawable}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionModePasteDrawable
-        */
-        public static final int Theme_actionModePasteDrawable = 34;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionModePopupWindowStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionModePopupWindowStyle
-        */
-        public static final int Theme_actionModePopupWindowStyle = 39;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionModeSelectAllDrawable}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionModeSelectAllDrawable
-        */
-        public static final int Theme_actionModeSelectAllDrawable = 35;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionModeShareDrawable}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionModeShareDrawable
-        */
-        public static final int Theme_actionModeShareDrawable = 36;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionModeSplitBackground}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionModeSplitBackground
-        */
-        public static final int Theme_actionModeSplitBackground = 30;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionModeStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionModeStyle
-        */
-        public static final int Theme_actionModeStyle = 27;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionModeWebSearchDrawable}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionModeWebSearchDrawable
-        */
-        public static final int Theme_actionModeWebSearchDrawable = 38;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionOverflowButtonStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionOverflowButtonStyle
-        */
-        public static final int Theme_actionOverflowButtonStyle = 15;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#actionOverflowMenuStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:actionOverflowMenuStyle
-        */
-        public static final int Theme_actionOverflowMenuStyle = 16;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#activityChooserViewStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:activityChooserViewStyle
-        */
-        public static final int Theme_activityChooserViewStyle = 57;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#alertDialogButtonGroupStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:alertDialogButtonGroupStyle
-        */
-        public static final int Theme_alertDialogButtonGroupStyle = 92;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#alertDialogCenterButtons}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:alertDialogCenterButtons
-        */
-        public static final int Theme_alertDialogCenterButtons = 93;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#alertDialogStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:alertDialogStyle
-        */
-        public static final int Theme_alertDialogStyle = 91;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#alertDialogTheme}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:alertDialogTheme
-        */
-        public static final int Theme_alertDialogTheme = 94;
-        /**
-          <p>This symbol is the offset where the {@link android.R.attr#windowAnimationStyle}
-          attribute's value can be found in the {@link #Theme} array.
-          @attr name android:windowAnimationStyle
-        */
-        public static final int Theme_android_windowAnimationStyle = 1;
-        /**
-          <p>This symbol is the offset where the {@link android.R.attr#windowIsFloating}
-          attribute's value can be found in the {@link #Theme} array.
-          @attr name android:windowIsFloating
-        */
-        public static final int Theme_android_windowIsFloating = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#autoCompleteTextViewStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:autoCompleteTextViewStyle
-        */
-        public static final int Theme_autoCompleteTextViewStyle = 99;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#borderlessButtonStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:borderlessButtonStyle
-        */
-        public static final int Theme_borderlessButtonStyle = 54;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#buttonBarButtonStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:buttonBarButtonStyle
-        */
-        public static final int Theme_buttonBarButtonStyle = 51;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#buttonBarNegativeButtonStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:buttonBarNegativeButtonStyle
-        */
-        public static final int Theme_buttonBarNegativeButtonStyle = 97;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#buttonBarNeutralButtonStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:buttonBarNeutralButtonStyle
-        */
-        public static final int Theme_buttonBarNeutralButtonStyle = 98;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#buttonBarPositiveButtonStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:buttonBarPositiveButtonStyle
-        */
-        public static final int Theme_buttonBarPositiveButtonStyle = 96;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#buttonBarStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:buttonBarStyle
-        */
-        public static final int Theme_buttonBarStyle = 50;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#buttonStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:buttonStyle
-        */
-        public static final int Theme_buttonStyle = 100;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#buttonStyleSmall}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:buttonStyleSmall
-        */
-        public static final int Theme_buttonStyleSmall = 101;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#checkboxStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:checkboxStyle
-        */
-        public static final int Theme_checkboxStyle = 102;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#checkedTextViewStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:checkedTextViewStyle
-        */
-        public static final int Theme_checkedTextViewStyle = 103;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#colorAccent}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:colorAccent
-        */
-        public static final int Theme_colorAccent = 84;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#colorButtonNormal}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:colorButtonNormal
-        */
-        public static final int Theme_colorButtonNormal = 88;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#colorControlActivated}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:colorControlActivated
-        */
-        public static final int Theme_colorControlActivated = 86;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#colorControlHighlight}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:colorControlHighlight
-        */
-        public static final int Theme_colorControlHighlight = 87;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#colorControlNormal}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:colorControlNormal
-        */
-        public static final int Theme_colorControlNormal = 85;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#colorPrimary}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:colorPrimary
-        */
-        public static final int Theme_colorPrimary = 82;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#colorPrimaryDark}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:colorPrimaryDark
-        */
-        public static final int Theme_colorPrimaryDark = 83;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#colorSwitchThumbNormal}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:colorSwitchThumbNormal
-        */
-        public static final int Theme_colorSwitchThumbNormal = 89;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#controlBackground}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:controlBackground
-        */
-        public static final int Theme_controlBackground = 90;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#dialogPreferredPadding}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:dialogPreferredPadding
-        */
-        public static final int Theme_dialogPreferredPadding = 43;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#dialogTheme}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:dialogTheme
-        */
-        public static final int Theme_dialogTheme = 42;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#dividerHorizontal}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:dividerHorizontal
-        */
-        public static final int Theme_dividerHorizontal = 56;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#dividerVertical}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:dividerVertical
-        */
-        public static final int Theme_dividerVertical = 55;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#dropDownListViewStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:dropDownListViewStyle
-        */
-        public static final int Theme_dropDownListViewStyle = 74;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#dropdownListPreferredItemHeight}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:dropdownListPreferredItemHeight
-        */
-        public static final int Theme_dropdownListPreferredItemHeight = 46;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#editTextBackground}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:editTextBackground
-        */
-        public static final int Theme_editTextBackground = 63;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#editTextColor}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.coreman2200.ringstrings:editTextColor
-        */
-        public static final int Theme_editTextColor = 62;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#editTextStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:editTextStyle
-        */
-        public static final int Theme_editTextStyle = 104;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#homeAsUpIndicator}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:homeAsUpIndicator
-        */
-        public static final int Theme_homeAsUpIndicator = 48;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#imageButtonStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:imageButtonStyle
-        */
-        public static final int Theme_imageButtonStyle = 64;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#listChoiceBackgroundIndicator}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:listChoiceBackgroundIndicator
-        */
-        public static final int Theme_listChoiceBackgroundIndicator = 81;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#listDividerAlertDialog}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:listDividerAlertDialog
-        */
-        public static final int Theme_listDividerAlertDialog = 44;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#listPopupWindowStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:listPopupWindowStyle
-        */
-        public static final int Theme_listPopupWindowStyle = 75;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#listPreferredItemHeight}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:listPreferredItemHeight
-        */
-        public static final int Theme_listPreferredItemHeight = 69;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#listPreferredItemHeightLarge}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:listPreferredItemHeightLarge
-        */
-        public static final int Theme_listPreferredItemHeightLarge = 71;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#listPreferredItemHeightSmall}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:listPreferredItemHeightSmall
-        */
-        public static final int Theme_listPreferredItemHeightSmall = 70;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#listPreferredItemPaddingLeft}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:listPreferredItemPaddingLeft
-        */
-        public static final int Theme_listPreferredItemPaddingLeft = 72;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#listPreferredItemPaddingRight}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:listPreferredItemPaddingRight
-        */
-        public static final int Theme_listPreferredItemPaddingRight = 73;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#panelBackground}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:panelBackground
-        */
-        public static final int Theme_panelBackground = 78;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#panelMenuListTheme}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:panelMenuListTheme
-        */
-        public static final int Theme_panelMenuListTheme = 80;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#panelMenuListWidth}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:panelMenuListWidth
-        */
-        public static final int Theme_panelMenuListWidth = 79;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#popupMenuStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:popupMenuStyle
-        */
-        public static final int Theme_popupMenuStyle = 60;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#popupWindowStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:popupWindowStyle
-        */
-        public static final int Theme_popupWindowStyle = 61;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#radioButtonStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:radioButtonStyle
-        */
-        public static final int Theme_radioButtonStyle = 105;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#ratingBarStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:ratingBarStyle
-        */
-        public static final int Theme_ratingBarStyle = 106;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#searchViewStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:searchViewStyle
-        */
-        public static final int Theme_searchViewStyle = 68;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#seekBarStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:seekBarStyle
-        */
-        public static final int Theme_seekBarStyle = 107;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#selectableItemBackground}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:selectableItemBackground
-        */
-        public static final int Theme_selectableItemBackground = 52;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#selectableItemBackgroundBorderless}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:selectableItemBackgroundBorderless
-        */
-        public static final int Theme_selectableItemBackgroundBorderless = 53;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#spinnerDropDownItemStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:spinnerDropDownItemStyle
-        */
-        public static final int Theme_spinnerDropDownItemStyle = 47;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#spinnerStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:spinnerStyle
-        */
-        public static final int Theme_spinnerStyle = 108;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#switchStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:switchStyle
-        */
-        public static final int Theme_switchStyle = 109;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#textAppearanceLargePopupMenu}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:textAppearanceLargePopupMenu
-        */
-        public static final int Theme_textAppearanceLargePopupMenu = 40;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#textAppearanceListItem}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:textAppearanceListItem
-        */
-        public static final int Theme_textAppearanceListItem = 76;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#textAppearanceListItemSmall}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:textAppearanceListItemSmall
-        */
-        public static final int Theme_textAppearanceListItemSmall = 77;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#textAppearanceSearchResultSubtitle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:textAppearanceSearchResultSubtitle
-        */
-        public static final int Theme_textAppearanceSearchResultSubtitle = 66;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#textAppearanceSearchResultTitle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:textAppearanceSearchResultTitle
-        */
-        public static final int Theme_textAppearanceSearchResultTitle = 65;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#textAppearanceSmallPopupMenu}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:textAppearanceSmallPopupMenu
-        */
-        public static final int Theme_textAppearanceSmallPopupMenu = 41;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#textColorAlertDialogListItem}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.coreman2200.ringstrings:textColorAlertDialogListItem
-        */
-        public static final int Theme_textColorAlertDialogListItem = 95;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#textColorSearchUrl}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.coreman2200.ringstrings:textColorSearchUrl
-        */
-        public static final int Theme_textColorSearchUrl = 67;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#toolbarNavigationButtonStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:toolbarNavigationButtonStyle
-        */
-        public static final int Theme_toolbarNavigationButtonStyle = 59;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#toolbarStyle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:toolbarStyle
-        */
-        public static final int Theme_toolbarStyle = 58;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#windowActionBar}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:windowActionBar
-        */
-        public static final int Theme_windowActionBar = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#windowActionBarOverlay}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:windowActionBarOverlay
-        */
-        public static final int Theme_windowActionBarOverlay = 4;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#windowActionModeOverlay}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:windowActionModeOverlay
-        */
-        public static final int Theme_windowActionModeOverlay = 5;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#windowFixedHeightMajor}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
-some parent container.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:windowFixedHeightMajor
-        */
-        public static final int Theme_windowFixedHeightMajor = 9;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#windowFixedHeightMinor}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
-some parent container.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:windowFixedHeightMinor
-        */
-        public static final int Theme_windowFixedHeightMinor = 7;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#windowFixedWidthMajor}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
-some parent container.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:windowFixedWidthMajor
-        */
-        public static final int Theme_windowFixedWidthMajor = 6;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#windowFixedWidthMinor}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
-some parent container.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:windowFixedWidthMinor
-        */
-        public static final int Theme_windowFixedWidthMinor = 8;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#windowMinWidthMajor}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
-some parent container.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:windowMinWidthMajor
-        */
-        public static final int Theme_windowMinWidthMajor = 10;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#windowMinWidthMinor}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
-some parent container.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:windowMinWidthMinor
-        */
-        public static final int Theme_windowMinWidthMinor = 11;
-        /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#windowNoTitle}
-          attribute's value can be found in the {@link #Theme} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.coreman2200.ringstrings:windowNoTitle
-        */
-        public static final int Theme_windowNoTitle = 3;
         /** Attributes that can be used with a Toolbar.
            <p>Includes the following attributes:</p>
            <table>
@@ -7811,29 +8541,29 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #Toolbar_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #Toolbar_android_minHeight android:minHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_collapseContentDescription com.coreman2200.ringstrings:collapseContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_collapseIcon com.coreman2200.ringstrings:collapseIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetEnd com.coreman2200.ringstrings:contentInsetEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetLeft com.coreman2200.ringstrings:contentInsetLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetRight com.coreman2200.ringstrings:contentInsetRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetStart com.coreman2200.ringstrings:contentInsetStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_logo com.coreman2200.ringstrings:logo}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_logoDescription com.coreman2200.ringstrings:logoDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_maxButtonHeight com.coreman2200.ringstrings:maxButtonHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationContentDescription com.coreman2200.ringstrings:navigationContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationIcon com.coreman2200.ringstrings:navigationIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_popupTheme com.coreman2200.ringstrings:popupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitle com.coreman2200.ringstrings:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.coreman2200.ringstrings:subtitleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitleTextColor com.coreman2200.ringstrings:subtitleTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_title com.coreman2200.ringstrings:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginBottom com.coreman2200.ringstrings:titleMarginBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginEnd com.coreman2200.ringstrings:titleMarginEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginStart com.coreman2200.ringstrings:titleMarginStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginTop com.coreman2200.ringstrings:titleMarginTop}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMargins com.coreman2200.ringstrings:titleMargins}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleTextAppearance com.coreman2200.ringstrings:titleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleTextColor com.coreman2200.ringstrings:titleTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseContentDescription com.coreman2200.ringstrings.test:collapseContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseIcon com.coreman2200.ringstrings.test:collapseIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetEnd com.coreman2200.ringstrings.test:contentInsetEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetLeft com.coreman2200.ringstrings.test:contentInsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetRight com.coreman2200.ringstrings.test:contentInsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetStart com.coreman2200.ringstrings.test:contentInsetStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_logo com.coreman2200.ringstrings.test:logo}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_logoDescription com.coreman2200.ringstrings.test:logoDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_maxButtonHeight com.coreman2200.ringstrings.test:maxButtonHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationContentDescription com.coreman2200.ringstrings.test:navigationContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationIcon com.coreman2200.ringstrings.test:navigationIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_popupTheme com.coreman2200.ringstrings.test:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitle com.coreman2200.ringstrings.test:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.coreman2200.ringstrings.test:subtitleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitleTextColor com.coreman2200.ringstrings.test:subtitleTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_title com.coreman2200.ringstrings.test:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginBottom com.coreman2200.ringstrings.test:titleMarginBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginEnd com.coreman2200.ringstrings.test:titleMarginEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginStart com.coreman2200.ringstrings.test:titleMarginStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginTop com.coreman2200.ringstrings.test:titleMarginTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMargins com.coreman2200.ringstrings.test:titleMargins}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleTextAppearance com.coreman2200.ringstrings.test:titleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleTextColor com.coreman2200.ringstrings.test:titleTextColor}</code></td><td></td></tr>
            </table>
            @see #Toolbar_android_gravity
            @see #Toolbar_android_minHeight
@@ -7864,11 +8594,11 @@ containing a value of this type.
         public static final int[] Toolbar = {
             0x010100af, 0x01010140, 0x7f010003, 0x7f010006,
             0x7f01000a, 0x7f010016, 0x7f010017, 0x7f010018,
-            0x7f010019, 0x7f01001b, 0x7f0100fc, 0x7f0100fd,
-            0x7f0100fe, 0x7f0100ff, 0x7f010100, 0x7f010101,
-            0x7f010102, 0x7f010103, 0x7f010104, 0x7f010105,
-            0x7f010106, 0x7f010107, 0x7f010108, 0x7f010109,
-            0x7f01010a
+            0x7f010019, 0x7f01001b, 0x7f010106, 0x7f010107,
+            0x7f010108, 0x7f010109, 0x7f01010a, 0x7f01010b,
+            0x7f01010c, 0x7f01010d, 0x7f01010e, 0x7f01010f,
+            0x7f010110, 0x7f010111, 0x7f010112, 0x7f010113,
+            0x7f010114
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#gravity}
@@ -7883,7 +8613,7 @@ containing a value of this type.
         */
         public static final int Toolbar_android_minHeight = 1;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#collapseContentDescription}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#collapseContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7893,21 +8623,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:collapseContentDescription
+          @attr name com.coreman2200.ringstrings.test:collapseContentDescription
         */
         public static final int Toolbar_collapseContentDescription = 19;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#collapseIcon}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#collapseIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:collapseIcon
+          @attr name com.coreman2200.ringstrings.test:collapseIcon
         */
         public static final int Toolbar_collapseIcon = 18;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7919,11 +8649,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:contentInsetEnd
+          @attr name com.coreman2200.ringstrings.test:contentInsetEnd
         */
         public static final int Toolbar_contentInsetEnd = 6;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7935,11 +8665,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:contentInsetLeft
+          @attr name com.coreman2200.ringstrings.test:contentInsetLeft
         */
         public static final int Toolbar_contentInsetLeft = 7;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7951,11 +8681,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:contentInsetRight
+          @attr name com.coreman2200.ringstrings.test:contentInsetRight
         */
         public static final int Toolbar_contentInsetRight = 8;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7967,21 +8697,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:contentInsetStart
+          @attr name com.coreman2200.ringstrings.test:contentInsetStart
         */
         public static final int Toolbar_contentInsetStart = 5;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#logo}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#logo}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:logo
+          @attr name com.coreman2200.ringstrings.test:logo
         */
         public static final int Toolbar_logo = 4;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#logoDescription}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#logoDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7991,11 +8721,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:logoDescription
+          @attr name com.coreman2200.ringstrings.test:logoDescription
         */
         public static final int Toolbar_logoDescription = 22;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#maxButtonHeight}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#maxButtonHeight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -8007,11 +8737,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:maxButtonHeight
+          @attr name com.coreman2200.ringstrings.test:maxButtonHeight
         */
         public static final int Toolbar_maxButtonHeight = 17;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#navigationContentDescription}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#navigationContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -8021,31 +8751,31 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:navigationContentDescription
+          @attr name com.coreman2200.ringstrings.test:navigationContentDescription
         */
         public static final int Toolbar_navigationContentDescription = 21;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#navigationIcon}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#navigationIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:navigationIcon
+          @attr name com.coreman2200.ringstrings.test:navigationIcon
         */
         public static final int Toolbar_navigationIcon = 20;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#popupTheme}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:popupTheme
+          @attr name com.coreman2200.ringstrings.test:popupTheme
         */
         public static final int Toolbar_popupTheme = 9;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#subtitle}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -8055,21 +8785,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:subtitle
+          @attr name com.coreman2200.ringstrings.test:subtitle
         */
         public static final int Toolbar_subtitle = 3;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#subtitleTextAppearance}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#subtitleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:subtitleTextAppearance
+          @attr name com.coreman2200.ringstrings.test:subtitleTextAppearance
         */
         public static final int Toolbar_subtitleTextAppearance = 11;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#subtitleTextColor}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#subtitleTextColor}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -8080,11 +8810,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:subtitleTextColor
+          @attr name com.coreman2200.ringstrings.test:subtitleTextColor
         */
         public static final int Toolbar_subtitleTextColor = 24;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#title}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#title}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -8094,11 +8824,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:title
+          @attr name com.coreman2200.ringstrings.test:title
         */
         public static final int Toolbar_title = 2;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#titleMarginBottom}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#titleMarginBottom}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -8110,11 +8840,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:titleMarginBottom
+          @attr name com.coreman2200.ringstrings.test:titleMarginBottom
         */
         public static final int Toolbar_titleMarginBottom = 16;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#titleMarginEnd}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#titleMarginEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -8126,11 +8856,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:titleMarginEnd
+          @attr name com.coreman2200.ringstrings.test:titleMarginEnd
         */
         public static final int Toolbar_titleMarginEnd = 14;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#titleMarginStart}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#titleMarginStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -8142,11 +8872,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:titleMarginStart
+          @attr name com.coreman2200.ringstrings.test:titleMarginStart
         */
         public static final int Toolbar_titleMarginStart = 13;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#titleMarginTop}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#titleMarginTop}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -8158,11 +8888,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:titleMarginTop
+          @attr name com.coreman2200.ringstrings.test:titleMarginTop
         */
         public static final int Toolbar_titleMarginTop = 15;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#titleMargins}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#titleMargins}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -8174,21 +8904,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:titleMargins
+          @attr name com.coreman2200.ringstrings.test:titleMargins
         */
         public static final int Toolbar_titleMargins = 12;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#titleTextAppearance}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#titleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:titleTextAppearance
+          @attr name com.coreman2200.ringstrings.test:titleTextAppearance
         */
         public static final int Toolbar_titleTextAppearance = 10;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#titleTextColor}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#titleTextColor}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -8199,7 +8929,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:titleTextColor
+          @attr name com.coreman2200.ringstrings.test:titleTextColor
         */
         public static final int Toolbar_titleTextColor = 23;
         /** Attributes that can be used with a View.
@@ -8210,9 +8940,9 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td></td></tr>
            <tr><td><code>{@link #View_android_theme android:theme}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingEnd com.coreman2200.ringstrings:paddingEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingStart com.coreman2200.ringstrings:paddingStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_theme com.coreman2200.ringstrings:theme}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingEnd com.coreman2200.ringstrings.test:paddingEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingStart com.coreman2200.ringstrings.test:paddingStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_theme com.coreman2200.ringstrings.test:theme}</code></td><td></td></tr>
            </table>
            @see #View_android_focusable
            @see #View_android_theme
@@ -8221,8 +8951,8 @@ containing a value of this type.
            @see #View_theme
          */
         public static final int[] View = {
-            0x01010000, 0x010100da, 0x7f01010b, 0x7f01010c,
-            0x7f01010d
+            0x01010000, 0x010100da, 0x7f010115, 0x7f010116,
+            0x7f010117
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#focusable}
@@ -8237,7 +8967,7 @@ containing a value of this type.
         */
         public static final int View_android_theme = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#paddingEnd}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#paddingEnd}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -8249,11 +8979,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:paddingEnd
+          @attr name com.coreman2200.ringstrings.test:paddingEnd
         */
         public static final int View_paddingEnd = 3;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#paddingStart}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#paddingStart}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -8265,17 +8995,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:paddingStart
+          @attr name com.coreman2200.ringstrings.test:paddingStart
         */
         public static final int View_paddingStart = 2;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#theme}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#theme}
           attribute's value can be found in the {@link #View} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.coreman2200.ringstrings:theme
+          @attr name com.coreman2200.ringstrings.test:theme
         */
         public static final int View_theme = 4;
         /** Attributes that can be used with a ViewBackgroundHelper.
@@ -8285,15 +9015,15 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #ViewBackgroundHelper_android_background android:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.coreman2200.ringstrings:backgroundTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.coreman2200.ringstrings:backgroundTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.coreman2200.ringstrings.test:backgroundTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.coreman2200.ringstrings.test:backgroundTintMode}</code></td><td></td></tr>
            </table>
            @see #ViewBackgroundHelper_android_background
            @see #ViewBackgroundHelper_backgroundTint
            @see #ViewBackgroundHelper_backgroundTintMode
          */
         public static final int[] ViewBackgroundHelper = {
-            0x010100d4, 0x7f01010e, 0x7f01010f
+            0x010100d4, 0x7f010118, 0x7f010119
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#background}
@@ -8302,7 +9032,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ViewBackgroundHelper_android_background = 0;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#backgroundTint}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#backgroundTint}
           attribute's value can be found in the {@link #ViewBackgroundHelper} array.
 
 
@@ -8313,11 +9043,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.coreman2200.ringstrings:backgroundTint
+          @attr name com.coreman2200.ringstrings.test:backgroundTint
         */
         public static final int ViewBackgroundHelper_backgroundTint = 1;
         /**
-          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.R.attr#backgroundTintMode}
+          <p>This symbol is the offset where the {@link com.coreman2200.ringstrings.test.R.attr#backgroundTintMode}
           attribute's value can be found in the {@link #ViewBackgroundHelper} array.
 
 
@@ -8333,7 +9063,7 @@ containing a value of this type.
 <tr><td><code>multiply</code></td><td>14</td><td></td></tr>
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
-          @attr name com.coreman2200.ringstrings:backgroundTintMode
+          @attr name com.coreman2200.ringstrings.test:backgroundTintMode
         */
         public static final int ViewBackgroundHelper_backgroundTintMode = 2;
         /** Attributes that can be used with a ViewStubCompat.

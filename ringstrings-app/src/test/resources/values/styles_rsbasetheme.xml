@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="ButtonRSBaseTheme" parent="android:Widget.Holo.Light.Button">
+	  <item name="android:background">@drawable/rsbasetheme_btn_default_holo_light</item>
+  </style>
+
+  <style name="ImageButtonRSBaseTheme" parent="android:Widget.Holo.Light.ImageButton">
+	  <item name="android:background">@drawable/rsbasetheme_btn_default_holo_light</item>
+  </style>
+
+  <style name="SpinnerRSBaseTheme" parent="android:Widget.Holo.Light.Spinner">
+      <item name="android:background">@drawable/rsbasetheme_spinner_background_holo_light</item>
+      <item name="android:dropDownSelector">@drawable/rsbasetheme_list_selector_holo_light</item>
+  </style>
+
+  <style name="TabRSBaseTheme">
+      <item name="android:gravity">center_horizontal</item>
+      <item name="android:layout_width">0dip</item>
+      <item name="android:layout_weight">1</item>
+      <item name="android:minWidth">80dip</item>
+  </style>
+
+  <style name="TabTextRSBaseTheme">
+	  <item name="android:textColor">#000000</item>
+      <item name="android:textSize">12sp</item>
+      <item name="android:textStyle">bold</item>
+      <!-- v14 <item name="android:textAllCaps">true</item> -->
+      <item name="android:ellipsize">marquee</item>
+      <item name="android:maxLines">2</item>
+      <item name="android:maxWidth">180dip</item>
+  </style>
+
+  <style name="SeekBarRSBaseTheme" parent="android:Widget.Holo.Light.SeekBar">
+      <item name="android:progressDrawable">@drawable/rsbasetheme_scrubber_progress_horizontal_holo_light</item>
+      <item name="android:indeterminateDrawable">@drawable/rsbasetheme_scrubber_progress_horizontal_holo_light</item>
+      <item name="android:thumb">@drawable/rsbasetheme_scrubber_control_selector_holo_light</item>
+  </style>
+
+</resources>

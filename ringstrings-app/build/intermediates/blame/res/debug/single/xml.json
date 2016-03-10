@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/new/git/ringstrings/ringstrings-app/build/intermediates/res/merged/debug/xml/gtags.xml",
+        "source": "/Users/new/git/ringstrings/ringstrings-app/src/main/res/xml/gtags.xml"
+    },
+    {
+        "merged": "/Users/new/git/ringstrings/ringstrings-app/build/intermediates/res/merged/debug/xml/gent.xml",
+        "source": "/Users/new/git/ringstrings/ringstrings-app/src/main/res/xml/gent.xml"
+    }
+]
