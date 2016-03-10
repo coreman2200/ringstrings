@@ -21,5 +21,9 @@ public enum AstralStrata {
     ASTRALASPECT,
     ASTRALGROUP,
     ASTRALCHART,
-    RELATIONALASTRALMAP
+    RELATIONALASTRALMAP;
+
+    public static final boolean isAstralSymbol(Enum<? extends Enum<?>> type) {
+        return type instanceof AstralStrata;
+    }
 }

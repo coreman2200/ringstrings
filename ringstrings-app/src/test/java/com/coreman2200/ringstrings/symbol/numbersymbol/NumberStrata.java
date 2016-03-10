@@ -19,5 +19,9 @@ public enum NumberStrata {
     DERIVEDNUMBER,
     GROUPEDNUMBERS,
     CHARTEDNUMBERS,
-    RELATIONALNUMBERMAP
+    RELATIONALNUMBERMAP;
+
+    public static final boolean isNumberSymbol(Enum<? extends Enum<?>> type) {
+        return type instanceof NumberStrata;
+    }
 }

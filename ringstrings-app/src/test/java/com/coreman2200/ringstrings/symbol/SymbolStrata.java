@@ -24,9 +24,8 @@ import java.util.Arrays;
 public enum SymbolStrata {
     SYMBOL(NumberStrata.BASENUMBER, AstralStrata.ASTRALBODY),
     RELATED_SYMBOLS(NumberStrata.DERIVEDNUMBER,
-                    AstralStrata.ASTRALZODIAC, AstralStrata.ASTRALHOUSE,
                     AstralStrata.ASTRALASPECT),
-    GROUP(NumberStrata.GROUPEDNUMBERS, AstralStrata.ASTRALGROUP ),
+    GROUP(NumberStrata.GROUPEDNUMBERS, AstralStrata.ASTRALGROUP, AstralStrata.ASTRALZODIAC, AstralStrata.ASTRALHOUSE ),
     CHART(NumberStrata.CHARTEDNUMBERS, AstralStrata.ASTRALCHART),
     RELATIONAL_MAP(NumberStrata.RELATIONALNUMBERMAP, AstralStrata.RELATIONALASTRALMAP),
     ENTITY(EntityStrata.TAG, EntityStrata.LIGHT, EntityStrata.RING, EntityStrata.PROFILE, EntityStrata.USER,

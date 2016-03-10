@@ -23,5 +23,9 @@ public enum EntityStrata {
     SOCIAL,
     GROUPED,
     ALL,
-    GLOBAL
+    GLOBAL;
+
+    public static final boolean isEntitySymbol(Enum<? extends Enum<?>> type) {
+        return type instanceof EntityStrata;
+    }
 }
