@@ -1,5 +1,7 @@
 package com.coreman2200.ringstrings.rsdisplay;
 
+import android.app.Application;
+
 /**
  * RSApp
  * description
@@ -14,5 +16,5 @@ package com.coreman2200.ringstrings.rsdisplay;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class RSApp {
+public class RSApp extends Application {
 }

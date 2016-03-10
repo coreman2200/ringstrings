@@ -1,21 +1,12 @@
 package com.coreman2200.ringstrings.rsdisplay.activity;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.StreamCorruptedException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ArrayBlockingQueue;
 
 //import java.util.GregorianCalendar;
 
-import android.app.Activity;
 //import android.opengl.GLSurfaceView.GLWrapper;
 import android.content.res.Resources;
-import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 //import javax.microedition.khronos.opengles.GL;
@@ -25,23 +16,27 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.MotionEvent;
-import android.widget.Toast;
-import android.os.AsyncTask;
+import android.view.View;
 
 import com.coreman2200.ringstrings.R;
-import com.coreman2200.ringstrings.rsdisplay.fragments.SymbolViewContentFragment;
+import com.coreman2200.ringstrings.rsdisplay.model.FloatingActionButton;
+import com.coreman2200.ringstrings.rsdisplay.fragments.FragmentDrawer;
+import com.coreman2200.ringstrings.rsdisplay.fragments.FragmentSymbolViewContent;
 import com.coreman2200.ringstrings.rsdisplay.fragments.SymbolViewTabs;
 
 
-public class RingStringsActivity extends AppCompatActivity implements SymbolViewContentFragment.OnFragmentInteractionListener
+public class RingStringsActivity extends AppCompatActivity implements FragmentSymbolViewContent.OnFragmentInteractionListener, FragmentDrawer.FragmentDrawerListener
 {
+	public static final String TAG = "RingStringsActivity";
+
 	private Toolbar toolbar;
 	private TabLayout tabLayout;
 	private ViewPager viewPager;
+    private FragmentDrawer drawerFragment;
+    private FloatingActionButton fab;
 
  	public void onCreate(Bundle paramBundle) {
 		super.onCreate(paramBundle);
@@ -51,23 +46,35 @@ public class RingStringsActivity extends AppCompatActivity implements SymbolView
 		toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 
+        drawerFragment = (FragmentDrawer)
+                getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
+        drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar);
+        //drawerFragment.setDrawerListener(this);
+
         viewPager = (ViewPager)findViewById(R.id.viewpager);
 		setupViewPager(viewPager);
 
 		tabLayout = (TabLayout)findViewById(R.id.tabs);
 		tabLayout.setupWithViewPager(viewPager);
+
+        fab = (FloatingActionButton)findViewById(R.id.fab_1);
+
   	}
 
 	private void setupViewPager(ViewPager viewPager) {
 		ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 		for (SymbolViewTabs tab : SymbolViewTabs.values()) {
-			adapter.addFragment(new SymbolViewContentFragment(), tab);
+			adapter.addFragment(FragmentSymbolViewContent.newInstance(tab.getTagId(), tab.getLayoutForTag()), tab);
 		}
 		viewPager.setAdapter(adapter);
 	}
 
     public void onFragmentInteraction(Uri uri) {
-        return;
+    }
+
+    @Override
+    public void onDrawerItemSelected(View view, int position) {
+
     }
 
 	class ViewPagerAdapter extends FragmentPagerAdapter {

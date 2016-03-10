@@ -1,7 +1,6 @@
 package com.coreman2200.ringstrings.rsdisplay.fragments;
 
 import android.content.res.Resources;
-import android.support.design.BuildConfig;
 
 import com.coreman2200.ringstrings.R;
 
@@ -20,19 +19,29 @@ import com.coreman2200.ringstrings.R;
  */
 
 public enum SymbolViewTabs {
-    SYMBOLVIEW_DETAIL_TAB(R.string.symbolview_details),
-    SYMBOLVIEW_RELATED_TAB(R.string.symbolview_related),
-    SYMBOLVIEW_COMPARED_TAB(R.string.symbolview_compared),
-    SYMBOLVIEW_PROFILE_TAB(R.string.symbolview_profile);
+    SYMBOLVIEW_DETAIL_TAB(R.string.symbolview_details, R.layout.fragment_symbolviewcontent_empty),
+    SYMBOLVIEW_RELATED_TAB(R.string.symbolview_related, R.layout.fragment_symbolviewcontent_empty),
+    SYMBOLVIEW_COMPARED_TAB(R.string.symbolview_compared, R.layout.fragment_symbolviewcontent_empty),
+    SYMBOLVIEW_PROFILE_TAB(R.string.symbolview_profile, R.layout.fragment_symbolviewcontent_empty);
 
     private final int mTagNameStringId;
+    private final int mTabLayoutId;
 
-    SymbolViewTabs(final int stringRezId) {
+    SymbolViewTabs(final int stringRezId, final int layoutId) {
         mTagNameStringId = stringRezId;
+        mTabLayoutId = layoutId;
     }
 
     public String getTagName(Resources rez) {
         return rez.getString(mTagNameStringId);
+    }
+
+    public int getLayoutForTag() {
+        return mTabLayoutId;
+    }
+
+    public int getTagId() {
+        return mTagNameStringId;
     }
     public int getTagPosition() { return this.ordinal(); }
 
