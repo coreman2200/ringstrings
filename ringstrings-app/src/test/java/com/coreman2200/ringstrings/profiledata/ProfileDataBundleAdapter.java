@@ -84,5 +84,8 @@ public class ProfileDataBundleAdapter implements IProfileDataBundle {
         return mCurrentLoc;
     }
 
-
+    @Override
+    public int getProfileId() {
+        return mProfileData.profile_id;
+    }
 }

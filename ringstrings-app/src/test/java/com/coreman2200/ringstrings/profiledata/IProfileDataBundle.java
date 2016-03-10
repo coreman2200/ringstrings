@@ -3,6 +3,7 @@ package com.coreman2200.ringstrings.profiledata;
 import android.location.Location;
 
 import com.coreman2200.ringstrings.numbersystem.NumberSystemType;
+import com.coreman2200.ringstrings.protos.LocalProfileDataBundle;
 
 import org.robolectric.shadows.ShadowLocation;
 
@@ -32,4 +33,5 @@ public interface IProfileDataBundle {
     int getBirthYear();
     Location getBirthLocation();
     Location getCurrentLocation();
+    int getProfileId();
 }
