@@ -27,8 +27,8 @@ abstract public class AstralSymbolImpl extends AbstractSymbol<IAstralSymbol> imp
         super(symbolid);
         mDegree = degree;
 
-        //if (symbolStrata().compareTo(SymbolStrata.RELATED_SYMBOLS) <= 0)
-        //    addSymbolDataForKey(symbolid, this);
+        if (symbolStrata().compareTo(SymbolStrata.RELATED_SYMBOLS) <= 0)
+            addSymbolDataForKey(symbolid, this);
     }
 
     public final double getAstralSymbolDegree() {
