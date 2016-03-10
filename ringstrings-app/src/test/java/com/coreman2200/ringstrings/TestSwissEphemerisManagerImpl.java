@@ -6,6 +6,7 @@ import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
 import com.coreman2200.ringstrings.profiledata.ProfileDataBundleAdapter;
 import com.coreman2200.ringstrings.profiledata.TestDefaultDataBundles;
 import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
+import com.coreman2200.ringstrings.rsdisplay.activity.RingStringsActivity;
 import com.coreman2200.ringstrings.swisseph.ISwissEphemerisManager;
 import com.coreman2200.ringstrings.swisseph.SwissEphemerisManagerImpl;
 

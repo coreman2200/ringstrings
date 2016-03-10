@@ -7,6 +7,7 @@ import com.coreman2200.ringstrings.profiledata.ProfileDataBundleAdapter;
 import com.coreman2200.ringstrings.profiledata.TestDefaultDataBundles;
 import com.coreman2200.ringstrings.protos.LocalProfileDataBundle;
 import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
+import com.coreman2200.ringstrings.rsdisplay.activity.RingStringsActivity;
 
 import org.junit.Before;
 import org.junit.Test;

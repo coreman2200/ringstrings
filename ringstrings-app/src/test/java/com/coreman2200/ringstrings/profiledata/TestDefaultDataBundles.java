@@ -108,7 +108,7 @@ public final class TestDefaultDataBundles {
     private final static String[] LAST_APPENDS = {"s", "enstein", "lion", "son", "short", "dumdiddly", "inions", "idious-Law"};
 
     private static final com.coreman2200.ringstrings.protos.RingStringsAppSettings.NumerologySettings.NumberSystemType DFLT_NUMBERSYSTEM = RingStringsAppSettings.NumerologySettings.NumberSystemType.PYTHAGOREAN;
-    private static final double MAX_ORB = 2.0;
+    private static final double DFLT_MAX_ORB = 2.0;
 
     private static final double MIN_LAT = -60.0;
     private static final double MAX_LAT = 120.0;
@@ -137,7 +137,7 @@ public final class TestDefaultDataBundles {
         LocalProfileDataBundle.Placement birthplacement = produceProfilePlacement(birthloc, birthdate.getTimeInMillis(), tz.getID());
 
         return new LocalProfileDataBundle.Builder().
-                profile_id(TEST_PROFILES.CoryH.ordinal()).
+                profile_id(generateProfileId()).
                 full_name(fullname).
                 display_name(displayname).
                 birth_placement(birthplacement).
@@ -159,7 +159,7 @@ public final class TestDefaultDataBundles {
         LocalProfileDataBundle.Placement birthplacement = produceProfilePlacement(birthloc, birthdate.getTimeInMillis(), tz.getID());
 
         return new LocalProfileDataBundle.Builder().
-                profile_id(TEST_PROFILES.KaylaP.ordinal()).
+                profile_id(generateProfileId()).
                 full_name(fullname).
                 display_name(displayname).
                 birth_placement(birthplacement).
@@ -194,10 +194,14 @@ public final class TestDefaultDataBundles {
 
     public static final LocalProfileDataBundle generateRandomProfile() {
         return new LocalProfileDataBundle.Builder().
-                profile_id((int)(Math.random()*1000)).
+                profile_id(generateProfileId()).
                 full_name(generateRandomProfileName()).
                 birth_placement(generateRandomProfilePlacement()).
                 build();
+    }
+
+    private static final int generateProfileId() {
+        return 1+(int)(Math.random()*(2 << 20));
     }
 
     private static final LocalProfileDataBundle.Name generateRandomProfileName() {
@@ -253,7 +257,7 @@ public final class TestDefaultDataBundles {
 
     private static final RingStringsAppSettings.AstrologySettings produceAstroSettings(String dir) {
         return new RingStringsAppSettings.AstrologySettings.Builder().ephe_dir(dir).
-                max_orb(MAX_ORB).
+                max_orb(DFLT_MAX_ORB).
                 build();
     }
 

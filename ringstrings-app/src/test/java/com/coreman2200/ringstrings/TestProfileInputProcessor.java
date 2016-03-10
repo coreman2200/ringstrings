@@ -7,7 +7,10 @@ import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
 import com.coreman2200.ringstrings.profiledata.ProfileDataBundleAdapter;
 import com.coreman2200.ringstrings.profiledata.TestDefaultDataBundles;
 import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
+import com.coreman2200.ringstrings.rsdisplay.activity.RingStringsActivity;
 import com.coreman2200.ringstrings.swisseph.ISwissephFileHandler;
+import com.coreman2200.ringstrings.symbol.entitysymbol.EntityStrata;
+import com.coreman2200.ringstrings.symbol.entitysymbol.Profile.IProfileSymbol;
 import com.coreman2200.ringstrings.symbol.entitysymbol.Profile.LocalProfileSymbolImpl;
 import com.coreman2200.ringstrings.symbol.entitysymbol.Profile.UserProfileSymbolImpl;
 import com.coreman2200.ringstrings.symbol.symbolinterface.IChartedSymbols;
@@ -50,12 +53,12 @@ public class TestProfileInputProcessor {
         mTestActivity = Robolectric.setupActivity(RingStringsActivity.class);
         mAppSettings = TestDefaultDataBundles.produceDefaultAppSettingsBundle(mTestActivity);
         mTestProfile = new ProfileDataBundleAdapter(TestDefaultDataBundles.testProfileBundleCoryH);
-        mTestProcessor = new ProfileInputProcessor(mTestProfile, mAppSettings);
+        mTestProcessor = new ProfileInputProcessor(mAppSettings);
     }
 
     @Test
     public void testProfileInputProcessorProducesUserProfile() {
-        UserProfileSymbolImpl user = new UserProfileSymbolImpl(mTestProfile, mAppSettings);
+        IProfileSymbol user = mTestProcessor.produceProfile(mTestProfile, EntityStrata.USER);
         user.testGenerateLogs();
     }
 
@@ -69,12 +72,10 @@ public class TestProfileInputProcessor {
 
         long loopstart = System.currentTimeMillis();
 
-        Context context = mTestActivity.getApplicationContext();
-
-        Collection<IChartedSymbols> charts;
         for (int i = 0; i < testCount; i++) {
             mTestProfile = new ProfileDataBundleAdapter(TestDefaultDataBundles.generateRandomProfile());
-            LocalProfileSymbolImpl profile = new LocalProfileSymbolImpl(mTestProfile, mAppSettings);
+            mTestProcessor = new ProfileInputProcessor(mAppSettings);
+            IProfileSymbol profile = mTestProcessor.produceProfile(mTestProfile, EntityStrata.PROFILE);
             //user.testGenerateLog();
 
             int gsize = profile.size();

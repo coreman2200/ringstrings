@@ -2,6 +2,7 @@ package com.coreman2200.ringstrings;
 
 import android.app.Activity;
 
+import com.coreman2200.ringstrings.rsdisplay.activity.RingStringsActivity;
 import com.coreman2200.ringstrings.swisseph.ISwissephFileHandler;
 import com.coreman2200.ringstrings.swisseph.SwissephFileHandlerImpl;
 

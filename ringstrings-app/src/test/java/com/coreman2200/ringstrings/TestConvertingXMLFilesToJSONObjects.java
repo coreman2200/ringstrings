@@ -2,6 +2,8 @@ package com.coreman2200.ringstrings;
 
 import android.app.Activity;
 
+import com.coreman2200.ringstrings.rsdisplay.activity.RingStringsActivity;
+
 import org.json.JSONArray;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,8 +14,6 @@ import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowResources;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;

@@ -13,6 +13,7 @@ import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
 import com.coreman2200.ringstrings.profiledata.ProfileDataBundleAdapter;
 import com.coreman2200.ringstrings.profiledata.TestDefaultDataBundles;
 import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
+import com.coreman2200.ringstrings.rsdisplay.activity.RingStringsActivity;
 import com.coreman2200.ringstrings.symbol.SymbolStrata;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.NumerologicalChartProcessor;
 import com.coreman2200.ringstrings.symbol.inputprocessor.numerology.grouped.IGroupedNumberSymbolsInputProcessor;
@@ -53,7 +54,7 @@ public class TestSymbolStrata {
     public void setup() {
         mTestActivity = Robolectric.setupActivity(RingStringsActivity.class);
         mAppSettings = TestDefaultDataBundles.produceDefaultAppSettingsBundle(mTestActivity);
-        mTestProcessor = new NumerologicalChartProcessor(mTestProfile, mAppSettings);
+        mTestProcessor = new NumerologicalChartProcessor(mAppSettings);
     }
 
     @Test
@@ -73,7 +74,7 @@ public class TestSymbolStrata {
 
     @Test
     public void testNumerologicalChartStratas() {
-        mTestProcessor.produceGroupedNumberSymbolsForProfile();
+        mTestProcessor.produceGroupedNumberSymbolsForProfile(mTestProfile);
     }
 
 }

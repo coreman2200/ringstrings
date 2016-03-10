@@ -3,10 +3,10 @@ package com.coreman2200.ringstrings;
 import android.app.Activity;
 
 import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
-import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
 import com.coreman2200.ringstrings.profiledata.ProfileDataBundleAdapter;
 import com.coreman2200.ringstrings.profiledata.TestDefaultDataBundles;
 import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
+import com.coreman2200.ringstrings.rsdisplay.activity.RingStringsActivity;
 import com.coreman2200.ringstrings.swisseph.ISwissephFileHandler;
 import com.coreman2200.ringstrings.symbol.chart.Charts;
 import com.coreman2200.ringstrings.symbol.astralsymbol.grouped.CelestialBodies;
@@ -48,26 +48,26 @@ public class TestAstrologicalChartInputProcessorImpl {
         mTestActivity = Robolectric.setupActivity(RingStringsActivity.class);
         mAppSettings = TestDefaultDataBundles.produceDefaultAppSettingsBundle(mTestActivity);
         mTestProfile = new ProfileDataBundleAdapter(TestDefaultDataBundles.testProfileBundleCoryH);
-        mTestProcessor = new AstrologicalChartInputProcessorImpl(mTestProfile, mAppSettings);
+        mTestProcessor = new AstrologicalChartInputProcessorImpl(mAppSettings);
     }
 
     @Test
     public void testProcessorProducesBirthChart() {
-        IChartedAstralSymbols chart = mTestProcessor.produceAstrologicalChart(Charts.ASTRAL_NATAL);
+        IChartedAstralSymbols chart = mTestProcessor.produceAstrologicalChart(mTestProfile, Charts.ASTRAL_NATAL);
         assert (chart != null);
         //chart.testGenerateLoggingsForFullChart();
     }
 
     @Test
     public void testProcessorProducesCurrentChart() {
-        IChartedAstralSymbols chart = mTestProcessor.produceAstrologicalChart(Charts.ASTRAL_CURRENT);
+        IChartedAstralSymbols chart = mTestProcessor.produceAstrologicalChart(mTestProfile, Charts.ASTRAL_CURRENT);
         assert (chart != null);
         //chart.testGenerateLoggingsForFullChart();
     }
 
     @Test
     public void testChartProducesCorrectHouseForBodies() {
-        IChartedAstralSymbols chart = mTestProcessor.produceAstrologicalChart(Charts.ASTRAL_NATAL);
+        IChartedAstralSymbols chart = mTestProcessor.produceAstrologicalChart(mTestProfile, Charts.ASTRAL_NATAL);
 
         for (CelestialBodies body : CelestialBodies.values()) {
             assert (chart.getHouseForBody(body) != null);
@@ -76,7 +76,7 @@ public class TestAstrologicalChartInputProcessorImpl {
 
     @Test
     public void testChartProducesCorrectSignForBodies() {
-        IChartedAstralSymbols chart = mTestProcessor.produceAstrologicalChart(Charts.ASTRAL_NATAL);
+        IChartedAstralSymbols chart = mTestProcessor.produceAstrologicalChart(mTestProfile, Charts.ASTRAL_NATAL);
 
         for (CelestialBodies body : CelestialBodies.values()) {
             assert (chart.getSignForBody(body) != null);
@@ -96,7 +96,7 @@ public class TestAstrologicalChartInputProcessorImpl {
         IChartedAstralSymbols chart;
         for (int i = 0; i < testCount; i++) {
             mTestProfile = new ProfileDataBundleAdapter(TestDefaultDataBundles.generateRandomProfile());
-            chart = mTestProcessor.produceAstrologicalChart(Charts.ASTRAL_NATAL);
+            chart = mTestProcessor.produceAstrologicalChart(mTestProfile, Charts.ASTRAL_NATAL);
 
             int gsize = chart.size();
             averageSize += gsize;
