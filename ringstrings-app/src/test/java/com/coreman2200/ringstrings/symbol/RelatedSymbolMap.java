@@ -94,6 +94,10 @@ public class RelatedSymbolMap<T extends ISymbol> {
         return mSortedInstanceSet;
     }
 
+    public Map<Enum<? extends Enum<?>>, T> getUnsortedSymbolMap() {
+        return mBackingUnsortedMap;
+    }
+
     public Collection<Enum<? extends Enum<?>>> getUnsortedSymbolIDs() {
         return mBackingUnsortedMap.keySet();
     }

@@ -1,6 +1,9 @@
 package com.coreman2200.ringstrings.symbol.symbolinterface;
 
 import com.coreman2200.ringstrings.symbol.entitysymbol.EntityStrata;
+import com.coreman2200.ringstrings.symbol.entitysymbol.Tags.TagSymbols;
+
+import java.util.Collection;
 
 /**
  * IEntitySymbol
@@ -17,5 +20,6 @@ import com.coreman2200.ringstrings.symbol.entitysymbol.EntityStrata;
  */
 
 public interface IEntitySymbol extends IRelatedSymbolMapping {
-
+    Collection<TagSymbols> getQualities();
+    int getTagCount(TagSymbols tag);
 }

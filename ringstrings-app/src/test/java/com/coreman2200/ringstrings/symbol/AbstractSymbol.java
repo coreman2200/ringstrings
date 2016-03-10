@@ -93,11 +93,11 @@ abstract public class AbstractSymbol<T extends ISymbol> implements ISymbol {
     }
 
     protected final Collection<T> getAllSymbols() throws NullPointerException {
-        return getValuesFromProducedSymbolSet();
+        return produceSymbol().values();
     }
 
     protected final Collection<Enum<? extends Enum<?>>> getAllSymbolIDs() throws NullPointerException {
-        return getKeysFromProducedSymbolSet();
+        return produceSymbol().keySet();
     }
 
     protected final Collection<Enum<? extends Enum<?>>> getSortedSymbolIDs(RelatedSymbolMap.SortOrder order) {
@@ -110,6 +110,10 @@ abstract public class AbstractSymbol<T extends ISymbol> implements ISymbol {
 
     protected final Collection<Map.Entry<Enum<? extends Enum<?>>, T>> getSortedMap() {
         return symbolDataMap.getSortedSymbolMap();
+    }
+
+    protected final Map<Enum<? extends Enum<?>>, T> getUnsortedMap() {
+        return symbolDataMap.getUnsortedSymbolMap();
     }
 
     protected HashMap<Enum<? extends Enum<?>>, T> prepareSymbolToStore() {
@@ -130,44 +134,33 @@ abstract public class AbstractSymbol<T extends ISymbol> implements ISymbol {
     public final Enum<? extends Enum<?>> symbolID() { return mSymbolID; }
 
     public final Collection<Enum<? extends Enum<?>>> symbolIDCollection() {
-        return getKeysFromProducedSymbolSet();
+        return produceSymbol().keySet();
     }
 
-    private final Collection<Enum<? extends Enum<?>>> getKeysFromProducedSymbolSet() {
-        Set<Map.Entry<Enum<? extends Enum<?>>, T>> set = produceSymbol();
-        Collection<Enum<? extends Enum<?>>> symbolIDs = new ArrayList<>();
+    public final Map<Enum<? extends Enum<?>>, T> produceSymbol() {
+        Map<Enum<? extends Enum<?>>, T> map = new HashMap<>();
+        map.putAll(symbolDataMap.getUnsortedSymbolMap());
 
-        for (Map.Entry<Enum<? extends Enum<?>>, T> entry : set) {
-            symbolIDs.add(entry.getKey());
+        if (symbolStrata().compareTo(SymbolStrata.RELATED_SYMBOLS) > 0) {
+            Collection<T> symbols = symbolDataMap.getUnsortedSymbols();
+            for (ISymbol symbol : symbols)
+                map.putAll(symbol.produceSymbol());
+
         }
-        return symbolIDs;
+
+        return map;
     }
 
-    private final Collection<T> getValuesFromProducedSymbolSet() {
-        Set<Map.Entry<Enum<? extends Enum<?>>, T>> set = produceSymbol();
-        Collection<T> symbols = new ArrayList<>();
-
-        for (Map.Entry<Enum<? extends Enum<?>>, T> entry : set) {
-            symbols.add(entry.getValue());
-        }
-        return symbols;
-    }
-
-    public final Set<Map.Entry<Enum<? extends Enum<?>>, T>> produceSymbol() {
-        Set<Map.Entry<Enum<? extends Enum<?>>, T>> set = new HashSet<>();
-        set.addAll(symbolDataMap.getSortedSymbolMap());
-
-        Collection<T> symbols = symbolDataMap.getUnsortedSymbols();
-
-        for (ISymbol symbol : symbols) {
-            if (symbol.symbolStrata().compareTo(SymbolStrata.RELATED_SYMBOLS) >= 0)
-                set.addAll(symbol.produceSymbol());
-        }
-
-        return set;
+    public final boolean containsSymbol(ISymbol symbol) {
+        return getAllSymbols().contains(symbol);
     }
 
     public final SymbolStrata symbolStrata() {return SymbolStrata.getSymbolStrataFor(mSymbolStrata);}
+
+    @Override
+    public Enum<? extends Enum<?>> symbolType() {
+        return mSymbolStrata;
+    }
 
     public void testGenerateLogs() {
         for (Map.Entry<Enum<? extends Enum<?>>, T> entry: symbolDataMap.getSortedSymbolMap()) {
@@ -186,8 +179,6 @@ abstract public class AbstractSymbol<T extends ISymbol> implements ISymbol {
                 symbol.testGenerateLogs();
         }
     }
-
-    public final static produceSymbolFromData()
 
     // TODO: Stubbed.
     protected final void storeSymbol()  {};

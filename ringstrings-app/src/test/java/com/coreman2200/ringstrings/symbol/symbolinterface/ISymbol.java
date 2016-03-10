@@ -24,8 +24,10 @@ public interface ISymbol<T extends ISymbol> {
     String name();
     int size();
     SymbolStrata symbolStrata();
+    Enum<? extends Enum<?>> symbolType();
     Enum<? extends Enum<?>> symbolID();
+    boolean containsSymbol(ISymbol symbol);
     Collection<Enum<? extends Enum<?>>> symbolIDCollection();
-    Set<Map.Entry<Enum<? extends Enum<?>>, T>> produceSymbol();
+    Map<Enum<? extends Enum<?>>, T> produceSymbol();
     void testGenerateLogs();
 }

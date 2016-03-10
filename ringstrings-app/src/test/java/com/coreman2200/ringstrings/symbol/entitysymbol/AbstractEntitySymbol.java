@@ -1,5 +1,6 @@
 package com.coreman2200.ringstrings.symbol.entitysymbol;
 
+import com.coreman2200.ringstrings.protos.SymbolDescription;
 import com.coreman2200.ringstrings.symbol.AbstractSymbol;
 import com.coreman2200.ringstrings.symbol.RelatedSymbolMap;
 import com.coreman2200.ringstrings.symbol.SymbolStrata;
@@ -15,8 +16,14 @@ import com.coreman2200.ringstrings.symbol.symbolinterface.ISymbol;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 /**
  * AbstractEntitySymbol
@@ -34,87 +41,122 @@ import java.util.Set;
  */
 
 abstract public class AbstractEntitySymbol<T extends ISymbol> extends AbstractSymbol<T> implements IEntitySymbol {
-
-    protected ISymbol mSymbol;
+    protected Map<TagSymbols, Integer> mQualityCountMap;
+    protected SortedSet<Map.Entry<TagSymbols, Integer>> mSortedInstanceSet;
+    protected final ISymbol mSymbol;
 
     protected AbstractEntitySymbol(ISymbol symbol) {
         super(symbol.symbolID());
         mSymbol = symbol;
+        addSymbolMap(mSymbol.produceSymbol());
+        produceQualities();
     }
 
-    protected final void produceQualities() {
+    private final void produceQualities() {
+        Comparator comparator = new QualityComparator();
+        mQualityCountMap = new HashMap<>();
+        mSortedInstanceSet = new TreeSet<>(comparator);
+        Map<Enum<? extends Enum<?>>, T> symbolmap = produceSymbol();
 
-        Set<Map.Entry<Enum<? extends Enum<?>>, T>> symbols = getAllEntriesForSymbol(mSymbol);
 
+        for (Enum<? extends Enum<?>> entry : symbolmap.keySet()) {
+            ISymbol symbol = symbolmap.get(entry);
 
-        for (Map.Entry<Enum<? extends Enum<?>>, T> entry : symbols) {
-            T entrySymbol = entry.getValue();
-            ISymbolDef symboldef = getSymbolDefForKey(entrySymbol.symbolID());
-            if ((entrySymbol.symbolStrata().compareTo(SymbolStrata.RELATED_SYMBOLS) <= 0) && symboldef != null) {
-                aggregateTags(symboldef.getQualities());
+            //
+            SymbolDescription symboldef = getSymbolDefForKey(entry);
+            if ((symbol.symbolStrata().compareTo(SymbolStrata.CHART) < 0) && symboldef != null) {
+                aggregateTags(symboldef.qualities);
             }
 
-            Set<Map.Entry<Enum<? extends Enum<?>>, T>> subsymbols = getAllEntriesForSymbol(entry.getValue());
-            for (T ss : getFilteredSymbolListFromSet(subsymbols)) {
-                ISymbolDef sd = getSymbolDefForKey(ss.symbolID());
+
+            Map<Enum<? extends Enum<?>>, ISymbol> subsymbols = symbol.produceSymbol();
+            for (ISymbol ss : chartedSymbolsListFromMap(subsymbols)) {
+                SymbolDescription sd = getSymbolDefForKey(ss.symbolID());
                 if (sd != null) {
-                    aggregateTags(sd.getQualities());
+                    aggregateTags(sd.qualities);
                 }
             }
 
+
         }
-        System.out.println("Total Unique Quality: " + symbolIDCollection().size() + "(vs " + TagSymbols.values().length + " overall)");
-        System.out.println("Total Symbols Aggregated: " + symbols.size());
+
+        mSortedInstanceSet.addAll(mQualityCountMap.entrySet());
+
+        /*
+        Iterator<Map.Entry<TagSymbols, Integer>> iter = mSortedInstanceSet.iterator();
+
+        System.out.println(mSymbol.name());
+        System.out.println("Total Unique Quality: " + mQualityCountMap.size() + "(vs " + TagSymbols.values().length + " overall)");
+
+        while (iter.hasNext()) {
+            Map.Entry<TagSymbols, Integer> entry = iter.next();
+            System.out.print(entry.getKey().name() + "(" + entry.getValue() + ") ");
+        }
+
+        System.out.println();
+        System.out.println("Total Symbols Aggregated: " + symbolmap.size());
+        */
 
     }
 
-    private final Set<Map.Entry<Enum<? extends Enum<?>>, T>> getAllEntriesForSymbol(ISymbol symbol) {
-        return symbol.produceSymbol();
-    }
 
-    private final ISymbolDef getSymbolDefForKey(Enum<? extends Enum<?>> id) {
+
+    protected final SymbolDescription getSymbolDefForKey(Enum<? extends Enum<?>> id) {
         ISymbolDefFileHandler handler = SymbolDefFileHandlerImpl.getInstance();
         return handler.produceSymbolDefForSymbol(id);
     }
 
-    private final Collection<T> getFilteredSymbolListFromSet(Set<Map.Entry<Enum<? extends Enum<?>>, T>> set) {
-        Collection<T> list = new ArrayList<>();
-        for (Map.Entry<Enum<? extends Enum<?>>, T> elem : set) {
-            if (elem.getValue().symbolStrata().compareTo(SymbolStrata.RELATED_SYMBOLS) <= 0)
-                list.add(elem.getValue());
+    private final Collection<ISymbol> chartedSymbolsListFromMap(Map<Enum<? extends Enum<?>>, ISymbol> map) {
+        Collection<ISymbol> list = new ArrayList<>();
+        for (ISymbol elem : map.values()) {
+            if (elem.symbolStrata().compareTo(SymbolStrata.CHART) < 0)
+                list.add(elem);
         }
         return list;
     }
 
-    protected final void aggregateTags(Collection<Enum<? extends Enum<?>>> tags) {
-        for (Enum<? extends Enum<?>> tag : tags)
+    protected final void aggregateTags(List<String> tagnames) {
+        for (String tag : tagnames)
+            addQuality(TagSymbols.getTagForString(tag), 1);
+    }
+
+    protected final void aggregateTags(Collection<TagSymbols> tags) {
+        for (TagSymbols tag : tags)
             addQuality(tag, 1);
     }
 
-    protected final void aggregateTags(Map<Enum<? extends Enum<?>>, IValueSymbol> qualities) {
-        for (Enum<? extends Enum<?>> tag : qualities.keySet()) {
-            addQuality(tag, qualities.get(tag).getValue());
+    protected final void aggregateTags(Map<TagSymbols, Integer> tags) {
+        for (TagSymbols tag : tags.keySet()) {
+            addQuality(tag, tags.get(tag));
         }
     }
 
-    private final void addQuality(Enum<? extends Enum<?>> tag, Integer count) {
-        IValueSymbol tagCount;
+    private final void addQuality(TagSymbols tag, Integer count) {
+        Integer current = mQualityCountMap.get(tag);
+        if (current == null)
+            mQualityCountMap.put(tag, count);
+        else
+            mQualityCountMap.put(tag, current+count);
+    }
 
-        try {
-            tagCount = (IValueSymbol)getSymbolDataForKey(tag);
-            tagCount.add(count);
-            updateSymbolDataForKey(tag, (T) tagCount);
-
-        } catch (NullPointerException e) {
-            tagCount = new ValueSymbolImpl(count);
-            addSymbolDataForKey(tag, (T) tagCount);
-        }
+    public final Collection<TagSymbols> getQualities() {
+        return mQualityCountMap.keySet();
 
     }
 
-    public final Collection<Enum<? extends Enum<?>>> getQualities() {
-        return getSortedSymbolIDs(RelatedSymbolMap.SortOrder.DESCENDING);
+    @Override
+    public int getTagCount(TagSymbols tag) {
+        return mQualityCountMap.get(tag).intValue();
+    }
 
+
+    private class QualityComparator implements Comparator<Map.Entry<Enum<? extends Enum<?>>, Integer>> {
+
+        @Override
+        public int compare(Map.Entry<Enum<? extends Enum<?>>, Integer> o1, Map.Entry<Enum<? extends Enum<?>>, Integer> o2) {
+            int res = o2.getValue().compareTo(o1.getValue());
+            return res != 0 ? res : 1;
+        }
     }
 
 
