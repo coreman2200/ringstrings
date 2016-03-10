@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <!-- SymbolViewTab Strings -->
+    <string name="symbolview_details">Details</string>
+    <string name="symbolview_related">Related</string>
+    <string name="symbolview_compared">Compared</string>
+    <string name="symbolview_profile">Profile</string>
+
+</resources>

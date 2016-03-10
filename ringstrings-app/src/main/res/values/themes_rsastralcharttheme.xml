@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="RSAstralChartTheme" parent="@style/_RSAstralChartTheme"/>
+
+  <style name="_RSAstralChartTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="windowNoTitle">true</item>
+    <item name="windowActionBar">false</item>
+
+    <item name="android:editTextBackground">@drawable/rsastralcharttheme_edit_text_holo_light</item>
+
+    <item name="android:textColorHighlight">#999933cc</item>
+    <item name="android:textSelectHandleLeft">@drawable/rsastralcharttheme_text_select_handle_left</item>
+    <item name="android:textSelectHandleRight">@drawable/rsastralcharttheme_text_select_handle_right</item>
+    <item name="android:textSelectHandle">@drawable/rsastralcharttheme_text_select_handle_middle</item>
+
+    <item name="android:listChoiceIndicatorMultiple">@drawable/rsastralcharttheme_btn_check_holo_light</item>
+
+    <item name="android:listChoiceIndicatorSingle">@drawable/rsastralcharttheme_btn_radio_holo_light</item>
+
+    <item name="android:buttonStyle">@style/ButtonRSAstralChartTheme</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonRSAstralChartTheme</item>
+
+    <item name="android:dropDownSpinnerStyle">@style/SpinnerRSAstralChartTheme</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarRSAstralChartTheme</item>
+
+  </style>
+
+</resources>
