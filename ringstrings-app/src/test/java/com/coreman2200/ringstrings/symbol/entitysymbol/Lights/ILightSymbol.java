@@ -1,8 +1,10 @@
 package com.coreman2200.ringstrings.symbol.entitysymbol.Lights;
 
+import com.coreman2200.ringstrings.protos.SymbolIDBundle;
 import com.coreman2200.ringstrings.symbol.entitysymbol.Tags.ITagSymbol;
 import com.coreman2200.ringstrings.symbol.inputprocessor.entity.symboldef.ISymbolDef;
 import com.coreman2200.ringstrings.symbol.symbolinterface.IEntitySymbol;
+import com.coreman2200.ringstrings.symbol.symbolinterface.ISymbol;
 
 import java.util.List;
 
@@ -21,5 +23,6 @@ import java.util.List;
  */
 
 public interface ILightSymbol extends IEntitySymbol, ISymbolDef {
-
+    SymbolIDBundle getIdBundle();
+    ISymbol getSymbol();
 }

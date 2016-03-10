@@ -3,15 +3,16 @@ package com.coreman2200.ringstrings.symbol.entitysymbol.Lights;
 import android.app.Activity;
 
 import com.coreman2200.ringstrings.BuildConfig;
-import com.coreman2200.ringstrings.RingStringsActivity;
-import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
+import com.coreman2200.ringstrings.rsdisplay.activity.RingStringsActivity;
 import com.coreman2200.ringstrings.profiledata.IProfileDataBundle;
 import com.coreman2200.ringstrings.profiledata.ProfileDataBundleAdapter;
 import com.coreman2200.ringstrings.profiledata.TestDefaultDataBundles;
 import com.coreman2200.ringstrings.protos.RingStringsAppSettings;
+import com.coreman2200.ringstrings.symbol.entitysymbol.EntityStrata;
 import com.coreman2200.ringstrings.symbol.entitysymbol.Profile.IProfileSymbol;
 import com.coreman2200.ringstrings.symbol.entitysymbol.Profile.LocalProfileSymbolImpl;
 import com.coreman2200.ringstrings.symbol.entitysymbol.Tags.IThemeSymbol;
+import com.coreman2200.ringstrings.symbol.inputprocessor.ProfileInputProcessor;
 import com.coreman2200.ringstrings.symbol.inputprocessor.entity.symboldef.ISymbolDefFileHandler;
 import com.coreman2200.ringstrings.symbol.inputprocessor.entity.symboldef.SymbolDefFileHandlerImpl;
 import com.coreman2200.ringstrings.symbol.symbolinterface.ISymbol;
@@ -42,24 +43,17 @@ import java.util.Map;
 @RunWith(RobolectricGradleTestRunner.class)
 @Config(constants = BuildConfig.class)
 public class TestLightSymbol {
-    private ISymbolDefFileHandler mTestFileHandler;
+    private ProfileInputProcessor mTestProcessor;
     private Activity mTestActivity;
     private RingStringsAppSettings mAppSettings;
+    private IProfileDataBundle mTestProfile;
 
     @Before
     public void setup() {
         mTestActivity = Robolectric.setupActivity(RingStringsActivity.class);
         mAppSettings = TestDefaultDataBundles.produceDefaultAppSettingsBundle(mTestActivity);
-        mTestFileHandler = SymbolDefFileHandlerImpl.createInstance(mTestActivity);
     }
 
-    @Test
-    public void testLightSymbolAccuratelyDescribesTestSubject() {
-        final LocalProfileSymbolImpl profile = produceTestSubject();
-        System.out.println(profile.getName());
-        System.out.println(profile.getQualities().toString());
-
-    }
 
     //@Test
     public void testDurationProcessorProducesXRandomProfiles() {
@@ -93,23 +87,25 @@ public class TestLightSymbol {
 
     //@Test
     public void testProducingLightsForEntireSymbolStructure() {
-        for (Map.Entry<Enum<? extends Enum<?>>, IThemeSymbol> entry : produceTestSubject().produceSymbol()) {
-            produceLightSymbol(entry.getValue());
+
+        Map<Enum<? extends Enum<?>>, ISymbol> map = produceTestSubject().produceSymbol();
+        for (ISymbol elem : map.values()) {
+            produceLightSymbol(elem);
         }
     }
 
 
     private void produceLightSymbol(ISymbol symbol) {
-        ILightSymbol light = new LightSymbolImpl(symbol);
+        ILightSymbol light = produceTestSubject().produceLightSymbolFor(symbol);
         System.out.println(light.getName());
         System.out.println(light.getDescription());
         light.getQualities();
     }
 
-    private LocalProfileSymbolImpl produceTestSubject() {
+    private IProfileSymbol produceTestSubject() {
         //IProfileDataBundle mTestProfile = new TestProfileDataBundleImpl();
-        IProfileDataBundle mTestProfile = new ProfileDataBundleAdapter(TestDefaultDataBundles.generateRandomProfile());
-        LocalProfileSymbolImpl local = new LocalProfileSymbolImpl(mTestProfile, mAppSettings);
-        return local;
+        mTestProfile = new ProfileDataBundleAdapter(TestDefaultDataBundles.generateRandomProfile());
+        mTestProcessor = new ProfileInputProcessor(mAppSettings);
+        return mTestProcessor.produceProfile(mTestProfile, EntityStrata.PROFILE);
     }
 }
