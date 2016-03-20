@@ -3,7 +3,7 @@
 // Defines anticipated structure/models for Symbols and interpreted datas..
 syntax = "proto3";
 
-package com.coreman2200.ringstrings.protos;
+package com.coreman2200.data.entity.protos;
 
 option java_outer_classname = "RingStringProtos";
 
@@ -40,15 +40,19 @@ message LocalProfileDataBundle {
 
 // Identifiers necessary to store symbols (beyond scope of symbol entity..)
 message SymbolIDBundle {
-    //_PROFILEID, _CHARTID, _STRATAID, _TYPEID, _SYMBOLID, _DESC_ID, _NAME
+    //_PROFILEID, _CHARTID, _STRATAID, _TYPEID, _SYMBOLID, _DESC_ID, _NAME, SymbolQualities, _CHILDREN, Settings
+    // Elements required to produce a symbol.
     int32 profile_id = 1;
     int32 chart_id = 2;
     int32 strata_id = 3;
     int32 type_id = 4;
     int32 symbol_id = 5;
+    // Below more exclusively for Query ~ above identifiers can produce every symbol.
     int32 desc_id = 6;
     string name = 7;
-    RingStringsAppSettings settings = 8;
+    repeated int32 symbol_qualities = 8;
+    repeated int32 symbol_children = 9;
+    RingStringsAppSettings settings = 10;
 }
 
 message RingStringsAppSettings {

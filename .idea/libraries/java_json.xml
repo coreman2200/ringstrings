@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="java-json">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/ringstrings-app/libs/java-json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/domain/libs/java-json.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
