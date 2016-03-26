@@ -3,7 +3,7 @@
 // Defines anticipated structure/models for Symbols and interpreted datas..
 syntax = "proto3";
 
-package com.coreman2200.data.entity.protos;
+package com.coreman2200.domain.protos;
 
 option java_outer_classname = "RingStringProtos";
 

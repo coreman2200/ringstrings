@@ -4,8 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/data/data.iml" filepath="$PROJECT_DIR$/data/data.iml" />
       <module fileurl="file://$PROJECT_DIR$/domain/domain.iml" filepath="$PROJECT_DIR$/domain/domain.iml" />
-      <module fileurl="file://$PROJECT_DIR$/presentation/ringstrings-app.iml" filepath="$PROJECT_DIR$/presentation/ringstrings-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/presentation/presentation.iml" filepath="$PROJECT_DIR$/presentation/presentation.iml" />
       <module fileurl="file://$PROJECT_DIR$/ringstrings.iml" filepath="$PROJECT_DIR$/ringstrings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/presentation/ringstrings-app.iml" filepath="$PROJECT_DIR$/presentation/ringstrings-app.iml" />
     </modules>
   </component>
 </project>

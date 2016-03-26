@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <com.coreman2200.ringstrings.rsdisplay.model.FloatingActionButton
+    <com.coreman2200.presentation.rsdisplay.model.FloatingActionButton
         android:id="@+id/fab_1"
         android:layout_width="@dimen/symbolview_symbolfab_fabsize"
         android:layout_height="@dimen/symbolview_symbolfab_fabsize"
@@ -19,5 +19,5 @@
             android:layout_gravity="center"
             android:duplicateParentState="true"/>
 
-    </com.coreman2200.ringstrings.rsdisplay.model.FloatingActionButton>
+    </com.coreman2200.presentation.rsdisplay.model.FloatingActionButton>
 </FrameLayout>

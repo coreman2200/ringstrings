@@ -2,7 +2,7 @@ package com.coreman2200.data;
 
 import android.app.Activity;
 
-import com.coreman2200.ringstrings.rsdisplay.activity.RingStringsActivity;
+import com.coreman2200.presentation.rsdisplay.activity.RingStringsActivity;
 
 import org.json.JSONArray;
 import org.junit.Before;

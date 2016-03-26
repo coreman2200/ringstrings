@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".rsdisplay.fragments.FragmentSymbolViewContent">
+    tools:context="com.coreman2200.presentation.rsdisplay.fragments.FragmentSymbolViewContent">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

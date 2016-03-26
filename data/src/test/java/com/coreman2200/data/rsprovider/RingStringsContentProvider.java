@@ -16,7 +16,7 @@ import android.text.TextUtils;
 
 import com.coreman2200.data.repository.RingStringsContract;
 import com.coreman2200.data.repository.RingStringsDbHelper;
-import com.coreman2200.data.repository.RingStringsDbSchema;
+import com.coreman2200.data.repository.RingStringsDbHelper;
 
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
@@ -123,19 +123,19 @@ public class RingStringsContentProvider  extends ContentProvider {
 
 
         if (URI_MATCHER.match(uri) == SYMBOL_LIST) {
-            id = db.insert(RingStringsDbSchema.TBL_SYMBOLS, null, values);
+            id = db.insert(RingStringsDbHelper.TBL_SYMBOLS, null, values);
 
         } else if (URI_MATCHER.match(uri) == QUALITY_LIST) {
-            id = db.insert(RingStringsDbSchema.TBL_QUALITIES, null, values);
+            id = db.insert(RingStringsDbHelper.TBL_QUALITIES, null, values);
 
         } else if (URI_MATCHER.match(uri) == SYMBOLDEF_LIST) {
-            id = db.insert(RingStringsDbSchema.TBL_SYMBOLDEFS, null, values);
+            id = db.insert(RingStringsDbHelper.TBL_SYMBOLDEFS, null, values);
 
         } else if (URI_MATCHER.match(uri) == DEFQUALITY_LIST) {
-            id = db.insert(RingStringsDbSchema.TBL_DEFQUAL_JUNCT, null, values);
+            id = db.insert(RingStringsDbHelper.TBL_DEFQUAL_JUNCT, null, values);
 
         } else if (URI_MATCHER.match(uri) == SYMBOLQUALITY_LIST) {
-            id = db.insert(RingStringsDbSchema.TBL_SYMBOLQUAL_JUNCT, null, values);
+            id = db.insert(RingStringsDbHelper.TBL_SYMBOLQUAL_JUNCT, null, values);
 
         } else {
             // this insertWithOnConflict is a special case; CONFLICT_REPLACE
@@ -195,42 +195,42 @@ public class RingStringsContentProvider  extends ContentProvider {
                 return cursor;
 
             case SYMBOL_ID:
-                builder.setTables(RingStringsDbSchema.TBL_SYMBOLS);
+                builder.setTables(RingStringsDbHelper.TBL_SYMBOLS);
                 // limit query to one row at most:
                 builder.appendWhere(RingStringsContract.Symbols._SYMBOLID + " = "
                         + uri.getLastPathSegment());
                 break;
             case QUALITY_LIST:
-                builder.setTables(RingStringsDbSchema.TBL_QUALITIES);
+                builder.setTables(RingStringsDbHelper.TBL_QUALITIES);
                 break;
             case QUALITY_ID:
-                builder.setTables(RingStringsDbSchema.TBL_QUALITIES);
+                builder.setTables(RingStringsDbHelper.TBL_QUALITIES);
                 // limit query to one row at most:
-                builder.appendWhere(RingStringsDbSchema.TBL_QUALITIES + "." + RingStringsContract.Quality._QUALITY_ID + " = " + uri.getLastPathSegment());
+                builder.appendWhere(RingStringsDbHelper.TBL_QUALITIES + "." + RingStringsContract.Quality._QUALITY_ID + " = " + uri.getLastPathSegment());
                 break;
             case SYMBOLDEF_LIST:
-                builder.setTables(RingStringsDbSchema.TBL_SYMBOLDEFS);
+                builder.setTables(RingStringsDbHelper.TBL_SYMBOLDEFS);
                 break;
             case SYMBOLDEF_ID:
-                builder.setTables(RingStringsDbSchema.TBL_SYMBOLDEFS);
+                builder.setTables(RingStringsDbHelper.TBL_SYMBOLDEFS);
                 // limit query to one row at most:
-                builder.appendWhere(RingStringsDbSchema.TBL_SYMBOLDEFS + "." + RingStringsContract.SymbolDescription._DESC_ID + " = " + uri.getLastPathSegment());
+                builder.appendWhere(RingStringsDbHelper.TBL_SYMBOLDEFS + "." + RingStringsContract.SymbolDescription._DESC_ID + " = " + uri.getLastPathSegment());
                 break;
             case SYMBOLQUALITY_LIST:
-                builder.setTables(RingStringsDbSchema.TBL_SYMBOLQUAL_JUNCT);
+                builder.setTables(RingStringsDbHelper.TBL_SYMBOLQUAL_JUNCT);
                 break;
             case SYMBOLQUALITY_ID:
-                builder.setTables(RingStringsDbSchema.TBL_SYMBOLQUAL_JUNCT);
+                builder.setTables(RingStringsDbHelper.TBL_SYMBOLQUAL_JUNCT);
                 // limit query to one row at most:
-                builder.appendWhere(RingStringsDbSchema.TBL_SYMBOLQUAL_JUNCT + "." + RingStringsContract.Quality._QUALITY_ID + " = " + uri.getLastPathSegment());
+                builder.appendWhere(RingStringsDbHelper.TBL_SYMBOLQUAL_JUNCT + "." + RingStringsContract.Quality._QUALITY_ID + " = " + uri.getLastPathSegment());
                 break;
             case DEFQUALITY_LIST:
-                builder.setTables(RingStringsDbSchema.TBL_DEFQUAL_JUNCT);
+                builder.setTables(RingStringsDbHelper.TBL_DEFQUAL_JUNCT);
                 break;
             case DEFQUALITY_ID:
-                builder.setTables(RingStringsDbSchema.TBL_DEFQUAL_JUNCT);
+                builder.setTables(RingStringsDbHelper.TBL_DEFQUAL_JUNCT);
                 // limit query to one row at most:
-                builder.appendWhere(RingStringsDbSchema.TBL_DEFQUAL_JUNCT + "." + RingStringsContract.SymbolDescription._DESC_ID + " = " + uri.getLastPathSegment());
+                builder.appendWhere(RingStringsDbHelper.TBL_DEFQUAL_JUNCT + "." + RingStringsContract.SymbolDescription._DESC_ID + " = " + uri.getLastPathSegment());
                 break;
             default:
                 throw new IllegalArgumentException("Unsupported URI: " + uri);
@@ -252,7 +252,7 @@ public class RingStringsContentProvider  extends ContentProvider {
         StringBuilder selectionBuilder = new StringBuilder();
 
         selectionBuilder.append("SELECT * FROM ");
-        selectionBuilder.append(RingStringsDbSchema.LEFT_OUTER_JOIN_STATEMENT + " \n");
+        selectionBuilder.append(RingStringsDbHelper.SYMBOL_JOIN + " \n");
         if (selection != null && !selection.isEmpty())
             selectionBuilder.append(selection + " \n");
         selectionBuilder.append("ORDER BY " + sortOrder);
@@ -267,7 +267,7 @@ public class RingStringsContentProvider  extends ContentProvider {
         int delCount = 0;
         switch (URI_MATCHER.match(uri)) {
             case SYMBOL_LIST:
-                delCount = db.delete(RingStringsDbSchema.TBL_SYMBOLS, selection, selectionArgs);
+                delCount = db.delete(RingStringsDbHelper.TBL_SYMBOLS, selection, selectionArgs);
                 break;
             case SYMBOL_ID:
                 String idStr = uri.getLastPathSegment();
@@ -275,7 +275,7 @@ public class RingStringsContentProvider  extends ContentProvider {
                 if (!TextUtils.isEmpty(selection)) {
                     where += " AND " + selection;
                 }
-                delCount = db.delete(RingStringsDbSchema.TBL_SYMBOLS, where, selectionArgs);
+                delCount = db.delete(RingStringsDbHelper.TBL_SYMBOLS, where, selectionArgs);
                 break;
             default:
                 // no support for deleting not-geosettings
@@ -296,7 +296,7 @@ public class RingStringsContentProvider  extends ContentProvider {
         int updateCount = 0;
         switch (URI_MATCHER.match(uri)) {
             case SYMBOL_LIST:
-                updateCount = db.update(RingStringsDbSchema.TBL_SYMBOLS, values, selection,
+                updateCount = db.update(RingStringsDbHelper.TBL_SYMBOLS, values, selection,
                         selectionArgs);
                 break;
             case SYMBOL_ID:
@@ -305,7 +305,7 @@ public class RingStringsContentProvider  extends ContentProvider {
                 if (!TextUtils.isEmpty(selection)) {
                     where += " AND " + selection;
                 }
-                updateCount = db.update(RingStringsDbSchema.TBL_SYMBOLS, values, where,
+                updateCount = db.update(RingStringsDbHelper.TBL_SYMBOLS, values, where,
                         selectionArgs);
                 break;
             default:

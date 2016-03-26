@@ -3,12 +3,12 @@ package com.coreman2200.domain;
 import android.app.Activity;
 
 import com.coreman2200.domain.com.coreman2200.domain.profiledata.MockDefaultDataBundles;
-import com.coreman2200.data.entity.profiledata.IProfileDataBundle;
-import com.coreman2200.data.entity.profiledata.ProfileDataBundleAdapter;
-import com.coreman2200.data.entity.protos.RingStringsAppSettings;
-import com.coreman2200.ringstrings.rsdisplay.activity.RingStringsActivity;
-import com.coreman2200.domain.swisseph.ISwissEphemerisManager;
-import com.coreman2200.domain.swisseph.SwissEphemerisManagerImpl;
+import com.coreman2200.domain.profiledata.IProfileDataBundle;
+import com.coreman2200.domain.profiledata.ProfileDataBundleAdapter;
+import com.coreman2200.domain.protos.RingStringsAppSettings;
+import com.coreman2200.presentation.rsdisplay.activity.RingStringsActivity;
+import com.coreman2200.data.rsio.swisseph.ISwissEphemerisManager;
+import com.coreman2200.data.rsio.swisseph.SwissEphemerisManagerImpl;
 
 import org.junit.Before;
 import org.junit.Test;

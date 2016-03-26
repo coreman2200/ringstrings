@@ -3,15 +3,16 @@ package com.coreman2200.domain;
 import android.app.Activity;
 
 import com.coreman2200.domain.com.coreman2200.domain.profiledata.MockDefaultDataBundles;
-import com.coreman2200.data.entity.profiledata.IProfileDataBundle;
-import com.coreman2200.data.entity.profiledata.ProfileDataBundleAdapter;
-import com.coreman2200.data.entity.protos.RingStringsAppSettings;
-import com.coreman2200.ringstrings.rsdisplay.activity.RingStringsActivity;
-import com.coreman2200.domain.swisseph.ISwissephFileHandler;
+import com.coreman2200.domain.profiledata.IProfileDataBundle;
+import com.coreman2200.domain.profiledata.ProfileDataBundleAdapter;
+import com.coreman2200.domain.profiledata.MockDefaultDataBundles;
+import com.coreman2200.domain.protos.RingStringsAppSettings;
+import com.coreman2200.presentation.rsdisplay.activity.RingStringsActivity;
+import com.coreman2200.data.rsio.swisseph.ISwissephFileHandler;
 import com.coreman2200.domain.symbol.chart.Charts;
 import com.coreman2200.domain.symbol.astralsymbol.grouped.CelestialBodies;
 import com.coreman2200.domain.symbol.astralsymbol.interfaces.IChartedAstralSymbols;
-import com.coreman2200.domain.symbol.inputprocessor.astrology.AstrologicalChartInputProcessorImpl;
+import com.coreman2200.data.processor.astrology.AstrologicalChartInputProcessorImpl;
 
 import org.junit.Before;
 import org.junit.Test;

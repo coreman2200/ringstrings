@@ -1,7 +1,5 @@
 package com.coreman2200.domain.numbersystem;
 
-import android.support.annotation.NonNull;
-
 import java.util.HashMap;
 import java.util.NoSuchElementException;
 
@@ -43,7 +41,7 @@ abstract public class NumberSystem implements INumberSystem {
         return symbolValueMap.size();
     }
 
-    static public INumberSystem createNumberSystemWithType(@NonNull NumberSystemType type) {
+    static public INumberSystem createNumberSystemWithType(NumberSystemType type) {
         switch (type) {
             case CHALDEAN:
                 return new ChaldeanNumberSystem();

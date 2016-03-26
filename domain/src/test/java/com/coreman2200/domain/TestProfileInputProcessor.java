@@ -3,15 +3,15 @@ package com.coreman2200.domain;
 import android.app.Activity;
 
 import com.coreman2200.domain.com.coreman2200.domain.profiledata.MockDefaultDataBundles;
-import com.coreman2200.data.entity.profiledata.IProfileDataBundle;
-import com.coreman2200.data.entity.profiledata.ProfileDataBundleAdapter;
-import com.coreman2200.data.entity.protos.RingStringsAppSettings;
-import com.coreman2200.ringstrings.rsdisplay.activity.RingStringsActivity;
-import com.coreman2200.domain.swisseph.ISwissephFileHandler;
+import com.coreman2200.domain.profiledata.IProfileDataBundle;
+import com.coreman2200.domain.profiledata.ProfileDataBundleAdapter;
+import com.coreman2200.domain.protos.RingStringsAppSettings;
+import com.coreman2200.presentation.rsdisplay.activity.RingStringsActivity;
+import com.coreman2200.data.rsio.swisseph.ISwissephFileHandler;
 import com.coreman2200.domain.symbol.entitysymbol.EntityStrata;
-import com.coreman2200.domain.symbol.entitysymbol.Profile.IProfileSymbol;
-import com.coreman2200.domain.symbol.inputprocessor.entity.symboldef.SymbolDefFileHandlerImpl;
-import com.coreman2200.domain.symbol.inputprocessor.ProfileInputProcessor;
+import com.coreman2200.presentation.symbol.profile.IProfileSymbol;
+import com.coreman2200.domain.symboldef.SymbolDefFileHandlerImpl;
+import com.coreman2200.data.processor.entity.ProfileInputProcessor;
 
 import org.junit.Before;
 import org.junit.Test;

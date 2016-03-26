@@ -8,16 +8,16 @@ import android.database.Cursor;
 import android.net.Uri;
 
 import com.coreman2200.data.repository.RingStringsContract;
-import com.coreman2200.domain.adapter.IQueryIdBundle;
-import com.coreman2200.domain.adapter.QueryIdBundleAdapter;
-import com.coreman2200.domain.adapter.SymbolIdBundleAdapter;
-import com.coreman2200.data.entity.profiledata.IProfileDataBundle;
-import com.coreman2200.data.entity.profiledata.ProfileDataBundleAdapter;
-import com.coreman2200.data.entity.profiledata.TestDefaultDataBundles;
-import com.coreman2200.data.entity.protos.LocalProfileDataBundle;
-import com.coreman2200.data.entity.protos.RingStringsAppSettings;
-import com.coreman2200.data.entity.protos.SymbolIDBundle;
-import com.coreman2200.ringstrings.rsdisplay.activity.RingStringsActivity;
+import com.coreman2200.data.adapter.symbolid.IQueryIdBundle;
+import com.coreman2200.data.adapter.symbolid.QueryIdBundleAdapter;
+import com.coreman2200.data.adapter.symbolid.SymbolIdBundleAdapter;
+import com.coreman2200.domain.profiledata.IProfileDataBundle;
+import com.coreman2200.domain.profiledata.ProfileDataBundleAdapter;
+import com.coreman2200.domain.profiledata.MockDefaultDataBundles;
+import com.coreman2200.domain.protos.LocalProfileDataBundle;
+import com.coreman2200.domain.protos.RingStringsAppSettings;
+import com.coreman2200.domain.protos.SymbolIDBundle;
+import com.coreman2200.presentation.rsdisplay.activity.RingStringsActivity;
 import com.coreman2200.data.repository.dao.AstralSymbolDAO;
 import com.coreman2200.data.repository.dao.ISymbolDAO;
 import com.coreman2200.data.repository.dao.NumberSymbolDAO;
@@ -25,11 +25,11 @@ import com.coreman2200.data.repository.dao.ProfileSymbolDAO;
 import com.coreman2200.domain.symbol.astralsymbol.AstralStrata;
 import com.coreman2200.domain.symbol.chart.Charts;
 import com.coreman2200.domain.symbol.entitysymbol.EntityStrata;
-import com.coreman2200.domain.symbol.entitysymbol.Lights.ILightSymbol;
-import com.coreman2200.domain.symbol.entitysymbol.Profile.IProfileSymbol;
-import com.coreman2200.domain.symbol.entitysymbol.Tags.TagSymbols;
-import com.coreman2200.domain.symbol.inputprocessor.ProfileInputProcessor;
-import com.coreman2200.domain.symbol.inputprocessor.entity.symboldef.SymbolDefFileHandlerImpl;
+import com.coreman2200.presentation.symbol.lights.ILightSymbol;
+import com.coreman2200.presentation.symbol.profile.IProfileSymbol;
+import com.coreman2200.presentation.symbol.tags.TagSymbols;
+import com.coreman2200.data.processor.entity.ProfileInputProcessor;
+import com.coreman2200.data.rsio.symboldef.SymbolDefFileHandlerImpl;
 import com.coreman2200.domain.symbol.numbersymbol.NumberStrata;
 import com.coreman2200.domain.symbol.symbolinterface.ISymbol;
 
@@ -81,16 +81,16 @@ public class TestRingStringsContentProvider {
         mShadowContentResolver = Shadows.shadowOf(mContentResolver);
         SymbolDefFileHandlerImpl.createInstance(mTestActivity);
 
-        produceTestSubject(TestDefaultDataBundles.testProfileBundleCoryH);
+        produceTestSubject(MockDefaultDataBundles.testProfileBundleCoryH);
         mProvider.onCreate();
         ShadowContentResolver.registerProvider(RingStringsContract.AUTHORITY, mProvider);
     }
 
     private IProfileSymbol produceTestSubject(LocalProfileDataBundle profile) {
         if (profile == null)
-            profile = TestDefaultDataBundles.generateRandomProfile();
+            profile = MockDefaultDataBundles.generateRandomProfile();
         IProfileDataBundle bundle = new ProfileDataBundleAdapter(profile);
-        RingStringsAppSettings settings = TestDefaultDataBundles.produceDefaultAppSettingsBundle(mTestActivity);
+        RingStringsAppSettings settings = MockDefaultDataBundles.produceDefaultAppSettingsBundle(mTestActivity);
         mProfileProcessor = new ProfileInputProcessor(settings);
         return mProfileProcessor.produceProfile(bundle, EntityStrata.PROFILE);
     }
@@ -129,7 +129,7 @@ public class TestRingStringsContentProvider {
 
     //@Test
     public void testIncludeFullProfile() {
-        ProfileSymbolDAO dao = new ProfileSymbolDAO(produceTestSubject(TestDefaultDataBundles.testProfileBundleCoryH));
+        ProfileSymbolDAO dao = new ProfileSymbolDAO(produceTestSubject(MockDefaultDataBundles.testProfileBundleCoryH));
         ArrayList<ContentProviderOperation> ops = dao.batchCreate();
 
 
@@ -184,7 +184,7 @@ public class TestRingStringsContentProvider {
     @Test
     public void testRawQueryByIdBundle() {
         testIncludeFullProfile();
-        IProfileSymbol profile = produceTestSubject(TestDefaultDataBundles.testProfileBundleCoryH);
+        IProfileSymbol profile = produceTestSubject(MockDefaultDataBundles.testProfileBundleCoryH);
 
         SymbolIDBundle idbundle = new SymbolIDBundle.Builder()
                 .profile_id(profile.getIdBundle().profile_id)
