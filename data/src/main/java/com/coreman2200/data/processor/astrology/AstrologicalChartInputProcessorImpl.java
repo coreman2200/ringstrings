@@ -1,6 +1,6 @@
 package com.coreman2200.data.processor.astrology;
 
-import com.coreman2200.domain.profiledata.IProfileDataBundle;
+import com.coreman2200.domain.adapter.profiledata.IProfileDataBundle;
 import com.coreman2200.domain.protos.RingStringsAppSettings;
 import com.coreman2200.data.rsio.swisseph.ISwissEphemerisManager;
 import com.coreman2200.data.rsio.swisseph.SwissEphemerisManagerImpl;

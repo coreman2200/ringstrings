@@ -1,7 +1,7 @@
 package com.coreman2200.domain.symbol.astralsymbol.interfaces;
 
 import com.coreman2200.domain.symbol.symbolinterface.ISymbol;
-import com.coreman2200.domain.symbol.astralsymbol.AstralStrata;
+import com.coreman2200.domain.symbol.strata.AstralStrata;
 
 /**
  * IAstralSymbol

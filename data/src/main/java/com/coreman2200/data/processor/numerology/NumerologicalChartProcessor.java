@@ -1,6 +1,6 @@
 package com.coreman2200.data.processor.numerology;
 
-import com.coreman2200.domain.profiledata.IProfileDataBundle;
+import com.coreman2200.domain.adapter.profiledata.IProfileDataBundle;
 import com.coreman2200.domain.protos.RingStringsAppSettings;
 import com.coreman2200.domain.symbol.chart.NumerologicalChartImpl;
 import com.coreman2200.data.processor.numerology.grouped.GroupedNumberSymbolsInputProcessor;

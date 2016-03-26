@@ -1,6 +1,6 @@
 package com.coreman2200.data.processor.numerology.grouped;
 
-import com.coreman2200.domain.profiledata.IProfileDataBundle;
+import com.coreman2200.domain.adapter.profiledata.IProfileDataBundle;
 import com.coreman2200.data.processor.numerology.INumberSymbolInputProcessor;
 import com.coreman2200.domain.symbol.numbersymbol.interfaces.IGroupedNumberSymbols;
 

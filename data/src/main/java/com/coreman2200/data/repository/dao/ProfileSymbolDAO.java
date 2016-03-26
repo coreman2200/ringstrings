@@ -7,10 +7,11 @@ import android.database.Cursor;
 import com.coreman2200.data.adapter.symbolid.SymbolIdBundleAdapter;
 import com.coreman2200.domain.protos.SymbolIDBundle;
 import com.coreman2200.data.repository.RingStringsContract;
-import com.coreman2200.domain.symbol.astralsymbol.AstralStrata;
-import com.coreman2200.domain.symbol.entitysymbol.Lights.ILightSymbol;
-import com.coreman2200.presentation.symbol.profile.IProfileSymbol;
-import com.coreman2200.presentation.symbol.tags.TagSymbols;
+import com.coreman2200.domain.symbol.strata.AstralStrata;
+import com.coreman2200.domain.symbol.symbolinterface.ILightSymbol;
+import com.coreman2200.domain.symbol.symbolinterface.IProfileSymbol;
+import com.coreman2200.domain.symbol.symbolinterface.ITagSymbol;
+import com.coreman2200.domain.symbol.tags.TagSymbols;
 import com.coreman2200.domain.symbol.symbolinterface.ISymbol;
 
 import java.io.IOException;
@@ -61,11 +62,11 @@ public class ProfileSymbolDAO extends AbstractSymbolDAO {
     }
 
     protected List<ContentProviderOperation> getQualityTableOperations() {
-        Collection<TagSymbols> qualities = mProfile.getQualities();
+        Collection<ITagSymbol> qualities = mProfile.getQualities();
         List<ContentProviderOperation> ops = new ArrayList<>();
 
         SymbolIDBundle bundle = mProfile.getIdBundle();
-        for (TagSymbols qual : qualities) {
+        for (ITagSymbol qual : qualities) {
 
             QualityDAO dao = new QualityDAO(bundle, qual, mSymbol.getTagCount(qual));
             ops.add(dao.produceQualityTableContent());

@@ -1,7 +1,7 @@
 package com.coreman2200.domain.symbol.map.comparator;
 
 import com.coreman2200.domain.symbol.symbolinterface.ISymbol;
-import com.coreman2200.domain.symbol.SymbolStrata;
+import com.coreman2200.domain.symbol.strata.SymbolStrata;
 
 import java.util.Map;
 

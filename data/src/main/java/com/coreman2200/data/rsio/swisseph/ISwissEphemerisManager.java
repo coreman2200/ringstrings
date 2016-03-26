@@ -1,6 +1,6 @@
 package com.coreman2200.data.rsio.swisseph;
 
-import com.coreman2200.domain.profiledata.IProfileDataBundle;
+import com.coreman2200.domain.adapter.profiledata.IProfileDataBundle;
 import com.coreman2200.domain.symbol.astralsymbol.interfaces.IAstralSymbol;
 
 import java.util.Map;

@@ -3,7 +3,7 @@ package com.coreman2200.data.repository.dao;
 import android.content.ContentProviderOperation;
 import android.content.ContentValues;
 
-import com.coreman2200.domain.symbol.entitysymbol.Lights.ILightSymbol;
+import com.coreman2200.domain.symbol.symbolinterface.ILightSymbol;
 
 import java.util.List;
 

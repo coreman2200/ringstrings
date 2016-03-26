@@ -7,7 +7,7 @@ import com.coreman2200.data.adapter.symbolid.ISymbolIdBundleAdapter;
 import com.coreman2200.data.adapter.symbolid.SymbolIdBundleAdapter;
 import com.coreman2200.data.repository.RingStringsContract;
 import com.coreman2200.data.repository.RingStringsDbHelper;
-import com.coreman2200.domain.symbol.astralsymbol.AstralStrata;
+import com.coreman2200.domain.symbol.strata.AstralStrata;
 import com.coreman2200.domain.symbol.astralsymbol.grouped.Aspects;
 import com.coreman2200.domain.symbol.astralsymbol.grouped.AstralCharts;
 import com.coreman2200.domain.symbol.astralsymbol.grouped.CelestialBodies;
@@ -20,8 +20,8 @@ import com.coreman2200.domain.symbol.astralsymbol.impl.HouseSymbolImpl;
 import com.coreman2200.domain.symbol.astralsymbol.impl.ZodiacSymbolImpl;
 import com.coreman2200.domain.symbol.astralsymbol.interfaces.IAstralSymbol;
 import com.coreman2200.domain.symbol.chart.AstrologicalChartImpl;
-import com.coreman2200.domain.symbol.entitysymbol.Lights.ILightSymbol;
-import com.coreman2200.domain.symbol.entitysymbol.Lights.LightSymbolImpl;
+import com.coreman2200.domain.symbol.symbolinterface.ILightSymbol;
+import com.coreman2200.data.entity.symbol.lights.LightSymbolImpl;
 
 import java.io.IOException;
 

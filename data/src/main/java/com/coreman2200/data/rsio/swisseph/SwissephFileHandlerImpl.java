@@ -1,7 +1,6 @@
 package com.coreman2200.data.rsio.swisseph;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 
 import com.coreman2200.data.R;
 import com.coreman2200.data.rsio.FileHandlerImpl;

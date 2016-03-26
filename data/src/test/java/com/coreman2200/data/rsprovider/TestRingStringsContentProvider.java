@@ -7,30 +7,31 @@ import android.content.OperationApplicationException;
 import android.database.Cursor;
 import android.net.Uri;
 
+import com.coreman2200.data.BuildConfig;
+import com.coreman2200.data.activity.MainActivity;
 import com.coreman2200.data.repository.RingStringsContract;
 import com.coreman2200.data.adapter.symbolid.IQueryIdBundle;
 import com.coreman2200.data.adapter.symbolid.QueryIdBundleAdapter;
 import com.coreman2200.data.adapter.symbolid.SymbolIdBundleAdapter;
-import com.coreman2200.domain.profiledata.IProfileDataBundle;
-import com.coreman2200.domain.profiledata.ProfileDataBundleAdapter;
+import com.coreman2200.domain.adapter.profiledata.IProfileDataBundle;
+import com.coreman2200.domain.adapter.profiledata.ProfileDataBundleAdapter;
 import com.coreman2200.domain.profiledata.MockDefaultDataBundles;
 import com.coreman2200.domain.protos.LocalProfileDataBundle;
 import com.coreman2200.domain.protos.RingStringsAppSettings;
 import com.coreman2200.domain.protos.SymbolIDBundle;
-import com.coreman2200.presentation.rsdisplay.activity.RingStringsActivity;
 import com.coreman2200.data.repository.dao.AstralSymbolDAO;
 import com.coreman2200.data.repository.dao.ISymbolDAO;
 import com.coreman2200.data.repository.dao.NumberSymbolDAO;
 import com.coreman2200.data.repository.dao.ProfileSymbolDAO;
-import com.coreman2200.domain.symbol.astralsymbol.AstralStrata;
+import com.coreman2200.domain.symbol.strata.AstralStrata;
 import com.coreman2200.domain.symbol.chart.Charts;
-import com.coreman2200.domain.symbol.entitysymbol.EntityStrata;
-import com.coreman2200.presentation.symbol.lights.ILightSymbol;
-import com.coreman2200.presentation.symbol.profile.IProfileSymbol;
-import com.coreman2200.presentation.symbol.tags.TagSymbols;
-import com.coreman2200.data.processor.entity.ProfileInputProcessor;
+import com.coreman2200.domain.symbol.strata.EntityStrata;
+import com.coreman2200.domain.symbol.symbolinterface.ILightSymbol;
+import com.coreman2200.domain.symbol.symbolinterface.IProfileSymbol;
+import com.coreman2200.domain.symbol.tags.TagSymbols;
+import com.coreman2200.data.processor.profile.ProfileInputProcessor;
 import com.coreman2200.data.rsio.symboldef.SymbolDefFileHandlerImpl;
-import com.coreman2200.domain.symbol.numbersymbol.NumberStrata;
+import com.coreman2200.domain.symbol.strata.NumberStrata;
 import com.coreman2200.domain.symbol.symbolinterface.ISymbol;
 
 import org.assertj.core.util.Strings;
@@ -64,7 +65,7 @@ import java.util.Map;
  */
 
 @RunWith(RobolectricGradleTestRunner.class)
-@Config(constants = com.coreman2200.ringstrings.BuildConfig.class, sdk = 21)
+@Config(constants = BuildConfig.class, sdk = 21)
 public class TestRingStringsContentProvider {
     private Activity mTestActivity;
     private RingStringsContentProvider mProvider;
@@ -75,7 +76,7 @@ public class TestRingStringsContentProvider {
 
     @Before
     public void setup() {
-        mTestActivity = Robolectric.setupActivity(RingStringsActivity.class);
+        mTestActivity = Robolectric.setupActivity(MainActivity.class);
         mProvider = new RingStringsContentProvider();
         mContentResolver = mTestActivity.getContentResolver();
         mShadowContentResolver = Shadows.shadowOf(mContentResolver);
@@ -90,7 +91,7 @@ public class TestRingStringsContentProvider {
         if (profile == null)
             profile = MockDefaultDataBundles.generateRandomProfile();
         IProfileDataBundle bundle = new ProfileDataBundleAdapter(profile);
-        RingStringsAppSettings settings = MockDefaultDataBundles.produceDefaultAppSettingsBundle(mTestActivity);
+        RingStringsAppSettings settings = MockDefaultDataBundles.produceDefaultAppSettingsBundle();
         mProfileProcessor = new ProfileInputProcessor(settings);
         return mProfileProcessor.produceProfile(bundle, EntityStrata.PROFILE);
     }

@@ -1,6 +1,6 @@
 package com.coreman2200.domain.symbol.astralsymbol.impl;
 
-import com.coreman2200.domain.symbol.astralsymbol.AstralStrata;
+import com.coreman2200.domain.symbol.strata.AstralStrata;
 import com.coreman2200.domain.symbol.astralsymbol.grouped.Aspects;
 import com.coreman2200.domain.symbol.astralsymbol.interfaces.IAspectSymbol;
 import com.coreman2200.domain.symbol.astralsymbol.interfaces.IAstralSymbol;

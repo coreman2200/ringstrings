@@ -2,7 +2,7 @@ package com.coreman2200.data;
 
 import android.app.Activity;
 
-import com.coreman2200.presentation.rsdisplay.activity.RingStringsActivity;
+import com.coreman2200.data.activity.MainActivity;
 
 import org.json.JSONArray;
 import org.junit.Before;
@@ -46,7 +46,7 @@ public class TestConvertingXMLFilesToJSONObjects {
 
     @Before
     public void setup() {
-        mTestActivity = Robolectric.setupActivity(RingStringsActivity.class);
+        mTestActivity = Robolectric.setupActivity(MainActivity.class);
         mResources = Shadows.shadowOf(mTestActivity.getResources());
 
     }

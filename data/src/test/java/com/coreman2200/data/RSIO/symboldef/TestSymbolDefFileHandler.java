@@ -2,20 +2,18 @@ package com.coreman2200.data.rsio.symboldef;
 
 import android.app.Activity;
 
+import com.coreman2200.data.BuildConfig;
 import com.coreman2200.domain.profiledata.MockDefaultDataBundles;
-import com.coreman2200.ringstrings.BuildConfig;
-import com.coreman2200.domain.protos.SymbolDescription;
-import com.coreman2200.domain.profiledata.IProfileDataBundle;
-import com.coreman2200.domain.profiledata.ProfileDataBundleAdapter;
 import com.coreman2200.domain.protos.RingStringsAppSettings;
 import com.coreman2200.domain.symbol.astralsymbol.grouped.CelestialBodies;
-import com.coreman2200.domain.symbol.entitysymbol.EntityStrata;
-import com.coreman2200.presentation.symbol.profile.IProfileSymbol;
-import com.coreman2200.data.processor.entity.ProfileInputProcessor;
 import com.coreman2200.domain.symbol.numbersymbol.grouped.BaseNumberSymbols;
 
 import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricGradleTestRunner;
+import org.robolectric.annotation.Config;
 
 import java.util.Collection;
 
@@ -33,8 +31,8 @@ import java.util.Collection;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-//@RunWith(RobolectricGradleTestRunner.class)
-//@Config(constants = BuildConfig.class)
+@RunWith(RobolectricGradleTestRunner.class)
+@Config(constants = BuildConfig.class)
 public class TestSymbolDefFileHandler {
     private ISymbolDefFileHandler mTestFileHandler;
     private Activity mTestActivity;
@@ -48,41 +46,16 @@ public class TestSymbolDefFileHandler {
 
     }
 
-    //@Test
+    @Test
     public void testMappingsAvailableForBaseNumbers() {
         for (BaseNumberSymbols symbol : BaseNumberSymbols.values())
             assert (mTestFileHandler.produceSymbolDefForSymbol(symbol) != null);
     }
 
-    //@Test
+    @Test
     public void testMappingsAvailableForCelestialBodies() {
         for (CelestialBodies symbol : CelestialBodies.values())
             assert (mTestFileHandler.produceSymbolDefForSymbol(symbol) != null);
     }
-
-    //@Test
-    public void testMappingsAvailableForFullProfile() {
-        IProfileSymbol user = produceTestSubject();
-        int count = 0;
-
-        Collection<Enum<? extends Enum<?>>> idList = user.symbolIDCollection();
-        for (Enum<? extends Enum<?>> id : idList) {
-            SymbolDescription sd = mTestFileHandler.produceSymbolDefForSymbol(id);
-            if (sd != null) {
-                count++;
-                System.out.println("Successful mapping  for " + sd.name);
-                System.out.println("Quality: " + sd.qualities.toString());
-            }
-        }
-        System.out.println("Mapping Complete: " + count + " symbols found of " + idList.size());
-    }
-
-    private IProfileSymbol produceTestSubject() {
-        IProfileDataBundle mTestProfile = new ProfileDataBundleAdapter(MockDefaultDataBundles.testProfileBundleCoryH);
-        return new ProfileInputProcessor(mAppSettings).
-                produceProfile(mTestProfile, EntityStrata.USER);
-    }
-
-
 
 }

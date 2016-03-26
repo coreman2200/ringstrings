@@ -1,8 +1,7 @@
 package com.coreman2200.data.rsio.swisseph;
 
-import android.location.Location;
-
-import com.coreman2200.domain.profiledata.IProfileDataBundle;
+import com.coreman2200.domain.adapter.profiledata.IProfileDataBundle;
+import com.coreman2200.domain.protos.LocalProfileDataBundle;
 import com.coreman2200.domain.protos.RingStringsAppSettings;
 import com.coreman2200.domain.symbol.astralsymbol.grouped.CelestialBodies;
 import com.coreman2200.domain.symbol.astralsymbol.grouped.Houses;
@@ -39,13 +38,13 @@ import swisseph.SwissEph;
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
+public class  SwissEphemerisManagerImpl implements ISwissEphemerisManager {
     private final int sweCalcFlags = SweConst.SEFLG_SWIEPH | SweConst.SEFLG_TOPOCTR | SweConst.SEFLG_TRUEPOS | SweConst.SEFLG_SPEED;//33040;
     private final int mAppliedHouseSystem = (int)'T'; // Polich/Page ("topocentric")
     private String mEphemerisFilesPath;
     private SwissEph mEphemeris;
     private SweDate mSwissephDate;
-    private Location mGeoLocation;
+    private LocalProfileDataBundle.Placement.Location mGeoLocation;
     private StringBuffer mErrorOutputBuffer;
 
     private double armc; // "The ARMC (= sidereal time)"
@@ -102,7 +101,7 @@ public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
     private void astrSetHouses() // TODO: Constants for these numerical values..
     {
         double[] ascmc = new double[10];
-        mEphemeris.swe_houses(mSwissephDate.getJulDay(), 0, mGeoLocation.getLatitude(), mGeoLocation.getLongitude(), mAppliedHouseSystem, mCusp, ascmc);
+        mEphemeris.swe_houses(mSwissephDate.getJulDay(), 0, mGeoLocation.latitude, mGeoLocation.longitude, mAppliedHouseSystem, mCusp, ascmc);
         armc = ascmc[2];
         mCuspOrientationOffset = mCusp[4];
         mCuspOffset = (mCuspOrientationOffset / Houses.values().length); // TODO: 30 => Houses.values().length ?
@@ -134,9 +133,9 @@ public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
         double[] topoCalcOutput = new double[6];
         double julianDay = mSwissephDate.getJulDay();
 
-        double lon = mGeoLocation.getLongitude();
-        double lat = mGeoLocation.getLatitude();
-        double alt = mGeoLocation.getAltitude();
+        double lon = mGeoLocation.longitude;
+        double lat = mGeoLocation.latitude;
+        double alt = mGeoLocation.altitude;
 
         //System.out.println("Setting topological position. lon:" + lon + ", lat:" + lat + ", alt:" + alt);
         mEphemeris.swe_set_topo(lon, lat, alt);
@@ -158,7 +157,7 @@ public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
         assert (mErrorOutputBuffer.length() == 0);
 
         int bodyindex = body.ordinal();
-        mBodyHousePlacements[bodyindex] = mEphemeris.swe_house_pos(armc, mGeoLocation.getLatitude(), eclipticObliquity, mAppliedHouseSystem, bodiesCalcOutput, mErrorOutputBuffer);
+        mBodyHousePlacements[bodyindex] = mEphemeris.swe_house_pos(armc, mGeoLocation.latitude, eclipticObliquity, mAppliedHouseSystem, bodiesCalcOutput, mErrorOutputBuffer);
         assert (mErrorOutputBuffer.length() == 0);
 
         double longitudinalSpeed = bodiesCalcOutput[3];
@@ -267,7 +266,7 @@ public class SwissEphemerisManagerImpl implements ISwissEphemerisManager {
         //System.out.println("Julian date for date " + date.getTime() + " : " + mSwissephDate.getJulDay());
     }
 
-    private void setLocation(Location location) {
+    private void setLocation(LocalProfileDataBundle.Placement.Location location) {
         mGeoLocation = location;
     }
 

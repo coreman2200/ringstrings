@@ -2,7 +2,7 @@ package com.coreman2200.domain.symbol.chart;
 
 import com.coreman2200.domain.symbol.map.RelatedSymbolMap;
 import com.coreman2200.domain.symbol.numbersymbol.grouped.GroupedNumberSymbols;
-import com.coreman2200.domain.symbol.numbersymbol.NumberStrata;
+import com.coreman2200.domain.symbol.strata.NumberStrata;
 import com.coreman2200.domain.symbol.numbersymbol.impl.GroupedNumberSymbolsImpl;
 import com.coreman2200.domain.symbol.numbersymbol.interfaces.IChartedNumberSymbols;
 import com.coreman2200.domain.symbol.numbersymbol.interfaces.INumberSymbol;

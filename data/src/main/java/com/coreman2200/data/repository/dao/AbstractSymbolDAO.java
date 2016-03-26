@@ -7,8 +7,9 @@ import android.support.annotation.NonNull;
 import com.coreman2200.domain.protos.SymbolIDBundle;
 import com.coreman2200.data.repository.RingStringsContract;
 import com.coreman2200.data.repository.RingStringsDbHelper;
-import com.coreman2200.domain.symbol.entitysymbol.Lights.ILightSymbol;
-import com.coreman2200.presentation.symbol.tags.TagSymbols;
+import com.coreman2200.domain.symbol.symbolinterface.ILightSymbol;
+import com.coreman2200.domain.symbol.symbolinterface.ITagSymbol;
+import com.coreman2200.domain.symbol.tags.TagSymbols;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -94,11 +95,11 @@ public class AbstractSymbolDAO implements Serializable, ISymbolDAO {
     }
 
     protected List<ContentProviderOperation> getSymbolQualityOperations() {
-        Collection<TagSymbols> qualities = mSymbol.getQualities();
+        Collection<ITagSymbol> qualities = mSymbol.getQualities();
         List<ContentProviderOperation> ops = new ArrayList<>();
 
         SymbolIDBundle bundle = mSymbol.getIdBundle();
-        for (TagSymbols qual : qualities) {
+        for (ITagSymbol qual : qualities) {
 
             QualityDAO dao = new QualityDAO(bundle, qual, mSymbol.getTagCount(qual));
             ops.add(dao.produceSymbolQualityTableContent());

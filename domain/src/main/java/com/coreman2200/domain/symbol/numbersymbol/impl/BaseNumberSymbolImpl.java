@@ -1,7 +1,7 @@
 package com.coreman2200.domain.symbol.numbersymbol.impl;
 
 import com.coreman2200.domain.symbol.numbersymbol.grouped.BaseNumberSymbols;
-import com.coreman2200.domain.symbol.numbersymbol.NumberStrata;
+import com.coreman2200.domain.symbol.strata.NumberStrata;
 import com.coreman2200.domain.symbol.numbersymbol.interfaces.IBaseNumberSymbol;
 
 /**

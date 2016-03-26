@@ -1,8 +1,8 @@
 package com.coreman2200.domain.symbol.chart;
 
-import com.coreman2200.domain.symbol.astralsymbol.AstralStrata;
-import com.coreman2200.domain.symbol.entitysymbol.EntityStrata;
-import com.coreman2200.domain.symbol.numbersymbol.NumberStrata;
+import com.coreman2200.domain.symbol.strata.AstralStrata;
+import com.coreman2200.domain.symbol.strata.EntityStrata;
+import com.coreman2200.domain.symbol.strata.NumberStrata;
 import com.coreman2200.domain.symbol.symbolinterface.ISymbolStrata;
 
 /**

@@ -3,14 +3,9 @@ package com.coreman2200.presentation.rsdisplay.activity;
 import java.util.ArrayList;
 import java.util.List;
 
-//import java.util.GregorianCalendar;
-
-//import android.opengl.GLSurfaceView.GLWrapper;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
-//import javax.microedition.khronos.opengles.GL;
-//import android.util.Log;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -21,7 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.coreman2200.ringstrings.R;
+import com.coreman2200.presentation.R;
 import com.coreman2200.presentation.rsdisplay.model.FloatingActionButton;
 import com.coreman2200.presentation.rsdisplay.fragments.FragmentDrawer;
 import com.coreman2200.presentation.rsdisplay.fragments.FragmentSymbolViewContent;

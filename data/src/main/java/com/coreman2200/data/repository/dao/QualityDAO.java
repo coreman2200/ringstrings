@@ -6,8 +6,9 @@ import android.content.ContentValues;
 import com.coreman2200.domain.protos.SymbolIDBundle;
 import com.coreman2200.data.repository.RingStringsContract;
 import com.coreman2200.data.repository.RingStringsDbHelper;
-import com.coreman2200.domain.symbol.entitysymbol.Lights.ILightSymbol;
-import com.coreman2200.presentation.symbol.tags.TagSymbols;
+import com.coreman2200.domain.symbol.symbolinterface.ILightSymbol;
+import com.coreman2200.domain.symbol.symbolinterface.ITagSymbol;
+import com.coreman2200.domain.symbol.tags.TagSymbols;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,10 +29,10 @@ import java.util.List;
 
 public class QualityDAO implements ISymbolDAO {
     private SymbolIDBundle mIdBundle;
-    private TagSymbols mTag;
+    private ITagSymbol mTag;
     private int mCount;
 
-    public QualityDAO(SymbolIDBundle bundle, TagSymbols tag, int count) {
+    public QualityDAO(SymbolIDBundle bundle, ITagSymbol tag, int count) {
         mIdBundle = bundle;
         mTag = tag;
         mCount = count;

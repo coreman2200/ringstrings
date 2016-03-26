@@ -1,6 +1,6 @@
 package com.coreman2200.data.processor.numerology.grouped;
 
-import com.coreman2200.domain.profiledata.IProfileDataBundle;
+import com.coreman2200.domain.adapter.profiledata.IProfileDataBundle;
 import com.coreman2200.domain.protos.RingStringsAppSettings;
 import com.coreman2200.domain.symbol.numbersymbol.grouped.BaseNumberSymbols;
 import com.coreman2200.domain.symbol.numbersymbol.grouped.GroupedNumberSymbols;

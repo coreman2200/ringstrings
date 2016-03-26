@@ -1,9 +1,9 @@
 package com.coreman2200.domain.symbol.numbersymbol.impl;
 
 import com.coreman2200.domain.symbol.AbstractSymbol;
-import com.coreman2200.domain.symbol.SymbolStrata;
+import com.coreman2200.domain.symbol.strata.SymbolStrata;
 import com.coreman2200.domain.symbol.numbersymbol.interfaces.INumberSymbol;
-import com.coreman2200.domain.symbol.numbersymbol.NumberStrata;
+import com.coreman2200.domain.symbol.strata.NumberStrata;
 
 /**
  * NumberSymbolImpl

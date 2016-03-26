@@ -1,7 +1,5 @@
 package com.coreman2200.domain.symbol.symbolinterface;
 
-import com.coreman2200.presentation.symbol.tags.TagSymbols;
-
 import java.util.Collection;
 
 /**
@@ -19,6 +17,6 @@ import java.util.Collection;
  */
 
 public interface IEntitySymbol extends IRelatedSymbolMapping {
-    Collection<TagSymbols> getQualities();
-    int getTagCount(TagSymbols tag);
+    Collection<ITagSymbol> getQualities();
+    int getTagCount(ITagSymbol tag);
 }

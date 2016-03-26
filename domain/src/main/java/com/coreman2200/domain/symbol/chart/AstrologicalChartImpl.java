@@ -1,6 +1,6 @@
 package com.coreman2200.domain.symbol.chart;
 
-import com.coreman2200.domain.symbol.astralsymbol.AstralStrata;
+import com.coreman2200.domain.symbol.strata.AstralStrata;
 import com.coreman2200.domain.symbol.astralsymbol.grouped.AstralCharts;
 import com.coreman2200.domain.symbol.astralsymbol.grouped.CelestialBodies;
 import com.coreman2200.domain.symbol.astralsymbol.grouped.Houses;

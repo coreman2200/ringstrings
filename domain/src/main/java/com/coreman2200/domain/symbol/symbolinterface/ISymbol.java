@@ -1,6 +1,6 @@
 package com.coreman2200.domain.symbol.symbolinterface;
 
-import com.coreman2200.domain.symbol.SymbolStrata;
+import com.coreman2200.domain.symbol.strata.SymbolStrata;
 
 import java.util.Collection;
 import java.util.Map;
