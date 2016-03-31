@@ -7,101 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bb5349b-8d5c-4d0d-b8bf-154d8f769a9f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/domain_domain.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symboldef/SymbolDefImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/presentation/src/main/java/com/coreman2200/presentation/symbol/tags/IValueSymbol.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/presentation/src/main/java/com/coreman2200/presentation/symbol/tags/ValueSymbolImpl.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/entity/ProfileInputProcessor.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/profile/ProfileInputProcessor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/rsprovider/RingStringsContentProvider.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/rsprovider/RingStringsContentProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/libs/java-json.jar" afterPath="$PROJECT_DIR$/data/libs/java-json.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/libs/swisseph-2.01.00-00.jar" afterPath="$PROJECT_DIR$/data/libs/swisseph-2.01.00-00.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/profiledata/IProfileDataBundle.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/adapter/profiledata/IProfileDataBundle.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/profiledata/ProfileDataBundleAdapter.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/adapter/profiledata/ProfileDataBundleAdapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/SymbolStrata.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/strata/SymbolStrata.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/astralsymbol/AstralStrata.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/strata/AstralStrata.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/numbersymbol/NumberStrata.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/strata/NumberStrata.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symboldef/ISymbolDef.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/symbolinterface/ISymbolDef.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/test/java/com/coreman2200/domain/TestAstrologicalChartInputProcessorImpl.java" afterPath="$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/processor/TestAstrologicalChartInputProcessorImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/test/java/com/coreman2200/domain/TestProfileDataBundle.java" afterPath="$PROJECT_DIR$/domain/src/test/java/com/coreman2200/domain/profiledata/TestProfileDataBundle.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/test/java/com/coreman2200/domain/TestProfileInputProcessor.java" afterPath="$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/processor/TestProfileInputProcessor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/domain/src/test/java/com/coreman2200/domain/symbol/entitysymbol/Lights/TestLightSymbol.java" afterPath="$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/entity/symbol/lights/TestLightSymbol.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/presentation/src/main/java/com/coreman2200/presentation/symbol/AbstractEntitySymbol.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/entity/symbol/AbstractEntitySymbol.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/presentation/src/main/java/com/coreman2200/presentation/symbol/EntityStrata.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/strata/EntityStrata.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/presentation/src/main/java/com/coreman2200/presentation/symbol/lights/ILightSymbol.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/symbolinterface/ILightSymbol.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/presentation/src/main/java/com/coreman2200/presentation/symbol/lights/LightSymbolImpl.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/entity/symbol/lights/LightSymbolImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/presentation/src/main/java/com/coreman2200/presentation/symbol/profile/AbstractProfileSymbol.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/entity/symbol/profile/AbstractProfileSymbol.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/presentation/src/main/java/com/coreman2200/presentation/symbol/profile/IProfileSymbol.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/symbolinterface/IProfileSymbol.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/presentation/src/main/java/com/coreman2200/presentation/symbol/profile/LocalProfileSymbolImpl.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/entity/symbol/profile/LocalProfileSymbolImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/presentation/src/main/java/com/coreman2200/presentation/symbol/profile/UserProfileSymbolImpl.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/entity/symbol/profile/UserProfileSymbolImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/presentation/src/main/java/com/coreman2200/presentation/symbol/tags/ITagSymbol.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/symbolinterface/ITagSymbol.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/presentation/src/main/java/com/coreman2200/presentation/symbol/tags/TagSymbols.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/tags/TagSymbols.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/presentation/src/test/java/com/coreman2200/ringstrings/TestRingStringsActivity.java" afterPath="$PROJECT_DIR$/presentation/src/test/java/com/coreman2200/presentation/TestRingStringsActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/src/main/res/raw/gent.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/src/main/res/raw/gtags.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_23_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_23_2_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_2_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/java_json.xml" afterPath="$PROJECT_DIR$/.idea/libraries/java_json.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_2_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_23_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_23_2_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/swisseph_2_01_00_00.xml" afterPath="$PROJECT_DIR$/.idea/libraries/swisseph_2_01_00_00.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/data.iml" afterPath="$PROJECT_DIR$/data/data.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/activity/MainActivity.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/activity/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/adapter/symbolid/ISymbolIdBundleAdapter.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/adapter/symbolid/ISymbolIdBundleAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/adapter/symbolid/SymbolIdBundleAdapter.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/adapter/symbolid/SymbolIdBundleAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/astrology/AstrologicalChartInputProcessorImpl.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/astrology/AstrologicalChartInputProcessorImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/numerology/NumerologicalChartProcessor.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/numerology/NumerologicalChartProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/numerology/grouped/ChallengesProcessor.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/numerology/grouped/ChallengesProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/numerology/grouped/GroupedNumberSymbolsInputProcessor.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/numerology/grouped/GroupedNumberSymbolsInputProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/numerology/grouped/IGroupedNumberSymbolsInputProcessor.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/numerology/grouped/IGroupedNumberSymbolsInputProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/numerology/grouped/PeriodsProcessor.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/numerology/grouped/PeriodsProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/numerology/grouped/PersonalsProcessor.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/numerology/grouped/PersonalsProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/numerology/grouped/PinnaclesProcessor.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/numerology/grouped/PinnaclesProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/numerology/grouped/QualitiesProcessor.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/processor/numerology/grouped/QualitiesProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/repository/dao/AbstractSymbolDAO.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/repository/dao/AbstractSymbolDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/repository/dao/AstralSymbolDAO.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/repository/dao/AstralSymbolDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/repository/dao/ISymbolDAO.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/repository/dao/ISymbolDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/repository/dao/NumberSymbolDAO.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/repository/dao/NumberSymbolDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/repository/dao/ProfileSymbolDAO.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/repository/dao/ProfileSymbolDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/repository/dao/QualityDAO.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/repository/dao/QualityDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/rsio/swisseph/ISwissEphemerisManager.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/rsio/swisseph/ISwissEphemerisManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/rsio/swisseph/SwissEphemerisManagerImpl.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/rsio/swisseph/SwissEphemerisManagerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/rsio/swisseph/SwissephFileHandlerImpl.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/rsio/swisseph/SwissephFileHandlerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/rsio/symboldef/SymbolDefFileHandlerImpl.java" afterPath="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/rsio/symboldef/SymbolDefFileHandlerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/data/src/main/res/values/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/RSIO/symboldef/TestSymbolDefFileHandler.java" afterPath="$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/RSIO/symboldef/TestSymbolDefFileHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/TestConvertingXMLFilesToJSONObjects.java" afterPath="$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/TestConvertingXMLFilesToJSONObjects.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/rsprovider/TestRingStringsContentProvider.java" afterPath="$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/rsprovider/TestRingStringsContentProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/domain.iml" afterPath="$PROJECT_DIR$/domain/domain.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/AbstractSymbol.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/AbstractSymbol.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/astralsymbol/impl/AspectedSymbolsImpl.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/astralsymbol/impl/AspectedSymbolsImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/astralsymbol/impl/AstralSymbolImpl.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/astralsymbol/impl/AstralSymbolImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/astralsymbol/impl/CelestialBodySymbolImpl.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/astralsymbol/impl/CelestialBodySymbolImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/astralsymbol/impl/HouseSymbolImpl.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/astralsymbol/impl/HouseSymbolImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/astralsymbol/impl/ListedAstralSymbolsImpl.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/astralsymbol/impl/ListedAstralSymbolsImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/astralsymbol/impl/ZodiacSymbolImpl.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/astralsymbol/impl/ZodiacSymbolImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/astralsymbol/interfaces/IAstralSymbol.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/astralsymbol/interfaces/IAstralSymbol.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/chart/AstrologicalChartImpl.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/chart/AstrologicalChartImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/chart/Charts.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/chart/Charts.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/chart/NumerologicalChartImpl.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/chart/NumerologicalChartImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/map/comparator/SymbolStrataComparatorImpl.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/map/comparator/SymbolStrataComparatorImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/numbersymbol/grouped/BaseNumberSymbols.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/numbersymbol/grouped/BaseNumberSymbols.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/numbersymbol/grouped/DerivedKarmicDebtSymbols.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/numbersymbol/grouped/DerivedKarmicDebtSymbols.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/numbersymbol/impl/BaseNumberSymbolImpl.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/numbersymbol/impl/BaseNumberSymbolImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/numbersymbol/impl/DerivedNumberSymbolImpl.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/numbersymbol/impl/DerivedNumberSymbolImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/numbersymbol/impl/GroupedNumberSymbolsImpl.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/numbersymbol/impl/GroupedNumberSymbolsImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/numbersymbol/impl/NumberSymbolImpl.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/numbersymbol/impl/NumberSymbolImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/numbersymbol/impl/RelatedNumberSymbolsImpl.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/numbersymbol/impl/RelatedNumberSymbolsImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/numbersymbol/interfaces/INumberSymbol.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/numbersymbol/interfaces/INumberSymbol.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/symbolinterface/IEntitySymbol.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/symbolinterface/IEntitySymbol.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/symbolinterface/ISymbol.java" afterPath="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/symbol/symbolinterface/ISymbol.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/src/test/java/com/coreman2200/domain/symbol/TestSymbolStrata.java" afterPath="$PROJECT_DIR$/domain/src/test/java/com/coreman2200/domain/symbol/TestSymbolStrata.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/presentation.iml" afterPath="$PROJECT_DIR$/presentation/presentation.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation/src/main/java/com/coreman2200/presentation/rsdisplay/activity/RingStringsActivity.java" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/coreman2200/presentation/rsdisplay/activity/RingStringsActivity.java" />
     </list>
     <ignored path="ringstrings.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -129,108 +44,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SwissEphemerisManagerImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SwissEphemerisManagerImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/rsio/swisseph/SwissEphemerisManagerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125">
-              <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/activity/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestLightSymbol.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/entity/symbol/lights/TestLightSymbol.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25862068">
-              <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestAstrologicalChartInputProcessorImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/processor/TestAstrologicalChartInputProcessorImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.028142588">
+              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestProfileInputProcessor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/processor/TestProfileInputProcessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestSymbolDefFileHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/rsio/symboldef/TestSymbolDefFileHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestRingStringsContentProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/rsprovider/TestRingStringsContentProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="95" column="56" selection-start-line="95" selection-start-column="56" selection-end-line="95" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/domain/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0">
-              <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -3096,7 +2917,6 @@
         <option value="$PROJECT_DIR$/domain/src/main/java/com/coreman2200/domain/profiledata/ProfileDataBundleAdapter.java" />
         <option value="$PROJECT_DIR$/domain/src/test/java/com/coreman2200/domain/TestProfileDataBundle.java" />
         <option value="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/adapter/profiledata/ProfileDataBundleAdapter.java" />
-        <option value="$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/TestConvertingXMLFilesToJSONObjects.java" />
         <option value="$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/rsio/swisseph/SwissEphemerisManagerImpl.java" />
         <option value="$PROJECT_DIR$/data/build/intermediates/res/merged/debug/values/values.xml" />
         <option value="$PROJECT_DIR$/data/src/main/res/values/styles.xml" />
@@ -3127,6 +2947,7 @@
         <option value="$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/processor/TestAstrologicalChartInputProcessorImpl.java" />
         <option value="$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/rsio/symboldef/TestSymbolDefFileHandler.java" />
         <option value="$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/rsprovider/TestRingStringsContentProvider.java" />
+        <option value="$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/TestConvertingXMLFilesToJSONObjects.java" />
       </list>
     </option>
   </component>
@@ -3160,6 +2981,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ringstrings" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3188,494 +3031,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="presentation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presentation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presentation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presentation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presentation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presentation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="symbol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rsprovider" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rsprovider" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="buildsystem" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -3683,28 +3038,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ringstrings" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3727,12 +3060,9 @@
     <property name="android.project.structure.proportion" value="0.15" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data/libs" />
-      <recent name="$PROJECT_DIR$/domain/libs" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/buildsystem" />
-      <recent name="$PROJECT_DIR$/data" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/src/main/res/raw" />
+      <recent name="$PROJECT_DIR$/ringstrings-app" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.coreman2200.data.entity.symbol.lights" />
@@ -3744,9 +3074,12 @@
     <key name="android.template.packageName">
       <recent name="com.coreman2200.data.activity" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data/src/main/res/raw" />
-      <recent name="$PROJECT_DIR$/ringstrings-app" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/libs" />
+      <recent name="$PROJECT_DIR$/domain/libs" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/buildsystem" />
+      <recent name="$PROJECT_DIR$/data" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.data">
@@ -4106,7 +3439,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="677" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -4115,25 +3448,25 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32976827" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976827" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32976827" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -4156,18 +3489,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/rsprovider/RingStringsContentProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/presentation/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4213,10 +3538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39399624">
           <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <element signature="e#4399#4400#0" expanded="false" />
-            <element signature="e#4458#4459#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4267,14 +3588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.0344827">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/TestConvertingXMLFilesToJSONObjects.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4371,7 +3684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.94827586">
           <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4386,7 +3698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4394,9 +3705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32457787">
           <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4404,9 +3712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9005628">
           <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4414,9 +3719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="43" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4424,9 +3726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.60600376">
           <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4434,9 +3733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7467167">
           <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4444,9 +3740,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4652908">
           <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4454,9 +3747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5603448">
           <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4464,9 +3754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4474,25 +3761,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.974138">
           <caret line="73" column="69" selection-start-line="73" selection-start-column="69" selection-end-line="73" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/activity/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/domain/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4500,69 +3775,79 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/rsio/swisseph/SwissEphemerisManagerImpl.java">
+    <entry file="file://$PROJECT_DIR$/data/src/main/res/raw/gtags.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/TestConvertingXMLFilesToJSONObjects.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/processor/TestAstrologicalChartInputProcessorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/processor/TestProfileInputProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/rsio/symboldef/TestSymbolDefFileHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-          <folding />
+        <state vertical-scroll-proportion="0.6034483">
+          <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/rsprovider/TestRingStringsContentProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="95" column="56" selection-start-line="95" selection-start-column="56" selection-end-line="95" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.04310345">
+          <caret line="91" column="22" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/rsio/symboldef/TestSymbolDefFileHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04310345">
+          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/processor/TestProfileInputProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/processor/TestAstrologicalChartInputProcessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/src/test/java/com/coreman2200/data/entity/symbol/lights/TestLightSymbol.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25862068">
+        <state vertical-scroll-proportion="-2.6293104">
           <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/activity/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51724136">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23148148">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/com/coreman2200/data/rsio/swisseph/SwissEphemerisManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.028142588">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

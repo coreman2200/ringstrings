@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="0.1"><source path="/Users/new/git/ringstrings/presentation/build/intermediates/exploded-aar/com.android.support.test/testing-support-lib/0.1/assets"/></dataSet><dataSet config="main"><source path="/Users/new/git/ringstrings/presentation/src/androidTest/assets"/><source path="/Users/new/git/ringstrings/presentation/build/generated/assets/shaders/androidTest/debug"/></dataSet></merger>

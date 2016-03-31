@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.coreman2200.presentation.rsdisplay.activity.RingStringsActivity"
+    style="@style/RSBaseTheme">
+
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/fragment_navigation_drawer"
+            android:name="com.coreman2200.presentation.rsdisplay.fragments.FragmentDrawer"
+            android:layout_width="@dimen/nav_drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:layout="@layout/fragment_navigation_drawer"
+            tools:layout="@layout/fragment_navigation_drawer" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/RSBaseTheme">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/RSBaseTheme"
+            style="@style/RSBaseTheme" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/abc_action_bar_default_padding_start_material">
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="@dimen/symbolview_symbolicon_maxlength" android:layout_height="@dimen/symbolview_symbolicon_maxlength"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/symbolview_symbolicon_marginleft">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/rezlights"
+                    android:layout_gravity="center" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_rssymbol_symbolicon_moon"
+                    android:tint="@color/primary_dark"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textview_symbolname"
+                android:layout_alignParentRight="true"
+                android:text="@string/app_name"
+                android:textSize="@dimen/symbolview_symbolname_textsize"
+                android:padding="@dimen/symbolview_symbolname_textpadding"
+                style="@style/RSBaseTheme" />
+        </RelativeLayout>
+
+
+        <android.support.design.widget.TabLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabs"
+            style="@style/TabRSBaseTheme"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            android:layout_gravity="end" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+
+    <include layout="@layout/fab_layout" />
+
+</android.support.design.widget.CoordinatorLayout>
+
