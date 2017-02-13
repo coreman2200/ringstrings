@@ -37,3 +37,4 @@ gen/
 
 #NDK
 obj/
+gradle-wrapper.properties
