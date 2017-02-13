@@ -10,4 +10,8 @@
     <string name="drawer_open">drawer open</string>
     <string name="drawer_close">drawer close</string>
     <string name="title_activity_test">TestActivity</string>
+
+    <string name="title_activity_ringstrings_vr">RingstringsVRActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
