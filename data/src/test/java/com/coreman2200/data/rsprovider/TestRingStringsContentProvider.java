@@ -15,7 +15,7 @@ import com.coreman2200.data.adapter.symbolid.QueryIdBundleAdapter;
 import com.coreman2200.data.adapter.symbolid.SymbolIdBundleAdapter;
 import com.coreman2200.domain.adapter.profiledata.IProfileDataBundle;
 import com.coreman2200.domain.adapter.profiledata.ProfileDataBundleAdapter;
-import com.coreman2200.domain.profiledata.MockDefaultDataBundles;
+import com.coreman2200.data.profiledata.MockDefaultDataBundles;
 import com.coreman2200.domain.protos.LocalProfileDataBundle;
 import com.coreman2200.domain.protos.RingStringsAppSettings;
 import com.coreman2200.domain.protos.SymbolIDBundle;

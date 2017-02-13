@@ -3,7 +3,7 @@ package com.coreman2200.data.rsio.symboldef;
 import android.app.Activity;
 
 import com.coreman2200.data.BuildConfig;
-import com.coreman2200.domain.profiledata.MockDefaultDataBundles;
+import com.coreman2200.data.profiledata.MockDefaultDataBundles;
 import com.coreman2200.domain.protos.RingStringsAppSettings;
 import com.coreman2200.domain.symbol.astralsymbol.grouped.CelestialBodies;
 import com.coreman2200.domain.symbol.numbersymbol.grouped.BaseNumberSymbols;

@@ -4,7 +4,7 @@ import android.app.Activity;
 
 import com.coreman2200.data.BuildConfig;
 import com.coreman2200.data.activity.MainActivity;
-import com.coreman2200.domain.profiledata.MockDefaultDataBundles;
+import com.coreman2200.data.profiledata.MockDefaultDataBundles;
 import com.coreman2200.domain.symbol.symbolinterface.ILightSymbol;
 import com.coreman2200.domain.adapter.profiledata.IProfileDataBundle;
 import com.coreman2200.domain.adapter.profiledata.ProfileDataBundleAdapter;

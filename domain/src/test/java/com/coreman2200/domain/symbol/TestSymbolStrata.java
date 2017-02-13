@@ -8,7 +8,7 @@ import org.robolectric.annotation.Config;
 
 import com.coreman2200.domain.profiledata.IProfileDataBundle;
 import com.coreman2200.domain.profiledata.ProfileDataBundleAdapter;
-import com.coreman2200.domain.com.coreman2200.domain.profiledata.MockDefaultDataBundles;
+import com.coreman2200.domain.profiledata.MockDefaultDataBundles;
 import com.coreman2200.domain.protos.RingStringsAppSettings;
 import com.coreman2200.domain.symbol.strata.SymbolStrata;
 import com.coreman2200.presentation.rsdisplay.activity.RingStringsActivity;
