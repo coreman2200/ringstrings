@@ -11,16 +11,13 @@
             <option value="$PROJECT_DIR$/data" />
             <option value="$PROJECT_DIR$/domain" />
             <option value="$PROJECT_DIR$/presentation" />
+            <option value="$PROJECT_DIR$/vr-audio" />
+            <option value="$PROJECT_DIR$/vr-base" />
+            <option value="$PROJECT_DIR$/vr-controller" />
+            <option value="$PROJECT_DIR$/vr-panowidget" />
           </set>
         </option>
-        <option name="myModules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/data" />
-            <option value="$PROJECT_DIR$/domain" />
-            <option value="$PROJECT_DIR$/presentation" />
-          </set>
-        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
   </component>

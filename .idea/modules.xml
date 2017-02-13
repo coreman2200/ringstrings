@@ -6,6 +6,10 @@
       <module fileurl="file://$PROJECT_DIR$/domain/domain.iml" filepath="$PROJECT_DIR$/domain/domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/presentation/presentation.iml" filepath="$PROJECT_DIR$/presentation/presentation.iml" />
       <module fileurl="file://$PROJECT_DIR$/ringstrings.iml" filepath="$PROJECT_DIR$/ringstrings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vr-audio/vr-audio.iml" filepath="$PROJECT_DIR$/vr-audio/vr-audio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vr-base/vr-base.iml" filepath="$PROJECT_DIR$/vr-base/vr-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vr-controller/vr-controller.iml" filepath="$PROJECT_DIR$/vr-controller/vr-controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vr-panowidget/vr-panowidget.iml" filepath="$PROJECT_DIR$/vr-panowidget/vr-panowidget.iml" />
     </modules>
   </component>
 </project>
