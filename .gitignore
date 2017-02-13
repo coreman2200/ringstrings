@@ -1,0 +1,39 @@
+.gradle/2.14.1/taskArtifacts/cache.properties
+.gradle/2.14.1/taskArtifacts/cache.properties.lock
+.gradle/2.14.1/taskArtifacts/fileHashes.bin
+.gradle/2.14.1/taskArtifacts/fileSnapshots.bin
+.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin
+.gradle/2.14.1/taskArtifacts/taskArtifacts.bin
+
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/presentation/build/*
+/data/build/*
+/domain/build/*
+/captures
+.externalNativeBuild
+
+#built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# OSX files
+.DS_Store
+
+#NDK
+obj/
