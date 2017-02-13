@@ -1,1 +1,1 @@
-include ':presentation', ':data', ':domain'
+include ':presentation', ':data', ':domain', ':vr-audio', ':vr-base', ':vr-panowidget', ':vr-controller'

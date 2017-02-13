@@ -6,14 +6,14 @@ allprojects {
 
 ext {
     //Android
-    androidBuildToolsVersion = "23.0.2"
+    androidBuildToolsVersion = "25.0.0"
     androidMinSdkVersion = 21
-    androidTargetSdkVersion = 21
-    androidCompileSdkVersion = 23
+    androidTargetSdkVersion = 24
+    androidCompileSdkVersion = 25
 
     //Libraries
-    daggerVersion = '2.0.2'
-    butterKnifeVersion = '7.0.1'
+    daggerVersion = '2.5'
+    butterKnifeVersion = '8.4.0'
     mavenVersion = '2.1.3'
     picassoVersion = '2.5.2'
     retrofitVersion = '2.0.0-beta2'
@@ -24,13 +24,18 @@ ext {
     javaxAnnotationVersion = '1.0'
     wireVersion = '2.0.1'
     okHttpVersion = '2.5.0'
+    volleyVersion = '1.0.19'
+    httpRequestVersion = '6.0'
+    httpClientVersion = '4.3.5.1'
+    httpMimeVersion = '4.5.2'
 
-    androidSupportVersion = '23.2.1'
-    //androidAnnotationsVersion = '23.2.1'
+    androidSupportVersion = '25.1.1'
+    androidAnnotationsVersion = '24.1.0'
 
+    vrVersion = '1.20.0'
 
     //Testing
-    robolectricVersion = '3.1-SNAPSHOT'
+    robolectricVersion = '3.0'
     jUnitVersion = '4.12'
     assertJVersion = '1.7.1'
     mockitoVersion = '1.9.5'
@@ -57,7 +62,9 @@ ext {
             javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
             appCompatv7:        "com.android.support:appcompat-v7:${androidSupportVersion}",
             design:             "com.android.support:design:${androidSupportVersion}",
-            androidAnnotations: "com.android.support:support-annotations:${androidSupportVersion}"
+            androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}",
+            vrBase:             "com.google.vr:sdk-base:${vrVersion}",
+            vrAudio:            "com.google.vr:sdk-audio:${vrVersion}"
     ]
 
     presentationTestDependencies = [
@@ -74,7 +81,7 @@ ext {
             wire:               "com.squareup.wire:wire-runtime:${wireVersion}",
             rxAdapter:          "com.squareup.retrofit:adapter-rxjava:${retroRxAdapterVersion}",
             rxJava:             "io.reactivex:rxjava:${rxJavaVersion}",
-            androidAnnotations: "com.android.support:support-annotations:${androidSupportVersion}"
+            androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}"
     ]
 
     domainTestDependencies = [
@@ -93,14 +100,18 @@ ext {
             rxJava:             "io.reactivex:rxjava:${rxJavaVersion}",
             rxAndroid:          "io.reactivex:rxandroid:${rxAndroidVersion}",
             javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
-            androidAnnotations: "com.android.support:support-annotations:${androidSupportVersion}"
+            androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}",
+            volley:             "com.mcxiaoke.volley:library:${volleyVersion}",
+            httpRequest:        "com.github.kevinsawicki:http-request:${httpRequestVersion}",
+            httpClient:         "org.apache.httpcomponents:httpclient-android:${httpClientVersion}",
+            httpMime:           "org.apache.httpcomponents:httpmime:${httpMimeVersion}"
     ]
 
     dataTestDependencies = [
             junit:              "junit:junit:${jUnitVersion}",
             assertj:            "org.assertj:assertj-core:${assertJVersion}",
             mockito:            "org.mockito:mockito-core:${mockitoVersion}",
-            robolectric:        "org.robolectric:robolectric:${robolectricVersion}",
+            robolectric:        "org.robolectric:shadows-support-v4:${robolectricVersion}",
             maven:              "org.apache.maven:maven-ant-tasks:${mavenVersion}"
     ]
 
