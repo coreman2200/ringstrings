@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.coreman2200.data.R;
 import com.coreman2200.data.rsio.FileHandlerImpl;
-import com.coreman2200.domain.protos.SymbolDescription;
+import com.coreman2200.domain.model.protos.SymbolDescription;
 
 import org.json.JSONArray;
 import org.json.JSONException;

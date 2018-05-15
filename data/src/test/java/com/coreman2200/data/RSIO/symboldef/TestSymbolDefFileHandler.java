@@ -4,9 +4,9 @@ import android.app.Activity;
 
 import com.coreman2200.data.BuildConfig;
 import com.coreman2200.data.profiledata.MockDefaultDataBundles;
-import com.coreman2200.domain.protos.RingStringsAppSettings;
-import com.coreman2200.domain.symbol.astralsymbol.grouped.CelestialBodies;
-import com.coreman2200.domain.symbol.numbersymbol.grouped.BaseNumberSymbols;
+import com.coreman2200.domain.model.protos.RingStringsAppSettings;
+import com.coreman2200.domain.model.symbols.astrals.grouped.CelestialBodies;
+import com.coreman2200.domain.model.symbols.numbers.grouped.BaseNumberSymbols;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -14,8 +14,6 @@ import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
-
-import java.util.Collection;
 
 /**
  * TestSymbolDefFileHandler

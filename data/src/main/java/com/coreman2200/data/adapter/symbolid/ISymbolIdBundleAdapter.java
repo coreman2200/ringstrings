@@ -1,9 +1,9 @@
 package com.coreman2200.data.adapter.symbolid;
 
-import com.coreman2200.domain.adapter.profiledata.IProfileDataBundle;
-import com.coreman2200.domain.symbol.strata.SymbolStrata;
-import com.coreman2200.domain.symbol.chart.Charts;
-import com.coreman2200.domain.symbol.tags.TagSymbols;
+import com.coreman2200.domain.model.profiles.interfaces.IProfileDataBundle;
+import com.coreman2200.domain.model.symbols.strata.SymbolStrata;
+import com.coreman2200.domain.model.symbols.charts.Charts;
+import com.coreman2200.domain.model.symbols.tags.TagSymbols;
 
 import java.util.List;
 

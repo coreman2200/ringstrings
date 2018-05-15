@@ -2,7 +2,7 @@ package com.coreman2200.domain;
 
 import android.app.Activity;
 
-import com.coreman2200.presentation.rsdisplay.activity.RingStringsActivity;
+import com.coreman2200.presentation.rsdisplay.presenter.flat.activity.RingStringsActivity;
 import com.coreman2200.data.rsio.swisseph.ISwissephFileHandler;
 import com.coreman2200.data.rsio.swisseph.SwissephFileHandlerImpl;
 

@@ -1,6 +1,6 @@
 package com.coreman2200.data.adapter.symbolid;
 
-import com.coreman2200.domain.protos.SymbolIDBundle;
+import com.coreman2200.domain.model.protos.SymbolIDBundle;
 
 import java.util.ArrayList;
 import java.util.Collection;

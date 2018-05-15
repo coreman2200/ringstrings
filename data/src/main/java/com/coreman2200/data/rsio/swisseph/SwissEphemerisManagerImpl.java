@@ -1,18 +1,18 @@
 package com.coreman2200.data.rsio.swisseph;
 
-import com.coreman2200.domain.adapter.profiledata.IProfileDataBundle;
-import com.coreman2200.domain.protos.LocalProfileDataBundle;
-import com.coreman2200.domain.protos.RingStringsAppSettings;
-import com.coreman2200.domain.symbol.astralsymbol.grouped.CelestialBodies;
-import com.coreman2200.domain.symbol.astralsymbol.grouped.Houses;
-import com.coreman2200.domain.symbol.astralsymbol.grouped.Zodiac;
-import com.coreman2200.domain.symbol.astralsymbol.impl.CelestialBodySymbolImpl;
-import com.coreman2200.domain.symbol.astralsymbol.impl.FictionalBodySymbolImpl;
-import com.coreman2200.domain.symbol.astralsymbol.impl.HouseSymbolImpl;
-import com.coreman2200.domain.symbol.astralsymbol.impl.ZodiacSymbolImpl;
-import com.coreman2200.domain.symbol.astralsymbol.interfaces.IAstralSymbol;
-import com.coreman2200.domain.symbol.astralsymbol.interfaces.IHouseSymbol;
-import com.coreman2200.domain.symbol.astralsymbol.interfaces.IZodiacSymbol;
+import com.coreman2200.domain.model.profiles.interfaces.IProfileDataBundle;
+import com.coreman2200.domain.model.protos.LocalProfileDataBundle;
+import com.coreman2200.domain.model.protos.RingStringsAppSettings;
+import com.coreman2200.domain.model.symbols.astrals.grouped.CelestialBodies;
+import com.coreman2200.domain.model.symbols.astrals.grouped.Houses;
+import com.coreman2200.domain.model.symbols.astrals.grouped.Zodiac;
+import com.coreman2200.domain.model.symbols.astrals.impl.CelestialBodySymbolImpl;
+import com.coreman2200.domain.model.symbols.astrals.impl.FictionalBodySymbolImpl;
+import com.coreman2200.domain.model.symbols.astrals.impl.HouseSymbolImpl;
+import com.coreman2200.domain.model.symbols.astrals.impl.ZodiacSymbolImpl;
+import com.coreman2200.domain.model.symbols.astrals.interfaces.IAstralSymbol;
+import com.coreman2200.domain.model.symbols.astrals.interfaces.IHouseSymbol;
+import com.coreman2200.domain.model.symbols.astrals.interfaces.IZodiacSymbol;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;

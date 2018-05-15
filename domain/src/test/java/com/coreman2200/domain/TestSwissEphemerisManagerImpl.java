@@ -5,8 +5,8 @@ import android.app.Activity;
 import com.coreman2200.domain.com.coreman2200.domain.profiledata.MockDefaultDataBundles;
 import com.coreman2200.domain.profiledata.IProfileDataBundle;
 import com.coreman2200.domain.profiledata.ProfileDataBundleAdapter;
-import com.coreman2200.domain.protos.RingStringsAppSettings;
-import com.coreman2200.presentation.rsdisplay.activity.RingStringsActivity;
+import com.coreman2200.domain.model.protos.RingStringsAppSettings;
+import com.coreman2200.presentation.rsdisplay.presenter.flat.activity.RingStringsActivity;
 import com.coreman2200.data.rsio.swisseph.ISwissEphemerisManager;
 import com.coreman2200.data.rsio.swisseph.SwissEphemerisManagerImpl;
 

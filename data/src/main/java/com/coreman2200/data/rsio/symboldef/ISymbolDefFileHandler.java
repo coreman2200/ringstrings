@@ -1,7 +1,7 @@
 package com.coreman2200.data.rsio.symboldef;
 
 import com.coreman2200.data.rsio.IFileHandler;
-import com.coreman2200.domain.protos.SymbolDescription;
+import com.coreman2200.domain.model.protos.SymbolDescription;
 
 /**
  * ISymbolDefFileHandler

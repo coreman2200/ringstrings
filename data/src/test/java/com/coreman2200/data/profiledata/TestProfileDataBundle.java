@@ -1,9 +1,9 @@
 package com.coreman2200.data.profiledata;
 
-import com.coreman2200.domain.adapter.profiledata.IProfileDataBundle;
-import com.coreman2200.domain.adapter.profiledata.ProfileDataBundleAdapter;
-import com.coreman2200.domain.protos.LocalProfileDataBundle;
-import com.coreman2200.domain.protos.RingStringsAppSettings;
+import com.coreman2200.domain.model.profiles.ProfileDataBundle;
+import com.coreman2200.domain.model.profiles.interfaces.IProfileDataBundle;
+import com.coreman2200.domain.model.protos.LocalProfileDataBundle;
+import com.coreman2200.domain.model.protos.RingStringsAppSettings;
 
 import org.junit.Test;
 
@@ -41,17 +41,17 @@ public class TestProfileDataBundle {
     @Test
     public void testProfileBirthDateMatchesBundleTimeStamp() {
         LocalProfileDataBundle corybundle = MockDefaultDataBundles.testProfileBundleCoryH;
-        assert ( corybundle.birth_placement.timestamp == new ProfileDataBundleAdapter(corybundle).getBirthDate().getTimeInMillis() );
+        assert ( corybundle.birth_placement.timestamp == new ProfileDataBundle(corybundle).getBirthDate().getTimeInMillis() );
         LocalProfileDataBundle kaylabundle = MockDefaultDataBundles.testProfileBundleKaylaP;
-        assert ( kaylabundle.birth_placement.timestamp == new ProfileDataBundleAdapter(kaylabundle).getBirthDate().getTimeInMillis() );
+        assert ( kaylabundle.birth_placement.timestamp == new ProfileDataBundle(kaylabundle).getBirthDate().getTimeInMillis() );
         LocalProfileDataBundle randombundle = MockDefaultDataBundles.generateRandomProfile();
-        assert ( randombundle.birth_placement.timestamp == new ProfileDataBundleAdapter(randombundle).getBirthDate().getTimeInMillis() );
+        assert ( randombundle.birth_placement.timestamp == new ProfileDataBundle(randombundle).getBirthDate().getTimeInMillis() );
     }
 
     @Test
     public void testProfileAdapterCorrectlyRelatesInterface() {
         LocalProfileDataBundle bundle = MockDefaultDataBundles.testProfileBundleCoryH;
-        mTestProfile = new ProfileDataBundleAdapter(bundle);
+        mTestProfile = new ProfileDataBundle(bundle);
 
         assert ( mTestProfile.getFirstName() == bundle.full_name.segments.get(0) );
         assert ( mTestProfile.getMiddleName() == bundle.full_name.segments.get(1) );

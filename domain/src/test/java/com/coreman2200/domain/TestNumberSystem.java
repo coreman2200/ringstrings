@@ -2,11 +2,10 @@ package com.coreman2200.domain;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
-import com.coreman2200.domain.numbersystem.NumberSystem;
-import com.coreman2200.domain.numbersystem.INumberSystem;
-import com.coreman2200.domain.numbersystem.NumberSystemType;
+import com.coreman2200.domain.model.systems.numbers.NumberSystem;
+import com.coreman2200.domain.model.systems.numbers.interfaces.INumberSystem;
+import com.coreman2200.domain.model.systems.numbers.NumberSystemType;
 
 //import static org.assertj.android.api.Assertions.assertThat;
 

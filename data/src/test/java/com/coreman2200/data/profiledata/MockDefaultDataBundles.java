@@ -1,7 +1,7 @@
 package com.coreman2200.data.profiledata;
 
-import com.coreman2200.domain.protos.LocalProfileDataBundle;
-import com.coreman2200.domain.protos.RingStringsAppSettings;
+import com.coreman2200.domain.model.protos.LocalProfileDataBundle;
+import com.coreman2200.domain.model.protos.RingStringsAppSettings;
 
 import java.util.ArrayList;
 import java.util.Arrays;

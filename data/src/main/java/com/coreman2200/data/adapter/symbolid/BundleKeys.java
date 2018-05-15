@@ -1,6 +1,6 @@
 package com.coreman2200.data.adapter.symbolid;
 
-import com.coreman2200.data.repository.RingStringsDbHelper;
+import com.coreman2200.data.repository.db.RingStringsDbHelper;
 
 /**
  * BundleKeys

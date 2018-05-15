@@ -86,7 +86,10 @@ ext {
 
     domainTestDependencies = [
             junit:              "junit:junit:${jUnitVersion}",
+            assertj:            "org.assertj:assertj-core:${assertJVersion}",
             mockito:            "org.mockito:mockito-core:${mockitoVersion}",
+            robolectric:        "org.robolectric:shadows-support-v4:${robolectricVersion}",
+            maven:              "org.apache.maven:maven-ant-tasks:${mavenVersion}"
     ]
 
     dataDependencies = [

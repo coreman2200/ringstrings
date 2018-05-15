@@ -2,15 +2,15 @@ package com.coreman2200.data.adapter.symbolid;
 
 import android.database.Cursor;
 
-import com.coreman2200.domain.adapter.profiledata.IProfileDataBundle;
-import com.coreman2200.domain.protos.SymbolIDBundle;
-import com.coreman2200.domain.symbol.strata.SymbolStrata;
-import com.coreman2200.domain.symbol.chart.Charts;
-import com.coreman2200.domain.symbol.tags.TagSymbols;
-import com.coreman2200.domain.symbol.strata.NumberStrata;
-import com.coreman2200.domain.symbol.numbersymbol.grouped.BaseNumberSymbols;
-import com.coreman2200.domain.symbol.symbolinterface.ISymbol;
-import com.coreman2200.domain.symbol.symbolinterface.ISymbolStrata;
+import com.coreman2200.domain.model.profiles.interfaces.IProfileDataBundle;
+import com.coreman2200.domain.model.protos.SymbolIDBundle;
+import com.coreman2200.domain.model.symbols.strata.SymbolStrata;
+import com.coreman2200.domain.model.symbols.charts.Charts;
+import com.coreman2200.domain.model.symbols.tags.TagSymbols;
+import com.coreman2200.domain.model.symbols.strata.NumberStrata;
+import com.coreman2200.domain.model.symbols.numbers.grouped.BaseNumberSymbols;
+import com.coreman2200.domain.model.symbols.interfaces.ISymbol;
+import com.coreman2200.domain.model.symbols.interfaces.ISymbolStrata;
 
 import java.util.ArrayList;
 import java.util.Collection;
