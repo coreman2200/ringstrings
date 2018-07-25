@@ -1,132 +1,164 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:2:1-40:12
-	xmlns:android
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:2:11-69
+ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:2:1-41:12
+MERGED from [com.android.support:design:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/8590594ef765be18cbf3cf19a5222f1e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/cf3f35557d35435a4d4c74f66acef21c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.dagger:dagger-android-support:2.16] /Users/new/.gradle/caches/transforms-1/files-1.1/dagger-android-support-2.16.aar/13bd5321b7db21e63b094e279788179c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/dc60653daa178455974b00458812dbbf/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.dagger:dagger-android:2.16] /Users/new/.gradle/caches/transforms-1/files-1.1/dagger-android-2.16.aar/d5f559c0c35630a5eadfe40eaf2c8b2d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/98a5307ac4e3993969fac60dba948693/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/2fc9774d0d2e01efa3273314dd6d1246/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/6e5a63880e72ad5ceabd82d228b897a6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/6f4a5c2f2cfa7094eba2bbe1f4212b63/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/afc975547e41a1a232c8a5695a0f4347/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/105f9312e028dbf0b2048d889ca8127f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/050b59400383cbacd344312902d7cf0e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/a6dc16e46da97cd77eb26fb70438365b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/e6896d08523758a8b64a629a23a28085/AndroidManifest.xml:17:1-22:12
+MERGED from [io.reactivex:rxandroid:1.0.1] /Users/new/.gradle/caches/transforms-1/files-1.1/rxandroid-1.0.1.aar/636bf73b86a6587a8eade1f1488231dc/AndroidManifest.xml:15:1-21:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/new/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/45c760b313d82d4e621637cd0e78baa8/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/new/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/1158b2e4079cbad387af2cf9854685b6/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/new/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/21de8f991e0efacca8f203b485d98347/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/new/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/a463539b03d8498270afbeea513d52e4/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:2:1-41:12
 	package
 		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:3:5-42
 		INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml
 		INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml
 	android:versionName
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:5:5-30
 		INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml
 		INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml
+		INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml
+uses-sdk
+ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:7:5-43
+INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:7:5-43
+INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:design:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/8590594ef765be18cbf3cf19a5222f1e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/8590594ef765be18cbf3cf19a5222f1e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/cf3f35557d35435a4d4c74f66acef21c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/cf3f35557d35435a4d4c74f66acef21c/AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-android-support:2.16] /Users/new/.gradle/caches/transforms-1/files-1.1/dagger-android-support-2.16.aar/13bd5321b7db21e63b094e279788179c/AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-android-support:2.16] /Users/new/.gradle/caches/transforms-1/files-1.1/dagger-android-support-2.16.aar/13bd5321b7db21e63b094e279788179c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/dc60653daa178455974b00458812dbbf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/dc60653daa178455974b00458812dbbf/AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-android:2.16] /Users/new/.gradle/caches/transforms-1/files-1.1/dagger-android-2.16.aar/d5f559c0c35630a5eadfe40eaf2c8b2d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-android:2.16] /Users/new/.gradle/caches/transforms-1/files-1.1/dagger-android-2.16.aar/d5f559c0c35630a5eadfe40eaf2c8b2d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/98a5307ac4e3993969fac60dba948693/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/98a5307ac4e3993969fac60dba948693/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/2fc9774d0d2e01efa3273314dd6d1246/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/2fc9774d0d2e01efa3273314dd6d1246/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/6e5a63880e72ad5ceabd82d228b897a6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/6e5a63880e72ad5ceabd82d228b897a6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/6f4a5c2f2cfa7094eba2bbe1f4212b63/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/6f4a5c2f2cfa7094eba2bbe1f4212b63/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/afc975547e41a1a232c8a5695a0f4347/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/afc975547e41a1a232c8a5695a0f4347/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/105f9312e028dbf0b2048d889ca8127f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/105f9312e028dbf0b2048d889ca8127f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/050b59400383cbacd344312902d7cf0e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/050b59400383cbacd344312902d7cf0e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/a6dc16e46da97cd77eb26fb70438365b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/a6dc16e46da97cd77eb26fb70438365b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/e6896d08523758a8b64a629a23a28085/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/new/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/e6896d08523758a8b64a629a23a28085/AndroidManifest.xml:20:5-44
+MERGED from [io.reactivex:rxandroid:1.0.1] /Users/new/.gradle/caches/transforms-1/files-1.1/rxandroid-1.0.1.aar/636bf73b86a6587a8eade1f1488231dc/AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex:rxandroid:1.0.1] /Users/new/.gradle/caches/transforms-1/files-1.1/rxandroid-1.0.1.aar/636bf73b86a6587a8eade1f1488231dc/AndroidManifest.xml:19:5-43
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/new/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/45c760b313d82d4e621637cd0e78baa8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/new/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/45c760b313d82d4e621637cd0e78baa8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/new/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/1158b2e4079cbad387af2cf9854685b6/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/new/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/1158b2e4079cbad387af2cf9854685b6/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/new/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/21de8f991e0efacca8f203b485d98347/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/new/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/21de8f991e0efacca8f203b485d98347/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/new/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/a463539b03d8498270afbeea513d52e4/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/new/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/a463539b03d8498270afbeea513d52e4/AndroidManifest.xml:20:5-44
+INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:7:5-43
+INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:7:5-43
+	android:targetSdkVersion
+		INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:7:5-43
+		INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:7:15-40
 		INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml
 		INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:5:5-81
+ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:9:2-94
 	android:name
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:5:22-78
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:9:19-75
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:6:5-81
+ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:10:2-94
 	android:name
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:6:22-78
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:10:19-75
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:7:5-79
+ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:11:2-92
 	android:name
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:7:22-76
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:11:19-73
 uses-permission#android.permission.INTERNET
-ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:8:5-67
+ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:12:2-80
 	android:name
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:8:22-64
-application
-ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:10:5-38:19
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
-	android:label
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:13:9-41
-	android:allowBackup
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:11:9-35
-	android:icon
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:12:9-45
-	android:theme
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:14:9-43
-uses-library#com.google.android.maps
-ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:15:9-17:39
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:12:19-61
+uses-feature#0x00020000
+ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:13:2-75
+	android:glEsVersion
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:13:16-48
 	android:required
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:17:13-36
-	android:name
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:16:13-51
-activity#com.coreman2200.ringstrings.rsdisplay.activity.RingStringsActivity
-ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:19:9-28:20
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:13:49-72
+application
+ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:15:5-39:19
 	android:label
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:22:13-45
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:17:9-41
+	android:icon
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:16:9-45
+uses-library#com.google.android.maps
+ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:18:3-95
+	android:required
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:18:17-40
+	android:name
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:18:41-79
+activity#com.coreman2200.ringstrings.rsdisplay.activity.RingStringsActivity
+ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:19:9-29:20
+	android:screenOrientation
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:22:4-40
+	android:label
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:21:13-45
 	android:configChanges
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:21:13-63
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:23:4-54
 	android:name
 		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:20:13-67
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:23:13-27:29
+ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:24:13-28:29
 action#android.intent.action.MAIN
-ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:24:17-69
+ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:24:25-66
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:26:17-77
+ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:26:27-74
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:27:27-74
 provider#com.coreman2200.ringstrings.rsprovider.RingStringsContentProvider
-ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:30:9-37:82
-	android:label
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:35:13-48
-	android:grantUriPermissions
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:34:13-47
-	android:exported
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:33:13-36
-	android:authorities
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:32:13-71
+ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:31:9-38:83
 	android:readPermission
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:36:13-77
-	android:name
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:31:13-66
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:37:13-78
+	android:grantUriPermissions
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:35:13-47
+	android:authorities
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:33:13-70
+	android:label
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:36:13-48
+	android:exported
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:34:13-36
 	android:writePermission
-		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:37:13-79
-uses-sdk
-INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:recyclerview-v7:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:animated-vector-drawable:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:design:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:animated-vector-drawable:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:20:5-43
-MERGED from [io.reactivex:rxandroid:1.0.1] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.0.1/AndroidManifest.xml:19:5-43
-MERGED from [com.android.support:support-v4:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:20:5-43
-	android:targetSdkVersion
-		INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml
-		INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml
-	android:minSdkVersion
-		INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml
-		INJECTED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml
-	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:23.2.0] /Users/new/git/ringstrings/ringstrings-app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:23:9-75
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:38:13-80
+	android:name
+		ADDED from /Users/new/git/ringstrings/ringstrings-app/src/main/AndroidManifest.xml:32:13-66

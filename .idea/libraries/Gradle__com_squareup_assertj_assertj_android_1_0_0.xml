@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.squareup.assertj:assertj-android-1.0.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/assertj-android-1.0.0.aar/0735022dca00915bca2d412b543c6d79/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/assertj-android-1.0.0.aar/0735022dca00915bca2d412b543c6d79/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.assertj/assertj-android/1.0.0/e453eafe2239f4790251419377b694447ca3bfe0/assertj-android-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
