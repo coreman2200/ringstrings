@@ -2,3 +2,6 @@
 .gradle/4.4-rc-3/fileHashes/fileHashes.bin
 .gradle/4.4-rc-3/fileHashes/fileHashes.lock
 .idea/codeStyles/Project.xml
+local.properties
+.idea/misc.xml
+.idea/workspace.xml
