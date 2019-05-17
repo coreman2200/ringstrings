@@ -234,3 +234,11 @@ ringstrings-tests/build/classes/test/com/coreman2200/ringstrings/symbol/symbolco
 core/build/libs/core.jar
 core/build/tmp/jar/MANIFEST.MF
 ringstrings-tests/build/classes/test/com/coreman2200/ringstrings/chart/AbstractChart.class
+.idea/codeStyles/Project.xml
+.idea/runConfigurations.xml
+.idea/modules.xml
+local.properties
+.idea/misc.xml
+.idea/gradle.xml
+RingStrings.iml
+.idea/vcs.xml
