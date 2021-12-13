@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.dagger:dagger-android:2.16@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6ecb8acdf78f173ce691665346733066/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/87180f55d976946a9a890e0618b3ba8f/transformed/dagger-android-2.16/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e9951011fe9d33f4ad060a2c1d375aa5/transformed/dagger-android-2.16/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e9951011fe9d33f4ad060a2c1d375aa5/transformed/dagger-android-2.16/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/e9951011fe9d33f4ad060a2c1d375aa5/transformed/dagger-android-2.16/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.dagger/dagger-android/2.16/3314d9c96290f9611115602c0dd930464d00f918/dagger-android-2.16-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.dagger/dagger-android/2.16/c14cc7d4dc4723d60f6387cd8391c2fdfedad14f/dagger-android-2.16-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
