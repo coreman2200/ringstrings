@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="swisseph-2.01.00-00">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/ringstrings-app/libs/swisseph-2.01.00-00.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
