@@ -1,0 +1,88 @@
+// RingStrings protos
+//
+// Defines anticipated structure/models for Symbols and interpreted datas..
+syntax = "proto3";
+
+package com.coreman2200.ringstrings.data.protos;
+
+
+
+// Geographical, temporal placement for profile
+message Placement {
+    message Location {
+        double longitude = 1;
+        double latitude = 2;
+        double altitude = 3;
+    }
+    Location geo = 1;
+    int64 timestamp = 2;
+    string timezone = 3;
+}
+
+// Profile Data Bundle describing anticipated values to build symbol charts.
+message LocalProfileDataBundle {
+    // Full name for profile broken into segments
+    message Name {
+        repeated string segments = 1;
+    }
+
+    // Identifier for profile
+    int32 profile_id = 1;
+    // Name for display purposes..
+    Name display_name = 2;
+    // Name for chart making..
+    Name full_name = 3;
+    // Geographical/temporal placement for birth chart(s) in profile
+    Placement birth_placement = 4;
+    // Geographical/temporal placement for current chart(s) in profile
+    Placement recent_placement = 5;
+}
+
+// Identifiers necessary to store symbols (beyond scope of symbol entity..)
+message SymbolDataModel {
+    //_PROFILEID, _CHARTID, _STRATAID, _TYPEID, _SYMBOLID, _DESC_ID, _NAME
+    int32 profile_id = 1;
+    int32 chart_id = 2;
+    int32 strata_id = 3;
+    int32 type_id = 4;
+    int32 symbol_id = 5;
+    int32 desc_id = 6;
+    string name = 7;
+    RingStringsAppSettings settings = 8;
+}
+
+
+// Settings necessary for Astrological chart building
+message AstrologySettings {
+    // Max orb used for calculating transits/aspects
+    double max_orb = 1;
+    // Default ephemeris directory
+    string ephe_dir = 2;
+
+}
+
+// Settings necessary for Numerological chart building
+message NumerologySettings {
+    // Currently supports two distinct number systems
+    enum NumberSystemType {
+        CHALDEAN = 0;
+        PYTHAGOREAN = 1;
+    }
+    NumberSystemType number_system = 1;
+}
+
+message RingStringsAppSettings {
+    // General app settings TODO
+    message GeneralSettings {}
+    GeneralSettings general = 1;
+    AstrologySettings astro = 2;
+    NumerologySettings num = 3;
+    int64 last_update = 4;
+}
+
+// Symbol description model for each of the presented symbols in app.
+message SymbolDescription {
+    string name  = 1;
+    string description = 2;
+    repeated string qualities = 3;
+}
