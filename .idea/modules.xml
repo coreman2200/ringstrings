@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ringstrings.iml" filepath="$PROJECT_DIR$/.idea/modules/ringstrings.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ringstrings-app/ringstrings.ringstrings-app.iml" filepath="$PROJECT_DIR$/.idea/modules/ringstrings-app/ringstrings.ringstrings-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ringstrings-app/ringstrings.app.iml" filepath="$PROJECT_DIR$/.idea/modules/ringstrings-app/ringstrings.app.iml" />
     </modules>
   </component>
 </project>
