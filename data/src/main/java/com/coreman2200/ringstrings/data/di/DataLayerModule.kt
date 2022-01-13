@@ -1,12 +1,9 @@
 package com.coreman2200.ringstrings.data.di
 
-import com.coreman2200.ringstrings.data.datasource.ProfileDataSource
+import com.coreman2200.ringstrings.data.datasource.*
 import com.coreman2200.ringstrings.data.datasource.ProfileDataSource.Companion.PROFILE_DATA_SOURCE_TAG
-import com.coreman2200.ringstrings.data.datasource.SettingsDataSource
 import com.coreman2200.ringstrings.data.datasource.SettingsDataSource.Companion.SETTINGS_DATA_SOURCE_TAG
-import com.coreman2200.ringstrings.data.datasource.SwissephDataSource
 import com.coreman2200.ringstrings.data.datasource.SwissephDataSource.Companion.SWISSEPH_DATA_SOURCE_TAG
-import com.coreman2200.ringstrings.data.datasource.SymbolDataSource
 import com.coreman2200.ringstrings.data.datasource.SymbolDataSource.Companion.SYMBOL_DATA_SOURCE_TAG
 import com.coreman2200.ringstrings.data.repository.ProfileDataRepository
 import com.coreman2200.ringstrings.data.repository.SettingsDataRepository
@@ -68,7 +65,7 @@ class DataSourceModule {
 
     @Provides
     @Named(SETTINGS_DATA_SOURCE_TAG)
-    fun provideSettingsDataSource(ds: SettingsDataSource): SettingsDataSource = ds
+    fun provideSettingsDataSource(ds: SettingsWireStore): SettingsDataSource = ds
 
     @Provides
     @Named(SWISSEPH_DATA_SOURCE_TAG)

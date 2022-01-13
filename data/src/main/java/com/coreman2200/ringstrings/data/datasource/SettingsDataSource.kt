@@ -21,8 +21,17 @@
  */
 package com.coreman2200.ringstrings.data.datasource
 
+import android.content.Context
+import androidx.datastore.core.DataStore
+import androidx.datastore.dataStore
+import com.coreman2200.ringstrings.data.datastore.serializer.SettingsSerializer
+import com.coreman2200.ringstrings.data.protos.AppSettings
+import com.coreman2200.ringstrings.data.protos.AstrologySettings
+import com.coreman2200.ringstrings.data.protos.NumerologySettings
 import com.coreman2200.ringstrings.domain.AppSettingsRequest
 import com.coreman2200.ringstrings.domain.AppSettingsResponse
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.last
 
 interface SettingsDataSource {
 
@@ -31,4 +40,28 @@ interface SettingsDataSource {
     }
 
     suspend fun fetchSettingsData(request: AppSettingsRequest): AppSettingsResponse
+}
+
+class SettingsWireStore (val context: Context) : SettingsDataSource {
+    private val Context.settingsWireDataStore: DataStore<AppSettings> by dataStore(
+        fileName = "AppSettings.pb",
+        serializer = SettingsSerializer
+    )
+    override suspend fun fetchSettingsData(request: AppSettingsRequest): AppSettingsResponse {
+        val flow: Flow<AppSettings> = context.settingsWireDataStore.data
+        val astro = flow.last().astro ?: AstrologySettings()
+        val num = flow.last().num ?: NumerologySettings()
+
+        return AppSettingsResponse(
+            true,
+            com.coreman2200.ringstrings.domain.AppSettings(
+                astro = com.coreman2200.ringstrings.domain.AstrologySettings(
+                    astro.max_orb,
+                    astro.ephe_dir
+                ),
+                num = com.coreman2200.ringstrings.domain.NumerologySettings(num.number_system.ordinal)
+            )
+        )
+
+    }
 }
