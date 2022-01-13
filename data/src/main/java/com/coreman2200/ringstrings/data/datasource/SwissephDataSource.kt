@@ -21,10 +21,11 @@
  */
 package com.coreman2200.ringstrings.data.datasource
 
+import android.content.Context
+import com.coreman2200.ringstrings.data.file.swisseph.SwissephFileHandler
 import com.coreman2200.ringstrings.domain.SwissephDataRequest
 import com.coreman2200.ringstrings.domain.SwissephDataResponse
-import com.coreman2200.ringstrings.domain.SymbolDescriptionRequest
-import com.coreman2200.ringstrings.domain.SymbolDescriptionResponse
+import javax.inject.Inject
 
 interface SwissephDataSource {
 
@@ -33,4 +34,14 @@ interface SwissephDataSource {
     }
 
     suspend fun fetchSwissephData(request: SwissephDataRequest): SwissephDataResponse
+}
+
+class SwissephFileDataSource @Inject constructor(val context: Context) : SwissephDataSource {
+
+    private val handler = SwissephFileHandler(context)
+
+    override suspend fun fetchSwissephData(request: SwissephDataRequest): SwissephDataResponse {
+        return SwissephDataResponse(handler.ephemerisPath, handler.isEphemerisDataAvailable)
+    }
+
 }

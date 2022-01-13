@@ -30,15 +30,15 @@ import com.coreman2200.ringstrings.domain.*
 import java.net.SocketTimeoutException
 
 object SwissephDataRepository :
-    DomainLayerContract.Data.SwissephDataRepository<> {
+    DomainLayerContract.Data.SwissephDataRepository<SwissephDataResponse> {
 
     lateinit var swissephDataSource: SwissephDataSource
 
     @Throws(SocketTimeoutException::class)
-    override suspend fun fetchAppSwisseph(request: AppSettingsRequest): Either<Failure, AppSettingsResponse> =
+    override suspend fun fetchSwisseph(request: SwissephDataRequest): Either<Failure, SwissephDataResponse> =
         try {
             val response = swissephDataSource.fetchSwissephData(request = request)
-                response.takeIf { it.success }?.right() ?: run { Failure.NoData().left() }
+                response.right()
         } catch (e: Exception) {
             Failure.NoData(e.localizedMessage ?: "No Data Found").left()
         }

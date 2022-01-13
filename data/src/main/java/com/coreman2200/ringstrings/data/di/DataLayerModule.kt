@@ -69,7 +69,7 @@ class DataSourceModule {
 
     @Provides
     @Named(SWISSEPH_DATA_SOURCE_TAG)
-    fun provideSwissephDataSource(ds: SwissephDataSource): SwissephDataSource = ds
+    fun provideSwissephDataSource(ds: SwissephFileDataSource): SwissephDataSource = ds
 
     @Provides
     @Named(SYMBOL_DATA_SOURCE_TAG)
