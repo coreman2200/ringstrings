@@ -14,8 +14,6 @@ import android.net.Uri;
 import android.os.ParcelFileDescriptor;
 import android.text.TextUtils;
 
-import org.assertj.core.util.Strings;
-
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
 import java.util.ArrayList;
