@@ -24,7 +24,9 @@ import java.util.*
 // Settings
 
 data class AppSettingsRequest(
-    val profileid:Int
+    val maxorb:Double = 0.0,
+    val ephedir:String = "",
+    val numsystem:Int = 0
 )
 
 data class AppSettingsResponse(
