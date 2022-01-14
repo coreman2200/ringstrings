@@ -50,3 +50,5 @@ app/bin/classes/swisseph/SwissLib.class
 app/bin/classes/swisseph/SwissephException.class
 app/bin/classes/swisseph/TCPlanetPlanet.class
 app/bin/classes/swisseph/TopoData.class
+.gradle/
+.idea/
