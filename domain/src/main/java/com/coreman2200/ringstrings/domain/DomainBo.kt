@@ -51,12 +51,14 @@ data class NumerologySettings(
 // Symbols
 // _PROFILEID, _CHARTID, _STRATAID, _TYPEID, _SYMBOLID, _VALUE, _DESC
 data class SymbolDataRequest(
-    val profileId: Int,
-    val chartId: String,
+    val profileid: Int,
+    val chartid: String,
+    val groupid: String,
+    val symbolid: String,
     val strata: String,
     val type: String, // SymbolStrata.symbolStrataFor(strata)
     val id: String,
-    val value: Double,
+    val value: Double
 )
 
 data class SymbolDataResponse(
@@ -64,13 +66,15 @@ data class SymbolDataResponse(
 )
 
 data class SymbolData(
-    val id: String,
+    val profileid: Int,
+    val chartid: String,
+    val groupid: String,
+    val symbolid: String,
     val strata: String,
+    val type: String, // SymbolStrata.symbolStrataFor(strata)
     val value: Double,
-    val description: String,
-    val qualities: List<String>,
-    val relations: Map<String, String> // relation ISymbolID.name, ISymbol.id.name
-
+    val relations: List<String>,
+    val description: SymbolDescription
 )
 
 data class SymbolDescriptionRequest(
@@ -84,7 +88,6 @@ data class SymbolDescriptionResponse(
 
 data class SymbolDescription(
     val id:String,
-    val name:String,
     val description: String,
     val qualities: List<String>
 )
