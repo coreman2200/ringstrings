@@ -5,7 +5,7 @@ buildscript {
     ext {
         debugBuild = "RingStrings-debug"
         coroutinesVersion = '1.5.2'
-        roomVersion = '2.4.0'
+        roomVersion = '2.4.1'
         arrowVersion = '1.0.1'
         daggerVersion = '2.40.5'
         kotlinVersion = '1.6.10'
