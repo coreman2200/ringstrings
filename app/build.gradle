@@ -76,8 +76,8 @@ dependencies {
     implementation project(':domain')
     implementation project(':data')
 
-    implementation 'com.google.dagger:hilt-android:2.35'
-    kapt 'com.google.dagger:hilt-android-compiler:2.35'
+    implementation 'com.google.dagger:hilt-android:2.40.5'
+    kapt 'com.google.dagger:hilt-android-compiler:2.40.5'
 
     implementation "com.google.dagger:dagger:$daggerVersion"
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
@@ -91,16 +91,16 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0") {
         exclude module: 'okhttp'
     }
-    implementation "com.squareup.okhttp3:okhttp:4.9.3"
-    implementation "com.squareup.okhttp3:okhttp-urlconnection:4.9.3"
-    implementation "com.squareup.okhttp3:logging-interceptor:4.9.3"
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.3'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:5.0.0-alpha.3'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3'
 
     
     testImplementation "androidx.room:room-testing:$roomVersion"
     testImplementation 'junit:junit:4.13.2'
-    testImplementation 'org.mockito:mockito-core:4.1.0'
+    testImplementation 'org.mockito:mockito-core:4.2.0'
     testImplementation 'org.apache.maven:maven-ant-tasks:2.1.3'
-    testImplementation 'org.assertj:assertj-core:3.21.0'
+    testImplementation 'org.assertj:assertj-core:3.22.0'
     testImplementation 'com.jayway.android.robotium:robotium-solo:5.6.3'
 
     testImplementation 'org.robolectric:robolectric:4.7.3'
