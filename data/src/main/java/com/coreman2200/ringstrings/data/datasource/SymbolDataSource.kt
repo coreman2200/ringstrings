@@ -21,9 +21,13 @@
  */
 package com.coreman2200.ringstrings.data.datasource
 
-import com.coreman2200.ringstrings.domain.SymbolDataRequest
-import com.coreman2200.ringstrings.domain.SymbolDataResponse
-import com.coreman2200.ringstrings.domain.SymbolDescriptionRequest
+import com.coreman2200.ringstrings.data.room_common.dao.SymbolDao
+import com.coreman2200.ringstrings.data.room_common.entity.SymbolDetailEntity
+import com.coreman2200.ringstrings.data.room_common.entity.SymbolEntity
+import com.coreman2200.ringstrings.domain.*
+import kotlinx.coroutines.flow.last
+import kotlinx.coroutines.flow.map
+import javax.inject.Inject
 
 interface SymbolDataSource {
 
@@ -35,4 +39,47 @@ interface SymbolDataSource {
     suspend fun fetchDescriptionData(request: SymbolDescriptionRequest): SymbolDataResponse
 
     // suspend fun storeSymbolData(request: SymbolDataRequest): SymbolDataResponse
+}
+
+class SymbolDatabaseSource @Inject constructor(val dao:SymbolDao) : SymbolDataSource {
+    override suspend fun fetchSymbolData(request: SymbolDataRequest): SymbolDataResponse {
+        val symbols = dao.getSymbols(request.toEntity()).last()
+        return SymbolDataResponse(symbols = symbols.map { it.toData()})
+    }
+    
+    private fun SymbolDataRequest.toEntity() : SymbolEntity = SymbolEntity(
+        profileid = this.profileid,
+        chartid = this.chartid,
+        groupid = this.groupid,
+        symbolid = this.symbolid,
+        strata = this.strata,
+        type = this.type,
+        value = this.value,
+        relations = this.relations
+    )
+
+    private fun SymbolEntity.toData() : SymbolData = SymbolData(
+        profileid = this.profileid,
+        chartid = this.chartid,
+        groupid = this.groupid,
+        symbolid = this.symbolid,
+        strata = this.strata,
+        type = this.type,
+        value = this.value,
+        relations = this.relations,
+        description = SymbolDescription(id = symbolid)
+    )
+
+    override suspend fun fetchDescriptionData(request: SymbolDescriptionRequest): SymbolDataResponse {
+        val details = dao.getSymbolDescription(request.symbolid).last()
+        val description = SymbolDescription(
+            id = details.id,
+            description = details.description,
+            qualities = details.qualities
+        )
+        val symbol = SymbolData(symbolid = details.id, description = description)
+        return SymbolDataResponse(
+            symbols = listOf(symbol)
+        )
+    }
 }

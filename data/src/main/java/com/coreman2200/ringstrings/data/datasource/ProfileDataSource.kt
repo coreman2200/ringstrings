@@ -21,8 +21,13 @@
  */
 package com.coreman2200.ringstrings.data.datasource
 
-import com.coreman2200.ringstrings.domain.ProfileDataRequest
-import com.coreman2200.ringstrings.domain.ProfileDataResponse
+import com.coreman2200.ringstrings.data.room_common.dao.ProfileDao
+import com.coreman2200.ringstrings.data.room_common.entity.LocationEntity
+import com.coreman2200.ringstrings.data.room_common.entity.PlacementEntity
+import com.coreman2200.ringstrings.data.room_common.entity.ProfileEntity
+import com.coreman2200.ringstrings.domain.*
+import kotlinx.coroutines.flow.last
+import javax.inject.Inject
 
 interface ProfileDataSource {
 
@@ -31,4 +36,60 @@ interface ProfileDataSource {
     }
 
     suspend fun fetchProfileData(request: ProfileDataRequest): ProfileDataResponse
+    suspend fun storeProfileData(request: ProfileDataRequest): ProfileDataResponse
+
+}
+
+class ProfileDatabaseSource @Inject constructor(val dao: ProfileDao) : ProfileDataSource {
+    override suspend fun fetchProfileData(request: ProfileDataRequest): ProfileDataResponse {
+        val profile = dao.get (request.id).last()
+        return ProfileDataResponse(profile = profile.toData())
+    }
+
+    override suspend fun storeProfileData(request: ProfileDataRequest): ProfileDataResponse {
+        val saved = dao.insert(request.toEntity())
+        return ProfileDataResponse(profile = ProfileData(id = saved))
+    }
+
+    private fun ProfileEntity.toData() : ProfileData = ProfileData(
+        id = id,
+        name = name,
+        displayName = displayName,
+        fullName = fullName,
+        birthPlacement = birthPlacement.toData(),
+        currentPlacement = currentPlacement?.toData(),
+
+    )
+
+    private fun ProfileDataRequest.toEntity() : ProfileEntity = ProfileEntity(
+        id = id,
+        name = name,
+        displayName = displayName,
+        fullName = fullName,
+        birthPlacement = birthPlacement.toEntity(),
+        currentPlacement = currentPlacement?.toEntity(),
+
+        )
+
+    private fun PlacementEntity.toData() : GeoPlacement = GeoPlacement(
+        location = location.toData(),
+        timestamp = timestamp,
+        timezone = timezone
+    )
+    private fun GeoPlacement.toEntity() : PlacementEntity = PlacementEntity(
+        location = location.toEntity(),
+        timestamp = timestamp,
+        timezone = timezone
+    )
+    private fun GeoLocation.toEntity() : LocationEntity = LocationEntity(
+        lat = lat,
+        lon = lon,
+        alt = alt
+    )
+    private fun LocationEntity.toData() : GeoLocation = GeoLocation(
+        lat = lat,
+        lon = lon,
+        alt = alt
+    )
+
 }
