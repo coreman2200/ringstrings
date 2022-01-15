@@ -1,9 +1,7 @@
 package com.coreman2200.ringstrings.data.room_common
 
 import android.content.Context
-import androidx.room.Database
-import androidx.room.Room
-import androidx.room.RoomDatabase
+import androidx.room.*
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.coreman2200.ringstrings.data.room_common.dao.ProfileDao
 import com.coreman2200.ringstrings.data.room_common.dao.SymbolDao
@@ -29,11 +27,14 @@ import javax.inject.Inject
         PlacementEntity::class, LocationEntity::class],
     version = 1
 )
+@TypeConverters(Converters::class)
 abstract class RSDatabase : RoomDatabase() {
     abstract fun profileDao(): ProfileDao
     abstract fun symbolDao(): SymbolDao
 
     companion object {
+        const val RINGSTRINGS_DATABASE_TAG = "ringstringsDatabase"
+
         @Volatile
         private var instance: RSDatabase? = null
 
@@ -63,6 +64,19 @@ abstract class RSDatabase : RoomDatabase() {
             val symbolDao = db.symbolDao()
             val profileDao = db.profileDao()
         }
+    }
+
+}
+
+public class Converters {
+    @TypeConverter
+    fun fromString(str:String) : List<String> {
+        return str.split(",").map { it.trim() }
+    }
+
+    @TypeConverter
+    fun fromList(list:List<String>?) : String {
+        return list?.joinToString(separator = ",") ?: ""
     }
 
 }

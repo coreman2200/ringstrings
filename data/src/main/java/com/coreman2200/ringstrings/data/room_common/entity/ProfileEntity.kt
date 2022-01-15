@@ -26,20 +26,20 @@ data class ProfileEntity(
     val name: List<String>,
     @ColumnInfo(name = "display_name") val displayName: String,
     @ColumnInfo(name = "full_name") val fullName: String,
-    @Embedded(prefix = "birth_") @ColumnInfo(name = "birth_placement") val birthPlacement: PlacementEntity?,
-    @Embedded(prefix = "current_") @ColumnInfo(name = "current_placement") val currentPlacement: PlacementEntity?
+    @Embedded(prefix = "birth_") val birthPlacement: PlacementEntity,
+    @Embedded(prefix = "current_") val currentPlacement: PlacementEntity?
 )
 
 @Entity(tableName = "user_profile_placement_details_table")
 data class PlacementEntity(
     @Embedded val location: LocationEntity,
-    val timestamp: Long,
+    @PrimaryKey val timestamp: Long,
     val timezone: String,
 )
 
 @Entity(tableName = "user_profile_placement_location_details_table")
 data class LocationEntity(
-    val lat: Double,
+    @PrimaryKey val lat: Double,
     val lon: Double,
     val alt: Double
 )
