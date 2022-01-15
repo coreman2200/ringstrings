@@ -34,13 +34,20 @@ object ProfileDataRepository :
 
     lateinit var profileDataSource: ProfileDataSource
 
-    @Throws(SocketTimeoutException::class)
     override suspend fun fetchProfile(request: ProfileDataRequest): Either<Failure, ProfileDataResponse> =
         try {
             val response = profileDataSource.fetchProfileData(request = request)
                 response.takeIf { it.profile.id != 0 }?.right() ?: run { Failure.NoData().left() }
         } catch (e: Exception) {
             Failure.NoData(e.localizedMessage ?: "No Data Found").left()
+        }
+
+    override suspend fun storeProfile(request: ProfileDataRequest): Either<Failure, ProfileDataResponse> =
+        try {
+            val response = profileDataSource.storeProfileData(request = request)
+            response.takeIf { it.profile.id != 0 }?.right() ?: run { Failure.NoData().left() }
+        } catch (e: Exception) {
+            Failure.NoData(e.localizedMessage ?: "Data Not Stored").left()
         }
 
 }
