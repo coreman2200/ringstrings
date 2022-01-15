@@ -52,3 +52,4 @@ app/bin/classes/swisseph/TCPlanetPlanet.class
 app/bin/classes/swisseph/TopoData.class
 .gradle/
 .idea/
+app/build/

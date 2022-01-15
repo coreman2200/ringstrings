@@ -41,7 +41,6 @@ dependencies {
 
     api "io.arrow-kt:arrow-core:$arrowVersion"
     api "io.arrow-kt:arrow-syntax:0.11.0"
-    kapt "io.arrow-kt:arrow-meta:$arrowVersion"
 
     api "com.squareup.wire:wire-runtime:4.0.1"
     implementation "androidx.room:room-runtime:$roomVersion"
@@ -51,12 +50,13 @@ dependencies {
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
 
-    implementation "com.google.dagger:dagger:$daggerVersion"
-    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
-    implementation "com.google.dagger:dagger-android:$daggerVersion"
     // If you're using classes in dagger.android
-    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
-    // if you use the support libraries
+    api "com.google.dagger:dagger:$daggerVersion"
+    api "com.google.dagger:dagger-android:$daggerVersion"
+    api "com.google.dagger:dagger-android-support:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
     kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
 
     testImplementation 'junit:junit:4.13.2'
