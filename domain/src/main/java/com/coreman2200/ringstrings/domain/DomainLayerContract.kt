@@ -60,10 +60,12 @@ interface DomainLayerContract {
 
         interface SettingsDataRepository<out S> {
             suspend fun fetchAppSettings(request: AppSettingsRequest): Either<Failure, S>
+            suspend fun storeAppSettings(request: AppSettingsRequest): Either<Failure, S>
         }
 
         interface ProfileDataRepository<out S> {
             suspend fun fetchProfile(request: ProfileDataRequest): Either<Failure, S>
+            suspend fun storeProfile(request: ProfileDataRequest): Either<Failure, S>
 
         }
 

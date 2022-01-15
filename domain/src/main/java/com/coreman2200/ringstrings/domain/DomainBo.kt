@@ -58,7 +58,8 @@ data class SymbolDataRequest(
     val strata: String,
     val type: String, // SymbolStrata.symbolStrataFor(strata)
     val id: String,
-    val value: Double
+    val value: Double,
+    val relations: List<String>
 )
 
 data class SymbolDataResponse(
@@ -66,15 +67,15 @@ data class SymbolDataResponse(
 )
 
 data class SymbolData(
-    val profileid: Int,
-    val chartid: String,
-    val groupid: String,
-    val symbolid: String,
-    val strata: String,
-    val type: String, // SymbolStrata.symbolStrataFor(strata)
-    val value: Double,
-    val relations: List<String>,
-    val description: SymbolDescription
+    val profileid: Int = 0,
+    val chartid: String = "",
+    val groupid: String = "",
+    val symbolid: String = "",
+    val strata: String = "",
+    val type: String = "", // SymbolStrata.symbolStrataFor(strata)
+    val value: Double = 0.0,
+    val relations: List<String> = emptyList(),
+    val description: SymbolDescription?
 )
 
 data class SymbolDescriptionRequest(
@@ -82,19 +83,23 @@ data class SymbolDescriptionRequest(
 )
 
 data class SymbolDescriptionResponse(
-    val symbolid:String,
     val description:SymbolDescription
 )
 
 data class SymbolDescription(
     val id:String,
-    val description: String,
-    val qualities: List<String>
+    val description: String = "",
+    val qualities: List<String> = emptyList()
 )
 
 // Profile
 data class ProfileDataRequest(
-    val id: Int
+    val id: Int,
+    val name: List<String>,
+    val displayName: String,
+    val fullName: String,
+    val birthPlacement: GeoPlacement,
+    val currentPlacement: GeoPlacement?
 )
 
 data class ProfileDataResponse(
@@ -103,24 +108,24 @@ data class ProfileDataResponse(
 
 data class ProfileData(
     override val id: Int,
-    override val name: List<String>,
-    override val displayName: String,
-    override val fullName: String,
-    override val birthPlacement: GeoPlacement,
-    override val currentPlacement: GeoPlacement?
+    override val name: List<String> = emptyList(),
+    override val displayName: String = "",
+    override val fullName: String = "",
+    override val birthPlacement: GeoPlacement = GeoPlacement(),
+    override val currentPlacement: GeoPlacement? = null
 ) : IProfileData
 
 
 data class GeoLocation(
-    val lat: Double,
-    val lon: Double,
-    val alt: Double
-)
+    val lat: Double = 0.0,
+    val lon: Double = 0.0,
+    val alt: Double = 0.0
+ )
 
 data class GeoPlacement(
-    val location: GeoLocation,
-    val timestamp: Long,
-    val timezone: String,
+    val location: GeoLocation = GeoLocation(),
+    val timestamp: Long = 0,
+    val timezone: String = "",
 ) {
     val date: Calendar = fromTimestamp(timestamp, timezone)
     private fun fromTimestamp(millis: Long, tz: String): Calendar {
