@@ -1,9 +1,6 @@
 package com.coreman2200.ringstrings.domain
 
-import com.coreman2200.ringstrings.domain.swisseph.IProfileData
-import com.coreman2200.ringstrings.domain.symbol.ISymbolStrata
-import com.coreman2200.ringstrings.domain.symbol.SymbolStrata
-import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
+import com.coreman2200.ringstrings.domain.input.entity.IProfileData
 import java.sql.Timestamp
 import java.util.*
 
@@ -40,12 +37,12 @@ data class AppSettings(
 )
 
 data class AstrologySettings(
-    val maxorb:Double,
-    val ephedir:String
+    val maxorb:Double = 2.0,
+    val ephedir:String?
 )
 
 data class NumerologySettings(
-    val numsystem:Int
+    val numsystem:Int = 1
 )
 
 // Symbols
@@ -108,11 +105,10 @@ data class ProfileDataResponse(
 
 data class ProfileData(
     override val id: Int,
-    override val name: List<String> = emptyList(),
-    override val displayName: String = "",
-    override val fullName: String = "",
-    override val birthPlacement: GeoPlacement = GeoPlacement(),
-    override val currentPlacement: GeoPlacement? = null
+    override val name: List<String>,
+    override val displayName: String = name[0] + " " + name[2][0],
+    override val birthPlacement: GeoPlacement,
+    override val currentPlacement: GeoPlacement?
 ) : IProfileData
 
 

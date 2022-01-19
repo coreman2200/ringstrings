@@ -21,7 +21,6 @@ import com.coreman2200.ringstrings.domain.DomainLayerContract.Data.Companion.SET
 import com.coreman2200.ringstrings.domain.DomainLayerContract.Data.Companion.SYMBOL_REPOSITORY_TAG
 import dagger.Module
 import dagger.Provides
-import javax.inject.Inject
 import javax.inject.Named
 import javax.inject.Singleton
 
@@ -60,7 +59,6 @@ object RepositoryModule {
         swissephDs: SwissephDataSource
     ): @JvmSuppressWildcards DomainLayerContract.Data.SwissephDataRepository<SwissephDataResponse> =
         SwissephDataRepository.apply { swissephDataSource = swissephDs }
-
 }
 
 @Module
@@ -83,11 +81,7 @@ class DataSourceModule {
 
     @Provides
     @Named(PROFILE_DATA_SOURCE_TAG)
-    fun provideProfileDataSource(ds: ProfileDatabaseSource): ProfileDataSource = ds
-
-    @Provides
-    @Named(SYMBOL_DATA_SOURCE_TAG)
-    fun provideSymbolDataSource(ds: SymbolDatabaseSource): SymbolDataSource = ds
+    fun provideProfileDataSource(ds: ProfileDataSource): ProfileDataSource = ds
 
     @Provides
     @Named(SETTINGS_DATA_SOURCE_TAG)
@@ -97,5 +91,7 @@ class DataSourceModule {
     @Named(SWISSEPH_DATA_SOURCE_TAG)
     fun provideSwissephDataSource(ds: SwissephFileDataSource): SwissephDataSource = ds
 
-
+    @Provides
+    @Named(SYMBOL_DATA_SOURCE_TAG)
+    fun provideSymbolDataSource(ds: SymbolDataSource): SymbolDataSource = ds
 }
