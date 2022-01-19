@@ -2,7 +2,7 @@ package com.coreman2200.ringstrings.data.file.swisseph
 
 import android.content.Context
 import com.coreman2200.ringstrings.data.R
-import com.coreman2200.ringstrings.data.file.FileHandlerImpl
+import com.coreman2200.ringstrings.data.file.FileHandler
 import com.coreman2200.ringstrings.domain.SwissephDataRequest
 import com.coreman2200.ringstrings.domain.SwissephDataResponse
 import java.io.File
@@ -22,7 +22,7 @@ import java.lang.Exception
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 class SwissephFileHandler(context: Context) : // Inject application context
-    FileHandlerImpl(context),
+    FileHandler(context),
     ISwissephFileHandler {
     private fun initEphemerisData() {
         if (!isEphemerisDataAvailable) moveEphemerisToDataStorage()
