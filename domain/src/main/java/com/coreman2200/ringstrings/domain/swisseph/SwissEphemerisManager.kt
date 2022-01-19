@@ -4,6 +4,7 @@ import com.coreman2200.ringstrings.domain.AstrologySettings
 
 import com.coreman2200.ringstrings.domain.GeoLocation
 import com.coreman2200.ringstrings.domain.GeoPlacement
+import com.coreman2200.ringstrings.domain.input.entity.IProfileData
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.grouped.CelestialBodies
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.grouped.Houses
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.grouped.Zodiac
@@ -164,6 +165,7 @@ class SwissEphemerisManager(
         val longitudinalSpeed = bodiesCalcOutput[3]
         val retrograde = longitudinalSpeed < 0
         val celbody = CelestialBodySymbol(body, bodiesCalcOutput[0])
+
         bodies[body] = celbody
         celbody.setRetrograde(retrograde)
         addBodyToHouse(celbody)
@@ -193,7 +195,7 @@ class SwissEphemerisManager(
 
     private fun getZodiacSignForPosition(placement: Double): Zodiac {
         val index = (placement / 30.0).toInt()
-        return Zodiac.values().get(index)
+        return Zodiac.values()[index]
     }
 
     private fun createFictionalBody(body: CelestialBodies) {

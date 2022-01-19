@@ -1,6 +1,7 @@
 package com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces
 
 import com.coreman2200.ringstrings.domain.symbol.SymbolModel
+import com.coreman2200.ringstrings.domain.symbol.numbersymbol.impl.NumberSymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ICompositeSymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbol
 
@@ -21,7 +22,7 @@ interface INumberSymbol : ISymbol {
     val value: Int
 }
 
-interface IDerivedNumberSymbol : INumberSymbol {
+interface IDerivedNumberSymbol : INumberSymbol, ICompositeSymbol<INumberSymbol> {
     private enum class Derived {
         LEFT_DIGIT, RIGHT_DIGIT, DERIVED_VALUE
     }
@@ -29,9 +30,12 @@ interface IDerivedNumberSymbol : INumberSymbol {
     val rightDerived: INumberSymbolID
 }
 
-interface IGroupedNumberSymbol : ICompositeSymbol<SymbolModel> {
-    fun add(group: IGroupedNumberSymbolID, symbol: SymbolModel)
-    fun add(map: Map<IGroupedNumberSymbolID, SymbolModel>)
+interface IGroupedNumberSymbol : ICompositeSymbol<INumberSymbol>, INumberSymbol {
+    fun add(group: IGroupedNumberSymbolID, symbol: INumberSymbol)
+    fun add(map: Map<IGroupedNumberSymbolID, INumberSymbol>)
+
+    override val value: Int
+        get() = 0
 }
 
 interface INumberChartSymbol : IGroupedNumberSymbol

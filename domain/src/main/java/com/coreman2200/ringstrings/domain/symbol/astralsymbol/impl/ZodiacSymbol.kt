@@ -3,7 +3,9 @@ package com.coreman2200.ringstrings.domain.symbol.astralsymbol.impl
 import com.coreman2200.ringstrings.domain.symbol.CompositeSymbol
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.AstralStrata
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.grouped.Zodiac
+import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IAstralSymbol
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IZodiacSymbol
+import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
 
 /**
  * HouseSymbolImpl
@@ -21,17 +23,21 @@ import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IZodiac
 class ZodiacSymbol(
     override val id: Zodiac,
     override val degree: Double
-) : CompositeSymbol<CelestialBodySymbol>(
+) : CompositeSymbol<IAstralSymbol>(
     id = id,
     strata = AstralStrata.ASTRALZODIAC
 ),
     IZodiacSymbol {
-    override fun add(symbol: CelestialBodySymbol) {
+    override var houseid: ISymbolID? = null
+    override var zodiacid: ISymbolID? = id
+    override var groupid: ISymbolID? = id
+
+    override fun add(symbol: IAstralSymbol) {
         super.add(symbol)
         symbol.setZodiacSign(this)
     }
 
-    override fun add(symbols: Collection<CelestialBodySymbol>) {
+    override fun add(symbols: Collection<IAstralSymbol>) {
         super.add(symbols)
         symbols.forEach { it.setZodiacSign(this) }
     }

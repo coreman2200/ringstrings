@@ -1,11 +1,12 @@
 package com.coreman2200.ringstrings.domain.input.numerology.grouped
 
 import com.coreman2200.ringstrings.domain.NumerologySettings
-import com.coreman2200.ringstrings.domain.swisseph.IProfileData
+import com.coreman2200.ringstrings.domain.input.entity.IProfileData
 import com.coreman2200.ringstrings.domain.symbol.SymbolModel
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.GroupedNumbers
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.Periods
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.impl.GroupedNumberSymbol
+import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.INumberSymbol
 import java.util.ArrayList
 
 /**
@@ -27,17 +28,17 @@ class PeriodsProcessor(
 ) : GroupedNumberSymbolsInputProcessor(
     profile, settings), IGroupedNumberSymbolsInputProcessor {
     private fun getPeriods(profile: IProfileData): GroupedNumberSymbol {
-        val reducedMonth = singularizeValue(profile.getBirthMonth())
-        val reducedDay = singularizeValue(profile.getBirthDay())
-        val reducedYear = singularizeValue(profile.getBirthYear())
+        val reducedMonth = singularizeValue(profile.birthMonth())
+        val reducedDay = singularizeValue(profile.birthDay())
+        val reducedYear = singularizeValue(profile.birthYear())
         val periods = GroupedNumberSymbol(GroupedNumbers.PERIODS)
-        val periodslist: MutableList<SymbolModel> = ArrayList<SymbolModel>(3)
-        periodslist.add(convertValueToNumberSymbol(reducedMonth) as SymbolModel)
-        periodslist.add(convertValueToNumberSymbol(reducedDay) as SymbolModel)
-        periodslist.add(convertValueToNumberSymbol(reducedYear) as SymbolModel)
-        val iter: Iterator<SymbolModel> = periodslist.listIterator()
+        val periodslist: MutableList<INumberSymbol> = ArrayList<INumberSymbol>(3)
+        periodslist.add(convertValueToNumberSymbol(reducedMonth))
+        periodslist.add(convertValueToNumberSymbol(reducedDay))
+        periodslist.add(convertValueToNumberSymbol(reducedYear))
+        val iter: Iterator<INumberSymbol> = periodslist.listIterator()
         for (p in Periods.values()) {
-            val symbol: SymbolModel = iter.next()
+            val symbol: INumberSymbol = iter.next()
             periods.add(p, symbol)
         }
         return periods

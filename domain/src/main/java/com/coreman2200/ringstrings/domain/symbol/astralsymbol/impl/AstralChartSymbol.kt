@@ -7,6 +7,7 @@ import com.coreman2200.ringstrings.domain.symbol.astralsymbol.AstralStrata
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.grouped.Houses
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IAstralChartSymbol
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IAstralGroupSymbol
+import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IAstralSymbol
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IHouseSymbol
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.IGroupedNumberSymbolID
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
@@ -28,37 +29,50 @@ import com.squareup.wire.internal.newMutableMap
 class AstrologicalChart(
     override val id: Charts,
     override val degree: Double
-) : CompositeSymbol<SymbolModel>(
+) : CompositeSymbol<IAstralSymbol>(
     id = id,
     strata = AstralStrata.ASTRALCHART
 ),
     IAstralChartSymbol {
+    override var groupid: ISymbolID? = null
+    override var houseid: ISymbolID? = null
+    override var zodiacid: ISymbolID? = null
 
-
-    override fun producedCelestialBodyMap(): Map<ISymbolID, CelestialBodySymbol> {
-        val bodies:List<CelestialBodySymbol> = Houses.values().associate { Pair(it,related[it] as IHouseSymbol) }
+    override fun producedCelestialBodyMap(): Map<ISymbolID, IAstralSymbol> {
+        val bodies:List<IAstralSymbol> = Houses.values().associate { Pair(it,related[it] as IHouseSymbol) }
             .values.flatMap { it.elems() }
         return bodies.associateBy { it.id }
     }
 
-    override fun add(group: ISymbolID, symbol: SymbolModel) {
+    override fun add(group: ISymbolID, symbol: IAstralSymbol) {
         related[group] = symbol
+        symbol.chartid = id
+        symbol.profileid = profileid
         add(symbol)
     }
 
-    override fun add(map: Map<ISymbolID, SymbolModel>) {
+    override fun add(map: Map<ISymbolID, IAstralSymbol>) {
         related.putAll(map)
-        map.values.forEach { add(it) }
+        map.values.forEach {
+            it.chartid = id
+            add(it)
+        }
     }
 
-    override fun add(symbol: SymbolModel) {
+    override fun add(symbol: IAstralSymbol) {
         super.add(symbol)
-        if (symbol is IAstralGroupSymbol<*>) { related[symbol.id] = symbol }
+        symbol.chartid = id
+        symbol.profileid = profileid
+        if (symbol is IAstralGroupSymbol) { related[symbol.id] = symbol }
     }
 
-    override fun add(symbols: Collection<SymbolModel>) {
+    override fun add(symbols: Collection<IAstralSymbol>) {
         super.add(symbols)
-        val groups = symbols.filter { it is IAstralGroupSymbol<*> }
+        symbols.forEach {
+            it.profileid = profileid
+            it.chartid = id
+        }
+        val groups = symbols.filterIsInstance<IAstralGroupSymbol>()
             .map { it.id to it }.toMap()
         related.putAll(groups)
     }

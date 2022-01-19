@@ -4,6 +4,7 @@ import com.coreman2200.ringstrings.domain.symbol.CompositeSymbol
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.NumberStrata
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.BaseNumbers
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.IDerivedNumberSymbol
+import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.INumberSymbol
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.INumberSymbolID
 
 /**
@@ -25,7 +26,7 @@ class DerivedNumberSymbol(
     override val leftDerived: BaseNumbers,
     override val rightDerived: BaseNumbers,
     override val value: Int = id.value()
-) : CompositeSymbol<NumberSymbol>(
+) : CompositeSymbol<INumberSymbol>(
     id,
     strata = NumberStrata.DERIVEDNUMBER,
     size = 3,

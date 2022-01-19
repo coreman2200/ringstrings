@@ -4,6 +4,7 @@ import com.coreman2200.ringstrings.domain.symbol.Charts
 import com.coreman2200.ringstrings.domain.symbol.SymbolModel
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.IGroupedNumberSymbol
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.INumberChartSymbol
+import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.INumberSymbol
 
 /**
  * NumerologicalChartImpl
@@ -19,12 +20,12 @@ import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.INumber
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 class NumerologicalChart() : GroupedNumberSymbol(id = Charts.NUMEROLOGICAL), INumberChartSymbol {
-    override fun add(symbol: SymbolModel) {
+    override fun add(symbol: INumberSymbol) {
         super.add(symbol)
         if (symbol is IGroupedNumberSymbol) { related[symbol.id] = symbol }
     }
 
-    override fun add(symbols: Collection<SymbolModel>) {
+    override fun add(symbols: Collection<INumberSymbol>) {
         super.add(symbols)
         val groups = symbols.filter { it is IGroupedNumberSymbol }
             .map { it.id to it }.toMap()

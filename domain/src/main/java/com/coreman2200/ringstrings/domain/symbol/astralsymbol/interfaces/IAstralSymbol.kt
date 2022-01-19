@@ -24,17 +24,30 @@ import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
 interface IAstralSymbol : ISymbol {
     val degree: Double
 
+    var houseid:ISymbolID?
+    var zodiacid:ISymbolID?
+
+    fun setHouse(house:IHouseSymbol) {
+        houseid = house.id
+        related[house.id] = house
+    }
+    fun setZodiacSign(zodiac:IZodiacSymbol) {
+        zodiacid = zodiac.id
+        related[zodiac.id] = zodiac
+    }
+
+
     fun wrapDegree(degree: Double): Double {
         return (360 + degree) % 360.0
     }
 }
 
-interface IAstralGroupSymbol<T : SymbolModel> : ICompositeSymbol<T>, IAstralSymbol
-interface IHouseSymbol : IAstralGroupSymbol<CelestialBodySymbol>
-interface IZodiacSymbol : IAstralGroupSymbol<CelestialBodySymbol>
-interface IAstralChartSymbol : IAstralGroupSymbol<SymbolModel> {
-    fun producedCelestialBodyMap(): Map<ISymbolID, CelestialBodySymbol>
+interface IAstralGroupSymbol : ICompositeSymbol<IAstralSymbol>, IAstralSymbol
+interface IHouseSymbol : IAstralGroupSymbol
+interface IZodiacSymbol : IAstralGroupSymbol
+interface IAstralChartSymbol : IAstralGroupSymbol {
+    fun producedCelestialBodyMap(): Map<ISymbolID, IAstralSymbol>
 
-    fun add(group: ISymbolID, symbol: SymbolModel)
-    fun add(map: Map<ISymbolID, SymbolModel>)
+    fun add(group: ISymbolID, symbol: IAstralSymbol)
+    fun add(map: Map<ISymbolID, IAstralSymbol>)
 }

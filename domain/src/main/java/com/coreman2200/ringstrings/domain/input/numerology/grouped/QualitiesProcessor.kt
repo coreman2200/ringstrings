@@ -1,7 +1,6 @@
 package com.coreman2200.ringstrings.domain.input.numerology.grouped
 import com.coreman2200.ringstrings.domain.NumerologySettings
-import com.coreman2200.ringstrings.domain.swisseph.IProfileData
-import com.coreman2200.ringstrings.domain.symbol.SymbolModel
+import com.coreman2200.ringstrings.domain.input.entity.IProfileData
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.BaseNumbers
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.GroupedNumbers
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.Qualities
@@ -45,7 +44,7 @@ class QualitiesProcessor(
 
     // TODO: ?? Not used..
     private fun numGetBirthDay(): INumberSymbol {
-        return convertValueToNumberSymbol(profile.getBirthDay())
+        return convertValueToNumberSymbol(profile.birthDay())
     }
 
     private fun numGetExpression(): INumberSymbol {
@@ -56,9 +55,9 @@ class QualitiesProcessor(
     }
 
     private fun numGetLifePath(): INumberSymbol {
-        val bday = profile.getBirthDay()
-        val bmonth = profile.getBirthMonth()
-        val byear = profile.getBirthYear()
+        val bday = profile.birthDay()
+        val bmonth = profile.birthMonth()
+        val byear = profile.birthYear()
         return convertValueToNumberSymbol(bday + bmonth + byear)
     }
 
@@ -80,7 +79,7 @@ class QualitiesProcessor(
     // First Name, Bday..
     private fun numGetRationalThought(): INumberSymbol {
         val i =
-            convertTextStringToValue(profile.firstName()) + singularizeValue(profile.getBirthDay())
+            convertTextStringToValue(profile.firstName()) + singularizeValue(profile.birthDay())
         return convertValueToNumberSymbol(i)
     }
 
@@ -99,7 +98,7 @@ class QualitiesProcessor(
         return convertValueToNumberSymbol(9 - karmiccount)
     }
 
-    private fun numGetHiddenPassionsFromOccurrenceMap(occurrences: Map<BaseNumbers, Int>): SymbolModel {
+    private fun numGetHiddenPassionsFromOccurrenceMap(occurrences: Map<BaseNumbers, Int>): INumberSymbol {
         val passions = getListOfMostCommonFromMap(occurrences)
         if (passions.size == 0) return BaseNumberSymbol(BaseNumbers.ZERO)
         val hpgroup = GroupedNumberSymbol(GroupedNumbers.HIDDENPASSIONS)
@@ -119,11 +118,11 @@ class QualitiesProcessor(
         return occurrences
     }
 
-    private fun getListOfMostCommonFromMap(occurrences: Map<BaseNumbers, Int>): ArrayList<SymbolModel> {
+    private fun getListOfMostCommonFromMap(occurrences: Map<BaseNumbers, Int>): ArrayList<INumberSymbol> {
         val counts = occurrences.values.toTypedArray()
         Arrays.sort(counts)
         val high = counts[counts.size - 1]
-        val mostcommon = ArrayList<SymbolModel>()
+        val mostcommon = ArrayList<INumberSymbol>()
         for (symbol in BaseNumbers.values()) {
             if (occurrences.containsKey(symbol) && occurrences[symbol] == high) mostcommon.add(
                 BaseNumberSymbol(symbol)
@@ -156,13 +155,13 @@ class QualitiesProcessor(
 
     override fun produceGroupedNumberSymbolsForProfile(): GroupedNumberSymbol {
         processed.clear()
-        processed.add(Qualities.LIFEPATH, numGetLifePath() as SymbolModel)
-        processed.add(Qualities.BALANCE, numGetBalance() as SymbolModel)
-        processed.add(Qualities.EXPRESSION, numGetExpression() as SymbolModel)
-        processed.add(Qualities.MATURITY, numGetMaturity() as SymbolModel)
-        processed.add(Qualities.RATIONALTHOUGHT, numGetRationalThought() as SymbolModel)
-        processed.add(Qualities.SOULURGE, numGetSoulUrge() as SymbolModel)
-        processed.add(Qualities.PERSONALITY, numGetPersonality() as SymbolModel)
+        processed.add(Qualities.LIFEPATH, numGetLifePath())
+        processed.add(Qualities.BALANCE, numGetBalance())
+        processed.add(Qualities.EXPRESSION, numGetExpression())
+        processed.add(Qualities.MATURITY, numGetMaturity())
+        processed.add(Qualities.RATIONALTHOUGHT, numGetRationalThought())
+        processed.add(Qualities.SOULURGE, numGetSoulUrge())
+        processed.add(Qualities.PERSONALITY, numGetPersonality())
         val occurrences = numMapOccurenceOfNumberSymbolsInName()
         processed.add(
             Qualities.HIDDENPASSIONS,
@@ -172,7 +171,7 @@ class QualitiesProcessor(
             Qualities.KARMICLESSON,
             numGetKarmicLessonsListFromOccurrenceMap(occurrences)
         )
-        processed.add(Qualities.SUBCONSCIOUSSELF, numGetSubconsciousSelf() as SymbolModel)
+        processed.add(Qualities.SUBCONSCIOUSSELF, numGetSubconsciousSelf())
         return processed
     }
 }

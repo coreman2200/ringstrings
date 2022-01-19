@@ -1,5 +1,6 @@
 package com.coreman2200.ringstrings.domain.swisseph
 
+import com.coreman2200.ringstrings.domain.input.entity.IProfileData
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.impl.CelestialBodySymbol
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.impl.HouseSymbol
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.impl.ZodiacSymbol

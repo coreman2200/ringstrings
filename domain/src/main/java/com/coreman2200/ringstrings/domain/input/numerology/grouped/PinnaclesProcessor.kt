@@ -1,7 +1,7 @@
 package com.coreman2200.ringstrings.domain.input.numerology.grouped
 
 import com.coreman2200.ringstrings.domain.NumerologySettings
-import com.coreman2200.ringstrings.domain.swisseph.IProfileData
+import com.coreman2200.ringstrings.domain.input.entity.IProfileData
 import com.coreman2200.ringstrings.domain.symbol.SymbolModel
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.GroupedNumbers
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.Pinnacles
@@ -29,9 +29,9 @@ class PinnaclesProcessor(
     profile, settings),
     IGroupedNumberSymbolsInputProcessor {
     private fun getPinnacles(profile: IProfileData): GroupedNumberSymbol {
-        val reducedMonth = singularizeValue(profile.getBirthMonth())
-        val reducedDay = singularizeValue(profile.getBirthDay())
-        val reducedYear = singularizeValue(profile.getBirthYear())
+        val reducedMonth = singularizeValue(profile.birthMonth())
+        val reducedDay = singularizeValue(profile.birthDay())
+        val reducedYear = singularizeValue(profile.birthYear())
         val pinnacles = GroupedNumberSymbol(GroupedNumbers.PINNACLES)
         val pinnaclelist: MutableList<INumberSymbol> = ArrayList(4)
         pinnaclelist.add(convertValueToNumberSymbol(reducedMonth + reducedDay))
@@ -43,7 +43,7 @@ class PinnaclesProcessor(
         val iter: Iterator<INumberSymbol> = pinnaclelist.listIterator()
         for (p in Pinnacles.values()) {
             val symbol = iter.next()
-            pinnacles.add(p, symbol as SymbolModel)
+            pinnacles.add(p, symbol)
         }
         return pinnacles
     }

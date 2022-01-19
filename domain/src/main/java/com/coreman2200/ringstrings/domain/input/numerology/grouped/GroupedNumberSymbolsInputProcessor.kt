@@ -2,8 +2,7 @@ package com.coreman2200.ringstrings.domain.input.numerology.grouped
 
 import com.coreman2200.ringstrings.domain.NumerologySettings
 import com.coreman2200.ringstrings.domain.input.numerology.NumberSymbolInputProcessor
-import com.coreman2200.ringstrings.domain.input.numerology.numbersystem.NumberSystemType
-import com.coreman2200.ringstrings.domain.swisseph.IProfileData
+import com.coreman2200.ringstrings.domain.input.entity.IProfileData
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.GroupedNumbers
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.impl.GroupedNumberSymbol
 import java.lang.RuntimeException
@@ -30,7 +29,7 @@ abstract class GroupedNumberSymbolsInputProcessor(
 
     companion object {
         // QUALITIES, CHALLENGES, PERIODS, PINNACLES, PERSONAL, KARMICLESSON, HIDDENPASSIONS, CHART, RELATIONAL
-        fun getProcessor(type: GroupedNumbers, profile:IProfileData, settings: NumerologySettings): GroupedNumberSymbolsInputProcessor {
+        fun getProcessor(type: GroupedNumbers, profile: IProfileData, settings: NumerologySettings): GroupedNumberSymbolsInputProcessor {
             return when (type) {
                 GroupedNumbers.QUALITIES -> QualitiesProcessor(profile,settings)
                 GroupedNumbers.CHALLENGES -> ChallengesProcessor(profile, settings)

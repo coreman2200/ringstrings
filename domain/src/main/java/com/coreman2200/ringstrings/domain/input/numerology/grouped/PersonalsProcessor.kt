@@ -1,6 +1,6 @@
 package com.coreman2200.ringstrings.domain.input.numerology.grouped
 import com.coreman2200.ringstrings.domain.NumerologySettings
-import com.coreman2200.ringstrings.domain.swisseph.IProfileData
+import com.coreman2200.ringstrings.domain.input.entity.IProfileData
 import com.coreman2200.ringstrings.domain.symbol.SymbolModel
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.GroupedNumbers
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.Personal
@@ -36,23 +36,23 @@ class PersonalsProcessor(
         val iter: Iterator<INumberSymbol> = personallist.listIterator()
         for (p in Personal.values()) {
             val symbol = iter.next()
-            personals.add(p, symbol as SymbolModel)
+            personals.add(p, symbol)
         }
         return personals
     }
 
     private fun numGetPersonalDay(profile: IProfileData): Int {
-        return singularizeValue(numGetPersonalMonth(profile) + singularizeValue(profile.getBirthMonth()))
+        return singularizeValue(numGetPersonalMonth(profile) + singularizeValue(profile.birthMonth()))
     }
 
     private fun numGetPersonalMonth(profile: IProfileData): Int {
-        return singularizeValue(numGetPersonalYear(profile) + singularizeValue(profile.getBirthDay()))
+        return singularizeValue(numGetPersonalYear(profile) + singularizeValue(profile.birthDay()))
     }
 
     private fun numGetPersonalYear(profile: IProfileData): Int {
-        val month = singularizeValue(profile.getBirthMonth())
-        val day = singularizeValue(profile.getBirthDay())
-        val year = singularizeValue(profile.getBirthYear())
+        val month = singularizeValue(profile.birthMonth())
+        val day = singularizeValue(profile.birthDay())
+        val year = singularizeValue(profile.birthYear())
         return singularizeValue(month + day + year)
     }
 

@@ -23,4 +23,7 @@ abstract class AstralSymbol(
     override val name: String = id.toString(),
     override val strata: ISymbolStrata,
     override var size: Int = 1
-) : SymbolModel(id, name, strata, size), IAstralSymbol
+) : SymbolModel(id, name, strata, size), IAstralSymbol {
+    override var houseid:ISymbolID? = null
+    override var zodiacid:ISymbolID? = null
+}

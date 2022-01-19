@@ -23,7 +23,10 @@ abstract class SymbolModel(
     override val strata: ISymbolStrata,
     override var size: Int = 1,
 ) : ISymbol {
-    protected var related: MutableMap<ISymbolID, ISymbol> = mutableMapOf()
+    override var related: MutableMap<ISymbolID, ISymbol> = mutableMapOf()
+    override var profileid:Int = 0
+    override var chartid:ISymbolID? = null
+    override var groupid:ISymbolID? = null
 
     override fun get(): List<ISymbol> = related.values.toList()
     override fun get(id: ISymbolID): ISymbol? = related[id]

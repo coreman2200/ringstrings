@@ -1,6 +1,7 @@
 package com.coreman2200.ringstrings.domain.symbol.symbolinterface
 
 import com.coreman2200.ringstrings.domain.symbol.SymbolModel
+import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IAstralSymbol
 
 /**
  * ICompositeSymbol
@@ -16,7 +17,7 @@ import com.coreman2200.ringstrings.domain.symbol.SymbolModel
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-interface ICompositeSymbol<T : SymbolModel> : ISymbol {
+interface ICompositeSymbol<T : ISymbol> : ISymbol {
     fun add(symbol: T)
     fun add(symbols: Collection<T>)
     fun remove(symbol: T)
@@ -25,4 +26,4 @@ interface ICompositeSymbol<T : SymbolModel> : ISymbol {
 
 }
 
-interface IChartedSymbols : ICompositeSymbol<SymbolModel>
+interface IChartedSymbols : ICompositeSymbol<IAstralSymbol>

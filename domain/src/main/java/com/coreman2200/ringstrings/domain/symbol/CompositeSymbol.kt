@@ -1,6 +1,7 @@
 package com.coreman2200.ringstrings.domain.symbol
 
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ICompositeSymbol
+import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
 
 /**
@@ -17,7 +18,7 @@ import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-abstract class CompositeSymbol<T : SymbolModel>(
+abstract class CompositeSymbol<T : ISymbol>(
     override val id: ISymbolID,
     override val name: String = id.toString(),
     override val strata: ISymbolStrata,

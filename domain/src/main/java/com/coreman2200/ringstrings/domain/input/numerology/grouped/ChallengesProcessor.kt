@@ -1,7 +1,7 @@
 package com.coreman2200.ringstrings.domain.input.numerology.grouped
 
 import com.coreman2200.ringstrings.domain.NumerologySettings
-import com.coreman2200.ringstrings.domain.swisseph.IProfileData
+import com.coreman2200.ringstrings.domain.input.entity.IProfileData
 import com.coreman2200.ringstrings.domain.symbol.SymbolModel
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.Challenges
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.GroupedNumbers
@@ -33,9 +33,9 @@ class ChallengesProcessor(
     }
 
     private fun getChallenges(profile: IProfileData): GroupedNumberSymbol {
-        val reducedMonth = singularizeValue(profile.getBirthMonth())
-        val reducedDay = singularizeValue(profile.getBirthDay())
-        val reducedYear = singularizeValue(profile.getBirthYear())
+        val reducedMonth = singularizeValue(profile.birthMonth())
+        val reducedDay = singularizeValue(profile.birthDay())
+        val reducedYear = singularizeValue(profile.birthYear())
         val challenges = GroupedNumberSymbol(GroupedNumbers.CHALLENGES)
         val challengelist: MutableList<INumberSymbol> = ArrayList<INumberSymbol>(4)
         challengelist.add(convertValueToNumberSymbol(abs(reducedDay - reducedMonth)))
@@ -47,7 +47,7 @@ class ChallengesProcessor(
         val iter: Iterator<INumberSymbol> = challengelist.listIterator()
         for (c in Challenges.values()) {
             val symbol: INumberSymbol = iter.next()
-            challenges.add(c, symbol as SymbolModel)
+            challenges.add(c, symbol)
         }
         return challenges
     }

@@ -6,6 +6,7 @@ import com.coreman2200.ringstrings.domain.symbol.astralsymbol.grouped.Aspects
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.impl.AspectedSymbols
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.impl.CelestialBodySymbol
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IAstralChartSymbol
+import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IAstralSymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
 import java.util.*
 import kotlin.math.abs
@@ -34,21 +35,21 @@ class AspectsProcessor(
     )
 
     fun calcAspects() {
-        val bodies: Map<ISymbolID, CelestialBodySymbol> = chart.producedCelestialBodyMap()
-        val comparelist: MutableList<CelestialBodySymbol> = mutableListOf()
-        comparelist.addAll(bodies.values.filter { it.id.isRealCelestialBody })
+        val map: Map<ISymbolID, IAstralSymbol> = chart.producedCelestialBodyMap()
+        val bodies:List<CelestialBodySymbol> = map.values.filterIsInstance<CelestialBodySymbol>()
+        val comparelist: MutableList<IAstralSymbol> = mutableListOf()
+        comparelist.addAll(bodies.filter { it.id.isRealCelestialBody })
 
-        for (body in bodies.keys) {
-            val bodysymbol = bodies.getValue(body)
-            comparelist.remove(bodysymbol)
-            val aspects: List<AspectedSymbols> = checkForAspects(bodysymbol, comparelist)
+        for (body in bodies) {
+            comparelist.remove(body)
+            val aspects: List<AspectedSymbols> = checkForAspects(body, comparelist)
             chart.add(aspects)
         }
     }
 
     private fun checkForAspects(
-        body: CelestialBodySymbol,
-        comparelist: List<CelestialBodySymbol>
+        body: IAstralSymbol,
+        comparelist: List<IAstralSymbol>
     ): List<AspectedSymbols> {
         val orb: Double = settings.maxorb
         val list: MutableList<AspectedSymbols> = mutableListOf()
@@ -57,7 +58,8 @@ class AspectsProcessor(
             val min = aspectValueMap.minWithOrNull(compareBy { abs(diff - it.key) })
 
             if (min != null && checkValueWithinOrbOfAspect(min.key, diff, orb)) {
-                list.add(AspectedSymbols(min.value, body, elem))
+                val aspect = AspectedSymbols(min.value, body as CelestialBodySymbol, elem as CelestialBodySymbol)
+                list.add(aspect)
             }
         }
         return list

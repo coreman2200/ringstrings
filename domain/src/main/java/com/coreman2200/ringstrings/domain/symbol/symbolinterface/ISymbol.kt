@@ -20,6 +20,10 @@ interface ISymbol {
     val id: ISymbolID
     val strata: ISymbolStrata
     val size: Int
+    var profileid:Int
+    var chartid:ISymbolID?
+    var groupid:ISymbolID?
+    val related:MutableMap<ISymbolID,ISymbol>
 
     fun get(): List<ISymbol>
     fun get(id: ISymbolID): ISymbol?

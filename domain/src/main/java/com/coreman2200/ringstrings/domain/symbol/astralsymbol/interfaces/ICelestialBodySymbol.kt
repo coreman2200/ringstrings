@@ -17,12 +17,6 @@ interface ICelestialBodySymbol : IAstralSymbol {
     fun setRetrograde(retrograde: Boolean)
     fun isRetrograde(): Boolean
 
-    fun setHouse(house: IHouseSymbol)
-    fun getHouse(): IHouseSymbol
-
-    fun setZodiacSign(sign: IZodiacSymbol)
-    fun getZodiacSign(): IZodiacSymbol
-
     // Aspects getAspectWithBody(CelestialBodies body);
     // Aspects[] getAllAspects();
 }
