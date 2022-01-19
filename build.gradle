@@ -6,6 +6,7 @@ buildscript {
         debugBuild = "RingStrings-debug"
         coroutinesVersion = '1.6.0-native-mt'
         roomVersion = '2.4.1'
+        lifecycleVersion = '2.4.0'
         arrowVersion = '1.0.2-alpha.28'
         daggerVersion = '2.40.5'
         kotlinVersion = '1.6.10'

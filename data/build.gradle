@@ -86,29 +86,33 @@ dependencies {
 
     implementation project(':domain')
 
-    // If you're using classes in dagger.android
-    api "com.google.dagger:dagger:$daggerVersion"
-    api "com.google.dagger:dagger-android:$daggerVersion"
-    api "com.google.dagger:dagger-android-support:$daggerVersion"
-    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    implementation 'androidx.test:core-ktx:1.4.0'
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
-    annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
+    implementation "com.google.dagger:dagger-android:$daggerVersion"
+    // If you're using classes in dagger.android
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    // if you use the support libraries
     kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
 
     implementation "androidx.room:room-runtime:$roomVersion"
     annotationProcessor("androidx.room:room-compiler:$roomVersion")
     kapt "androidx.room:room-compiler:$roomVersion"
-
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
-    implementation "androidx.room:room-ktx:$roomVersion"
 
 
 
+    testImplementation "androidx.room:room-testing:$roomVersion"
     androidTestImplementation "android.arch.persistence.room:testing:$roomVersion"
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
+
+    testImplementation 'org.robolectric:robolectric:4.7.3'
+    testImplementation('com.squareup.assertj:assertj-android:1.2.0') {
+        exclude group: 'com.android.support'
+    }
 
 }
 
