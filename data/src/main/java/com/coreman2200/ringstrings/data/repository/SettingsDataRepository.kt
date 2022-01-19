@@ -37,7 +37,7 @@ object SettingsDataRepository :
     override suspend fun fetchAppSettings(request: AppSettingsRequest): Either<Failure, AppSettingsResponse> =
         try {
             val response = settingsDataSource.fetchSettingsData(request = request)
-                response.takeIf { it.success }?.right() ?: run { Failure.NoData().left() }
+            response.takeIf { it.success }?.right() ?: run { Failure.NoData().left() }
         } catch (e: Exception) {
             Failure.NoData(e.localizedMessage ?: "No Data Found").left()
         }

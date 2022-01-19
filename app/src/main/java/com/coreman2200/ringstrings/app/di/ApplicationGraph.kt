@@ -12,8 +12,10 @@ import dagger.Provides
 
 @ApplicationScope
 @Component(
-    modules = [UtilsModule::class, PresentationModule::class, DomainLayerModule::class,
-        RepositoryModule::class, DataSourceModule::class]
+    modules = [
+        UtilsModule::class, PresentationModule::class, DomainLayerModule::class,
+        RepositoryModule::class, DataSourceModule::class
+    ]
 )
 interface ApplicationComponent {
 
@@ -21,8 +23,6 @@ interface ApplicationComponent {
     interface Factory {
         fun create(modules: UtilsModule): ApplicationComponent
     }
-
-
 }
 
 @Module
@@ -31,5 +31,4 @@ class UtilsModule(private val ctx: Context) {
     @ApplicationScope
     @Provides
     fun provideApplicationContext(): Context = ctx
-
 }

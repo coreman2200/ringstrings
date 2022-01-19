@@ -54,7 +54,6 @@ class SettingsWireStore @Inject constructor(val context: Context) : SettingsData
         val app = flow.last()
 
         return AppSettingsResponse(true, toDomainAppSettings(app))
-
     }
 
     override suspend fun updateSettingsData(request: AppSettingsRequest): AppSettingsResponse {
@@ -73,7 +72,7 @@ class SettingsWireStore @Inject constructor(val context: Context) : SettingsData
         return AppSettingsResponse(true, toDomainAppSettings(data))
     }
 
-    fun toDomainAppSettings(data:AppSettings) : com.coreman2200.ringstrings.domain.AppSettings {
+    fun toDomainAppSettings(data: AppSettings): com.coreman2200.ringstrings.domain.AppSettings {
         val astro = data.astro ?: AstrologySettings()
         val num = data.num ?: NumerologySettings()
         return com.coreman2200.ringstrings.domain.AppSettings(

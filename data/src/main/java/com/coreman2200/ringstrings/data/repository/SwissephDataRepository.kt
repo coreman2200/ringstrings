@@ -24,7 +24,6 @@ package com.coreman2200.ringstrings.data.repository
 import arrow.core.Either
 import arrow.core.left
 import arrow.core.right
-import com.coreman2200.ringstrings.data.datasource.SettingsDataSource
 import com.coreman2200.ringstrings.data.datasource.SwissephDataSource
 import com.coreman2200.ringstrings.domain.*
 import java.net.SocketTimeoutException
@@ -38,7 +37,7 @@ object SwissephDataRepository :
     override suspend fun fetchSwisseph(request: SwissephDataRequest): Either<Failure, SwissephDataResponse> =
         try {
             val response = swissephDataSource.fetchSwissephData(request = request)
-                response.right()
+            response.right()
         } catch (e: Exception) {
             Failure.NoData(e.localizedMessage ?: "No Data Found").left()
         }

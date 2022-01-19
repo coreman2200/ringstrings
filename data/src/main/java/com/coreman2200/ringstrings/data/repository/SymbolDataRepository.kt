@@ -37,11 +37,10 @@ object SymbolDataRepository :
     override suspend fun fetchSymbol(request: SymbolDataRequest): Either<Failure, SymbolDataResponse> =
         try {
             val response = symbolDataSource.fetchSymbolData(request = request)
-                response.takeIf { it.symbols.isNotEmpty() }?.right() ?: run { Failure.NoData().left() }
+            response.takeIf { it.symbols.isNotEmpty() }?.right() ?: run { Failure.NoData().left() }
         } catch (e: Exception) {
             Failure.NoData(e.localizedMessage ?: "No Data Found").left()
         }
-
 
     override suspend fun fetchSymbolDescription(request: SymbolDescriptionRequest): Either<Failure, SymbolDataResponse> =
         try {
@@ -50,6 +49,4 @@ object SymbolDataRepository :
         } catch (e: Exception) {
             Failure.NoData(e.localizedMessage ?: "No Data Found").left()
         }
-
-
 }

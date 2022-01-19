@@ -1,7 +1,6 @@
 package com.coreman2200.ringstrings.domain.input.numerology.grouped
 
 import com.coreman2200.ringstrings.domain.input.numerology.INumberSymbolInputProcessor
-import com.coreman2200.ringstrings.domain.swisseph.IProfileData
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.impl.GroupedNumberSymbol
 
 /**

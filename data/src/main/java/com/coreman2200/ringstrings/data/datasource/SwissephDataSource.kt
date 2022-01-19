@@ -43,5 +43,4 @@ class SwissephFileDataSource @Inject constructor(val context: Context) : Swissep
     override suspend fun fetchSwissephData(request: SwissephDataRequest): SwissephDataResponse {
         return SwissephDataResponse(handler.ephemerisPath, handler.isEphemerisDataAvailable)
     }
-
 }

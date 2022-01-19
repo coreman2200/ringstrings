@@ -3,7 +3,7 @@ package com.coreman2200.ringstrings.domain.input.numerology
 import com.coreman2200.ringstrings.domain.NumerologySettings
 import com.coreman2200.ringstrings.domain.input.numerology.grouped.GroupedNumberSymbolsInputProcessor
 import com.coreman2200.ringstrings.domain.input.numerology.grouped.IGroupedNumberSymbolsInputProcessor
-import com.coreman2200.ringstrings.domain.swisseph.IProfileData
+import com.coreman2200.ringstrings.domain.input.entity.IProfileData
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.GroupedNumbers
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.impl.GroupedNumberSymbol
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.impl.NumerologicalChart
@@ -34,7 +34,9 @@ class NumerologicalChartProcessor(
             GroupedNumbers.PERIODS, GroupedNumbers.PERSONAL,
             GroupedNumbers.PINNACLES
         )
-        for (type in groupedSymbols) chart.add(type, getGroupedNumberSymbolsForType(type))
+        for (type in groupedSymbols) {
+            chart.add(type, getGroupedNumberSymbolsForType(type))
+        }
         return chart
     }
 
