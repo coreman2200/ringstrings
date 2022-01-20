@@ -2,6 +2,7 @@ package com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces
 
 import com.coreman2200.ringstrings.domain.symbol.SymbolModel
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.impl.NumberSymbol
+import com.coreman2200.ringstrings.domain.symbol.symbolinterface.IChartedSymbols
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ICompositeSymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbol
 
@@ -38,4 +39,4 @@ interface IGroupedNumberSymbol : ICompositeSymbol<INumberSymbol>, INumberSymbol 
         get() = 0
 }
 
-interface INumberChartSymbol : IGroupedNumberSymbol
+interface INumberChartSymbol : IGroupedNumberSymbol, IChartedSymbols<INumberSymbol>

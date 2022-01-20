@@ -23,7 +23,8 @@ interface ICompositeSymbol<T : ISymbol> : ISymbol {
     fun remove(symbol: T)
     fun clear()
     fun elems(): List<T>
+    fun size():Int = get().size
 
 }
 
-interface IChartedSymbols : ICompositeSymbol<IAstralSymbol>
+interface IChartedSymbols<T:ISymbol> : ICompositeSymbol<T>
