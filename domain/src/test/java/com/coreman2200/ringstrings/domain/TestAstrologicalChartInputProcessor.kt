@@ -13,6 +13,7 @@ import com.coreman2200.ringstrings.domain.swisseph.SwissEphemerisManager
 import com.coreman2200.ringstrings.domain.symbol.Charts
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.grouped.CelestialBodies
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IAstralChartSymbol
+import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IAstralSymbol
 import org.junit.Test
 import org.junit.runner.RunWith
 
@@ -41,6 +42,8 @@ class TestAstrologicalChartInputProcessor {
     fun `test Processor produces full Natal Chart`() {
         val chart: IAstralChartSymbol =
             mTestProcessor.produceAstrologicalChart(testProfile, Charts.ASTRAL_NATAL)
+
+        assert(chart.size() > 0)
         //chart.testGenerateLoggingsForFullChart();
     }
 
@@ -56,7 +59,8 @@ class TestAstrologicalChartInputProcessor {
         val chart: IAstralChartSymbol =
             mTestProcessor.produceAstrologicalChart(testProfile, Charts.ASTRAL_NATAL)
         for (body in CelestialBodies.values()) {
-            assert(chart.getHouseForBody(body) != null)
+            val symbol:IAstralSymbol = chart.get(body) as IAstralSymbol
+            assert(symbol.houseid != null)
         }
     }
 
@@ -65,11 +69,12 @@ class TestAstrologicalChartInputProcessor {
         val chart: IAstralChartSymbol =
             mTestProcessor.produceAstrologicalChart(testProfile, Charts.ASTRAL_NATAL)
         for (body in CelestialBodies.values()) {
-            assert(chart.getSignForBody(body) != null)
+            val symbol:IAstralSymbol = chart.get(body) as IAstralSymbol
+            assert(symbol.zodiacid != null)
         }
     }
 
-    //@Test
+    @Test
     fun testDurationProcessorProducesXRandomBirthCharts() {
         testProfile = generateRandomProfile()
         var highval = 0
