@@ -167,7 +167,7 @@ class SwissEphemerisManager(
         val celbody = CelestialBodySymbol(body, bodiesCalcOutput[0])
 
         bodies[body] = celbody
-        celbody.setRetrograde(retrograde)
+        celbody.isRetrograde = retrograde
         addBodyToHouse(celbody)
         addBodyToZodiac(celbody)
     }

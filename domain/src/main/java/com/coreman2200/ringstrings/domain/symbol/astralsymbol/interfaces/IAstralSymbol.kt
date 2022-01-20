@@ -4,6 +4,7 @@ import com.coreman2200.ringstrings.domain.symbol.SymbolModel
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.impl.CelestialBodySymbol
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.impl.HouseSymbol
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.impl.ZodiacSymbol
+import com.coreman2200.ringstrings.domain.symbol.symbolinterface.IChartedSymbols
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ICompositeSymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
@@ -45,7 +46,7 @@ interface IAstralSymbol : ISymbol {
 interface IAstralGroupSymbol : ICompositeSymbol<IAstralSymbol>, IAstralSymbol
 interface IHouseSymbol : IAstralGroupSymbol
 interface IZodiacSymbol : IAstralGroupSymbol
-interface IAstralChartSymbol : IAstralGroupSymbol {
+interface IAstralChartSymbol : IChartedSymbols<IAstralSymbol>, IAstralGroupSymbol {
     fun producedCelestialBodyMap(): Map<ISymbolID, IAstralSymbol>
 
     fun add(group: ISymbolID, symbol: IAstralSymbol)

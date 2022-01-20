@@ -28,33 +28,6 @@ class CelestialBodySymbol(
     strata = AstralStrata.ASTRALBODY
 ),
     ICelestialBodySymbol {
-    private var retrograde: Boolean? = false
-    private var house: ISymbolID? = null
-    private var sign: ISymbolID? = null
+    override var isRetrograde: Boolean = false
 
-    override fun setRetrograde(retrograde: Boolean) {
-        this.retrograde = retrograde
-    }
-
-    override fun isRetrograde(): Boolean {
-        return this.retrograde ?: false
-    }
-
-    override fun getHouse(): IHouseSymbol {
-        return related[this.house] as IHouseSymbol
-    }
-
-    override fun setHouse(house: IHouseSymbol) {
-        this.house = house.id
-        related[house.id] = house
-    }
-
-    override fun setZodiacSign(sign: IZodiacSymbol) {
-        this.sign = sign.id
-        related[sign.id] = sign
-    }
-
-    override fun getZodiacSign(): IZodiacSymbol {
-        return related[this.sign] as IZodiacSymbol
-    }
 }

@@ -3,7 +3,10 @@ package com.coreman2200.ringstrings.domain.symbol.astralsymbol.impl
 import com.coreman2200.ringstrings.domain.symbol.CompositeSymbol
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.AstralStrata
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.grouped.Aspects
+import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IAstralGroupSymbol
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IAstralSymbol
+import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.IDerivedNumberSymbol
+import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
 
 /**
  * AspectedSymbolsImpl
@@ -22,13 +25,16 @@ class AspectedSymbols(
     override val id: Aspects,
     val s1: CelestialBodySymbol,
     val s2: CelestialBodySymbol
-) : CompositeSymbol<CelestialBodySymbol>(
+) : CompositeSymbol<IAstralSymbol>(
     id,
     name = id.toString(),
     strata = AstralStrata.ASTRALASPECT,
     size = 2,
 ),
-    IAstralSymbol {
+    IAstralGroupSymbol {
+    override var groupid: ISymbolID? = null
+    override var houseid: ISymbolID? = null
+    override var zodiacid: ISymbolID? = null
     override val degree: Double = getDegreeBetweenSymbols(id, s1, s2)
 
     private fun getDegreeBetweenSymbols(

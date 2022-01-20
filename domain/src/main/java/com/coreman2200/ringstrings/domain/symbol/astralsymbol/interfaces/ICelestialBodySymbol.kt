@@ -14,8 +14,7 @@ package com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 interface ICelestialBodySymbol : IAstralSymbol {
-    fun setRetrograde(retrograde: Boolean)
-    fun isRetrograde(): Boolean
+    var isRetrograde:Boolean
 
     // Aspects getAspectWithBody(CelestialBodies body);
     // Aspects[] getAllAspects();
