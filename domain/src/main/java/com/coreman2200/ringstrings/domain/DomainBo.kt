@@ -38,7 +38,7 @@ data class AppSettings(
 
 data class AstrologySettings(
     val maxorb:Double = 2.0,
-    val ephedir:String?
+    val ephedir:String? = ""
 )
 
 data class NumerologySettings(
