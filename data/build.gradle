@@ -87,17 +87,15 @@ dependencies {
     implementation project(':domain')
 
     implementation "com.google.dagger:dagger:$daggerVersion"
-    implementation 'androidx.test:core-ktx:1.4.0'
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
     implementation "com.google.dagger:dagger-android:$daggerVersion"
-    // If you're using classes in dagger.android
     implementation "com.google.dagger:dagger-android-support:$daggerVersion"
-    // if you use the support libraries
     kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
 
     implementation "androidx.room:room-runtime:$roomVersion"
     annotationProcessor("androidx.room:room-compiler:$roomVersion")
     kapt "androidx.room:room-compiler:$roomVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
 
 

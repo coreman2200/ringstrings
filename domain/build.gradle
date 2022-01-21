@@ -28,6 +28,11 @@ android {
         sourceCompatibility(JavaVersion.VERSION_11)
         targetCompatibility(JavaVersion.VERSION_11)
     }
+
+    sourceSets {
+        test.resources.srcDirs += ["src/main"]
+    }
+
     kotlinOptions {
         jvmTarget = '11'
     }
@@ -39,10 +44,7 @@ dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
 
-
-    api "io.arrow-kt:arrow-core:$arrowVersion"
-    api "io.arrow-kt:arrow-syntax:0.11.0"
-    kapt "io.arrow-kt:arrow-meta:$arrowVersion"
+    implementation "io.arrow-kt:arrow-fx-coroutines:$arrowVersion"
 
     api "com.squareup.wire:wire-runtime:4.0.1"
     implementation "androidx.room:room-runtime:$roomVersion"
