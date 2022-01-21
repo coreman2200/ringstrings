@@ -22,10 +22,10 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface ProfileDao {
     @Insert
-    suspend fun insert(profile: ProfileEntity) : Int
+    suspend fun insert(profile: ProfileEntity)
 
     @Update
-    fun update(profile: ProfileEntity)
+    suspend fun update(profile: ProfileEntity)
 
     @Delete
     fun delete(profile: ProfileEntity)
