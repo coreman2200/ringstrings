@@ -94,7 +94,7 @@ class QualitiesProcessor(
     // Karmic Lessons Count..
     private fun numGetSubconsciousSelf(): INumberSymbol {
         val karmiclessons: GroupedNumberSymbol = processed.get(Qualities.KARMICLESSON) as GroupedNumberSymbol
-        val karmiccount = karmiclessons.size
+        val karmiccount = karmiclessons.size()
         return convertValueToNumberSymbol(9 - karmiccount)
     }
 
