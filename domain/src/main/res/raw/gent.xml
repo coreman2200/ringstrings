@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <Symbol id="0">
+        <Description>Zero.</Description>
+        <Color value="0xFF0000" />
+        <Qualities id="">
+            <tag>Zero</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="1">
+        <Description>One is the Spark of Presence. One sings of Divinity and Inspiration. Leadership. The Beginning.</Description>
+        <Color value="0xFF0000" />
+        <Qualities id="">
+            <tag>Beginning</tag>
+            <tag>Truth</tag>
+            <tag>Leadership</tag>
+            <tag>Unity</tag>
+            <tag>Inspiration</tag>
+            <tag>Divination</tag>
+            <tag>Creation</tag>
+            <tag>Spark</tag>
+            <tag>Center</tag>
+            <tag>Being</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="2">
+        <Description>Two expresses duality. Harmony. The Truth of Oneness is given clarity and distinction through contrast.</Description>
+        <Color value="0xFF8C00" />
+        <Qualities id="">
+            <tag>Harmony</tag>
+            <tag>Balance</tag>
+            <tag>Choice</tag>
+            <tag>Humanity</tag>
+            <tag>Fairness</tag>
+            <tag>Contrast</tag>
+            <tag>Duality</tag>
+            <tag>Opposition</tag>
+            <tag>Worldly</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="3">
+        <Description>Three is the number of Creativity, Expression, and Culmination. All. Cycles (Beginning, Middle, End).</Description>
+        <Color value="0xFFFF00" />
+        <Qualities id="">
+            <tag>Creativity</tag>
+            <tag>Expression</tag>
+            <tag>Creation</tag>
+            <tag>Connection</tag>
+            <tag>Cycle</tag>
+            <tag>All</tag>
+            <tag>Expansion</tag>
+            <tag>Process</tag>
+            <tag>Wholeness</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="4">
+        <Description>Four is the number of building, structure, organization, and wordly and tangible expression</Description>
+        <Color value="0x00FF00" />
+        <Qualities id="">
+            <tag>Earth</tag>
+            <tag>Position</tag>
+            <tag>Structure</tag>
+            <tag>Organizing</tag>
+            <tag>Consolidation</tag>
+            <tag>Movement</tag>
+            <tag>Reality</tag>
+            <tag>Tangibility</tag>
+            <tag>Boundary</tag>
+            <tag>Worldly</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="5">
+        <Description>Five is the number of exploration, curiosity, freedom and the Journey.</Description>
+        <Color value="0x0000FF" />
+        <Qualities id="">
+            <tag>Freedom</tag>
+            <tag>Exploration</tag>
+            <tag>Free-Spirit</tag>
+            <tag>Curiosity</tag>
+            <tag>Journey</tag>
+            <tag>Changes</tag>
+            <tag>Education</tag>
+            <tag>Travel</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="6">
+        <Description>Six is the resonance of compassion and understanding. Expressive Love and protection. Wisdom gained through one's experiences.</Description>
+        <Color value="0x00008B" />
+        <Qualities id="">
+            <tag>Compassion</tag>
+            <tag>Understanding</tag>
+            <tag>Wisdom</tag>
+            <tag>Love</tag>
+            <tag>Expression</tag>
+            <tag>Deed</tag>
+            <tag>Sharing</tag>
+            <tag>Growth</tag>
+            <tag>Fertility</tag>
+            <tag>Wholeness</tag>
+            <tag>Tangibility</tag>
+            <tag>Building</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="7">
+        <Description>Seven is mystical wisdom, intuition, and of the truth connecting all within the cosmos. Hightened sensitivity and awareness.</Description>
+        <Color value="0x9400D3" />
+        <Qualities id="">
+            <tag>Mysticism</tag>
+            <tag>Curiosity</tag>
+            <tag>Exploration</tag>
+            <tag>Mystery</tag>
+            <tag>Wisdom</tag>
+            <tag>Awareness</tag>
+            <tag>Sensitivity</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="8">
+        <Description>Eight is the number of karma, gain, achievement, and the worldly application of all knowledge and wisdom. Raising.</Description>
+        <Color value="0x8B4513" />
+        <Qualities id="">
+            <tag>Building</tag>
+            <tag>Application</tag>
+            <tag>Knowledge</tag>
+            <tag>Achievement</tag>
+            <tag>Gain</tag>
+            <tag>Prosperity</tag>
+            <tag>Materialism</tag>
+            <tag>Tangibility</tag>
+            <tag>Worldly</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="9">
+        <Description>Nine is the resonance of completion. Attainment. A wisdom that has been made complete and connected with all that came before it in this cycle. Transformation. </Description>
+        <Color value="0xFFC8CB" />
+        <Qualities id="">
+            <tag>Completion</tag>
+            <tag>Attainment</tag>
+            <tag>Conclusion</tag>
+            <tag>Wisdom</tag>
+            <tag>Transformation</tag>
+            <tag>Connection</tag>
+            <tag>Understanding</tag>
+            <tag>Cycle</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="11">
+        <Description>Eleven (11/2), A Master Number that resonates as the gateway to greater wisdom and spiritual attainment. Vision and Thinking.</Description>
+        <Color value="0xFF7F50" />
+        <Qualities id="">
+            <tag>Gateway</tag>
+            <tag>Master Number</tag>
+            <tag>Wisdom</tag>
+            <tag>Awareness</tag>
+            <tag>Harmony</tag>
+            <tag>Greatness</tag>
+            <tag>Choice</tag>
+            <tag>Vision</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="22">
+        <Description>Twenty-Two (22/4), A Master Number expressed as strong world will, a powerful and determined builder. The manifestation of dreams unto tangability.</Description>
+        <Color value="0x8B0000" />
+        <Qualities id="">
+            <tag>Master Number</tag>
+            <tag>Spirituality</tag>
+            <tag>Practicality</tag>
+            <tag>Building</tag>
+            <tag>Vision</tag>
+            <tag>Determination</tag>
+            <tag>Power</tag>
+            <tag>Creation</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="33">
+        <Description>Thirty-Three (33/6), A Master Number that resonates as the Altruistic. The healer and the teacher. The expression of great love and vision. Selflessness and kindness.</Description>
+        <Color value="0xE6E6FA" />
+        <Qualities id="">
+            <tag>Master Number</tag>
+            <tag>Education</tag>
+            <tag>Altruism</tag>
+            <tag>Raised Consciousness</tag>
+            <tag>Kindness</tag>
+            <tag>Vision</tag>
+            <tag>Leadership</tag>
+            <tag>Responsibility</tag>
+            <tag>Rare</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="10">
+        <Description>Karmic Debt Number 10: Good Karma</Description>
+        <Color value="0xFFFFFF" />
+        <Qualities id="10KD">
+            <tag>One</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="13">
+        <Description>Karmic Debt Number 13: You will have to work long and hard for the things you want ~ there always seems to be something to stumble over as you strive to progress, and it may grow on you how heavy a burden it is to do so much and seemingly get nowhere.. Persist. Never give up. While in a past life you may have gotten away with too little work (or translating your brilliance and creativity into actual Things), you will have to put in a bit extra leg work ~ but the most successful people do the very same, and that's just how they come to be so very successful.</Description>
+        <Color value="0xFFFFFF" />
+        <Qualities id="13KD">
+            <tag>Three</tag>
+            <tag>Challenge</tag>
+            <tag>Commitment</tag>
+            <tag>Work</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="14">
+        <Description>Karmic Debt Number 14: In a past life, there was little effort made to reign in on over-indulgence ~ there was little no structure ~ and as a reflection of this, there is even more need for structure and will-power in this aspect of your life. It will oftentimes feel like you slip through the cracks, or like there's no foundation upon which you may stand at all. Just remain dedicated to your highest goal and attaining it. And avoid over-indulgence when and wherever possible! </Description>
+        <Color value="0xFFFFFF" />
+        <Qualities id="14KD">
+            <tag>Four</tag>
+            <tag>Commitment</tag>
+            <tag>Adaptability</tag>
+            <tag>Discipline</tag>
+            <tag>Challenge</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="16">
+        <Description>Karmic Debt Number 16: You will feel acutely aware of the fact that a Higher Presence or Realm is to blame for the dissolution of your ego, and all things that you have toiled so much to create ~ but this collapse is a reflection of the Need to dissolve the ego, and all things that separate you from Higher Wisdom (7). Trust your Intuition: Do not build even higher walls against the world, for that is what got you here in the first place (past life)! Recognize, instead, that through such painful humility, you are permitted an opportunity to more Greatly align with your True purpose. But first, learn to love and care for the world around you.</Description>
+        <Color value="0xFFFFFF" />
+        <Qualities id="16KD">
+            <tag>Six</tag>
+            <tag>Compassion</tag>
+            <tag>Suffering</tag>
+            <tag>Challenge</tag>
+            <tag>Kindness</tag>
+            <tag>Fear</tag>
+            <tag>Renewal</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="19">
+        <Description>Karmic Debt Number 19: In a past life, Selfishness(1) and/or greed had brought you to use the great wisdom of the (9) to your own ends, or against the better good of the world. Now it'll often feel that every effort to Shine(1) takes a harsh blow, or you meet some kind of resistence; you will have to meet the challenges of the 9: selflessness, duty, and the practice of abundant compassion and understanding.</Description>
+        <Color value="0xFFFFFF" />
+        <Qualities id="19KD">
+            <tag>Nine</tag>
+            <tag>Compassion</tag>
+            <tag>Suffering</tag>
+            <tag>Challenge</tag>
+            <tag>Wisdom</tag>
+            <tag>Responsibility</tag>
+            <tag>Raised Consciousness</tag>
+            <tag>Reclamation</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Life Path Number">
+        <Description>Your Life Path Number represents the path you should take through life and the talents and skills you have to make your journey a rewarding one.</Description>
+        <Qualities id="LifePathNumber">
+            <tag>Life Journey</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Birth Day Number">
+        <Description>This number is most influential between your 28th and 56th year. While it is not the most important number in your profile, it does have an effect on your Life’s Path and Destiny.</Description>
+        <Qualities id="BirthDayNumber">
+            <tag>Talents</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Expression Number">
+        <Description>Some numerologists refer to this number as the Destiny, because it represents a lifelong target at which you are aiming.  You work at fulfilling this potential every day of your life.  Thus, the Expression number reveals your inner goal, the person you aim to be.</Description>
+        <Qualities id="ExpressionNumber">
+            <tag>Inner Goal</tag>
+            <tag>Ambition</tag>
+            <tag>Destiny</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Minor Expression Number">
+        <Description>Some numerologists refer to this number as the Destiny, because it represents a lifelong target at which you are aiming.  You work at fulfilling this potential every day of your life.  Thus, the Expression number reveals your inner goal, the person you aim to be.</Description>
+        <Qualities id="ExpressionNumber">
+            <tag>Inner Goal</tag>
+            <tag>Ambition</tag>
+            <tag>Destiny</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Soul Urge Number">
+        <Description>Your innermost yearning; the dreams closest to your heart. Consequently, it shows your underlying motivation, or the general intention behind many of your actions. It dramatically influences the choices you make in life.</Description>
+        <Qualities id="SoulUrgeNumber">
+            <tag>Desire</tag>
+            <tag>Motivation</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Minor Soul Urge Number">
+        <Description>Your innermost yearning; the dreams closest to your heart. Consequently, it shows your underlying motivation, or the general intention behind many of your actions. It dramatically influences the choices you make in life.</Description>
+        <Qualities id="SoulUrgeNumber">
+            <tag>Desire</tag>
+            <tag>Motivation</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Personality Number">
+        <Description>Your Personality, much like your Ascendent, is the first impression you are willing to show the world ~ much like an entry-way to your true nature. It is those aspects that you feel comfortable sharing with people at the outset of a relationship.</Description>
+        <Qualities id="PersonalityNumber">
+            <tag>Personality</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Minor Personality Number">
+        <Description>Your Personality, much like your Ascendent, is the first impression you are willing to show the world ~ much like an entry-way to your true nature. It is those aspects that you feel comfortable sharing with people at the outset of a relationship.</Description>
+        <Qualities id="PersonalityNumber">
+            <tag>Personality</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Balance Number">
+        <Description>Your Balance Number reflects the traits you need to bring to the forefront in order the get through difficult periods with the least amount of damage or time wasted on negative influences.</Description>
+        <Qualities id="BalanceNumber">
+            <tag>Balance</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Maturity Number">
+        <Description>Your Maturity number indicates an underlying wish or desire that gradually surfaces as you mature. This underlying goal begins to emerge as you gain a better understanding of yourself.</Description>
+        <Qualities id="MaturityNumber">
+            <tag>Goals</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Karmic Lesson">
+        <Description>Karmic Lessons are areas that we are currently weak in, and that we must face and work on in this life.  There can be more than one Karmic Lesson.</Description>
+        <Qualities id="KarmicLesson">
+            <tag>Lessons</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Karmic Debt">
+        <Description>Karmic Debt are the unique and individual challenges set before a person, due to mistakes made or wrongs committed in a past life/in a prior form of life.The Karmic Debt Numbers are 13, 14, 16, and 19 ~ the 1 (as in 1+9:19) denotes Selfishness, and the number that follows it is the resonance or lesson in which selfishness was applied, such to defeat ascendence there-beyond that number.</Description>
+        <Qualities id="KarmicDebtNumber">
+            <tag>Lessons</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Hidden Passions Number">
+        <Description>Having the talent demands that you express it, that you experience this part of you, and that you live according to its nature. In this way, the Hidden Passion shapes your personality, and guides your life.</Description>
+        <Qualities id="HiddenPassionsNumber">
+            <tag>Passion</tag>
+            <tag>Talents</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Rational Thought Number">
+        <Description>Your Rational Thought number reveals what can probably best be described as your way of thinking.. How you are naturally predisposed to tackling ideas.</Description>
+        <Qualities id="RationalThoughtNumber">
+            <tag>Thinking</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Subconscious Self Number">
+        <Description>The Subconscious Self reflects the confidence you have in your personal power and competence, as well as in your ability and Way of dealing with sudden events and situations. It shows your capacity to correctly assess a situation and to respond appropriately.</Description>
+        <Qualities id="SubSelfNumber">
+            <tag>Power</tag>
+            <tag>Ability</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Period Cycles">
+        <Description>Your Period Cycles are based on the date of your birth. Each Period Cycle lasts approximately twenty-seven years, or three complete epicycles of nine years each.</Description>
+        <Qualities id="LifePath">
+            <tag>27 Years</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Cycle One">
+        <Description>Finding and Orienting Self in the World</Description>
+        <Parent>Period Cycles</Parent>
+        <Qualities id="Cycle1">
+            <tag>27 Years</tag>
+            <tag>Growth</tag>
+            <tag>Orientation</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Cycle Two">
+        <Description>Upon coming to better Understand oneself in the World, this Cycle expresses itself as the gradual emergence of our individual and creative talents.</Description>
+        <Parent>Period Cycles</Parent>
+        <Qualities id="Cycle2">
+            <tag>27 Years</tag>
+            <tag>Individuality</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Cycle Three">
+        <Description>The Third and final Cycle represents a flowering of our inner being. Our true nature has come to fruition. It is during this period that one has the greatest degree of self-expression and personal power.</Description>
+        <Parent>Period Cycles</Parent>
+        <Qualities id="Cycle3">
+            <tag>27 Years</tag>
+            <tag>Self Expression</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Challenges">
+        <Description>The Challenges on your life path provide specific lessons that you must attend to, and, in order to inspire and help you, life will place you in situations that require the specific characteristics of your Challenge numbers.</Description>
+        <Qualities id="Challenges">
+            <tag>Lessons</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Challenge One">
+        <Description>Your First Challenge moves to the foreground in the early part of your life, and often endures to early mid-life, by which time you will have overcome this obstacle.</Description>
+        <Parent>Challenges</Parent>
+        <Qualities id="Challenge1">
+            <tag>Lessons</tag>
+            <tag>Early Stages</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Challenge Two">
+        <Description>Before you conclude your First Challenge, the Second Challenge will be influencing you. Your Second Challenge will be felt most intensely in the middle part of your life.</Description>
+        <Parent>Challenges</Parent>
+        <Qualities id="Challenge2">
+            <tag>Lessons</tag>
+            <tag>Middle Stages</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Challenge Three">
+        <Description>The Third or Main Challenge is unique. It will be felt during your entire life, and is more strongly felt than the other Challenges.</Description>
+        <Parent>Challenges</Parent>
+        <Qualities id="Challenge3">
+            <tag>Lessons</tag>
+            <tag>Persistent</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Challenge Four">
+        <Description>The Fourth and last Challenge begins in late mid-life, and endures throughout the rest of your life.</Description>
+        <Parent>Challenges</Parent>
+        <Qualities id="Challenge4">
+            <tag>Lessons</tag>
+            <tag>Later Stages</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Pinnacles">
+        <Description>The Pinnacles are four long-term cycles on our Life Path. They represent specific attributes that must be assimilated into your being.</Description>
+        <Qualities id="Pinnacles">
+            <tag>Growth</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="1st Pinnacle">
+        <Description>First 27 years of your life (plus your Life Path Number)</Description>
+        <Parent>Pinnacles</Parent>
+        <Qualities id="Pinnacle1">
+            <tag>Growth</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="2nd Pinnacle">
+        <Description>9 years</Description>
+        <Parent>Pinnacles</Parent>
+        <Qualities id="Pinnacle2">
+            <tag>Growth</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="3rd Pinnacle">
+        <Description>9 years</Description>
+        <Parent>Pinnacles</Parent>
+        <Qualities id="Pinnacle3">
+            <tag>Growth</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="4th Pinnacle">
+        <Description>Remainder of your life</Description>
+        <Parent>Pinnacles</Parent>
+        <Qualities id="Pinnacle4">
+            <tag>Growth</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Personal Year">
+        <Description>The Personal Years form the building steps that mark your progress through life. Each numbered year has its own characteristics, as symbolized by the number itself.</Description>
+        <Qualities id="PersonalYear">
+            <tag>Annual</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Personal Month">
+        <Description>The numbers within the monthly and daily cycles have a similar, though less pronounced, impact on us as the yearly cycle has.</Description>
+        <Qualities id="PersonalMonth">
+            <tag>Monthly</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Personal Day">
+        <Description>The numbers within the monthly and daily cycles have a similar, though less pronounced, impact on us as the yearly cycle has.</Description>
+        <Qualities id="PersonalDay">
+            <tag>Daily</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Sun">
+        <Description>The Sun, the giver of life, represents our conscious mind in Astrology. It represents our will to live and our creative life force.</Description>
+        <Color value="0xFFD700" />
+        <Qualities id="Sun">
+            <tag>Being</tag>
+            <tag>Center</tag>
+            <tag>Vitality</tag>
+            <tag>Purpose</tag>
+            <tag>Ego</tag>
+            <tag>Reason</tag>
+            <tag>Pride</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Moon">
+        <Description>The Moon represents our feelings and emotions; the receptivity, imagination and basic feeling tone of a person. It also has an effect on the sense of rhythm, time and timing.</Description>
+        <Color value="0xC0C0C0" />
+        <Qualities id="Moon">
+            <tag>Emotion</tag>
+            <tag>Rhythm</tag>
+            <tag>Adaptability</tag>
+            <tag>Habits</tag>
+            <tag>Protecting</tag>
+            <tag>Nurturing</tag>
+            <tag>Irrational</tag>
+            <tag>Intuition</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Mercury">
+        <Description>Mercury is the messenger: It is the planet of day-to-day expression and communication. Mercury represents reason, that which is rational.</Description>
+        <Color value="0xFFFF00" />
+        <Qualities id="Mercury">
+            <tag>Communication</tag>
+            <tag>Expression</tag>
+            <tag>Reason</tag>
+            <tag>Rationality</tag>
+            <tag>Education</tag>
+            <tag>Curiosity</tag>
+            <tag>Evaluation</tag>
+            <tag>Writing</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Venus">
+        <Description>Venus rules our sentiments, what we value, and the pleasure we take in life. Grace, charm, and beauty are all ruled by Venus. </Description>
+        <Color value="0x87CEEB" />
+        <Qualities id="Venus">
+            <tag>Emotion</tag>
+            <tag>Values</tag>
+            <tag>Pleasure</tag>
+            <tag>Beauty</tag>
+            <tag>Attractions</tag>
+            <tag>Tastes</tag>
+            <tag>Materialism</tag>
+            <tag>Harmony</tag>
+            <tag>Romance</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Mars">
+        <Description>Mars represents the energy and drive of a person, their courage, determination, the freedom of spontaneous impulse. Describes one's readiness, one's way, and simple aggression. </Description>
+        <Color value="0xFF0000" />
+        <Qualities id="Mars">
+            <tag>Energy</tag>
+            <tag>Action</tag>
+            <tag>Desire</tag>
+            <tag>Ambition</tag>
+            <tag>Motivation</tag>
+            <tag>Aggression</tag>
+            <tag>Activity</tag>
+            <tag>Assertion</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Jupiter">
+        <Description>Jupiter seeks insight through knowledge. The search for individual meaning and purpose, optimism, hope and a sense of justice are represented by Jupiter. Reflected, too, by its size, it reflects abundance and expansion ~ a 'bloating' of whatever space it fills.</Description>
+        <Color value="0x800080" />
+        <Qualities id="Jupiter">
+            <tag>Justice</tag>
+            <tag>Growth</tag>
+            <tag>Expansion</tag>
+            <tag>Insight</tag>
+            <tag>Optimism</tag>
+            <tag>Faith</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Saturn">
+        <Description>Saturn is associated with restriction and limitation. Saturn brings structure and meaning to our world. Reminds us of our boundaries, responsibilities, and commitments. Saturn teaches and enforces humility wherever it is found; it strips away the ego, opening you up to even more of the life you experience.</Description>
+        <Color value="0x8B4513" />
+        <Qualities id="Saturn">
+            <tag>Structure</tag>
+            <tag>Boundary</tag>
+            <tag>Discipline</tag>
+            <tag>Concentration</tag>
+            <tag>Morality</tag>
+            <tag>Authority</tag>
+            <tag>Responsibility</tag>
+            <tag>Restriction</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Uranus">
+        <Description>Uranus stands for intuition, it transmits sudden inspiration and insights. An openness for all that is new, unknown and unusual.</Description>
+        <Color value="0x87CEEB" />
+        <Qualities id="Uranus">
+            <tag>Intuition</tag>
+            <tag>Inspiration</tag>
+            <tag>Unique</tag>
+            <tag>Individuality</tag>
+            <tag>Innovation</tag>
+            <tag>Discovery</tag>
+            <tag>Progression</tag>
+            <tag>Enlightenment</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Neptune">
+        <Description>Neptune is considered a planet of inspiration, dreams, psychic receptivity, illusion, and confusion. Neptune rules spirituality, and all things subtle.</Description>
+        <Color value="0x8A2BE2" />
+        <Qualities id="Neptune">
+            <tag>Inspiration</tag>
+            <tag>Illusion</tag>
+            <tag>Mysticism</tag>
+            <tag>Spirituality</tag>
+            <tag>Enlightenment</tag>
+            <tag>Intuition</tag>
+            <tag>Imagination</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Pluto">
+        <Description>The energies of Pluto are transforming. Pluto, ruler of the underworld, represents subconscious forces, ruling all that is "below the surface".</Description>
+        <Color value="0x1A0B22" />
+        <Qualities id="Pluto">
+            <tag>Renewal</tag>
+            <tag>Rebirth</tag>
+            <tag>Power</tag>
+            <tag>Transformation</tag>
+            <tag>Darkness</tag>
+            <tag>Depth</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="North Node">
+        <Description>The Nodes of the Moon represent points of personal karmic imbalance. The North Node represents the kinds of experiences that we must work to develop in order to work with our karma, and to grow spiritually.</Description>
+        <Color value="0x00FF00" />
+        <Qualities id="NN">
+            <tag>Maturity</tag>
+            <tag>Growth</tag>
+            <tag>Balance</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="South Node">
+        <Description>The Nodes of the Moon represent points of personal karmic imbalance. The South Node represents the start of our journey towards the individuals we need to become in order to grow spiritually.</Description>
+        <Color value="0x00FF00" />
+        <Qualities id="SN">
+            <tag>Moon</tag>
+            <tag>Early Stages</tag>
+            <tag>Growth</tag>
+            <tag>Balance</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Ascendant">
+        <Description>The Ascendant, or "rising sign", defines, in part, the first impression we make on others in a personal rather than professional sense.</Description>
+        <Color value="0xFFD700" />
+        <Qualities id="ASC">
+            <tag>Ego</tag>
+            <tag>Defense Mechanism</tag>
+            <tag>First Impression</tag>
+            <tag>Expectations</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Midheaven">
+        <Description>The Midheaven represents our most visible achievements in the eyes of society, our public "face".</Description>
+        <Color value="0xFFD700" />
+        <Qualities id="MC">
+            <tag>Achievement</tag>
+            <tag>Social Status</tag>
+            <tag>Career</tag>
+            <tag>Reputation</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Lilith">
+        <Description>The Lilith, or the "Dark Moon", represents the hidden, deep, and often fearful aspects we all have, that must be actively faced, conquered, and let go of to claim progression. Irratic and very potent, the energy of this entity exemplifies that which needs focus, discipline, and serenity, for one to reclaim their own Peace.. </Description>
+        <Color value="0x393939" />
+        <Qualities id="TrueLilith">
+            <tag>Fear</tag>
+            <tag>Darkness</tag>
+            <tag>Challenge</tag>
+            <tag>Denial</tag>
+            <tag>Seduction</tag>
+            <tag>Motherhood</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Chiron">
+        <Description>Chiron transmits higher teachings either as an outer teacher (Saturn) or as an spirit guide (Uranus). Embodying the archetype of "the wounded healer", Chiron stresses the importance of going within to find an answer—and then sharing it with others. Thus, the position in which Chiron lies reflects often where one will learn some hard lessons, and/or in what space and capacity their teachings will be of most importance. </Description>
+        <Color value="0xF5F5F5" />
+        <Qualities id="AstrChiron">
+            <tag>The Wounded Healer</tag>
+            <tag>Wisdom</tag>
+            <tag>Education</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Ceres">
+        <Description>Ceres describes the ways in which we face the issues of self-worth and self-esteem, relationships to our parents and children, attachment, dependency, loss, separation, rejection, grief, sharing, work and productivity.</Description>
+        <Color value="0xF5F5F5" />
+        <Qualities id="AstrCeres">
+            <tag>Loss</tag>
+            <tag>Reclamation</tag>
+            <tag>Nurturing</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Pallas">
+        <Description>Pallas Athene describes how we face the issues of learning, and that which extends therefrom what is learned: creativity (how one applies what they've learned), the arts(inspiration), politics, healing, alienation from relationships, competition, and the fears of success.</Description>
+        <Color value="0xF5F5F5" />
+        <Qualities id="AstrPallas">
+            <tag>Interpretation</tag>
+            <tag>Application</tag>
+            <tag>Intelligence</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Juno">
+        <Description>Juno describes the ways in which we face the issues of compatibility, receptivity to others, mutual sharing, trust, jealousy, possessiveness and power struggles.</Description>
+        <Color value="0xF5F5F5" />
+        <Qualities id="AstrJuno">
+            <tag>Marriage</tag>
+            <tag>Partners</tag>
+            <tag>Contracts</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Vesta">
+        <Description>Vesta's placement in the horoscope shows where and how we can be dedicated, where we can focus our energies to the greatest effect.</Description>
+        <Color value="0xF5F5F5" />
+        <Qualities id="AstrVesta">
+            <tag>Focus</tag>
+            <tag>Recharging</tag>
+            <tag>Sexuality</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Retrograde">
+        <Description>From our position on earth, it appeared as though the body was moving backwards. This has an effect on the way that the energy is received ~ it, too, moves "backwards" ~ internally. Where normally these energies are Expressed, Retrograded energies are usually either inflicted upon much more internally potent to the subject.</Description>
+        <Color value="0xFFFFFF" />
+        <Qualities id="AstrRetro">
+            <tag>Retrograde</tag>
+            <tag>Depth</tag>
+            <tag>Sensitivity</tag>
+            <tag>Challenge</tag>
+            <tag>Transformation</tag>
+            <tag>Wisdom</tag>
+            <tag>Odd</tag>
+            <tag>Thinking</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Aries">
+        <Description>Passionate, Courageous, and Free-willed, Aries, ruled by Mars, is the sign of leadership and exploration. The beginning zodiacal chart, Aries is resonance that is likened to the spark of originality.</Description>
+        <Color value="0xFF0000" />
+        <Qualities id="">
+            <tag>Fire</tag>
+            <tag>Leadership</tag>
+            <tag>Passion</tag>
+            <tag>Individuality</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Taurus">
+        <Description>Very strong-willed and determined, the 2nd sign, Taurus, ruled by Venus, is that of worldly strength and drive. Only ever pushed by that to which the Taurus is loyal - dedication epitomizes this essence.</Description>
+        <Color value="0xFF69B4" />
+        <Qualities id="">
+            <tag>Earth</tag>
+            <tag>Commitment</tag>
+            <tag>Strength</tag>
+            <tag>Motivation</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Gemini">
+        <Description>Gemini, the sign of the Twins, is dual-natured, elusive, complex and contradictory. This sign is ruled by Mercury. Versatile and multi-faceted, the 3rd sign is radically explorative and capable of expressing their diversity.</Description>
+        <Color value="0xFFFF00" />
+        <Qualities id="">
+            <tag>Air</tag>
+            <tag>Diversity</tag>
+            <tag>Exploration</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Cancer">
+        <Description>Compassionate, family oriented, home-centric, all the while selective with whom they share their most intimate characteristics. The 4th sign, ruled by/expressed as the Moon, is one that resonates nurturing and Love.</Description>
+        <Color value="0xDDDDDD" />
+        <Qualities id="">
+            <tag>Water</tag>
+            <tag>Intimacy</tag>
+            <tag>Nurturing</tag>
+            <tag>Love</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Leo">
+        <Description>The Leo type, ruled by the Sun, is the most dominant, spontaneously creative and extroverted of all the zodiacal characters. Readily emotive and openly expressive, the 5th sign sings of the holder of the spotlight - the glue holding society together.</Description>
+        <Color value="0xFFA500" />
+        <Qualities id="">
+            <tag>Fire</tag>
+            <tag>Expression</tag>
+            <tag>Dominance</tag>
+            <tag>Ego</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Virgo">
+        <Description>Virgo, the 6th sign, is potently but internally emotional, intelliSymbol and with an air of beautiful distinction. Virgo is ruled by Mercury. Maintains characteristics of preciseness, refinement, love of good order, conventionality and aristocratic attitude of reserve.</Description>
+        <Color value="0x000080" />
+        <Qualities id="">
+            <tag>Earth</tag>
+            <tag>Intelligence</tag>
+            <tag>Rationality</tag>
+            <tag>Evaluation</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Libra">
+        <Description>Libra, the 7th, marks the zenith of the year, and expresses a silent calm associated with this distinctive position. The Libra represents Balance. This sign is ruled by Venus. Elegant and tasteful, appreciative of beauty in and of all forms, and observers of harmony. </Description>
+        <Color value="0xFFDAB9" />
+        <Qualities id="">
+            <tag>Air</tag>
+            <tag>Elegance</tag>
+            <tag>Harmony</tag>
+            <tag>Tastes</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Scorpio">
+        <Description>Beautifully Passionate, the Scorpio (8th sign) is a deep and mystical sign and resonance. Ruled by Pluto, the fullness of this potency is expressed, in whatever way or direction that the energy is applied.</Description>
+        <Color value="0x800000" />
+        <Qualities id="">
+            <tag>Water</tag>
+            <tag>Passion</tag>
+            <tag>Mysticism</tag>
+            <tag>Transformation</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Sagittarius">
+        <Description>Sagittarians, the 9th sign and ruled by Jupiter, have a positive outlook on life, are full of enterprise, energy, versatility, adventurousness and eagerness to extend experience beyond the physically familiar. "Optimism through Faith." </Description>
+        <Color value="0x800080" />
+        <Qualities id="">
+            <tag>Fire</tag>
+            <tag>Optimism</tag>
+            <tag>Faith</tag>
+            <tag>Adventurous</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Capricorn">
+        <Description>The sign Capricorn, ruled by Saturn, is one of the most stable and (mostly) serious of the zodiacal types. Very grounded, devoted, and convicted, the 10th sign sets to tackle and conquer whatever holds its attentions/affections.</Description>
+        <Color value="0x8B4513" />
+        <Qualities id="">
+            <tag>Earth</tag>
+            <tag>Stability</tag>
+            <tag>Commitment</tag>
+            <tag>Discipline</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Aquarius">
+        <Description>Visionary and Dreamy, Intellectual and Questioning, the 11th Sign, Aquarius, thrives on the silent internal journey of seeking grand and over-arching wisdom. Often internalized, they explore realms many could hardly fathom. Ruled by Uranus.</Description>
+        <Color value="0x40E0D0" />
+        <Qualities id="">
+            <tag>Air</tag>
+            <tag>Unique</tag>
+            <tag>Individuality</tag>
+            <tag>Imagination</tag>
+            <tag>Vision</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Pisces">
+        <Description>The flowing Piscean, 12th, ruled by Neptune, epitomizes Symbolleness, open-heartedness, and compassion. Their sense of others is that of the fish that feels the motions of all things around it per the vibrations in the water, and the water itself. Such a connection to all things around them brings them to know and express love greatly, and highly intuitive.</Description>
+        <Color value="0x3CB371" />
+        <Qualities id="">
+            <tag>Water</tag>
+            <tag>Kindness</tag>
+            <tag>Compassion</tag>
+            <tag>Intuition</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="House I">
+        <Description>The 1st House is a Reflection of the physical, projected, and exhibited self. It constitutes matters regarding self image, outlook, and motivation. As well as your first impression, this house also reflects one's initial reaction to new circumstances. The 1st House symbolizes and reflects the beginning of One's journey. </Description>
+        <Qualities id="House1">
+            <tag>Physicality</tag>
+            <tag>Self-Image</tag>
+            <tag>Individuality</tag>
+            <tag>Beginning</tag>
+            <tag>First Impression</tag>
+            <tag>Expression</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="House II">
+        <Description>The 2nd house is the projection of external, physical and material aspects of your world that you give value and/or aspire to. This also relates one's Self worth (how one sees themselves as deserving of these things). From this house we develop the understanding of duality: That I am not (egoistically) all things. </Description>
+        <Qualities id="House2">
+            <tag>Materialism</tag>
+            <tag>Duality</tag>
+            <tag>Evaluation</tag>
+            <tag>Tangibility</tag>
+            <tag>Values</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="House III">
+        <Description>The 3rd house sings of the close relations that we maintain in our physical realm - family/siblings, along with those that have a deep impact on you from close proximity. The development of your initial and continuous set of understandings and values.</Description>
+        <Qualities id="House3">
+            <tag>Connection</tag>
+            <tag>Education</tag>
+            <tag>Understanding</tag>
+            <tag>Curiosity</tag>
+            <tag>Discovery</tag>
+            <tag>Exploration</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="House IV">
+        <Description>The 4th house deals with the foundation of the home, the nurturing environment, and the space in which one develops into emotional maturity. The nest and its components. The 4th house reflects all things closest to you, and who you are when you feel utterly safe from the world 'out there'.</Description>
+        <Qualities id="House4">
+            <tag>Foundation</tag>
+            <tag>Upbringing</tag>
+            <tag>Early Stages</tag>
+            <tag>Domestic Issues</tag>
+            <tag>Morality</tag>
+            <tag>Protecting</tag>
+            <tag>Stability</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="House V">
+        <Description>The 5th House deals with matters of the heart - inspiration and creativity, love and romance, freedom and expression, the inner child, children in general, and one's sense of pride. This house denotes all things expressed ~ all extension and expression of oneself. </Description>
+        <Qualities id="House5">
+            <tag>Creativity</tag>
+            <tag>Romance</tag>
+            <tag>Love</tag>
+            <tag>Freedom</tag>
+            <tag>Pleasure</tag>
+            <tag>Children</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="House VI">
+        <Description>The 6th is the house of work, labor, and duty. This encompasses all sorts of necessary work, jobs, and efforts towards building/maintaining in the physical world (and their physical ramifications). Remember that from duty comes understanding and compassion - what you devote yourself to, here, is your first real step beyond 'just about you'</Description>
+        <Qualities id="House6">
+            <tag>Work</tag>
+            <tag>Health</tag>
+            <tag>Practicality</tag>
+            <tag>Building</tag>
+            <tag>Compassion</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="House VII">
+        <Description>Opposite the 1st house (your relation to and understanding of yourself), the 7th is reflected as the relations with others in general, based off of what is expressed via the 1st House. This includes commitments, obligations, and business relationships.</Description>
+        <Qualities id="House7">
+            <tag>Commitment</tag>
+            <tag>Business</tag>
+            <tag>Balance</tag>
+            <tag>Contracts</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="House VIII">
+        <Description>Along with sexuality and deep intimacy (extensions of a deeper connection than the physical to the world around you), the 8th house also rules the realms of the mystic and the occult (things beyond the physical, yet not fully understood), death, and (opposite of 2nd) the value system of others. Major lifestyle changes, as well.The 8th House represents what you Realize in your world based off of what you've come to know and experience so far.</Description>
+        <Qualities id="House8">
+            <tag>Mysticism</tag>
+            <tag>Passion</tag>
+            <tag>Extremes</tag>
+            <tag>Building</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="House IX">
+        <Description>The 9th house relates to the development of the mind. As an expansion of the 3rd house, this speaks to higher learning and spiritual growth, religion, and the absorbing of expansive wisdom from nature and all things.</Description>
+        <Qualities id="House9">
+            <tag>Growth</tag>
+            <tag>Wisdom</tag>
+            <tag>Ethics</tag>
+            <tag>Faith</tag>
+            <tag>Enlightenment</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="House X">
+        <Description>The 10th house speaks to career goals and motivations - what one aims to achieve in a life. It also is suggestive of how one handles or brandishes authority, and efforts noted by the public eye.</Description>
+        <Qualities id="House10">
+            <tag>Goals</tag>
+            <tag>Authority</tag>
+            <tag>Responsibility</tag>
+            <tag>Ambition</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="House XI">
+        <Description>The 11th house is largely related to friendships/acquaintanceships, one's relation to groups of people and all things affecting large groups of people, such as thinking, inventions, and technologies. This is the space where we recognize our connection to everyone else. </Description>
+        <Qualities id="House11">
+            <tag>Revolutionary</tag>
+            <tag>Groups</tag>
+            <tag>Creation</tag>
+            <tag>Enlightenment</tag>
+            <tag>Raised Consciousness</tag>
+            <tag>Connection</tag>
+            <tag>Unity</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="House XII">
+        <Description>The 12th house speaks of isolation, be it self-inflicted or through structure (monasteries, hospitals, prisons..). That which is deceptive and/or hidden - behind the scenes. This is also a space of enlightenment ~ the transition back to Source, to the All-ness from which we all are derived. </Description>
+        <Qualities id="House12">
+            <tag>Inspiration</tag>
+            <tag>Isolation</tag>
+            <tag>Suffering</tag>
+            <tag>Wholeness</tag>
+            <tag>Completion</tag>
+            <tag>Mysticism</tag>
+            <tag>Depth</tag>
+            <tag>Renewal</tag>
+            <tag>Transformation</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Conjunction">
+        <Description>are directly aligned. Planets and points that form a conjunction are energies that are united. They are blended; therefore, they act together, almost/largely indistinctively.</Description>
+        <Qualities id="Transit">
+            <tag>Unity</tag>
+            <tag>Connection</tag>
+            <tag>Sharing</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Semi-Sextile">
+        <Description>are connected by 30 degrees. A semisextile when planets/points are 30 degrees separated. The energies resonate distinctly, as apart from conjunction, but exploratively, not so much in harmony as with sextile/trine. (Numerology: 3+0 = 3)</Description>
+        <Qualities id="Transit">
+            <tag>Duality</tag>
+            <tag>Attractions</tag>
+            <tag>Communication</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Sextile">
+        <Description>are connected by 60 degrees. Sextiles suggests that the planets/points involved are harmoniously communicative and relationship-friendly. They point to energies that are capable of being directed; Actively applied. (Numerology: 6+0 = 6)</Description>
+        <Qualities id="Transit">
+            <tag>Talents</tag>
+            <tag>Application</tag>
+            <tag>Choice</tag>
+            <tag>Ability</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Square">
+        <Description>are separated by 90 degrees. The Square aspect creates tension between the planets/points involved. But Tension implies Motion. The planets involved are acting at cross purposes, but in so doing, force us out of complacency. These conflicts push one to evolve.. (Numerology: 9+0 = 9)</Description>
+        <Qualities id="Transit">
+            <tag>Challenge</tag>
+            <tag>Restriction</tag>
+            <tag>Work</tag>
+            <tag>Attainment</tag>
+            <tag>Growth</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Trine">
+        <Description>are 120 degrees. Planets in trine support each other. Trines, by nature, are accepting. The talents that trines offer a native are so natural that they are almost unconscious. (Numerology: 1+2+0: 1+2 = 3) </Description>
+        <Qualities id="Transit">
+            <tag>Talents</tag>
+            <tag>Harmony</tag>
+            <tag>Ability</tag>
+            <tag>Habits</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Quincunx">
+        <Description>are separated by 150 degrees. The two planets involved cannot easily see and communicate with each other. 150 degrees apart, one resonance effects the other, but the relation is unrelatable to you. Trust your intuition and do not over-think this conflict: However estranged, this conflict is, too, a Part Of You. Not to be separated or compartmentalized. (Numerology: 1+5+0: 1+5 = 6)</Description>
+        <Qualities id="Transit">
+            <tag>Challenge</tag>
+            <tag>Irrational</tag>
+            <tag>Isolation</tag>
+            <tag>Mystery</tag>
+        </Qualities>
+    </Symbol>
+    <Symbol id="Opposition">
+        <Description>are 180 degrees separated on your chart. Oppositions represent a state of divided loyalties between the resonances of the two bodies. Inner discontent and insecurity regarding their properties. An opposition is unsure and wavering. But potentially balanced. (Numerology: 1+8+0: 1+8 = 9)</Description>
+        <Qualities id="Transit">
+            <tag>Balance</tag>
+            <tag>Challenge</tag>
+            <tag>Contrast</tag>
+            <tag>Opposition</tag>
+        </Qualities>
+    </Symbol>
+</resources>
