@@ -2,6 +2,7 @@ package com.coreman2200.ringstrings.domain
 
 import android.content.Context
 import com.coreman2200.ringstrings.domain.input.numerology.numbersystem.NumberSystemType
+import java.io.File
 import java.util.*
 
 /**
@@ -109,11 +110,12 @@ object MockDefaultDataBundles {
 
     /////////////////////// Settings for RingStrings app. (Context required either to generate or to load(todo))
     fun produceDefaultAppSettingsBundle(context: Context?): AppSettings {
-        return AppSettings(produceAstroSettings("/ephe/"), produceNumSettings())
+        return AppSettings(produceAstroSettings(""), produceNumSettings())
     }
 
     private fun produceAstroSettings(dir: String): AstrologySettings {
-        return AstrologySettings(DFLT_MAX_ORB,dir)
+        val resourcesDirectory = File("src/main/res/raw").path
+        return AstrologySettings(DFLT_MAX_ORB,resourcesDirectory + dir)
     }
 
     private fun produceNumSettings(): NumerologySettings {
