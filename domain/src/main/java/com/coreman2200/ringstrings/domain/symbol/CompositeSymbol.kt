@@ -21,32 +21,28 @@ import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
 abstract class CompositeSymbol<T : ISymbol>(
     override val id: ISymbolID,
     override val name: String = id.toString(),
-    override val strata: ISymbolStrata,
-    override var size: Int = 0,
-) : SymbolModel(id, name, strata, size), ICompositeSymbol<T> {
+    override val strata: ISymbolStrata
+) :  ICompositeSymbol<T>, SymbolModel(id, name, strata) {
     var children: MutableList<T> = mutableListOf()
 
     override fun add(symbol: T) {
         children.add(symbol)
-        size = children.size
     }
 
     override fun add(symbols: Collection<T>) {
         children.addAll(symbols)
-        size = children.size
     }
 
     override fun remove(symbol: T) {
         if (children.contains(symbol))
             children.remove(symbol)
-        size = children.size
     }
 
     override fun clear() {
         children.clear()
-        size = children.size
     }
 
+    // TODO Distinguish elems() vs get()...
     override fun elems(): List<T> {
         return children.toList()
     }

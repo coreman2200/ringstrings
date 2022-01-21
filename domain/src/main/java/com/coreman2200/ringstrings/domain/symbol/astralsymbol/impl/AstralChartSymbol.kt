@@ -34,6 +34,7 @@ class AstrologicalChart(
     strata = AstralStrata.ASTRALCHART
 ),
     IAstralChartSymbol {
+    override var chartid: ISymbolID? = id
     override var groupid: ISymbolID? = null
     override var houseid: ISymbolID? = null
     override var zodiacid: ISymbolID? = null
@@ -55,6 +56,7 @@ class AstrologicalChart(
         related.putAll(map)
         map.values.forEach {
             it.chartid = id
+            it.profileid = profileid
             add(it)
         }
     }

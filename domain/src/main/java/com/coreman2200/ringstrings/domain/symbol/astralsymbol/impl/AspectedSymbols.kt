@@ -28,8 +28,7 @@ class AspectedSymbols(
 ) : CompositeSymbol<IAstralSymbol>(
     id,
     name = id.toString(),
-    strata = AstralStrata.ASTRALASPECT,
-    size = 2,
+    strata = AstralStrata.ASTRALASPECT
 ),
     IAstralGroupSymbol {
     override var groupid: ISymbolID? = null
@@ -50,6 +49,10 @@ class AspectedSymbols(
     }
 
     init {
+        s1.groupid = id
+        s2.groupid = id
+        s1.related[s2.id] = s2
+        s2.related[s1.id] = s1
         add(s1)
         add(s2)
     }

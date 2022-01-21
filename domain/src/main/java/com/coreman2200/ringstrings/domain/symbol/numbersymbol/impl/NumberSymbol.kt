@@ -22,6 +22,5 @@ abstract class NumberSymbol(
     override val id: ISymbolID,
     override val name: String = id.toString(),
     override val strata: ISymbolStrata,
-    override var size: Int = 1,
     override val value: Int
-) : SymbolModel(id, name, strata, size), INumberSymbol
+) : SymbolModel(id, name, strata), INumberSymbol

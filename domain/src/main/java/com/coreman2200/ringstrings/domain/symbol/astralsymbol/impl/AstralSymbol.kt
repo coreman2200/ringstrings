@@ -21,9 +21,8 @@ import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
 abstract class AstralSymbol(
     override val id: ISymbolID,
     override val name: String = id.toString(),
-    override val strata: ISymbolStrata,
-    override var size: Int = 1
-) : SymbolModel(id, name, strata, size), IAstralSymbol {
+    override val strata: ISymbolStrata
+) : SymbolModel(id, name, strata), IAstralSymbol {
     override var houseid:ISymbolID? = null
     override var zodiacid:ISymbolID? = null
 }

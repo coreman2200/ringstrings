@@ -21,7 +21,6 @@ abstract class SymbolModel(
     override val id: ISymbolID,
     override val name: String = id.toString(),
     override val strata: ISymbolStrata,
-    override var size: Int = 1,
 ) : ISymbol {
     override var related: MutableMap<ISymbolID, ISymbol> = mutableMapOf()
     override var profileid:Int = 0

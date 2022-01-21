@@ -28,8 +28,7 @@ class DerivedNumberSymbol(
     override val value: Int = id.value()
 ) : CompositeSymbol<INumberSymbol>(
     id,
-    strata = NumberStrata.DERIVEDNUMBER,
-    size = 3,
+    strata = NumberStrata.DERIVEDNUMBER
 ),
     IDerivedNumberSymbol {
 

@@ -16,7 +16,7 @@ import com.coreman2200.ringstrings.domain.symbol.ISymbolStrata
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 enum class AstralStrata : ISymbolStrata {
-    ASTRALBODY, // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    ASTRALHOUSE, ASTRALZODIAC, ASTRALASPECT, // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ASTRALBODY, ASTRALASPECT, // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ASTRALHOUSE, ASTRALZODIAC, // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ASTRALGROUP, ASTRALCHART, RELATIONALASTRALMAP;
 }

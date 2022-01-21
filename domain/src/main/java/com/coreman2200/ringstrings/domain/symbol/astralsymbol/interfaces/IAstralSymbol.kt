@@ -30,6 +30,7 @@ interface IAstralSymbol : ISymbol {
 
     fun setHouse(house:IHouseSymbol) {
         houseid = house.id
+        groupid = house.id
         related[house.id] = house
     }
     fun setZodiacSign(zodiac:IZodiacSymbol) {
