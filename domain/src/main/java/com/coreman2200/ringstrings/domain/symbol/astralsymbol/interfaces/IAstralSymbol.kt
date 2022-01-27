@@ -42,6 +42,10 @@ interface IAstralSymbol : ISymbol {
     fun wrapDegree(degree: Double): Double {
         return (360 + degree) % 360.0
     }
+
+    override fun value(): Double {
+        return degree
+    }
 }
 
 interface IAstralGroupSymbol : ICompositeSymbol<IAstralSymbol>, IAstralSymbol
