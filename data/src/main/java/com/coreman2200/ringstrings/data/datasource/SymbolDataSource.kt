@@ -48,14 +48,14 @@ class SymbolDatabaseSource @Inject constructor(val dao:SymbolDao) : SymbolDataSo
     }
     
     private fun SymbolDataRequest.toEntity() : SymbolEntity = SymbolEntity(
-        profileid = this.profileid,
-        chartid = this.chartid,
-        groupid = this.groupid,
-        symbolid = this.symbolid,
-        strata = this.strata,
-        type = this.type,
-        value = this.value,
-        relations = this.relations
+        profileid = data.profileid,
+        chartid = data.chartid,
+        groupid = data.groupid,
+        symbolid = data.symbolid,
+        strata = data.strata,
+        type = data.type,
+        value = data.value,
+        relations = data.relations
     )
 
     private fun SymbolEntity.toData() : SymbolData = SymbolData(
