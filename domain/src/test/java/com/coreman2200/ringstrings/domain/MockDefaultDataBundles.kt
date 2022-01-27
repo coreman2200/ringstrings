@@ -96,7 +96,7 @@ object MockDefaultDataBundles {
     private fun generateRandomTimeStamp(tz: TimeZone = TimeZone.getDefault()): Long {
         val mTestDate = GregorianCalendar(Locale.US)
         mTestDate.timeZone = tz
-        mTestDate[1800 + (Math.random() * 600).toInt(), (Math.random() * 12).toInt(), (Math.random() * 31).toInt(), (Math.random() * 24).toInt()] =
+        mTestDate[1700 + (Math.random() * 500).toInt(), (Math.random() * 12).toInt(), (Math.random() * 31).toInt(), (Math.random() * 24).toInt()] =
             (Math.random() * 60).toInt()
         return mTestDate.timeInMillis
     }
