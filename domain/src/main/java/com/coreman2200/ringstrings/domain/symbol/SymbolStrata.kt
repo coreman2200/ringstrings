@@ -27,7 +27,6 @@ enum class SymbolStrata(vararg stratas: Enum<*>) : ISymbolStrata {
         NumberStrata.DERIVEDNUMBER,
         AstralStrata.ASTRALASPECT
     ),
-    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     GROUP(
         NumberStrata.GROUPEDNUMBERS,
         AstralStrata.ASTRALGROUP,
@@ -38,6 +37,7 @@ enum class SymbolStrata(vararg stratas: Enum<*>) : ISymbolStrata {
         NumberStrata.CHARTEDNUMBERS,
         AstralStrata.ASTRALCHART
     ),
+    // ~~~~~~~~~~~~~~~~~~~~~~~
     RELATIONAL_MAP(NumberStrata.RELATIONALNUMBERMAP, AstralStrata.RELATIONALASTRALMAP),
     ENTITY(
         EntityStrata.TAG,
@@ -55,8 +55,15 @@ enum class SymbolStrata(vararg stratas: Enum<*>) : ISymbolStrata {
     companion object {
         fun symbolStrataFor(id: ISymbolStrata): SymbolStrata {
             return values().find { strata ->
-                strata.relevantSymbolGroup.any { it == id }
+                strata.relevantSymbolGroup.any { it.toString() == id.toString() }
             } ?: NONE
+        }
+
+        fun realStrataFor(id: String): ISymbolStrata {
+            val group = values().find { strata ->
+                strata.relevantSymbolGroup.any { it.toString() == id }
+            } ?: NONE
+            return group.relevantSymbolGroup.find { it.toString() == id } as ISymbolStrata
         }
     }
 }
