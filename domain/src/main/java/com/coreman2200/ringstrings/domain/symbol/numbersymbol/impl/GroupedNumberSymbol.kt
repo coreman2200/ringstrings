@@ -6,6 +6,7 @@ import com.coreman2200.ringstrings.domain.symbol.numbersymbol.NumberStrata
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.IGroupedNumberSymbol
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.IGroupedNumberSymbolID
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.INumberSymbol
+import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
 
 /**
  * GroupedNumberSymbol
@@ -29,8 +30,14 @@ open class GroupedNumberSymbol(
 ),
     IGroupedNumberSymbol {
 
+    override fun get(id: ISymbolID): INumberSymbol? {
+        return related[id] as INumberSymbol
+    }
+
     override fun add(group: IGroupedNumberSymbolID, symbol: INumberSymbol) {
         symbol.groupid = id
+        symbol.chartid = chartid
+        symbol.profileid = profileid
         related[group] = symbol
         add(symbol)
     }
@@ -39,6 +46,8 @@ open class GroupedNumberSymbol(
         related.putAll(map)
         map.values.forEach {
             it.groupid = id
+            it.chartid = chartid
+            it.profileid = profileid
             add(it)
         }
     }

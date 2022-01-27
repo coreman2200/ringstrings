@@ -21,6 +21,10 @@ import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbol
  */
 interface INumberSymbol : ISymbol {
     val value: Int
+
+    override fun value(): Double {
+        return value.toDouble()
+    }
 }
 
 interface IDerivedNumberSymbol : INumberSymbol, ICompositeSymbol<INumberSymbol> {

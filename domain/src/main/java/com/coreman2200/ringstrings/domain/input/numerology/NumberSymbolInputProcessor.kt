@@ -77,7 +77,18 @@ open class NumberSymbolInputProcessor(protected val settings: NumerologySettings
             produceBaseNumberSymbolForValue(value) else produceDerivedNumberSymbolForValue(value)
     }
 
+    private val masterNumberMap:Map<Int, BaseNumbers> = mapOf(
+        Pair(11,BaseNumbers.ELEVEN),
+        Pair(22,BaseNumbers.TWENTYTWO),
+        Pair(33,BaseNumbers.THIRTYTHREE),
+    )
+
     private fun produceBaseNumberSymbolForValue(value: Int): BaseNumberSymbol {
+        if (value > 9) {
+            val num = masterNumberMap[value] ?: BaseNumbers.ZERO
+            assert(num != BaseNumbers.ZERO)
+            return BaseNumberSymbol(num)
+        }
         return BaseNumberSymbol(BaseNumbers.values()[value])
     }
 

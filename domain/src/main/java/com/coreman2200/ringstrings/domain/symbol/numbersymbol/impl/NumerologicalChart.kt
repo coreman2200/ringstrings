@@ -31,4 +31,9 @@ class NumerologicalChart() : GroupedNumberSymbol(id = Charts.NUMEROLOGICAL), INu
             .map { it.id to it }.toMap()
         related.putAll(groups)
     }
+
+    init {
+        chartid = id
+    }
+
 }

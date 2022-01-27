@@ -113,7 +113,8 @@ class QualitiesProcessor(
         for (c in nameArray) {
             val charValue = numSystem.numValueForChar(c)
             val symbol = BaseNumbers.values()[charValue]
-            occurrences[symbol]?.plus(1)
+            var count = occurrences[symbol] ?: 0
+            occurrences[symbol] = ++count
         }
         return occurrences
     }

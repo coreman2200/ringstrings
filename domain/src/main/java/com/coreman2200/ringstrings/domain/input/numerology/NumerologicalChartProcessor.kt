@@ -27,6 +27,7 @@ class NumerologicalChartProcessor(
 ) : GroupedNumberSymbolsInputProcessor(profile, settings), IGroupedNumberSymbolsInputProcessor {
     override fun produceGroupedNumberSymbolsForProfile(): NumerologicalChart {
         val chart = NumerologicalChart()
+        chart.profileid = profile.id
 
         // Grouped Symbols that establish the full number symbol
         val groupedSymbols: Array<GroupedNumbers> = arrayOf<GroupedNumbers>(
