@@ -25,6 +25,7 @@ import com.coreman2200.ringstrings.data.room_common.dao.SymbolDao
 import com.coreman2200.ringstrings.data.room_common.entity.SymbolDetailEntity
 import com.coreman2200.ringstrings.data.room_common.entity.SymbolEntity
 import com.coreman2200.ringstrings.domain.*
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.last
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
@@ -43,20 +44,40 @@ interface SymbolDataSource {
 
 class SymbolDatabaseSource @Inject constructor(val dao:SymbolDao) : SymbolDataSource {
     override suspend fun fetchSymbolData(request: SymbolDataRequest): SymbolDataResponse {
-        val symbols = dao.getSymbols(request.toEntity()).last()
-        return SymbolDataResponse(symbols = symbols.map { it.toData()})
+
+        var symbols: Flow<List<SymbolEntity>>
+        val data = request.data
+        if (data.symbolid.isNotEmpty()) {
+            symbols = dao.getSymbolInProfileChartNamed(
+                data.profileid,
+                data.chartid,
+                data.symbolid
+            )
+            return SymbolDataResponse(symbols = symbols.last().map { it.toData() })
+        }
+
+        if (data.groupid.isNotEmpty()) {
+            symbols = dao.getSymbolsInProfileChartForGroup(
+                data.profileid,
+                data.chartid,
+                data.groupid
+            )
+            return SymbolDataResponse(symbols = symbols.last().map { it.toData() })
+        }
+
+        if (data.chartid.isNotEmpty()) {
+            symbols = dao.getSymbolsInProfileForChart(
+                data.profileid,
+                data.chartid
+            )
+            return SymbolDataResponse(symbols = symbols.last().map { it.toData() })
+        }
+
+        symbols = dao.getSymbolsInProfile(
+            data.profileid
+        )
+        return SymbolDataResponse(symbols = symbols.last().map { it.toData() })
     }
-    
-    private fun SymbolDataRequest.toEntity() : SymbolEntity = SymbolEntity(
-        profileid = data.profileid,
-        chartid = data.chartid,
-        groupid = data.groupid,
-        symbolid = data.symbolid,
-        strata = data.strata,
-        type = data.type,
-        value = data.value,
-        relations = data.relations
-    )
 
     private fun SymbolEntity.toData() : SymbolData = SymbolData(
         profileid = this.profileid,

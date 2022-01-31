@@ -30,19 +30,30 @@ interface SymbolDao {
     @Delete
     fun delete(symbol: SymbolEntity)
 
-    @Query("SELECT * FROM profile_symbol_data_table WHERE profileid IS :p AND chartid IS :c")
-    fun getSymbols(
-        symbol: SymbolEntity,
-        p:Int = symbol.profileid,
-        c:String = symbol.chartid,
+    @Query("SELECT * FROM profile_symbol_data_table WHERE profileid IS :profileid ORDER BY type ASC")
+    fun getSymbolsInProfile(
+        profileid: Int,
     ): Flow<List<SymbolEntity>>
 
-    @Query("SELECT * FROM profile_symbol_data_table WHERE profileid IS :p AND chartid IS :c AND groupid IS :g")
-    fun getSymbolsByGroup(
-        symbol: SymbolEntity,
-        p:Int = symbol.profileid,
-        c:String = symbol.chartid,
-        g:String = symbol.groupid
+    @Query("SELECT * FROM profile_symbol_data_table WHERE profileid IS :p AND chartid IS :c ORDER BY type ASC")
+    fun getSymbolsInProfileForChart(
+        p:Int,
+        c:String
+    ): Flow<List<SymbolEntity>>
+
+
+    @Query("SELECT * FROM profile_symbol_data_table WHERE profileid IS :p AND chartid IS :c AND groupid IS :g ORDER BY type ASC")
+    fun getSymbolsInProfileChartForGroup(
+        p:Int,
+        c:String,
+        g:String
+    ): Flow<List<SymbolEntity>>
+
+    @Query("SELECT * FROM profile_symbol_data_table WHERE profileid IS :p AND chartid IS :c AND symbolid IS :s LIMIT 1")
+    fun getSymbolInProfileChartNamed(
+        p:Int,
+        c:String,
+        s:String
     ): Flow<List<SymbolEntity>>
 
     @Query("SELECT * FROM symbol_description_table WHERE id = :symbolid LIMIT 1")

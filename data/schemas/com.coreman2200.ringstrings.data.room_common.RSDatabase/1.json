@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "6c7b1c8d4a537f38bef44dd6587e8d50",
+    "identityHash": "51b908156d4555dddbaf8d870886b8b4",
     "entities": [
       {
         "tableName": "profile_symbol_data_table",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`profileid` INTEGER NOT NULL, `chartid` TEXT NOT NULL, `groupid` TEXT NOT NULL, `symbolid` TEXT NOT NULL, `strata` TEXT NOT NULL, `type` TEXT NOT NULL, `value` REAL NOT NULL, `relations` TEXT NOT NULL, PRIMARY KEY(`profileid`, `chartid`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`profileid` INTEGER NOT NULL, `chartid` TEXT NOT NULL, `groupid` TEXT NOT NULL, `symbolid` TEXT NOT NULL, `strata` TEXT NOT NULL, `type` INTEGER NOT NULL, `value` REAL NOT NULL, `relations` TEXT NOT NULL, PRIMARY KEY(`profileid`, `chartid`))",
         "fields": [
           {
             "fieldPath": "profileid",
@@ -41,7 +41,7 @@
           {
             "fieldPath": "type",
             "columnName": "type",
-            "affinity": "TEXT",
+            "affinity": "INTEGER",
             "notNull": true
           },
           {
@@ -69,7 +69,7 @@
       },
       {
         "tableName": "user_profile_details_table",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `display_name` TEXT NOT NULL, `full_name` TEXT NOT NULL, `birth_timestamp` INTEGER NOT NULL, `birth_timezone` TEXT NOT NULL, `birth_lat` REAL NOT NULL, `birth_lon` REAL NOT NULL, `birth_alt` REAL NOT NULL, `current_timestamp` INTEGER, `current_timezone` TEXT, `current_lat` REAL, `current_lon` REAL, `current_alt` REAL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `display_name` TEXT NOT NULL, `birth_timestamp` INTEGER NOT NULL, `birth_timezone` TEXT NOT NULL, `birth_lat` REAL NOT NULL, `birth_lon` REAL NOT NULL, `birth_alt` REAL NOT NULL, `current_timestamp` INTEGER, `current_timezone` TEXT, `current_lat` REAL, `current_lon` REAL, `current_alt` REAL)",
         "fields": [
           {
             "fieldPath": "id",
@@ -86,12 +86,6 @@
           {
             "fieldPath": "displayName",
             "columnName": "display_name",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "fullName",
-            "columnName": "full_name",
             "affinity": "TEXT",
             "notNull": true
           },
@@ -277,7 +271,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '6c7b1c8d4a537f38bef44dd6587e8d50')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '51b908156d4555dddbaf8d870886b8b4')"
     ]
   }
 }
