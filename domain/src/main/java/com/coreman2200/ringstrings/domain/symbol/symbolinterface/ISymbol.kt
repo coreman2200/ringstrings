@@ -36,7 +36,7 @@ interface ISymbol {
         groupid = groupid.toString(),
         symbolid = id.toString(),
         strata = strata.toString(),
-        type = SymbolStrata.symbolStrataFor(strata).toString(),
+        type = SymbolStrata.symbolStrataFor(strata).ordinal,
         value = value(),
         relations = related.keys.map { it.toString() }
     )

@@ -61,7 +61,7 @@ data class SymbolData(
     val groupid: String = "",
     val symbolid: String = "",
     val strata: String = "",
-    val type: String = "", // SymbolStrata.symbolStrataFor(strata)
+    val type: Int = 0, // SymbolStrata.symbolStrataFor(strata).ordinal
     val value: Double = 0.0,
     val relations: List<String> = emptyList(),
     val description: SymbolDescription?

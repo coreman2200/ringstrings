@@ -29,7 +29,7 @@ data class SymbolEntity(
     val groupid: String,
     val symbolid: String,
     val strata: String,
-    val type: String, // SymbolStrata.symbolStrataFor(strata)
+    val type: Int, // SymbolStrata.symbolStrataFor(strata).ordinal
     val value: Double,
     val relations: List<String>
 )
