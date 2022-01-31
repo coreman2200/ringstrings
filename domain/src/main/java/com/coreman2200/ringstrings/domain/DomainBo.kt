@@ -97,10 +97,10 @@ data class ProfileDataResponse(
 
 data class ProfileData(
     override val id: Int,
-    override val name: List<String>,
-    override val displayName: String = name[0] + " " + name[2][0],
-    override val birthPlacement: GeoPlacement,
-    override val currentPlacement: GeoPlacement?
+    override val name: List<String> = emptyList(),
+    override val displayName: String = name.firstOrNull() + " " + name.lastOrNull(),
+    override val birthPlacement: GeoPlacement = GeoPlacement(),
+    override val currentPlacement: GeoPlacement? = GeoPlacement()
 ) : IProfileData
 
 

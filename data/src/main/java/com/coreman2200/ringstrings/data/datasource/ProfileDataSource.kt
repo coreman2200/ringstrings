@@ -47,7 +47,7 @@ class ProfileDatabaseSource @Inject constructor(val dao: ProfileDao) : ProfileDa
     }
 
     override suspend fun storeProfileData(request: ProfileDataRequest): ProfileDataResponse {
-        val saved = dao.insert(request.toEntity())
+        val saved = dao.insert(request.toEntity()).toInt()
         return ProfileDataResponse(profile = ProfileData(id = saved))
     }
 
@@ -55,7 +55,6 @@ class ProfileDatabaseSource @Inject constructor(val dao: ProfileDao) : ProfileDa
         id = id,
         name = name,
         displayName = displayName,
-        fullName = fullName,
         birthPlacement = birthPlacement.toData(),
         currentPlacement = currentPlacement?.toData(),
 
@@ -65,7 +64,6 @@ class ProfileDatabaseSource @Inject constructor(val dao: ProfileDao) : ProfileDa
         id = id,
         name = name,
         displayName = displayName,
-        fullName = fullName,
         birthPlacement = birthPlacement.toEntity(),
         currentPlacement = currentPlacement?.toEntity(),
 

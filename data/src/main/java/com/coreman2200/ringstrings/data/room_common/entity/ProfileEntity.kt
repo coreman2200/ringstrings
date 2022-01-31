@@ -25,7 +25,6 @@ data class ProfileEntity(
     @PrimaryKey(autoGenerate = true) val id: Int,
     val name: List<String>,
     @ColumnInfo(name = "display_name") val displayName: String,
-    @ColumnInfo(name = "full_name") val fullName: String,
     @Embedded(prefix = "birth_") val birthPlacement: PlacementEntity,
     @Embedded(prefix = "current_") val currentPlacement: PlacementEntity?
 )
