@@ -2,7 +2,6 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin'
     id 'org.jetbrains.kotlin.android'
     id "org.jmailen.kotlinter"
 }
@@ -10,12 +9,11 @@ plugins {
 android {
     signingConfigs {
         debug {
-            keyAlias debugBuild
+            //keyAlias debugBuild
         }
     }
 
     compileSdkVersion compile_sdk
-    buildToolsVersion build_tools
     defaultConfig {
         applicationId "com.coreman2200.ringstrings"
         minSdkVersion min_sdk
@@ -77,13 +75,10 @@ dependencies {
     implementation project(':domain')
     implementation project(':data')
 
-    implementation 'com.google.dagger:hilt-android:2.40.5'
-    kapt 'com.google.dagger:hilt-android-compiler:2.40.5'
-
     // If you're using classes in dagger.android
-    api "com.google.dagger:dagger:$daggerVersion"
-    api "com.google.dagger:dagger-android:$daggerVersion"
-    api "com.google.dagger:dagger-android-support:$daggerVersion"
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    implementation "com.google.dagger:dagger-android:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
     annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
     annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"

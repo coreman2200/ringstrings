@@ -29,8 +29,6 @@ android {
     defaultConfig {
         minSdk min_sdk
         targetSdk target_sdk
-        versionCode version_code
-        versionName version_name
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -91,6 +89,8 @@ dependencies {
     implementation "com.google.dagger:dagger-android:$daggerVersion"
     implementation "com.google.dagger:dagger-android-support:$daggerVersion"
     kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+
+    implementation "io.arrow-kt:arrow-fx-coroutines:$arrowVersion"
 
     implementation "androidx.room:room-runtime:$roomVersion"
     annotationProcessor("androidx.room:room-compiler:$roomVersion")
