@@ -2,6 +2,7 @@ package com.coreman2200.ringstrings.app
 
 import android.app.Application
 import com.coreman2200.ringstrings.app.di.ApplicationComponent
+import com.coreman2200.ringstrings.app.di.DaggerApplicationComponent
 import com.coreman2200.ringstrings.app.di.UtilsModule
 
 /**
