@@ -41,4 +41,13 @@ object SettingsDataRepository :
         } catch (e: Exception) {
             Failure.NoData(e.localizedMessage ?: "No Data Found").left()
         }
+
+    @Throws(SocketTimeoutException::class)
+    override suspend fun storeAppSettings(request: AppSettingsRequest): Either<Failure, AppSettingsResponse> =
+        try {
+            val response = settingsDataSource.updateSettingsData(request = request)
+            response.takeIf { it.success }?.right() ?: run { Failure.NoData().left() }
+        } catch (e: Exception) {
+            Failure.NoData(e.localizedMessage ?: "No Data Stored").left()
+        }
 }
