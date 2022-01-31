@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="symbolview_symbolicon_maxlength">120dp</dimen>
+    <dimen name="symbolview_symbolicon_marginleft">30dp</dimen>
+    <dimen name="symbolview_symbolname_textsize">20sp</dimen>
+    <dimen name="symbolview_symbolname_textpadding">20dp</dimen>
+    <dimen name="symbolview_symbolfab_fabsize">56dp</dimen>
+    <dimen name="symbolview_symbolfab_fabelevation">8dp</dimen>
+    <dimen name="symbolview_symbolfab_fabpress_translation_z">9dp</dimen>
+    <dimen name="symbolview_symbolfab_fabsize_small">40dp</dimen>
+</resources>

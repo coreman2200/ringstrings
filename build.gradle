@@ -1,24 +1,77 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+    /* Variables */
+    ext {
+        debugBuild = "RingStrings-debug"
+        coroutinesVersion = '1.6.0-native-mt'
+        roomVersion = '2.4.1'
+        lifecycleVersion = '2.4.0'
+        arrowVersion = '1.0.1'
+        daggerVersion = '2.40.5'
+        kotlinVersion = '1.6.10'
+
+        build_tools = '30.0.2'
+        compile_sdk = 32
+        min_sdk = 29
+        target_sdk = 32
+        version_code = 1
+        version_name = "1.0"
+        agp_version = '7.0.4'
+    }
+
     repositories {
-        jcenter()
+        maven { url = uri("https://plugins.gradle.org/m2/") }
         mavenLocal()
         mavenCentral()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.2.3'
+        classpath 'com.android.tools.build:gradle:7.1.0'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath 'com.squareup.wire:wire-gradle-plugin:4.0.1'
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.28-alpha'
+        classpath 'org.jmailen.gradle:kotlinter-gradle:3.8.0'
+
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
+
 allprojects {
     repositories {
-        jcenter()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
         mavenLocal()
         mavenCentral()
+        google()
     }
+
+}
+
+
+/* Get password from Mac OSX Keychain */
+def getPassword(String currentUser, String keyChain) {
+    def stdout = new ByteArrayOutputStream()
+    def stderr = new ByteArrayOutputStream()
+    def keychainExec = exec {
+        commandLine 'security', '-q', 'find-generic-password', '-a', currentUser, '-gl', "${keyChain}"
+        standardOutput = stdout
+        errorOutput = stderr
+        ignoreExitValue true
+    }
+
+    if (keychainExec.exitValue != 0) {
+
+        println stdout.toString()
+
+        println stderr.toString()
+
+        return
+
+    }
+    //noinspection GroovyAssignabilityCheck
+    (stderr.toString().trim() =~ /password: "(.*)"/)[0][1]
 }
