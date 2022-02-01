@@ -24,6 +24,9 @@ interface SymbolDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(symbol: SymbolEntity)
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertAll(vararg symbol: SymbolEntity)
+
     @Update
     fun update(symbol: SymbolEntity)
 
