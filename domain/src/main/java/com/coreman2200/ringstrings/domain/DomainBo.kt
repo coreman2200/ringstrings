@@ -48,7 +48,7 @@ data class NumerologySettings(
 // Symbols
 // _PROFILEID, _CHARTID, _STRATAID, _TYPEID, _SYMBOLID, _VALUE, _DESC
 data class SymbolDataRequest(
-    val data:SymbolData = SymbolData()
+    val data:List<SymbolData> = emptyList()
 )
 
 data class SymbolDataResponse(
@@ -64,11 +64,13 @@ data class SymbolData(
     val type: Int = 0, // SymbolStrata.symbolStrataFor(strata).ordinal
     val value: Double = 0.0,
     val relations: List<String> = emptyList(),
-    val description: SymbolDescription?
+    val description: SymbolDescription? = SymbolDescription(symbolid)
 )
 
 data class SymbolDescriptionRequest(
-    val symbolid: String
+    val symbolid: String,
+    val description: String = "",
+    val qualities: List<String> = emptyList()
 )
 
 data class SymbolDescriptionResponse(

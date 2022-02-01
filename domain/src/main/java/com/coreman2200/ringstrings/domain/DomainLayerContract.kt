@@ -48,6 +48,7 @@ interface DomainLayerContract {
 
         companion object {
             const val SYMBOL_REPOSITORY_TAG = "symbolRepository"
+            const val SYMBOL_DETAIL_REPOSITORY_TAG = "symbolDetailRepository"
             const val SETTINGS_REPOSITORY_TAG = "settingsRepository"
             const val PROFILE_REPOSITORY_TAG = "profileRepository"
             const val EPHEMERIS_REPOSITORY_TAG = "swissephRepository"
@@ -55,7 +56,13 @@ interface DomainLayerContract {
 
         interface SymbolDataRepository<out S> {
             suspend fun fetchSymbol(request: SymbolDataRequest): Either<Failure, S>
+            suspend fun storeSymbol(request: SymbolDataRequest)
+        }
+
+        interface SymbolDetailRepository<out S> {
             suspend fun fetchSymbolDescription(request: SymbolDescriptionRequest): Either<Failure, S>
+            suspend fun storeSymbolDescription(vararg request: SymbolDescriptionRequest)
+
         }
 
         interface SettingsDataRepository<out S> {

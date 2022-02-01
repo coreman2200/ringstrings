@@ -25,25 +25,24 @@ import arrow.core.Either
 import arrow.core.left
 import arrow.core.right
 import com.coreman2200.ringstrings.data.datasource.SymbolDataSource
+import com.coreman2200.ringstrings.data.datasource.SymbolDescriptionSource
 import com.coreman2200.ringstrings.domain.*
 import java.net.SocketTimeoutException
 
-object SymbolDataRepository :
-    DomainLayerContract.Data.SymbolDataRepository<SymbolDataResponse> {
+object SymbolDetailRepository :
+    DomainLayerContract.Data.SymbolDetailRepository<SymbolDescriptionResponse> {
 
-    lateinit var symbolDataSource: SymbolDataSource
+    lateinit var detailDataSource: SymbolDescriptionSource
 
     @Throws(SocketTimeoutException::class)
-    override suspend fun fetchSymbol(request: SymbolDataRequest): Either<Failure, SymbolDataResponse> =
+    override suspend fun fetchSymbolDescription(request: SymbolDescriptionRequest): Either<Failure, SymbolDescriptionResponse> =
         try {
-            val response = symbolDataSource.fetchSymbolData(request = request)
-            response.takeIf { it.symbols.isNotEmpty() }?.right() ?: run { Failure.NoData().left() }
+            val response = detailDataSource.fetchDescriptionData(request = request)
+            response.takeIf { it.description.id.isNotEmpty() }?.right() ?: run { Failure.NoData().left() }
         } catch (e: Exception) {
             Failure.NoData(e.localizedMessage ?: "No Data Found").left()
         }
 
-    override suspend fun storeSymbol(request: SymbolDataRequest) {
-        symbolDataSource.storeSymbolData(request)
-
-    }
+    override suspend fun storeSymbolDescription(vararg request: SymbolDescriptionRequest) =
+        detailDataSource.storeSymbolDescription(*request)
 }

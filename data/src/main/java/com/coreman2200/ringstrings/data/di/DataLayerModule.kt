@@ -6,10 +6,8 @@ import com.coreman2200.ringstrings.data.datasource.ProfileDataSource.Companion.P
 import com.coreman2200.ringstrings.data.datasource.SettingsDataSource.Companion.SETTINGS_DATA_SOURCE_TAG
 import com.coreman2200.ringstrings.data.datasource.SwissephDataSource.Companion.SWISSEPH_DATA_SOURCE_TAG
 import com.coreman2200.ringstrings.data.datasource.SymbolDataSource.Companion.SYMBOL_DATA_SOURCE_TAG
-import com.coreman2200.ringstrings.data.repository.ProfileDataRepository
-import com.coreman2200.ringstrings.data.repository.SettingsDataRepository
-import com.coreman2200.ringstrings.data.repository.SwissephDataRepository
-import com.coreman2200.ringstrings.data.repository.SymbolDataRepository
+import com.coreman2200.ringstrings.data.datasource.SymbolDescriptionSource.Companion.SYMBOL_DETAIL_SOURCE_TAG
+import com.coreman2200.ringstrings.data.repository.*
 import com.coreman2200.ringstrings.data.room_common.RSDatabase
 import com.coreman2200.ringstrings.data.room_common.RSDatabase.Companion.RINGSTRINGS_DATABASE_TAG
 import com.coreman2200.ringstrings.data.room_common.dao.ProfileDao
@@ -18,6 +16,7 @@ import com.coreman2200.ringstrings.domain.*
 import com.coreman2200.ringstrings.domain.DomainLayerContract.Data.Companion.EPHEMERIS_REPOSITORY_TAG
 import com.coreman2200.ringstrings.domain.DomainLayerContract.Data.Companion.PROFILE_REPOSITORY_TAG
 import com.coreman2200.ringstrings.domain.DomainLayerContract.Data.Companion.SETTINGS_REPOSITORY_TAG
+import com.coreman2200.ringstrings.domain.DomainLayerContract.Data.Companion.SYMBOL_DETAIL_REPOSITORY_TAG
 import com.coreman2200.ringstrings.domain.DomainLayerContract.Data.Companion.SYMBOL_REPOSITORY_TAG
 import dagger.Module
 import dagger.Provides
@@ -36,6 +35,14 @@ object RepositoryModule {
         symbolDs: SymbolDataSource
     ): @JvmSuppressWildcards DomainLayerContract.Data.SymbolDataRepository<SymbolDataResponse> =
         SymbolDataRepository.apply { symbolDataSource = symbolDs }
+
+    @Provides
+    @Named(SYMBOL_DETAIL_REPOSITORY_TAG)
+    fun provideSymbolDetailRepository(
+        @Named(SYMBOL_DETAIL_SOURCE_TAG)
+        symbolDs: SymbolDescriptionSource
+    ): @JvmSuppressWildcards DomainLayerContract.Data.SymbolDetailRepository<SymbolDescriptionResponse> =
+        SymbolDetailRepository.apply { detailDataSource = symbolDs }
 
     @Provides
     @Named(PROFILE_REPOSITORY_TAG)

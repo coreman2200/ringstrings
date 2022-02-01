@@ -37,16 +37,15 @@ interface SymbolDataSource {
     }
 
     suspend fun fetchSymbolData(request: SymbolDataRequest): SymbolDataResponse
-    suspend fun fetchDescriptionData(request: SymbolDescriptionRequest): SymbolDataResponse
 
-    // suspend fun storeSymbolData(request: SymbolDataRequest): SymbolDataResponse
+    suspend fun storeSymbolData(request: SymbolDataRequest)
 }
 
 class SymbolDatabaseSource @Inject constructor(val dao:SymbolDao) : SymbolDataSource {
     override suspend fun fetchSymbolData(request: SymbolDataRequest): SymbolDataResponse {
 
-        var symbols: Flow<List<SymbolEntity>>
-        val data = request.data
+        val symbols: Flow<List<SymbolEntity>>
+        val data = request.data[0]
         if (data.symbolid.isNotEmpty()) {
             symbols = dao.getSymbolInProfileChartNamed(
                 data.profileid,
@@ -91,7 +90,18 @@ class SymbolDatabaseSource @Inject constructor(val dao:SymbolDao) : SymbolDataSo
         description = SymbolDescription(id = symbolid)
     )
 
-    override suspend fun fetchDescriptionData(request: SymbolDescriptionRequest): SymbolDataResponse {
+    private fun SymbolData.toEntity() : SymbolEntity = SymbolEntity(
+        profileid = this.profileid,
+        chartid = this.chartid,
+        groupid = this.groupid,
+        symbolid = this.symbolid,
+        strata = this.strata,
+        type = this.type,
+        value = this.value,
+        relations = this.relations,
+    )
+
+    /*override suspend fun fetchDescriptionData(request: SymbolDescriptionRequest): SymbolDataResponse {
         val details = dao.getSymbolDescription(request.symbolid).last()
         val description = SymbolDescription(
             id = details.id,
@@ -102,5 +112,11 @@ class SymbolDatabaseSource @Inject constructor(val dao:SymbolDao) : SymbolDataSo
         return SymbolDataResponse(
             symbols = listOf(symbol)
         )
+    }*/
+
+    override suspend fun storeSymbolData(request: SymbolDataRequest) {
+        val args = request.data.map { it.toEntity() }.toTypedArray()
+        dao.insertAll(*args)
     }
+
 }
