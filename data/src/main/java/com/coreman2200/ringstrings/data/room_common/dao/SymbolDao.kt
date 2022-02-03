@@ -58,7 +58,4 @@ interface SymbolDao {
         c:String,
         s:String
     ): Flow<List<SymbolEntity>>
-
-    @Query("SELECT * FROM symbol_description_table WHERE id = :symbolid LIMIT 1")
-    fun getSymbolDescription(symbolid:String): Flow<SymbolDetailEntity>
 }

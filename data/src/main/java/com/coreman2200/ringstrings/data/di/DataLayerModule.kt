@@ -12,6 +12,7 @@ import com.coreman2200.ringstrings.data.room_common.RSDatabase
 import com.coreman2200.ringstrings.data.room_common.RSDatabase.Companion.RINGSTRINGS_DATABASE_TAG
 import com.coreman2200.ringstrings.data.room_common.dao.ProfileDao
 import com.coreman2200.ringstrings.data.room_common.dao.SymbolDao
+import com.coreman2200.ringstrings.data.room_common.dao.SymbolDescriptionDao
 import com.coreman2200.ringstrings.domain.*
 import com.coreman2200.ringstrings.domain.DomainLayerContract.Data.Companion.EPHEMERIS_REPOSITORY_TAG
 import com.coreman2200.ringstrings.domain.DomainLayerContract.Data.Companion.PROFILE_REPOSITORY_TAG
@@ -79,6 +80,11 @@ class DataSourceModule {
     @Provides
     fun provideSymbolDao(db: RSDatabase) : SymbolDao {
         return db.symbolDao()
+    }
+
+    @Provides
+    fun provideSymbolDetailDao(db: RSDatabase) : SymbolDescriptionDao {
+        return db.detailDao()
     }
 
     @Provides

@@ -22,16 +22,16 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface SymbolDescriptionDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(symbol: SymbolDetailEntity)
+    suspend fun insert(symbol: SymbolDetailEntity)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertAll(vararg symbol: SymbolDetailEntity)
+    suspend fun insertAll(symbol: List<SymbolDetailEntity>)
 
     @Update
-    fun update(symbol: SymbolDetailEntity)
+    suspend fun update(symbol: SymbolDetailEntity)
 
     @Delete
-    fun delete(symbol: SymbolDetailEntity)
+    suspend fun delete(symbol: SymbolDetailEntity)
 
     @Query("SELECT * FROM symbol_description_table WHERE id = :symbolid LIMIT 1")
     fun getSymbolDescription(symbolid:String): Flow<SymbolDetailEntity>

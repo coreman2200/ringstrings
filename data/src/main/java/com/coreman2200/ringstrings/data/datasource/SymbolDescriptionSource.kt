@@ -47,8 +47,8 @@ class SymbolDescriptionDBSource @Inject constructor(val dao: SymbolDescriptionDa
     }
 
     override suspend fun storeSymbolDescription(vararg request: SymbolDescriptionRequest) {
-        val args = request.map { it.toEntity() }.toTypedArray()
-        dao.insertAll(*args)
+        val args = request.map { it.toEntity() }.toList()
+        dao.insertAll(args)
     }
 
     private fun SymbolDetailEntity.toData() : SymbolDescription = SymbolDescription(

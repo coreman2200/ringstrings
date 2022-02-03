@@ -3,9 +3,15 @@ package com.coreman2200.ringstrings.data.room_common
 import android.content.Context
 import androidx.room.*
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.coreman2200.ringstrings.data.file.details.SymbolDetailFileHandler
 import com.coreman2200.ringstrings.data.room_common.dao.ProfileDao
 import com.coreman2200.ringstrings.data.room_common.dao.SymbolDao
+import com.coreman2200.ringstrings.data.room_common.dao.SymbolDescriptionDao
 import com.coreman2200.ringstrings.data.room_common.entity.*
+import com.coreman2200.ringstrings.domain.SymbolDescription
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 /**
@@ -31,6 +37,7 @@ import javax.inject.Inject
 abstract class RSDatabase : RoomDatabase() {
     abstract fun profileDao(): ProfileDao
     abstract fun symbolDao(): SymbolDao
+    abstract fun detailDao(): SymbolDescriptionDao
 
     companion object {
         const val RINGSTRINGS_DATABASE_TAG = "ringstringsDatabase"
@@ -56,19 +63,29 @@ abstract class RSDatabase : RoomDatabase() {
         private val roomCallback = object : Callback() {
             override fun onCreate(db: SupportSQLiteDatabase) {
                 super.onCreate(db)
-                populateDatabase(instance!!)
+                CoroutineScope(Dispatchers.IO).launch {
+                    populateDatabase(instance!!)
+                }
             }
         }
 
-        private fun populateDatabase(db: RSDatabase) {
-            val symbolDao = db.symbolDao()
-            val profileDao = db.profileDao()
+        private suspend fun populateDatabase(db: RSDatabase) {
+            //val symbolDao = db.symbolDao()
+            //val profileDao = db.profileDao()
+
+            val detailDao = db.detailDao()
+            detailDao.insertAll(getDescriptions())
+        }
+
+        private fun getDescriptions():List<SymbolDetailEntity> {
+            val fh = SymbolDetailFileHandler()
+            return fh.getAllDescriptions().toList()
         }
     }
 
 }
 
-public class Converters {
+class Converters {
     @TypeConverter
     fun fromString(str:String) : List<String> {
         return str.split(",").map { it.trim() }
