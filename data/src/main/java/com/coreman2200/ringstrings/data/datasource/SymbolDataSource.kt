@@ -21,14 +21,16 @@
  */
 package com.coreman2200.ringstrings.data.datasource
 
+import com.coreman2200.ringstrings.data.room_common.RSDatabase
 import com.coreman2200.ringstrings.data.room_common.dao.SymbolDao
 import com.coreman2200.ringstrings.data.room_common.entity.SymbolDetailEntity
 import com.coreman2200.ringstrings.data.room_common.entity.SymbolEntity
 import com.coreman2200.ringstrings.domain.*
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.last
-import kotlinx.coroutines.flow.map
+import com.squareup.wire.internal.newMutableList
+import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.*
 import javax.inject.Inject
+import kotlin.random.Random
 
 interface SymbolDataSource {
 
@@ -38,47 +40,48 @@ interface SymbolDataSource {
 
     suspend fun fetchSymbolData(request: SymbolDataRequest): SymbolDataResponse
 
-    suspend fun storeSymbolData(request: SymbolDataRequest)
+    suspend fun storeSymbolData(request: SymbolStoreRequest)
 }
 
 class SymbolDatabaseSource @Inject constructor(val dao:SymbolDao) : SymbolDataSource {
     override suspend fun fetchSymbolData(request: SymbolDataRequest): SymbolDataResponse {
-
         val symbols: Flow<List<SymbolEntity>>
-        val data = request.data[0]
-        if (data.symbolid.isNotEmpty()) {
-            symbols = dao.getSymbolInProfileChartNamed(
-                data.profileid,
-                data.chartid,
-                data.symbolid
-            )
-            return SymbolDataResponse(symbols = symbols.last().map { it.toData() })
+        val data = request.data
+        when {
+            data.symbolid.isNotEmpty() -> {
+                symbols = dao.getSymbolInProfileChartNamed(
+                    data.profileid,
+                    data.chartid,
+                    data.symbolid
+                )
+            }
+            data.groupid.isNotEmpty() -> {
+                symbols = dao.getSymbolsInProfileChartForGroup(
+                    data.profileid,
+                    data.chartid,
+                    data.groupid
+                )
+            }
+            data.chartid.isNotEmpty() -> {
+                symbols = dao.getSymbolsInProfileForChart(
+                    data.profileid,
+                    data.chartid
+                )
+            }
+            else -> {
+
+                symbols = dao.getSymbolsInProfile(
+                    data.profileid
+                )
+            }
         }
 
-        if (data.groupid.isNotEmpty()) {
-            symbols = dao.getSymbolsInProfileChartForGroup(
-                data.profileid,
-                data.chartid,
-                data.groupid
-            )
-            return SymbolDataResponse(symbols = symbols.last().map { it.toData() })
-        }
-
-        if (data.chartid.isNotEmpty()) {
-            symbols = dao.getSymbolsInProfileForChart(
-                data.profileid,
-                data.chartid
-            )
-            return SymbolDataResponse(symbols = symbols.last().map { it.toData() })
-        }
-
-        symbols = dao.getSymbolsInProfile(
-            data.profileid
-        )
-        return SymbolDataResponse(symbols = symbols.last().map { it.toData() })
+        val elems = symbols.first()
+        return SymbolDataResponse(symbols = elems.map { it.toData() })
     }
 
     private fun SymbolEntity.toData() : SymbolData = SymbolData(
+        instanceid = this.instanceid,
         profileid = this.profileid,
         chartid = this.chartid,
         groupid = this.groupid,
@@ -91,6 +94,7 @@ class SymbolDatabaseSource @Inject constructor(val dao:SymbolDao) : SymbolDataSo
     )
 
     private fun SymbolData.toEntity() : SymbolEntity = SymbolEntity(
+        instanceid = this.instanceid,
         profileid = this.profileid,
         chartid = this.chartid,
         groupid = this.groupid,
@@ -101,20 +105,7 @@ class SymbolDatabaseSource @Inject constructor(val dao:SymbolDao) : SymbolDataSo
         relations = this.relations,
     )
 
-    /*override suspend fun fetchDescriptionData(request: SymbolDescriptionRequest): SymbolDataResponse {
-        val details = dao.getSymbolDescription(request.symbolid).last()
-        val description = SymbolDescription(
-            id = details.id,
-            description = details.description,
-            qualities = details.qualities
-        )
-        val symbol = SymbolData(symbolid = details.id, description = description)
-        return SymbolDataResponse(
-            symbols = listOf(symbol)
-        )
-    }*/
-
-    override suspend fun storeSymbolData(request: SymbolDataRequest) {
+    override suspend fun storeSymbolData(request: SymbolStoreRequest) {
         val args = request.data.map { it.toEntity() }.toTypedArray()
         dao.insertAll(*args)
     }

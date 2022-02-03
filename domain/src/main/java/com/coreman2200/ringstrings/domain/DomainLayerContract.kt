@@ -56,7 +56,7 @@ interface DomainLayerContract {
 
         interface SymbolDataRepository<out S> {
             suspend fun fetchSymbol(request: SymbolDataRequest): Either<Failure, S>
-            suspend fun storeSymbol(request: SymbolDataRequest)
+            suspend fun storeSymbol(request: SymbolStoreRequest)
         }
 
         interface SymbolDetailRepository<out S> {

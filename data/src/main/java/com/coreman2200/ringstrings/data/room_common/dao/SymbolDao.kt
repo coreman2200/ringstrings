@@ -22,16 +22,19 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface SymbolDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(symbol: SymbolEntity)
+    suspend fun insert(symbol: SymbolEntity)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertAll(vararg symbol: SymbolEntity)
+    suspend fun insertAll(symbol: List<SymbolEntity>)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(vararg symbol: SymbolEntity)
 
     @Update
-    fun update(symbol: SymbolEntity)
+    suspend fun update(symbol: SymbolEntity)
 
     @Delete
-    fun delete(symbol: SymbolEntity)
+    suspend fun delete(symbol: SymbolEntity)
 
     @Query("SELECT * FROM profile_symbol_data_table WHERE profileid IS :profileid ORDER BY type ASC")
     fun getSymbolsInProfile(

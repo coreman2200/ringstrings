@@ -11,7 +11,6 @@ import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IAstral
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IHouseSymbol
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.IGroupedNumberSymbolID
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
-import com.squareup.wire.internal.newMutableMap
 
 /**
  * AstroChartSymbol

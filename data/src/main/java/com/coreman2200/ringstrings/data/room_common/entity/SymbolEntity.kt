@@ -22,8 +22,9 @@ import androidx.room.PrimaryKey
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-@Entity(tableName = "profile_symbol_data_table", primaryKeys = ["profileid", "chartid"])
+@Entity(tableName = "profile_symbol_data_table", primaryKeys = ["profileid", "chartid", "groupid", "symbolid", "instanceid"])
 data class SymbolEntity(
+    val instanceid: Int,
     val profileid: Int,
     val chartid: String,
     val groupid: String,

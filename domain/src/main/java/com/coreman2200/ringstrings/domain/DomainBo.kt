@@ -3,6 +3,7 @@ package com.coreman2200.ringstrings.domain
 import com.coreman2200.ringstrings.domain.input.entity.IProfileData
 import java.sql.Timestamp
 import java.util.*
+import kotlin.random.Random
 
 /**
  * DomainBo
@@ -48,7 +49,11 @@ data class NumerologySettings(
 // Symbols
 // _PROFILEID, _CHARTID, _STRATAID, _TYPEID, _SYMBOLID, _VALUE, _DESC
 data class SymbolDataRequest(
-    val data:List<SymbolData> = emptyList()
+    val data:SymbolData
+)
+
+data class SymbolStoreRequest(
+    val data:List<SymbolData>
 )
 
 data class SymbolDataResponse(
@@ -56,6 +61,7 @@ data class SymbolDataResponse(
 )
 
 data class SymbolData(
+    val instanceid: Int = Random.nextInt(),
     val profileid: Int = 0,
     val chartid: String = "",
     val groupid: String = "",

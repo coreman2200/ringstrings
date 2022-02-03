@@ -42,7 +42,7 @@ object SymbolDataRepository :
             Failure.NoData(e.localizedMessage ?: "No Data Found").left()
         }
 
-    override suspend fun storeSymbol(request: SymbolDataRequest) {
+    override suspend fun storeSymbol(request: SymbolStoreRequest) {
         symbolDataSource.storeSymbolData(request)
 
     }
