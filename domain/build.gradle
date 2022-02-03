@@ -44,9 +44,9 @@ dependencies {
 
     implementation "io.arrow-kt:arrow-fx-coroutines:$arrowVersion"
 
-    api "com.squareup.wire:wire-runtime:4.0.1"
-    implementation "androidx.room:room-runtime:$roomVersion"
-    kapt "androidx.room:room-compiler:$roomVersion"
+    //api "com.squareup.wire:wire-runtime:4.0.1"
+    //implementation "androidx.room:room-runtime:$roomVersion"
+    //kapt "androidx.room:room-compiler:$roomVersion"
     api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
     api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"

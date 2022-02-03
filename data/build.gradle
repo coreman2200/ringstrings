@@ -68,6 +68,8 @@ android {
             res.srcDirs = ['src/main/res']
         }
 
+        test.resources.srcDirs += ["src/main"]
+
         androidTest.assets.srcDirs +=
                 files("$projectDir/schemas".toString())
     }
@@ -77,6 +79,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "androidx.core:core-ktx:1.7.0"
     implementation "androidx.datastore:datastore:1.0.0"
+    implementation 'com.google.code.gson:gson:2.8.9'
     api "com.squareup.wire:wire-runtime:4.0.1"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
@@ -99,20 +102,32 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
 
 
-
-    testImplementation "androidx.room:room-testing:$roomVersion"
-    androidTestImplementation "android.arch.persistence.room:testing:$roomVersion"
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    testImplementation 'org.mockito:mockito-core:4.1.0'
+    testImplementation 'org.apache.maven:maven-ant-tasks:2.1.3'
+    testImplementation 'org.assertj:assertj-core:3.21.0'
+    testImplementation 'com.jayway.android.robotium:robotium-solo:5.6.3'
     testImplementation 'androidx.test:core-ktx:1.4.0'
-
-    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
-    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
 
     testImplementation 'org.robolectric:robolectric:4.7.3'
     testImplementation('com.squareup.assertj:assertj-android:1.2.0') {
         exclude group: 'com.android.support'
     }
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
+    testImplementation "androidx.room:room-testing:$roomVersion"
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+
+
+
+    /*testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.1'
+    testCompileOnly 'junit:junit:4.13'
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine'
+
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"*/
 
 }
 
