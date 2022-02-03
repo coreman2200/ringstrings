@@ -58,7 +58,7 @@ class TestSwissephHandlerImpl {
 
     private fun getDummySwissephResponse(): SwissephDataResponse {
         val context: Context = ApplicationProvider.getApplicationContext<Application>()
-        val swissephHandler: ISwissephFileHandler = SwissephFileHandler(context)
+        val swissephHandler = SwissephFileHandler(context)
         return SwissephDataResponse(swissephHandler.ephemerisPath,swissephHandler.isEphemerisDataAvailable)
     }
 

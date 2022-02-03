@@ -36,9 +36,9 @@ interface SwissephDataSource {
     suspend fun fetchSwissephData(request: SwissephDataRequest): SwissephDataResponse
 }
 
-class SwissephFileDataSource @Inject constructor(val context: Context) : SwissephDataSource {
+class SwissephFileDataSource : SwissephDataSource {
 
-    private val handler = SwissephFileHandler(context)
+    private val handler = SwissephFileHandler()
 
     override suspend fun fetchSwissephData(request: SwissephDataRequest): SwissephDataResponse {
         return SwissephDataResponse(handler.ephemerisPath, handler.isEphemerisDataAvailable)

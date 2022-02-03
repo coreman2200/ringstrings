@@ -21,9 +21,14 @@ import java.lang.Exception
  * You may obtain a copy of the GPLv2 License at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
-class SwissephFileHandler(context: Context) : // Inject application context
-    FileHandler(context),
+class SwissephFileHandler() : // Inject application context
+    FileHandler(),
     ISwissephFileHandler {
+
+    constructor(context: Context):this() {
+        this.context = context
+    }
+
     private fun initEphemerisData() {
         if (!isEphemerisDataAvailable) moveEphemerisToDataStorage()
     }

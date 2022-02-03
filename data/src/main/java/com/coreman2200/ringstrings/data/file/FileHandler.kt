@@ -6,6 +6,7 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
 import java.lang.Exception
+import javax.inject.Inject
 
 /**
  * FileHandlerImpl
@@ -20,8 +21,11 @@ import java.lang.Exception
  * You may obtain a copy of the GPLv2 License at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
-abstract class FileHandler protected constructor(protected val mContext: Context) {
+abstract class FileHandler() {
+    @Inject lateinit var context: Context
     private val mResources: Resources
+        get() = context.resources
+
     protected fun writeInputStreamToString(`is`: InputStream): String? {
         try {
             val buffer = ByteArray(`is`.available())
@@ -57,7 +61,7 @@ abstract class FileHandler protected constructor(protected val mContext: Context
         val file = File(directory)
         if (!checkIfFileDirectoryExists(file)) {
             println("createDirectory: $directory")
-            val made = file.mkdirs()
+            file.mkdirs()
         }
     }
 
@@ -66,11 +70,8 @@ abstract class FileHandler protected constructor(protected val mContext: Context
     }
 
     protected fun getAbsolutePathWithAppend(directory: String): String {
-        val datapath = mContext.filesDir.absolutePath
+        val datapath = context.filesDir.absolutePath
         return datapath + File.separator + directory
     }
 
-    init {
-        mResources = mContext.resources
-    }
 }
