@@ -20,7 +20,8 @@ enum class CelestialBodies(val swissephValue: Int, val isRealCelestialBody: Bool
         5,
         true
     ),
-    SATURN(6, true), URANUS(7, true), NEPTUNE(8, true), PLUTO(9, true), NORTHNODE(
+    SATURN(6, true), URANUS(7, true), NEPTUNE(8, true), PLUTO(9, true),
+    NORTHNODE(
         11,
         true
     ),

@@ -40,7 +40,7 @@ class AstrologicalChart(
 
     override fun producedCelestialBodyMap(): Map<ISymbolID, IAstralSymbol> {
         val bodies:List<IAstralSymbol> = Houses.values().associate { Pair(it,related[it] as IHouseSymbol) }
-            .values.flatMap { it.elems() }
+            .values.flatMap { it.get() as List<IAstralSymbol> }
         return bodies.associateBy { it.id }
     }
 

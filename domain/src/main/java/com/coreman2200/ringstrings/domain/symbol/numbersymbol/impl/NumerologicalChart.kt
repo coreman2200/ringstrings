@@ -27,8 +27,7 @@ class NumerologicalChart() : GroupedNumberSymbol(id = Charts.NUMEROLOGICAL), INu
 
     override fun add(symbols: Collection<INumberSymbol>) {
         super.add(symbols)
-        val groups = symbols.filter { it is IGroupedNumberSymbol }
-            .map { it.id to it }.toMap()
+        val groups = symbols.filterIsInstance<IGroupedNumberSymbol>().associateBy { it.id }
         related.putAll(groups)
     }
 

@@ -16,7 +16,7 @@ import java.util.*
  * You may obtain a copy of the GPLv2 License at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
-enum class DerivedKarmicDebts(val derivedSymbolsValue: Int) : INumberSymbolID {
+enum class DerivedKarmicDebts(private val derivedSymbolsValue: Int) : INumberSymbolID {
     KARMICDEBT10(10), KARMICDEBT13(13),
     KARMICDEBT14(14), KARMICDEBT16(16),
     KARMICDEBT19(19), NONE(0);

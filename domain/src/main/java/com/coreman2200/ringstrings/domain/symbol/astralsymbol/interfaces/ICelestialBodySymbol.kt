@@ -16,6 +16,5 @@ package com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces
 interface ICelestialBodySymbol : IAstralSymbol {
     var isRetrograde:Boolean
 
-    // Aspects getAspectWithBody(CelestialBodies body);
-    // Aspects[] getAllAspects();
+    override fun flag(): Boolean = isRetrograde
 }
