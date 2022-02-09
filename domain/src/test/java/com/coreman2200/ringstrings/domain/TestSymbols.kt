@@ -17,7 +17,6 @@ import com.coreman2200.ringstrings.domain.symbol.numbersymbol.NumberStrata
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.INumberChartSymbol
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.INumberSymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.IChartedSymbols
-import com.squareup.wire.internal.newMutableList
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
@@ -77,7 +76,7 @@ class TestSymbols {
     fun `Test time it takes to produce X charts`() {
         val start = Calendar.getInstance().timeInMillis
         val count = 100
-        val charts:MutableList<IAstralChartSymbol> = newMutableList()
+        val charts:MutableList<IAstralChartSymbol> = mutableListOf()
         val testProcessor = AstrologicalChartInputProcessor(astsettings, swisseph)
         for (i in 1..count) {
             testProfile = MockDefaultDataBundles.generateRandomProfile()

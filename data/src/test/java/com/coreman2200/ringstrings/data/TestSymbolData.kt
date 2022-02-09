@@ -3,7 +3,6 @@ package com.coreman2200.ringstrings.data
 import android.app.Application
 import android.content.Context
 import android.os.Build
-import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import com.coreman2200.ringstrings.data.datasource.SymbolDatabaseSource
@@ -17,13 +16,15 @@ import com.coreman2200.ringstrings.domain.input.astrology.AstrologicalChartInput
 import com.coreman2200.ringstrings.domain.swisseph.ISwissEphemerisManager
 import com.coreman2200.ringstrings.domain.swisseph.SwissEphemerisManager
 import com.coreman2200.ringstrings.domain.symbol.Charts
+import com.coreman2200.ringstrings.domain.symbol.astralsymbol.grouped.Houses
+import com.coreman2200.ringstrings.domain.symbol.astralsymbol.impl.HouseSymbol
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IAstralChartSymbol
+import com.coreman2200.ringstrings.domain.symbol.entitysymbol.grouped.TagSymbols
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.IChartedSymbols
+import com.squareup.wire.internal.newMutableList
+import com.squareup.wire.internal.newMutableMap
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.last
-import kotlinx.coroutines.flow.lastOrNull
-import kotlinx.coroutines.test.*
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
@@ -114,11 +115,16 @@ class TestSymbolData {
         }
     }
 
+    private suspend fun initStoreAllChartSymbols():List<SymbolData> {
+        val list:List<SymbolData> = chart.getAll().map { it.toData() }
+        datasource.storeSymbolData(SymbolStoreRequest(data = list))
+        return list
+    }
+
     @Test
-    fun `Assert Symbol Data can be inserted and retrieved individually`() {
+    fun `Assert Symbol Data can be ins erted and retrieved individually`() {
         runBlocking {
             val list = chart.get().map { it.toData() }
-            //datasource.storeSymbolData(SymbolStoreRequest(data = list))
             list.forEach {
                 datasource.storeSymbolData(SymbolStoreRequest(data = listOf(it)))
 
@@ -142,8 +148,7 @@ class TestSymbolData {
     @Test
     fun `Assert Symbol Data can be inserted and retrieved collectively`() {
         runBlocking {
-            val list = chart.get().map { it.toData() }
-            datasource.storeSymbolData(SymbolStoreRequest(data = list))
+            val list = initStoreAllChartSymbols()
 
             val ss = SymbolData(
                 profileid = chart.profileid
@@ -154,7 +159,6 @@ class TestSymbolData {
                 assert(response.symbols.isNotEmpty())
                 val diff = list.map { "${it.symbolid}|${it.profileid}|${it.chartid}|${it.instanceid}" }
                     .minus(response.symbols.map { "${it.symbolid}|${it.profileid}|${it.chartid}|${it.instanceid}" })
-                //val diff = list.minus(response.symbols)
                 diff.forEach { println(it) }
                 assert(diff.isEmpty())
                 assert(list.size == response.symbols.size)
@@ -162,11 +166,98 @@ class TestSymbolData {
         }
     }
 
+    @Test
+    fun `Assert Symbol Data has descriptive qualities`() {
+        runBlocking {
+            val list = initStoreAllChartSymbols()
+
+            val ss = SymbolData(
+                profileid = chart.profileid
+            )
+
+            runBlocking {
+                val response = datasource.fetchSymbolData(SymbolDataRequest(ss))
+                assert(response.symbols.isNotEmpty())
+                val qualityMap = newMutableMap<TagSymbols, Int>()
+                val qualitySymbolMap = newMutableMap<TagSymbols, MutableList<String>>()
+                response.symbols.forEach{ symbol ->
+                    val details = symbol.details
+                    assert(details != null)
+                    assert(details?.description?.isNotEmpty()?:false)
+                    val qualities = details?.qualities ?: emptyList()
+                    qualities.forEach {
+
+                        qualityMap[it] = qualityMap.getOrDefault(it,0) + 1
+                        val qslist = qualitySymbolMap.getOrDefault(it, newMutableList())
+                        qslist.add(symbol.symbolid)
+                        qualitySymbolMap[it] = qslist
+                    }
+                }
+
+                assert(qualityMap.isNotEmpty())
+                qualityMap.toList().sortedByDescending { it.second } .forEach { println("${it.first}: ${it.second}") }
+                qualitySymbolMap.toList().sortedByDescending { it.second.size } .forEach { println("${it.first}: ${it.second.joinToString(", ")}") }
+
+            }
+        }
+    }
+
+
+    @Test
+    fun `Assert Symbol Data can be retrieved by group`() {
+        runBlocking {
+            val list = initStoreAllChartSymbols()
+
+            Houses.values().forEach { house ->
+                val ss = SymbolData(
+                    profileid = chart.profileid,
+                    chartid = chart.chartid.toString(),
+                    groupid = house.toString()
+                )
+                val zz = chart.get(house) as HouseSymbol
+
+                runBlocking {
+                    val response = datasource.fetchSymbolData(SymbolDataRequest(ss))
+                    val children = zz.get()
+                    print("${ss.groupid} ~ ${children.size} expected elems: ")
+                    children.forEach { print("${it.name}, ") }
+                    println()
+                    assert(response.symbols.size == children.size)
+
+                }
+            }
+        }
+    }
+
+    @Test
+    fun `Assert Symbol Data can be reconstructed into Domain Symbol Model groupings`() {
+        runBlocking {
+            val list = initStoreAllChartSymbols()
+            val verify = list.sortedBy { it.type }.map{ "${it.symbolid}(${"%.2f".format(it.value)}): ${it.profileid} | ${it.chartid} | ${it.strata} | children(${it.children.size}): ${it.children.joinToString()}" }
+
+            val ss = SymbolData(
+                profileid = chart.profileid,
+                chartid = chart.name
+            )
+
+            runBlocking {
+                val response = datasource.fetchSymbolData(SymbolDataRequest(ss))
+                assert(response.symbols.isNotEmpty())
+                val symbol = response.toSymbol() as IAstralChartSymbol
+                assert(symbol.size() == chart.size())
+                val complete = symbol.getAll().map { it.toData() } .sortedBy { it.type }.map{ "${it.symbolid}(${"%.2f".format(it.value)}): ${it.profileid} | ${it.chartid} | ${it.strata} | children(${it.children.size}): ${it.children.joinToString()}" }
+                complete.forEach {
+                    println(it)
+                    assert(verify.contains(it))
+                }
+            }
+        }
+    }
+
+
     @After
     @Throws(IOException::class)
     fun closeDb() {
         db.close()
-
-        //Dispatchers.resetMain()
     }
 }
