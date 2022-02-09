@@ -23,10 +23,7 @@ package com.coreman2200.ringstrings.data.datasource
 
 import com.coreman2200.ringstrings.data.room_common.dao.ProfileDao
 import com.coreman2200.ringstrings.data.room_common.dao.SymbolDescriptionDao
-import com.coreman2200.ringstrings.data.room_common.entity.LocationEntity
-import com.coreman2200.ringstrings.data.room_common.entity.PlacementEntity
-import com.coreman2200.ringstrings.data.room_common.entity.ProfileEntity
-import com.coreman2200.ringstrings.data.room_common.entity.SymbolDetailEntity
+import com.coreman2200.ringstrings.data.room_common.entity.*
 import com.coreman2200.ringstrings.domain.*
 import kotlinx.coroutines.flow.last
 import javax.inject.Inject
@@ -50,18 +47,5 @@ class SymbolDescriptionDBSource @Inject constructor(val dao: SymbolDescriptionDa
         val args = request.map { it.toEntity() }.toList()
         dao.insertAll(args)
     }
-
-    private fun SymbolDetailEntity.toData() : SymbolDescription = SymbolDescription(
-        id = id,
-        description = description,
-        qualities = qualities
-
-    )
-
-    private fun SymbolDescriptionRequest.toEntity() : SymbolDetailEntity = SymbolDetailEntity(
-        id = symbolid,
-        description = description,
-        qualities = qualities
-        )
 
 }

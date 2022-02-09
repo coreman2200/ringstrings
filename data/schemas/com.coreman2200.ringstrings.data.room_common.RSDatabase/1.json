@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "34d9382a669ed15bdab88612d3bac224",
+    "identityHash": "f764e66d4c5cd388bfb1ea2611cbb8f8",
     "entities": [
       {
         "tableName": "profile_symbol_data_table",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`instanceid` INTEGER NOT NULL, `profileid` INTEGER NOT NULL, `chartid` TEXT NOT NULL, `groupid` TEXT NOT NULL, `symbolid` TEXT NOT NULL, `strata` TEXT NOT NULL, `type` INTEGER NOT NULL, `value` REAL NOT NULL, `relations` TEXT NOT NULL, PRIMARY KEY(`profileid`, `chartid`, `groupid`, `symbolid`, `instanceid`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`instanceid` INTEGER NOT NULL, `profileid` INTEGER NOT NULL, `chartid` TEXT NOT NULL, `groupid` TEXT NOT NULL, `symbolid` TEXT NOT NULL, `strata` TEXT NOT NULL, `type` INTEGER NOT NULL, `value` REAL NOT NULL, `flag` INTEGER NOT NULL, `relations` TEXT NOT NULL, `children` TEXT NOT NULL, PRIMARY KEY(`profileid`, `chartid`, `symbolid`, `instanceid`))",
         "fields": [
           {
             "fieldPath": "instanceid",
@@ -57,8 +57,20 @@
             "notNull": true
           },
           {
+            "fieldPath": "flag",
+            "columnName": "flag",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
             "fieldPath": "relations",
             "columnName": "relations",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "children",
+            "columnName": "children",
             "affinity": "TEXT",
             "notNull": true
           }
@@ -67,7 +79,6 @@
           "columnNames": [
             "profileid",
             "chartid",
-            "groupid",
             "symbolid",
             "instanceid"
           ],
@@ -280,7 +291,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '34d9382a669ed15bdab88612d3bac224')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f764e66d4c5cd388bfb1ea2611cbb8f8')"
     ]
   }
 }

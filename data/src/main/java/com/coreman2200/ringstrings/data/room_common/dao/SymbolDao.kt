@@ -1,7 +1,7 @@
 package com.coreman2200.ringstrings.data.room_common.dao
 
 import androidx.room.*
-import com.coreman2200.ringstrings.data.room_common.entity.SymbolDetailEntity
+import com.coreman2200.ringstrings.data.room_common.entity.SymbolAndDetails
 import com.coreman2200.ringstrings.data.room_common.entity.SymbolEntity
 import kotlinx.coroutines.flow.Flow
 
@@ -36,29 +36,32 @@ interface SymbolDao {
     @Delete
     suspend fun delete(symbol: SymbolEntity)
 
+    @Transaction
     @Query("SELECT * FROM profile_symbol_data_table WHERE profileid IS :profileid ORDER BY type ASC")
     fun getSymbolsInProfile(
         profileid: Int,
-    ): Flow<List<SymbolEntity>>
+    ): Flow<List<SymbolAndDetails>>
 
+    @Transaction
     @Query("SELECT * FROM profile_symbol_data_table WHERE profileid IS :p AND chartid IS :c ORDER BY type ASC")
     fun getSymbolsInProfileForChart(
         p:Int,
         c:String
-    ): Flow<List<SymbolEntity>>
+    ): Flow<List<SymbolAndDetails>>
 
-
+    @Transaction
     @Query("SELECT * FROM profile_symbol_data_table WHERE profileid IS :p AND chartid IS :c AND groupid IS :g ORDER BY type ASC")
     fun getSymbolsInProfileChartForGroup(
         p:Int,
         c:String,
         g:String
-    ): Flow<List<SymbolEntity>>
+    ): Flow<List<SymbolAndDetails>>
 
+    @Transaction
     @Query("SELECT * FROM profile_symbol_data_table WHERE profileid IS :p AND chartid IS :c AND symbolid IS :s LIMIT 1")
     fun getSymbolInProfileChartNamed(
         p:Int,
         c:String,
         s:String
-    ): Flow<List<SymbolEntity>>
+    ): Flow<List<SymbolAndDetails>>
 }

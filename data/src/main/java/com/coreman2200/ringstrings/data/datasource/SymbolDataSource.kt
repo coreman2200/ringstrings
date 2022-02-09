@@ -21,16 +21,11 @@
  */
 package com.coreman2200.ringstrings.data.datasource
 
-import com.coreman2200.ringstrings.data.room_common.RSDatabase
 import com.coreman2200.ringstrings.data.room_common.dao.SymbolDao
-import com.coreman2200.ringstrings.data.room_common.entity.SymbolDetailEntity
-import com.coreman2200.ringstrings.data.room_common.entity.SymbolEntity
+import com.coreman2200.ringstrings.data.room_common.entity.*
 import com.coreman2200.ringstrings.domain.*
-import com.squareup.wire.internal.newMutableList
-import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
 import javax.inject.Inject
-import kotlin.random.Random
 
 interface SymbolDataSource {
 
@@ -45,7 +40,7 @@ interface SymbolDataSource {
 
 class SymbolDatabaseSource @Inject constructor(val dao:SymbolDao) : SymbolDataSource {
     override suspend fun fetchSymbolData(request: SymbolDataRequest): SymbolDataResponse {
-        val symbols: Flow<List<SymbolEntity>>
+        val symbols: Flow<List<SymbolAndDetails>>
         val data = request.data
         when {
             data.symbolid.isNotEmpty() -> {
@@ -80,17 +75,19 @@ class SymbolDatabaseSource @Inject constructor(val dao:SymbolDao) : SymbolDataSo
         return SymbolDataResponse(symbols = elems.map { it.toData() })
     }
 
-    private fun SymbolEntity.toData() : SymbolData = SymbolData(
-        instanceid = this.instanceid,
-        profileid = this.profileid,
-        chartid = this.chartid,
-        groupid = this.groupid,
-        symbolid = this.symbolid,
-        strata = this.strata,
-        type = this.type,
-        value = this.value,
-        relations = this.relations,
-        description = SymbolDescription(id = symbolid)
+    private fun SymbolAndDetails.toData() : SymbolData = SymbolData(
+        instanceid = symbol.instanceid,
+        profileid = symbol.profileid,
+        chartid = symbol.chartid,
+        groupid = symbol.groupid,
+        symbolid = symbol.symbolid,
+        strata = symbol.strata,
+        type = symbol.type,
+        value = symbol.value,
+        flag = symbol.flag,
+        relations = symbol.relations,
+        children = symbol.children,
+        details = description?.toData()
     )
 
     private fun SymbolData.toEntity() : SymbolEntity = SymbolEntity(
@@ -102,7 +99,9 @@ class SymbolDatabaseSource @Inject constructor(val dao:SymbolDao) : SymbolDataSo
         strata = this.strata,
         type = this.type,
         value = this.value,
-        relations = this.relations,
+        flag = this.flag,
+        children = this.children,
+        relations = this.relations
     )
 
     override suspend fun storeSymbolData(request: SymbolStoreRequest) {

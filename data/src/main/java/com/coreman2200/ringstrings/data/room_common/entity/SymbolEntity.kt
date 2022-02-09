@@ -1,9 +1,9 @@
 package com.coreman2200.ringstrings.data.room_common.entity
 
-import androidx.room.ColumnInfo
-import androidx.room.Embedded
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+import androidx.room.*
+import com.coreman2200.ringstrings.domain.SymbolDescription
+import com.coreman2200.ringstrings.domain.SymbolDescriptionRequest
+import com.coreman2200.ringstrings.domain.symbol.entitysymbol.grouped.TagSymbols
 
 /**
  * SymbolEntity
@@ -22,7 +22,7 @@ import androidx.room.PrimaryKey
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-@Entity(tableName = "profile_symbol_data_table", primaryKeys = ["profileid", "chartid", "groupid", "symbolid", "instanceid"])
+@Entity(tableName = "profile_symbol_data_table", primaryKeys = ["profileid", "chartid", "symbolid", "instanceid"])
 data class SymbolEntity(
     val instanceid: Int,
     val profileid: Int,
@@ -32,7 +32,9 @@ data class SymbolEntity(
     val strata: String,
     val type: Int, // SymbolStrata.symbolStrataFor(strata).ordinal
     val value: Double,
-    val relations: List<String>
+    val flag: Boolean,
+    val relations: List<String>,
+    val children: List<String>
 )
 
 @Entity(tableName = "symbol_description_table")
@@ -40,4 +42,32 @@ data class SymbolDetailEntity(
     @PrimaryKey val id:String,
     val description: String,
     val qualities: List<String>
+)
+
+data class SymbolAndDetails(
+    @Embedded
+    val symbol: SymbolEntity,
+    @Relation(
+        parentColumn = "symbolid",
+        entityColumn = "id"
+    )
+    val description: SymbolDetailEntity?
+)
+
+fun SymbolDetailEntity.toData() : SymbolDescription = SymbolDescription(
+    id = id,
+    description = description,
+    qualities = qualities.map { TagSymbols.valueOf(TagSymbols.formatTag(it)) }
+)
+
+fun SymbolDescriptionRequest.toEntity() : SymbolDetailEntity = SymbolDetailEntity(
+    id = symbolid,
+    description = description,
+    qualities = qualities
+)
+
+fun SymbolDescription.toEntity() : SymbolDetailEntity = SymbolDetailEntity(
+    id = this.id,
+    description = this.description,
+    qualities = this.qualities.map { it.toString() }
 )
