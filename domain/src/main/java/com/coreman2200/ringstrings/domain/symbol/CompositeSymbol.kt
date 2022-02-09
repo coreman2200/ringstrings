@@ -1,8 +1,10 @@
 package com.coreman2200.ringstrings.domain.symbol
 
+import com.coreman2200.ringstrings.domain.symbol.entitysymbol.grouped.TagSymbols
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ICompositeSymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
+import java.util.*
 
 /**
  * SymbolModel
@@ -23,7 +25,7 @@ abstract class CompositeSymbol<T : ISymbol>(
     override val name: String = id.toString(),
     override val strata: ISymbolStrata
 ) :  ICompositeSymbol<T>, SymbolModel(id, name, strata) {
-    var children: MutableList<T> = mutableListOf()
+    protected var children: MutableList<T> = mutableListOf()
 
     override fun add(symbol: T) {
         children.add(symbol)
@@ -42,16 +44,30 @@ abstract class CompositeSymbol<T : ISymbol>(
         children.clear()
     }
 
-    // TODO Distinguish elems() vs get()...
-    override fun elems(): List<T> {
-        return children.toList()
-    }
-
     override fun get(): List<T> {
         return children
     }
 
     override fun get(id: ISymbolID): T? {
         return children.find { it.id == id }
+    }
+
+    override fun getAll(): List<ISymbol> {
+        val all = mutableListOf<ISymbol>()
+        recurseChildren(all,this)
+        return all
+    }
+
+    private fun recurseChildren(all :MutableList<ISymbol>, symbol:ISymbol) {
+        if (symbol.get().isNotEmpty()) {
+            symbol.get().forEach { recurseChildren(all, it) }
+            all.add(symbol)
+        } else if (!all.contains(symbol)) {
+            all.add(symbol)
+        }
+    }
+
+    override fun qualities(): SortedMap<TagSymbols, Int> {
+        TODO("Not yet implemented")
     }
 }

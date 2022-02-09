@@ -1,7 +1,9 @@
 package com.coreman2200.ringstrings.domain.symbol
 
+import com.coreman2200.ringstrings.domain.symbol.entitysymbol.grouped.TagSymbols
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
+import java.util.*
 
 /**
  * SymbolModel
@@ -27,6 +29,10 @@ abstract class SymbolModel(
     override var chartid:ISymbolID? = null
     override var groupid:ISymbolID? = null
 
-    override fun get(): List<ISymbol> = related.values.toList()
+    override fun get(): List<ISymbol> = emptyList()
     override fun get(id: ISymbolID): ISymbol? = related[id]
+
+    override fun qualities(): SortedMap<TagSymbols, Int> {
+        TODO("Not yet implemented")
+    }
 }

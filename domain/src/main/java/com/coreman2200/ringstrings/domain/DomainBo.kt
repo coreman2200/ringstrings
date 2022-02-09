@@ -1,6 +1,12 @@
 package com.coreman2200.ringstrings.domain
 
 import com.coreman2200.ringstrings.domain.input.entity.IProfileData
+import com.coreman2200.ringstrings.domain.symbol.Charts
+import com.coreman2200.ringstrings.domain.symbol.SymbolStrata
+import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.ICelestialBodySymbol
+import com.coreman2200.ringstrings.domain.symbol.entitysymbol.grouped.TagSymbols
+import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ICompositeSymbol
+import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbol
 import java.sql.Timestamp
 import java.util.*
 import kotlin.random.Random
@@ -60,6 +66,36 @@ data class SymbolDataResponse(
     val symbols:List<SymbolData>
 )
 
+fun SymbolDataResponse.toSymbol(): ISymbol? {
+    val symbolMap: MutableMap<String, ISymbol> = mutableMapOf()
+    val data = symbols.sortedBy { it.type }
+
+    data.forEach { symbolData ->
+        val strata = SymbolStrata.realStrataFor(symbolData.strata)
+        val children = symbolData.children
+        val symbol = strata.produce(symbolData)
+        if (symbol != null) {
+            symbol.profileid = symbolData.profileid
+            symbol.chartid = Charts.valueOf(symbolData.chartid)
+            symbolMap[symbol.name] = symbol
+
+            if (symbol is ICelestialBodySymbol) { symbol.isRetrograde = symbolData.flag }
+
+            children.forEach {
+                if (it.isEmpty()) return@forEach
+                val grouped = symbol as ICompositeSymbol<ISymbol>
+                val child = symbolMap[it]
+                if (child != null) {
+                    grouped.add(child)
+                }
+            }
+
+        }
+    }
+
+    return symbolMap[data.last().symbolid]
+}
+
 data class SymbolData(
     val instanceid: Int = Random.nextInt(),
     val profileid: Int = 0,
@@ -69,8 +105,10 @@ data class SymbolData(
     val strata: String = "",
     val type: Int = 0, // SymbolStrata.symbolStrataFor(strata).ordinal
     val value: Double = 0.0,
+    val flag: Boolean = false,
     val relations: List<String> = emptyList(),
-    val description: SymbolDescription? = SymbolDescription(symbolid)
+    val children: List<String> = emptyList(),
+    val details: SymbolDescription? = null
 )
 
 data class SymbolDescriptionRequest(
@@ -86,7 +124,7 @@ data class SymbolDescriptionResponse(
 data class SymbolDescription(
     val id:String,
     val description: String = "",
-    val qualities: List<String> = emptyList()
+    val qualities: List<TagSymbols> = emptyList()
 )
 
 // Profile

@@ -22,8 +22,8 @@ interface ICompositeSymbol<T : ISymbol> : ISymbol {
     fun add(symbols: Collection<T>)
     fun remove(symbol: T)
     fun clear()
-    fun elems(): List<T>
-    override fun size():Int = get().size
+    fun getAll():List<ISymbol>
+    override fun size():Int = getAll().size
 
 }
 

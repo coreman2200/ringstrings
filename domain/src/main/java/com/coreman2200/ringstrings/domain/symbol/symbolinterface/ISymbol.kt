@@ -3,6 +3,8 @@ package com.coreman2200.ringstrings.domain.symbol.symbolinterface
 import com.coreman2200.ringstrings.domain.SymbolData
 import com.coreman2200.ringstrings.domain.symbol.ISymbolStrata
 import com.coreman2200.ringstrings.domain.symbol.SymbolStrata
+import com.coreman2200.ringstrings.domain.symbol.entitysymbol.grouped.TagSymbols
+import java.util.*
 
 /**
  * ISymbol
@@ -26,10 +28,13 @@ interface ISymbol {
     var groupid:ISymbolID?
     val related:MutableMap<ISymbolID,ISymbol>
 
+
     fun size():Int = 1
     fun get(): List<ISymbol>
     fun get(id: ISymbolID): ISymbol?
     fun value():Double
+    fun flag():Boolean = false
+    fun qualities():SortedMap<TagSymbols, Int>
     fun toData():SymbolData = SymbolData(
         profileid = profileid,
         chartid = chartid.toString(),
@@ -38,6 +43,8 @@ interface ISymbol {
         strata = strata.toString(),
         type = SymbolStrata.symbolStrataFor(strata).ordinal,
         value = value(),
+        flag = flag(),
+        children = get().map { it.id.toString() },
         relations = related.keys.map { it.toString() }
     )
 }
