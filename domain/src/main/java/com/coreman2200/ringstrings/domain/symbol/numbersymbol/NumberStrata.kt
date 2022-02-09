@@ -1,6 +1,23 @@
 package com.coreman2200.ringstrings.domain.symbol.numbersymbol
 
+import com.coreman2200.ringstrings.domain.SymbolData
+import com.coreman2200.ringstrings.domain.symbol.Charts
 import com.coreman2200.ringstrings.domain.symbol.ISymbolStrata
+import com.coreman2200.ringstrings.domain.symbol.astralsymbol.AstralStrata
+import com.coreman2200.ringstrings.domain.symbol.astralsymbol.grouped.Aspects
+import com.coreman2200.ringstrings.domain.symbol.astralsymbol.grouped.CelestialBodies
+import com.coreman2200.ringstrings.domain.symbol.astralsymbol.grouped.Houses
+import com.coreman2200.ringstrings.domain.symbol.astralsymbol.grouped.Zodiac
+import com.coreman2200.ringstrings.domain.symbol.astralsymbol.impl.*
+import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.BaseNumbers
+import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.DerivedKarmicDebts
+import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.GroupedNumbers
+import com.coreman2200.ringstrings.domain.symbol.numbersymbol.impl.BaseNumberSymbol
+import com.coreman2200.ringstrings.domain.symbol.numbersymbol.impl.DerivedNumberSymbol
+import com.coreman2200.ringstrings.domain.symbol.numbersymbol.impl.GroupedNumberSymbol
+import com.coreman2200.ringstrings.domain.symbol.numbersymbol.impl.NumerologicalChart
+import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.INumberSymbolID
+import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbol
 
 /**
  * NumberStrata
@@ -17,5 +34,17 @@ import com.coreman2200.ringstrings.domain.symbol.ISymbolStrata
  */
 enum class NumberStrata : ISymbolStrata {
     BASENUMBER, DERIVEDNUMBER, // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    GROUPEDNUMBERS, CHARTEDNUMBERS, RELATIONALNUMBERMAP
+    GROUPEDNUMBERS, CHARTEDNUMBERS, RELATIONALNUMBERMAP;
+
+    override fun produce(data: SymbolData): ISymbol {
+        return when (this) {
+            BASENUMBER -> BaseNumberSymbol(BaseNumbers.valueOf(data.symbolid))
+            DERIVEDNUMBER -> DerivedNumberSymbol(INumberSymbolID.id(data.value.toInt()))
+            GROUPEDNUMBERS -> GroupedNumberSymbol(GroupedNumbers.valueOf(data.symbolid))
+            CHARTEDNUMBERS -> NumerologicalChart()
+            // TODO RELATIONALNUMBERMAP
+            else -> BaseNumberSymbol(BaseNumbers.valueOf(data.symbolid))
+
+        }
+    }
 }

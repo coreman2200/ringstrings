@@ -1,5 +1,7 @@
 package com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces
 
+import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.BaseNumbers
+import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.DerivedKarmicDebts
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
 
 /**
@@ -18,6 +20,12 @@ import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
 
 interface INumberSymbolID : ISymbolID {
     fun value(): Int
+
+    companion object {
+        private val karmicDebts = DerivedKarmicDebts.values().associateBy { it.value() }
+        private val baseNumbers = BaseNumbers.values().associateBy { it.value() }
+        fun id(value: Int): INumberSymbolID = karmicDebts[value] ?: baseNumbers[value] ?: BaseNumbers.ZERO
+    }
 }
 
 interface IGroupedNumberSymbolID : ISymbolID

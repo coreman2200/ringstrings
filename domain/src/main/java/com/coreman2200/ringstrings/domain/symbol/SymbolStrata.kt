@@ -1,8 +1,11 @@
 package com.coreman2200.ringstrings.domain.symbol
 
+import com.coreman2200.ringstrings.domain.SymbolData
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.AstralStrata
 import com.coreman2200.ringstrings.domain.symbol.entitysymbol.EntityStrata
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.NumberStrata
+import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbol
+import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
 
 /**
  * SymbolStrata
@@ -18,7 +21,9 @@ import com.coreman2200.ringstrings.domain.symbol.numbersymbol.NumberStrata
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-interface ISymbolStrata
+interface ISymbolStrata {
+    fun produce(data:SymbolData): ISymbol? = null
+}
 
 enum class SymbolStrata(vararg stratas: Enum<*>) : ISymbolStrata {
     NONE,
@@ -29,7 +34,6 @@ enum class SymbolStrata(vararg stratas: Enum<*>) : ISymbolStrata {
     ),
     GROUP(
         NumberStrata.GROUPEDNUMBERS,
-        AstralStrata.ASTRALGROUP,
         AstralStrata.ASTRALZODIAC,
         AstralStrata.ASTRALHOUSE
     ),
