@@ -23,17 +23,22 @@ import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.INumber
  */
 class DerivedNumberSymbol(
     override val id: INumberSymbolID,
-    override val leftDerived: BaseNumbers,
-    override val rightDerived: BaseNumbers,
     override val value: Int = id.value()
 ) : CompositeSymbol<INumberSymbol>(
     id,
     strata = NumberStrata.DERIVEDNUMBER
 ),
     IDerivedNumberSymbol {
+    override val leftDerived: INumberSymbolID
+        get() = (children.getOrNull(0)?.id ?: BaseNumbers.ZERO) as INumberSymbolID
+    override val rightDerived: INumberSymbolID
+        get() = (children.getOrNull(1)?.id ?: BaseNumbers.ZERO) as INumberSymbolID
 
-    init {
-        add(BaseNumberSymbol(leftDerived))
-        add(BaseNumberSymbol(rightDerived))
+
+    fun add(left:BaseNumbers, right:BaseNumbers) {
+        clear()
+        // TODO Danger constructing more symbols?
+        add(BaseNumberSymbol(left))
+        add(BaseNumberSymbol(right))
     }
 }

@@ -22,9 +22,7 @@ import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 class AspectedSymbols(
-    override val id: Aspects,
-    val s1: CelestialBodySymbol,
-    val s2: CelestialBodySymbol
+    override val id: Aspects
 ) : CompositeSymbol<IAstralSymbol>(
     id,
     name = id.toString(),
@@ -34,12 +32,13 @@ class AspectedSymbols(
     override var groupid: ISymbolID? = null
     override var houseid: ISymbolID? = null
     override var zodiacid: ISymbolID? = null
-    override val degree: Double = getDegreeBetweenSymbols(id, s1, s2)
+    override val degree: Double
+    get() = getDegreeBetweenSymbols(id, children[0], children[1])
 
     private fun getDegreeBetweenSymbols(
         aspect: Aspects,
-        s1: CelestialBodySymbol,
-        s2: CelestialBodySymbol
+        s1: IAstralSymbol,
+        s2: IAstralSymbol
     ): Double {
         val deg1: Double = s1.degree
         val deg2: Double = s2.degree
@@ -48,12 +47,9 @@ class AspectedSymbols(
         return wrapDegree(min + deghalf)
     }
 
-    init {
-        s1.groupid = id
-        s2.groupid = id
-        s1.related[s2.id] = s2
-        s2.related[s1.id] = s1
-        add(s1)
-        add(s2)
+    override fun add(symbol: IAstralSymbol) {
+        super.add(symbol)
+        symbol.groupid = id
+        symbol.related[id] = this
     }
 }

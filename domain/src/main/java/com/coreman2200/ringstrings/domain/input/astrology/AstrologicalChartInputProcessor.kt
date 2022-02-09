@@ -31,12 +31,13 @@ class AstrologicalChartInputProcessor(
     fun produceAstrologicalChart(profile: IProfileData, type: Charts): IAstralChartSymbol {
         swisseph.produceNatalAstralMappingsForProfile(profile)
         val chart: IAstralChartSymbol = AstrologicalChart(type, swisseph.cuspOffset)
-        chart.profileid = profile.id
-
         chart.add(swisseph.producedZodiacMap())
         chart.add(swisseph.producedHouseMap())
-        chart.add(swisseph.producedCelestialBodyMap())
         AspectsProcessor(chart, settings).calcAspects()
+        chart.getAll().forEach {
+            it.profileid = profile.id
+            it.chartid = chart.id
+        }
 
         return chart
     }

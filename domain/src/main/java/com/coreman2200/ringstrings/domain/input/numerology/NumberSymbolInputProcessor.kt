@@ -98,7 +98,9 @@ open class NumberSymbolInputProcessor(protected val settings: NumerologySettings
         val root1 = BaseNumbers.values()[derivedFromValues[0]]
         val root2 = BaseNumbers.values()[derivedFromValues[1]]
         assert(derivedFromValues[0] != 0)
-        return DerivedNumberSymbol(derivedNumber, root1, root2, value)
+        val symbol = DerivedNumberSymbol(derivedNumber, value)
+        symbol.add(root1,root2)
+        return symbol
     }
 
     private val baseNumbers: List<Int> = BaseNumbers.values().map { it.value() }

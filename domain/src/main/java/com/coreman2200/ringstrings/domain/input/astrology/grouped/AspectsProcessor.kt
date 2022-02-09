@@ -58,7 +58,9 @@ class AspectsProcessor(
             val min = aspectValueMap.minWithOrNull(compareBy { abs(diff - it.key) })
 
             if (min != null && checkValueWithinOrbOfAspect(min.key, diff, orb)) {
-                val aspect = AspectedSymbols(min.value, body as CelestialBodySymbol, elem as CelestialBodySymbol)
+                val aspect = AspectedSymbols(min.value)
+                aspect.add(body)
+                aspect.add(elem)
                 list.add(aspect)
             }
         }
