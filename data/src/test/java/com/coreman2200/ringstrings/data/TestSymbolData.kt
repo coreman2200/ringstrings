@@ -13,6 +13,7 @@ import com.coreman2200.ringstrings.data.room_common.dao.SymbolDescriptionDao
 import com.coreman2200.ringstrings.data.room_common.entity.SymbolDetailEntity
 import com.coreman2200.ringstrings.domain.*
 import com.coreman2200.ringstrings.domain.input.astrology.AstrologicalChartInputProcessor
+import com.coreman2200.ringstrings.domain.input.numerology.NumerologicalChartProcessor
 import com.coreman2200.ringstrings.domain.swisseph.ISwissEphemerisManager
 import com.coreman2200.ringstrings.domain.swisseph.SwissEphemerisManager
 import com.coreman2200.ringstrings.domain.symbol.Charts
@@ -20,7 +21,9 @@ import com.coreman2200.ringstrings.domain.symbol.astralsymbol.grouped.Houses
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.impl.HouseSymbol
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IAstralChartSymbol
 import com.coreman2200.ringstrings.domain.symbol.entitysymbol.grouped.TagSymbols
+import com.coreman2200.ringstrings.domain.symbol.entitysymbol.impl.ProfileSymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.IChartedSymbols
+import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ICompositeSymbol
 import com.squareup.wire.internal.newMutableList
 import com.squareup.wire.internal.newMutableMap
 import kotlinx.coroutines.*
@@ -56,9 +59,11 @@ class TestSymbolData {
     private val profile = MockDefaultDataBundles.testProfileBundleCoryH
     private val context: Context = ApplicationProvider.getApplicationContext<Application>()
     private val astsettings: AstrologySettings = MockDefaultDataBundles.produceDefaultAppSettingsBundle(context).astro
+    private val numsettings: NumerologySettings = MockDefaultDataBundles.produceDefaultAppSettingsBundle(context).num
     private val swisseph: ISwissEphemerisManager = SwissEphemerisManager(astsettings)
 
     private lateinit var chart: IChartedSymbols<*>
+    private lateinit var mockProfileSymbol: ProfileSymbol
     private lateinit var symbolDao: SymbolDao
     private lateinit var detailDao: SymbolDescriptionDao
     private lateinit var db: RSDatabase
@@ -78,13 +83,42 @@ class TestSymbolData {
         symbolDao = db.symbolDao()
         detailDao = db.detailDao()
         datasource = SymbolDatabaseSource(symbolDao)
-        val testProcessor = AstrologicalChartInputProcessor(astsettings, swisseph)
-        chart = testProcessor.produceAstrologicalChart(profile, Charts.ASTRAL_NATAL)
+
+        mockProfileSymbol = getProfileCharts()
 
         runBlocking {
             detailDao.insertAll(getDescriptions())
         }
 
+    }
+
+    private suspend fun initStoreAllChartSymbols():List<SymbolData> {
+        val list:List<SymbolData> = mockProfileSymbol.getAll().map { it.toData() }
+        datasource.storeSymbolData(SymbolStoreRequest(data = list))
+        return list
+    }
+
+    private fun getProfileCharts(): ProfileSymbol {
+        val profileSymbol = ProfileSymbol(profile.id)
+        profileSymbol.add(getAstralNatalChart())
+        profileSymbol.add(getAstralCurrentChart())
+        profileSymbol.add(getNumberChart())
+        return profileSymbol
+    }
+
+    private fun getAstralNatalChart(): IChartedSymbols<*> {
+        val testProcessor = AstrologicalChartInputProcessor(astsettings)
+        return testProcessor.produceAstrologicalChart(profile, Charts.ASTRAL_NATAL)
+    }
+
+    private fun getAstralCurrentChart(): IChartedSymbols<*> {
+        val testProcessor = AstrologicalChartInputProcessor(astsettings)
+        return testProcessor.produceAstrologicalChart(profile, Charts.ASTRAL_CURRENT)
+    }
+
+    private fun getNumberChart(): IChartedSymbols<*> {
+        val testProcessor = NumerologicalChartProcessor(profile, numsettings)
+        return testProcessor.produceGroupedNumberSymbolsForProfile()
     }
 
     private fun getDescriptions():List<SymbolDetailEntity> {
@@ -113,12 +147,6 @@ class TestSymbolData {
             println("${it.id}: ${it.description}")
             assert(it.description.isNotEmpty())
         }
-    }
-
-    private suspend fun initStoreAllChartSymbols():List<SymbolData> {
-        val list:List<SymbolData> = chart.getAll().map { it.toData() }
-        datasource.storeSymbolData(SymbolStoreRequest(data = list))
-        return list
     }
 
     @Test
@@ -250,6 +278,26 @@ class TestSymbolData {
                     println(it)
                     assert(verify.contains(it))
                 }
+            }
+        }
+    }
+
+    @Test
+    fun `Assert Symbol Qualities are aggregated for symbol groupings`() {
+        runBlocking {
+            val list = initStoreAllChartSymbols()
+
+            val ss = SymbolData(
+                profileid = profile.id
+            )
+
+            runBlocking {
+                val response = datasource.fetchSymbolData(SymbolDataRequest(ss))
+                assert(response.symbols.isNotEmpty())
+                val symbol = response.toSymbol() as ICompositeSymbol<*>
+                val qualites = symbol.qualities()
+                assert(qualites.isNotEmpty())
+                qualites.forEach { println("${it.key}(${it.value.size} elems): ${it.value.distinct().joinToString()}") }
             }
         }
     }
