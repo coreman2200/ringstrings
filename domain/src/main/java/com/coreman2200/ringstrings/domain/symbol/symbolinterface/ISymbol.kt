@@ -1,6 +1,7 @@
 package com.coreman2200.ringstrings.domain.symbol.symbolinterface
 
 import com.coreman2200.ringstrings.domain.SymbolData
+import com.coreman2200.ringstrings.domain.SymbolDescription
 import com.coreman2200.ringstrings.domain.symbol.ISymbolStrata
 import com.coreman2200.ringstrings.domain.symbol.SymbolStrata
 import com.coreman2200.ringstrings.domain.symbol.entitysymbol.grouped.TagSymbols
@@ -26,6 +27,7 @@ interface ISymbol {
     var profileid:Int
     var chartid:ISymbolID?
     var groupid:ISymbolID?
+    var detail:SymbolDescription?
     val related:MutableMap<ISymbolID,ISymbol>
 
 
@@ -34,7 +36,7 @@ interface ISymbol {
     fun get(id: ISymbolID): ISymbol?
     fun value():Double
     fun flag():Boolean = false
-    fun qualities():SortedMap<TagSymbols, Int>
+    fun qualities():Map<TagSymbols, MutableList<ISymbolID>> = detail?.qualities?.associate { Pair(it, mutableListOf(id)) }?: emptyMap()
     fun toData():SymbolData = SymbolData(
         profileid = profileid,
         chartid = chartid.toString(),

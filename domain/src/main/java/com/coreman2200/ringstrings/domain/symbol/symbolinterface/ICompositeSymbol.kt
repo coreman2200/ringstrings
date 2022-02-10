@@ -1,7 +1,7 @@
 package com.coreman2200.ringstrings.domain.symbol.symbolinterface
 
-import com.coreman2200.ringstrings.domain.symbol.SymbolModel
-import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IAstralSymbol
+import com.coreman2200.ringstrings.domain.symbol.entitysymbol.grouped.TagSymbols
+import java.util.*
 
 /**
  * ICompositeSymbol
@@ -24,6 +24,29 @@ interface ICompositeSymbol<T : ISymbol> : ISymbol {
     fun clear()
     fun getAll():List<ISymbol>
     override fun size():Int = getAll().size
+
+    override fun qualities(): Map<TagSymbols, MutableList<ISymbolID>> {
+        val self = detail?.qualities?.associate { Pair(it, mutableListOf(id)) } ?: mapOf()
+        val map = mutableMapOf<TagSymbols, MutableList<ISymbolID>>().apply {
+            self.forEach { (tagSymbols, list) ->
+                merge(tagSymbols,list) { a: MutableList<ISymbolID>, b: MutableList<ISymbolID> ->
+                    a.addAll(b)
+                    return@merge a
+                }
+            }
+
+            get().forEach { iSymbol ->
+                iSymbol.qualities().forEach { (tagSymbols, list) ->
+                    merge(tagSymbols,list) { a: MutableList<ISymbolID>, b: MutableList<ISymbolID> ->
+                        a.addAll(b)
+                        return@merge a
+                    }
+                }
+            }
+
+        }
+        return map.toList().sortedByDescending { it.second.size }.toMap()
+    }
 
 }
 

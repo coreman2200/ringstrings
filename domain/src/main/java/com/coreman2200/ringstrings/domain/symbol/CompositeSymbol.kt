@@ -67,7 +67,4 @@ abstract class CompositeSymbol<T : ISymbol>(
         }
     }
 
-    override fun qualities(): SortedMap<TagSymbols, Int> {
-        TODO("Not yet implemented")
-    }
 }
