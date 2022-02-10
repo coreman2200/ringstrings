@@ -66,34 +66,55 @@ data class SymbolDataResponse(
     val symbols:List<SymbolData>
 )
 
-fun SymbolDataResponse.toSymbol(): ISymbol? {
-    val symbolMap: MutableMap<String, ISymbol> = mutableMapOf()
-    val data = symbols.sortedBy { it.type }
+fun SymbolDataResponse.toSymbol(): ISymbol {
+    val symbolMap: MutableMap<Int, ISymbol> = mutableMapOf()
+    val instanceMap: MutableMap<String, MutableList<Int>> = mutableMapOf()
 
-    data.forEach { symbolData ->
-        val strata = SymbolStrata.realStrataFor(symbolData.strata)
-        val children = symbolData.children
-        val symbol = strata.produce(symbolData)
-        if (symbol != null) {
-            symbol.profileid = symbolData.profileid
-            symbol.chartid = Charts.valueOf(symbolData.chartid)
-            symbolMap[symbol.name] = symbol
+    val profileCharts = symbols.sortedBy { it.type }.groupBy { Pair<Int, String?>(it.profileid, it.chartid) }
+    profileCharts.forEach {data ->
+        data.value.forEach { symbolData ->
 
-            if (symbol is ICelestialBodySymbol) { symbol.isRetrograde = symbolData.flag }
+            val strata = SymbolStrata.realStrataFor(symbolData.strata)
+            val children = symbolData.children
+            val symbol = strata.produce(symbolData)
+            if (symbol != null) {
+                symbol.profileid = symbolData.profileid
+                symbol.chartid = Charts.valueOf(symbolData.chartid)
+                symbol.detail = symbolData.details
 
-            children.forEach {
-                if (it.isEmpty()) return@forEach
-                val grouped = symbol as ICompositeSymbol<ISymbol>
-                val child = symbolMap[it]
-                if (child != null) {
-                    grouped.add(child)
+                val list = instanceMap.getOrDefault(symbol.name, mutableListOf())
+                list.add(symbolData.instanceid)
+                instanceMap[symbol.name] = list
+
+                symbolMap[symbolData.instanceid] = symbol
+
+                if (symbol is ICelestialBodySymbol) {
+                    symbol.isRetrograde = symbolData.flag
                 }
-            }
 
+                children.forEach { elem ->
+                    if (elem.isEmpty()) return@forEach
+                    val grouped = symbol as ICompositeSymbol<ISymbol>
+                    val instances = instanceMap[elem]
+                    val ii = instances?.getOrNull(0)
+                    if (ii != null) {
+                        val child = symbolMap[ii]
+                        if (child != null) {
+                            grouped.add(child)
+                        }
+                        if (instances.size > 1) {
+                            instances.remove(ii)
+                            instanceMap[elem] = instances
+                        }
+                    }
+                }
+
+            }
         }
+
     }
 
-    return symbolMap[data.last().symbolid]
+    return symbolMap.values.last()
 }
 
 data class SymbolData(
