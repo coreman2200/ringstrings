@@ -78,17 +78,17 @@ class DataSourceModule {
         RSDatabase.getInstance(context)
 
     @Provides
-    fun provideSymbolDao(db: RSDatabase) : SymbolDao {
+    fun provideSymbolDao(db: RSDatabase): SymbolDao {
         return db.symbolDao()
     }
 
     @Provides
-    fun provideSymbolDetailDao(db: RSDatabase) : SymbolDescriptionDao {
+    fun provideSymbolDetailDao(db: RSDatabase): SymbolDescriptionDao {
         return db.detailDao()
     }
 
     @Provides
-    fun provideProfileDao(db: RSDatabase) : ProfileDao {
+    fun provideProfileDao(db: RSDatabase): ProfileDao {
         return db.profileDao()
     }
 

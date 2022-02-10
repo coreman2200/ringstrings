@@ -25,9 +25,7 @@ import arrow.core.Either
 import arrow.core.left
 import arrow.core.right
 import com.coreman2200.ringstrings.data.datasource.ProfileDataSource
-import com.coreman2200.ringstrings.data.datasource.SymbolDataSource
 import com.coreman2200.ringstrings.domain.*
-import java.net.SocketTimeoutException
 
 object ProfileDataRepository :
     DomainLayerContract.Data.ProfileDataRepository<ProfileDataResponse> {
@@ -37,7 +35,7 @@ object ProfileDataRepository :
     override suspend fun fetchProfile(request: ProfileDataRequest): Either<Failure, ProfileDataResponse> =
         try {
             val response = profileDataSource.fetchProfileData(request = request)
-                response.takeIf { it.profile.id != 0 }?.right() ?: run { Failure.NoData().left() }
+            response.takeIf { it.profile.id != 0 }?.right() ?: run { Failure.NoData().left() }
         } catch (e: Exception) {
             Failure.NoData(e.localizedMessage ?: "No Data Found").left()
         }
@@ -49,5 +47,4 @@ object ProfileDataRepository :
         } catch (e: Exception) {
             Failure.NoData(e.localizedMessage ?: "Data Not Stored").left()
         }
-
 }

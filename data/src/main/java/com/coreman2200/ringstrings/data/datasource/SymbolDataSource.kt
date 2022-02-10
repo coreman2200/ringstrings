@@ -38,7 +38,7 @@ interface SymbolDataSource {
     suspend fun storeSymbolData(request: SymbolStoreRequest)
 }
 
-class SymbolDatabaseSource @Inject constructor(val dao:SymbolDao) : SymbolDataSource {
+class SymbolDatabaseSource @Inject constructor(val dao: SymbolDao) : SymbolDataSource {
     override suspend fun fetchSymbolData(request: SymbolDataRequest): SymbolDataResponse {
         val symbols: Flow<List<SymbolAndDetails>>
         val data = request.data
@@ -75,7 +75,7 @@ class SymbolDatabaseSource @Inject constructor(val dao:SymbolDao) : SymbolDataSo
         return SymbolDataResponse(symbols = elems.map { it.toData() })
     }
 
-    private fun SymbolAndDetails.toData() : SymbolData = SymbolData(
+    private fun SymbolAndDetails.toData(): SymbolData = SymbolData(
         instanceid = symbol.instanceid,
         profileid = symbol.profileid,
         chartid = symbol.chartid,
@@ -90,7 +90,7 @@ class SymbolDatabaseSource @Inject constructor(val dao:SymbolDao) : SymbolDataSo
         details = description?.toData()
     )
 
-    private fun SymbolData.toEntity() : SymbolEntity = SymbolEntity(
+    private fun SymbolData.toEntity(): SymbolEntity = SymbolEntity(
         instanceid = this.instanceid,
         profileid = this.profileid,
         chartid = this.chartid,
@@ -108,5 +108,4 @@ class SymbolDatabaseSource @Inject constructor(val dao:SymbolDao) : SymbolDataSo
         val args = request.data.map { it.toEntity() }.toTypedArray()
         dao.insertAll(*args)
     }
-
 }

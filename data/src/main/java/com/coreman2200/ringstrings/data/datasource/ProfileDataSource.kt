@@ -37,12 +37,11 @@ interface ProfileDataSource {
 
     suspend fun fetchProfileData(request: ProfileDataRequest): ProfileDataResponse
     suspend fun storeProfileData(request: ProfileDataRequest): ProfileDataResponse
-
 }
 
 class ProfileDatabaseSource @Inject constructor(val dao: ProfileDao) : ProfileDataSource {
     override suspend fun fetchProfileData(request: ProfileDataRequest): ProfileDataResponse {
-        val profile = dao.get (request.id).last()
+        val profile = dao.get(request.id).last()
         return ProfileDataResponse(profile = profile.toData())
     }
 
@@ -51,7 +50,7 @@ class ProfileDatabaseSource @Inject constructor(val dao: ProfileDao) : ProfileDa
         return ProfileDataResponse(profile = ProfileData(id = saved))
     }
 
-    private fun ProfileEntity.toData() : ProfileData = ProfileData(
+    private fun ProfileEntity.toData(): ProfileData = ProfileData(
         id = id,
         name = name,
         displayName = displayName,
@@ -60,34 +59,33 @@ class ProfileDatabaseSource @Inject constructor(val dao: ProfileDao) : ProfileDa
 
     )
 
-    private fun ProfileDataRequest.toEntity() : ProfileEntity = ProfileEntity(
+    private fun ProfileDataRequest.toEntity(): ProfileEntity = ProfileEntity(
         id = id,
         name = name,
         displayName = displayName,
         birthPlacement = birthPlacement.toEntity(),
         currentPlacement = currentPlacement?.toEntity(),
 
-        )
+    )
 
-    private fun PlacementEntity.toData() : GeoPlacement = GeoPlacement(
+    private fun PlacementEntity.toData(): GeoPlacement = GeoPlacement(
         location = location.toData(),
         timestamp = timestamp,
         timezone = timezone
     )
-    private fun GeoPlacement.toEntity() : PlacementEntity = PlacementEntity(
+    private fun GeoPlacement.toEntity(): PlacementEntity = PlacementEntity(
         location = location.toEntity(),
         timestamp = timestamp,
         timezone = timezone
     )
-    private fun GeoLocation.toEntity() : LocationEntity = LocationEntity(
+    private fun GeoLocation.toEntity(): LocationEntity = LocationEntity(
         lat = lat,
         lon = lon,
         alt = alt
     )
-    private fun LocationEntity.toData() : GeoLocation = GeoLocation(
+    private fun LocationEntity.toData(): GeoLocation = GeoLocation(
         lat = lat,
         lon = lon,
         alt = alt
     )
-
 }

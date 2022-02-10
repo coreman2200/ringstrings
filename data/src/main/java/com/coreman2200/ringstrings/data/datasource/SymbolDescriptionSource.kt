@@ -21,7 +21,6 @@
  */
 package com.coreman2200.ringstrings.data.datasource
 
-import com.coreman2200.ringstrings.data.room_common.dao.ProfileDao
 import com.coreman2200.ringstrings.data.room_common.dao.SymbolDescriptionDao
 import com.coreman2200.ringstrings.data.room_common.entity.*
 import com.coreman2200.ringstrings.domain.*
@@ -39,13 +38,12 @@ interface SymbolDescriptionSource {
 
 class SymbolDescriptionDBSource @Inject constructor(val dao: SymbolDescriptionDao) : SymbolDescriptionSource {
     override suspend fun fetchDescriptionData(request: SymbolDescriptionRequest): SymbolDescriptionResponse {
-        val desc = dao.getSymbolDescription (request.symbolid).last()
-        return SymbolDescriptionResponse( description = desc.toData() )
+        val desc = dao.getSymbolDescription(request.symbolid).last()
+        return SymbolDescriptionResponse(description = desc.toData())
     }
 
     override suspend fun storeSymbolDescription(vararg request: SymbolDescriptionRequest) {
         val args = request.map { it.toEntity() }.toList()
         dao.insertAll(args)
     }
-
 }

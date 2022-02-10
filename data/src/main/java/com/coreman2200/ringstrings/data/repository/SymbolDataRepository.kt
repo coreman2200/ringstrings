@@ -44,6 +44,5 @@ object SymbolDataRepository :
 
     override suspend fun storeSymbol(request: SymbolStoreRequest) {
         symbolDataSource.storeSymbolData(request)
-
     }
 }
