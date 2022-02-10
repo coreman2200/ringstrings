@@ -35,10 +35,20 @@ class DerivedNumberSymbol(
         get() = (children.getOrNull(1)?.id ?: BaseNumbers.ZERO) as INumberSymbolID
 
 
-    fun add(left:BaseNumbers, right:BaseNumbers) {
+    fun add(left:INumberSymbol, right:INumberSymbol) {
         clear()
-        // TODO Danger constructing more symbols?
-        add(BaseNumberSymbol(left))
-        add(BaseNumberSymbol(right))
+        add(left)
+        add(right)
     }
+
+    override fun add(symbol: INumberSymbol) {
+        super.add(symbol)
+        symbol.groupid = id
+        related[symbol.id] = symbol
+        if (children.size == 2) {
+            children[0].related[rightDerived] = children[1]
+            children[1].related[leftDerived] = children[0]
+        }
+    }
+
 }

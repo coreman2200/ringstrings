@@ -20,6 +20,8 @@ import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
 
 interface INumberSymbolID : ISymbolID {
     fun value(): Int
+    fun isMasterNumber(): Boolean = false
+
 
     companion object {
         private val karmicDebts = DerivedKarmicDebts.values().associateBy { it.value() }

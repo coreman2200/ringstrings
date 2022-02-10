@@ -23,7 +23,8 @@ import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
  */
 
 open class GroupedNumberSymbol(
-    override val id: IGroupedNumberSymbolID
+    override val id: IGroupedNumberSymbolID,
+    override val value: Int = 0
 ) : CompositeSymbol<INumberSymbol>(
     id,
     strata = NumberStrata.GROUPEDNUMBERS
@@ -34,21 +35,21 @@ open class GroupedNumberSymbol(
         return related[id] as INumberSymbol
     }
 
-    override fun add(group: IGroupedNumberSymbolID, symbol: INumberSymbol) {
+    override fun add(symbol: INumberSymbol) {
+        super.add(symbol)
         symbol.groupid = id
-        symbol.chartid = chartid
-        symbol.profileid = profileid
-        related[group] = symbol
-        add(symbol)
+        related[symbol.id] = symbol
+    }
+
+    override fun add(group: IGroupedNumberSymbolID, symbol: INumberSymbol) {
+        val gs = GroupedNumberSymbol(group,symbol.value)
+        gs.add(symbol)
+        add(gs)
     }
 
     override fun add(map: Map<IGroupedNumberSymbolID, INumberSymbol>) {
-        related.putAll(map)
-        map.values.forEach {
-            it.groupid = id
-            it.chartid = chartid
-            it.profileid = profileid
-            add(it)
+        map.forEach {
+            add(it.key, it.value)
         }
     }
 }

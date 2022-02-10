@@ -6,6 +6,7 @@ import com.coreman2200.ringstrings.domain.input.numerology.numbersystem.INumberS
 import com.coreman2200.ringstrings.domain.input.numerology.numbersystem.NumberSystemType
 import com.coreman2200.ringstrings.domain.symbol.SymbolModel
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.BaseNumbers
+import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.DerivedKarmicDebts
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.impl.BaseNumberSymbol
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.impl.DerivedNumberSymbol
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.impl.NumberSymbol
@@ -56,7 +57,6 @@ open class NumberSymbolInputProcessor(protected val settings: NumerologySettings
     override fun convertValueToNumberSymbol(value: Int): INumberSymbol {
         resetDerivedFromValues()
         val singularized = singularizeValue(value)
-        // System.out.println("From: " + value + " => " + singularized + "(reduced)");
         return produceNumberSymbolForValue(singularized)
     }
 
@@ -66,49 +66,38 @@ open class NumberSymbolInputProcessor(protected val settings: NumerologySettings
     }
 
     private fun derivedFromValue(value: Int) {
-        assert(digitsInValue(value) == 2)
         // Left/Right flip-flop..
         derivedFromValues[0] = getDigitOfValueInNthPlace(value, 1)
         derivedFromValues[1] = getDigitOfValueInNthPlace(value, 0)
     }
 
     private fun produceNumberSymbolForValue(value: Int): INumberSymbol {
-        return if (derivedFromValues[0] == 0) // if there is no left digit..
+        // if there is no left digit.. or right is zero
+        return if (derivedFromValues[0] == 0 || derivedFromValues[1] == 0)
             produceBaseNumberSymbolForValue(value) else produceDerivedNumberSymbolForValue(value)
     }
 
-    private val masterNumberMap:Map<Int, BaseNumbers> = mapOf(
-        Pair(11,BaseNumbers.ELEVEN),
-        Pair(22,BaseNumbers.TWENTYTWO),
-        Pair(33,BaseNumbers.THIRTYTHREE),
-    )
-
     private fun produceBaseNumberSymbolForValue(value: Int): BaseNumberSymbol {
-        if (value > 9) {
-            val num = masterNumberMap[value] ?: BaseNumbers.ZERO
-            assert(num != BaseNumbers.ZERO)
-            return BaseNumberSymbol(num)
-        }
-        return BaseNumberSymbol(BaseNumbers.values()[value])
+        val id = INumberSymbolID.id(value) as BaseNumbers
+        return BaseNumberSymbol(id)
     }
 
-    // TODO Karmic Lessons?
     private fun produceDerivedNumberSymbolForValue(value: Int): DerivedNumberSymbol {
-        val derivedNumber: INumberSymbolID = BaseNumbers.values()[value]
-        val root1 = BaseNumbers.values()[derivedFromValues[0]]
-        val root2 = BaseNumbers.values()[derivedFromValues[1]]
-        assert(derivedFromValues[0] != 0)
+        val derivedNumber = INumberSymbolID.id(value)
+        val root1 = BaseNumberSymbol(INumberSymbolID.id(derivedFromValues[0]) as BaseNumbers)
+        val root2 = BaseNumberSymbol(INumberSymbolID.id(derivedFromValues[1]) as BaseNumbers)
         val symbol = DerivedNumberSymbol(derivedNumber, value)
         symbol.add(root1,root2)
         return symbol
     }
 
-    private val baseNumbers: List<Int> = BaseNumbers.values().map { it.value() }
-    private fun isBaseNumber(value: Int): Boolean = baseNumbers.contains(value)
+    private fun isBaseNumber(value: Int): Boolean =
+        INumberSymbolID.id(value) is BaseNumbers
 
     protected fun singularizeValue(value: Int): Int {
         var singularized = value
-        if (!isBaseNumber(value)) {
+        val id = INumberSymbolID.id(value)
+        if (id == BaseNumbers.ZERO || id is DerivedKarmicDebts) {
             singularized = addDigitsOfValue(value)
             if (digitsInValue(value) == 2) derivedFromValue(value)
             return singularizeValue(singularized)

@@ -1,7 +1,10 @@
 package com.coreman2200.ringstrings.domain.symbol.numbersymbol.impl
 
 import com.coreman2200.ringstrings.domain.symbol.Charts
+import com.coreman2200.ringstrings.domain.symbol.ISymbolStrata
 import com.coreman2200.ringstrings.domain.symbol.SymbolModel
+import com.coreman2200.ringstrings.domain.symbol.SymbolStrata
+import com.coreman2200.ringstrings.domain.symbol.numbersymbol.NumberStrata
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.IGroupedNumberSymbol
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.INumberChartSymbol
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.INumberSymbol
@@ -19,17 +22,9 @@ import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.INumber
  * You may obtain a copy of the GPLv2 License at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
-class NumerologicalChart() : GroupedNumberSymbol(id = Charts.NUMEROLOGICAL), INumberChartSymbol {
-    override fun add(symbol: INumberSymbol) {
-        super.add(symbol)
-        if (symbol is IGroupedNumberSymbol) { related[symbol.id] = symbol }
-    }
-
-    override fun add(symbols: Collection<INumberSymbol>) {
-        super.add(symbols)
-        val groups = symbols.filterIsInstance<IGroupedNumberSymbol>().associateBy { it.id }
-        related.putAll(groups)
-    }
+class NumerologicalChart() : GroupedNumberSymbol(id = Charts.NUMEROLOGICAL,
+), INumberChartSymbol {
+    override val strata: ISymbolStrata = NumberStrata.CHARTEDNUMBERS
 
     init {
         chartid = id

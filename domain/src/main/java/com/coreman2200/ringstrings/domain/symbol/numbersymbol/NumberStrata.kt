@@ -40,7 +40,7 @@ enum class NumberStrata : ISymbolStrata {
         return when (this) {
             BASENUMBER -> BaseNumberSymbol(BaseNumbers.valueOf(data.symbolid))
             DERIVEDNUMBER -> DerivedNumberSymbol(INumberSymbolID.id(data.value.toInt()))
-            GROUPEDNUMBERS -> GroupedNumberSymbol(GroupedNumbers.valueOf(data.symbolid))
+            GROUPEDNUMBERS -> GroupedNumberSymbol(GroupedNumbers.realGroup(data.symbolid))
             CHARTEDNUMBERS -> NumerologicalChart()
             // TODO RELATIONALNUMBERMAP
             else -> BaseNumberSymbol(BaseNumbers.valueOf(data.symbolid))

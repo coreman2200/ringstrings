@@ -36,7 +36,13 @@ class NumerologicalChartProcessor(
             GroupedNumbers.PINNACLES
         )
         for (type in groupedSymbols) {
-            chart.add(type, getGroupedNumberSymbolsForType(type))
+            val grouped = getGroupedNumberSymbolsForType(type)
+            grouped.getAll().forEach {
+                it.chartid = chart.chartid
+                it.profileid = chart.profileid
+            }
+
+            chart.add(type, grouped)
         }
         return chart
     }

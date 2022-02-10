@@ -23,7 +23,7 @@ enum class BaseNumbers(
     EIGHT(8), NINE(9),
     ELEVEN(11), TWENTYTWO(22), THIRTYTHREE(33);
 
-    private val isMasterNumber: Boolean = baseValue > 9
+    override fun isMasterNumber(): Boolean = baseValue > 9
     override fun value(): Int {
         return baseValue
     }
