@@ -18,6 +18,9 @@ import java.util.*
  * You may obtain a copy of the GPLv2 License at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
+
+
+
 object MockDefaultDataBundles {
 
     private val DFLT_NUMBERSYSTEM = NumberSystemType.PYTHAGOREAN
@@ -30,15 +33,15 @@ object MockDefaultDataBundles {
     ///////////////////////////// Defined test profiles
     val testProfileBundleCoryH = produceCoryHProfileBundle()
     private fun produceCoryHProfileBundle(): ProfileData {
-        val fullname = produceProfileName("Cory", "Michael", "Higginbottom")
+        val fullname = listOf("Cory", "Michael", "Higginbottom")
         val displayname = "Cory H"
 
         // Describes birth placement
         val birthdate = GregorianCalendar(1986, 11, 23, 17, 36)
         val tz = TimeZone.getTimeZone("GMT-5")
         birthdate.timeZone = tz
-        val birthloc = produceProfileLocation(42.21, -71.03, 9.48)
-        val birthplacement = produceProfilePlacement(birthloc, birthdate.timeInMillis, tz.id)
+        val birthloc = GeoLocation(42.21, -71.03, 9.48)
+        val birthplacement = GeoPlacement(birthloc, birthdate.timeInMillis, tz.id)
         return ProfileData(
             id = generateProfileId(),
             name = fullname,
@@ -48,21 +51,6 @@ object MockDefaultDataBundles {
         )
     }
 
-    private fun produceProfileName(vararg segments: String): List<String> {
-        return listOf(*segments)
-    }
-
-    private fun produceProfileLocation(lat: Double, lon: Double, alt: Double): GeoLocation {
-        return GeoLocation(lat, lon, alt)
-    }
-
-    private fun produceProfilePlacement(
-        loc: GeoLocation,
-        timestamp: Long,
-        timezone: String
-    ): GeoPlacement {
-        return GeoPlacement(loc,timestamp, timezone)
-    }
 
     ////////////////////////////////////////// Randomly Generated Profiles
     fun generateRandomProfile(): ProfileData {
@@ -74,9 +62,8 @@ object MockDefaultDataBundles {
             )
     }
 
-    private fun generateProfileId(): Int {
-        return 1 + (Math.random() * (2 shl 20)).toInt()
-    }
+    fun generateProfileId(): Int = 1 + (Math.random() * (2 shl 20)).toInt()
+
 
     private fun generateRandomProfileName(): List<String> {
         val testName: MutableList<String> = ArrayList()
@@ -96,7 +83,7 @@ object MockDefaultDataBundles {
     private fun generateRandomTimeStamp(tz: TimeZone = TimeZone.getDefault()): Long {
         val mTestDate = GregorianCalendar(Locale.US)
         mTestDate.timeZone = tz
-        mTestDate[1700 + (Math.random() * 500).toInt(), (Math.random() * 12).toInt(), (Math.random() * 31).toInt(), (Math.random() * 24).toInt()] =
+        mTestDate[1800 + (Math.random() * 500).toInt(), (Math.random() * 12).toInt(), (Math.random() * 31).toInt(), (Math.random() * 24).toInt()] =
             (Math.random() * 60).toInt()
         return mTestDate.timeInMillis
     }
