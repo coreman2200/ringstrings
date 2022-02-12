@@ -35,7 +35,7 @@ class SwissephFileHandler() : // Inject application context
 
     override val isEphemerisDataAvailable: Boolean
         get() {
-            val filenames = arrayOf(_EPHEASTROIDDATA, _EPHEMOONDATA, _EPHEPLANETARYDATA)
+            val filenames = arrayOf(_EPHEASTROIDDATA1, _EPHEMOONDATA1, _EPHEPLANETARYDATA1)
             for (filename in filenames) {
                 val file = getFileFromEpheDirectoryNamed(filename)
                 if (!file.exists()) return false
@@ -50,25 +50,25 @@ class SwissephFileHandler() : // Inject application context
         )
 
     private fun moveEphemerisToDataStorage() {
+        val list = listOf(
+            Pair(_EPHEASTROIDDATA1, R.raw.seas_18),
+            Pair(_EPHEASTROIDDATA2, R.raw.seas_24),
+            Pair(_EPHEMOONDATA1, R.raw.semo_18),
+            Pair(_EPHEMOONDATA2, R.raw.semo_24),
+            Pair(_EPHEPLANETARYDATA1, R.raw.sepl_18),
+            Pair(_EPHEPLANETARYDATA2, R.raw.sepl_24),
+        )
+
         try {
-            writeInputStreamToFile(
-                getInputStreamForRawResource(R.raw.seas_18),
-                getFileFromEpheDirectoryNamed(
-                    _EPHEASTROIDDATA
+            list.forEach {
+                writeInputStreamToFile(
+                    getInputStreamForRawResource(it.second),
+                    getFileFromEpheDirectoryNamed(
+                        it.first
+                    )
                 )
-            )
-            writeInputStreamToFile(
-                getInputStreamForRawResource(R.raw.semo_18),
-                getFileFromEpheDirectoryNamed(
-                    _EPHEMOONDATA
-                )
-            )
-            writeInputStreamToFile(
-                getInputStreamForRawResource(R.raw.sepl_18),
-                getFileFromEpheDirectoryNamed(
-                    _EPHEPLANETARYDATA
-                )
-            )
+            }
+
         } catch (localException: Exception) {
             throw localException
         }
@@ -89,9 +89,12 @@ class SwissephFileHandler() : // Inject application context
         private const val _EPHEDIR = "ephe/"
 
         // Data files comprise Ephemeris for planetary, astroid, and moon datas between 1800 AD – 2399 AD
-        private const val _EPHEASTROIDDATA = "seas_18.se1"
-        private const val _EPHEMOONDATA = "semo_18.se1"
-        private const val _EPHEPLANETARYDATA = "sepl_18.se1"
+        private const val _EPHEASTROIDDATA1 = "seas_18.se1"
+        private const val _EPHEMOONDATA1 = "semo_18.se1"
+        private const val _EPHEPLANETARYDATA1 = "sepl_18.se1"
+        private const val _EPHEASTROIDDATA2 = "seas_24.se1"
+        private const val _EPHEMOONDATA2 = "semo_24.se1"
+        private const val _EPHEPLANETARYDATA2 = "sepl_24.se1"
     }
 
     init {

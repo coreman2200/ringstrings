@@ -18,7 +18,7 @@ import java.lang.Exception
 import javax.inject.Inject
 
 /**
- * SwissephFileHandlerImpl
+ * SymbolDetailFileHandlerImpl
  * Prepares swisseph files for use in app.
  *
  * Created by Cory Higginbottom on 5/29/15
