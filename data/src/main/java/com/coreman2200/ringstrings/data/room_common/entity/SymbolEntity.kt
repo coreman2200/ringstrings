@@ -30,6 +30,7 @@ data class SymbolEntity(
     val groupid: String,
     val symbolid: String,
     val strata: String,
+    val name: String,
     val type: Int, // SymbolStrata.symbolStrataFor(strata).ordinal
     val value: Double,
     val flag: Boolean,

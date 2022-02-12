@@ -24,6 +24,7 @@ package com.coreman2200.ringstrings.data.datasource
 import com.coreman2200.ringstrings.data.room_common.dao.SymbolDao
 import com.coreman2200.ringstrings.data.room_common.entity.*
 import com.coreman2200.ringstrings.domain.*
+import com.coreman2200.ringstrings.domain.symbol.entitysymbol.EntityStrata
 import kotlinx.coroutines.flow.*
 import javax.inject.Inject
 
@@ -63,6 +64,13 @@ class SymbolDatabaseSource @Inject constructor(val dao: SymbolDao) : SymbolDataS
                     data.chartid
                 )
             }
+            data.strata == EntityStrata.SOCIAL.toString() -> { // todo how else to indicate..
+                val list = mutableListOf(*data.children.map { it.toInt() }.toTypedArray())
+                list.add(data.profileid) // include grouping
+                symbols = dao.getSymbolsInProfiles(
+                    list
+                )
+            }
             else -> {
 
                 symbols = dao.getSymbolsInProfile(
@@ -82,6 +90,7 @@ class SymbolDatabaseSource @Inject constructor(val dao: SymbolDao) : SymbolDataS
         groupid = symbol.groupid,
         symbolid = symbol.symbolid,
         strata = symbol.strata,
+        name = symbol.name,
         type = symbol.type,
         value = symbol.value,
         flag = symbol.flag,
@@ -97,6 +106,7 @@ class SymbolDatabaseSource @Inject constructor(val dao: SymbolDao) : SymbolDataS
         groupid = this.groupid,
         symbolid = this.symbolid,
         strata = this.strata,
+        name = this.name,
         type = this.type,
         value = this.value,
         flag = this.flag,

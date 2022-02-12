@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "f764e66d4c5cd388bfb1ea2611cbb8f8",
+    "identityHash": "d1a24b858e6eda8d787bddbdab196ef9",
     "entities": [
       {
         "tableName": "profile_symbol_data_table",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`instanceid` INTEGER NOT NULL, `profileid` INTEGER NOT NULL, `chartid` TEXT NOT NULL, `groupid` TEXT NOT NULL, `symbolid` TEXT NOT NULL, `strata` TEXT NOT NULL, `type` INTEGER NOT NULL, `value` REAL NOT NULL, `flag` INTEGER NOT NULL, `relations` TEXT NOT NULL, `children` TEXT NOT NULL, PRIMARY KEY(`profileid`, `chartid`, `symbolid`, `instanceid`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`instanceid` INTEGER NOT NULL, `profileid` INTEGER NOT NULL, `chartid` TEXT NOT NULL, `groupid` TEXT NOT NULL, `symbolid` TEXT NOT NULL, `strata` TEXT NOT NULL, `name` TEXT NOT NULL, `type` INTEGER NOT NULL, `value` REAL NOT NULL, `flag` INTEGER NOT NULL, `relations` TEXT NOT NULL, `children` TEXT NOT NULL, PRIMARY KEY(`profileid`, `chartid`, `symbolid`, `instanceid`))",
         "fields": [
           {
             "fieldPath": "instanceid",
@@ -41,6 +41,12 @@
           {
             "fieldPath": "strata",
             "columnName": "strata",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
             "affinity": "TEXT",
             "notNull": true
           },
@@ -291,7 +297,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f764e66d4c5cd388bfb1ea2611cbb8f8')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd1a24b858e6eda8d787bddbdab196ef9')"
     ]
   }
 }
