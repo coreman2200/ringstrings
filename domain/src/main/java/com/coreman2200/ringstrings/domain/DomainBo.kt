@@ -4,6 +4,7 @@ import com.coreman2200.ringstrings.domain.input.entity.IProfileData
 import com.coreman2200.ringstrings.domain.symbol.Charts
 import com.coreman2200.ringstrings.domain.symbol.SymbolStrata
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.ICelestialBodySymbol
+import com.coreman2200.ringstrings.domain.symbol.entitysymbol.EntityStrata
 import com.coreman2200.ringstrings.domain.symbol.entitysymbol.grouped.TagSymbols
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ICompositeSymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbol
@@ -66,55 +67,88 @@ data class SymbolDataResponse(
     val symbols:List<SymbolData>
 )
 
-fun SymbolDataResponse.toSymbol(): ISymbol {
+
+
+fun SymbolDataResponse.toSymbol(): ISymbol? {
     val symbolMap: MutableMap<Int, ISymbol> = mutableMapOf()
     val instanceMap: MutableMap<String, MutableList<Int>> = mutableMapOf()
 
-    val profileCharts = symbols.sortedBy { it.type }.groupBy { Pair<Int, String?>(it.profileid, it.chartid) }
+    val profileCharts = symbols
+        .sortedBy { it.type }
+        .groupBy { Pair<Int, String?>(it.profileid, it.chartid) }
+    
     profileCharts.forEach {data ->
+        // Do for each profile..
+        
         data.value.forEach { symbolData ->
+            val symbol = produceSymbol(symbolData) ?: return@forEach
+            instanceMap.addInstance(symbol.id.toString(), symbolData.instanceid)
+            symbolMap[symbolData.instanceid] = symbol
 
-            val strata = SymbolStrata.realStrataFor(symbolData.strata)
-            val children = symbolData.children
-            val symbol = strata.produce(symbolData)
-            if (symbol != null) {
-                symbol.profileid = symbolData.profileid
-                symbol.chartid = Charts.valueOf(symbolData.chartid)
-                symbol.detail = symbolData.details
-
-                val list = instanceMap.getOrDefault(symbol.name, mutableListOf())
-                list.add(symbolData.instanceid)
-                instanceMap[symbol.name] = list
-
-                symbolMap[symbolData.instanceid] = symbol
-
-                if (symbol is ICelestialBodySymbol) {
-                    symbol.isRetrograde = symbolData.flag
-                }
-
-                children.forEach { elem ->
-                    if (elem.isEmpty()) return@forEach
-                    val grouped = symbol as ICompositeSymbol<ISymbol>
-                    val instances = instanceMap[elem]
-                    val ii = instances?.getOrNull(0)
-                    if (ii != null) {
-                        val child = symbolMap[ii]
-                        if (child != null) {
-                            grouped.add(child)
-                        }
-                        if (instances.size > 1) {
-                            instances.remove(ii)
-                            instanceMap[elem] = instances
-                        }
-                    }
-                }
-
+            symbolData.children.forEach {
+                symbol.linkChildSymbol(it, symbolMap, instanceMap)
             }
+            
         }
 
     }
 
-    return symbolMap.values.last()
+     return symbolMap[symbols.last().instanceid]
+}
+
+private fun produceSymbol(symbolData: SymbolData):ISymbol? {
+    val strata = SymbolStrata.realStrataFor(symbolData.strata)
+    return strata.produce(symbolData)?.apply {
+        profileid = symbolData.profileid
+        chartid = Charts.valueOf(symbolData.chartid)
+        detail = symbolData.details
+
+        if (this is ICelestialBodySymbol) {
+            isRetrograde = symbolData.flag
+        }
+    }
+}
+
+private fun MutableMap<String, MutableList<Int>>.addInstance(
+    name:String,
+    instanceid:Int
+) {
+    val list = this.getOrDefault(name, mutableListOf())
+    if (list.contains(instanceid)) return
+    list.add(instanceid)
+    this[name] = list
+
+}
+
+private fun MutableMap<String, MutableList<Int>>.removeInstance(
+    name:String,
+    instanceid:Int
+) {
+    val list = this.getOrDefault(name, mutableListOf())
+    list.remove(instanceid)
+    this[name] = list
+
+}
+
+private fun ISymbol.linkChildSymbol(
+    id: String,
+    symbolMap: MutableMap<Int, ISymbol>,
+    instanceMap: MutableMap<String, MutableList<Int>>
+) {
+    if (id.isEmpty() || this !is ICompositeSymbol<*>) return
+
+    val instanceList = instanceMap[id]
+    val instance = instanceList?.get(0) ?: return
+    val child = symbolMap[instance]
+    val group = this as ICompositeSymbol<ISymbol>
+    child?.let {
+        group.add(it)
+    }
+
+    if (instanceList.size > 1) {
+        instanceMap.removeInstance(id, instance)
+    }
+
 }
 
 data class SymbolData(
@@ -123,6 +157,7 @@ data class SymbolData(
     val chartid: String = "",
     val groupid: String = "",
     val symbolid: String = "",
+    val name: String = "",
     val strata: String = "",
     val type: Int = 0, // SymbolStrata.symbolStrataFor(strata).ordinal
     val value: Double = 0.0,
