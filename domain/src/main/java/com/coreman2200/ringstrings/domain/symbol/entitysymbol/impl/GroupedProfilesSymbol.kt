@@ -3,12 +3,14 @@ package com.coreman2200.ringstrings.domain.symbol.entitysymbol.impl
 import com.coreman2200.ringstrings.domain.ProfileData
 import com.coreman2200.ringstrings.domain.symbol.Charts
 import com.coreman2200.ringstrings.domain.symbol.CompositeSymbol
+import com.coreman2200.ringstrings.domain.symbol.SymbolStrata
 import com.coreman2200.ringstrings.domain.symbol.entitysymbol.EntityStrata
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.IChartedSymbols
+import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
 
 /**
- * ProfileSymbol
+ * GroupedProfilesSymbol
  * description
  *
  * Created by Cory Higginbottom on 2/9/22
@@ -21,19 +23,11 @@ import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbolID
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-class ProfileSymbolID(val profileid: Int ) : ISymbolID {
-    override fun toString(): String {
-        return profileid.toString()
-    }
-}
 
-class ProfileSymbol(
-    override var profileid: Int,
-    override val name: String = ""
-) : CompositeSymbol<IChartedSymbols<*>>(
-    id = ProfileSymbolID(profileid),
-    strata = EntityStrata.PROFILE
-), IChartedSymbols<IChartedSymbols<*>> {
+class GroupedProfilesSymbol() : CompositeSymbol<ProfileSymbol>(
+    id = ProfileSymbolID(0),
+    strata = EntityStrata.SOCIAL
+), IChartedSymbols<ProfileSymbol> {
     override var chartid: ISymbolID? = Charts.NO_CHART
-    override fun value(): Double = profileid.toDouble()
+    override fun value(): Double = size().toDouble()
 }
