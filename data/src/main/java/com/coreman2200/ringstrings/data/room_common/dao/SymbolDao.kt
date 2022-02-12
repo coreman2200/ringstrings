@@ -37,6 +37,12 @@ interface SymbolDao {
     suspend fun delete(symbol: SymbolEntity)
 
     @Transaction
+    @Query("SELECT * FROM profile_symbol_data_table WHERE profileid IN (:ids) ORDER BY type ASC")
+    fun getSymbolsInProfiles(
+        ids:List<Int>,
+    ): Flow<List<SymbolAndDetails>>
+
+    @Transaction
     @Query("SELECT * FROM profile_symbol_data_table WHERE profileid IS :profileid ORDER BY type ASC")
     fun getSymbolsInProfile(
         profileid: Int,
