@@ -1,7 +1,9 @@
 package com.coreman2200.ringstrings.domain.symbol.entitysymbol
 
+import com.coreman2200.ringstrings.domain.ProfileData
 import com.coreman2200.ringstrings.domain.SymbolData
 import com.coreman2200.ringstrings.domain.symbol.ISymbolStrata
+import com.coreman2200.ringstrings.domain.symbol.entitysymbol.impl.GroupedProfilesSymbol
 import com.coreman2200.ringstrings.domain.symbol.entitysymbol.impl.ProfileSymbol
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.NumberStrata
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.grouped.BaseNumbers
@@ -31,12 +33,11 @@ enum class EntityStrata : ISymbolStrata {
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     TAG, SYMBOL, GROUPED, PROFILE, USER, SOCIAL, ALL, GLOBAL;
 
-    override fun produce(data: SymbolData): ISymbol = ProfileSymbol(data.profileid)
-        /*{
+    override fun produce(data:SymbolData): ISymbol {
             return when (this) {
-                PROFILE -> ProfileSymbol(data.profileid)
-                else -> ProfileSymbol(data.profileid)
+                PROFILE -> ProfileSymbol(data.profileid, data.name)
+                else -> GroupedProfilesSymbol() // TODO
             }
-        }*/
+        }
 
 }

@@ -1,5 +1,6 @@
 package com.coreman2200.ringstrings.domain.symbol
 
+import com.coreman2200.ringstrings.domain.ProfileData
 import com.coreman2200.ringstrings.domain.SymbolData
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.AstralStrata
 import com.coreman2200.ringstrings.domain.symbol.entitysymbol.EntityStrata
@@ -49,6 +50,8 @@ enum class SymbolStrata(vararg stratas: Enum<*>) : ISymbolStrata {
         EntityStrata.GROUPED,
         EntityStrata.PROFILE,
         EntityStrata.USER,
+    ),
+    ENTITY_GROUP(
         EntityStrata.SOCIAL,
         EntityStrata.ALL,
         EntityStrata.GLOBAL
