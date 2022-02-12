@@ -21,6 +21,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import java.util.*
+import kotlin.system.measureTimeMillis
 
 /**
  * TestSymbols
@@ -74,17 +75,17 @@ class TestSymbols {
 
     @Test
     fun `Test time it takes to produce X charts`() {
-        val start = Calendar.getInstance().timeInMillis
         val count = 100
         val charts:MutableList<IAstralChartSymbol> = mutableListOf()
         val testProcessor = AstrologicalChartInputProcessor(astsettings, swisseph)
-        for (i in 1..count) {
-            testProfile = MockDefaultDataBundles.generateRandomProfile()
-            println("${testProfile.fullName()} ~ ${testProfile.birthDate()}")
-            charts.add(testProcessor.produceAstrologicalChart(testProfile,Charts.ASTRAL_NATAL))
+        val executionTime = measureTimeMillis {
+            for (i in 1..count) {
+                testProfile = MockDefaultDataBundles.generateRandomProfile()
+                println("${testProfile.fullName()} ~ ${testProfile.birthDate()}")
+                charts.add(testProcessor.produceAstrologicalChart(testProfile,Charts.ASTRAL_NATAL))
+            }
         }
-        val elapsed = Calendar.getInstance().timeInMillis - start
-        println("Time to complete ${charts.size} charts: ${elapsed/1000.0} seconds")
+        println("Time to complete ${charts.size} charts: ${executionTime/1000.0} seconds")
     }
 
     @Test

@@ -20,7 +20,9 @@ import com.coreman2200.ringstrings.domain.symbol.Charts
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.grouped.Houses
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.impl.HouseSymbol
 import com.coreman2200.ringstrings.domain.symbol.astralsymbol.interfaces.IAstralChartSymbol
+import com.coreman2200.ringstrings.domain.symbol.entitysymbol.EntityStrata
 import com.coreman2200.ringstrings.domain.symbol.entitysymbol.grouped.TagSymbols
+import com.coreman2200.ringstrings.domain.symbol.entitysymbol.impl.GroupedProfilesSymbol
 import com.coreman2200.ringstrings.domain.symbol.entitysymbol.impl.ProfileSymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.IChartedSymbols
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ICompositeSymbol
@@ -84,7 +86,7 @@ class TestSymbolData {
         detailDao = db.detailDao()
         datasource = SymbolDatabaseSource(symbolDao)
 
-        mockProfileSymbol = getProfileCharts()
+        mockProfileSymbol = getAllProfileCharts(profile)
 
         runBlocking {
             detailDao.insertAll(getDescriptions())
@@ -98,25 +100,44 @@ class TestSymbolData {
         return list
     }
 
-    private fun getProfileCharts(): ProfileSymbol {
-        val profileSymbol = ProfileSymbol(profile.id)
-        profileSymbol.add(getAstralNatalChart())
-        profileSymbol.add(getAstralCurrentChart())
-        profileSymbol.add(getNumberChart())
+    private fun getWellKnownPeopleProfiles(): GroupedProfilesSymbol {
+        val fh = MockPeopleFileHandler(context)
+        val list = fh.getAllPeopleWithLatLon().map { data ->
+            ProfileSymbol(data.id, data.displayName).apply {
+                add(getAstralNatalChart(data))
+            }
+        }
+        return GroupedProfilesSymbol().apply {
+            add(list)
+        }
+    }
+
+    private suspend fun initStoreProfileGroup(group:GroupedProfilesSymbol):List<SymbolData> {
+        val list:List<SymbolData> = group.getAll().map { it.toData() }
+        datasource.storeSymbolData(SymbolStoreRequest(data = list))
+        return list
+    }
+
+
+    private fun getAllProfileCharts(profile:ProfileData): ProfileSymbol {
+        val profileSymbol = ProfileSymbol(profile.id, profile.displayName)
+        profileSymbol.add(getAstralNatalChart(profile))
+        profileSymbol.add(getAstralCurrentChart(profile))
+        profileSymbol.add(getNumberChart(profile))
         return profileSymbol
     }
 
-    private fun getAstralNatalChart(): IChartedSymbols<*> {
+    private fun getAstralNatalChart(profile:ProfileData): IChartedSymbols<*> {
         val testProcessor = AstrologicalChartInputProcessor(astsettings)
         return testProcessor.produceAstrologicalChart(profile, Charts.ASTRAL_NATAL)
     }
 
-    private fun getAstralCurrentChart(): IChartedSymbols<*> {
+    private fun getAstralCurrentChart(profile:ProfileData): IChartedSymbols<*> {
         val testProcessor = AstrologicalChartInputProcessor(astsettings)
         return testProcessor.produceAstrologicalChart(profile, Charts.ASTRAL_CURRENT)
     }
 
-    private fun getNumberChart(): IChartedSymbols<*> {
+    private fun getNumberChart(profile:ProfileData): IChartedSymbols<*> {
         val testProcessor = NumerologicalChartProcessor(profile, numsettings)
         return testProcessor.produceGroupedNumberSymbolsForProfile()
     }
@@ -150,7 +171,7 @@ class TestSymbolData {
     }
 
     @Test
-    fun `Assert Symbol Data can be ins erted and retrieved individually`() {
+    fun `Assert Symbol Data can be inserted and retrieved individually`() {
         runBlocking {
             val list = chart.get().map { it.toData() }
             list.forEach {
@@ -302,6 +323,39 @@ class TestSymbolData {
         }
     }
 
+    @Test
+    fun `Assert all Persons can be read from file`() {
+        val profiles = getWellKnownPeopleProfiles()
+        profiles.get().forEach {
+            val qualities = it.qualities().keys.take(10) // TODO Will always be empty..
+            println("${it.name}: Qualities: ${qualities.joinToString()}")
+        }
+    }
+
+    @Test
+    fun `Assert Persons Symbol Qualities are aggregated for Profile groupings`() {
+        runBlocking {
+            val group = getWellKnownPeopleProfiles()
+            initStoreProfileGroup(group)
+
+            val ss = SymbolData(
+                profileid = 0,
+                strata = EntityStrata.SOCIAL.toString(),
+                children = group.get().map { it.profileid.toString() }
+            )
+
+            runBlocking {
+                val response = datasource.fetchSymbolData(SymbolDataRequest(ss))
+                assert(response.symbols.isNotEmpty())
+                val symbol = response.toSymbol() as GroupedProfilesSymbol
+                symbol.get().forEach {
+                    val qualities = it.qualities().keys.take(10)
+                    println("${it.name}: Qualities: ${qualities.joinToString()} ")
+                }
+
+            }
+        }
+    }
 
     @After
     @Throws(IOException::class)
