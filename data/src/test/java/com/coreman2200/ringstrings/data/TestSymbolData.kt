@@ -101,8 +101,7 @@ class TestSymbolData {
     }
 
     private fun getWellKnownPeopleProfiles(): GroupedProfilesSymbol {
-        val fh = MockPeopleFileHandler(context)
-        val list = fh.getAllPeopleWithLatLon().map { data ->
+        val list = getMockPeopleData().map { data ->
             ProfileSymbol(data.id, data.displayName).apply {
                 add(getAstralNatalChart(data))
             }
@@ -110,6 +109,11 @@ class TestSymbolData {
         return GroupedProfilesSymbol().apply {
             add(list)
         }
+    }
+
+    private fun getMockPeopleData(): List<ProfileData> {
+        val fh = MockPeopleFileHandler(context)
+        return fh.getAllPeopleWithLatLon()
     }
 
     private suspend fun initStoreProfileGroup(group:GroupedProfilesSymbol):List<SymbolData> {

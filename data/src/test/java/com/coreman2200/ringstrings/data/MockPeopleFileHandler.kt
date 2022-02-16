@@ -8,7 +8,12 @@ import com.google.gson.annotations.SerializedName
 import com.google.gson.reflect.TypeToken
 import com.squareup.wire.internal.newMutableList
 import java.io.InputStream
+import java.text.DateFormat
+import java.time.LocalDateTime
 import java.time.ZoneOffset
+import java.time.format.DateTimeFormatter
+import java.time.temporal.TemporalField
+import java.util.*
 
 /**
  * MockPeopleFileHandler
@@ -38,7 +43,7 @@ class MockPeopleFileHandler() : // Inject application context
         @SerializedName("name")
         val name: String,
         @SerializedName("dt")
-        val timestamp: Long,
+        val timestamp: String,
         @SerializedName("delta")
         val timeOffset:String,
         @SerializedName("lat")
@@ -63,11 +68,18 @@ class MockPeopleFileHandler() : // Inject application context
                 lon = convertLonString(this.longitude),
                 alt = 0.0 // TODO ??
             ),
-            timestamp = this.timestamp,
+            timestamp = convertDTString(this.timestamp),
             timezone = ZoneOffset.ofHours(this.timeOffset.substring(0 until 3).toInt()).id
         )
 
     )
+
+    private fun convertDTString(text:String):Long {
+        val format = DateTimeFormatter.ofPattern("yyyyMMddHHmmss")
+        val time = LocalDateTime.parse(text,format)
+        return time.toInstant(ZoneOffset.UTC).toEpochMilli()
+
+    }
 
     private fun convertLatString(text:String):Double = formatCoord(text, 2)
     private fun convertLonString(text:String):Double = formatCoord(text, 3)
