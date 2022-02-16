@@ -26,7 +26,7 @@ import com.coreman2200.ringstrings.data.room_common.entity.LocationEntity
 import com.coreman2200.ringstrings.data.room_common.entity.PlacementEntity
 import com.coreman2200.ringstrings.data.room_common.entity.ProfileEntity
 import com.coreman2200.ringstrings.domain.*
-import kotlinx.coroutines.flow.last
+import kotlinx.coroutines.flow.*
 import javax.inject.Inject
 
 interface ProfileDataSource {
@@ -35,57 +35,91 @@ interface ProfileDataSource {
         const val PROFILE_DATA_SOURCE_TAG = "profileDataSource"
     }
 
-    suspend fun fetchProfileData(request: ProfileDataRequest): ProfileDataResponse
-    suspend fun storeProfileData(request: ProfileDataRequest): ProfileDataResponse
+    fun fetchProfileData(request: ProfileDataRequest): Flow<ProfileDataResponse>
+    fun fetchProfiles(request: ProfileDataRequest): Flow<ProfileDataResponse>
+    fun searchProfiles(request: ProfileDataRequest): Flow<ProfileDataResponse>
+    suspend fun storeProfileData(request: ProfileDataRequest): Flow<ProfileDataResponse>
 }
 
 class ProfileDatabaseSource @Inject constructor(val dao: ProfileDao) : ProfileDataSource {
-    override suspend fun fetchProfileData(request: ProfileDataRequest): ProfileDataResponse {
-        val profile = dao.get(request.id).last()
-        return ProfileDataResponse(profile = profile.toData())
+    override fun fetchProfileData(request: ProfileDataRequest): Flow<ProfileDataResponse> {
+        if (request.id == 0) return fetchProfiles(request)
+        return dao.get(request.id).map { ProfileDataResponse(profiles = listOf(it.toData())) }
     }
 
-    override suspend fun storeProfileData(request: ProfileDataRequest): ProfileDataResponse {
-        val saved = dao.insert(request.toEntity()).toInt()
-        return ProfileDataResponse(profile = ProfileData(id = saved))
+    override fun fetchProfiles(request: ProfileDataRequest): Flow<ProfileDataResponse> {
+        return dao.get().map { list -> ProfileDataResponse(profiles = list.map { it.toData()}) }
     }
 
-    private fun ProfileEntity.toData(): ProfileData = ProfileData(
-        id = id,
-        name = name,
-        displayName = displayName,
-        birthPlacement = birthPlacement.toData(),
-        currentPlacement = currentPlacement?.toData(),
+    override fun searchProfiles(request: ProfileDataRequest): Flow<ProfileDataResponse> {
+        if (request.query.isNullOrEmpty()) return fetchProfiles(request)
+        val profiles = dao.search(request.query.sanitizeSearchQuery())
+        return profiles.map { profileList ->
+            ProfileDataResponse(profiles = profileList.map { it.toData() })
+        }
+    }
 
-    )
+    private fun String?.sanitizeSearchQuery(): String {
+        val query = this ?: ""
+        return "*${query.replace(Regex.fromLiteral("\""), "\"\"")}*"
+    }
 
-    private fun ProfileDataRequest.toEntity(): ProfileEntity = ProfileEntity(
-        id = id,
-        name = name,
-        displayName = displayName,
-        birthPlacement = birthPlacement.toEntity(),
-        currentPlacement = currentPlacement?.toEntity(),
+    override suspend fun storeProfileData(request: ProfileDataRequest): Flow<ProfileDataResponse> {
+        return if (request.profiles.size == 1)
+            storeSingle(request.profiles[0])
+        else
+            storeList(request.profiles)
+    }
 
-    )
-
-    private fun PlacementEntity.toData(): GeoPlacement = GeoPlacement(
-        location = location.toData(),
-        timestamp = timestamp,
-        timezone = timezone
-    )
-    private fun GeoPlacement.toEntity(): PlacementEntity = PlacementEntity(
-        location = location.toEntity(),
-        timestamp = timestamp,
-        timezone = timezone
-    )
-    private fun GeoLocation.toEntity(): LocationEntity = LocationEntity(
-        lat = lat,
-        lon = lon,
-        alt = alt
-    )
-    private fun LocationEntity.toData(): GeoLocation = GeoLocation(
-        lat = lat,
-        lon = lon,
-        alt = alt
-    )
+    private suspend fun storeSingle(profile:ProfileData): Flow<ProfileDataResponse> {
+        val saved = dao.insert(profile.toEntity()).toInt()
+        return flow {
+            emit(ProfileDataResponse(profiles = listOf(ProfileData(id = saved))))
+        }
+    }
+    private fun storeList(list:List<ProfileData>): Flow<ProfileDataResponse> {
+        dao.insertAll(list.map { it.toEntity() })
+        return flow {
+            emit(ProfileDataResponse(profiles = emptyList()))
+        }
+    }
 }
+
+fun ProfileEntity.toData(): ProfileData = ProfileData(
+    id = id,
+    name = name,
+    displayName = displayName,
+    birthPlacement = birthPlacement.toData(),
+    currentPlacement = currentPlacement?.toData(),
+
+    )
+
+fun ProfileData.toEntity(): ProfileEntity = ProfileEntity(
+    id = id,
+    name = name,
+    displayName = displayName,
+    birthPlacement = birthPlacement.toEntity(),
+    currentPlacement = currentPlacement?.toEntity(),
+
+    )
+
+private fun PlacementEntity.toData(): GeoPlacement = GeoPlacement(
+    location = location.toData(),
+    timestamp = timestamp,
+    timezone = timezone
+)
+private fun GeoPlacement.toEntity(): PlacementEntity = PlacementEntity(
+    location = location.toEntity(),
+    timestamp = timestamp,
+    timezone = timezone
+)
+private fun GeoLocation.toEntity(): LocationEntity = LocationEntity(
+    lat = lat,
+    lon = lon,
+    alt = alt
+)
+private fun LocationEntity.toData(): GeoLocation = GeoLocation(
+    lat = lat,
+    lon = lon,
+    alt = alt
+)

@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "d1a24b858e6eda8d787bddbdab196ef9",
+    "identityHash": "843bbcedc0093c230c5922781e56c186",
     "entities": [
       {
         "tableName": "profile_symbol_data_table",
@@ -186,6 +186,47 @@
         "foreignKeys": []
       },
       {
+        "ftsVersion": "FTS4",
+        "ftsOptions": {
+          "tokenizer": "simple",
+          "tokenizerArgs": [],
+          "contentTable": "user_profile_details_table",
+          "languageIdColumnName": "",
+          "matchInfo": "FTS4",
+          "notIndexedColumns": [],
+          "prefixSizes": [],
+          "preferredOrder": "ASC"
+        },
+        "contentSyncTriggers": [
+          "CREATE TRIGGER IF NOT EXISTS room_fts_content_sync_user_profile_details_table_fts_BEFORE_UPDATE BEFORE UPDATE ON `user_profile_details_table` BEGIN DELETE FROM `user_profile_details_table_fts` WHERE `docid`=OLD.`rowid`; END",
+          "CREATE TRIGGER IF NOT EXISTS room_fts_content_sync_user_profile_details_table_fts_BEFORE_DELETE BEFORE DELETE ON `user_profile_details_table` BEGIN DELETE FROM `user_profile_details_table_fts` WHERE `docid`=OLD.`rowid`; END",
+          "CREATE TRIGGER IF NOT EXISTS room_fts_content_sync_user_profile_details_table_fts_AFTER_UPDATE AFTER UPDATE ON `user_profile_details_table` BEGIN INSERT INTO `user_profile_details_table_fts`(`docid`, `name`, `display_name`) VALUES (NEW.`rowid`, NEW.`name`, NEW.`display_name`); END",
+          "CREATE TRIGGER IF NOT EXISTS room_fts_content_sync_user_profile_details_table_fts_AFTER_INSERT AFTER INSERT ON `user_profile_details_table` BEGIN INSERT INTO `user_profile_details_table_fts`(`docid`, `name`, `display_name`) VALUES (NEW.`rowid`, NEW.`name`, NEW.`display_name`); END"
+        ],
+        "tableName": "user_profile_details_table_fts",
+        "createSql": "CREATE VIRTUAL TABLE IF NOT EXISTS `${TABLE_NAME}` USING FTS4(`name` TEXT NOT NULL, `display_name` TEXT NOT NULL, content=`user_profile_details_table`)",
+        "fields": [
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "displayName",
+            "columnName": "display_name",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
         "tableName": "symbol_description_table",
         "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `description` TEXT NOT NULL, `qualities` TEXT NOT NULL, PRIMARY KEY(`id`))",
         "fields": [
@@ -297,7 +338,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd1a24b858e6eda8d787bddbdab196ef9')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '843bbcedc0093c230c5922781e56c186')"
     ]
   }
 }

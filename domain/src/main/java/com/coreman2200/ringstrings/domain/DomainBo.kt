@@ -8,6 +8,7 @@ import com.coreman2200.ringstrings.domain.symbol.entitysymbol.EntityStrata
 import com.coreman2200.ringstrings.domain.symbol.entitysymbol.grouped.TagSymbols
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ICompositeSymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ISymbol
+import kotlinx.coroutines.flow.Flow
 import java.sql.Timestamp
 import java.util.*
 import kotlin.random.Random
@@ -66,8 +67,6 @@ data class SymbolStoreRequest(
 data class SymbolDataResponse(
     val symbols:List<SymbolData>
 )
-
-
 
 fun SymbolDataResponse.toSymbol(): ISymbol? {
     val symbolMap: MutableMap<Int, ISymbol> = mutableMapOf()
@@ -185,16 +184,13 @@ data class SymbolDescription(
 
 // Profile
 data class ProfileDataRequest(
-    val id: Int,
-    val name: List<String>,
-    val displayName: String,
-    val fullName: String,
-    val birthPlacement: GeoPlacement,
-    val currentPlacement: GeoPlacement?
+    val profiles:List<ProfileData> = emptyList(),
+    val id: Int = 0,
+    val query: String = ""
 )
 
 data class ProfileDataResponse(
-    val profile:ProfileData
+    val profiles: List<ProfileData>
 )
 
 data class ProfileData(

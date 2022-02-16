@@ -28,8 +28,8 @@ interface IProfileData {
     val currentPlacement: GeoPlacement?
 
     fun firstName(): String = name[0]
-    fun middleName(): String = name[1] // TODO if name has more than 3 parts..?
-    fun lastName(): String = name[2]
+    fun middleName(): String = if (name.size > 2) name[1] else "" // TODO if name has more than 3 parts..?
+    fun lastName(): String = name.last()
     fun fullName(): String = name.joinToString(separator = " ")
     fun birthDay(): Int = birthPlacement.date[Calendar.DAY_OF_MONTH]
     fun birthMonth(): Int = birthPlacement.date[Calendar.MONTH]

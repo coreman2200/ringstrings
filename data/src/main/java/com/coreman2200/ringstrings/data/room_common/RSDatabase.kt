@@ -29,8 +29,8 @@ import javax.inject.Inject
  */
 
 @Database(
-    entities = [SymbolEntity::class, ProfileEntity::class, SymbolDetailEntity::class,
-        PlacementEntity::class, LocationEntity::class],
+    entities = [SymbolEntity::class, ProfileEntity::class, ProfileEntityFTS::class,
+        SymbolDetailEntity::class, PlacementEntity::class, LocationEntity::class],
     version = 1
 )
 @TypeConverters(Converters::class)
@@ -72,6 +72,9 @@ abstract class RSDatabase : RoomDatabase() {
         private suspend fun populateDatabase(db: RSDatabase) {
             //val symbolDao = db.symbolDao()
             //val profileDao = db.profileDao()
+
+            // FTS profile details
+            db.compileStatement("INSERT INTO user_profile_details_table_fts(user_profile_details_table_fts) VALUES ('rebuild')")
 
             val detailDao = db.detailDao()
             detailDao.insertAll(getDescriptions())

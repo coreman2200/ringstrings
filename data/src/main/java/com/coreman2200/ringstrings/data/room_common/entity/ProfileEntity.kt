@@ -1,9 +1,6 @@
 package com.coreman2200.ringstrings.data.room_common.entity
 
-import androidx.room.ColumnInfo
-import androidx.room.Embedded
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+import androidx.room.*
 import com.coreman2200.ringstrings.domain.GeoLocation
 
 /**
@@ -27,6 +24,13 @@ data class ProfileEntity(
     @ColumnInfo(name = "display_name") val displayName: String,
     @Embedded(prefix = "birth_") val birthPlacement: PlacementEntity,
     @Embedded(prefix = "current_") val currentPlacement: PlacementEntity?
+)
+
+@Entity(tableName = "user_profile_details_table_fts")
+@Fts4(contentEntity = ProfileEntity::class)
+data class ProfileEntityFTS(
+    val name: List<String>,
+    @ColumnInfo(name = "display_name") val displayName: String,
 )
 
 @Entity(tableName = "user_profile_placement_details_table")

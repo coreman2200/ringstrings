@@ -72,13 +72,12 @@ interface DomainLayerContract {
 
         interface ProfileDataRepository<out S> {
             suspend fun fetchProfile(request: ProfileDataRequest): Either<Failure, S>
+            suspend fun searchProfiles(request: ProfileDataRequest): Either<Failure, S>
             suspend fun storeProfile(request: ProfileDataRequest): Either<Failure, S>
-
         }
 
         interface SwissephDataRepository<out S> {
             suspend fun fetchSwisseph(request: SwissephDataRequest): Either<Failure, S>
-
         }
     }
 }

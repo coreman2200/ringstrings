@@ -22,29 +22,33 @@
 package com.coreman2200.ringstrings.data.repository
 
 import arrow.core.Either
+import arrow.core.computations.either
 import arrow.core.left
 import arrow.core.right
 import com.coreman2200.ringstrings.data.datasource.ProfileDataSource
 import com.coreman2200.ringstrings.domain.*
+import kotlinx.coroutines.flow.*
 
 object ProfileDataRepository :
     DomainLayerContract.Data.ProfileDataRepository<ProfileDataResponse> {
 
     lateinit var profileDataSource: ProfileDataSource
 
-    override suspend fun fetchProfile(request: ProfileDataRequest): Either<Failure, ProfileDataResponse> =
-        try {
-            val response = profileDataSource.fetchProfileData(request = request)
-            response.takeIf { it.profile.id != 0 }?.right() ?: run { Failure.NoData().left() }
-        } catch (e: Exception) {
-            Failure.NoData(e.localizedMessage ?: "No Data Found").left()
-        }
+    override suspend fun fetchProfile(request: ProfileDataRequest): Either<Failure, ProfileDataResponse> {
+        val response = profileDataSource.fetchProfileData(request = request)
+        response.catch { Failure.NoData(it.localizedMessage ?: "No Data Found").left() }.collect()
+        return response.firstOrNull()?.right() ?: run { Failure.NoData().left() }
+    }
 
-    override suspend fun storeProfile(request: ProfileDataRequest): Either<Failure, ProfileDataResponse> =
-        try {
-            val response = profileDataSource.storeProfileData(request = request)
-            response.takeIf { it.profile.id != 0 }?.right() ?: run { Failure.NoData().left() }
-        } catch (e: Exception) {
-            Failure.NoData(e.localizedMessage ?: "Data Not Stored").left()
-        }
+    override suspend fun searchProfiles(request: ProfileDataRequest): Either<Failure, ProfileDataResponse> {
+        val response = profileDataSource.searchProfiles(request = request)
+        response.catch { Failure.NoData(it.localizedMessage ?: "No Data Found").left() }.collect()
+        return response.firstOrNull()?.right() ?: run { Failure.NoData().left() }
+    }
+
+    override suspend fun storeProfile(request: ProfileDataRequest): Either<Failure, ProfileDataResponse> {
+        val response = profileDataSource.storeProfileData(request = request)
+        response.catch { Failure.NoData(it.localizedMessage ?: "No Data Stored").left() }.collect()
+        return response.firstOrNull()?.right() ?: run { Failure.NoData().left() }
+    }
 }
