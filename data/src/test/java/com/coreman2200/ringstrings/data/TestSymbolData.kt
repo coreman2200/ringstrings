@@ -6,10 +6,13 @@ import android.os.Build
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import com.coreman2200.ringstrings.data.datasource.SymbolDatabaseSource
+import com.coreman2200.ringstrings.data.datasource.toData
 import com.coreman2200.ringstrings.data.file.details.SymbolDetailFileHandler
+import com.coreman2200.ringstrings.data.file.profile.WellKnownPeopleFileHandler
 import com.coreman2200.ringstrings.data.room_common.RSDatabase
 import com.coreman2200.ringstrings.data.room_common.dao.SymbolDao
 import com.coreman2200.ringstrings.data.room_common.dao.SymbolDescriptionDao
+import com.coreman2200.ringstrings.data.room_common.entity.ProfileEntity
 import com.coreman2200.ringstrings.data.room_common.entity.SymbolDetailEntity
 import com.coreman2200.ringstrings.domain.*
 import com.coreman2200.ringstrings.domain.input.astrology.AstrologicalChartInputProcessor
@@ -103,7 +106,7 @@ class TestSymbolData {
     private fun getWellKnownPeopleProfiles(): GroupedProfilesSymbol {
         val list = getMockPeopleData().map { data ->
             ProfileSymbol(data.id, data.displayName).apply {
-                add(getAstralNatalChart(data))
+                add(getAstralNatalChart(data.toData()))
             }
         }
         return GroupedProfilesSymbol().apply {
@@ -111,8 +114,8 @@ class TestSymbolData {
         }
     }
 
-    private fun getMockPeopleData(): List<ProfileData> {
-        val fh = MockPeopleFileHandler(context)
+    private fun getMockPeopleData(): List<ProfileEntity> {
+        val fh = WellKnownPeopleFileHandler(context)
         return fh.getAllPeopleWithLatLon()
     }
 

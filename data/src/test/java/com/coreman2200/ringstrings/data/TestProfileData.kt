@@ -3,15 +3,16 @@ package com.coreman2200.ringstrings.data
 //import org.junit.jupiter.api.Test
 import android.app.Application
 import android.content.Context
-import android.icu.text.TimeZoneFormat
 import android.os.Build
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import com.coreman2200.ringstrings.data.datasource.ProfileDatabaseSource
 import com.coreman2200.ringstrings.data.datasource.toData
 import com.coreman2200.ringstrings.data.datasource.toEntity
+import com.coreman2200.ringstrings.data.file.profile.WellKnownPeopleFileHandler
 import com.coreman2200.ringstrings.data.room_common.RSDatabase
 import com.coreman2200.ringstrings.data.room_common.dao.ProfileDao
+import com.coreman2200.ringstrings.data.room_common.entity.ProfileEntity
 import com.coreman2200.ringstrings.domain.*
 import com.squareup.wire.internal.newMutableList
 import kotlinx.coroutines.*
@@ -24,13 +25,10 @@ import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 import java.io.IOException
-import java.text.SimpleDateFormat
-import java.time.LocalDate
 import java.time.ZoneId
-import java.time.ZoneOffset
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
-import java.util.*
+import kotlin.math.abs
 
 
 /**
@@ -74,7 +72,7 @@ class TestProfileData {
 
 
         runBlocking {
-            profileDao.insertAll(getMockPeopleData().map { it.toEntity() })
+            profileDao.insertAll(getMockPeopleData())
 
             db.compileStatement("INSERT INTO user_profile_details_table_fts(user_profile_details_table_fts) VALUES ('rebuild')")
 
@@ -82,11 +80,11 @@ class TestProfileData {
 
     }
 
-    private fun getMockPeopleData(): List<ProfileData> {
-        val fh = MockPeopleFileHandler(context)
-        val list = newMutableList<ProfileData>()
+    private fun getMockPeopleData(): List<ProfileEntity> {
+        val fh = WellKnownPeopleFileHandler(context)
+        val list = newMutableList<ProfileEntity>()
         list.addAll(fh.getAllPeopleWithLatLon())
-        list.add(profile)
+        list.add(profile.toEntity())
         return list.sortedBy { it.displayName }
     }
 
@@ -115,7 +113,7 @@ class TestProfileData {
 
 
             list.forEach { mock ->
-                response = profileDao.search(mock.lastName()).first().map { it.toData() }
+                response = profileDao.search(mock.name.last()).first().map { it.toData() }
                 assert(response.isNotEmpty())
                 assert(response.find { it.displayName == it.displayName } != null)
             }
@@ -125,7 +123,7 @@ class TestProfileData {
     @Test
     fun `Assert Profile Data can be retrieved individually`() {
         runBlocking {
-            val list = getMockPeopleData().sortedByDescending { it.birthDate() }
+            val list = getMockPeopleData().sortedByDescending { it.birthPlacement.timestamp }
 
             list.forEach {
                 runBlocking {
