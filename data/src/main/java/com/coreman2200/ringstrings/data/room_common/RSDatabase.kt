@@ -4,11 +4,14 @@ import android.content.Context
 import androidx.room.*
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.coreman2200.ringstrings.data.file.details.SymbolDetailFileHandler
+import com.coreman2200.ringstrings.data.file.profile.WellKnownPeopleFileHandler
 import com.coreman2200.ringstrings.data.room_common.dao.ProfileDao
 import com.coreman2200.ringstrings.data.room_common.dao.SymbolDao
 import com.coreman2200.ringstrings.data.room_common.dao.SymbolDescriptionDao
 import com.coreman2200.ringstrings.data.room_common.entity.*
+import com.coreman2200.ringstrings.domain.ProfileData
 import com.coreman2200.ringstrings.domain.SymbolDescription
+import com.squareup.wire.internal.newMutableList
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -71,7 +74,8 @@ abstract class RSDatabase : RoomDatabase() {
 
         private suspend fun populateDatabase(db: RSDatabase) {
             //val symbolDao = db.symbolDao()
-            //val profileDao = db.profileDao()
+            val profileDao = db.profileDao()
+            profileDao.insertAll(getWellKnownPeople())
 
             // FTS profile details
             db.compileStatement("INSERT INTO user_profile_details_table_fts(user_profile_details_table_fts) VALUES ('rebuild')")
@@ -83,6 +87,11 @@ abstract class RSDatabase : RoomDatabase() {
         private fun getDescriptions():List<SymbolDetailEntity> {
             val fh = SymbolDetailFileHandler()
             return fh.getAllDescriptions().toList()
+        }
+
+        private fun getWellKnownPeople(): List<ProfileEntity> {
+            val fh = WellKnownPeopleFileHandler()
+            return fh.getAllPeopleWithLatLon()
         }
     }
 

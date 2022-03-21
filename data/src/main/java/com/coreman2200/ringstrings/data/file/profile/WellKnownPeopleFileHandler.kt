@@ -1,19 +1,19 @@
-package com.coreman2200.ringstrings.data
+package com.coreman2200.ringstrings.data.file.profile
 
 import android.content.Context
+import com.coreman2200.ringstrings.data.R
 import com.coreman2200.ringstrings.data.file.FileHandler
-import com.coreman2200.ringstrings.domain.*
+import com.coreman2200.ringstrings.data.room_common.entity.LocationEntity
+import com.coreman2200.ringstrings.data.room_common.entity.PlacementEntity
+import com.coreman2200.ringstrings.data.room_common.entity.ProfileEntity
 import com.google.gson.GsonBuilder
 import com.google.gson.annotations.SerializedName
 import com.google.gson.reflect.TypeToken
 import com.squareup.wire.internal.newMutableList
 import java.io.InputStream
-import java.text.DateFormat
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
-import java.time.temporal.TemporalField
-import java.util.*
 
 /**
  * MockPeopleFileHandler
@@ -28,7 +28,7 @@ import java.util.*
  * You may obtain a copy of the GPLv2 License at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
-class MockPeopleFileHandler() : // Inject application context
+class WellKnownPeopleFileHandler() : // Inject application context
     FileHandler() {
 
     constructor(context: Context):this() {
@@ -58,19 +58,20 @@ class MockPeopleFileHandler() : // Inject application context
 
     private fun generateProfileId(): Int = 1 + (Math.random() * (2 shl 20)).toInt()
 
-    private fun FilePeopleModel.toProfile(): ProfileData = ProfileData(
+    private fun FilePeopleModel.toProfile(): ProfileEntity = ProfileEntity(
         id = generateProfileId(),
         name = this.name.split(" "),
         displayName = this.name,
-        birthPlacement = GeoPlacement(
-            location = GeoLocation(
+        birthPlacement = PlacementEntity(
+            location = LocationEntity(
                 lat = convertLatString(this.latitude),
                 lon = convertLonString(this.longitude),
                 alt = 0.0 // TODO ??
             ),
             timestamp = convertDTString(this.timestamp),
             timezone = ZoneOffset.ofHours(this.timeOffset.substring(0 until 3).toInt()).id
-        )
+        ),
+        currentPlacement = null
 
     )
 
@@ -84,15 +85,14 @@ class MockPeopleFileHandler() : // Inject application context
     private fun convertLatString(text:String):Double = formatCoord(text, 2)
     private fun convertLonString(text:String):Double = formatCoord(text, 3)
 
-    private fun formatCoord(text:String, digits:Int):Double {
+    private fun formatCoord(text: String, digits: Int): Double {
         if (text.isEmpty()) return 0.0
 
         val hemisphere = hemisMulti(text.last())
-        val value = StringBuilder(text.substring(0 until text.lastIndex))
-            .insert(digits,".")
-            .replaceFirst(Regex("^0"),"")
-            .toDouble()*hemisphere
-        return value
+        return StringBuilder(text.substring(0 until text.lastIndex))
+            .insert(digits, ".")
+            .replaceFirst(Regex("^0"), "")
+            .toDouble() * hemisphere
     }
 
     private fun hemisMulti(char: Char):Int = when (char) {
@@ -101,22 +101,22 @@ class MockPeopleFileHandler() : // Inject application context
         else -> 0
     }
 
-    fun getAllPeopleWithLatLon():List<ProfileData> {
+    fun getAllPeopleWithLatLon():List<ProfileEntity> {
         val json : String?
-        val profiles : MutableList<ProfileData> = newMutableList()
+        val profiles : MutableList<ProfileEntity> = newMutableList()
 
         val inputStream: InputStream = getInputStreamForRawResource(R.raw.wellknownpeople_bank)
         json = inputStream.bufferedReader().use { it.readText() }
         profiles.run {
             val gson = GsonBuilder().create()
             val listType = object: TypeToken<FilePeopleJson>() {}.type
-            val json:FilePeopleJson = gson.fromJson(json, listType)
+            val people: FilePeopleJson = gson.fromJson(json, listType)
             val emptyPair = Pair("","")
-            val list = json.rec.filterNot { Pair(it.latitude, it.longitude) == emptyPair }.map { it.toProfile() }
+            val list = people.rec.filterNot { Pair(it.latitude, it.longitude) == emptyPair }.map { it.toProfile() }
             addAll(list)
         }
 
-        return profiles
+        return profiles.sortedBy { it.displayName }
     }
 
 }
