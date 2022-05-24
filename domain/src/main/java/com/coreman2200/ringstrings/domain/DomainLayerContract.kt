@@ -22,10 +22,12 @@
 package com.coreman2200.ringstrings.domain
 
 import arrow.core.Either
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
+import com.coreman2200.ringstrings.domain.util.Outcome
+import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.flatMapLatest
+import kotlinx.coroutines.flow.flowOf
 
 interface DomainLayerContract {
 
@@ -33,15 +35,48 @@ interface DomainLayerContract {
 
         interface UseCase<in T, out S> {
 
-            fun invoke(scope: CoroutineScope, params: T?, onResult: (Either<Failure, S>) -> Unit) {
+            operator fun invoke(scope: CoroutineScope, params: T?, onResult: (Outcome<S>) -> Unit) {
                 // task undertaken in a worker thread
                 val job = scope.async { run(params) }
                 // once completed, result sent in the Main thread
                 scope.launch(Dispatchers.Main) { onResult(job.await()) }
             }
 
-            suspend fun run(params: T? = null): Either<Failure, S>
+            suspend fun run(params: T? = null): Outcome<S>
         }
+
+        @ExperimentalCoroutinesApi
+        abstract class FlowUseCase<in T, out S> {
+
+            private val _trigger = MutableStateFlow(true)
+
+            /**
+             * Exposes result of this use case
+             */
+            operator fun invoke(scope: CoroutineScope, params: T?, onResult: (Flow<Outcome<S>>) -> Unit) {
+
+                val resultFlow: Flow<Outcome<S>> = _trigger.flatMapLatest {
+                    run(params)
+                }
+
+                // once completed, result sent in the Main thread
+                scope.launch(Dispatchers.Main) {
+                    launch()
+                    onResult(resultFlow)
+                }
+            }
+
+            /**
+             * Triggers the execution of this use case (?? duplicity?)
+             */
+            private suspend fun launch() {
+                _trigger.emit(!(_trigger.value))
+            }
+
+            abstract suspend fun run(params: T? = null): Flow<Outcome<S>>
+        }
+
+
     }
 
     interface Data {
@@ -55,29 +90,29 @@ interface DomainLayerContract {
         }
 
         interface SymbolDataRepository<out S> {
-            suspend fun fetchSymbol(request: SymbolDataRequest): Either<Failure, S>
+            suspend fun fetchSymbol(request: SymbolDataRequest): Outcome<S>
             suspend fun storeSymbol(request: SymbolStoreRequest)
         }
 
         interface SymbolDetailRepository<out S> {
-            suspend fun fetchSymbolDescription(request: SymbolDescriptionRequest): Either<Failure, S>
+            suspend fun fetchSymbolDescription(request: SymbolDescriptionRequest): Outcome<S>
             suspend fun storeSymbolDescription(vararg request: SymbolDescriptionRequest)
 
         }
 
         interface SettingsDataRepository<out S> {
-            suspend fun fetchAppSettings(request: AppSettingsRequest): Either<Failure, S>
-            suspend fun storeAppSettings(request: AppSettingsRequest): Either<Failure, S>
+            suspend fun fetchAppSettings(request: AppSettingsRequest): Outcome<S>
+            suspend fun storeAppSettings(request: AppSettingsRequest): Outcome<S>
         }
 
         interface ProfileDataRepository<out S> {
-            suspend fun fetchProfile(request: ProfileDataRequest): Either<Failure, S>
-            suspend fun searchProfiles(request: ProfileDataRequest): Either<Failure, S>
-            suspend fun storeProfile(request: ProfileDataRequest): Either<Failure, S>
+            suspend fun fetchProfile(request: ProfileDataRequest): Outcome<S>
+            suspend fun searchProfiles(request: ProfileDataRequest): Outcome<S>
+            suspend fun storeProfile(request: ProfileDataRequest): Outcome<S>
         }
 
         interface SwissephDataRepository<out S> {
-            suspend fun fetchSwisseph(request: SwissephDataRequest): Either<Failure, S>
+            suspend fun fetchSwisseph(request: SwissephDataRequest): Outcome<S>
         }
     }
 }
