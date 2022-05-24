@@ -17,6 +17,7 @@ import com.coreman2200.ringstrings.domain.symbol.numbersymbol.NumberStrata
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.INumberChartSymbol
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.INumberSymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.IChartedSymbols
+import com.coreman2200.ringstrings.domain.util.toData
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
