@@ -27,6 +27,8 @@ import arrow.core.left
 import arrow.core.right
 import com.coreman2200.ringstrings.data.datasource.ProfileDataSource
 import com.coreman2200.ringstrings.domain.*
+import com.coreman2200.ringstrings.domain.util.Failure
+import com.coreman2200.ringstrings.domain.util.Outcome
 import kotlinx.coroutines.flow.*
 
 object ProfileDataRepository :
@@ -34,21 +36,27 @@ object ProfileDataRepository :
 
     lateinit var profileDataSource: ProfileDataSource
 
-    override suspend fun fetchProfile(request: ProfileDataRequest): Either<Failure, ProfileDataResponse> {
+    override suspend fun fetchProfile(request: ProfileDataRequest): Outcome<ProfileDataResponse> {
         val response = profileDataSource.fetchProfileData(request = request)
-        response.catch { Failure.NoData(it.localizedMessage ?: "No Data Found").left() }.collect()
-        return response.firstOrNull()?.right() ?: run { Failure.NoData().left() }
+        return process(response)
     }
 
-    override suspend fun searchProfiles(request: ProfileDataRequest): Either<Failure, ProfileDataResponse> {
+    override suspend fun searchProfiles(request: ProfileDataRequest): Outcome<ProfileDataResponse> {
         val response = profileDataSource.searchProfiles(request = request)
-        response.catch { Failure.NoData(it.localizedMessage ?: "No Data Found").left() }.collect()
-        return response.firstOrNull()?.right() ?: run { Failure.NoData().left() }
+        return process(response)
     }
 
-    override suspend fun storeProfile(request: ProfileDataRequest): Either<Failure, ProfileDataResponse> {
+    override suspend fun storeProfile(request: ProfileDataRequest): Outcome<ProfileDataResponse> {
         val response = profileDataSource.storeProfileData(request = request)
-        response.catch { Failure.NoData(it.localizedMessage ?: "No Data Stored").left() }.collect()
-        return response.firstOrNull()?.right() ?: run { Failure.NoData().left() }
+        return process(response)
+    }
+
+    private suspend fun process(response:ProfileDataResponse) : Outcome<ProfileDataResponse> {
+        var err: Outcome.Error? = null
+        response.profiles
+            .catch { err = Outcome.Error(Failure.NoData(it.localizedMessage ?: "No Data Found")) }
+            .collect()
+        err?.let{ return it }
+        return Outcome.Success(response)
     }
 }

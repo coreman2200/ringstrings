@@ -26,6 +26,9 @@ import arrow.core.left
 import arrow.core.right
 import com.coreman2200.ringstrings.data.datasource.SymbolDataSource
 import com.coreman2200.ringstrings.domain.*
+import com.coreman2200.ringstrings.domain.util.Failure
+import com.coreman2200.ringstrings.domain.util.Outcome
+import kotlinx.coroutines.flow.*
 import java.net.SocketTimeoutException
 
 object SymbolDataRepository :
@@ -34,13 +37,17 @@ object SymbolDataRepository :
     lateinit var symbolDataSource: SymbolDataSource
 
     @Throws(SocketTimeoutException::class)
-    override suspend fun fetchSymbol(request: SymbolDataRequest): Either<Failure, SymbolDataResponse> =
-        try {
-            val response = symbolDataSource.fetchSymbolData(request = request)
-            response.takeIf { it.symbols.isNotEmpty() }?.right() ?: run { Failure.NoData().left() }
-        } catch (e: Exception) {
-            Failure.NoData(e.localizedMessage ?: "No Data Found").left()
-        }
+    override suspend fun fetchSymbol(request: SymbolDataRequest): Outcome<SymbolDataResponse>
+    {
+        val response = symbolDataSource.fetchSymbolData(request = request)
+        var err: Outcome.Error? = null
+        response.symbols
+            .catch { err = Outcome.Error(Failure.NoData(it.localizedMessage ?: "No Data Found"))  }
+            .collect()
+
+        err?.let { return it }
+        response.takeIf { it.symbols.count() > 0 }?.let {return Outcome.Success(it)} ?: return Outcome.Error(Failure.NoData())
+    }
 
     override suspend fun storeSymbol(request: SymbolStoreRequest) {
         symbolDataSource.storeSymbolData(request)

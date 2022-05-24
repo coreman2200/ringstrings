@@ -26,6 +26,8 @@ import arrow.core.left
 import arrow.core.right
 import com.coreman2200.ringstrings.data.datasource.SettingsDataSource
 import com.coreman2200.ringstrings.domain.*
+import com.coreman2200.ringstrings.domain.util.Failure
+import com.coreman2200.ringstrings.domain.util.Outcome
 import java.net.SocketTimeoutException
 
 object SettingsDataRepository :
@@ -34,20 +36,16 @@ object SettingsDataRepository :
     lateinit var settingsDataSource: SettingsDataSource
 
     @Throws(SocketTimeoutException::class)
-    override suspend fun fetchAppSettings(request: AppSettingsRequest): Either<Failure, AppSettingsResponse> =
-        try {
-            val response = settingsDataSource.fetchSettingsData(request = request)
-            response.takeIf { it.success }?.right() ?: run { Failure.NoData().left() }
-        } catch (e: Exception) {
-            Failure.NoData(e.localizedMessage ?: "No Data Found").left()
-        }
+    override suspend fun fetchAppSettings(request: AppSettingsRequest): Outcome<AppSettingsResponse> =
+        settingsDataSource.fetchSettingsData(request = request)
+            .takeIf { it.success }
+            ?.let { Outcome.Success(it) } ?: run { Outcome.Error(Failure.NoData("No Data Found")) }
+
 
     @Throws(SocketTimeoutException::class)
-    override suspend fun storeAppSettings(request: AppSettingsRequest): Either<Failure, AppSettingsResponse> =
-        try {
-            val response = settingsDataSource.updateSettingsData(request = request)
-            response.takeIf { it.success }?.right() ?: run { Failure.NoData().left() }
-        } catch (e: Exception) {
-            Failure.NoData(e.localizedMessage ?: "No Data Stored").left()
-        }
+    override suspend fun storeAppSettings(request: AppSettingsRequest): Outcome<AppSettingsResponse> =
+        settingsDataSource.updateSettingsData(request = request)
+            .takeIf { it.success }
+            ?.let { Outcome.Success(it) } ?: run { Outcome.Error(Failure.NoData("No Data Found")) }
+
 }

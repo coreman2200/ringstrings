@@ -26,6 +26,8 @@ import arrow.core.left
 import arrow.core.right
 import com.coreman2200.ringstrings.data.datasource.SwissephDataSource
 import com.coreman2200.ringstrings.domain.*
+import com.coreman2200.ringstrings.domain.util.Failure
+import com.coreman2200.ringstrings.domain.util.Outcome
 import java.net.SocketTimeoutException
 
 object SwissephDataRepository :
@@ -34,11 +36,11 @@ object SwissephDataRepository :
     lateinit var swissephDataSource: SwissephDataSource
 
     @Throws(SocketTimeoutException::class)
-    override suspend fun fetchSwisseph(request: SwissephDataRequest): Either<Failure, SwissephDataResponse> =
+    override suspend fun fetchSwisseph(request: SwissephDataRequest): Outcome<SwissephDataResponse> =
         try {
             val response = swissephDataSource.fetchSwissephData(request = request)
-            response.right()
+            Outcome.Success(response)
         } catch (e: Exception) {
-            Failure.NoData(e.localizedMessage ?: "No Data Found").left()
+            Outcome.Error(Failure.NoData(e.localizedMessage ?: "No Data Found"))
         }
 }

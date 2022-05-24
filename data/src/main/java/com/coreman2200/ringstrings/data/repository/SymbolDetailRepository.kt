@@ -26,6 +26,8 @@ import arrow.core.left
 import arrow.core.right
 import com.coreman2200.ringstrings.data.datasource.SymbolDescriptionSource
 import com.coreman2200.ringstrings.domain.*
+import com.coreman2200.ringstrings.domain.util.Failure
+import com.coreman2200.ringstrings.domain.util.Outcome
 import java.net.SocketTimeoutException
 
 object SymbolDetailRepository :
@@ -34,13 +36,11 @@ object SymbolDetailRepository :
     lateinit var detailDataSource: SymbolDescriptionSource
 
     @Throws(SocketTimeoutException::class)
-    override suspend fun fetchSymbolDescription(request: SymbolDescriptionRequest): Either<Failure, SymbolDescriptionResponse> =
-        try {
-            val response = detailDataSource.fetchDescriptionData(request = request)
-            response.takeIf { it.description.id.isNotEmpty() }?.right() ?: run { Failure.NoData().left() }
-        } catch (e: Exception) {
-            Failure.NoData(e.localizedMessage ?: "No Data Found").left()
-        }
+    override suspend fun fetchSymbolDescription(request: SymbolDescriptionRequest): Outcome<SymbolDescriptionResponse> =
+        detailDataSource.fetchDescriptionData(request = request)
+            .takeIf { it.description.id.isNotEmpty() }
+            ?.let { Outcome.Success(it) } ?: run { Outcome.Error(Failure.NoData()) }
+
 
     override suspend fun storeSymbolDescription(vararg request: SymbolDescriptionRequest) =
         detailDataSource.storeSymbolDescription(*request)
