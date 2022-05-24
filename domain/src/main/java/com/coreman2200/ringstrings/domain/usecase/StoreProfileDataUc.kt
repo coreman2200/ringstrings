@@ -22,38 +22,31 @@
 package com.coreman2200.ringstrings.domain.usecase
 
 import com.coreman2200.ringstrings.domain.*
-import com.coreman2200.ringstrings.domain.DomainLayerContract.Data.Companion.SYMBOL_REPOSITORY_TAG
+import com.coreman2200.ringstrings.domain.DomainLayerContract.Data.Companion.PROFILE_REPOSITORY_TAG
 import com.coreman2200.ringstrings.domain.util.Failure
 import com.coreman2200.ringstrings.domain.util.Outcome
-import com.coreman2200.ringstrings.domain.util.toSymbol
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 import javax.inject.Named
 
-const val FETCH_SYMBOL_DATA_UC_TAG = "fetchSymbolDataUc"
+const val STORE_PROFILE_DATA_UC_TAG = "storeProfileDataUc"
 
-@ExperimentalCoroutinesApi
-class FetchSymbolDataUc @Inject constructor(
-    @Named(SYMBOL_REPOSITORY_TAG)
-    private val symbolDataRepository: @JvmSuppressWildcards DomainLayerContract.Data.SymbolDataRepository<SymbolDataResponse>
-) : DomainLayerContract.Presentation.FlowUseCase<SymbolDataRequest, List<SymbolVo>>() {
+class StoreProfileDataUc @Inject constructor(
+    @Named(PROFILE_REPOSITORY_TAG)
+    private val profileDataRepository: @JvmSuppressWildcards DomainLayerContract.Data.ProfileDataRepository<ProfileDataResponse>
+) : DomainLayerContract.Presentation.UseCase<ProfileDataRequest, ProfileData> {
 
-    override suspend fun run(params: SymbolDataRequest?): Flow<Outcome<List<SymbolVo>>> {
-        return flow {
-            emit(Outcome.Loading)
-            params?.let {
-                when  (val res = symbolDataRepository.fetchSymbol(request = params)) {
-                    is Outcome.Success -> emit(Outcome.Success(res.data.toSymbol().toSymbolVo()))
-                    is Outcome.Error -> emit(res)
-                    is Outcome.Loading -> emit(res)
-                }
+    override suspend fun run(params: ProfileDataRequest?): Outcome<ProfileData> =
+        params?.let {
+            when (val res = profileDataRepository.storeProfile(request = params)) {
+                is Outcome.Success -> return Outcome.Success(res.data.profiles.first()[0])
+                is Outcome.Error -> return res
+                is Outcome.Loading -> return res
             }
+        } ?: run {
+            Outcome.Error(Failure.InputParamsError())
         }
-            .catch { emit(Outcome.Error(Failure.InputParamsError(msg = it.localizedMessage))) }
-            .flowOn(Dispatchers.IO)
-    }
-
 }

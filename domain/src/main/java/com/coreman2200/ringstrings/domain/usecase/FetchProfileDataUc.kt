@@ -22,38 +22,36 @@
 package com.coreman2200.ringstrings.domain.usecase
 
 import com.coreman2200.ringstrings.domain.*
-import com.coreman2200.ringstrings.domain.DomainLayerContract.Data.Companion.SYMBOL_REPOSITORY_TAG
+import com.coreman2200.ringstrings.domain.DomainLayerContract.Data.Companion.PROFILE_REPOSITORY_TAG
 import com.coreman2200.ringstrings.domain.util.Failure
 import com.coreman2200.ringstrings.domain.util.Outcome
 import com.coreman2200.ringstrings.domain.util.toSymbol
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.flow.*
 import javax.inject.Inject
 import javax.inject.Named
 
-const val FETCH_SYMBOL_DATA_UC_TAG = "fetchSymbolDataUc"
+const val FETCH_PROFILE_DATA_UC_TAG = "fetchProfileDataUc"
 
 @ExperimentalCoroutinesApi
-class FetchSymbolDataUc @Inject constructor(
-    @Named(SYMBOL_REPOSITORY_TAG)
-    private val symbolDataRepository: @JvmSuppressWildcards DomainLayerContract.Data.SymbolDataRepository<SymbolDataResponse>
-) : DomainLayerContract.Presentation.FlowUseCase<SymbolDataRequest, List<SymbolVo>>() {
+class FetchProfileDataUc @Inject constructor(
+    @Named(PROFILE_REPOSITORY_TAG)
+    private val profileDataRepository: @JvmSuppressWildcards DomainLayerContract.Data.ProfileDataRepository<ProfileDataResponse>
+) : DomainLayerContract.Presentation.FlowUseCase<ProfileDataRequest, List<ProfileData>>() {
 
-    override suspend fun run(params: SymbolDataRequest?): Flow<Outcome<List<SymbolVo>>> {
+    override suspend fun run(params: ProfileDataRequest?): Flow<Outcome<List<ProfileData>>> {
         return flow {
             emit(Outcome.Loading)
             params?.let {
-                when  (val res = symbolDataRepository.fetchSymbol(request = params)) {
-                    is Outcome.Success -> emit(Outcome.Success(res.data.toSymbol().toSymbolVo()))
-                    is Outcome.Error -> emit(res)
-                    is Outcome.Loading -> emit(res)
-                }
+                    when  (val res = profileDataRepository.fetchProfile(request = params)) {
+                        is Outcome.Success -> res.data.profiles.collectLatest { emit(Outcome.Success(it)) }
+                        is Outcome.Error -> emit(res)
+                        is Outcome.Loading -> emit(res)
+                    }
+                } ?: emit(Outcome.Error(Failure.InputParamsError()))
             }
-        }
-            .catch { emit(Outcome.Error(Failure.InputParamsError(msg = it.localizedMessage))) }
+            .catch { emit(Outcome.Error(Failure.InputParamsError(msg = it.localizedMessage ?: it.toString()))) }
             .flowOn(Dispatchers.IO)
     }
-
 }

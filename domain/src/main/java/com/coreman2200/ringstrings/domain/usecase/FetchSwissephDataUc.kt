@@ -22,38 +22,23 @@
 package com.coreman2200.ringstrings.domain.usecase
 
 import com.coreman2200.ringstrings.domain.*
-import com.coreman2200.ringstrings.domain.DomainLayerContract.Data.Companion.SYMBOL_REPOSITORY_TAG
+import com.coreman2200.ringstrings.domain.DomainLayerContract.Data.Companion.EPHEMERIS_REPOSITORY_TAG
 import com.coreman2200.ringstrings.domain.util.Failure
 import com.coreman2200.ringstrings.domain.util.Outcome
-import com.coreman2200.ringstrings.domain.util.toSymbol
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.flow.*
 import javax.inject.Inject
 import javax.inject.Named
 
-const val FETCH_SYMBOL_DATA_UC_TAG = "fetchSymbolDataUc"
+const val FETCH_SWISSEPH_DATA_UC_TAG = "fetchSwissephDataUc"
 
-@ExperimentalCoroutinesApi
-class FetchSymbolDataUc @Inject constructor(
-    @Named(SYMBOL_REPOSITORY_TAG)
-    private val symbolDataRepository: @JvmSuppressWildcards DomainLayerContract.Data.SymbolDataRepository<SymbolDataResponse>
-) : DomainLayerContract.Presentation.FlowUseCase<SymbolDataRequest, List<SymbolVo>>() {
+class FetchSwissephDataUc @Inject constructor(
+    @Named(EPHEMERIS_REPOSITORY_TAG)
+    private val swissephDataRepository: @JvmSuppressWildcards DomainLayerContract.Data.SwissephDataRepository<SwissephDataResponse>
+) : DomainLayerContract.Presentation.UseCase<SwissephDataRequest, SwissephDataResponse> {
 
-    override suspend fun run(params: SymbolDataRequest?): Flow<Outcome<List<SymbolVo>>> {
-        return flow {
-            emit(Outcome.Loading)
-            params?.let {
-                when  (val res = symbolDataRepository.fetchSymbol(request = params)) {
-                    is Outcome.Success -> emit(Outcome.Success(res.data.toSymbol().toSymbolVo()))
-                    is Outcome.Error -> emit(res)
-                    is Outcome.Loading -> emit(res)
-                }
-            }
+    override suspend fun run(params: SwissephDataRequest?): Outcome<SwissephDataResponse> =
+        params?.let {
+            swissephDataRepository.fetchSwisseph(request = params)
+        } ?: run {
+            Outcome.Error(Failure.InputParamsError())
         }
-            .catch { emit(Outcome.Error(Failure.InputParamsError(msg = it.localizedMessage))) }
-            .flowOn(Dispatchers.IO)
-    }
-
 }

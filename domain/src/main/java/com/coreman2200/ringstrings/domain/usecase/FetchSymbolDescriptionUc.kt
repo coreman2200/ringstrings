@@ -22,38 +22,23 @@
 package com.coreman2200.ringstrings.domain.usecase
 
 import com.coreman2200.ringstrings.domain.*
-import com.coreman2200.ringstrings.domain.DomainLayerContract.Data.Companion.SYMBOL_REPOSITORY_TAG
+import com.coreman2200.ringstrings.domain.DomainLayerContract.Data.Companion.SYMBOL_DETAIL_REPOSITORY_TAG
 import com.coreman2200.ringstrings.domain.util.Failure
 import com.coreman2200.ringstrings.domain.util.Outcome
-import com.coreman2200.ringstrings.domain.util.toSymbol
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.flow.*
 import javax.inject.Inject
 import javax.inject.Named
 
-const val FETCH_SYMBOL_DATA_UC_TAG = "fetchSymbolDataUc"
+const val FETCH_SYMBOL_DETAILS_UC_TAG = "fetchSymbolDetailUc"
 
-@ExperimentalCoroutinesApi
-class FetchSymbolDataUc @Inject constructor(
-    @Named(SYMBOL_REPOSITORY_TAG)
-    private val symbolDataRepository: @JvmSuppressWildcards DomainLayerContract.Data.SymbolDataRepository<SymbolDataResponse>
-) : DomainLayerContract.Presentation.FlowUseCase<SymbolDataRequest, List<SymbolVo>>() {
+class FetchSymbolDetailsUc @Inject constructor(
+    @Named(SYMBOL_DETAIL_REPOSITORY_TAG)
+    private val symbolDetailRepository: @JvmSuppressWildcards DomainLayerContract.Data.SymbolDetailRepository<SymbolDescriptionResponse>
+) : DomainLayerContract.Presentation.UseCase<SymbolDescriptionRequest, SymbolDescriptionResponse> {
 
-    override suspend fun run(params: SymbolDataRequest?): Flow<Outcome<List<SymbolVo>>> {
-        return flow {
-            emit(Outcome.Loading)
-            params?.let {
-                when  (val res = symbolDataRepository.fetchSymbol(request = params)) {
-                    is Outcome.Success -> emit(Outcome.Success(res.data.toSymbol().toSymbolVo()))
-                    is Outcome.Error -> emit(res)
-                    is Outcome.Loading -> emit(res)
-                }
-            }
+    override suspend fun run(params: SymbolDescriptionRequest?): Outcome<SymbolDescriptionResponse> =
+        params?.let {
+            symbolDetailRepository.fetchSymbolDescription(request = params)
+        } ?: run {
+            Outcome.Error(Failure.InputParamsError())
         }
-            .catch { emit(Outcome.Error(Failure.InputParamsError(msg = it.localizedMessage))) }
-            .flowOn(Dispatchers.IO)
-    }
-
 }
