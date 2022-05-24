@@ -34,11 +34,11 @@ interface ProfileDao {
     @Delete
     fun delete(profile: ProfileEntity)
 
+    @Query("SELECT * FROM user_profile_details_table WHERE id IS :id LIMIT 1")
+    suspend fun get(id:Int): ProfileEntity
+
     @Query("SELECT * FROM user_profile_details_table ORDER BY display_name ASC")
     fun get(): Flow<List<ProfileEntity>>
-
-    @Query("SELECT * FROM user_profile_details_table WHERE id IS :id LIMIT 1")
-    fun get(id:Int): Flow<ProfileEntity>
 
     @Query("SELECT * FROM user_profile_details_table WHERE display_name IS :name ORDER BY display_name ASC")
     fun get(name:String): Flow<List<ProfileEntity>>
