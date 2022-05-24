@@ -37,16 +37,5 @@ interface ISymbol {
     fun value():Double
     fun flag():Boolean = false
     fun qualities():Map<TagSymbols, MutableList<ISymbolID>> = detail?.qualities?.associate { Pair(it, mutableListOf(id)) }?: emptyMap()
-    fun toData():SymbolData = SymbolData(
-        profileid = profileid,
-        chartid = chartid.toString(),
-        groupid = groupid.toString(),
-        symbolid = id.toString(),
-        strata = strata.toString(),
-        type = SymbolStrata.symbolStrataFor(strata).ordinal,
-        value = value(),
-        flag = flag(),
-        children = get().map { it.id.toString() },
-        relations = related.keys.map { it.toString() }
-    )
+
 }

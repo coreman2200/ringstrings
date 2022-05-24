@@ -29,6 +29,7 @@ import com.coreman2200.ringstrings.domain.symbol.entitysymbol.impl.GroupedProfil
 import com.coreman2200.ringstrings.domain.symbol.entitysymbol.impl.ProfileSymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.IChartedSymbols
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.ICompositeSymbol
+import com.coreman2200.ringstrings.domain.util.toData
 import com.squareup.wire.internal.newMutableList
 import com.squareup.wire.internal.newMutableMap
 import kotlinx.coroutines.*
