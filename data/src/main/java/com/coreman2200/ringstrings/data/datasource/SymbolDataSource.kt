@@ -79,8 +79,7 @@ class SymbolDatabaseSource @Inject constructor(val dao: SymbolDao) : SymbolDataS
             }
         }
 
-        val elems = symbols.first()
-        return SymbolDataResponse(symbols = elems.map { it.toData() })
+        return SymbolDataResponse(symbols = symbols.map { it.toData() })
     }
 
     private fun SymbolAndDetails.toData(): SymbolData = SymbolData(
@@ -98,6 +97,8 @@ class SymbolDatabaseSource @Inject constructor(val dao: SymbolDao) : SymbolDataS
         children = symbol.children,
         details = description?.toData()
     )
+
+    private fun List<SymbolAndDetails>.toData(): List<SymbolData> = this.map { it.toData() }
 
     private fun SymbolData.toEntity(): SymbolEntity = SymbolEntity(
         instanceid = this.instanceid,

@@ -35,28 +35,35 @@ interface ProfileDataSource {
         const val PROFILE_DATA_SOURCE_TAG = "profileDataSource"
     }
 
-    fun fetchProfileData(request: ProfileDataRequest): Flow<ProfileDataResponse>
-    fun fetchProfiles(request: ProfileDataRequest): Flow<ProfileDataResponse>
-    fun searchProfiles(request: ProfileDataRequest): Flow<ProfileDataResponse>
-    suspend fun storeProfileData(request: ProfileDataRequest): Flow<ProfileDataResponse>
+    suspend fun fetchProfileData(request: ProfileDataRequest): ProfileDataResponse
+    suspend fun fetchProfiles(request: ProfileDataRequest): ProfileDataResponse
+    suspend fun searchProfiles(request: ProfileDataRequest): ProfileDataResponse
+    suspend fun storeProfileData(request: ProfileDataRequest): ProfileDataResponse
 }
 
 class ProfileDatabaseSource @Inject constructor(val dao: ProfileDao) : ProfileDataSource {
-    override fun fetchProfileData(request: ProfileDataRequest): Flow<ProfileDataResponse> {
+    override suspend fun fetchProfileData(request: ProfileDataRequest): ProfileDataResponse {
         if (request.id == 0) return fetchProfiles(request)
-        return dao.get(request.id).map { ProfileDataResponse(profiles = listOf(it.toData())) }
+        val profile = dao.get(request.id)
+        return ProfileDataResponse(profiles = flowOf(listOf(profile.toData())) )
     }
 
-    override fun fetchProfiles(request: ProfileDataRequest): Flow<ProfileDataResponse> {
-        return dao.get().map { list -> ProfileDataResponse(profiles = list.map { it.toData()}) }
+    override suspend fun fetchProfiles(request: ProfileDataRequest): ProfileDataResponse {
+        val profiles = dao.get()
+        return ProfileDataResponse(profiles = profiles.map { it.toData() })
     }
 
-    override fun searchProfiles(request: ProfileDataRequest): Flow<ProfileDataResponse> {
-        if (request.query.isNullOrEmpty()) return fetchProfiles(request)
-        val profiles = dao.search(request.query.sanitizeSearchQuery())
-        return profiles.map { profileList ->
-            ProfileDataResponse(profiles = profileList.map { it.toData() })
-        }
+    override suspend fun searchProfiles(request: ProfileDataRequest): ProfileDataResponse {
+        if (request.query.isEmpty()) return fetchProfiles(request)
+        val profiles = dao.search(request.query.sanitizeSearchQuery()).map { it.toData() }
+        return ProfileDataResponse(profiles = profiles)
+    }
+
+    override suspend fun storeProfileData(request: ProfileDataRequest): ProfileDataResponse {
+        return if (request.profiles.size == 1)
+            storeSingle(request.profiles[0])
+        else
+            storeList(request.profiles)
     }
 
     private fun String?.sanitizeSearchQuery(): String {
@@ -64,24 +71,17 @@ class ProfileDatabaseSource @Inject constructor(val dao: ProfileDao) : ProfileDa
         return "*${query.replace(Regex.fromLiteral("\""), "\"\"")}*"
     }
 
-    override suspend fun storeProfileData(request: ProfileDataRequest): Flow<ProfileDataResponse> {
-        return if (request.profiles.size == 1)
-            storeSingle(request.profiles[0])
-        else
-            storeList(request.profiles)
-    }
-
-    private suspend fun storeSingle(profile:ProfileData): Flow<ProfileDataResponse> {
+    private suspend fun storeSingle(profile:ProfileData): ProfileDataResponse {
         val saved = dao.insert(profile.toEntity()).toInt()
-        return flow {
-            emit(ProfileDataResponse(profiles = listOf(ProfileData(id = saved))))
-        }
+        return ProfileDataResponse(profiles = flow {
+            emit(listOf(ProfileData(id = saved)))
+        })
     }
-    private fun storeList(list:List<ProfileData>): Flow<ProfileDataResponse> {
+    private fun storeList(list:List<ProfileData>): ProfileDataResponse {
         dao.insertAll(list.map { it.toEntity() })
-        return flow {
-            emit(ProfileDataResponse(profiles = emptyList()))
-        }
+        return ProfileDataResponse(profiles = flow {
+            emit(emptyList())
+        })
     }
 }
 
@@ -91,8 +91,10 @@ fun ProfileEntity.toData(): ProfileData = ProfileData(
     displayName = displayName,
     birthPlacement = birthPlacement.toData(),
     currentPlacement = currentPlacement?.toData(),
+)
 
-    )
+fun List<ProfileEntity>.toData(): List<ProfileData> = this.map { it.toData() }
+
 
 fun ProfileData.toEntity(): ProfileEntity = ProfileEntity(
     id = id,
@@ -100,8 +102,9 @@ fun ProfileData.toEntity(): ProfileEntity = ProfileEntity(
     displayName = displayName,
     birthPlacement = birthPlacement.toEntity(),
     currentPlacement = currentPlacement?.toEntity(),
+)
 
-    )
+fun List<ProfileData>.toEntity(): List<ProfileEntity> = this.map { it.toEntity() }
 
 private fun PlacementEntity.toData(): GeoPlacement = GeoPlacement(
     location = location.toData(),

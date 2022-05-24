@@ -31,6 +31,7 @@ import com.coreman2200.ringstrings.data.protos.NumerologySettings
 import com.coreman2200.ringstrings.domain.AppSettingsRequest
 import com.coreman2200.ringstrings.domain.AppSettingsResponse
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.last
 import javax.inject.Inject
 
@@ -51,7 +52,7 @@ class SettingsWireStore @Inject constructor(val context: Context) : SettingsData
     )
     override suspend fun fetchSettingsData(request: AppSettingsRequest): AppSettingsResponse {
         val flow: Flow<AppSettings> = context.settingsWireDataStore.data
-        val app = flow.last()
+        val app = flow.first()
 
         return AppSettingsResponse(true, toDomainAppSettings(app))
     }
