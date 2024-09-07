@@ -3,6 +3,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("org.jetbrains.kotlin.android")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -11,9 +12,6 @@ android {
 
     defaultConfig {
         minSdk = Ext.min_sdk
-        targetSdk = Ext.target_sdk
-
-        //testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {

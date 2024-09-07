@@ -4,6 +4,7 @@ plugins {
     id("kotlin-kapt")
     id("com.squareup.wire") version "5.0.0"
     id("org.jetbrains.kotlin.android")
+    id("dagger.hilt.android.plugin")
 }
 
 wire {
@@ -28,7 +29,6 @@ android {
 
     defaultConfig {
         minSdk = Ext.min_sdk
-        targetSdk = Ext.target_sdk
     }
 
     buildTypes {
