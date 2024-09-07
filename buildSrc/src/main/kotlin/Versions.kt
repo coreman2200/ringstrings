@@ -1,9 +1,9 @@
 object Versions {
     //const val arrowVersion = "1.0.1"
 
-    const val daggerVersion = "2.5.2"
+    const val daggerVersion = "2.52"
     const val daggerAndroidSupportVersion = "2.52"
-    const val hiltVersion = "1.2.0"
+    const val hiltVersion = "2.51.1"
     const val kotlinVersion = "2.0.20"
     const val lifecycleVersion = "2.8.5"
     const val coroutinesVersion = "1.9.0-RC.2"

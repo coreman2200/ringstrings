@@ -19,6 +19,8 @@ object Dependencies {
     const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp3Version}" //impl
     const val okhttpUrl = "com.squareup.okhttp3:okhttp-urlconnection:${Versions.okhttp3Version}" //impl
     const val okhttpLogging = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp3Version}" // impl
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofitVersion}"
+
 
     const val mockwebserver = "com.squareup.okhttp3:mockwebserver:${Versions.okhttp3Version}" // testImplementation
     const val junit = "junit:junit:${Versions.junitVersion}" // testImplementation
@@ -56,7 +58,7 @@ object Dependencies {
     const val composeUiToolingPreview = "androidx.compose.ui:ui-tooling-preview:${Versions.composeVersion}"
     const val composeRuntime = "androidx.compose.runtime:runtime:${Versions.composeVersion}"
 
-    // If you"re using classes in dagger.android
+    // Dagger
     const val dagger = "com.google.dagger:dagger:${Versions.daggerVersion}" // api
     const val daggerAndroid = "com.google.dagger:dagger-android:${Versions.daggerVersion}" // api
     const val daggerAndroidSupport = "com.google.dagger:dagger-android-support:${Versions.daggerAndroidSupportVersion}" // api
@@ -65,21 +67,26 @@ object Dependencies {
     const val daggerCompilerAnnotation = "com.google.dagger:dagger-compiler:${Versions.daggerVersion}" //annotationProcessor
     const val daggerAndroidAnnotationProcessor = "com.google.dagger:dagger-android-processor:${Versions.daggerVersion}" // annotationProcessor
 
+    // Hilt
+    const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.hiltVersion}"
+    const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hiltVersion}"
+    const val hiltAgp = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hiltVersion}"
 }
 
 fun DependencyHandler.app() {
     implementation(Dependencies.coreKtx)
-    //implementation(Dependencies.retrofit)
     implementation(Dependencies.ktxstdlib)
     room()
     okhttp()
     dagger()
+    hilt()
     compose()
+    coroutines()
     testing()
     // other modules
-    implementation(project(":presentation"))
-    implementation(project(":domain"))
-    implementation(project(":data"))
+    domainModule()
+    dataModule()
+    presenterModule()
 }
 
 fun DependencyHandler.domain() {
@@ -89,7 +96,8 @@ fun DependencyHandler.domain() {
     coroutines()
     testing()
     dagger()
-    implementation(project(":data"))
+    hilt()
+    dataModule()
 }
 
 fun DependencyHandler.data() {
@@ -102,6 +110,7 @@ fun DependencyHandler.data() {
     coroutines()
     testing()
     dagger()
+    hilt()
 }
 
 fun DependencyHandler.presentation() {
@@ -111,9 +120,10 @@ fun DependencyHandler.presentation() {
     lifecycle()
     compose()
     dagger()
+    hilt()
     coroutines()
     testing()
-    implementation(project(":domain"))
+    domainModule()
 }
 
 fun DependencyHandler.testing() {
@@ -131,6 +141,11 @@ fun DependencyHandler.dagger() {
     kapt(Dependencies.daggerAndroidProcessor)
     kapt(Dependencies.daggerCompilerAnnotation)
     kapt(Dependencies.daggerAndroidAnnotationProcessor)
+}
+
+fun DependencyHandler.hilt() {
+    implementation(Dependencies.hiltAndroid)
+    kapt(Dependencies.hiltCompiler)
 }
 
 fun DependencyHandler.compose() {
@@ -155,6 +170,7 @@ fun DependencyHandler.lifecycle() {
 }
 
 fun DependencyHandler.okhttp() {
+    implementation(Dependencies.retrofit)
     implementation(Dependencies.okhttp)
     implementation(Dependencies.okhttpUrl)
     implementation(Dependencies.okhttpLogging)
@@ -168,4 +184,17 @@ fun DependencyHandler.coroutines() {
 fun DependencyHandler.constraintLayout() {
     implementation(Dependencies.constraintLayout)
     implementation(Dependencies.constraintLayoutCompose)
+}
+
+fun DependencyHandler.domainModule() {
+    implementation(project(":domain"))
+
+}
+
+fun DependencyHandler.dataModule() {
+    implementation(project(":data"))
+}
+
+fun DependencyHandler.presenterModule() {
+    implementation(project(":presentation"))
 }
