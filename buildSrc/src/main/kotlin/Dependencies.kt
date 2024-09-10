@@ -56,6 +56,10 @@ object Dependencies {
     const val composeUiToolingPreview = "androidx.compose.ui:ui-tooling-preview:${Versions.composeVersion}"
     const val composeRuntime = "androidx.compose.runtime:runtime:${Versions.composeVersion}"
 
+    //
+    const val arrowCore = "io.arrow-kt:arrow-core:${Versions.arrowVersion}" // implementation
+    const val arrowCoroutines = "io.arrow-kt:arrow-fx-coroutines:${Versions.arrowVersion}" // implementation
+
     // Dagger
     const val dagger = "com.google.dagger:dagger:${Versions.daggerVersion}" // api
     const val daggerAndroid = "com.google.dagger:dagger-android:${Versions.daggerVersion}" // api
@@ -112,6 +116,7 @@ fun DependencyHandler.data() {
     androidTestImplementation(Dependencies.junitKtx)
     dagger()
     //hilt()
+    arrow()
 }
 
 fun DependencyHandler.presentation() {
@@ -153,9 +158,15 @@ fun DependencyHandler.dagger() {
     kapt(Dependencies.daggerAndroidAnnotationProcessor)
 }
 
+
 fun DependencyHandler.hilt() {
     implementation(Dependencies.hiltAndroid)
     kapt(Dependencies.hiltCompiler)
+}
+
+fun DependencyHandler.arrow() {
+    implementation(Dependencies.arrowCore)
+    implementation(Dependencies.arrowCoroutines)
 }
 
 fun DependencyHandler.compose() {
