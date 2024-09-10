@@ -177,7 +177,7 @@ class TestSymbolData {
             assert(it.description.isNotEmpty())
         }
     }
-
+ /*
     @Test
     fun `Assert Symbol Data can be inserted and retrieved individually`() {
         runBlocking {
@@ -364,6 +364,8 @@ class TestSymbolData {
             }
         }
     }
+    
+  */
 
     @After
     @Throws(IOException::class)

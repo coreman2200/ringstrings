@@ -49,6 +49,7 @@ object Dependencies {
     const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycleVersion}" // implementation
     const val lifecycleLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycleVersion}" // implementation
 
+    // Compose
     const val composeMaterial = "androidx.compose.material3:material3:${Versions.composeMaterial3Version}"
     const val composeUi = "androidx.compose.ui:ui:${Versions.composeVersion}"
     const val composeUiGraphics = "androidx.compose.ui:ui-graphics:${Versions.composeVersion}"

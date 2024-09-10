@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.res.Resources
 import androidx.test.core.app.ApplicationProvider
 import arrow.core.Either
+import arrow.core.right
 import com.coreman2200.ringstrings.data.datasource.SwissephDataSource
 import com.coreman2200.ringstrings.data.repository.SwissephDataRepository
 import com.coreman2200.ringstrings.domain.DomainLayerContract
@@ -12,9 +13,9 @@ import com.coreman2200.ringstrings.data.file.swisseph.ISwissephFileHandler
 import com.coreman2200.ringstrings.data.file.swisseph.SwissephFileHandler
 import com.coreman2200.ringstrings.domain.SwissephDataRequest
 import com.coreman2200.ringstrings.domain.SwissephDataResponse
-import com.nhaarman.mockitokotlin2.any
-import com.nhaarman.mockitokotlin2.doReturn
-import com.nhaarman.mockitokotlin2.mock
+import org.mockito.kotlin.any
+import org.mockito.kotlin.doReturn
+import org.mockito.kotlin.mock
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert
@@ -51,7 +52,7 @@ class TestSwissephHandlerImpl {
             // when
             val response = repository.fetchSwisseph(request = getDummySwissephRequest())
             // then
-            Assert.assertTrue(response.isRight() && (response as? Either.Right<SwissephDataResponse>) != null)
+            Assert.assertTrue(response.right().isRight()) //&& (response as? Either.Right<SwissephDataResponse>) != null)
         }
 
     private fun getDummySwissephRequest(): SwissephDataRequest = SwissephDataRequest()

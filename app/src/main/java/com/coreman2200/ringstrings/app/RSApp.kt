@@ -26,11 +26,6 @@ class RSApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        /*
-         'ApplicationComponent' is created including all data every associated component needs.
-         Specifically, 'modules' parameters refer to those which demand external variables (mostly
-         'Context' instances).
-         */
         appComponent = DaggerApplicationComponent.factory().create(modules = UtilsModule(ctx = this))
     }
 }

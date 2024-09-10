@@ -106,7 +106,7 @@ class TestProfileData {
             var response:List<ProfileData>
             val queryList = listOf("","Cor","Alb","Jol","A","B","C","D","E","F")
             queryList.forEach {
-                response = datasource.searchProfiles(ProfileDataRequest(query = it)).first().profiles
+                response = datasource.searchProfiles(ProfileDataRequest(query = it)).profiles.first()
                 assert(response.isNotEmpty())
             }
 
