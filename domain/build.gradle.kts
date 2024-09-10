@@ -25,8 +25,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility(JavaVersion.VERSION_18)
-        targetCompatibility(JavaVersion.VERSION_18)
+        sourceCompatibility(Ext.javaVersion)
+        targetCompatibility(Ext.javaVersion)
     }
 
     sourceSets {
@@ -34,7 +34,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "18"
+        jvmTarget = Ext.jvmTarget
     }
 }
 

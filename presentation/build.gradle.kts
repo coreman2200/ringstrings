@@ -25,20 +25,26 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility(JavaVersion.VERSION_18)
-        targetCompatibility(JavaVersion.VERSION_18)
+        sourceCompatibility(Ext.javaVersion)
+        targetCompatibility(Ext.javaVersion)
     }
     kotlinOptions {
-        jvmTarget = "18"
+        jvmTarget = Ext.jvmTarget
+
     }
 
     buildFeatures {
         viewBinding = true
     }
+
+    testOptions.unitTests.isIncludeAndroidResources = true
+
+    tasks.withType<Test> {
+        useJUnitPlatform()
+    }
 }
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    compileOnly("org.glassfish:javax.annotation:10.0-b28")
     presentation()
 }

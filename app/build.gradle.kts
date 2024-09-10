@@ -30,19 +30,20 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility(JavaVersion.VERSION_18)
-        targetCompatibility(JavaVersion.VERSION_18)
+        sourceCompatibility(Ext.javaVersion)
+        targetCompatibility(Ext.javaVersion)
     }
 
     kotlinOptions {
-        jvmTarget = "18"
+        jvmTarget = Ext.jvmTarget
+
     }
 
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = Ext.kotlinCompilerExtensionVersion
     }
 
     kapt {
