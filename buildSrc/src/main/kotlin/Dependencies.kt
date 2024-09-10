@@ -117,6 +117,8 @@ fun DependencyHandler.data() {
     dagger()
     //hilt()
     arrow()
+    domainModule()
+    presenterModule()
 }
 
 fun DependencyHandler.presentation() {
