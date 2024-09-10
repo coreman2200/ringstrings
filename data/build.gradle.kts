@@ -2,6 +2,7 @@ plugins {
     id("com.android.library")
     id("kotlin-android")
     id("kotlin-kapt")
+    id("androidx.room")
     id("com.squareup.wire") version "5.0.0"
     id("org.jetbrains.kotlin.android")
     //id("dagger.hilt.android.plugin")
@@ -62,6 +63,10 @@ android {
 
         getByName("test").resources.srcDirs("src/main")
         getByName("androidTest").assets.srcDirs("$projectDir/schemas")
+    }
+
+    room {
+        schemaDirectory("$projectDir/schemas")
     }
 }
 

@@ -25,10 +25,14 @@ object Dependencies {
     const val datastore = "androidx.datastore:datastore:${Versions.datastoreVersion}" //implementation
     const val gson = "com.google.code.gson:gson:${Versions.gsonVersion}" //implementation
     const val wire = "com.squareup.wire:wire-runtime:${Versions.wireVersion}" //api
+    const val wirePlugin = "com.squareup.wire:wire-gradle-plugin:${Versions.wireVersion}"
     const val ktxstdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlinVersion}" //implementation
+
+    // Room
     const val roomRuntime = "androidx.room:room-runtime:${Versions.roomVersion}" // implementation
     const val roomKtx = "androidx.room:room-ktx:${Versions.roomVersion}" // implementation
     const val roomCompiler = "androidx.room:room-compiler:${Versions.roomVersion}" // kapt
+    //const val roomGradlePlugin = "androidx.room:room-gradle-plugin:2.6.1" // classpath
 
     // Domain
     const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutinesVersion}" // api
@@ -123,6 +127,7 @@ fun DependencyHandler.presentation() {
     androidTestImplementation(Dependencies.junit)
     androidTestImplementation(Dependencies.junitKtx)
 
+    //domainModule()
 }
 
 fun DependencyHandler.testing() {
@@ -166,6 +171,8 @@ fun DependencyHandler.room() {
     implementation(Dependencies.roomRuntime)
     implementation(Dependencies.roomKtx)
     kapt(Dependencies.roomCompiler)
+    annotationProcessor(Dependencies.roomCompiler)
+
 }
 
 fun DependencyHandler.lifecycle() {
