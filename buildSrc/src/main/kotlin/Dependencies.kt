@@ -1,18 +1,6 @@
 import org.gradle.api.artifacts.dsl.DependencyHandler
 import org.gradle.kotlin.dsl.project
 
-/* Variables */
-object Ext {
-    const val debugBuild = "RingStrings-debug"
-    const val build_tools = "30.0.2"
-    const val compile_sdk = 33
-    const val min_sdk = 24
-    const val target_sdk = 33
-    const val version_code = 1
-    const val version_name = "1.0"
-    const val agp_version = "7.0.4"
-}
-
 object Dependencies {
 
     // App
