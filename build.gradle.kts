@@ -7,6 +7,7 @@ buildscript {
     }
 
     dependencies {
-        classpath(Dependencies.hiltAgp)
+        classpath("androidx.room:room-gradle-plugin:${Versions.roomVersion}")
+        //classpath(Dependencies.hiltAgp)
     }
 }
