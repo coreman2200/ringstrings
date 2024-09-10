@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.coreman2200.ringstrings_ui"
+    namespace = "com.coreman2200.ringstrings.presentation"
     compileSdk = Ext.compile_sdk
 
     defaultConfig {

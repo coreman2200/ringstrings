@@ -24,7 +24,7 @@ wire {
 }
 
 android {
-    namespace = "com.coreman2200.ringstrings_data"
+    namespace = "com.coreman2200.ringstrings.data"
     compileSdk = Ext.compile_sdk
 
     defaultConfig {
