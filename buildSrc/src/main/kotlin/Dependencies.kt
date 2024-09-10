@@ -79,7 +79,7 @@ fun DependencyHandler.app() {
     room()
     okhttp()
     dagger()
-    hilt()
+    //hilt()
     compose()
     coroutines()
     testing()
@@ -96,8 +96,9 @@ fun DependencyHandler.domain() {
     coroutines()
     testing()
     dagger()
-    hilt()
-    dataModule()
+    //hilt()
+    arrow()
+   //dataModule()
 }
 
 fun DependencyHandler.data() {
@@ -110,7 +111,7 @@ fun DependencyHandler.data() {
     coroutines()
     testing()
     dagger()
-    hilt()
+    //hilt()
 }
 
 fun DependencyHandler.presentation() {
@@ -120,7 +121,7 @@ fun DependencyHandler.presentation() {
     lifecycle()
     compose()
     dagger()
-    hilt()
+    //hilt()
     coroutines()
     testing()
     domainModule()
