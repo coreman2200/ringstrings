@@ -13,8 +13,12 @@ fun DependencyHandler.testImplementation(dependency: String) {
     add("testImplementation", dependency)
 }
 
-fun DependencyHandler.androidTest(dependency: String) {
-    add("androidTest", dependency)
+fun DependencyHandler.compileOnly(dependency: String) {
+    add("compileOnly", dependency)
+}
+
+fun DependencyHandler.androidTestImplementation(dependency: String) {
+    add("androidTestImplementation", dependency)
 }
 
 fun DependencyHandler.kapt(dependency: String) {

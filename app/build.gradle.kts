@@ -17,6 +17,7 @@ android {
         versionCode = Ext.version_code
         versionName = Ext.version_name
         testApplicationId = "com.coreman2200.ringstrings"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     sourceSets {

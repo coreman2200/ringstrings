@@ -9,11 +9,17 @@ object Dependencies {
     const val okhttpLogging = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp3Version}" // impl
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofitVersion}"
 
-
+    // Testing
     const val mockwebserver = "com.squareup.okhttp3:mockwebserver:${Versions.okhttp3Version}" // testImplementation
     const val junit = "junit:junit:${Versions.junitVersion}" // testImplementation
     const val assertj = "org.assertj:assertj-core:${Versions.assertjVersion}" //testImplementation
     const val robolectric = "org.robolectric:robolectric:${Versions.robolectricVersion}" //testImplementation
+    const val androidxTestCore = "androidx.test:core-ktx:${Versions.androidxTestCoreVersion}" // testImplementation
+    const val junitKtx = "androidx.test.ext:junit-ktx:${Versions.junitKtxVersion}" // testImplementation
+    const val testMonitor = "androidx.test:monitor:${Versions.testMonitorVersion}" // testImplementation
+    const val javaxAnnotation = "org.glassfish:javax.annotation:${Versions.javaxAnnotationVersion}" // compileOnly
+    const val coroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesVersion}" // testImplementation
+    const val mockitoKotlin = "org.mockito.kotlin:mockito-kotlin:${Versions.mockitoVersion}"
 
     // Data
     const val datastore = "androidx.datastore:datastore:${Versions.datastoreVersion}" //implementation
@@ -98,6 +104,8 @@ fun DependencyHandler.data() {
     room()
     coroutines()
     testing()
+    androidTestImplementation(Dependencies.junit)
+    androidTestImplementation(Dependencies.junitKtx)
     dagger()
     //hilt()
 }
@@ -112,7 +120,9 @@ fun DependencyHandler.presentation() {
     //hilt()
     coroutines()
     testing()
-    domainModule()
+    androidTestImplementation(Dependencies.junit)
+    androidTestImplementation(Dependencies.junitKtx)
+
 }
 
 fun DependencyHandler.testing() {
@@ -120,6 +130,12 @@ fun DependencyHandler.testing() {
     testImplementation(Dependencies.junit)
     testImplementation(Dependencies.assertj)
     testImplementation(Dependencies.robolectric)
+    testImplementation(Dependencies.androidxTestCore)
+    testImplementation(Dependencies.junitKtx)
+    testImplementation(Dependencies.testMonitor)
+    testImplementation(Dependencies.coroutinesTest)
+    testImplementation(Dependencies.mockitoKotlin)
+    compileOnly(Dependencies.javaxAnnotation)
 }
 
 fun DependencyHandler.dagger() {
