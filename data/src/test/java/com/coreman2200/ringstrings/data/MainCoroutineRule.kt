@@ -2,9 +2,13 @@ package com.coreman2200.ringstrings.data
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.test.TestCoroutineDispatcher
+import kotlinx.coroutines.test.StandardTestDispatcher
+import kotlinx.coroutines.test.TestCoroutineScope
+import kotlinx.coroutines.test.TestDispatcher
+import kotlinx.coroutines.test.TestScope
+import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.resetMain
-import kotlinx.coroutines.test.runBlockingTest
+import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
 import org.junit.rules.TestWatcher
 import org.junit.runner.Description
@@ -24,9 +28,7 @@ import org.junit.runner.Description
  */
 
 @ExperimentalCoroutinesApi
-class MainCoroutineRule(
-    val testDispatcher: TestCoroutineDispatcher = TestCoroutineDispatcher()
-): TestWatcher() {
+class MainCoroutineRule: TestWatcher() {
 
     override fun starting(description: Description?) {
         super.starting(description)
@@ -36,11 +38,16 @@ class MainCoroutineRule(
     override fun finished(description: Description?) {
         super.finished(description)
         Dispatchers.resetMain()
-        testDispatcher.cleanupTestCoroutines()
+        //testDispatcher.cleanupTestCoroutines()
+    }
+
+    companion object {
+        val testDispatcher: TestDispatcher = StandardTestDispatcher()
+        val testScope = TestScope(testDispatcher)
     }
 }
 
 @ExperimentalCoroutinesApi
-fun MainCoroutineRule.runBlocking(block: suspend () -> Unit) = this.testDispatcher.runBlockingTest {
-    block()
-}
+fun MainCoroutineRule.runTest(block: suspend () -> Unit) = runTest(MainCoroutineRule.testDispatcher) {
+        block()
+    }

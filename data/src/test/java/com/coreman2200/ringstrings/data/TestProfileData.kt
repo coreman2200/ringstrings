@@ -63,8 +63,8 @@ class TestProfileData {
     fun setup() {
         db = Room.inMemoryDatabaseBuilder(
             context, RSDatabase::class.java)
-            .setTransactionExecutor(mainCoroutineRule.testDispatcher.asExecutor())
-            .setQueryExecutor(mainCoroutineRule.testDispatcher.asExecutor())
+            .setTransactionExecutor(MainCoroutineRule.testDispatcher.asExecutor())
+            .setQueryExecutor(MainCoroutineRule.testDispatcher.asExecutor())
             .allowMainThreadQueries()
             .build()
         profileDao = db.profileDao()

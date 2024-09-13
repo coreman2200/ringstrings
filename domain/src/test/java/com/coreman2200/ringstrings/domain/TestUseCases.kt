@@ -5,12 +5,10 @@ import android.content.Context
 import android.os.Build
 import androidx.test.core.app.ApplicationProvider
 import com.coreman2200.ringstrings.domain.input.entity.IProfileData
-import com.coreman2200.ringstrings.domain.usecase.FetchProfileDataUc
 import com.coreman2200.ringstrings.domain.usecase.ProfileUseCases
 import com.coreman2200.ringstrings.domain.util.Outcome
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.runBlocking
 import org.junit.Rule
@@ -18,7 +16,6 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
-import kotlin.coroutines.suspendCoroutine
 
 /**
  * TestUseCases

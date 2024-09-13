@@ -35,6 +35,8 @@ object Versions {
     const val junitKtxVersion = "1.2.1"
     const val testMonitorVersion = "1.7.2"
     const val mockitoVersion = "5.4.0"
+    const val truthVersion = "1.4.4"
+    const val turbineVersion = "1.1.0"
 }
 
 /* Variables */

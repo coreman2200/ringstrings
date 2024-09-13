@@ -19,7 +19,9 @@ object Dependencies {
     const val testMonitor = "androidx.test:monitor:${Versions.testMonitorVersion}" // testImplementation
     const val javaxAnnotation = "org.glassfish:javax.annotation:${Versions.javaxAnnotationVersion}" // compileOnly
     const val coroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesVersion}" // testImplementation
-    const val mockitoKotlin = "org.mockito.kotlin:mockito-kotlin:${Versions.mockitoVersion}"
+    const val mockitoKotlin = "org.mockito.kotlin:mockito-kotlin:${Versions.mockitoVersion}" // testImplementation
+    const val truth = "com.google.truth:truth:${Versions.truthVersion}" // testImplementation
+    const val turbine = "app.cash.turbine:turbine:${Versions.turbineVersion}" // testImplementation
 
     // Data
     const val datastore = "androidx.datastore:datastore:${Versions.datastoreVersion}" //implementation
@@ -148,6 +150,8 @@ fun DependencyHandler.testing() {
     testImplementation(Dependencies.testMonitor)
     testImplementation(Dependencies.coroutinesTest)
     testImplementation(Dependencies.mockitoKotlin)
+    testImplementation(Dependencies.truth)
+    testImplementation(Dependencies.turbine)
     compileOnly(Dependencies.javaxAnnotation)
 }
 

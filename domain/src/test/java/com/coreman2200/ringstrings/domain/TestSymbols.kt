@@ -18,6 +18,11 @@ import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.INumber
 import com.coreman2200.ringstrings.domain.symbol.numbersymbol.interfaces.INumberSymbol
 import com.coreman2200.ringstrings.domain.symbol.symbolinterface.IChartedSymbols
 import com.coreman2200.ringstrings.domain.util.toData
+import com.coreman2200.ringstrings.domain.MainCoroutineRule.Companion.testDispatcher
+import com.coreman2200.ringstrings.domain.MainCoroutineRule.Companion.testScope
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.test.runTest
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
@@ -39,6 +44,7 @@ import kotlin.system.measureTimeMillis
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
+@ExperimentalCoroutinesApi
 @RunWith(RobolectricTestRunner::class)
 class TestSymbols {
     private val context: Context = ApplicationProvider.getApplicationContext<Application>()
@@ -49,82 +55,117 @@ class TestSymbols {
     //private var testProcessor: InputProcessor? = null
     private var chart:IChartedSymbols<*>? = null
 
+    @get:Rule
+    var mainCoroutineRule = MainCoroutineRule()
+
     @Test
     fun `Assert Astrological Chart Processor produces charted symbols`() {
-        val testProcessor = AstrologicalChartInputProcessor(astsettings, swisseph)
-        chart = testProcessor.produceAstrologicalChart(testProfile,Charts.ASTRAL_NATAL)
-        val test = chart!! as IAstralChartSymbol
-        assert(test.chartid == test.id)
-        assert(test.profileid != 0)
-        val symbols: List<IAstralSymbol> = test.get() as List<IAstralSymbol>
-        assert(symbols.isNotEmpty())
-        symbols.sortedByDescending { (it.strata as AstralStrata).ordinal }.forEach { iSymbol -> println("${iSymbol.name}: ${iSymbol.houseid} | ${iSymbol.zodiacid} | ${iSymbol.groupid} | related: ${iSymbol.get().joinToString { it.name }}") }
-        test.producedCelestialBodyMap().map { "[${it.key}](${it.value.degree}): ${it.value.profileid} | ${it.value.chartid} | ${it.value.groupid} | ${it.value.id} | ${it.value.strata} " }.forEach { println(it ) }
-
+        runTest {
+            val testProcessor = AstrologicalChartInputProcessor(astsettings, swisseph)
+            chart = testProcessor.produceAstrologicalChart(testProfile, Charts.ASTRAL_NATAL)
+            val test = chart!! as IAstralChartSymbol
+            assert(test.chartid == test.id)
+            assert(test.profileid != 0)
+            val symbols: List<IAstralSymbol> = test.get() as List<IAstralSymbol>
+            assert(symbols.isNotEmpty())
+            symbols.sortedByDescending {
+                (it.strata as AstralStrata).ordinal
+            }.forEach { iSymbol ->
+                println("${iSymbol.name}: ${iSymbol.houseid} | ${iSymbol.zodiacid} | ${iSymbol.groupid} | related: ${
+                    iSymbol.get()
+                        .joinToString {
+                            it.name
+                        }
+                }"
+                )
+            }
+            test.producedCelestialBodyMap()
+                .map { "[${it.key}](${it.value.degree}): ${it.value.profileid} | ${it.value.chartid} | ${it.value.groupid} | ${it.value.id} | ${it.value.strata} " }
+                .forEach { println(it) }
+        }
     }
 
     @Test
     fun `Test Astrological symbols resolve to storeable data`() {
-        val testProcessor = AstrologicalChartInputProcessor(astsettings, swisseph)
-        chart = testProcessor.produceAstrologicalChart(testProfile,Charts.ASTRAL_NATAL)
-        val test = chart!! as IAstralChartSymbol
-        val symbols: List<IAstralSymbol> = test.get() as List<IAstralSymbol>
+        runTest {
+            val testProcessor = AstrologicalChartInputProcessor(astsettings, swisseph)
+            chart = testProcessor.produceAstrologicalChart(testProfile, Charts.ASTRAL_NATAL)
+            val test = chart!! as IAstralChartSymbol
+            val symbols: List<IAstralSymbol> = test.get() as List<IAstralSymbol>
 
-        val data = symbols.map { it.toData() }
-        data.forEach { println(it) }
+            val data = symbols.map { it.toData() }
+            data.forEach { println(it) }
+        }
     }
 
     @Test
     fun `Test time it takes to produce X charts`() {
-        val count = 100
-        val charts:MutableList<IAstralChartSymbol> = mutableListOf()
-        val testProcessor = AstrologicalChartInputProcessor(astsettings, swisseph)
-        val executionTime = measureTimeMillis {
-            for (i in 1..count) {
-                testProfile = MockDefaultDataBundles.generateRandomProfile()
-                println("${testProfile.fullName()} ~ ${testProfile.birthDate()}")
-                charts.add(testProcessor.produceAstrologicalChart(testProfile,Charts.ASTRAL_NATAL))
+        runTest {
+            val count = 100
+            val charts: MutableList<IAstralChartSymbol> = mutableListOf()
+            val testProcessor = AstrologicalChartInputProcessor(astsettings, swisseph)
+            val executionTime = measureTimeMillis {
+                for (i in 1..count) {
+                    testProfile = MockDefaultDataBundles.generateRandomProfile()
+                    println("${testProfile.fullName()} ~ ${testProfile.birthDate()}")
+                    charts.add(
+                        testProcessor.produceAstrologicalChart(
+                            testProfile,
+                            Charts.ASTRAL_NATAL
+                        )
+                    )
+                }
             }
+            println("Time to complete ${charts.size} charts: ${executionTime / 1000.0} seconds")
         }
-        println("Time to complete ${charts.size} charts: ${executionTime/1000.0} seconds")
     }
 
     @Test
     fun `Assert chart symbols each have a symbolstrata`() {
-        val testProcessor = AstrologicalChartInputProcessor(astsettings, swisseph)
-        chart = testProcessor.produceAstrologicalChart(testProfile,Charts.ASTRAL_NATAL)
-        val test = chart!! as IAstralChartSymbol
-        val symbols: List<IAstralSymbol> = test.get() as List<IAstralSymbol>
-        assert(symbols.isNotEmpty())
-        symbols.forEach {
-            val symbolStrata = SymbolStrata.symbolStrataFor(it.strata)
-            assert(symbolStrata != SymbolStrata.NONE )
-            println("${it.strata} -> $symbolStrata")
+        runTest {
+            val testProcessor = AstrologicalChartInputProcessor(astsettings, swisseph)
+            chart = testProcessor.produceAstrologicalChart(testProfile, Charts.ASTRAL_NATAL)
+            val test = chart!! as IAstralChartSymbol
+            val symbols: List<IAstralSymbol> = test.get() as List<IAstralSymbol>
+            assert(symbols.isNotEmpty())
+            symbols.forEach {
+                val symbolStrata = SymbolStrata.symbolStrataFor(it.strata)
+                assert(symbolStrata != SymbolStrata.NONE)
+                println("${it.strata} -> $symbolStrata")
+            }
         }
     }
 
     @Test
     fun `Assert Numerological Chart Processor produces charted symbols`() {
-        val testProcessor = NumerologicalChartProcessor(testProfile,numsettings)
-        chart = testProcessor.produceGroupedNumberSymbolsForProfile()
-        val test = chart!! as INumberChartSymbol
-        assert(test.chartid == test.id)
-        assert(test.profileid != 0)
-        val symbols: List<INumberSymbol> = test.get() as List<INumberSymbol>
-        assert(symbols.isNotEmpty())
-        symbols.sortedByDescending { (it.strata as NumberStrata).ordinal }.forEach { iSymbol -> println("${iSymbol.name}: ${iSymbol.groupid} | related: ${iSymbol.get().joinToString { it.name }}") }
-
+        runTest {
+            val testProcessor = NumerologicalChartProcessor(testProfile, numsettings)
+            chart = testProcessor.produceGroupedNumberSymbolsForProfile()
+            val test = chart!! as INumberChartSymbol
+            assert(test.chartid == test.id)
+            assert(test.profileid != 0)
+            val symbols: List<INumberSymbol> = test.get() as List<INumberSymbol>
+            assert(symbols.isNotEmpty())
+            symbols.sortedByDescending { (it.strata as NumberStrata).ordinal }.forEach { iSymbol ->
+                println(
+                    "${iSymbol.name}: ${iSymbol.groupid} | related: ${
+                        iSymbol.get().joinToString { it.name }
+                    }"
+                )
+            }
+        }
     }
 
     @Test
     fun `Test Numerological symbols resolve to storeable data`() {
-        val testProcessor = NumerologicalChartProcessor(testProfile,numsettings)
-        chart = testProcessor.produceGroupedNumberSymbolsForProfile()
-        val test = chart!! as INumberChartSymbol
-        val symbols: List<INumberSymbol> = test.get() as List<INumberSymbol>
-
-        val data = symbols.map { it.toData() }
-        data.forEach { println(it) }
+        runTest {
+            val testProcessor = NumerologicalChartProcessor(testProfile, numsettings)
+            chart = testProcessor.produceGroupedNumberSymbolsForProfile()
+            val test = chart!! as INumberChartSymbol
+            val symbols: List<INumberSymbol> = test.get() as List<INumberSymbol>
+            val data = symbols.map { it.toData() }
+            data.forEach { println(it) }
+        }
     }
 
 }

@@ -31,7 +31,7 @@ android {
     }
 
     sourceSets {
-        getByName("test").resources.srcDirs("src/main")
+        getByName("test").resources.srcDirs("src/test")
     }
 
     kotlinOptions {
